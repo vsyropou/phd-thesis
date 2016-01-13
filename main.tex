@@ -37,6 +37,8 @@ headsepline, % Uncomment to get a line under the header
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
 \usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{upgreek}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
@@ -78,8 +80,7 @@ headsepline, % Uncomment to get a line under the header
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
-
-
+\hypersetup{linkcolor=black}
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -202,10 +203,11 @@ Thanks mom\ldots
 % Uncomment the lines as you write the chapters
 
 \include{Chapters/Chapter1}
-%\include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
-%\include{Chapters/Chapter4} 
-%\include{Chapters/Chapter5} 
+\include{Chapters/Chapter2} 
+\include{Chapters/Chapter3}
+\include{Chapters/Chapter4} 
+\include{Chapters/Chapter5}
+\include{Chapters/Chapter6}
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -216,7 +218,7 @@ Thanks mom\ldots
 % Uncomment the lines as you write the Appendices
 
 \include{Appendices/AppendixA}
-%\include{Appendices/AppendixB}
+\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 
 %----------------------------------------------------------------------------------------
