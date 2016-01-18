@@ -1,0 +1,37 @@
+% Chapter 4
+
+\chapter{Data Analysis}
+\label{Data_Analysis}
+
+The parameters of interest as described in \chapref{Introduction} are extracted from the analysis of the
+\runone \lhcb data accumulated over the years 2011 and 2012, which correspond to a total integrated luminosity
+of 3\invfb. The fit to these data is a weighted Maximum Mikelihood fit to the angular distributions of \BsJpsiKst,
+where the weights have been computed with the \sPlot technique \cite{splot}. The extracted parameters of interest are polarization
+fractions and amplitude phases of the previously mentioned decay chanell. Prior to the angular analysis the data as 
+they come straight from the detector need to be filterd to reduce the presence of background events. Thus the current
+chapter addresses first the event selection and then the angular analysis of the selected data.
+
+\secref{Event_Selection} describes all the steps involded to reduce background in the data. For this purpose
+it is necessary to model the invariant mass distribution of the \BJpsiKpi decay chanells, which is addressed
+in \secref{The_Invariant_Mass_Distribution}. In \secref{Angular_Analysis} the details of estimating the parameters
+of intrest are presented in steps.
+
+% Expected signal yield
+% The center of mass energy was 3 and 4 \tev respectivelly for 2011 and 2012.
+
+% Section Event Selection
+\section{Event Selection}
+\label{Event_Selection}
+
+There are effectivelly four stages of offline event selection taking place after the data has been written out by the detector. 
+First a set of rough selection criteria is applied. Those cuts are quantities like track and vertex quality {\color{red}(jargon:track and vertex?)},
+track impact parameter, mass ranges of mother and daugther particles, particle identification and transverse momentum. A detalied 
+table of those cuts is given in \appref{Stripping}. The purpose of those cuts is to perform a first rough rejection of the combinatorial background
+and prepare the data for the next stage of selection. The rest of the selection steps are described in each of the subsequent subsections.
+
+\input{Chapters/Chapter_1_files/Selection.tex}
+
+% Section Angular Analysis
+\section{Angular Analysis}
+\label{Angular_Analysis}
+\input{Chapters/Chapter_1_files/Angular_Analysis.tex}

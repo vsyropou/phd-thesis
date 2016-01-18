@@ -1,6 +1,60 @@
 
 
 \subsection{Multivariate Based Selection}
+\label{Multivariate_Based_Selection}
+
+The \BsJpsiKst signal yield out of the full 3 \invfb data is expected to be low {\color{red} Footnote on the exp. yield or reference to a 
+previous calculation, (maybe in th eintroduction.)} Thus, one would like to get the most signal yield while rejecting as much background
+as possible. One way to do that would be a cut-based analysis, in which case certain cuts are applied to a set of variables like the \Bs 
+mass range for example. Alternatevely a multivariate (hearafter MVA) approach is addopted. In that case a set of variables are 
+combined by the MVA algorithm to produce one output variable. This variable ranges from -1 to 1 and clasifies each event to be more 
+signal-like (closer to 1) or background-like (closer to -1).
+
+For the current analysics the TMVA toolkit~\cite{TMVA} was used for the MVA procedure. In order to compute the MVA clasifier some input
+needed. Particularly two sets of signal-like sample and background-like samples are needed, one for the MVA clasifier to be trained with
+and the another one to be tested with. For the signal-like sample, \BsJpsiKst Monte-Carlo simulated data (hearafter MC) are used. The \Bs 
+mass widnow for that sample is $\pm 25 \MeVcc$ around the \Bs peak. As for the background-like sample, candidates from the high mass sideband
+with invariant masses between $5401.3\mevcc$ and $5700\mevcc$ are used. Note that the simulated samples are treated exactly the same way as the
+the real data sample when it comes to any selection cuts applied. Half of both signal and background like samples were used for training and the
+other half for testing. This is done because the testing samples need to be statistically indepedant from the ones that were used to train the 
+MVA clasifier with. A boosted decision tree with gradient boosting (BDTG){\color{red}{what is gradiaent boosting})} method was trained and tested
+over those samples using the following kinematic variables as discriminating variables for the multivariate procedure (\Bs meson variables are 
+named here as \texttt{B0}):
+
+\begin{itemize}
+\item{} \texttt{max\_DOCA}: maximum of all distances between pairs of tracks from daughter particles.
+\item{} \texttt{B0\_LOKI\_DTF\_CTAU}: time of flight $ct$ of the \Bs meson candidate, where
+$t$ is the decay time of the \Bs meson candidate measured in its proper reference frame.
+\item{} \texttt{lessIPS}: minimum of all significances on the impact parameter of a daughter particle (kaons, muons and pions) with respect to the \Bs meson candidate.
+\item{} \texttt{B0\_PT}: transverse momentum of the \Bs meson candidate.
+\item{} \texttt{B0\_IP\_OWNPV}: impact parameter of the \Bs meson candidate with respect to its best own parent vertex.
+\item{} \texttt{B0\_ENDVERTEX\_CHI2}: reconstruction significance of a reconstructed decay vertex of the \Bs meson candidate.
+\end{itemize}
+
+Signal and background distributions for discriminating variables among with the BDTG method response are shown in \appref{AppendixE}.
+No overtraining is observed in the BDTG classifier, showing a good discrimination power for the chosen MVA method between both signal
+and background distributions. A cut on the BDTG is applied so that it maximises the following figure of merit (FoM)~\cite{Yuehong_fom}:
+
+\begin{equation}
+\label{eqn:fom}
+F(\sWeights) = \frac{\left(\sum{w_{i}}\right)^2}{\sum{w_{i}^2}},
+\end{equation}
+
+\noindent where $w_i$ are \sWeights associated to each event, and calculated with the \sPlot technique~\cite{splot}, considering \Bs candidate events as signal yield. 
+This FoM can be understood as an {\it{effective signal value}}, which is inversely proportional to the square root of the total number of events. 
+
+For a range of cut values applied on the BDTG, a \sPlot can be performed and a value for the FoM can be obtained. A plot containing
+the value of $F(\sWeights)$ versus the cut value applied on the corresponding BDTG method is shown in \figref{fig:FOM_optimisation_2011}
+for 2011 conditions and in \figref{fig:FOM_optimisation_2012} for 2012 conditions. Optimal BDTG cut values are chosen as those which maximise $F(\sWeights)$. 
+These values are 0.2 for 2011 conditions and 0.12 for 2012 conditions.
+
+Signal efficiencies and background rejections values are calculated for both 2012 and 2011 data conditions separately and individually for three 
+different subsets of cuts in the final selection presented in \tabref{tab:Bs2JpsiKstSelection}, resulting in three individual efficiencies (rejections). 
+As a first step, $\varepsilon_{\rm sel}$ is calculated selecting signal and background samples with all the final selection cuts excepting (**) and (*). 
+As a second step, $\varepsilon_{\rm BDTG}$ is calculated selecting previous samples also with cut (**). As a third step, $\varepsilon_{\Lb}$ is obtained 
+selecting previous samples also with cut (*). Finally, a total efficiency (rejection) is obtained, containing the information from all the efficiencies 
+(rejections) computed in previous steps: $\varepsilon_{\rm tot}$ uses signal and background samples selected with all the cuts from the final selection.
+
 
 \subsection{Peaking Backgrounds}
 
