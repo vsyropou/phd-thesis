@@ -36,6 +36,8 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 headsepline, % Uncomment to get a line under the header
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
+\setcounter{tocdepth}{2} % Excludes subsubsection from the toc
+
 \usepackage{xspace}
 \usepackage{xcolor}
 \usepackage{upgreek}
@@ -43,6 +45,9 @@ headsepline, % Uncomment to get a line under the header
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{amsmath}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{lineno}
 
 \usepackage[backend=bibtex,style=numeric-comp,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{main.bib} % The filename of the bibliography
@@ -219,11 +224,11 @@ Thanks mom\ldots
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{Appendices/AppendixA}
-\include{Appendices/AppendixB}
+% \include{Appendices/AppendixA}
+% \include{Appendices/AppendixB}
 \include{Appendices/AppendixC}
-\include{Appendices/AppendixD}
-% \include{Appendices/AppendixE}
+% \include{Appendices/AppendixD}
+\include{Appendices/AppendixE}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
