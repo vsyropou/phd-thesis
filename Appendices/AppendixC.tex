@@ -1,19 +1,16 @@
-% Appendix C
 
-\chapter{Datasets and Event Selection}
+\chapter{Datasets and Stripping}
 \label{AppendixC}
-
-\section{Datasets}
-Events for this analysis are selected from:
+This appendix is meant to give more details to the familiar with the \lhcb jargon reader.\\
+ 
+\noindent Events for this analysis are selected from:
 \begin{itemize}
-
 \item 1\,\invfb, collected in 2011 at $\sqrt{s}=7\TeV$, called \texttt{Reco14-Stripping20r1}.
 \item 2\,\invfb, collected in 2012 at $\sqrt{s}=8\TeV$, called \texttt{Reco14-Stripping20r0p1}.
-
 \end{itemize}
-The total luminosity of the processed files is 3.0\,\invfb.
+The total luminosity of the processed files is 3.0\,\invfb.\\
 
-The simulated samples used are:
+\noindent The simulated samples used are:
 
 \begin{itemize}
 
@@ -36,15 +33,15 @@ The simulated samples used are:
 5\,M \BsJpsiPhi signal events, from \texttt{Sim08a-Reco14a-Stripping20r1} processing, with TCK 0x40760037 in flagging mode, which is representative of the data taken during 2011.
 
 \end{itemize}
-All these samples were generated using \texttt{Pythia8}. Each one contains simulated data from both magnet polarities.
+All these samples were generated using \texttt{Pythia8}. Each one contains simulated data from both magnet polarities.\\
 
 
-The stripping line used for this analysis is {\texttt{StrippingBetaSBs2JpsiKstarWideLine}}.
-\tabref{Bs2JpsiKstSelection} lists the selection criteria in that stripping line and the offline final selection cuts used, which applies a mass constraint of $150\mevcc$ around the reconstructed \jpsi peak. The analysis is not restricted to any particular trigger line, i.e. an event should just pass at least one of the LHCb trigger lines.
+The {\texttt{BetaSBs2JpsiKstarWideLine}} stripping line used for this analysis. \tabref{Bs2JpsiKstSelection} lists the 
+selection criteria in that stripping line and the offline final selection cuts used, which applies a mass constraint of
+$150\mevcc$ around the reconstructed \jpsi peak. The analysis is not restricted to any particular trigger line, i.e. an 
+event should just pass at least one of the LHCb trigger lines.
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Stripping}
-\label{Stripping}
 
 \begin{table}[htb]
   \centerline{
@@ -87,14 +84,7 @@ The stripping line used for this analysis is {\texttt{StrippingBetaSBs2JpsiKstar
       \hline
     \end{tabular}}
   \caption{Selection criteria for \BsJpsiKst\ candidates in our stripping line and offline final selection. Also, (*) cuts are introduced for \LbJpsipK and \LbJpsippi peaking backgrounds suppression 
-           (see \secref{sec:lambdas_peaking}). A boosted decision tree with gradient boosting (BDTG) multivariate (MVA) method is trained and optimised for both 2011 and 2012 data-taking conditions
-           separately using the method described in further paragraphs of this section, resulting in (**) cuts. M(\jpsi) is the PDG nominal mass for \jpsi. VS stands for the separation between a
-           vertex w.r.t. its associated PV. {\color{red} Explain some of the variables above}}
+           M(\jpsi) is the PDG nominal mass for \jpsi. VS stands for the separation between a vertex w.r.t. its associated PV. {\color{red} Explain some of the variables above maybe...}}
   \label{Bs2JpsiKstSelection}
 \end{table}
-
-%------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Peaking Background}
-\label{Peaking_Background_app}
-
 
