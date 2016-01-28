@@ -155,14 +155,14 @@ is estimated with an extended maximum likelihood fit to the mass distribution on
 Before jumping to the mass fit description it is useful to briefly describe the PDFs of each specie in the next paragraph, which are the following:  
 
 \begin{itemize}
-\item Combinatorial background: Power law.
+\item Combinatorial background: Exponential decay.
 \item \LbJpsippi decays: Amoroso distribution~\cite{Amoroso}
 \item \Bd and \Bs signals: Hypatia distribution~\cite{Santos:2013gra}.
 \end{itemize}
 
-\noindent A power law, $e^{-km}$, is an appropriate description of the combinatorial background. It correctly accounts for events where
+\noindent An exponential decay distribution, $e^{-km}$, is an appropriate description of the combinatorial background. It correctly accounts for events where
 a track from a background processes in that event is associated with the signal mode. This happens due to mistakes in the track reconstruction.
-Those kind of events do not exhibit any structure in the mass distribution, they simply follow a power law with a negative slope in the mass spectrum. 
+Those kind of events do not exhibit any structure in the mass distribution, they simply follow a exponential distribution with a negative slope in the mass spectrum. 
 
 As for the \LbJpsippi background, the Amoroso distribution, was found to provide good description of the data \figref{LbJpsippi_amoroso}. 
 The shape parameters of this distribution are obtained from simulation and then fixed in the mass fit. {\color{red} few more words for those parameters....}
@@ -205,7 +205,7 @@ the mean of the core are allowed to float in the mass fit.
 					      	 					  &   &	& & \\	
 \hline
  \end{tabular}
-\caption{Definitions of the five \cosTmu bins in rad.}
+\caption{Definitions of the five \cosTmu bins in rad.{\color{red}Fix table range}}
 \label{cosThateMubindef} 
 \end{table}
 
@@ -232,16 +232,15 @@ are found to be small (smaller than $4\%$).
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are now in place. 
 The fitted mass PDF is now given to the \sPlot algorithm. The algorithm assigns an sWeight, $w_i$, to each event,
-based on the likelihood function built from the input PDF. The main idea is that for each of the species of the total
-PDF a set of weights can be computed to project only that particular specie on the data while eliminating all the others.  
-In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsippi are
-eliminated. For the angular analysis of the next section \BsJpsiKst events are projected with the above mentioned technique.
-In addition \BdJpsiKst projected events are used for several crosschecks. 
+based on the likelihood function built from the input PDF. The main idea of \sPlot is that for each of the species of the total
+PDF a set of weights can be computed such that they project only that particular specie on the data while eliminating all the others.  
+In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
+eliminated while \BJpsiKst events are projected with the above mentioned technique (also refered to as sWeighting).
 
-The advantage of this approach that becomes apparent in the subsequent angular analysis. Specifically since the resulting 
+The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section. Specifically since the resulting 
 \BsJpsiKst weighted events are signal only there is no need to model the background shape of the angular distributions. Which
 is unknown from first principles. Also the fit itself is faster and simpler to implement. On the other hand there are a few 
-disadvantages such as the evaluation of systematic uncertainties on the fitted angular parameters due to the mass PDF modeling.
+disadvantages such as the evaluation of some systematic uncertainties on the fitted angular parameters due to the mass PDF modeling.
 Any variation on those models implies re-doing the \sPlot technique. Also special care needs to be taken such that the uncertainties
 of the fitted angular parameters are correct. The uncertainties tend to be underestimated with increasing number of background events \cite{splot}.
 A scale factor $\alpha = \sum_{i} w_i /\sum_{i} w_i^2$  has to be applied to the \sWeights to correct for this dilution of the uncertainties
