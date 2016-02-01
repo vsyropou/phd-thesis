@@ -11,6 +11,14 @@ In that case a set of variables are combined by the MVA algorithm to produce a s
 The MVA approach exploits the correlations between input variables get the maximum discriminating power out of their combination.
 The calssifing variable ranges from -1 to 1 and classifies each event to be more signal-like (closer to 1) or background-like (closer to -1). 
 
+\begin{figure}[h]
+\begin{center}
+\scalebox{1}{\input{Figures/Chapter4/bdtg.tex}}
+\caption{BDTG distribution on real data. $y$-axis in logarithmic scale}
+\label{BTDG_performance}
+\end{center}
+\end{figure}
+
 For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable certain 
 input data sets are needed, particularly two sets of a signal-like and a background-like data sets. The first pair is fed to the MVA algorithm 
 to construct the classifying variable. In that step the MVA algorithm is "trained" to distinguish between the signal and background input data sets,
@@ -45,18 +53,12 @@ F(w_i) = \frac{\left(\sum{w_{i}}\right)^2}{\sum{w_{i}^2}},
 This FoM can be understood as an effective signal yield, which is inversely proportional to the square root of the total number of events.For a range of BDTG values
 a corresponding \sPlot can be performed and a value for the FoM can be obtained. The optimum BDTG value is chosen as the one that maximizes $F(w_i)$.
 
-\begin{figure}[h]
-\begin{center}
-% \includegraphics[width=1.1\textwidth]{Figures/AppendixE/input_variables_2011.pdf}
-\caption{BDTG distribution for signal and background.}
-\label{BTDG_performance}
-\end{center}
-\end{figure}
 
 \begin{figure}[h]
 \begin{center}
 % \includegraphics[width=1.1\textwidth]{Figures/AppendixE/input_variables_2011.pdf}
-\caption{Mass distribution before and after BDTG selection.}
+\scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg.tex}}
+\caption{Mass distribution before (black) and after (red) BDTG selection. $y$-axis in logarithmic scale}
 \label{mass_BDTG_selection}
 \end{center}
 \end{figure}
@@ -229,6 +231,14 @@ N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
 and the second uncertainties correspond to systematics. The correlations between the \Bd and \Bs yields in each fitting category
 are found to be small (smaller than $4\%$).
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Figures/Chapter4/mass_plot_simul_log.pdf}
+% \includegraphics[width=0.6\textwidth]{Figures/Chapter4/mass_plot_simul_lin.pdf}
+\caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
+\label{mass_plot}
+\end{figure}
+
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are now in place. 
 The fitted mass PDF is now given to the \sPlot algorithm. The algorithm assigns an sWeight, $w_i$, to each event,
@@ -245,13 +255,4 @@ Any variation on those models implies re-doing the \sPlot technique. Also specia
 of the fitted angular parameters are correct. The uncertainties tend to be underestimated with increasing number of background events \cite{splot}.
 A scale factor $\alpha = \sum_{i} w_i /\sum_{i} w_i^2$  has to be applied to the \sWeights to correct for this dilution of the uncertainties
 before performing the angular fit.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{Figures/Chapter4/mass_plot_simul_log.pdf}
-% \includegraphics[width=0.6\textwidth]{Figures/Chapter4/mass_plot_simul_lin.pdf}
-\caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
-\label{mass_plot}
-\end{figure}
-
 
