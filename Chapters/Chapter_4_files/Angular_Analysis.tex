@@ -1,9 +1,127 @@
 
-\subsection{Diferential Decay Rate}
+\subsection{Angular Decay Rate}
 \label{Diferential_Decay_Rate}
+The decay of intreast, \BJpsiKst, is a P2VV process\footnote{P2VV is an acronim that characterises the spin-parity of the particles involved in the dacay.
+The $\Bs$ (and $\Bd$) is spin-0 parity minus (Pseudoscalar) particle, whereas the intermediate resonances $\Jpsi$ and $\phi$ are spin-1 parity minus (Vector) particles. Hence the
+acronim P2VV} with 4 particles in the final state. There are at least two ways to describe the angular structure of that decay, namelly the transversity framework \cite{transvFrameworkI,transvFrameworkII}
+and the helicity formalism \cite{helicityFormI,helicityFormII}. In both cases the goal is to come up with an angular dependant description of the total decay amplitude.
+In the transversity framework the decay amplitude is decomposed in the three possible polarization states of the intermediate particles \Jpsi and \Kst witgh resct to the \Bs rest frame. For the current analysis the helicity
+formalism is addopted where the angular dependance is introduced by summing all possible spin conficurations of the intermediated vector paticles relative to their 
+momentum direction and squaring the sum. Or to maek it more compact, from summing up all possible helicity configurations of the intermediate vecror particles. A detailed derivation of both 
+approaches within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectivelly for the trasvercity and helicity formalism.
+ 
+The current paragraph aims at very briefly explaining the steps needed to arive at the angular pdf \BsJpsiKst decays, which is the sum of ten terms. In order to get there 
+one mearly needs to start from a qualitative representation of the \BsJpsiKst decay amplitude \eqref{ang_distr} and then square it \eqref{ang_distr_sq}.  
+
+\begin{equation}
+\mathcal{A(\text{\BJpsiKst})} \propto \sum_n A_n h_n M_n
+\label{ang_distr}
+\end{equation}
+
+\noindent where n runs through all the possible p-wave amplitude polarization states longitudinal ($0$), perpendicular ($\perp$), parallel ($\parallel$) as well as the s-wave amplitude ($S$). 
+The terms $A_n$ denote the polarization fraction, with resepct to the total amplitude, of the above mentioned polarization states. The functions $h$ represent the angular dependance of each term,
+whereas $M_n$ stands for the \mkpi dependence of the anplitude and its explanation and special treatment is postponed for the next section. After squaring the amplitude and applying the \emph{helicity formalistm}
+the ten terms of \eqref{ang_distr} are realised in table \tabref{}.
+
+%% \begin{table}[p]
+%%   \centering
+%%   %% \caption{Angular functions for the \BstoJpsiKK{} decay with a $\KK$ S-wave and the \BstoJpsiphi{} and $\KK$ S-wave interference
+%%   %%          expressed in terms of sines and cosines in helicity angles. Functions are shown for $\beta$\texteq\tpm1.
+%%   %%          Top: functions in the helicity basis. Bottom: functions in the transversity basis.}
+%% %%   \renewcommand{\arraystretch}{1.2}
+%%   \label{tab:angDistSWaveSinCos}
+%%   \begin{tabular}{cc}
+
+%%     $\AmpSq{{\text{S}}}$  &
+%%       %$4\, P_0^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  &                                                                                                                                               
+%%       $\tfrac{2}{3}\, \sin^2\thetamu$  \\
+
+%%     $\ReAmp{S}{S}$  &
+%%   %%     %$8\sqrt{3}\, P_1^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  &                                                                                                                                       
+%%   csds \\ %    $\tfrac{4}{3}\sqrt{3}\, \cos\thetaK\, \sin^2\thetamu$  \\
+
+%%     %% $\ImAmp{0}{{\text{S}}}$  &
+%%     %%   %0  &                                                                                                                                                                                                         
+%%     %%   0  \\
+
+%%     %% $\ReAmp{\parallel}{{\text{S}}}$  &
+%%     %%   %$+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,+1}$  &                                                                                                                                                      
+%%     %%   $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \cos\phihel$  \\
+
+%%     %% $\ImAmp{\parallel}{{\text{S}}}$  &
+%%     %%   %$\pm 6\sqrt{2}\, P_1^1\, Y_{1,\,-1}$  &                                                                                                                                                                      
+%%     %%   $\pm \tfrac{2}{3}\sqrt{6}\, \sin\thetaK\, \sin\thetamu\, \sin\phihel$  \\
+
+%%     %% $\ReAmp{\perp}{{\text{S}}}$  &
+%%     %%   %$\pm 6\sqrt{2}\, P_1^1\, Y_{1,\,+1}$  &                                                                                                                                                                      
+%%     %%   $\pm \tfrac{2}{3}\sqrt{6}\, \sin\thetaK\, \sin\thetamu\, \cos\phihel$  \\
+
+%%     %% $\ImAmp{\perp}{{\text{S}}}$  &
+%%     %%   %$+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,-1}$  &                                                                                                                                                      
+%%     %%   $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \sin\phihel$  \\
+%%     %% \hline
+%%   \end{tabular}
+%% \end{table}
+
+
+
+The angular distribution of \BsJpsiKst decays is a sum of ten terms \eqref{ang_distr}. 
+
+its most compact is given in \eqref{anguarPDF}. Where $\lambda=0,\pm 1$ is the \Jpsi helicity, $\alpha_{\mu}=\pm1$ is the helicity difference between the muons, 
+$J$ the spin of the $K\pi$ system, $\mathcal{H}$ are the helicity amplitudes, and $d$ the Wigner matrices. The current paragraph aims at qualitative explaining the steps needed
+to arive at this seemeingly complicated looking angular distribution.  
+
+
+
+%% \begin{equation}
+%% \mathcal{P} = \sum_n A_n\left[ \sum_{\text{\;abcd}} P_a^b(\ctk) Y_{cd}(\thetamu,\phihel)  \right] 
+%% \label{ang_distr}
+%% \end{equation}
+
+%% \begin{equation}
+%% \mathcal{P}(\thetaK,\thetamu,\phihel) = \sum_{\alpha_{\mu} = \pm1}\left|
+%% \sum_{\lambda,J}^{|\lambda|<J}\sqrt{\frac{2J+1}{4\pi}}\mathcal{H}_{\lambda}^{J}
+%% e^{-i\lambda\phihel}d_{\lambda,\alpha_{\mu}}^{1}(\thetamu)d_{-\lambda,0}^{1}(\thetaK)\right|^2
+%% \label{anguarPDF}
+%% \end{equation}
+
+ The heliciy angles $\thetaK,\thetamu,\phihel$ are explain later in the current section.
+
+
+%% In order to determine the CP components, the helicity amplitudes are transformed into ``transversity amplitudes'': 
+
+%% \begin{eqnarray}
+%% \label{eq:helAmp}
+%% A_S\phantom{_0} &=&  \mathcal{H}_0^0\\
+%% A_{J0}& =& \mathcal{H}_0^J\\
+%% A_{J||}& =&  \frac{1}{\sqrt{2}}(\mathcal{H}_+^J + \mathcal{H}_-^J)\\
+%% A_{J\perp} &=& \frac{1}{\sqrt{2}}(\mathcal{H}_+^J - \mathcal{H}_-^J)
+%% \end{eqnarray}
+%% %\end{multline}
+%% %where the index ``0'' refers to the longitudinal polarisation of the \jpsi\ meson
+
+%% from Ampl to sp harmonics\\
+%% Define decay angels and show drawing Explain angles\\
+
+
+
+
+\subsection{Acceptance}
+\label{Accceptance}
+Describe Efficiency moments formalism\\
+Dump eff moments\\
+
+\subsection{Acceptance Corrections}
+\label{Accceptance_Corrections}
+Motivation\\
+Data - Simulation Differences\\
+Validation\\
 
 \subsection{\Kpi Invariant mass}
 \label{Kpi_Invariant_mass}
+
+\subsubsection{CSP factors}
+Explain CSP factors\\
 
 \subsubsection{sWeighted mKpi distribution}
 While the \Bs or \Bd di-muon \sPlot s have very similar shape, the \mkpi weighted spectrums exhibit different shapes. 
@@ -22,23 +140,13 @@ in the \Bs case compared to the \Bd one.
 
 We also checked the effect of allowing the mean and sigma of the \Bs and \Bd Hypatia functions to share common values over the 20 bins from
 a simultaneous fit. No significant gain was observed. The corresponding results are presented in \appref{app:massFitSimultaneous}. 
-\subsubsection{CSP factors}
-
-ela more CSP
-
-\subsection{Acceptance}
-\label{Accceptance}
-Describe Efficiency moments formalism\\
-Dump eff moments\\
-
-\subsection{Acceptance Corrections}
-\label{Accceptance_Corrections}
-Motivation\\
-Data - Simulation Differences\\
-Validation\\
 
 
-\subsection{Maximum Likelihood Fit}
-\label{Maximum_Likelihood_Fit}
+\subsection{Total Decay Rate}
+\label{Total Decay Rate}
 
 \subsubsection{\CP Assymetries}
+
+\subsubsection{Maximum Likelihood Fit}
+
+
