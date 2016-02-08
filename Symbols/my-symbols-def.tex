@@ -114,8 +114,8 @@
 \newcommand{\IP}{\ensuremath{{\rm IP}}\xspace}
 \newcommand{\phihel}{\ensuremath{{\varphi_{\text h}}}\xspace}
 \newcommand{\thetaK}{\ensuremath{\theta_{K}}\xspace}
-\def\cosTmu  {\ensuremath{\cos(\theta_{\mu})}\xspace} %Simon
 \newcommand{\thetamu}{\ensuremath{\theta_{\mu}}\xspace}
+\newcommand{\costhetax}[1]{\ensuremath{\theta_{#1}}\xspace}
 \newcommand{\IPS}{\ensuremath{{\rm IPS}}\xspace}
 \newcommand{\DOF}{\ensuremath{{\rm DOF}}\xspace}
 \newcommand{\DOFS}{\ensuremath{{\rm DOFS}}\xspace}
@@ -214,8 +214,8 @@
 \def\runtwo {Run II\xspace}
 \newcommand{\angAmp}[1][i]{h_{#1}}
 \newcommand{\AmpSq}[2][A]{|{#1}_{#2}|^2}
-\newcommand{\ReAmp}[4][1=A, 2=A]{\Re({#1}_{#3}^* {#2}_{#4})}
-\newcommand{\ImAmp}[4][1=A, 2=A]{\Im({#1}_{#3}^* {#2}_{#4})} 
+\newcommand{\ReAmp}[2]{\Re({A}_{#1}^* {A}_{#2})}
+\newcommand{\ImAmp}[2]{\Im({A}_{#1}^* {A}_{#2})} 
 
 %    Vckm
 \def\Vud  {\ensuremath{|V_{\uquark\dquark}|}\xspace}
@@ -229,11 +229,13 @@
 \def\Vtb  {\ensuremath{|V_{\tquark\bquark}|}\xspace}
 
 %    waves
-\newcommand{\swave}{\ensuremath{S-wave}\xspace}
-\newcommand{\pwave}{\ensuremath{P-wave}\xspace}
-\newcommand{\dwave}{\ensuremath{D-wave}\xspace}
-\newcommand{\hwave}{\ensuremath{H-wave}\xspace}
-\newcommand{\fwave}{\ensuremath{F-wave}\xspace}
+\newcommand{\swave}{{S-wave}\xspace}
+\newcommand{\pwave}{{P-wave}\xspace}
+\newcommand{\dwave}{{D-wave}\xspace}
+\newcommand{\hwave}{{H-wave}\xspace}
+\newcommand{\fwave}{{F-wave}\xspace}
+
+\newcommand{\spwave}{{SP-wave}\xspace}
 
 %    amplitudes
 \newcommand{\dAda}{\ensuremath{\frac{ \partial A}{ \partial a}}}
@@ -269,7 +271,7 @@
 \newcommand\BBstrut{\rule[-1.8ex]{0pt}{0pt}}
 \newcommand{\rhoJ}{\ensuremath{\rho_{\Jpsi}}\xspace}
 \newcommand{\equref}[1]{Eq.~\ref{#1}}
-\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\figref}[1]{Figure.~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
 \newcommand{\appref}[1]{Appendix~\ref{#1}}
 \newcommand{\bibref}[1]{Ref.~\cite{#1}}

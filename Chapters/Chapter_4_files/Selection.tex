@@ -13,9 +13,9 @@ The calssifing variable ranges from -1 to 1 and classifies each event to be more
 
 \begin{figure}[h]
 \begin{center}
-\scalebox{1}{\input{Figures/Chapter4/bdtg.tex}}
-\caption{BDTG distribution on real data. $y$-axis in logarithmic scale}
-\label{BTDG_performance}
+  \scalebox{1}{\input{Figures/Chapter4/bdtg}}
+  \caption{BDTG distribution on real data. $y$-axis in logarithmic scale}
+  \label{BTDG_performance}
 \end{center}
 \end{figure}
 
@@ -56,10 +56,9 @@ a corresponding \sPlot can be performed and a value for the FoM can be obtained.
 
 \begin{figure}[h]
 \begin{center}
-% \includegraphics[width=1.1\textwidth]{Figures/AppendixE/input_variables_2011.pdf}
-\scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg.tex}}
-\caption{Mass distribution before (black) and after (red) BDTG selection. $y$-axis in logarithmic scale}
-\label{mass_BDTG_selection}
+  \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
+  \caption{Mass distribution before (black) and after (red) BDTG selection. $y$-axis in logarithmic scale}
+  \label{mass_BDTG_selection}
 \end{center}
 \end{figure}
 
@@ -207,17 +206,17 @@ the mean of the core are allowed to float in the mass fit.
 					      	 					  &   &	& & \\	
 \hline
  \end{tabular}
-\caption{Definitions of the five \cosTmu bins in rad.{\color{red}Fix table range}}
+\caption{Definitions of the five $\costhetax{\mu}$ bins in rad.{\color{red}Fix table range}}
 \label{cosThateMubindef} 
 \end{table}
 
 \subsubsection{The mass fit}
 From MC studies, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi invariant mass. 
 Since these parameters need to be fixed in the mass fit, the latter is performed in four bins of the
-\mkpi invariant mass. In addition, due to correlations between the mass and the cosine of the helicity angle \thetamu\footnote{\cosTmu is one of 
+\mkpi invariant mass. In addition, due to correlations between the mass and the cosine of the helicity angle \thetamu\footnote{$\costhetax{\mu}$ is one of 
 the variables used in the subsequent angular fit.},
 the requirements of \sPlot technique are not fulfilled and thus cannot be applied. Therefore, each \mkpi invariant mass sub-sample
-is divided further in five bins of \cosTmu, resulting in a total of 20 fitting categories. The \mkpi and \cosTmu bins are defined 
+is divided further in five bins of $\costhetax{\mu}$, resulting in a total of 20 fitting categories. The \mkpi and $\costhetax{\mu}$ bins are defined 
 in \tabref{Kbindef} and \tabref{cosThateMubindef}, respectively. The results of the mass fit is shown in tables \tabref{massFitData_cosTmuBin0}
 to \tabref{massFitData_cosTmuBin4} and the corresponding plot in \figref{mass_plot}. The overall \Bs and \Bd yields are obtained from the sum 
 of yields over the 20 fitting categories, giving
@@ -232,11 +231,11 @@ and the second uncertainties correspond to systematics. The correlations between
 are found to be small (smaller than $4\%$).
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=0.8\textwidth]{Figures/Chapter4/mass_plot_simul_log.pdf}
-% \includegraphics[width=0.6\textwidth]{Figures/Chapter4/mass_plot_simul_lin.pdf}
-\caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
-\label{mass_plot}
+\begin{center}
+  \includegraphics[width=0.8\textwidth]{Figures/Chapter4/mass_plot_simul_log.pdf}
+  \caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
+  \label{mass_plot}
+\end{center}
 \end{figure}
 
 \subsubsection{sWeighting}
