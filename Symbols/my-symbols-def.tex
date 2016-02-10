@@ -115,7 +115,7 @@
 \newcommand{\phihel}{\ensuremath{{\varphi_{\text h}}}\xspace}
 \newcommand{\thetaK}{\ensuremath{\theta_{K}}\xspace}
 \newcommand{\thetamu}{\ensuremath{\theta_{\mu}}\xspace}
-\newcommand{\costhetax}[1]{\ensuremath{\theta_{#1}}\xspace}
+
 \newcommand{\IPS}{\ensuremath{{\rm IPS}}\xspace}
 \newcommand{\DOF}{\ensuremath{{\rm DOF}}\xspace}
 \newcommand{\DOFS}{\ensuremath{{\rm DOFS}}\xspace}
@@ -208,14 +208,21 @@
 \newcommand{\CLs}{\ensuremath{\textrm{CL}_{\textrm{s}}}\xspace}
 \newcommand{\CLb}{\ensuremath{\textrm{CL}_{\textrm{b}}}\xspace}
 \newcommand{\MC}{Monte Carlo\xspace}
-\newcommand{\pdfs}{\ensuremath{p.d.f.s}\xspace}
-\newcommand{\pdf}{\ensuremath{{\rm PDF}}\xspace}
+\newcommand{\pdfs}{{PDFs}\xspace}
+\newcommand{\pdf}{{PDF}\xspace}
 \def\runone {Run I\xspace}
 \def\runtwo {Run II\xspace}
 \newcommand{\angAmp}[1][i]{h_{#1}}
 \newcommand{\AmpSq}[2][A]{|{#1}_{#2}|^2}
 \newcommand{\ReAmp}[2]{\Re({A}_{#1}^* {A}_{#2})}
-\newcommand{\ImAmp}[2]{\Im({A}_{#1}^* {A}_{#2})} 
+\newcommand{\ImAmp}[2]{\Im({A}_{#1}^* {A}_{#2})}
+\newcommand{\Pobs}{\ensuremath{{P^{\text{obs}}(\Omega)}}\xspace}
+\newcommand{\Pgen}{\ensuremath{{P^{\text{gen}}(\Omega)}}\xspace}
+\newcommand{\Nobs}{\ensuremath{{N^{\text{obs}}}}\xspace}
+\newcommand{\effbase}{\ensuremath{\alpha^{jk}_i(\Omega)}\xspace}
+\newcommand{\moment}[3]{\ensuremath{c^{#1}_{#2#3}}\xspace}
+\newcommand{\legendre}[2]{\ensuremath{P^{#2}_{#1}(\cos\thetaK)}\xspace}
+\newcommand{\spharm}[2]{\ensuremath{Y_{#1#2}(\cos\thetamu,\phihel)}\xspace}
 
 %    Vckm
 \def\Vud  {\ensuremath{|V_{\uquark\dquark}|}\xspace}
@@ -271,8 +278,12 @@
 \newcommand\BBstrut{\rule[-1.8ex]{0pt}{0pt}}
 \newcommand{\rhoJ}{\ensuremath{\rho_{\Jpsi}}\xspace}
 \newcommand{\equref}[1]{Eq.~\ref{#1}}
-\newcommand{\figref}[1]{Figure.~\ref{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
+% Use \cref for multiple references
+%% \newcommand{\eqsref}[2]{Eqs.~[\ref{#1} \ref{#2}]}
+%% \newcommand{\figsref}[2]{Figures \ref{#1}{#2} }
+%% \newcommand{\tabsref}[2]{Tables~[\ref{#1} \ref{#2}]}
 \newcommand{\appref}[1]{Appendix~\ref{#1}}
 \newcommand{\bibref}[1]{Ref.~\cite{#1}}
 \newcommand{\secref}[1]{Section~\ref{#1}}

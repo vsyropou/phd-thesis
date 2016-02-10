@@ -1,6 +1,7 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Angular Dependence}
 \label{Diferential_Decay_Rate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The decay of intreast, \BJpsiKst, is a P2VV process\footnote{P2VV is an acronim that characterises the spin-parity of the particles involved in the dacay.
 The $\Bs$ (and $\Bd$) is spin-0 parity minus (Pseudoscalar) particle, whereas the intermediate resonances $\Jpsi$ and $\phi$ are spin-1 parity minus (Vector) particles. Hence the
 acronim P2VV} with 4 particles in the final state. There are at least two ways to describe the angular dependence of that decay, namelly the transversity framework \cite{transvFrameworkI,transvFrameworkII}
@@ -11,7 +12,7 @@ momentum direction and squaring the sum. Or in more comapct wording, from summin
 approaches within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectivelly for the trasvercity and helicity formalism.
  
 The current paragraph aims at very briefly explaining the steps needed to arive at an angular pdf for \BsJpsiKst decays, which is the sum of ten terms, corresponding to
-all the possible \pwave amplitude polarization states longitudinal ($0$), perpendicular ($\perp$), parallel ($\parallel$) plus \pwave self interference terms as well as 
+all the possible \pwave amplitude polarization states. Namelly longitudinal ($0$), perpendicular ($\perp$), parallel ($\parallel$) plus \pwave self interference terms as well as 
 the \swave amplitude (S) and the \spwave interference terms, \equref{ang_terms}.
 
 \begin{equation}
@@ -20,13 +21,13 @@ the \swave amplitude (S) and the \spwave interference terms, \equref{ang_terms}.
 \end{equation}
 
 \noindent Where the terms $a_n$ denote expresions releated the the angular amplitudes. The exact espresions of $a_n$ are shown in the first column of \tabref{ang_distr}. The functions $h$ 
-represent the angular dependance of each term, whereas $M_n$ stands for the \mkpi dependence of the anplitude and its explanation and special treatment is postponed for the next section. 
+represent the angular dependance of each term, whereas $M_n$ stands for the \mkpi dependence of the anplitude and its special treatment is postponed for the next section. 
 After squaring the amplitude and applying the \emph{helicity formalistm} the ten terms of \equref{ang_terms} are realised in table \tabref{ang_distr}.
 
 \begin{table}[h]
   \centering 
   \caption{ Angular functions corresponding to each term in \equref{ang_terms} for the \BJpsiKst decay. Pure and interference \pwave terms are shown in the upper part, 
-    whereas the \swave plus \spwave interference in the lower. The angular functions are expressed in the helicity basis. The angles $\costhetax{K},\costhetax{\mu},\phihel$
+    whereas the \swave plus \spwave interference in the lower. The angular functions are expressed in the helicity basis. The angles $\cos\thetaK,\cos\thetamu,\phihel$
     are called \emph{helicity angles} and in \figref{helAngles} are put into perspective. The $P$ and $Y$ symbols denote ascosiated legendre polynomials and real valued sperical harmonics
     respectively. The middle column express the angular dependence in an orthogonal basis and it is equivalent to the last column. }
   \renewcommand{\arraystretch}{1.2}
@@ -91,15 +92,15 @@ After squaring the amplitude and applying the \emph{helicity formalistm} the ten
 \end{table}  
 
 Three angles are required in a 4 body decay corresponding to the angular degrees of freedom necessary to describe the angular dependence of the system.
-The angles $\costhetax{K},\costhetax{\mu},\phihel$ are called \emph{heliciy angles} and are defined in \figref{helAngles}. In that figure it can be seen
-that $\costhetax{\mu}$ is the angle of the positive $\mu$ with respect to the momentum of the \Jpsi in the \Bs rest frame. Similarly for $\costhetax{K}$,
+The angles $\thetaK,\thetamu,\phihel$ are called \emph{heliciy angles} and are defined in \figref{helAngles}. In that figure it can be seen
+that $\thetamu$ is the angle of the positive $\mu$ with respect to the momentum of the \Jpsi in the \Bs rest frame. Similarly for $\thetaK$,
 the \kaon is used to define the angle with respect to the momentum of the intermediate \Kpi resonance. Finally $\phihel$ is 
 the relative angle between the \Kpi and dimuon decay plances, where each plane is again defined in the rest frame of the respective intermediate resonance.  
 
-Lastly, the mathematically elegant orthonormal angular basis of $P$ and $Y$
+Lastly, the mathematically elegant orthogonal angular basis of $P$ and $Y$
 \footnote{The decompotition of angular functions in an orthogonal basis follwos naturally from the fact that sperical harmonics can be expressed as 
 Wigner-$D$ matrices. The last are an essential part of the helicity formalism. More details on this mapping can be found in \cite{jeroenThesis} } 
-is adopted in the current analysis, since the integrals of type $\int_{-1}^{1}Pd\varphi$ and $\int_{-1}^{1}Yd\costhetax{K}d\costhetax{\mu}$ are known 
+is adopted in the current analysis, since the integrals of type $\int_{-1}^{1}Pd\cos\thetaK$ and $\int_{\cos\theta=-1,\varphi=-\pi}^{\cos\theta=1,\varphi=\pi}Yd\cos\theta d\varphi$ are known 
 analitically thus significantly reducing the fiting time and simplifing the implementation of the angular fucntions.
 
 
@@ -112,15 +113,246 @@ analitically thus significantly reducing the fiting time and simplifing the impl
 \end{figure}
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance}
 \label{Accceptance}
-Describe Efficiency moments formalism\\
-Dump eff moments\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+While the effects of angular resolution are known to be negligible for this analysis, angular acceptance on the other hand can
+not be neglected. The current section introduces the acceptance shape. After that the parametriation of the acceptance is discussed
+and finally an important issue relaeted to the choice of parametrizations is dealt with.
+
+The shape of the acceptance can be seen in \figref{angAcc_ctk} to \figref{angAcc_phi}. The most striging feature is the drop of efficiency 
+close to $\cos\thetaK=1$, which implies that the pion is more likely to fly out of the geometrical acceptance of the detector
+and thus not be reconstruted. This feature can be understood given the  definition of $\cos\thetaK$ in \figref{helAngles}. 
+There can be seen that if $\cos\thetaK\rightarrow 1$ and hence $\thetaK \rightarrow 0$ then after boosting
+to the lab frame the kaon will get most of the \Kstar momentum due to its heavier mass leaving the pion with little momentum.
+Evenually the pion will fly out of the acceptace creating the observed assymetric efficiency loss. With that said, it is intuitive that
+this type of efficiency loss is driven by the mass diffference between the two particles. In the case of the $\cos\thetamu$ the
+reconstruction iduced inefficiency is symmetric with respect to the positive and negative muons since they have the same mass.
+As for acceptance in $\phihel$ it is very close to being flat, by staring again \figref{helAngles} one does not expect any
+reason for a strong acceptance effect. In addition to this type of acceptance effects any of the selection cuts applied could also
+introduce some ineeficiency.  
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaK_allKaons_binall}}
+    \caption{}
+    \label{angAcc_ctk}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.49\textwidth}
+    \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaL_allKaons_binall}}
+    \caption{}
+    \label{angAcc_ctl}
+  \end{subfigure}
+
+  \vspace*{0.02\textwidth}
+  \begin{subfigure}{0.49\textwidth}
+    \scalebox{1.3}{\input{Figures/Chapter4/helphi_allKaons_binall}}
+    \caption{}
+    \label{angAcc_phi}
+  \end{subfigure}
+  \caption{Angular acceptance shape from simulated data. Each event in the simulated sample has been weighted with the inverse integral 
+           of the \pdf that was used to generate them, resulting tothose three distributions that give a feeling of the acceptance shape.
+           The scale of the $y$-axis is arbitrary.}
+\end{figure}
+
+\subsubsection{Acceptance parametrization}
+Comming now to the parametrization of the angular acceptance there are at least two ways to parametrize the angular acceptance.
+namelly the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}. 
+The current analysis implements the first one, where the efficiency function is parametrised using orthogonal functions. Such a 
+parameterization can be seen in the next equation \equref{eff_func}. The symbol $\effbase$ is introduced as a shorter notation.
+
+\begin{center}
+\begin{equation}
+  \epsilon(\Omega) = \sum_{ijk} \; \moment{i}{j}{k} \; P_i^0(\cos\thetaK) \; Y_{jk}(\cos\thetamu,\phihel) \equiv \moment{i}{j}{k} \; \effbase
+  \label{eff_func}
+\end{equation}
+\end{center}
+
+\noindent where the familiar from the previous section spherical harmonics ($P$) and ascosiated legender polynimials ($P$) show up as the basis
+functions on which the angular acceptance is decomposed to by means of the basis coeeficients $c^i_{k}$, hearafter efficicney moments (or simply moments). 
+The reason of choosing the particular parametrizations is obisously because the integal of the product of two $P$ or $Y$ are known analytically. 
+Following the above parametrizations one just needs to find a way compute those $c^i_{jk}$ moments, which in principle are infinite since the 
+sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However in practice only a small number of efficiency moments 
+contribute significantly to the propper description of the angular acceptance shape. The efficiency moments used to describe the acceptance 
+shape are shown in the first column of \tabref{eff_moms_table}. The choice of those particular moments is connected to an important issue with the acceptance 
+structure close to $\cos\thetaK=1$ and it is addressed at the end of the current section.   
+
+In order for the efficiency moments $c^i_{jk}$ to be computed a definition of the efficiency is necesary. Note that this computation relies on 
+simulated data where all the generating conditions are known. The efficiency then is defined as the ratio of two angular dependant \pdfs. 
+One is the angular \pdf that the simulated data follow after all stages of reconstruction and offline selection, whereas the other is the 
+angular \pdf which the Monte Carlo data have been generated with. It follows that the efficiency is defined as the ratio of the first
+over the later and it is shown in equation \equref{eff_def}.
+
+\begin{center}
+\begin{equation}
+  \epsilon(\Omega) \equiv \frac{\Pobs}{\Pgen}
+  \label{eff_def}
+\end{equation}
+\end{center}
+
+\noindent Computing the efficiency moments is done by projecting the efficiency as defined in \equref{eff_def} on the orthogonal $P\;Y$ basis.
+This projection is shown in \equref{eff_moms_def}. Where the factor $j+\frac{1}{2}$ is used to acount for the fact that the ascosiated legender 
+polynomials form an orthogonal basis but in fact the orthonormal behaviour is rquired to properly compute the efficiency moments. 
+
+
+\begin{center}
+\begin{align}
+   c^i_{jk}  \equiv &(j + \frac{1}{2}) \; \int \; d\Omega \; \effbase \; \epsilon(\Omega) \nonumber \\ 
+                 = &(j + \frac{1}{2}) \; \int \; d\Omega \; \effbase \; \frac{\Pobs}{\Pgen}
+  \label{eff_moms_def}
+\end{align}
+\end{center}
+
+\noindent The last step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
+This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
+that the integral in \equref{eff_moms_def} is expressed as a sum over the simulated data (which they have passed through the same 
+steps of reconstruction and offline selection as the real data) and is shown in \equref{eff_moms_calc}. {\color{red} I still do not really understand the last step damm it}   
+
+\begin{center}
+\begin{equation}
+  E\left[ \int \; d\Omega \; \effbase \frac{\Pobs}{\Pgen} \right] = \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}  
+  \label{eff_moms_calc}
+\end{equation}
+\end{center}
+
+\noindent Combining \equref{eff_moms_def} and \equref{eff_moms_calc} the final expresion for computing the efficiency moments is shown
+in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_calc_final}  
+
+\begin{center}
+\begin{equation}
+ c^i_{jk} \equiv (j + \frac{1}{2})  \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}  
+  \label{eff_moms_calc_final}
+\end{equation}
+\end{center}
+
+\begin{table}[h]
+  \centering 
+  \caption{ Efficiency moments }
+  \renewcommand{\arraystretch}{1.2}
+  \label{eff_moms_table}
+  \begin{tabular}{ccc}
+    \hline
+    moment & central value & standard deviation \\
+    \hline
+    $\moment{0}{0}{0}$ & +3.7785  & 0.0016 \\
+    $\moment{1}{0}{0}$ & -2.1268  & 0.0059 \\
+    $\moment{2}{0}{0}$ & -1.9557  & 0.0089 \\
+    $\moment{3}{0}{0}$ & +0.0009  & 0.0106 \\    
+    $\moment{4}{0}{0}$ & +0.1461  & 0.0122 \\
+    $\moment{5}{0}{0}$ & +0.1095  & 0.0134 \\
+    
+    $\moment{0}{2}{0}$ & +0.2822  & 0.0046 \\
+    $\moment{0}{2}{2}$ & +0.0505  & 0.0040 \\
+    $\moment{0}{4}{0}$ & +0.0838  & 0.0046 \\
+
+    $\moment{1}{4}{0}$ & -0.0603  & 0.0081 \\
+    $\moment{2}{2}{0}$ & -0.1139  & 0.0111 \\
+    $\moment{2}{2}{2}$ & -0.0453  & 0.0082 \\
+\hline
+  \end{tabular}
+\end{table}  
+
+
+\subsubsection{Choice of efficiency moments}
+The choice of efficiency moments has to do with the structure of the acceptance at $\cos\thetaK=1$. At that point the acceptance goes to zero
+which is not a problem by itself. However within the parametrization that is adopted in this analysis it can happen that the acceptance fucntion
+\equref{eff_func} can take negative values depending on the choice of ceratain efficiency moments. In other words the approach of efficiency moments does
+not guarantee that the acceptance shape discribed by \equref{eff_func} is a positive definite quantity. Note that this is an artifact of the parametrization
+and by no means is there something wrong in the data or the detector. The problem is mathematical in nature and there is no standard solution that known
+when those are beign written. The approach followed to solve this problem has two steps. First a constrain on the acceptance function \equref{eff_func} is 
+introduced to force its value positive and second a constrained fit to the efficiency moments is performed to optimise the acceptance shape discription.
+The result is hybrid acceptance function that is problem free. 
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_nom.pdf}
+    \caption{}
+    \label{angAcc_nom}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_constr.pdf}
+    \caption{}
+    \label{angAcc_constr}
+  \end{subfigure}
+
+  \vspace*{0.02\textwidth}
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_constr_fit.pdf}
+    \caption{}
+    \label{angAcc_fit}
+  \end{subfigure}
+  \caption{Evolution of angular acceptance function treatment. The black points show the distribution of the helicity angles in the simulated sample 
+           (This is the sample that was weighted in order to produce \figref{angAcc_ctk} to \figref{angAcc_phi}). The blue curve is the \pdf that the
+           simulated data was generated with. The red curve is the same \pdf multiplied with the efficiency function \eqref{eff_func}.
+           Columns from left to right correspond to raw, constrianed, constraind plus fitted acceptance.
+            }
+\end{figure}
+
+Before laying out the formulas behind the above mentioned steps it is usefull to literally see the problem caused by the parametrization, see \figref{angAcc_nom}
+and the corresponding caption. Having done that the most natural thing to do before making any efford to force the value of \equref{eff_func}, hearafter efficiency function,
+positive at $\cos\thetaK=1$ is to make the best choice of effiency moments. The moments are chosen such that the value of the efficiency function is as less negative
+as 
+possible\footnote{It is actually not trivial to find a good choice of efficiecy moments. Two things are relevant when trying to describe a 
+distribution with orthogonal functions like $P$ and $Y$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
+For example the efficiency term $P_1Y_{00}\moment{1}{0}{0}$ is necessay to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{0}{0}{0}$ 
+is too large making the total efficiency function negative. Thus one could add the term $P_3Y_{00}\moment{3}{0}{0}$ where $\moment{3}{0}{0}$ is positive
+(see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunatelly it is not enough. Things get more complicated
+when doing that with basis functions $P_iY_{jk}$ that affect all three angles at the same time.
+}.
+Having chosen the best possible set of efficiency moments the value of the efficiency function is constrained by solving the efficiency function for
+one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. The constrain that is imposed is shown in \equref{eff_func_constr}
+
+\begin{center}
+\begin{equation}
+  \epsilon(\cos\thetaK = 1, \cos\thetamu, \phihel) = 0 
+  \label{eff_func_constr}
+\end{equation}
+\end{center}
+
+\noindent Starting from \equref{eff_func} (where the sume now runs over the indices of the first column in \tabref{eff_moms_table}):
+
+\begin{center}
+\begin{align}
+  \epsilon(\Omega) =& \sum_{ijk} \; c^i_{jk} \legendre{i}{0} \spharm{j}{k} \nonumber \\
+                   =& \moment{0}{0}{0} \legendre{0}{0} \spharm{0}{0} + \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k}
+  \label{eff_func_rewriten}
+\end{align}
+\end{center}
+
+\noindent given \equref{eff_func_constr} and also $\legendre{0}{0}=1$,  $\spharm{0}{0} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be easily solved for $\moment{0}{0}{0}$
+
+\begin{center}
+\begin{equation}
+  \moment{0}{0}{0} = -2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} P_i^0(1) \spharm{j}{k}
+  \label{eff_func_constr}
+\end{equation}
+\end{center}
+
+\noindent \equref{eff_func_constr} is pluged in to \equref{eff_func_rewriten} resulting in \equref{}
+
+\begin{center}
+\begin{align}
+  \epsilon(\Omega) &= \left[-2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} P_i^0(1) \spharm{j}{k} \right] \legendre{0}{0} \spharm{0}{0} \\ 
+                   &+ \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} \\
+  \label{eff_func_final}
+\end{align}
+\end{center}
+
+How errors are calculated??\\
+Cover negativa acceptance issue (show example plots, constrain, 1 sigma gaussian vairation, tables )\\
+Explain choice of moments.\\
+Acceptance correlations 2D efficiencies\\
+Normalizations weights vs eff moments pros and cons \\
 
 \subsection{Acceptance Corrections}
 \label{Accceptance_Corrections}
 Motivation\\
+Comparision before and after reweighting correction\\
 Data - Simulation Differences\\
 Validation\\
 
