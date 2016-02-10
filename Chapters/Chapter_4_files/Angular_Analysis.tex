@@ -268,23 +268,39 @@ The result is hybrid acceptance function that is problem free.
 
 \begin{figure}[h]
   \centering
-  \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_nom.pdf}
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw}}
     \caption{}
     \label{angAcc_nom}
   \end{subfigure}%
   \hfill%
-  \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_constr.pdf}
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaL_neg_all_raw}}
     \caption{}
     \label{angAcc_constr}
-  \end{subfigure}
-
-  \vspace*{0.02\textwidth}
-  \begin{subfigure}{0.49\textwidth}
-    \includegraphics[width=0.8\textwidth]{Figures/Chapter4/acc_constr_fit.pdf}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helphi_neg_all_raw}}
     \caption{}
     \label{angAcc_fit}
+  \end{subfigure}
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr}}
+    \caption{}
+    \label{angAcc_fit}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaL_neg_all_raw}}
+    \caption{}
+    \label{angAcc_constr}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.33\textwidth}
+    \scalebox{0.9}{\input{Figures/Chapter4/eff_helphi_neg_all_raw}}
+    \caption{}
+    \label{angAcc_constr}
   \end{subfigure}
   \caption{Evolution of angular acceptance function treatment. The black points show the distribution of the helicity angles in the simulated sample 
            (This is the sample that was weighted in order to produce \figref{angAcc_ctk} to \figref{angAcc_phi}). The blue curve is the \pdf that the
@@ -304,7 +320,7 @@ is too large making the total efficiency function negative. Thus one could add t
 (see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunatelly it is not enough. Things get more complicated
 when doing that with basis functions $P_iY_{jk}$ that affect all three angles at the same time.
 }.
-Having chosen the best possible set of efficiency moments the value of the efficiency function is constrained by solving the efficiency function for
+Having chosen the best possible set of efficiency moments the value of the efficiency function is constrained by solving it for
 one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. The constrain that is imposed is shown in \equref{eff_func_constr}
 
 \begin{center}
@@ -324,40 +340,71 @@ one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. 
 \end{align}
 \end{center}
 
-\noindent given \equref{eff_func_constr} and also $\legendre{0}{0}=1$,  $\spharm{0}{0} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be easily solved for $\moment{0}{0}{0}$
+\noindent given \equref{eff_func_constr} and also $\legendre{0}{0}=1$,  $\spharm{0}{0} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be 
+easily solved for $\moment{0}{0}{0}$ resulting in \equref{eff_constr_mom}
 
 \begin{center}
 \begin{equation}
   \moment{0}{0}{0} = -2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} P_i^0(1) \spharm{j}{k}
-  \label{eff_func_constr}
+  \label{eff_constr_mom}
 \end{equation}
 \end{center}
 
-\noindent \equref{eff_func_constr} is pluged in to \equref{eff_func_rewriten} resulting in \equref{}
+\noindent \equref{eff_func_rewriten} is used along with \equref{eff_constr_mom} resulting finally in \equref{eff_func_final}. 
+The last is an updated efficiency function which is guranteed to be positive definite at $\cos\thetaK=1$. 
 
 \begin{center}
 \begin{align}
-  \epsilon(\Omega) &= \left[-2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} P_i^0(1) \spharm{j}{k} \right] \legendre{0}{0} \spharm{0}{0} \\ 
-                   &+ \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} \\
+  \epsilon(\Omega) &= \left[-2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \cancelto{1}{P_i^0(1)} \spharm{j}{k} \right] \cancelto{1}{\legendre{0}{0}} \cancelto{\frac{1}{2\sqrt{\pi}}}{\spharm{0}{0}} \nonumber \\ 
+                   &+ \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} = \nonumber \\
+                   &= \left[- \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \spharm{j}{k} \right] + \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} = \nonumber\\
+                   &= \sum_{ijk}^{ijk\neq 000} \moment{i}{j}{k} \left[ \legendre{i}{0} \spharm{j}{k} - \spharm{j}{k} \right]
   \label{eff_func_final}
 \end{align}
 \end{center}
 
+\noindent The result of the above constrain is shown in figure \figref{}, where it can be seen that the acceptance projecton on $\cos\thetaK=1$
+is not zero anymore. In addition it has also been checked wheather the acceptance is negative in 2D and 3D, since it is possible for a 2D
+projetion of the acceptance to take negative values as well. Two dimentional preojection of the constrained acceptance can be seen in \figref{}.
+
+As it can be seen in \figref{} the cconstrain of the acceptance comes with a penalty. That being the fact that the shape of the 1D acceptance
+projections is distorted. In order to undo this distortion and describe better the acceptance an addional step is implemented. As it was
+previously mentioned the acceptance function of \equref{eff_func_final} is further fitted to the simulated data to where the efficiency
+moments are allowed to float with gaussian constraint of one standard deviation and properly taking into account their correlations by
+means of a multivariant gaussian. The fitted \pdf $\Pobs$ is the one that the simulated data was generated with multipied by the 
+efficiency function \eqref{eff_func_final}. The generated parameters are fixed so that only the efficiecny moments are allowed to float.     
+The effect of this fit is shown in \figref{} and the gaussian constrain that is used is shown in \equref{}.
+
+\begin{center}
+\begin{equation}
+  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) } \nonumber
+\end{equation}
+\end{center}
+
+\noindent Where $\vec{\bf c}$ represent floatting efficiency moments, whereas the $<\vec{\bf c}>$ are the efficiency moments obtained
+after the constrain fasi re man. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectivelly.
+Lastly $k$ is the number of efficiency moments used. In our case ble.
+
+
 How errors are calculated??\\
-Cover negativa acceptance issue (show example plots, constrain, 1 sigma gaussian vairation, tables )\\
-Explain choice of moments.\\
 Acceptance correlations 2D efficiencies\\
 Normalizations weights vs eff moments pros and cons \\
 
+\subsubsection{Alternative parameterization}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance Corrections}
 \label{Accceptance_Corrections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Motivation\\
 Comparision before and after reweighting correction\\
 Data - Simulation Differences\\
 Validation\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\Kpi Invariant mass}
 \label{Kpi_Invariant_mass}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{CSP factors}
 Explain CSP factors\\
