@@ -209,7 +209,7 @@ polynomials form an orthogonal basis but in fact the orthonormal behaviour is rq
 \noindent The last step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
 This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
 that the integral in \equref{eff_moms_def} is expressed as a sum over the simulated data (which they have passed through the same 
-steps of reconstruction and offline selection as the real data) and is shown in \equref{eff_moms_calc}. {\color{red} I still do not really understand the last step damm it}   
+steps of reconstruction and offline selection as the real data) and is shown in \equref{eff_moms_calc}.   
 
 \begin{center}
 \begin{equation}
@@ -260,65 +260,42 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 The choice of efficiency moments has to do with the structure of the acceptance at $\cos\thetaK=1$. At that point the acceptance goes to zero
 which is not a problem by itself. However within the parametrization that is adopted in this analysis it can happen that the acceptance fucntion
 \equref{eff_func} can take negative values depending on the choice of ceratain efficiency moments. In other words the approach of efficiency moments does
-not guarantee that the acceptance shape discribed by \equref{eff_func} is a positive definite quantity. Note that this is an artifact of the parametrization
-and by no means is there something wrong in the data or the detector. The problem is mathematical in nature and there is no standard solution that known
-when those are beign written. The approach followed to solve this problem has two steps. First a constrain on the acceptance function \equref{eff_func} is 
+not guarantee that the acceptance shape discribed by the same equation is a positive definite quantity. Note that this is an artifact of the parametrization
+and by no means is there something wrong in the data or the detector. The problem is mathematical in nature and there is no standard solution known
+when those lines are being written. The approach followed to solve this problem has two steps. First a constrain on the acceptance function, \equref{eff_func}, is 
 introduced to force its value positive and second a constrained fit to the efficiency moments is performed to optimise the acceptance shape discription.
-The result is hybrid acceptance function that is problem free. 
+The result is a hybrid acceptance function that is problem free. 
 
 \begin{figure}[h]
   \centering
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw}}
+  \begin{subfigure}{0.5\textwidth}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw}}
     \caption{}
     \label{angAcc_nom}
   \end{subfigure}%
   \hfill%
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaL_neg_all_raw}}
-    \caption{}
-    \label{angAcc_constr}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helphi_neg_all_raw}}
-    \caption{}
-    \label{angAcc_fit}
-  \end{subfigure}
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr}}
-    \caption{}
-    \label{angAcc_fit}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helcosthetaL_neg_all_raw}}
-    \caption{}
-    \label{angAcc_constr}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.33\textwidth}
-    \scalebox{0.9}{\input{Figures/Chapter4/eff_helphi_neg_all_raw}}
+  \begin{subfigure}{0.5\textwidth}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr}}
     \caption{}
     \label{angAcc_constr}
   \end{subfigure}
-  \caption{Evolution of angular acceptance function treatment. The black points show the distribution of the helicity angles in the simulated sample 
-           (This is the sample that was weighted in order to produce \figref{angAcc_ctk} to \figref{angAcc_phi}). The blue curve is the \pdf that the
-           simulated data was generated with. The red curve is the same \pdf multiplied with the efficiency function \eqref{eff_func}.
-           Columns from left to right correspond to raw, constrianed, constraind plus fitted acceptance.
+  \caption{{\color{red} redo this plot and zoom in the region of $\cos\thetaK=1$ }. Angular efficiency function before(A) and ater(B) constraining its value at $\cos\thetaK=1$. The black points show the distribution of the 
+           helicity angles in the simulated sample (This is the sample that was weighted in order to produce \figref{angAcc_ctk} to \figref{angAcc_phi}). 
+           The blue curve is the \pdf that the simulated data was generated with. The red curve is the same \pdf multiplied with the efficiency function 
+           \eqref{eff_func}. 
             }
 \end{figure}
 
-Before laying out the formulas behind the above mentioned steps it is usefull to literally see the problem caused by the parametrization, see \figref{angAcc_nom}
+Before laying out the formulas behind the above mentioned steps it is usefull to literally see the problem caused by the parametrization, see \figref{angAcc_nom}, \figref{angAcc_constr}
 and the corresponding caption. Having done that the most natural thing to do before making any efford to force the value of \equref{eff_func}, hearafter efficiency function,
 positive at $\cos\thetaK=1$ is to make the best choice of effiency moments. The moments are chosen such that the value of the efficiency function is as less negative
 as 
 possible\footnote{It is actually not trivial to find a good choice of efficiecy moments. Two things are relevant when trying to describe a 
 distribution with orthogonal functions like $P$ and $Y$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
-For example the efficiency term $P_1Y_{00}\moment{1}{0}{0}$ is necessay to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{0}{0}{0}$ 
+For example the efficiency term $\moment{1}{0}{0}P_1Y_{00}$ is necessay to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{0}{0}{0}$ 
 is too large making the total efficiency function negative. Thus one could add the term $P_3Y_{00}\moment{3}{0}{0}$ where $\moment{3}{0}{0}$ is positive
 (see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunatelly it is not enough. Things get more complicated
-when doing that with basis functions $P_iY_{jk}$ that affect all three angles at the same time.
+when doing that with basis functions that affect all three angles at the same time.
 }.
 Having chosen the best possible set of efficiency moments the value of the efficiency function is constrained by solving it for
 one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. The constrain that is imposed is shown in \equref{eff_func_constr}
@@ -330,7 +307,7 @@ one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. 
 \end{equation}
 \end{center}
 
-\noindent Starting from \equref{eff_func} (where the sume now runs over the indices of the first column in \tabref{eff_moms_table}):
+\noindent Starting from the efficiency function of \equref{eff_func} (where the sum now runs over the indices of the first column in \tabref{eff_moms_table}):
 
 \begin{center}
 \begin{align}
@@ -340,7 +317,7 @@ one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. 
 \end{align}
 \end{center}
 
-\noindent given \equref{eff_func_constr} and also $\legendre{0}{0}=1$,  $\spharm{0}{0} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be 
+\noindent given \equref{eff_func_constr} and also $P_{0}^{0}=1$,  $Y_{00} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be 
 easily solved for $\moment{0}{0}{0}$ resulting in \equref{eff_constr_mom}
 
 \begin{center}
@@ -363,53 +340,133 @@ The last is an updated efficiency function which is guranteed to be positive def
 \end{align}
 \end{center}
 
-\noindent The result of the above constrain is shown in figure \figref{}, where it can be seen that the acceptance projecton on $\cos\thetaK=1$
+\noindent The result of the above constrain is shown in figure \figref{angAcc_constr}, where it can be seen that the acceptance projecton on $\cos\thetaK=1$
 is not zero anymore. In addition it has also been checked wheather the acceptance is negative in 2D and 3D, since it is possible for a 2D
-projetion of the acceptance to take negative values as well. Two dimentional preojection of the constrained acceptance can be seen in \figref{}.
+projetion of the acceptance to take negative values as well while the 1D projections are positive. Two dimentional preojection of the constrained acceptance can be seen in \figref{eff2D_ckcl}.
 
-As it can be seen in \figref{} the cconstrain of the acceptance comes with a penalty. That being the fact that the shape of the 1D acceptance
-projections is distorted. In order to undo this distortion and describe better the acceptance an addional step is implemented. As it was
-previously mentioned the acceptance function of \equref{eff_func_final} is further fitted to the simulated data to where the efficiency
-moments are allowed to float with gaussian constraint of one standard deviation and properly taking into account their correlations by
-means of a multivariant gaussian. The fitted \pdf $\Pobs$ is the one that the simulated data was generated with multipied by the 
-efficiency function \eqref{eff_func_final}. The generated parameters are fixed so that only the efficiecny moments are allowed to float.     
-The effect of this fit is shown in \figref{} and the gaussian constrain that is used is shown in \equref{}.
+Constraining the acceptance in this maner described above comes with a penalty, meaning that the shape of the 1D acceptance
+projections is distorted a bit. In order to undo this distortion and describe better the acceptance an addional step is implemented. 
+As it was previously mentioned the acceptance function of \equref{eff_func_final} is further fitted to the simulated data where the efficiency
+moments are allowed to float with gaussian constraints of one standard deviation and properly taking into account their correlations by
+means of a multivariant gaussian. The fitting \pdf $\mathcal{P}=\Pgen\times\epsilon(\Omega)$ consists of te \pdf that the simulated data was generated
+with multipied with the efficiency function \eqref{eff_func_final}. The generated parameters are fixed so that only the efficiecny moments are allowed to float.     
+The multivariate gaussian function used to constrain the efficiency moments within one standard deviation is shown in \equref{mvm_constr}.
 
 \begin{center}
 \begin{equation}
-  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) } \nonumber
+  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) }
+  \label{mvm_constr}
 \end{equation}
 \end{center}
 
-\noindent Where $\vec{\bf c}$ represent floatting efficiency moments, whereas the $<\vec{\bf c}>$ are the efficiency moments obtained
-after the constrain fasi re man. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectivelly.
-Lastly $k$ is the number of efficiency moments used. In our case ble.
+\noindent Where $\vec{\bf c}$ represents the floatting efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments computed
+with \equref{eff_constr_mom}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectivelly.
+Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final}. 
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+%    \scalebox{0.5}{\input{Figures/Chapter4/eff2D_cosThK_cosThL_neg_all_constr}}
+    \caption{}
+    \label{eff2D_ckcl}
+  \end{subfigure}
+\caption{2D efficiency plots. {\color{red} Under construction}}
+\end{figure}
 
 
-How errors are calculated??\\
-Acceptance correlations 2D efficiencies\\
-Normalizations weights vs eff moments pros and cons \\
+{\color{red} How are the errors on efficiency moments calculated??}\\
 
 \subsubsection{Alternative parameterization}
+As it was mentioned before there is at least one more way to parametrize the angular acceptance, namely the \emph{normalization weights}.
+The main difference them and the method adopted in this analisis is that essentially the normalization weights use the angular functions
+of \tabref{ang_distr} as a basis to project the efficiency of \equref{eff_def}, instead of the orthogonal basis $a_i^{jk}$ of \equref{eff_func}.
+Looking at \equref{norm_weights_pdf} is helpfull to realise how the normalization weights, $\xi_n$, are introduced into the fitting \pdf. 
+One can see that they effectivelly do not multiply the angular \pdf directly but modify the relative contributions between the angular functions
+$f_n$, in the normalization integral of the fitting \pdf. Normalization weights are calculated following the concept of Monte Carlo integration
+similarly to the case of efficiency moments.
+
+\begin{equation}
+  \mathcal{P} \propto \frac{\sum_n f_k(\Omega)}{\sum_n \int d\Omega \; \epsilon(\Omega) \; f_k(\Omega)}, \;\;\;\;\text{where} \int d\Omega \; \epsilon(\Omega) \; f_k(\Omega) \equiv \xi_n 
+  \label{norm_weights_pdf}
+\end{equation}
+
+The advantages of this method is that it is immune from any issue with negative efficiency values. After all the acceptance shape is not parametrised at all.
+On the other hand the fitting time increases due to the fact that the \pdf is not expressed in an orthogonal basis any more. Also other
+iplementation and plotting issues arise when usign normalization weights. Lastly the two methods can give identical values on the fitted parameters by mapping 
+the normalization weights to efficiency moments. This can be done if one solves the nornalization intregral, $\int d\Omega\;\Pgen\times\epsilon(\Omega)$,
+of the \pdf of \tabref{ang_distr}, which can be done easily analytically expoliting the orthogonality of $P$ and $Y$. More details on the normalization
+weights aproach can be found in \cite{jeroenThesis}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance Corrections}
 \label{Accceptance_Corrections}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Motivation\\
-Comparision before and after reweighting correction\\
-Data - Simulation Differences\\
-Validation\\
+As it was mentioned in section \secref{Accceptance} the angular acceptance is determined with simulated \BsJpsiKst events.
+Thus the acceptance determination can be trusted only if the simulation accurately describes the detector as well as the 
+physical amplitudes of the \BsJpsiKst decay. More specifically real data - Mont Carlo differences in the momentum distributions
+of the final state particles (\figref{} {\color{red} Make data-MC plots}) may reflect a different acceptance in data compared to MC. On the other hand,
+non perfect acceptance simulation could be also atributed to differences in the underlying physical parameter values generating 
+the Monte Carlo data and those present on real data. For example, the presence of S-wave in the real data (and its absence on simulated data)
+can cause a difference in the observed kaon momentum spectrum even though the angular acceptance may be perfectly simulated.
+Both of the above mentioned effects have an impact on the decay angles distribution since the helicity angles are defined
+from the momenta of hte final state particles. 
+
+In order to over-come the problem of simulation imperfections, the simulated sample
+is re-weighted using an iterative procedure. At each re-weighting step of the procedure the Monte Carlo data is corrected 
+for the current best estimate of the physics parameters and the two dimensional $p_{K^{\pm}},p_{\pi^{\mp}}$ ({\color{red} why not the muons)} momentum distribution. 
+The efficiency moments are re-evaluated with from corrected Monte Carlo sample and the fit to the real data is repeated. 
+This changes the best estimate of the physical parameters of interest. This procedure is reapetated untill the parameters
+of interest converge. The full procedure by steps can be summarized as:
+
+\begin{enumerate}
+\item Calculate an initial set of efficiency moments using uncorrected \BdJpsiKst Monte Carlo samples.
+\item Perform a fit on the \BsJpsiKst data using the initial eficiency moments, and obtain the first estimate of the physical parameters.
+\item Re-weight each Monte Carlo event for the difference between the obtained from the previous fit angular PDF and the angular PDF used to generate the Monte Carlo sample. 
+      This essentially means that the underlying physics of the reweighted Monte Carlo sample corresponds to the physics obtained in the previous step.
+\item Compare the $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution between the physics re-weighted Monte Carlo sample of the previous step with the 
+      real data, and re-weight Monte Carlo events for the difference.
+\item Re-estimate the efficiency moments using the physics plus momentum corrected \BdJpsiKst Monte Carlo sample and repeat the fit on the \BsJpsiKst data.
+\item Go back to step 4 and repeat until change in the parameters of intereset are negligible ($<0.01\sigma$).
+\end{enumerate} 
+
+
+The re-weighting of the MC sample is done using two-dimensional histograms, with a binning scheme that is shown in \tabref{angAccBinning}. 
+At least 5 iterations are necessary for convergence. Detailed evolution of the normalisation weights and the physics result after each iteration
+can be found in \appref{}. 
+
+\begin{table}[!h]
+  \center
+  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
+  \begin{tabular}{c c c}
+    
+     variables & range & $\# \text{bins}$ \\
+     %\multicolumn{2}{c}{range}   &  vs        \\
+    \hline
+    $p_{K^{\pm}}$    &  $[0,140]    \;  \text{GeV}/\text{c}^2$  & 10      \\ 
+    $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\ 
+   % $p(\Bs)$    &  $[x,y]   \;  \text{MeV}/\text{c}^2$  & 200      \\
+   % \mkpi       &  $[x,y] \; \text{MeV}/\text{c}$    & 100      \\
+    \hline
+  \end{tabular}
+  \label{angAccBinning}
+\end{table}
+
+
+\subsubsection{Validation of the iterative procedure}
+{\color{red} The code for that is half implemented.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\Kpi Invariant mass}
 \label{Kpi_Invariant_mass}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{CSP factors}
-Explain CSP factors\\
+\subsubsection{Dependence on \mkpi and CSP factors}
+Total amplitude integrated over mkp yields integrals of the type blah.\\
+You only need to worry about the cross terms. Footnote Jeroen.\\
+Explain how they are calculated.\\
 
-\subsubsection{sWeighted mKpi distribution}
+\subsubsection{sWeighted \mkpi distribution}
+Explain why the swawe is the same between \Bs and \Bd
 While the \Bs or \Bd di-muon \sPlot s have very similar shape, the \mkpi weighted spectrums exhibit different shapes. 
 Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted. This could be due to the presence of interference between
  the $K\pi$ \swave and the \Kstarz, which would appear to be stronger in the \Bs decays compared to the \Bd. 
@@ -428,11 +485,23 @@ We also checked the effect of allowing the mean and sigma of the \Bs and \Bd Hyp
 a simultaneous fit. No significant gain was observed. The corresponding results are presented in \appref{app:massFitSimultaneous}. 
 
 
-\subsection{Total Decay Rate}
+\subsection{Maximum Likelihood Fit}
 \label{Total_Decay_Rate}
+Explain simultaneous fit why (trends)\\
+Show likelihood function\\
+Explain the signal background thing with the sFit\\
+Likelihood with weighted events and sFit errors\\
+
+
+\subsubsection{Total Decay Rate}
+Quote Uncorrected and correted efficiency moments tables and figures after explaining the simultaneous fit.
+Also quote the convergence tables (moments and physics pars)\\
+
 
 \subsubsection{\CP Assymetries}
+Define them\\
+Explain how they are imported into the fit in the normalization of extended pdfs\\
 
-\subsubsection{Maximum Likelihood Fit}
+
 
 
