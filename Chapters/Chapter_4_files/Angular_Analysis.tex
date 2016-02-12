@@ -11,18 +11,20 @@ formalism is addopted where the angular dependance is introduced by summing all 
 momentum direction and squaring the sum. Or in more comapct wording, from summing up all possible helicity configurations of the intermediate vecror particles. A detailed derivation of both 
 approaches within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectivelly for the trasvercity and helicity formalism.
  
-The current paragraph aims at very briefly explaining the steps needed to arive at an angular pdf for \BsJpsiKst decays, which is the sum of ten terms, corresponding to
-all the possible \pwave amplitude polarization states. Namelly longitudinal ($0$), perpendicular ($\perp$), parallel ($\parallel$) plus \pwave self interference terms as well as 
-the \swave amplitude (S) and the \spwave interference terms, \equref{ang_terms}.
+The current paragraph aims at very briefly explaining the steps needed to arive to an expression for the angular decay rate for \BsJpsiKst decays, which is the sum of ten terms.  
 
-\begin{equation}
-\mathcal{A(\text{\BJpsiKst})} \propto \sum_n a_n h_n M_n
-\label{ang_terms}
-\end{equation}
+\begin{align}
+  \frac{d\Gamma(\text{\BJpsiKst})}{d\Omega\;d\mkpi} \propto |\mathcal{A}&(\text{\BJpsiKst})|^2 = \nonumber \\
+                                                    &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n M_n
+  \label{ang_terms}
+\end{align}
 
-\noindent Where the terms $a_n$ denote expresions releated the the angular amplitudes. The exact espresions of $a_n$ are shown in the first column of \tabref{ang_distr}. The functions $h$ 
-represent the angular dependance of each term, whereas $M_n$ stands for the \mkpi dependence of the anplitude and its special treatment is postponed for the next section. 
-After squaring the amplitude and applying the \emph{helicity formalistm} the ten terms of \equref{ang_terms} are realised in table \tabref{ang_distr}.
+\noindent Where the term $\mathcal{A}(\text{\BJpsiKst})$ is the amplitude of the decay which is decomposited in its \pwave ($0$, $\parallel$, $\perp$) and \swave ($S$) polarizations.
+The terms $a_n$ come from squaring the amplitude and their exact espresions are shown in the first column of 
+\tabref{ang_distr}\footnote{It is intreasting to see in \cite{jeroen_thesis} how the $\Re$ and $\Im$ parts of the itnerference terms show up}. 
+Note the appearence of \pwave self interference and \spwave interference terms. The functions $h$ represent the angular dependance of each term, whereas $M_n$ stands 
+for the \mkpi dependence of the anplitude and its special treatment is postponed for the next section. \tabref{ang_distr} sumamrizes the angular part of the decay rate
+equation which is the result of appling the \emph{helicity formalistm} in the \BJpsiKst decay.
 
 \begin{table}[h]
   \centering 
@@ -136,12 +138,14 @@ introduce some ineeficiency.
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{helcosthetaK_allKaons_binall}
     \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaK_allKaons_binall}}
     \caption{}
     \label{angAcc_ctk}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{helcosthetaL_allKaons_binall}
     \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaL_allKaons_binall}}
     \caption{}
     \label{angAcc_ctl}
@@ -149,6 +153,7 @@ introduce some ineeficiency.
 
   \vspace*{0.02\textwidth}
   \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{helphi_allKaons_binall}
     \scalebox{1.3}{\input{Figures/Chapter4/helphi_allKaons_binall}}
     \caption{}
     \label{angAcc_phi}
@@ -269,12 +274,14 @@ The result is a hybrid acceptance function that is problem free.
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{eff_helcosthetaK_neg_all_raw}
     \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw}}
     \caption{}
     \label{angAcc_nom}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr}
     \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr}}
     \caption{}
     \label{angAcc_constr}
@@ -461,6 +468,10 @@ can be found in \appref{}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Dependence on \mkpi and CSP factors}
+The dependence of the \BJpsiKpi decay amplitude on \mkpi as it was pointed out in \equref{ang_terms} is treated in a special way.
+Ideally  
+In principle given a certain model for the \mkpi lineshape around the \Kst resonance the exp
+  
 Total amplitude integrated over mkp yields integrals of the type blah.\\
 You only need to worry about the cross terms. Footnote Jeroen.\\
 Explain how they are calculated.\\
