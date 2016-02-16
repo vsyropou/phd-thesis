@@ -15,14 +15,14 @@ The current paragraph aims at very briefly explaining the steps needed to arive 
 
 \begin{align}
   \frac{d\Gamma(\text{\BJpsiKst})}{d\Omega\;d\mkpi} \propto |\mathcal{A}&(\text{\BJpsiKst})|^2 = \nonumber \\
-                                                    &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n M_n
+                                                    &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n \mKpiAmp
   \label{ang_terms}
 \end{align}
 
 \noindent Where the term $\mathcal{A}(\text{\BJpsiKst})$ is the amplitude of the decay which is decomposited in its \pwave ($0$, $\parallel$, $\perp$) and \swave ($S$) polarizations.
 The terms $a_n$ come from squaring the amplitude and their exact espresions are shown in the first column of 
 \tabref{ang_distr}\footnote{It is intreasting to see in \cite{jeroen_thesis} how the $\Re$ and $\Im$ parts of the itnerference terms show up}. 
-Note the appearence of \pwave self interference and \spwave interference terms. The functions $h$ represent the angular dependance of each term, whereas $M_n$ stands 
+Note the appearence of \pwave self interference and \spwave interference terms. The functions $h$ represent the angular dependance of each term, whereas $\mKpiAmp$ stands 
 for the \mkpi dependence of the anplitude and its special treatment is postponed for the next section. \tabref{ang_distr} sumamrizes the angular part of the decay rate
 equation which is the result of appling the \emph{helicity formalistm} in the \BJpsiKst decay.
 
@@ -373,6 +373,7 @@ Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
+%    \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr}
 %    \scalebox{0.5}{\input{Figures/Chapter4/eff2D_cosThK_cosThL_neg_all_constr}}
     \caption{}
     \label{eff2D_ckcl}
@@ -439,7 +440,7 @@ of interest converge. The full procedure by steps can be summarized as:
 
 The re-weighting of the MC sample is done using two-dimensional histograms, with a binning scheme that is shown in \tabref{angAccBinning}. 
 At least 5 iterations are necessary for convergence. Detailed evolution of the normalisation weights and the physics result after each iteration
-can be found in \appref{}. 
+can be found in \appref{}. In \tabref{} and \figref{} it can also be seen that the effect of the acceptance correction is small.
 
 \begin{table}[!h]
   \center
@@ -468,50 +469,134 @@ can be found in \appref{}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Dependence on \mkpi and CSP factors}
-The dependence of the \BJpsiKpi decay amplitude on \mkpi as it was pointed out in \equref{ang_terms} is treated in a special way.
-Ideally  
-In principle given a certain model for the \mkpi lineshape around the \Kst resonance the exp
-  
-Total amplitude integrated over mkp yields integrals of the type blah.\\
-You only need to worry about the cross terms. Footnote Jeroen.\\
-Explain how they are calculated.\\
+The dependence of the \BJpsiKpi decay amplitude on \mkpi as it was introduced in \equref{ang_terms} is treated in a special way.
+The $\mKpiAmp$ functions are not implemented but they are integrated over \mkpi instead and the fitting sample is binned in four parts.
+Where in each part the \mkpi lineshape is ashumed to be flat. This serves the purposes of the chosen fitting strategy which is a
+simultaneous fit over the \mkpi bins. More details on the spicifics of the fiting strategy can be found in \secref{Total_Decay_Rate}.
+The choice of this strategy is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the well
+known \pwave. Thus, developing a full mdoel for the both the \pwave and \swave is not the first priority in this analysis.
+
+Despite the \mkpi integration there is still some residual dependence left. It originates from integrals
+like the one in equation \equref{spIntegrals}
+
+\begin{equation}
+  \label{spIntegrals}
+  \int d\mkpi \; \Phi \; \mKpiAmp^* \mKpiAmp[m]
+\end{equation}
+
+\noindent where $\mKpiAmp[n,m]$ run in the same way as in \equref{ang_terms} and $\Phi$ is a pahase space 
+factor\footnote{$\Phi = \left[ \lambda(m_\mu,m_\kaon,m_\pion) \lambda(m_{\Bs},m_\jpsi,m_\mu) \right] / \; 4 m_\mu^2$  and \\ 
+$\lambda(m_1,m_2,m_3) = \left[ m_1^2 - 2m_1^2(m_2^2 + m_3^2) + m_2^2 + m_3^2 - 2m_2^2m_3^2 \right] / m_1^2 $  
+} and it eventually manifests only in the \spwave interference terms of table \tabref{eff_moms_table} as shown
+in \equref{csp_def}.
+
+\begin{equation}
+  \label{csp_def}
+  \frac{\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; s^* \times p} {\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; |s|^2 \; \int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi |p|^2} = \CSP \; e^{-i\ThetaSP} \ ,
+\end{equation}
+
+\noindent where $s$ and $p$ stand for the \swave and \pwave lineshapes respectivelly. Evaluating those complex valued integrals yield 
+the so called $\CSP$ factors which are inserted in the angular functions of \tabref{ang_distr}. Particularly the real part is inserted
+as a multiplicative factor in front of all \spwave interference
+terms\footnote{for example $\ReAmp{0}{S} \rightarrow \CSP * \ReAmp{0}{S} $}.
+Whereas the imaginary part, is absorbed by the phase difference of the same interference 
+terms\footnote{ $\arg(A_0^*A_S) \rightarrow \arg(A_0^*A_S) - \ThetaSP$}. Floating the $\CSP$ factors in the fit is not prefared due
+to high correlations with the decay amplitudes. Instead it would be better to extend the angular fit so that the \mkpi dependence 
+is modeled directly via the $\mKpiAmp$ terms of \equref{ang_terms}. The above mentioned lineshapes that are necessary
+to compute the $\CSP$ factors are a Isobar combination of a \KstENT and \KstOFOZ for $p$ and a LASS parametrization of a \KstOFTZ
+with a non resonant term. LASS is a common \swave prametrization in amplitude analysis, it is a combination of a relativistic Breit-Wigner
+with angular momentum barier factors. Whereas a Isobar is a superposition of resonances. ({\color{red} Make sure you understand what yous ay here and find references or show formulas.})
+
 
 \subsubsection{sWeighted \mkpi distribution}
-Explain why the swawe is the same between \Bs and \Bd
-While the \Bs or \Bd di-muon \sPlot s have very similar shape, the \mkpi weighted spectrums exhibit different shapes. 
-Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted. This could be due to the presence of interference between
- the $K\pi$ \swave and the \Kstarz, which would appear to be stronger in the \Bs decays compared to the \Bd. 
+While the \Bs and \Bd di-muon sWeighted distributions have very similar shape, the \mkpi spectrums exhibit different shapes. 
+Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted, \figref{mkpiPlot_raw}. Since there is now reason why the \Kst \pwave 
+sould have different shapes between \BsJpsiKst and \BdJpsiKst. This could be due to the presence of interference between
+the $K\pi$ \swave and the \Kstarz, which would appear to be stronger in the \Bs decays compared to the \Bd. In order 
+to check the validity of this hypothesis, two additional studies are performed. First it was checked that the peaking
+background treatment propagated to the \sWeights was not responsible for this behavior. Indeed, no significant difference 
+between the \Bs \mkpi spectrum using \sWeights computed with and without Monte Carlo data injection was found. Second the \mkpi 
+distribution is corrected for angular efficiency effects. This way the interference between the $K\pi$ \swave and the 
+\Kstarz $ $ \pwave vanishes. This happens because for a perfect acceptance the interference terms in \tabref{ang_terms} integrated over all angles
+evaluate to zero. Which is exactly what is shown in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
+the efficiency correction. This is a clear indication of the presence of stronger interference in the \Bs case compared to the \Bd one.
 
-In order to check the validity of this hypothesis, we perform two additional studies. 
-It was checked that the peaking background treatment propagated to the \sWeights was not responsible for this behavior.
-Indeed, we found no significant difference between the \Bs \mkpi spectrum using \sWeights computed with and without MC 
-data injection. We perform an additional study looking at the \mkpi structure after correcting for efficiency effects 
-using the normalisation weights coming from the angular acceptance study. Indeed, this way the interference between the 
-$K\pi$ \swave and the \Kstarz \pwave vanishes, since we integrate over the helicity angles. Figure~\ref{Kpi_invMass_BsBd_w_and_wo_acceptance}
- gives the efficiency corrected \Bs and \Bd \mkpi spectra using the nominal sets of \sWeights. We observe that the \Bs \mkpi distribution
- is closer to the one of the \Bd after applying the efficiency correction. This is a clear indication of the presence of stronger interference 
-in the \Bs case compared to the \Bd one. 
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mKpi_raw}
+    \scalebox{0.65}{\input{Figures/Chapter4/mKpi_raw}}
+    \caption{}
+    \label{mkpiPlot_raw}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mKpi_eff}
+    \scalebox{0.65}{\input{Figures/Chapter4/mKpi_eff}}
+    \caption{}
+    \label{mkpiPlot_eff}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    % \tikzsetnextfilename{mJpsi_eff} 
+    %\scalebox{0.65}{\input{Figures/Chapter4/mJpsi_eff}}
+    \caption{\color{red} sWeighted Jpsi mass here soon}
+    \label{jpsiPlot}
+  \end{subfigure}
+\caption{sWeighted plots of \mkpi(top row) and \jpsi (bottom row). In the top right plot the \mkpi distribution
+         is corrected for angular acceptance effects. This is done by weighting each event further with the inverse 
+         of the acceptance function as obtained in \equref{eff_func_final}.}
+\end{figure}
 
-We also checked the effect of allowing the mean and sigma of the \Bs and \Bd Hypatia functions to share common values over the 20 bins from
-a simultaneous fit. No significant gain was observed. The corresponding results are presented in \appref{app:massFitSimultaneous}. 
 
-
-\subsection{Maximum Likelihood Fit}
+\subsection{Total Decay Rate and Likelihood fit}
 \label{Total_Decay_Rate}
-Explain simultaneous fit why (trends)\\
-Show likelihood function\\
-Explain the signal background thing with the sFit\\
-Likelihood with weighted events and sFit errors\\
+Nearly all the necesary ingridients to fit for the parameters of intereset are already covered in the previous sections.
+However there are a few important subtle details still pending for description. The current section addresses the 
+implimentation issues arring from the necessay splitting of the data in parts and the impact of this in the adopted
+fitting strategy. Lastly but most importantly the issue of defining the \ACP assymetries as free parameters in the
+angular fit and how this is relevant ot the normalization of the \pdfs involved in the angular is discussed in the 
+last subsection.
 
+\subsubsection{Simutaneous Likelihood fit}
+There are several categories that the recorded real data are required to be split to. This results in defining a correspoding \pdf
+for each data category that is is slightly different from the rest. For example the special treatment, as described in \secref{} 
+of the \mkpi dependence requires that the data are split in four \mkpi bins. However in order to avoid doing four independant fits
+and averaging the common parameters of intereset, a simultaneous fit is implemeted. In a simultaneous fit each component \pdf is 
+asigned to a certain part of the data such that for this part of the data a corresponding \pdf is invoked when the total \pdf needs
+to be evaluated. The current section summarizes all the categories that the data are split to and all the implications arising from
+that.
 
-\subsubsection{Total Decay Rate}
-Quote Uncorrected and correted efficiency moments tables and figures after explaining the simultaneous fit.
-Also quote the convergence tables (moments and physics pars)\\
+Starting from the angular \pdf terms as shown in \tabref{ang_terms}. The last cannot discribe both \BsJpsiKst and \BsbarJpsiKst. 
+There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of 
+\BsJpsiKst. As it was explained in \secref{} those decays are flavour specific and there is no \Bs meson oscilations involved. 
+Thus the data can easily be split into two parts based on the sign of one of the 
+hadrons\footnote{In the current analysis the sign
+of the \kaon is used to disctinguish betwen the \BsJpsiKst (positive \kaon {\color{red} or negative, check this}) and \BsbarJpsiKst (negative \kaon)  }.
+Another reason supporting this distinction is the fact that the angular acceptance was found to be significantly different between
+the two categories, see \tabref{}.
 
+The next category that the data are split to was already mentioned in \secref{} that dealt with the \mkpi dependence. There are
+four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
+are parameters of interest that are different in each \mkpi bin. There parameters are the \swave fraction $\fS$ and phase $\deltaS$.
+The \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
+\tabref{}, where the \CSP factors are shown for each \mkpi bin.
 
-\subsubsection{\CP Assymetries}
-Define them\\
+{ \color{red} If necesssary mention the split in run periods for varius checks that has been done else avoid overflooding of information.}
+
+The data categories as described in the above paragraphs result an a simultanous fit of 8 categories. 
+All the relevant inputs for each of the categories can be found in \appref{} and \appref{}. Particularly the efficiency moments 
+of each \mkpi bin and \kaon sign are shown in tabref{} whereas plots of 2D acceptance proections can be found in \figref{}.
+Finally the convergence tables of the iterative precedure can be found in \tabref{}.
+
+\subsubsection{\CP Assymetries and Total Decay Rate }
+PDF for positive and negative kaons \\
+Define acp them \\
 Explain how they are imported into the fit in the normalization of extended pdfs\\
+Production and detection assymetries \\
+
+Show likelihood function and note that oy one likelokood function is defined only. \\
+Repeat perhaps the likelihood with weighted events and sFit errors shit\\
+
 
 
 
