@@ -547,9 +547,16 @@ the efficiency correction. This is a clear indication of the presence of stronge
          of the acceptance function as obtained in \equref{eff_func_final}.}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Production and Detection Assymetries}
+\label{experimentalAssym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Total Decay Rate and Likelihood fit}
 \label{Total_Decay_Rate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Nearly all the necesary ingridients to fit for the parameters of intereset are already covered in the previous sections.
 However there are a few important subtle details still pending for description. The current section addresses the 
 implimentation issues arring from the necessay splitting of the data in parts and the impact of this in the adopted
@@ -571,7 +578,7 @@ There is a relative minus sign difference in the imaginary terms originating fro
 \BsJpsiKst. As it was explained in \secref{} those decays are flavour specific and there is no \Bs meson oscilations involved. 
 Thus the data can easily be split into two parts based on the sign of one of the 
 hadrons\footnote{In the current analysis the sign
-of the \kaon is used to disctinguish betwen the \BsJpsiKst (positive \kaon {\color{red} or negative, check this}) and \BsbarJpsiKst (negative \kaon)  }.
+of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }.
 Another reason supporting this distinction is the fact that the angular acceptance was found to be significantly different between
 the two categories, see \tabref{}.
 
@@ -588,9 +595,80 @@ All the relevant inputs for each of the categories can be found in \appref{} and
 of each \mkpi bin and \kaon sign are shown in tabref{} whereas plots of 2D acceptance proections can be found in \figref{}.
 Finally the convergence tables of the iterative precedure can be found in \tabref{}.
 
-\subsubsection{\CP Assymetries and Total Decay Rate }
-PDF for positive and negative kaons \\
-Define acp them \\
+A few words on the extended likelihood fit.
+
+\begin{equation}
+L = \prod_e^n \mathcal{P}(\vec{x};\vec{p}) .... -\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p})
+\label{likelihood}
+\end{equation}
+
+\begin{equation}
+-\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p}) - P(v(\vec{p});y)
+\label{extlikelihood}
+\end{equation}
+
+This way the measured number of events becomes a free parameter that can be fitted for. THis will be exploited later since after all the analysis
+will measure assymetries on yields.
+ 
+\subsubsection{\CP Assymetries and Total Decay Rate}
+The \CP asymetries discussed in \secref{TheBsJpsiKstDecay} can be measured from the raw assymetry observed in data.
+This is done by counting the assymetry between $\BsbarJpsiKst$ and $\BsJpsiKst$ as \equref{acp_mes} defines.
+
+\begin{equation}
+\Acp[\text{raw}] \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},
+\label{acp_mes}
+\end{equation}
+
+\noindent where $\Nplus$ and $\Nminus$ stands the number of observed \BsbarJpsiKst and \BsJpsiKst respectivelly. 
+Going one step further $\Acp[\text{raw}]$ can be implemented as a free parameter in the fit. The advantage
+is that the entire statisitcal uncertainty propagation for those parameters is built in the likelihood thus avoiding
+unncesessary calcualtions. In addition the above quantities can be measured in a polarization dependant way. In order
+to vary $\Acp[\text{raw}]$ in the fit it is necessary to reparametrize them in a different way than that of \equref{acp_mes}.
+
+\begin{equation}
+\Acp[i] = \frac{\Nplus\AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus\AmpPlSq{i} + \Nminus\AmpMnSq{i} }\;\; \text{and} \;\;
+\AmpSq{i} = \frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus},
+\label{acp_param}
+\end{equation}
+
+\noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude present in the \BsbarJpsiKst
+and \BsJpsiKst samples respectivelly. The above equations can be solved for $\AmpPlSq{i}$  $\AmpMnSq{i}$. The idea
+is that the last parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs repsectivelly.
+This way both samples are fitted simultaneously in one fit. Solving \equref{acp_pram} yields 
+
+\begin{align}
+\AmpPlSq{i} = \xi \; \AmpSq{i} (1+\Acp[i]) \,\, &\text{and}\;\; \AmpMnSq{i} = \frac{\xi}{2\xi-1} \AmpSq{i} (1-\Acp[i]), \nonumber \\
+&\text{with}\;\; \xi = \frac{\Nplus+\Nminus}{2\Nplus}
+\label{acp_free}
+\end{align}
+
+\noindent The $\AmpPlSq{i}$ and $\AmpMnSq{i}$ are the amplitude extresions that are used along with the angular functions of \tabref{ang_terms}.
+However the quantities that are actually fitted are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$. Having said that, and by looking at \equref{acp_free}
+one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$ to be meaningfull and consistend the sum of all amplitudes $\sum\AmpSq{i}$ 
+(with $i:{0,\parallel,\perp,S}$ ) must add up to one. Thus imposing the condition $\sum\AmpSq{i} = 1$ one can re-exress the $\AmpSq{i}$
+as relative fractions as shown in the following equation.
+
+\begin{equation}
+\AmpSq{S} = \fS \;\;\;\text{and}\;\;\; \AmpSq{k} = (1-\fS)\fP[k]
+\label{amps_param}
+\end{equation}
+
+Note that the \pwave fractions are also constrained so that they add up to one by imposing $\sum\fP[k]=1$ with $k:\{0,\parallel,\perp\}$.
+The fractions $\fP$ and $\fS$ are the actuall parameters that one wish to measure and correspond to those presented in \secref{}. 
+
+There is one more step required to properly build the full \pdf. That is the normalization of each component \pdf. Normally the \pdfs are
+normalized to the number of events corresponding in the data. But with the introduction of the \ACP asymetries in the extended likelihood 
+term this is no longer possible due to the fact that the experimental assymetries as discussed in \secref{experimentalAssym} induce further
+assymetries that need to be corrected for. Having already estiamted the production and detection assymetry the raw \BsbarJpsiKst and \BsJpsiKst
+yields $\yieldPl[\text{raw}]$ and $\yieldMn[\text{raw}]$ respectivelly must be corrected for. 
+
+\begin{equation}
+\yield{\text{norm}}_{\pm} = \yield{CP} \left(  1 + \pm \mathcal{A}_D \mp \mathcal{A}_P\right) \frac{1}{2} 
+                           \left( \fS\; \Acp[S] + \sum_k^{0,\parallel,\perp} (1-\fS)\fP[k]\Acp[k]  \right) 
+\label{normyields}
+\end{equation}
+
+
 Explain how they are imported into the fit in the normalization of extended pdfs\\
 Production and detection assymetries \\
 
