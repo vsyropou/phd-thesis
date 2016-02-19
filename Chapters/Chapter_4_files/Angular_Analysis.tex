@@ -584,7 +584,7 @@ the two categories, see \tabref{}.
 
 The next category that the data are split to was already mentioned in \secref{} that dealt with the \mkpi dependence. There are
 four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
-are parameters of interest that are different in each \mkpi bin. There parameters are the \swave fraction $\fS$ and phase $\deltaS$.
+are parameters of interest that are different in each \mkpi bin. There parameters are the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 The \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
 \tabref{}, where the \CSP factors are shown for each \mkpi bin.
 
@@ -596,6 +596,7 @@ of each \mkpi bin and \kaon sign are shown in tabref{} whereas plots of 2D accep
 Finally the convergence tables of the iterative precedure can be found in \tabref{}.
 
 A few words on the extended likelihood fit.
+Repeat perhaps the likelihood with weighted events and sFit errors shit\\
 
 \begin{equation}
 L = \prod_e^n \mathcal{P}(\vec{x};\vec{p}) .... -\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p})
@@ -615,18 +616,18 @@ The \CP asymetries discussed in \secref{TheBsJpsiKstDecay} can be measured from 
 This is done by counting the assymetry between $\BsbarJpsiKst$ and $\BsJpsiKst$ as \equref{acp_mes} defines.
 
 \begin{equation}
-\Acp[\text{raw}] \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},
+\Acp{\text{raw}} \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},
 \label{acp_mes}
 \end{equation}
 
 \noindent where $\Nplus$ and $\Nminus$ stands the number of observed \BsbarJpsiKst and \BsJpsiKst respectivelly. 
-Going one step further $\Acp[\text{raw}]$ can be implemented as a free parameter in the fit. The advantage
+Going one step further $\Acp{\text{raw}}$ can be implemented as a free parameter in the fit. The advantage
 is that the entire statisitcal uncertainty propagation for those parameters is built in the likelihood thus avoiding
 unncesessary calcualtions. In addition the above quantities can be measured in a polarization dependant way. In order
-to vary $\Acp[\text{raw}]$ in the fit it is necessary to reparametrize them in a different way than that of \equref{acp_mes}.
+to vary $\Acp{\text{raw}}$ in the fit it is necessary to reparametrize them in a different way than that of \equref{acp_mes}.
 
 \begin{equation}
-\Acp[i] = \frac{\Nplus\AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus\AmpPlSq{i} + \Nminus\AmpMnSq{i} }\;\; \text{and} \;\;
+\Acp{i} = \frac{\Nplus\AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus\AmpPlSq{i} + \Nminus\AmpMnSq{i} }\;\; \text{and} \;\;
 \AmpSq{i} = \frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus},
 \label{acp_param}
 \end{equation}
@@ -636,46 +637,62 @@ and \BsJpsiKst samples respectivelly. The above equations can be solved for $\Am
 is that the last parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs repsectivelly.
 This way both samples are fitted simultaneously in one fit. Solving \equref{acp_pram} yields 
 
-\begin{align}
-\AmpPlSq{i} = \xi \; \AmpSq{i} (1+\Acp[i]) \,\, &\text{and}\;\; \AmpMnSq{i} = \frac{\xi}{2\xi-1} \AmpSq{i} (1-\Acp[i]), \nonumber \\
-&\text{with}\;\; \xi = \frac{\Nplus+\Nminus}{2\Nplus}
+\begin{equation}
+\AmpPlSq{i} = \xi \; \AmpSq{i} (1+\Acp{i}) \,\, \text{and}\;\; \AmpMnSq{i} = \frac{\xi}{2\xi-1} \AmpSq{i} (1-\Acp{i}),
 \label{acp_free}
-\end{align}
+\end{equation}
 
 \noindent The $\AmpPlSq{i}$ and $\AmpMnSq{i}$ are the amplitude extresions that are used along with the angular functions of \tabref{ang_terms}.
-However the quantities that are actually fitted are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$. Having said that, and by looking at \equref{acp_free}
-one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$ to be meaningfull and consistend the sum of all amplitudes $\sum\AmpSq{i}$ 
+Whearas the normalization factors in front of them can be re-exressed as function of $\Acp{\text{raw}}$ using \equref{acp_mes}.
+
+\begin{align}
+\xi = \frac{\Nplus+\Nminus}{2\Nplus} &= \frac{1}{2}\left( 1 + \frac{\yieldMn{}}{\yieldPl{}}\right) = \nonumber \\ 
+                                     &= \frac{1}{2}\left( 1 + \frac{1-\Acp{\text{raw}}}{1+\Acp{\text{raw}}}\right) =
+                                        \frac{1}{1+\Acp{\text{raw}}} = 
+                                        \frac{1}{1+\sum_i\Acp{i}} \\
+\frac{\xi}{2\xi-1} = \frac{1}{2-\nicefrac{1}{\xi}} &= \frac{1}{1-\sum_i\Acp{i}}
+\label{amp_norms}
+\end{align}
+
+The quantities that are actually fitted are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$. Having said that, and by looking at \equref{acp_free}
+one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$ to be meaningfull and consistend, the sum of all amplitudes $\sum\AmpSq{i}$ 
 (with $i:{0,\parallel,\perp,S}$ ) must add up to one. Thus imposing the condition $\sum\AmpSq{i} = 1$ one can re-exress the $\AmpSq{i}$
-as relative fractions as shown in the following equation.
+as relative fractions which is shown in the following equation.
 
 \begin{equation}
-\AmpSq{S} = \fS \;\;\;\text{and}\;\;\; \AmpSq{k} = (1-\fS)\fP[k]
+\AmpSq{S} = \fS{} \;\;\;\text{and}\;\;\; \AmpSq{k} = (1-\fS{})\fP{k}
 \label{amps_param}
 \end{equation}
 
-Note that the \pwave fractions are also constrained so that they add up to one by imposing $\sum\fP[k]=1$ with $k:\{0,\parallel,\perp\}$.
-The fractions $\fP$ and $\fS$ are the actuall parameters that one wish to measure and correspond to those presented in \secref{}. 
-
-There is one more step required to properly build the full \pdf. That is the normalization of each component \pdf. Normally the \pdfs are
-normalized to the number of events corresponding in the data. But with the introduction of the \ACP asymetries in the extended likelihood 
-term this is no longer possible due to the fact that the experimental assymetries as discussed in \secref{experimentalAssym} induce further
-assymetries that need to be corrected for. Having already estiamted the production and detection assymetry the raw \BsbarJpsiKst and \BsJpsiKst
-yields $\yieldPl[\text{raw}]$ and $\yieldMn[\text{raw}]$ respectivelly must be corrected for. 
+Note that the \pwave fractions are also constrained so that they add up to one by imposing $\sum\fP{k}=1$ with $k:\{0,\parallel,\perp\}$.
+The fractions $\fP{}$ and $\fS{}$ are the actuall parameters that one wish to measure and correspond to those presented in \secref{}.
+The final expressions of the $\AmpSqPm{i}$ after all the above is given in \equref{amps_final}
 
 \begin{equation}
-\yield{\text{norm}}_{\pm} = \yield{CP} \left(  1 + \pm \mathcal{A}_D \mp \mathcal{A}_P\right) \frac{1}{2} 
-                           \left( \fS\; \Acp[S] + \sum_k^{0,\parallel,\perp} (1-\fS)\fP[k]\Acp[k]  \right) 
-\label{normyields}
+\AmpSqPm{k} = \frac{1\pm\Acp{k}}{1\pm\sum_i\Acp{i}}  (1-\fS{})\fP{k}  \;\;\; \text{and}\;\;\; \AmpSqPm{S} = \frac{1\pm\Acp{S}}{1\pm\sum_i\Acp{i}} \; \fS{}
+\label{amps_final}
 \end{equation}
 
+\noindent where the $i$ index runs through all amplitudes whearas $k$ only through the \pwave ones.
 
-Explain how they are imported into the fit in the normalization of extended pdfs\\
-Production and detection assymetries \\
+There is one more step required to properly build the full extended \pdf. That is the normalization of each component \pdf. It is tempting to 
+normalize the component \pdfs to the number of observed events. However the observed number of events are diluted by production and detection
+assymetry. Since the parameters of interest, \ACP, rely on differences on observed yields it follows that the observed \BsbarJpsiKst and \BsJpsiKst 
+yields have to be corrected for. With input from \secref{experimentalAssym} where the production and detection assymetries were estimated, the 
+observed yields are made dependent on the \ACP assymetry in \equref{acp_yields} 
 
-Show likelihood function and note that oy one likelokood function is defined only. \\
-Repeat perhaps the likelihood with weighted events and sFit errors shit\\
+\begin{align}
+\yieldPl{CP} &= \frac{ \yieldRaw{\text{total}} }{2} \left( \fS{}\; \Acp{S} + \sum_k^{0,\parallel,\perp} (1-\fS{})\fP{k}\Acp{k}  \right) \nonumber \\
+\yieldMn{CP} &=  \yieldRaw{\text{total}} - \yieldPl{CP} 
+\label{acp_yields}
+\end{align}
 
+\noindent and then subsequently corrected for the production and detection assymetry in \equref{norm_yields}. 
 
+\begin{equation}
+\yield{\pm} = \yield{\pm}_{CP}  \left( 1 \pm \Adet \mp \Aprod \right)
+\label{norm_yields}
+\end{equation}
 
-
-
+The resulting final yields are the ones that the \pdfs will be normalised to and enter the expected number of events in the extended likelihood term 
+of the \pdfs as discussed earlier in the current section. 
