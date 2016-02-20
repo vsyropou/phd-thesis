@@ -9,6 +9,13 @@
 %% selecting previous samples also with cut (*). Finally, a total efficiency (rejection) is obtained, containing the information from all the efficiencies 
 %% (rejections) computed in previous steps: $\varepsilon_{\rm tot}$ uses signal and background samples selected with all the cuts from the final selection.
 
+
+\begin{itemize}
+\item Comment on the gaussian contstrains of production and detection assymetry
+\item list the fitted yields from the extended likelihood fit
+\item Maybe show fits to the \BdJpsiKst
+\end{itemize}
+
 \begin{table}[!h]
   \center
   \caption{\small Best fit values of the parameters of intereset.}
@@ -41,12 +48,73 @@
   \label{bestFitResult}
 \end{table}
 
-\begin{itemize}
-\item Show fraction and phases drawings for \Bs and \Bd.
-\item Comment on the gaussian contstrains of production and detection assymetry
-\item list the fitted yields from the extended likelihood fit
-\item Maybe show fits to the \BdJpsiKst
-\end{itemize}
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[width=\textwidth]{Figures/Chapter4/canv_Bs_allKaons_3fb_mergeAccPer_allKpiBins_AcpZero_Pw_split}
+  \caption{Angular observables and fittd \pdf. {\color{red}{explain curves}}}
+  \label{angular_plot}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pW_wave_yields}
+    \scalebox{0.60}{\input{Figures/Chapter4/pW_wave_yields}}
+    \caption{}
+    \label{skase}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{sW_wave_yields}
+    \scalebox{0.60}{\input{Figures/Chapter4/sW_wave_yields}}
+    \caption{}
+    \label{opasd}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{phasesoffset_} 
+    \scalebox{0.60}{\input{Figures/Chapter4/phasesoffset_}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}%
+\caption{\pwave and \swave trends of \BsJpsiKst \BdJpsiKst fractions and phases}
+\end{figure}
+
+\clearpage
+\begin{sidewaystable}[p!]
+%\begin{table}[h]
+\begin{center}
+\caption{\label{tab:correlationMatrix} Statistical correlation matrix for the parameters from the angular fit.}
+\vspace{5pt}
+%\hspace{-2cm}
+%\tiny{
+\begin{tabular}{lcccccccccccccccc}
+     & $\Acp{0}$     & $\Acp{S}$     & $\Acp{\parallel}$     & $\Acp{\perp}$     & $\fS{1}$     & $\fS{2}$     & $\fS{3}$     & $\fS{4}$     & $\ampPhase{\parallel}$     & $\ampPhase{\perp}$     & $\deltaS{1}$     & $\deltaS{2}$     & $\deltaS{3}$     & $\deltaS{4}$     & $\polFrac{0}$     & $\polFrac{\parallel}$    \\
+\hline
+$\Acp{0}$               & $+1.00$      & $-0.12$      & $-0.11$      & $-0.17$      & $-0.13$      & $-0.02$      & $-0.06$      & $-0.01$      & $+0.03$      & $+0.02$      & $+0.10$      & $-0.00$      & $+0.07$      & $+0.01$      & $+0.06$      & $-0.05$    \\
+$\Acp{S}$               &           & $+1.00$      & $-0.14$      & $-0.12$      & $+0.16$      & $-0.12$      & $+0.03$      & $-0.10$      & $+0.00$      & $-0.06$      & $+0.02$      & $+0.07$      & $+0.05$      & $+0.07$      & $+0.01$      & $+0.03$    \\
+$\Acp{\parallel}$       &           &           & $+1.00$      & $-0.49$      & $+0.02$      & $+0.09$      & $-0.02$      & $+0.08$      & $+0.09$      & $+0.06$      & $-0.06$      & $-0.04$      & $-0.05$      & $-0.12$      & $-0.04$      & $-0.07$    \\
+$\Acp{\perp}$           &           &           &           & $+1.00$      & $-0.00$      & $-0.01$      & $-0.06$      & $-0.07$      & $-0.09$      & $-0.03$      & $-0.03$      & $+0.01$      & $-0.02$      & $+0.07$      & $+0.01$      & $-0.06$    \\
+$\fS{1}$                 &           &           &           &           & $+1.00$      & $+0.01$      & $-0.01$      & $-0.03$      & $-0.10$      & $-0.24$      & $-0.77$      & $+0.01$      & $+0.04$      & $-0.00$      & $+0.10$      & $-0.09$    \\
+$\fS{2}$                 &           &           &           &           &           & $+1.00$      & $-0.01$      & $-0.00$      & $-0.02$      & $-0.05$      & $-0.01$      & $-0.25$      & $+0.03$      & $-0.01$      & $+0.15$      & $-0.10$    \\
+$\fS{3}$                 &           &           &           &           &           &           & $+1.00$      & $+0.01$      & $-0.04$      & $+0.07$      & $+0.01$      & $-0.00$      & $-0.22$      & $+0.00$      & $-0.02$      & $+0.04$    \\
+$\fS{4}$                 &           &           &           &           &           &           &           & $+1.00$      & $+0.08$      & $+0.08$      & $+0.00$      & $-0.01$      & $-0.03$      & $-0.29$      & $-0.09$      & $+0.04$    \\
+$\ampPhase{\parallel}$   &           &           &           &           &           &           &           &           & $+1.00$      & $+0.62$      & $+0.10$      & $+0.14$      & $+0.03$      & $+0.11$      & $+0.04$      & $-0.03$    \\
+$\ampPhase{\perp}$      &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.17$      & $+0.13$      & $-0.02$      & $+0.13$      & $+0.05$      & $-0.04$    \\
+$\deltaS{1}$             &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.03$      & $+0.04$      & $+0.08$      & $+0.04$    \\
+$\deltaS{2}$             &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.04$      & $+0.13$      & $-0.05$    \\
+$\deltaS{3}$             &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.27$      & $-0.08$    \\
+$\deltaS{4}$             &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.11$      & $+0.00$    \\
+$\polFrac{0}$            &           &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $-0.34$    \\
+$\polFrac{\parallel}$    &           &           &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$    \\
+\end{tabular}
+%}
+\end{center}
+%\end{table}
+\end{sidewaystable}
+
+
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Systematic Uncertainties}
@@ -152,6 +220,8 @@
 
 
 
+   
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood scans}
 \label{nllscans}
@@ -165,6 +235,7 @@
 \item Comment double minima
 \end{itemize}
 
+{\color{red} These are not final. }
 
 \begin{figure}[h]
   \centering
@@ -194,7 +265,7 @@
     \caption{}
     \label{opa}
   \end{subfigure}
-\caption{Pofile likeliood scans.}
+\caption{Pofile likeliood scans of \Acp parameters.}
 \end{figure}
 
 \clearpage
@@ -227,7 +298,7 @@
     \caption{}
     \label{opa}
   \end{subfigure}
-\caption{Pofile likeliood scans.}
+\caption{Pofile likeliood scans of \pwave parameters.}
 \end{figure}
 
 \clearpage
@@ -286,7 +357,7 @@
     \caption{}
     \label{opa}
   \end{subfigure}
-\caption{Pofile likeliood scans.}
+\caption{Pofile likeliood scans of \swave parameters.}
 \end{figure}
 
 %% \clearpage
@@ -334,7 +405,7 @@
 \item ....
 \end{itemize}
 
-
+{\color{red} These are not final. }
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
@@ -343,26 +414,118 @@
     \caption{}
     \label{skase}
   \end{subfigure}%% %
-  %% \hfill%
-  %% \begin{subfigure}{0.5\textwidth}
-  %%   \tikzsetnextfilename{pull_ACPperp}
-  %%   \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPperp}}
-  %%   \caption{}
-  %%   \label{opasd}
-  %% \end{subfigure}
-  %% \begin{subfigure}{0.5\textwidth}
-  %%   \tikzsetnextfilename{pull_ACPpar} 
-  %%   \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPpar}}
-  %%   \caption{}
-  %%   \label{opa}
-  %% \end{subfigure}%
-  %% \hfill%
-  %% \begin{subfigure}{0.5\textwidth}
-  %%   \tikzsetnextfilename{pull_ACPS} 
-  %%   \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPS}}
-  %%   \caption{}
-  %%   \label{opa}
-  %% \end{subfigure}
-\caption{Pofile likeliood scans.}
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ACPperp}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPperp}}
+    \caption{}
+    \label{opasd}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ACPpar} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPpar}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ACPS} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPS}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}
+\caption{Pofile likeliood scans of \Acp parameters.}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_A0Mag2}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_A0Mag2}}
+    \caption{}
+    \label{skase}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_AperpMag2}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_AperpMag2}}
+    \caption{}
+    \label{opasd}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_AparPhase} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_AparPhase}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_AperpPhase} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_AperpPhase}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}
+\caption{Pofile likeliood scans of \pwave parameters.}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_f_S_bin1}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_f_S_bin1}}
+    \caption{}
+    \label{skase}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_f_S_bin2}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_f_S_bin1}}
+    \caption{}
+    \label{opasd}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_f_S_bin3} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_f_S_bin1}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_f_S_bin4} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_f_S_bin1}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ASPhase_bin1}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin1}}
+    \caption{}
+    \label{skase}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ASPhase_bin2}
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin2}}
+    \caption{}
+    \label{opasd}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ASPhase_bin3} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin2}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{pull_ASPhase_bin4} 
+    \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin4}}
+    \caption{}
+    \label{opa}
+  \end{subfigure}
+\caption{Pofile likeliood scans of \swave parameters.}
 \end{figure}
 
