@@ -3,6 +3,7 @@
 \chapter{Additional Tables}
 \label{AdditionalTables}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Iterative procedure convergence tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% bin 1
 \begin{table}[h]
 \centering
@@ -139,4 +140,57 @@ N$_{\Lambda p\pi}$  	&$	1.8	\pm	0.6	^{+	0.0	}_{-	0.0	}	$&$	2.0	\pm	0.6	^{+	0.0	}
 \caption{Results of the fit to the invariant mass of each individual \mkpi bin category for $ 0.6 \leq \cos\thetamu < 1.0$.}
 \label{massFitData_cosTmuBin4} 
 \end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Iterative procedure convergence tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{ c c c c c c c c c c c c c c}
+  iteration & $\moment{0}{0}{0}$ & $\moment{1}{0}{0}$ & $\moment{2}{0}{0}$ & $\moment{3}{0}{0}$ & $\moment{4}{0}{0}$ & $\moment{5}{0}{0}$ & $\moment{0}{2}{0}$ & $\moment{0}{2}{2}$ & $\moment{0}{4}{0}$ & $\moment{1}{4}{0}$ & $\moment{2}{2}{0}$ & $\moment{2}{2}{2}$ \\
+  \hline
+  1 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 \\ 
+  2 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 \\ 
+  3 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 \\ 
+  4 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 \\ 
+  5 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 & 6.66 \\ 
+  \hline
+\end{tabular}
+\caption{Efficiency moments change after each iteration. The numbers are expresed in units of one standard deviation.}
+\label{gamw_tomounisou} 
+\end{table}
+
+
+
+
+
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{ c c c c c c c c c }
+    Parameter  & 0          & 1          & 2          & 3          & 4          & 5           &  diff / $\sigma_{5-4}$  & diff / $\sigma_{5-0}$ \\
+    \hline
+    $\Acp{0}$                          & +0.5497  & +0.5291  & +0.5316  & +0.5371  & +0.5401  & +0.5421  & +0.0352 & -0.2262 \\
+    $\Acp{\parallel}$                          & +0.5497  & +0.5291  & +0.5316  & +0.5371  & +0.5401  & +0.5421  & +0.0352 & -0.2262 \\
+    $\Acp{\perp}$                          & +0.5497  & +0.5291  & +0.5316  & +0.5371  & +0.5401  & +0.5421  & +0.0352 & -0.2262 \\
+    $\Acp{S}$                          & +0.5497  & +0.5291  & +0.5316  & +0.5371  & +0.5401  & +0.5421  & +0.0352 & -0.2262 \\
+    $|A_0|^2$                          & +0.5497  & +0.5291  & +0.5316  & +0.5371  & +0.5401  & +0.5421  & +0.0352 & -0.2262 \\
+    $|A_\perp|^2$                       & +0.3293  & +0.3562  & +0.3568  & +0.3538  & +0.3526  & +0.3517  & -0.0135 & +0.5346 \\
+    $\delta_\parallel-\delta_0$          & -2.7047  & -2.7223  & -2.7696  & -2.7971  & -2.7990  & -2.79395 & +0.0102 & -0.3068 \\
+    $\delta_\perp-\delta_0$             & +0.1053  & +0.0690  & +0.0154  & -0.0072  & -0.0106  & -0.0093  & +0.0047 & -0.6388 \\
+    ${\delta_\text{S}}_1$               & +0.4606  & +0.4023  & +0.3679  & +0.3508  & +0.3431  & +0.3413  & -0.0114 & -0.7396 \\
+    ${\delta_\text{S}}_2$               & -0.6620  & -0.6862  & -0.6995  & -0.7036  & -0.6998  & -0.6919  & +0.0191 & -0.1254 \\
+    ${\delta_\text{S}}_3$               & -1.7605  & -1.9625  & -2.0726  & -2.1259  & -2.1604  & -2.1854  & -0.0888 & -2.7081 \\
+    ${\delta_\text{S}}_4$               & -1.9831  & -2.2374  & -2.4547  & -2.5632  & -2.5921  & -2.5961  & -0.0225 & -3.2348 \\
+    ${F_\text{S}}_1$                    & +0.4595  & +0.5074  & +0.5204  & +0.5260  & +0.5281  & +0.5305  & +0.0455 & +1.1716 \\
+    ${F_\text{S}}_2$                    & +0.1202  & +0.1206  & +0.1240  & +0.1267  & +0.1271  & +0.1259  & -0.0141 & +0.1192 \\
+    ${F_\text{S}}_3$                    & +0.1072  & +0.1104  & +0.1099  & +0.1131  & +0.1160  & +0.1166  & +0.0053 & +0.1040 \\
+    ${F_\text{S}}_4$                    & +0.3999  & +0.6147  & +0.6728  & +0.6786  & +0.6736  & +0.6706  & -0.0706 & +1.5522 \\
+    \hline
+\end{tabular}
+\caption{Efficiency moments change after each iteration. The numbers are expresed in units of one standard deviation.}
+\label{gamw_tomounisou}
+\end{table}
+
 

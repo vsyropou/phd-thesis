@@ -218,8 +218,8 @@ Since these parameters need to be fixed in the mass fit, the latter is performed
 \mkpi invariant mass. In addition, due to correlations between the mass and the cosine of the helicity angle \thetamu\footnote{$\cos\thetamu$ is one of 
 the variables used in the subsequent angular fit.},
 the requirements of \sPlot technique are not fulfilled and thus cannot be applied. Therefore, each \mkpi invariant mass sub-sample
-is divided further in five bins of $\cos\thetamu$, resulting in a total of 20 fitting categories. The \mkpi and $\cos\thetamu$ bins are defined 
-in \tabref{Kbindef} and \tabref{cosThateMubindef}, respectively. The results of the mass fit is shown in tables \tabref{massFitData_cosTmuBin0}
+is divided further in five bins of $\cos\thetamu$, resulting in a total of 20 fitting categories. The \mkpi and $\cos\thetamu$ bins are defined
+in \tabref{Kbindef} and \tabref{cosThateMubindef}, respectively. The results of the mass fit is shown in \tabref{massFitData_cosTmuBin0} to
 to \tabref{massFitData_cosTmuBin4} and the corresponding plot in \figref{mass_plot}. The overall \Bs and \Bd yields are obtained from the sum 
 of yields over the 20 fitting categories, giving
 
@@ -241,8 +241,8 @@ are found to be small (smaller than $4\%$).
 \end{figure}
 
 \subsubsection{sWeighting}
-Having performed the mass fit all the necessary ingredients to remove the remaining background are now in place. 
-The fitted mass PDF is now given to the \sPlot algorithm. The algorithm assigns an sWeight, $w_i$, to each event,
+Having performed the mass fit all the necessary ingredients to remove the remaining background are in place. 
+The fitted mass PDF is now given to the \sPlot algorithm. The algorithm assigns the so called {\it sWeight}, $w_i$, to each event,
 based on the likelihood function built from the input PDF. The main idea of \sPlot is that for each of the species of the total
 PDF a set of weights can be computed such that they project only that particular specie on the data while eliminating all the others.  
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
@@ -257,5 +257,5 @@ of the fitted angular parameters are correct \cite{splot}. Particularly The unce
 events. This is because the per event weights in a weighted likelihood fit change the shape of the ikelihood function. The last is 
 where the statisitcal uncertainty estimation comes from. Thus, a scale factor $\alpha = \left[\sum_{i} w_i /\sum_{i} w_i^2\right]^{1/2}$
 has to be applied to each weight to correct for this dilution of the uncertainties before performing the angular fit. The scale factor
-essentially forces the sum of weights to be the same as the number of events. 
+essentially forces the sum of weights to be the same as the number of events. For more details see also \secref{Simutaneous_Likelihood_ fit}.
 
