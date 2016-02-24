@@ -608,66 +608,79 @@ decay of the current analysis. The result is shown in \equref{det_assym}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Total Decay Rate and Likelihood fit}
+\subsection{Likelihood fit and Total Decay Rate}
 \label{Total_Decay_Rate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Nearly all the necesary ingridients to fit for the parameters of intereset are already covered in the previous sections.
-However there are a few important subtle details still pending for description. The current section addresses the 
-implimentation issues arring from the necessay splitting of the data in parts and the impact of this in the adopted
-fitting strategy. Lastly but most importantly the issue of defining the \ACP assymetries as free parameters in the
-angular fit and how this is relevant ot the normalization of the \pdfs involved in the angular is discussed in the 
-last subsection.
+However there are a few important details still pending for description. The current subsection addresses the 
+implimentations arring from the necessay splitting of the data in parts and the impact of this in the adopted
+fitting strategy, simultaneous maximum likelihood fit. Lastly but most importantly the issue of defining the \ACP 
+assymetries as free parameters in the angular fit and how this becomes relevant to the normalization of the \pdfs
+involved is discussed in the last subsection.
 
 \subsubsection{Simutaneous Likelihood fit}
 \label{Simutaneous_Likelihood_ fit}
-There are several categories that the recorded real data are required to be split to. This results in defining a correspoding \pdf
-for each data category that is is slightly different from the rest. For example the special treatment, as described in \secref{} 
-of the \mkpi dependence requires that the data are split in four \mkpi bins. However in order to avoid doing four independant fits
-and averaging the common parameters of intereset, a simultaneous fit is implemeted. In a simultaneous fit each component \pdf is 
-asigned to a certain part of the data such that for this part of the data a corresponding \pdf is invoked when the total \pdf needs
-to be evaluated. The current section summarizes all the categories that the data are split to and all the implications arising from
-that.
+There are several categories that the data are required to be split to. This results in defining a correspoding \pdf
+for each data category that is is slightly different from the rest. For example the special treatment of the \mkpi dependence,
+as described in \secref{Kpi_Invariant_mass} requires that the data are split in four \mkpi bins. However in order to avoid doing
+four independant fits and averaging the common parameters of intereset, a simultaneous fit is implemeted. In a simultaneous fit 
+each component \pdf is asigned to a certain part of the data such that for this part of the data a corresponding \pdf is invoked
+when the total \pdf needs to be evaluated.  The current section summarizes all the categories that the data are split to and all 
+the implications arising from that. Lastly a brief insight in the math of the likelihood minimizations is included. 
 
 Starting from the angular \pdf terms as shown in \tabref{ang_terms}. The last cannot discribe both \BsJpsiKst and \BsbarJpsiKst. 
 There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of 
-\BsJpsiKst. As it was explained in \secref{} those decays are flavour specific and there is no \Bs meson oscilations involved. 
-Thus the data can easily be split into two parts based on the sign of one of the 
-hadrons\footnote{In the current analysis the sign
+\BsJpsiKst. As it was explained in \secref{TheBsJpsiKstDecay} those decays are flavour specific whih means that a \Bs messon
+has always a negative kaons in the final state particles. The situations is inverted in the case of a \Bsb messon.
+Thus the data can easily be split into two parts based on the sign of one of the hadrons\footnote{In the current analysis the sign
 of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }.
 Another reason supporting this distinction is the fact that the angular acceptance was found to be significantly different between
-the two categories, see \tabref{}.
+the two categories, see \tabref{}. {\color{red} do not forget to redo these tables as well.}
 
-The next category that the data are split to was already mentioned in \secref{} that dealt with the \mkpi dependence. There are
+The next category that the data are split to was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence. There are
 four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
 are parameters of interest that are different in each \mkpi bin. There parameters are the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 The \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
-\tabref{}, where the \CSP factors are shown for each \mkpi bin.
+\tabref{}, where the \CSP factors are shown for each \mkpi bin {\color{red} Do this table, its easy}. The acceptance is also split
+in the \mkpi category for the same reason as in the previous paragraph.
 
 { \color{red} If necesssary mention the split in run periods for varius checks that has been done else avoid overflooding of information.}
 
 The data categories as described in the above paragraphs result an a simultanous fit of 8 categories. 
-All the relevant inputs for each of the categories can be found in \appref{} and \appref{}. Particularly the efficiency moments 
-of each \mkpi bin and \kaon sign are shown in tabref{} whereas plots of 2D acceptance proections can be found in \figref{}.
+All the relevant inputs for each of the categories can be found in the appendix. Particularly the efficiency moments 
+of each \mkpi bin and \kaon sign are shown in  whereas plots of 2D acceptance proections can be found in \figref{}.
 Finally the convergence tables of the iterative precedure can be found in \tabref{}.
+{\color{red} you need: Nominal acceptance tables. Convergence tables of moments. 2D figures of acceptance.
+These are all implemented, need to wait for the final numbers}
 
-A few words on the extended likelihood fit.
-Repeat perhaps the likelihood with weighted events and sFit errors shit\\
+Having adressed the simultaneous feature of the fit it is both intreasting and necessay to have an insight on
+the onnection between the \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
+any \pdf $\mathcal{P}$ a likelihood function can be build as shown in \equref{likelihood}. By definition the likelihood
+function is the product of probabilities, according to the given \pdf, of every event. Note that oposite to the \pdf
+the likelihood is a function of the free parameters given all the events in the data. It is 
+useful\footnote{and perhaps beautyfull} to realise that by maximizing the likelihood function one gets the best estimate
+for the parameters of intereset given the data based on the \pdf. This is done by means of the estimator [ref]... blahh{\color{red} need more studing for that.}
 
 \begin{equation}
-L = \prod_e^n \mathcal{P}(\vec{x};\vec{p}) .... -\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p})
+L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p})
 \label{likelihood}
 \end{equation}
 
+The estimation of the best fit values and their correponding correlations are computed based on  blhaa \equref{}.
+
+Coming now to the concept of an extended likelihood.
 \begin{equation}
 -\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p}) - P(v(\vec{p});y)
+% \Rightarrow -\log{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p})
 \label{extlikelihood}
 \end{equation}
 
-This way the measured number of events becomes a free parameter that can be fitted for. THis will be exploited later since after all the analysis
+This way the measured number of events becomes a free parameter that can be fitted for. 
+THis will be exploited later since after all the analysis
 will measure assymetries on yields.
  
-\subsubsection{\CP Assymetries and Total Decay Rate}
+\subsubsection{\CP Assymetries as Free Parameters}
 \label{cp_assymetries_and_total_decay_rate}
 The \CP asymetries discussed in \secref{TheBsJpsiKstDecay} can be measured from the raw assymetry observed in data.
 This is done by counting the assymetry between $\BsbarJpsiKst$ and $\BsJpsiKst$ as \equref{acp_mes} defines.
