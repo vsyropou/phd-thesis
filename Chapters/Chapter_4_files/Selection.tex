@@ -3,8 +3,7 @@
 \subsection{Multivariate Based Selection}
 \label{Multivariate_Based_Selection}
 
-The \BsJpsiKst signal yield out of the full 3 \invfb data is expected to be low {\color{red} Footnote on the exp. yield or reference to a 
-previous calculation, (maybe in the introduction.)} Thus, one would like to reject as much background as possible while keeping all the signal. 
+The \BsJpsiKst signal yield out of the full 3 \invfb data is expected to be low, see \secref{TheBsJpsiKstDecay}. Thus, one would like to reject as much background as possible while keeping all the signal. 
 One way to do that would be a cut-based analysis, in which case certain cuts are applied to a set of variables like the \Bs 
 mass range for example (essentially resulting in a tighter Stripping). Alternatively a multivariate approach (hear after {\it MVA}) is adopted. 
 In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifying variable}. 
@@ -27,15 +26,17 @@ this step is called {\it training}. The second pair is used to asses how success
 For the signal-like samples, \BsJpsiKst Monte-Carlo simulated data (hear after MC)
 are used. The \Bs mass window for that sample is $\pm 25 \MeVcc$ around the \Bs peak. As for the background-like sample, candidates from the high mass side-band
 with invariant masses between $5401.3\mevcc$ and $5700\mevcc$ are used. Note that the simulated samples are treated exactly the same way as the
-real data sample when it comes to any selection cuts applied. A boosted decision tree with gradient boosting (BDTG){\color{red}{what is gradient boosting})}
-is used as the classifying variable. The following kinematic variables are provided as input variables for the multivariate procedure (\Bs meson variables are 
+real data sample when it comes to any selection cuts applied. A boosted decision tree with gradient boosting (BDTG) is used as the classifying variable. 
+The following kinematic variables are provided as input variables for the multivariate procedure (\Bs meson variables are 
 named here as \texttt{B0}):
 
 \begin{itemize}
 \item{} \texttt{max\_DOCA}: maximum of all distances between pairs of tracks from daughter particles.
 \item{} \texttt{B0\_LOKI\_DTF\_CTAU}: time of flight $ct$ of the \Bs meson candidate, where
 $t$ is the decay time of the \Bs meson candidate measured in its proper reference frame.
-\item{} \texttt{lessIPS}: minimum of all significances on the impact parameter {\color{red} what is impact parameter} of a daughter particle (kaons, muons and pions) with respect to the \Bs meson candidate.
+\item{} \texttt{lessIPS}: minimum of all significances on the impact 
+                          parameter\footnote{Impact parameter is the vertical distance of track line to a vertex}
+                          of a daughter particle (kaons, muons and pions) with respect to the \Bs meson candidate.
 \item{} \texttt{B0\_PT}: transverse momentum of the \Bs meson candidate.
 \item{} \texttt{B0\_IP\_OWNPV}: impact parameter of the \Bs meson candidate with respect to its best own parent vertex.
 \item{} \texttt{B0\_ENDVERTEX\_CHI2}: reconstruction significance of a reconstructed decay vertex of the \Bs meson candidate.
@@ -103,7 +104,7 @@ for the amplitude structure of those modes. Therefore the simulated events are w
 w_{\rm MC} = \frac{P_{\rm DATA} (\Omega, m_{hh}  | {A_i})}{P_{\rm MC}(\Omega, m_{hh})},
 \end{equation}
 
-\noindent $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized PDFs {\color{red} check if you have defined pdf before} and $A_i$ stands for
+\noindent $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs\footnote{Probability Density Function} and $A_i$ stands for
 the particular amplitude structure of a certain peaking background mode. The complete description of the above steps can be found in \cite{BsJpsiKst_ANA}.
 The final peaking background yields estimation after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
 
@@ -186,29 +187,28 @@ the mean of the core are allowed to float in the mass fit.
 
 \begin{table}[!h]
 \centering
-\begin{tabular}{c|c|c|c}
-\hline
- Bin 0 & Bin 1 & Bin 2 & Bin 3\\	
-\hline
-\multirow{2}{*}{$ 826 \leq x \leq 861 $} & \multirow{2}{*}{$ 861 < x \leq 896 $} & \multirow{2}{*}{$ 896 < x \leq 931 $}& \multirow{2}{*}{$ 931 < x \leq 966 $} \\
-					      	 					  &   &	& \\	
-\hline
- \end{tabular}
-\caption{Definitions of the four \mkpi bins in \mevcc.}
+\begin{tabular}{c c c c}
+  \hline
+  Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+  \hline
+  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966) $ \\
+%  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
+  \hline
+\end{tabular}
+\caption{Definitions of \mkpi bins. Units are in \mevcc.}
 \label{Kbindef}
 \end{table}
 
-
 \begin{table}[!h]
-\begin{tabular}{c|c|c|c|c}
-\hline
- Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\	
-\hline
-\multirow{2}{*}{$ -1.0 \leq x \leq -0.6 $} & \multirow{2}{*}{$ -0.6 < x \leq -0.2 $} & \multirow{2}{*}{$ -0.2 < x \leq 0.2 $}& \multirow{2}{*}{$ 0.2 < x \leq 0.6 $} & \multirow{2}{*}{$ 0.6 < x \leq 1.0 $} \\
-					      	 					  &   &	& & \\	
-\hline
+\centering
+\begin{tabular}{c c c c c}
+  \hline
+  Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\	
+  \hline
+  $ [-1.0,-0.6) $ & $ [-0.6,-0.2) $  & $ [-0.2,0.2) $ & $ [0.2,0.6) $ & $ [0.6,1.0) $ \\
+  \hline
  \end{tabular}
-\caption{Definitions of the five $\cos\thetamu$ bins in rad.{\color{red}Fix table range}}
+\caption{Definitions of $\cos\thetamu$ bins. Units are in rad}
 \label{cosThateMubindef} 
 \end{table}
 

@@ -236,7 +236,7 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 
 \begin{table}[h]
   \centering 
-  \caption{ Efficiency moments. {\color{red} comment on the values} }
+  \caption{ Efficiency moments. }
   \renewcommand{\arraystretch}{1.2}
   \label{eff_moms_table}
   \begin{tabular}{ccc}
@@ -275,22 +275,26 @@ The result is a hybrid acceptance function that is positive definite.
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{eff_helcosthetaK_neg_all_raw}
-    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw}}
+    \tikzsetnextfilename{eff_helcosthetaK_neg_all_raw_zoom}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw_zoom}}
     \caption{}
     \label{angAcc_nom}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr}
-    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr}}
+    \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr_fit_zoom}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr_fit_zoom}}
     \caption{}
-    \label{angAcc_constr}
+    \label{angAcc_constr_fit}
   \end{subfigure}
-  \caption{{\color{red} redo this plot and zoom in the region of $\cos\thetaK=1$ }. Angular efficiency function before(A) and ater(B) constraining its value at $\cos\thetaK=1$. The black points show the distribution of the 
-           helicity angles in the simulated sample (This is the sample that was weighted in order to produce \figref{angAcc_ctk} to \figref{angAcc_phi}). 
-           The blue curve is the \pdf that the simulated data was generated with. The red curve is the same \pdf multiplied with the efficiency function 
-           \eqref{eff_func}. 
+  %% \begin{subfigure}{0.5\textwidth}
+  %%   \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr_zoom}
+  %%   \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr_zoom}}
+  %%   \caption{}
+  %%   \label{angAcc_constr}
+  %% \end{subfigure}
+  \caption{Angular \pdf projection corrected with the angular efficiency function before (A) and ater (B) constraining its value at $\cos\thetaK=1$ (red curve). 
+           on top of the $\cos\thetaK$ distribution in the simulated sample (black points).
             }
 \end{figure}
 
@@ -376,16 +380,24 @@ Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
-%    \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr}
-%    \scalebox{0.5}{\input{Figures/Chapter4/eff2D_cosThK_cosThL_neg_all_constr}}
+    \includegraphics[width=\textwidth]{Figures/Chapter4/canv_cosThK_cosThL_Sim08_3fb_hel_negKaons_all.pdf}
     \caption{}
-    \label{eff2D_ckcl}
+    \label{eff2D_kl}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{Figures/Chapter4/canv_cosThK_phi_Sim08_3fb_hel_negKaons_all.pdf}
+    \caption{}
+    \label{eff2D_kp}
   \end{subfigure}
-\caption{2D efficiency plots. {\color{red} Under construction}}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{Figures/Chapter4/canv_cosThL_phi_Sim08_3fb_hel_negKaons_all.pdf}
+    \caption{}
+    \label{eff2D_lp}
+  \end{subfigure}
+\caption{Two dimensional projections of the efficiency (after the constrain of \equref{eff_func_constr}).}
 \end{figure}
 
-
-{\color{red} How are the errors on efficiency moments calculated??}\\
 
 \subsubsection{Alternative parameterization}
 As it was mentioned before there is at least one more way to parametrize the angular acceptance, namely the \emph{normalization weights}.
@@ -424,7 +436,7 @@ from the momenta of the final state particles.
 
 In order to over-come the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure. 
 At each weighting step of the procedure the Monte Carlo data are corrected for the current best estimate of the physics 
-parameters and the two dimensional $p_{K^{\pm}},p_{\pi^{\mp}}$ ({\color{red} why not the muons)} momentum distribution. 
+parameters and the two dimensional $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution. 
 The efficiency moments are re-evaluated using the weighted Monte Carlo sample and the fit to the real data is repeated. 
 This changes the best estimate of the physical parameters of interest. This procedure is reapetated untill the parameters
 of interest converge. The full procedure by steps can be summarized as:
@@ -507,7 +519,7 @@ to high correlations with the decay amplitudes. Instead it would be better to ex
 is modeled directly via the $\mKpiAmp$ terms of \equref{ang_terms}. The above mentioned lineshapes that are necessary
 to compute the $\CSP$ factors are a Isobar combination of a \KstENT and \KstOFOZ for $p$ and a LASS parametrization of a \KstOFTZ
 with a non resonant term. LASS is a common \swave prametrization in amplitude analysis, it is a combination of a relativistic Breit-Wigner
-with angular momentum barier factors. Whereas a Isobar is a superposition of resonances. ({\color{red} Make sure you understand what you say here and find references or show formulas.})
+with angular momentum barier factors. Whereas a Isobar is a superposition of resonances.
 
 
 \subsubsection{sWeighted \mkpi distribution}
