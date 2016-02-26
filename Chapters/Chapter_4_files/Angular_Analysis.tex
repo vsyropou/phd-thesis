@@ -654,7 +654,7 @@ The next category that the data are split to was already mentioned in \secref{Kp
 four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
 are parameters of interest that are different in each \mkpi bin. There parameters are the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 The \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
-\tabref{}, where the \CSP factors are shown for each \mkpi bin {\color{red} Do this table, its easy}. The acceptance is also split
+\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split
 in the \mkpi category for the same reason as in the previous paragraph.
 
 { \color{red} If necesssary mention the split in run periods for varius checks that has been done else avoid overflooding of information.}
@@ -666,32 +666,67 @@ Finally the convergence tables of the iterative precedure can be found in \tabre
 {\color{red} you need: Nominal acceptance tables. Convergence tables of moments. 2D figures of acceptance.
 These are all implemented, need to wait for the final numbers}
 
+\begin{table}[!h]
+\centering
+\begin{tabular}{c c c c c}
+  \hline
+             & Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+  \hline
+  \CSP       & $ 0.9681 $ & $ 0.9312 $ & $ 0.9519 $ & $ 0.9880 $ \\
+  \hline
+\end{tabular}
+\caption{\CSP values for each \mkpi bin.}
+\label{csp_vals}
+\end{table}
+
 Having adressed the simultaneous feature of the fit it is both intreasting and necessay to have an insight on
-the onnection between the \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
+the connection between a \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
 any \pdf $\mathcal{P}$ a likelihood function can be build as shown in \equref{likelihood}. By definition the likelihood
 function is the product of probabilities, according to the given \pdf, of every event. Note that oposite to the \pdf
 the likelihood is a function of the free parameters given all the events in the data. It is 
-useful\footnote{and perhaps beautyfull} to realise that by maximizing the likelihood function one gets the best estimate
-for the parameters of intereset given the data based on the \pdf. This is done by means of the estimator [ref]... blahh{\color{red} need more studing for that.}
+useful to realise that at the maximum of the likelihood function one gets the best estimate for the parameters of 
+intereset, $\vec{p}$, given the data. 
 
 \begin{equation}
 L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p})
 \label{likelihood}
 \end{equation}
 
-The estimation of the best fit values and their correponding correlations are computed based on  blhaa \equref{}.
+\noindent Whereas the inverse of the covariance matrix is given by the negative second derivative of the likelihood at the maximum as shown in \equref{covariance}.
 
-Coming now to the concept of an extended likelihood.
 \begin{equation}
--\text{log}{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p}) - P(v(\vec{p});y)
-% \Rightarrow -\log{L} = \sum_e^n \mathcal{P}(\vec{x};\vec{p})
+\left( V^{-1} \right)_{ij} = - \left. \frac{\partial^2\ln L}{\partial p_1 \partial p_2} \right|_{ \vec{p}_{\rm\bf max}}
+\label{covariance}
+\end{equation}
+
+\noindent Another typical way to estimate and visualise better the standard diviations and covvariances is shown in \secref{nllscans}. 
+
+Coming now to the concept of the extended likelihood. In \equref{likelihood} the number of events is fixed. However it is possible to 
+extend the last equation such that the expected number of events shows up as a parameter in the likelihood function. This is usefull
+in cases where the \pdf consists of two species, such as signal and background, or if the expected number of events depends on the 
+parameters of interest $\vec{p}$. For the current analysis the later is exploited in order to float the the $\Acp{}$ assymetries in the fit,
+see end of current subsection. Extending the \pdf is achieved by multipling the likelihood with a poison distribution as shown in \equref{extlikelihood}.
+
+\begin{equation}
+L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \label{extlikelihood}
 \end{equation}
 
-This way the measured number of events becomes a free parameter that can be fitted for. 
-THis will be exploited later since after all the analysis
-will measure assymetries on yields.
- 
+\noindent where $\mu(\vec{p})$ is the expected number of events. As it can be seen it depends on the parameters of interest which in 
+principle reduces the uncertainty on them since aditional information is added to the likelihood function.
+For purelly practical reasons one would typically choose to minimize the negative logarithm of the likelihood, which after some simple
+algebra and using the well known expression of the poisson distribution results in \equref{extloglikelihood},
+
+\begin{align}
+  -\nll &= -\ln\left( \frac{\expEvnts}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
+        &= - n\ln(\expEvnts) + \expEvnts - \sum_e^n \ln( \mathcal{P}(\vec{x};\vec{p}) )
+\label{extloglikelihood}
+\end{align}
+
+\noindent Note that constant terms in the likelihood do not affect either the shape of the likelihood or the position of the minimum and thus
+are neglected.
+
+
 \subsubsection{\CP Assymetries as Free Parameters}
 \label{cp_assymetries_and_total_decay_rate}
 The \CP asymetries discussed in \secref{TheBsJpsiKstDecay} can be measured from the raw assymetry observed in data.
