@@ -278,14 +278,14 @@ The result is a hybrid acceptance function that is positive definite.
     \tikzsetnextfilename{eff_helcosthetaK_neg_all_raw_zoom}
     \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_raw_zoom}}
     \caption{}
-    \label{angAcc_nom}
+    % \label{angAcc_nom}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr_fit_zoom}
     \scalebox{1.3}{\input{Figures/Chapter4/eff_helcosthetaK_neg_all_constr_fit_zoom}}
     \caption{}
-    \label{angAcc_constr_fit}
+    % \label{angAcc_constr_fit}
   \end{subfigure}
   %% \begin{subfigure}{0.5\textwidth}
   %%   \tikzsetnextfilename{eff_helcosthetaK_neg_all_constr_zoom}
@@ -296,6 +296,7 @@ The result is a hybrid acceptance function that is positive definite.
   \caption{Angular \pdf projection corrected with the angular efficiency function before (A) and ater (B) constraining its value at $\cos\thetaK=1$ (red curve). 
            on top of the $\cos\thetaK$ distribution in the simulated sample (black points).
             }
+  \label{angAcc_constr}
 \end{figure}
 
 Before laying out the formulas behind the above mentioned steps it is usefull to literally see the problem caused by the parametrization, see \figref{angAcc_nom}, \figref{angAcc_constr}
@@ -355,7 +356,7 @@ The last is an updated efficiency function which is guranteed to be positive def
 
 \noindent The result of the above constrain is shown in figure \figref{angAcc_constr}, where it can be seen that the acceptance projecton on $\cos\thetaK=1$
 is not zero anymore. In addition it has also been checked wheather the acceptance is negative in 2D and 3D, since it is possible for a 2D
-projetion of the acceptance to take negative values as well while the 1D projections are positive. Two dimentional preojection of the constrained acceptance can be seen in \figref{eff2D_ckcl}.
+projetion of the acceptance to take negative values as well while the 1D projections are positive. Two dimentional preojection of the constrained acceptance can be seen in \figref{eff2D}.
 
 Constraining the acceptance in this maner described above comes with a penalty, meaning that the shape of the 1D acceptance
 projections is distorted a bit. In order to undo this distortion and describe better the acceptance shape an addional step is implemented. 
@@ -396,6 +397,7 @@ Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final
     \label{eff2D_lp}
   \end{subfigure}
 \caption{Two dimensional projections of the efficiency (after the constrain of \equref{eff_func_constr}).}
+    \label{eff2D}
 \end{figure}
 
 

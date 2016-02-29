@@ -50,7 +50,26 @@
 
 \begin{figure}[h]
 \begin{center}
-  \includegraphics[width=\textwidth]{Figures/Chapter4/canv_Bs_allKaons_3fb_mergeAccPer_allKpiBins_AcpZero_Pw_split}
+%  \includegraphics[width=\textwidth]{Figures/Chapter4/canv_Bs_allKaons_3fb_mergeAccPer_allKpiBins_AcpZero_Pw_split}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helcosthetaK}
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
+    \caption{}
+    \label{angPlot_ctk}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helcosthetaL}
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
+    \caption{}
+    \label{angPlot_ctl}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helphi} 
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helphi}}
+    \caption{}
+    \label{angPlot_phi}
+  \end{subfigure}
   \caption{Fitted angular pdf projections on top of the \BsJpsiKst sWeighted data. 
            Black solid: total, blue dashed \pwave even, blue dotted \pwave odd plus \pwave self interference, 
            green dotted: \swave, red dotted dashed S-P interference. Notice the negative values of the \spwave interverence.
