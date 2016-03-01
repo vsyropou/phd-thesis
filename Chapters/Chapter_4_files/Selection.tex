@@ -1,4 +1,10 @@
 
+There are effectively four stages of offline event selection taking place after the data has been written out. 
+First a set of rough pre-selection criteria is applied (hereafter {\it Stripping}). Those cuts are quantities like final state track and vertex quality,
+track impact parameter, mass ranges of mother and daughter particles, particle identification and transverse momentum. A detailed 
+table of the Stripping cuts is given in \tabref{Bs2JpsiKstSelection}. The purpose of stripping is to perform a first rough rejection of the combinatorial
+background and prepare the data for the next stage of selection \footnote{Stripping is also a way to save disk space for offline event storage, since it is impossible
+to save anything that the detector writes out}. The remaining three selection steps after Stripping are described in each of the subsequent subsections.
 
 \subsection{Multivariate Based Selection}
 \label{Multivariate_Based_Selection}
@@ -226,6 +232,7 @@ of yields over the 20 fitting categories, giving
 \begin{align}
 N_{\Bd} &= 208656  \pm  462 ^{+ 78	}_{- 76}\\
 N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
+\label{signal_yields}
 \end{align}
 
 \noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category, 

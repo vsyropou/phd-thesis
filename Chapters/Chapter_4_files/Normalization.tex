@@ -1,0 +1,50 @@
+
+The current section addresses the issue of the branching ratio normalization.
+One of the necessary elements towards estimating the penguin contributions to \phis is the \BsJpsiKst branching ratio measurement,
+hearafter $\BRof\BsJpsiKst$, which is used as input to \secref{penguins_formalism}. Absolute branching ratio measurements are 
+more complecated to perform compared to a relative one. Thus $\BRof\BsJpsiKst$ is normalised with respect to $\BRof\BsToJPsiPhi$,
+which is suitable given the relevant formalism, see \secref{penguins_formalism}, for the penguin contribution determination. 
+
+\begin{align}
+\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi} = \frac{N_{\BsJpsiKpi}}{N_{\BsJpsiKK}} &\times \frac{\varepsilon_{\BsJpsiPhi}^{MC}}{\varepsilon_{\BsJpsiKst}^{MC}} \times \nonumber \\
+                                                                          &\times \frac{\omega_{\BsJpsiPhi}}{\omega_{\BsJpsiKst}} \times \frac{\BRof{\phi\to\kaon^+\kaon^-}}{\BRof{\Kstar\to\kaon\pion}} 
+\label{norm_jpsiPhi}
+\end{align}
+
+The $\BRof\BsJpsiKst$ measurement as shown in \equref{norm_jpsiPhi} is detached from the angular analisis. It requires the observed number 
+\BsJpsiKst and \BsToJPsiPhi events. The first one is taken from \equref{signal_yields} as for the later a bit more efford is needed.
+Particularly the selection steps applied to $\BsToJPsiPhi$ (also refered to as reference chanell) are chosen such that they are as 
+similar as possible to that of \BsJpsiKst in \tabref{Bs2JpsiKstSelection}. Also the BDTG clasifier is applied to the refference chanell
+with the same cut values as in the \BsJpsiKst chanell. The ratio of observed number of events is represented by the first fraction in \equref{norm_jpsiPhi},
+Whereas the ratio of total efficiencies between the two chanells by the second. The last is corrected for differenceses in efficiencies between real and 
+simulated data. Addionally there is a correction factor to account for the presence of \swave in the two 
+chanells\footnote{The penguin estiamtion assumes no \swave contributiuon to \BsJpsiKst. The factors $\omega$ in \equref{norm_jpsiPhi} correspond
+to the ratio of two angular \pdfs, one with the \swave parameters set to zero and \pwave to those obtaind from the angular fit,  whereas the other
+with both \pwave and \swave parameters as obtained from the same fit.
+}. The branching fractions of the intermediate resonance to the final state di-hadron system are obtained from \cite{PDG}
+\footnote{ $\BRof{\Kstar\to\kaon\pion} = 2/3$ whereas $\BRof{\phi\to\kaon^+\kaon^-}\simeq 1/2$}.
+The $\BRof\BsToJPsiPhi$ \cite{SheldonKK} is updated with the latest hadronization \bquark quark fraction ratio  
+ratio\footnote{The quantity \fdfs expresses the ratio of probabilities that a \bquark quark will form a messon with a \dquark quark or an \squark quark}
+\cite{LHCb-CONF-2013-011}. Whereas the efficiency and the angular correction ratios are about $2$ and $0.9$ respectivelly. 
+
+\begin{equation}
+\label{eq:norm_jpsiPhi_result}
+\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi} = (4.09 \pm 0.20 ({\rm stat}) \pm 0.12 ({\rm syst}))\% \\
+\end{equation}
+
+
+\begin{equation}
+\label{Br_JpsiPhi}
+\BR{\BsJpsiKst}_{\phi} = (4.25 \pm 0.20  \text{(stat)} \pm  0.13  \text{(syst)}  \pm 0.36 (\BRof\BsJpsiPhi))\times 10^{-5}
+\end{equation}
+
+
+%%%%% We use the fomrula blah.
+%%%%% Explain formula.
+%%%%% Epsilon means offline trigger and generator lvl 
+%%%%% Epsilon rations is a weighted average over polarity and periods
+%%%%% Show epsilon ratios
+%%%%% Angular corrections
+%%%%% data mc corrections
+%%%%% Final choice
+%%%%% dump numbers
