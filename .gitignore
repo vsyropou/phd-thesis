@@ -1,2 +1,12 @@
+
 *.dpth
 *.xml
+*.aux
+*.bbl
+*.log
+*.lof
+*.toc
+*.blg
+*.out
+*.lot
+*~
