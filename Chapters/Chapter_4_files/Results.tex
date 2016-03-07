@@ -1,5 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameters of Interest}
+\label{Parameters_of_Interest}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Signal efficiencies and background rejections values are calculated for both 2012 and 2011 data conditions separately and individually for three 
@@ -240,8 +241,6 @@ $\polFrac{\parallel}$    &           &           &           &           &      
 \end{table}
 
 
-
-
    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,17 +248,46 @@ $\polFrac{\parallel}$    &           &           &           &           &      
 \label{nllscans}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
+The likelihood function presented in \secref{Simutaneous_Likelihood_fit} is revisited in the current subsection.
+This time it is visualied in order to gain more confidence that the fit result presented in \secref{Parameters_of_Interest}
+comes indeed from a valid minimum of the likeliood function. One can easiy get a good estimate on the shape of the function
+by expanding it as a Tylor series around the 
+minimum \footnote{The constant term of the
+expantion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically. Whereas
+the first derivative is zero by definition.}. Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough
+and also that the variables $\vec{p}$ in the same equation are gaussian in nature, then one can easily find out that the 
+taylor expansion of the negative logarithm of \equref{likelihood} projected over one parameter $\mu$ out of $\vec{p}$ has a
+parabolic shape as shown in \equref{likelihood_exp}
+ 
+\begin{equation}
+\ln L(\mu;\vec{x}) \simeq \frac{1}{2} \; s^2, \;\;\; \text{with} \;\;\; s = \parenthesis{\frac{\mu-\hat{\mu}}{\sigma_{\mu}}}.
+\label{likelihood_exp}
+\end{equation}
 
-\begin{itemize}
-\item Say what is a profiel likelihood
-\item Explain central value and error estimations in the nll fit (formulas and graphical method)
-\item Justify why you chose assymetric errors on the parameters of intereset.
-\item Explain effect of low statistics on nll shape
-\item Comment double minima
-\item Maybe explain better the impact of weighted events on nll fit.
-\end{itemize}
+\noindent Where $\hat{\mu}$ is the value of $\mu$ at the minumum and $\sigma_{\mu}$ is the statistical uncertainty associated
+to $\mu$. The last equation is called {\it profile likelihood}.
 
-{\color{red} These are not final. }
+Based on the above mentioned assumptions two important conclusions can be drawn given a profile likelihood plot. First the non 
+gaussian nature of a parameter of intereset can be visualised by how much the corresponding profile likelihood diviates from
+a perfect parabola. Non perfect parabola is mainly an indication of low sample 
+size\footnote{Also a bad looking profile likelihood with spikes and discontinuities is a very good indication that the \pdf
+used to build the likelihood is problematic. For example a bad mistake in the implementaion can cause discontinuities in the
+profile likelihood plot.}. Second, \equref{likelihood_exp} serves as an alternative method of estimating the statistical uncertainty
+of a parameter of interest given a profile likelihood plot. Spesifically $s$ number of standard deviations are defined from the two 
+points where \equref{likelihood_exp} intersects the profile likelihood function (for the desired value of $s$) and projecting to 
+the horizontal 
+axis\footnote{Complex as it might seem to be the above become apparent in the profile likelihood plots that follow in the current subsection}. 
+
+It follows that the errors defiend in the the above mentioned way can be asymetric left and right of the minimum. 
+The sample size for some of the data categories in the current analysis is quite small. This is depicted in the corresponding profile 
+likelihood plots of the parameters of itnereset relevant to those data categories. This is also the reason why asymetric errors are used. 
+
+Going one step further on the statistical error interpretation, it is usefull to realise what kind of statement is usually
+attributed to the statisical uncertainty of one standard deviation. Basically the claim is that one standard diviation
+quaranties that the probability that the true value of the parameter of ineterest $\mu^{\text{true}}$ will be inside the
+interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$\footnote{The last percentage comes from the fraction of the total area of a normal distribution corresponding to one standatd deviation.}.
+The last interval is usually quated as a $1\sigma$ {\it confedence interval} \footnote{and it is in the core of the so called {\it frequentist statistics}
+interpretation of the probability.}
 
 \begin{figure}[h]
   \centering
@@ -289,7 +317,9 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     \caption{}
     \label{opa}
   \end{subfigure}
-\caption{Pofile likeliood scans of \Acp parameters.}
+\caption{Pofile likeliood scans of \Acp{} parameters of interest. The black line corresponds to the profile likeliood
+         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric gaussian 
+         error. No peculiar structure is observed appart from the non gaussian nature of the parameters}
 \end{figure}
 
 \clearpage
@@ -322,7 +352,13 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     \caption{}
     \label{opa}
   \end{subfigure}
-\caption{Pofile likeliood scans of \pwave parameters.}
+\caption{Pofile likeliood scans of \pwave releated parameters of interest. The black line corresponds to the profile likeliood
+         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric gaussian 
+         error. No peculiar structure is observed for the \pwave fractions appart from the non gaussian nature of the parameters.
+         Whereas the phases clearly show the existance of the doulble minimum related to the symmetry of the fitted \pdf 
+         explained in \secref{TheBsJpsiKstDecay} {\color{red} Do not forget to mention this}.
+         Also $\ampPhase{\parallel}$ appears to heve other local minima at above $3\sigma$ and as such are neglected, since only
+         global minima are relevant to the likelihood parameter estiamtion. }
 \end{figure}
 
 \clearpage
@@ -417,6 +453,11 @@ $\polFrac{\parallel}$    &           &           &           &           &      
 %% \caption{Pofile likeliood scans.}
 %% \end{figure}
 
+
+\begin{itemize}
+\item {\color{red} Maybe show Bd likelihood scans and comare how steaper the likelihood scans are.}
+\item Comment double minima on the captions plots.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Toy Experiments Study}
