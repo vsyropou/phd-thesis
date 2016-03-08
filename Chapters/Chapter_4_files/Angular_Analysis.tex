@@ -4,7 +4,7 @@ the current section. A brief discription of the angular pdf derivation is given 
 Treatment of the angular acceptance are addressed in \secref{Accceptance} and \secref{Accceptance_Corrections}.
 In \secref{Kpi_Invariant_mass} the implications arising from the \mkpi dependance are discussed.
 The effect of assymetries introduced by detector imperfections such as productiuon and detection assymetries are delat with
-in \secref{experimentalAssym}. Some aspects of the maximum likelihood fit are presented in \secref{Simutaneous_Likelihood_ fit},
+in \secref{experimentalAssym}. Some aspects of the maximum likelihood fit are presented in \secref{Simutaneous_Likelihood_fit},
 along with the \ACP parameters of interest, which are introduced in a special way in angular fit when building the full decay rate \pdf.
 
 
@@ -151,23 +151,23 @@ cuts applied could also introduce some ineeficiency.
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.49\textwidth}
-    \tikzsetnextfilename{helcosthetaK_allKaons_binall}
-    \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaK_allKaons_binall}}
+    \tikzsetnextfilename{eff_data_helcosthetaK_allKaons_binall}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_data_helcosthetaK_allKaons_binall}}
     \caption{}
     \label{angAcc_ctk}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.49\textwidth}
-    \tikzsetnextfilename{helcosthetaL_allKaons_binall}
-    \scalebox{1.3}{\input{Figures/Chapter4/helcosthetaL_allKaons_binall}}
+    \tikzsetnextfilename{eff_data_helcosthetaL_allKaons_binall}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_data_helcosthetaL_allKaons_binall}}
     \caption{}
     \label{angAcc_ctl}
   \end{subfigure}
 
   \vspace*{0.02\textwidth}
   \begin{subfigure}{0.49\textwidth}
-    \tikzsetnextfilename{helphi_allKaons_binall}
-    \scalebox{1.3}{\input{Figures/Chapter4/helphi_allKaons_binall}}
+    \tikzsetnextfilename{eff_data_helphi_allKaons_binall}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_data_helphi_allKaons_binall}}
     \caption{}
     \label{angAcc_phi}
   \end{subfigure}
@@ -249,30 +249,34 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 
 \begin{table}[h]
   \centering 
-  \caption{ Efficiency moments. }
+  \caption{ Efficiency moments of \BsJpsiKst. The bigger the value of a moment the more the coresponding function contributes to the overal efficiency function.
+            The efficiency functions corresponding to the moments $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$ account for most of the hard acceptance drop in the 
+            $\cos\thetaK$ projection. The acceptance in the $\cos\thetamu$ projection is much softer compared to the one $\cos\thetaK$. This can be deduced from
+            \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$.
+            The value of the $\moment{0}{0}{0}$ is constrianed for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$. Details on
+            the constrian are explained in the current subsection.}
   \renewcommand{\arraystretch}{1.2}
   \label{eff_moms_table}
   \begin{tabular}{ccc}
     \hline
     moment & central value & standard deviation \\
     \hline
-    $\moment{0}{0}{0}$ & +3.7785  & 0.0016 \\
-    $\moment{1}{0}{0}$ & -2.1268  & 0.0059 \\
-    $\moment{2}{0}{0}$ & -1.9557  & 0.0089 \\
-    $\moment{3}{0}{0}$ & +0.0009  & 0.0106 \\    
-    $\moment{4}{0}{0}$ & +0.1461  & 0.0122 \\
-    $\moment{5}{0}{0}$ & +0.1095  & 0.0134 \\
-    
-    $\moment{0}{2}{0}$ & +0.2822  & 0.0046 \\
-    $\moment{0}{2}{2}$ & +0.0505  & 0.0040 \\
-    $\moment{0}{4}{0}$ & +0.0838  & 0.0046 \\
-
-    $\moment{1}{4}{0}$ & -0.0603  & 0.0081 \\
-    $\moment{2}{2}{0}$ & -0.1139  & 0.0111 \\
-    $\moment{2}{2}{2}$ & -0.0453  & 0.0082 \\
-\hline
+  $\moment{0}{0}{0}$   & \text{constrained}  &  -  \\
+  $\moment{1}{0}{0}$   & -2.0982  &  0.0084  \\
+  $\moment{2}{0}{0}$   & -1.9116  &  0.0126  \\
+  $\moment{3}{0}{0}$   & -0.0317  &  0.0151  \\
+  $\moment{4}{0}{0}$   & +0.1146  &  0.0175  \\
+  $\moment{5}{0}{0}$   & +0.1384  &  0.0193  \\
+  $\moment{0}{2}{0}$   & +0.2820  &  0.0066  \\
+  $\moment{0}{2}{2}$   & +0.0612  &  0.0058  \\
+  $\moment{0}{4}{0}$   & +0.0864  &  0.0066  \\
+  $\moment{1}{2}{0}$   & -0.1900  &  0.0115  \\
+  $\moment{1}{4}{0}$   & -0.0720  &  0.0118  \\
+  $\moment{2}{2}{0}$   & -0.1315  &  0.0161  \\
+  $\moment{2}{2}{2}$   & -0.0674  &  0.0117  \\
+  \hline
   \end{tabular}
-\end{table}  
+\end{table}   
 
 
 \subsubsection{Choice of efficiency moments}
@@ -383,11 +387,11 @@ The generated parameters are fixed so that only the efficiecny moments are allow
 The multivariate gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments within one standard deviation is shown in \equref{mvm_constr}.
 
 \begin{center}
-\begin{equation}
-  \mathcal{P}= \Pgen \times\epsilon(\Omega;\vec{\bf c}) \times G(\vec{\bf{c}}), 
-  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) }
+\begin{align}
+  \mathcal{P}= \Pgen \times\epsilon(\Omega;\vec{\bf c})&  \times G(\vec{\bf{c}}), \nonumber\\ 
+  \text{with} \;\; & G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) }
   \label{mvm_constr}
-\end{equation}
+\end{align}
 \end{center}
 
 \noindent Where $\vec{\bf c}$ represents the floatting efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments computed
@@ -412,7 +416,8 @@ Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final
     \caption{}
     \label{eff2D_lp}
   \end{subfigure}
-\caption{Two dimensional projections of the efficiency (after the constrain of \equref{eff_func_constr}).}
+\caption{Two dimensional efficiency projections of the \BsJpsiKst simulation sample, after the constrain of \equref{eff_func_constr}.
+         The equivalent plots for \BsbarJpsiKst are indistiguisable by eye.}
     \label{eff2D}
 \end{figure}
 
@@ -668,19 +673,21 @@ of the likelihood parameter estimation method is included.
 
 Starting from the angular \pdf terms as shown in \tabref{ang_terms}. The last cannot discribe both \BsJpsiKst and \BsbarJpsiKst. 
 There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of 
-\BsJpsiKst. As it was explained in \secref{TheBsJpsiKstDecay} those decays are flavour specific whih means that a \Bs messon
+\BsJpsiKst. As it was explained in \secref{TheBsJpsiKstDecay} those decays are flavour specific which means that a \Bs messon
 has always a negative kaons in the final state particles. The situations is inverted in the case of a \Bsb messon.
 Thus the data can easily be split into two parts based on the sign of one of the hadrons\footnote{In the current analysis the sign
-of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }.
-Another reason supporting this distinction is the fact that the angular acceptance was found to be significantly different between
-the two categories, see \tabref{}. {\color{red} do not forget to redo these tables as well.}
+of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }. Furthermore
+the angular acceptance as described in \secref{Accceptance} is calculated seperatelly for the \BsJpsiKst and \BsbarJpsiKst samples.
+This is done purelly to simplify the computation of the efficiency moments as one avoids averaging the decay amplitudes over those
+the \BsJpsiKst, \BsbarJpsiKst categories. The last averaging is something that is done in the fit to the data and is covered in 
+the subsecuent part of the curent subsection.
 
 The next category that the data are split to was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence. 
 There are four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
 are parameters of interest that are different in each \mkpi bin. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 Ina ddition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
-\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split
-in the \mkpi category for the same reason as in the previous paragraph.
+\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split in the \mkpi category since it was
+found to be slightly different in each \mkpi bin.
 
 { \color{red} If necesssary mention the split in run periods for varius checks that has been done else avoid overflooding of information.}
 
