@@ -3,49 +3,41 @@
 \label{Parameters_of_Interest}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Signal efficiencies and background rejections values are calculated for both 2012 and 2011 data conditions separately and individually for three 
-%% different subsets of cuts in the final selection presented in \tabref{tab:Bs2JpsiKstSelection}, resulting in three individual efficiencies (rejections). 
-%% As a first step, $\varepsilon_{\rm sel}$ is calculated selecting signal and background samples with all the final selection cuts excepting (**) and (*). 
-%% As a second step, $\varepsilon_{\rm BDTG}$ is calculated selecting previous samples also with cut (**). As a third step, $\varepsilon_{\Lb}$ is obtained 
-%% selecting previous samples also with cut (*). Finally, a total efficiency (rejection) is obtained, containing the information from all the efficiencies 
-%% (rejections) computed in previous steps: $\varepsilon_{\rm tot}$ uses signal and background samples selected with all the cuts from the final selection.
-
 
 \begin{itemize}
-\item Comment on the gaussian contstrains of production and detection assymetry
-\item list the fitted yields from the extended likelihood fit
+\item In this section we show the final results of the angualr fit.
+\item Point out tables and coorelation matrix in the appendix
+\item Comment the compatibility with the Bd fit to streangthen the agreement
 \item Maybe show fits to the \BdJpsiKst
 \end{itemize}
 
 \begin{table}[!h]
   \center
-  \caption{\small Best fit values of the parameters of intereset.}
   \begin{tabular}{c c c}
     \hline
      parameter & value & standard deviation  \\
-     %\multicolumn{2}{c}{range}   &  vs        \\
-    \hline
-    $\Acp{0}$             & blah & ${}^{+100}_{-100}$ \\
-    $\Acp{\parallel}$     & blah & ${}^{+100}_{-100}$ \\
-    $\Acp{\perp}$         & blah & ${}^{+100}_{-100}$ \\
-    $\Acp{S}$             & blah & ${}^{+100}_{-100}$ \\
-    \hline
-    $\AmpSq{0}$            & blah & ${}^{+100}_{-100}$ \\
-    $\AmpSq{\parallel}$    & blah & ${}^{+100}_{-100}$ \\
-    $\ampPhase{0}$         & blah & ${}^{+100}_{-100}$ \\
-    $\ampPhase{\parallel}$ & blah & ${}^{+100}_{-100}$ \\
-    \hline
-    $\fS{1}$               & blah & ${}^{+100}_{-100}$ \\
-    $\fS{2}$               & blah & ${}^{+100}_{-100}$ \\
-    $\fS{3}$               & blah & ${}^{+100}_{-100}$ \\
-    $\fS{4}$               & blah & ${}^{+100}_{-100}$ \\
-    \hline
-    $\deltaS{1}$           & blah & ${}^{+100}_{-100}$ \\
-    $\deltaS{2}$           & blah & ${}^{+100}_{-100}$ \\
-    $\deltaS{3}$           & blah & ${}^{+100}_{-100}$ \\
-    $\deltaS{4}$           & blah & ${}^{+100}_{-100}$ \\
+     \hline
+     $             \Acp{0}$ & $-0.063$ & ${}^{+0.063}_{-0.063}$ \\
+     $     \Acp{\parallel}$ & $+0.155$ & ${}^{+0.159}_{-0.157}$ \\
+     $         \Acp{\perp}$ & $-0.087$ & ${}^{+0.097}_{-0.097}$ \\
+     $             \Acp{S}$ & $+0.129$ & ${}^{+0.098}_{-0.097}$ \\
+     \hline
+     $              \fP{0}$ & $+0.481$ & ${}^{+0.024}_{-0.025}$ \\
+     $      \fP{\parallel}$ & $+0.183$ & ${}^{+0.028}_{-0.027}$ \\
+     $\ampPhase{\parallel}$ & $-2.766$ & ${}^{+0.163}_{-0.166}$ \\
+     $    \ampPhase{\perp}$ & $-0.067$ & ${}^{+0.113}_{-0.116}$ \\
+     \hline
+     $              \fS{1}$ & $+0.567$ & ${}^{+0.066}_{-0.077}$ \\
+     $              \fS{2}$ & $+0.098$ & ${}^{+0.034}_{-0.027}$ \\
+     $              \fS{3}$ & $+0.045$ & ${}^{+0.045}_{-0.030}$ \\
+     $              \fS{4}$ & $+0.578$ & ${}^{+0.111}_{-0.120}$ \\
+     $          \deltaS{1}$ & $+0.265$ & ${}^{+0.136}_{-0.131}$ \\
+     $          \deltaS{2}$ & $-0.532$ & ${}^{+0.229}_{-0.195}$ \\
+     $          \deltaS{3}$ & $-1.682$ & ${}^{+0.189}_{-0.240}$ \\
+     $          \deltaS{4}$ & $-2.070$ & ${}^{+0.142}_{-0.160}$ \\
     \hline
   \end{tabular}
+  \caption{\small Best fit values of the parameters of intereset.}
   \label{bestFitResult}
 \end{table}
 
@@ -104,37 +96,6 @@
 \end{figure}
 
 \clearpage
-\begin{sidewaystable}[p!]
-%\begin{table}[h]
-\begin{center}
-\caption{\label{tab:correlationMatrix} Statistical correlation matrix for the parameters from the angular fit.}
-\vspace{5pt}
-%\hspace{-2cm}
-%\tiny{
-\begin{tabular}{lcccccccccccccccc}
-     & $\Acp{0}$     & $\Acp{S}$     & $\Acp{\parallel}$     & $\Acp{\perp}$     & $\fS{1}$     & $\fS{2}$     & $\fS{3}$     & $\fS{4}$     & $\ampPhase{\parallel}$     & $\ampPhase{\perp}$     & $\deltaS{1}$     & $\deltaS{2}$     & $\deltaS{3}$     & $\deltaS{4}$     & $\polFrac{0}$     & $\polFrac{\parallel}$    \\
-\hline
-$\Acp{0}$               & $+1.00$      & $-0.12$      & $-0.11$      & $-0.17$      & $-0.13$      & $-0.02$      & $-0.06$      & $-0.01$      & $+0.03$      & $+0.02$      & $+0.10$      & $-0.00$      & $+0.07$      & $+0.01$      & $+0.06$      & $-0.05$    \\
-$\Acp{S}$               &           & $+1.00$      & $-0.14$      & $-0.12$      & $+0.16$      & $-0.12$      & $+0.03$      & $-0.10$      & $+0.00$      & $-0.06$      & $+0.02$      & $+0.07$      & $+0.05$      & $+0.07$      & $+0.01$      & $+0.03$    \\
-$\Acp{\parallel}$       &           &           & $+1.00$      & $-0.49$      & $+0.02$      & $+0.09$      & $-0.02$      & $+0.08$      & $+0.09$      & $+0.06$      & $-0.06$      & $-0.04$      & $-0.05$      & $-0.12$      & $-0.04$      & $-0.07$    \\
-$\Acp{\perp}$           &           &           &           & $+1.00$      & $-0.00$      & $-0.01$      & $-0.06$      & $-0.07$      & $-0.09$      & $-0.03$      & $-0.03$      & $+0.01$      & $-0.02$      & $+0.07$      & $+0.01$      & $-0.06$    \\
-$\fS{1}$                 &           &           &           &           & $+1.00$      & $+0.01$      & $-0.01$      & $-0.03$      & $-0.10$      & $-0.24$      & $-0.77$      & $+0.01$      & $+0.04$      & $-0.00$      & $+0.10$      & $-0.09$    \\
-$\fS{2}$                 &           &           &           &           &           & $+1.00$      & $-0.01$      & $-0.00$      & $-0.02$      & $-0.05$      & $-0.01$      & $-0.25$      & $+0.03$      & $-0.01$      & $+0.15$      & $-0.10$    \\
-$\fS{3}$                 &           &           &           &           &           &           & $+1.00$      & $+0.01$      & $-0.04$      & $+0.07$      & $+0.01$      & $-0.00$      & $-0.22$      & $+0.00$      & $-0.02$      & $+0.04$    \\
-$\fS{4}$                 &           &           &           &           &           &           &           & $+1.00$      & $+0.08$      & $+0.08$      & $+0.00$      & $-0.01$      & $-0.03$      & $-0.29$      & $-0.09$      & $+0.04$    \\
-$\ampPhase{\parallel}$   &           &           &           &           &           &           &           &           & $+1.00$      & $+0.62$      & $+0.10$      & $+0.14$      & $+0.03$      & $+0.11$      & $+0.04$      & $-0.03$    \\
-$\ampPhase{\perp}$      &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.17$      & $+0.13$      & $-0.02$      & $+0.13$      & $+0.05$      & $-0.04$    \\
-$\deltaS{1}$             &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.03$      & $+0.04$      & $+0.08$      & $+0.04$    \\
-$\deltaS{2}$             &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.04$      & $+0.13$      & $-0.05$    \\
-$\deltaS{3}$             &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.04$      & $+0.27$      & $-0.08$    \\
-$\deltaS{4}$             &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $+0.11$      & $+0.00$    \\
-$\polFrac{0}$            &           &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$      & $-0.34$    \\
-$\polFrac{\parallel}$    &           &           &           &           &           &           &           &           &           &           &           &           &           &           &           & $+1.00$    \\
-\end{tabular}
-%}
-\end{center}
-%\end{table}
-\end{sidewaystable}
 
 
 \clearpage
@@ -143,22 +104,103 @@ $\polFrac{\parallel}$    &           &           &           &           &      
 \subsection{Systematic Uncertainties}
 \label{systemics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\color{red} This text is easy to write}\\
+The different source of systematic uncertainties on the \Bs angular parameters, as well as on the branching fraction
+are pesented int he curent section.
+
 \subsubsection{Angular acceptance}
+\label{systAngAcc}
+The efficiency moments as described in \secref{Accceptance} are computed with a limited size simulation sample
+and are thus their central values are subected to statistical fluctuations. To account for this limitation the
+efficiency moments are allowed to float in the angular fit to the data with a multivariant gaussian constrain within $5$
+standard deviations from their nominal value. The multivariant gaussian takes properly into acount their correlations.
+In addition this systematic covers any potential difference in the acceptance between data and simulated sample
+that has not been corrected by the iterative procedure described in \secref{Accceptance_Corrections}. The differences
+in the prameters of intereset between the best fit of \tabref{bestFitResult} and the fit with the floating acceptance
+is taken as a systematic uncertainty. 
+
 \subsubsection{$m(\Jpsi K^+\pi^-)$ mass model}
-\subsubsection{Resonant backgrounds}
+\label{systMassModel}
+Not all the PDF parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}. 
+These parameters are fixed to values taken from simulated events. 
+In order to account for systematic uncertainties due to these fixed parameters, the mass fit is repeated 1000 times. In each fit
+to the data the values of those fixed parameters are taken from a Gaussian distribution. The mean and width of the gaussian are
+taken from a mass fit to the simulated data (this last fit is the one that those fixed parameters were estimated in the first palce.)
+Correlations among those parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass fits
+a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one gausian like distribution
+for each of the angular parameters of interest. The one standard deviation interval of this distribution is assigned as a systematic to that paramter.
+
+In addition, another systematic to account for event leakage from the $\Bd$ to the $\Bs$ peak is assigned. As mentioned in \secref{Event_Selection}
+$\alpha$ is the parameter cotroling the tails of the mass peak and it is fixed during the mass fit to the data. Complementary to the treatment of 
+the fixed paramters in the above paragraph, the paramter $\alpha$ of the $\Bd$ peak is further scrutinesd. Particularly the mass fit to the data
+is repeated with $\alpha$ set to infinity and $\alpha$ floating. The first case, according to the Hypatia function, implies that any contribution
+to the tails other than resolution is ignored. Those two mass fits yield two more set of \sWeights and two more angular fits. The difference in 
+the value of the fitted angular paramters between those two case is assigned as a systematic.{{red} Confrim this with Simon. ANA note is not clear enough.}
+
+
+\subsubsection{Peaking backgrounds}
+\label{systPeakBkg}
+Peaking backgound estiamtes have an inpact on the mass fit and eventually on the computed set of \sWeights.
+Those estimates are summarized in \tabref{}, where one can see that they come with a statisitcal uncertainty as well.
+To account for tha last uncertainty  the estimates of all peaking backgorund species (\BsJpsiKK, \BsJpsipipi, \BdJpsipipi, and \LbJpsipK)
+are swifted one at a time by 1 standard deviation. The result is a different set of \sWeights for each specie.
+Susequenlty the angular fit is performed with that set of \sWeights. The difference in the angular parameters
+between the last fit and the nominal angular fit is taken as a systematic uncertainty for the particular peaking background specie.
+Individual contributions from all species to a certaina gular paramter are added in quadrature and assigned as a systematic.
+
+
 \subsubsection{Correlations between mass and angles in the \sPlot context}
+\label{systCorrs}
+Correlations between the $\Bs$ invariant mass and the $\cos\thetamu$ angular distribution is taken into account
+by performing the mass fit in 5 bins of $\cos\thetamu$. Since the choice of 5 bins is arbitrary the mass fit is
+repeated in 3 and 6 $\cos\thetamu$ bins as well. The result is two more sets of sWeights. For each set the angular
+fit is performed and the differences in each of the paramters of intereset are added in quadratures. The last quadratic
+sum is assigned as systematic. 
+
 \subsubsection{Fit bias}
+\label{systFitBias}
+Potenntial fit biases of the gitting procedure are addressed in \secref{Toy_Experiments_Study} and the corresponding 
+results are reported in \tabref{toy_study}. The reported biases on the parameters of itnereset are assigned as a systematic uncertainty.
+
 \subsubsection{$C_{SP}$ factors}
+\label{systCSP}
+The choice of \swave and \pwave models affect the values of the \CSP factors, which they finally enter the angular fit via the \spwave 
+interference terms of the angular \pdf, see \secref{Kpi_Invariant_mass}. The choice of those models has a small but measureble impact on the parameters of interest and it was made
+such that the chossen models optimally describe the \mkpi distribution on data. A concervative systematic to the parameters of interest
+is assigned by chosing the worst possible model and repeating the angular fit. The difference in the fitted parameters from the nominal
+angular fit corresponds to the assigned systematic uncertainty.
+
 \subsubsection{Nuisance \CP asymmetries}
+\label{systDetProdAsymm}
+Asymetries induced in the \Bs messon production and from detector imperfections as described in \secref{experimentalAssym},
+directly affect the $\Acp{i}$ parameters of intereset, see \secref{cp_assymetries_and_total_decay_rate}. The estimated production
+and detection asymetries are allowed to float in the final angular fit to the data with a guassian constrain. This way the impact 
+of their uncertainties on the parameters of intereset is built in the likelihood function. Thus no seperate systematic is assigned.
+
 \subsubsection{\dwave contribution}
-\subsubsection{Nuisance \CP asymmetries}
+\label{systCSP}
+Any \dwave contribution to the considered \mkpi window is neglected in the current analysis.
+However, in the offcial \lhcb result\cite{} {\color{red}fix the supid citation entry}of the same analysis \dwave contributions are taken into account.
+Thus the systematic uncertainty qoted there is also assigned to the current analysis. 
+
 \subsubsection{Uncertainties from \fdfs, \BRof\BdJpsiKst, and \BRof\BsJpsiPhi}
-\subsubsection{Uncertainties in the $\kappa$ factors}
+The uncertainties from the external parameters \fdfs, \BRof\BdJpsiKst, and \BRof\BsJpsiPhi are 
+taken as systematic for this analysis. They are added in quadrature to the estimation of 
+\BRof\BsJpsiKst.
+
+\subsubsection{Summary}
+\label{systSummary}
+All the above systematic uncertainties related to the angular parameters are sumarised from \tabref{systematics_acp}
+to \tabref{systematics_swave_phase}. Two sources of systematics are found to be dominant. First the size of the Monte
+Carlo sample used to estimate the normalisation weights of the angular acceptance; the correlation between the $\Bs$ invariant
+mass and the cosine of the helicity angle \thetamu. The total uncertainties on the angular parameters remain largely dominated
+by the statistical uncertainties. Furthermore, the list of systematic uncertainties related to the branching fraction measurement
+is \tabref{tab:syst_normalisation}.\\
+{\color{red} The above needs to be updated after I look into the systematic that I get from the flaoting acceptance (I
+have already ran this I need to look into it). The next tables will be updated later. It super tidieus to do that. 
+And I also felt like talking a lot Gerhahrd.}
 
 \begin{table}[!h]
   \center
-  \caption{\small Best fit values of the parameters of intereset.}
   \begin{tabular}{c c c c c c }
     \hline
                              & $\Acp{0}$  &  $\Acp{\parallel}$ &  $\Acp{\perp}$ & $\Acp{S}$ \\
@@ -174,12 +216,12 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     Total uncertainties                   & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ \\
     \hline
   \end{tabular}
+  \caption{\small Best fit values of the parameters of intereset.}
   \label{systematics_acp}
 \end{table}
 
 \begin{table}[!h]
   \center
-  \caption{\small Best fit values of the parameters of intereset.}
   \begin{tabular}{c c c c c c }
     \hline
                  & $\AmpSq{0}$ & $\AmpSq{\parallel}$ & $\ampPhase{0}$ & $\ampPhase{\parallel}$  \\                          
@@ -195,12 +237,12 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     Total uncertainties                   & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ \\
     \hline
   \end{tabular}
+  \caption{\small Best fit values of the parameters of intereset.}
   \label{systematics_pwave}
 \end{table}
 
 \begin{table}[!h]
   \center
-  \caption{\small Best fit values of the parameters of intereset.}
   \begin{tabular}{c c c c c c }
     \hline
                  & $\fS{1}$ & $\fS{}$ & $\fS{3}$ & $\fS{4}$  \\                          
@@ -216,12 +258,12 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     Total uncertainties                   & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ \\
     \hline
   \end{tabular}
+  \caption{\small Best fit values of the parameters of intereset.}
   \label{systematics_swave_frac}
 \end{table}
 
 \begin{table}[!h]
   \center
-  \caption{\small Best fit values of the parameters of intereset.}
   \begin{tabular}{c c c c c c }
     \hline
                  & $\deltaS{1}$ & $\deltaS{}$ & $\deltaS{3}$ & $\deltaS{4}$  \\                          
@@ -237,11 +279,33 @@ $\polFrac{\parallel}$    &           &           &           &           &      
     Total uncertainties                   & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ & ${}^{+0.666}_{-0.666}$ \\
     \hline
   \end{tabular}
+  \caption{\small Best fit values of the parameters of intereset.}
   \label{systematics_swave_phase}
 \end{table}
 
 
-   
+\begin{table}
+\begin{tabular}{c|cc}
+Source & $\frac{\BRof\BsJpsiKst}{\BRof\BdJpsiKst}$ & $\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi}$ \\
+\hline
+Statistical &0.14 & 0.20\\
+\fdfs & 0.17 & 0 \\
+Efficiency ratio & 0.039 & 0.054 \\
+%Peaking backgrounds effect on the yield & 0.013& 0.019\\
+Peaking backgrounds effect on the yield & 0.018& 0.025\\
+Angular corrections (syst)  & 0.092 & 0.070 \\
+%Mass fit model  & 0.024  & 0.037 \\
+%Fit bias & 0.0033 & 0.0063 \\
+Mass fit model  & 0.057  & 0.078 \\
+Fit bias & 0.0050 & 0.0068 \\
+%\Lambda(1520) & 0.037  & 0.048 \\
+\hline
+Quadratic sum & 0.18 (0.25 w/ \fdfs) & 0.23\\
+%Quadratic sum & 0.20 (0.12 w/ \fdfs) & 0.43\\
+\end{tabular}
+\label{syst_normalisation}
+\caption{Systematic uncertainties for the branching fraction measurements. Numbers are in units of $10^{-2}$.}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood scans}
@@ -461,6 +525,7 @@ interpretation of the probability.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Toy Experiments Study}
+\label{Toy_Experiments_Study}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {\color{red} This is also easy to write text}
@@ -595,3 +660,25 @@ interpretation of the probability.}
 \caption{Pofile likeliood scans of \swave parameters.}
 \end{figure}
 
+\begin{table}
+\begin{tabular}{ccc}
+Source & $\frac{\BRof\BsJpsiKst}{\BRof\BdJpsiKst}$ & $\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi}$ \\
+\hline
+Statistical &0.14 & 0.20\\
+\fdfs & 0.17 & 0 \\
+Efficiency ratio & 0.039 & 0.054 \\
+%Peaking backgrounds effect on the yield & 0.013& 0.019\\
+Peaking backgrounds effect on the yield & 0.018& 0.025\\
+Angular corrections (syst)  & 0.092 & 0.070 \\
+%Mass fit model  & 0.024  & 0.037 \\
+%Fit bias & 0.0033 & 0.0063 \\
+Mass fit model  & 0.057  & 0.078 \\
+Fit bias & 0.0050 & 0.0068 \\
+%\Lambda(1520) & 0.037  & 0.048 \\
+\hline
+Quadratic sum & 0.18 (0.25 w/ \fdfs) & 0.23\\
+%Quadratic sum & 0.20 (0.12 w/ \fdfs) & 0.43\\
+\end{tabular}
+\caption{Toys study summary. Biases etc....}
+\label{toy_study}
+\end{table}

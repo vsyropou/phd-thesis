@@ -565,27 +565,31 @@ the efficiency correction. This is a clear indication of the presence of stronge
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mKpi_raw}
-    \scalebox{0.65}{\input{Figures/Chapter4/mKpi_raw}}
+    \tikzsetnextfilename{eff_corrected_eff_mdau2}
+    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_eff_mdau2}}
     \caption{}
     \label{mkpiPlot_raw}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mKpi_eff}
-    \scalebox{0.65}{\input{Figures/Chapter4/mKpi_eff}}
+    \tikzsetnextfilename{eff_corrected_eff_mdau2}
+    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_eff_mdau2}}
     \caption{}
     \label{mkpiPlot_eff}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    % \tikzsetnextfilename{mJpsi_eff} 
-    %\scalebox{0.65}{\input{Figures/Chapter4/mJpsi_eff}}
-    \caption{\color{red} sWeighted Jpsi mass here soon}
+    \tikzsetnextfilename{eff_corrected_raw_mdau1} 
+    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_raw_mdau1}}
+    \caption{}
     \label{jpsiPlot}
   \end{subfigure}
-\caption{sWeighted plots of \mkpi(top row) and \jpsi (bottom row). In the top right plot the \mkpi distribution
-         is corrected for angular acceptance effects. This is done by weighting each event further with the inverse 
-         of the acceptance function as obtained in \equref{eff_func_final}.}
+\caption{Comparision of the intermediate state particles mass distributions between \Bs and \Bd.
+         The plots are background subtructed (sWeighted). Top row shows the \mkpi distribution before (left)
+         and after (right) correcting for angular acceptance effects. The correction is applyied by weighting
+          each event with the inverse of the acceptance function as obtained in \equref{eff_func_final}.
+         The \Jpsi mass background subtracted distribution is shown at the bottom. It was checked that the 
+         acceptance correction has negligible effects on the shapes of the \Jpsi mass distributions. }
+
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -643,9 +647,6 @@ one gets the production assymetry estimate shown in \equref{prod_assym}.
 \noindent Coming now to the detection assymetry it is computed starting from the \lhcb study of the detection assymetry
 in ~\cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution found there to much the one of the \BsJpsiKst
 decay of the current analysis. The result is shown in \equref{det_assym}. {\color{red} Why do we quote only statistical uncertainty}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood fit and Total Decay Rate}
@@ -756,6 +757,33 @@ algebra and using the well known expression of the poisson distribution results 
 \end{align}
 
 \noindent Note that constant terms in the likelihood do not affect either the shape of the likelihood or the position of the minimum and thus neglected.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c c c c}
+  \hline
+  Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+  \hline
+  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966) $ \\
+%  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
+  \hline
+\end{tabular}
+\caption{Definitions of \mkpi bins. Units are in \mevcc.}
+\label{Kbindef}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c c c c c}
+  \hline
+  Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\	
+  \hline
+  $ [-1.0,-0.6) $ & $ [-0.6,-0.2) $  & $ [-0.2,0.2) $ & $ [0.2,0.6) $ & $ [0.6,1.0) $ \\
+  \hline
+ \end{tabular}
+\caption{Definitions of $\cos\thetamu$ bins. Units are in rad}
+\label{cosThateMubindef} 
+\end{table}
 
 
 \subsubsection{\CP Assymetries as Free Parameters}
