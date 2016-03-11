@@ -360,27 +360,27 @@ interpretation of the probability.}
     \tikzsetnextfilename{nll_ACP0}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ACP0}}
     \caption{}
-    \label{skase}
+    \label{nll_ACP0}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ACPperp}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ACPperp}}
     \caption{}
-    \label{opasd}
+    \label{nll_ACPperp}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ACPpar} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ACPpar}}
     \caption{}
-    \label{opa}
+    \label{nll_ACPpar}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ACPS} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ACPS}}
     \caption{}
-    \label{opa}
+    \label{nll_ACPS}
   \end{subfigure}
 \caption{Pofile likeliood scans of \Acp{} parameters of interest. The black line corresponds to the profile likeliood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric gaussian 
@@ -395,27 +395,27 @@ interpretation of the probability.}
     \tikzsetnextfilename{nll_f0}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_f0}}
     \caption{}
-    \label{skase}
+    \label{nll_f0}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_fpar}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_fpar}}
     \caption{}
-    \label{opasd}
+    \label{nll_fpar}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_AparPhase} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_AparPhase}}
     \caption{}
-    \label{opa}
+    \label{nll_AparPhase}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_AperpPhase} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_AperpPhase}}
     \caption{}
-    \label{opa}
+    \label{nll_AperpPhase}
   \end{subfigure}
 \caption{Pofile likeliood scans of \pwave releated parameters of interest. The black line corresponds to the profile likeliood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric gaussian 
@@ -434,55 +434,61 @@ interpretation of the probability.}
     \tikzsetnextfilename{nll_ASMag2_bin1}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASMag2_bin1}}
     \caption{}
-    \label{skase}
+    \label{nll_ASMag2_bin1}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASPhase_bin1}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin1}}
     \caption{}
-    \label{opasd}
+    \label{nll_ASPhase_bin1}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASMag2_bin2} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASMag2_bin2}}
     \caption{}
-    \label{opa}
+    \label{nll_ASMag2_bin1}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASPhase_bin2} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin2}}
     \caption{}
-    \label{opa}
+    \label{nll_ASPhase_bin3}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASMag2_bin3}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASMag2_bin3}}
     \caption{}
-    \label{skase}
+    \label{nll_ASMag2_bin3}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASPhase_bin3}
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin3}}
     \caption{}
-    \label{opasd}
+    \label{nll_ASPhase_bin3}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASMag2_bin4} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASMag2_bin4}}
     \caption{}
-    \label{opa}
+    \label{nll_ASMag2_bin4}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{nll_ASPhase_bin4} 
     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin4}}
     \caption{}
-    \label{opa}
+    \label{nll_ASPhase_bin4}
   \end{subfigure}
-\caption{Pofile likeliood scans of \swave parameters.}
+\caption{Pofile likeliood scans of \swave releated parameters of interest. The black line corresponds to the profile likeliood
+         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric gaussian 
+         error. There are several intreasting features in those plots. First of all $\fS{1}$ and $\fS{4}$ minima are very broad
+         due to the low number of events in that \mkpi bin. Second the $\fS{2}$ and $\fS{3}$ minima are close to a physical boundary 
+         which has an impact on the corresponding pull distribution of \secref{Toy_Experiments_Study}. Lastly the $\delta{4}$ profile likelihood
+         function seems to be discontinious to the experienced eye between 1.5 and 2. This feature is due to the fact that the corresponding
+         $\fS{4}$ hits its upper value.}
 \end{figure}
 
 %% \clearpage
@@ -509,29 +515,29 @@ interpretation of the probability.}
     \tikzsetnextfilename{pull_ACP0}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ACP0}}
     \caption{}
-    \label{skase}
+    \label{pull_ACP0}
   \end{subfigure}%% %
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ACPperp}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPperp}}
     \caption{}
-    \label{opasd}
+    \label{pull_ACPperp}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ACPpar} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPpar}}
     \caption{}
-    \label{opa}
+    \label{pull_ACPpar}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ACPS} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ACPS}}
     \caption{}
-    \label{opa}
+    \label{pull_ACPS}
   \end{subfigure}
-\caption{Pofile likeliood scans of \Acp parameters.}
+\caption{Pull distributions of the parameters of the \Acp{i} interest. The distributions imply that the corresponding paramters are gaussian distributed.}
 \end{figure}
 
 \clearpage
@@ -542,29 +548,29 @@ interpretation of the probability.}
     \tikzsetnextfilename{pull_f0}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_f0}}
     \caption{}
-    \label{skase}
+    \label{pull_f0}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_fpar}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_fpar}}
     \caption{}
-    \label{opasd}
+    \label{pull_fpar}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_AparPhase} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_AparPhase}}
     \caption{}
-    \label{opa}
+    \label{pull_AparPhase}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_AperpPhase} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_AperpPhase}}
     \caption{}
-    \label{opa}
+    \label{pull_AperpPhase}
   \end{subfigure}
-\caption{Pofile likeliood scans of \pwave parameters.}
+\caption{Pull distributions of the parameters of the \pwave interest. The distributions imply that the corresponding paramters are gaussian distributed.}
 \end{figure}
 
 \clearpage
@@ -575,76 +581,93 @@ interpretation of the probability.}
     \tikzsetnextfilename{pull_ASMag2_bin1}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASMag2_bin1}}
     \caption{}
-    \label{skase}
+    \label{pull_ASMag2_bin1}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASPhase_bin1}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin1}}
     \caption{}
-    \label{opasd}
+    \label{pull_ASPhase_bin1}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASMag2_bin2} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASMag2_bin2}}
     \caption{}
-    \label{opa}
+    \label{pull_ASMag2_bin2}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASPhase_bin2} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin2}}
     \caption{}
-    \label{opa}
+    \label{pull_ASPhase_bin2}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASMag2_bin3}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASMag2_bin3}}
     \caption{}
-    \label{skase}
+    \label{pull_ASMag2_bin2}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASPhase_bin3}
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin3}}
     \caption{}
-    \label{opasd}
+    \label{pull_ASPhase_bin3}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASMag2_bin4} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASMag2_bin4}}
     \caption{}
-    \label{opa}
+    \label{pull_ASMag2_bin4}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{pull_ASPhase_bin4} 
     \scalebox{0.60}{\input{Figures/Chapter4/pull_ASPhase_bin4}}
     \caption{}
-    \label{opa}
+    \label{pull_ASPhase_bin4}
   \end{subfigure}
-\caption{Pofile likeliood scans of \swave parameters.}
+\caption{Pull distributions of the parameters of the \swave interest. The distributions imply that the corresponding paramters are gaussian distributed.
+         The $\fS{3}$ and $\deltaS{3}$ pull distributions apper to have bearier around 2. This is attributed to the physical boundary of the profile 
+         likelihood function of \figref{nll_ASMag2_bin3}.}
 \end{figure}
 
+
+
+
 \begin{table}
-\begin{tabular}{ccc}
-Source & $\frac{\BRof\BsJpsiKst}{\BRof\BdJpsiKst}$ & $\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi}$ \\
-\hline
-Statistical &0.14 & 0.20\\
-\fdfs & 0.17 & 0 \\
-Efficiency ratio & 0.039 & 0.054 \\
-%Peaking backgrounds effect on the yield & 0.013& 0.019\\
-Peaking backgrounds effect on the yield & 0.018& 0.025\\
-Angular corrections (syst)  & 0.092 & 0.070 \\
-%Mass fit model  & 0.024  & 0.037 \\
-%Fit bias & 0.0033 & 0.0063 \\
-Mass fit model  & 0.057  & 0.078 \\
-Fit bias & 0.0050 & 0.0068 \\
-%\Lambda(1520) & 0.037  & 0.048 \\
-\hline
-Quadratic sum & 0.18 (0.25 w/ \fdfs) & 0.23\\
-%Quadratic sum & 0.20 (0.12 w/ \fdfs) & 0.43\\
-\end{tabular}
-\caption{Toys study summary. Biases etc....}
-\label{toy_study}
+  \centering
+  \begin{tabular}{c c c c c }
+    \cline{2-5}
+               & \multicolumn{2}{c}{mean} & \multicolumn{2}{c}{rms} \\
+    \cline{2-5}
+    parameters & fit & pull & fit & pull \\ %\multicolumn{2}{c}{fit/pull} & \multicolumn{2}{c}{fitted,computed} \\
+    \cline{1-5}
+    $\Acp{0}$              & $+0.115$ & $+0.113$ & $0.967$ & $0.963$ \\
+    $\Acp{\perp}$          & $+0.126$ & $+0.126$ & $0.996$ & $0.991$ \\
+    $\Acp{\parallel}$      & $+0.036$ & $+0.036$ & $0.997$ & $0.995$ \\
+    $\Acp{S}$              & $-0.395$ & $-0.395$ & $1.028$ & $1.025$ \\
+    \hline                                                          
+    $\fP{0}$               & $-0.032$ & $-0.031$ & $1.017$ & $1.012$ \\
+    $\fP{\parallel}$       & $-0.015$ & $-0.016$ & $1.029$ & $1.021$ \\
+    $\ampPhase{\perp}$     & $+0.195$ & $+0.196$ & $0.989$ & $0.983$ \\
+    $\ampPhase{\parallel}$ & $+0.002$ & $-0.000$ & $0.984$ & $0.978$ \\
+    \hline                                                          
+    $\fS{1}$               & $-0.127$ & $-0.129$ & $1.117$ & $1.114$ \\  
+    $\fS{2}$               & $-0.170$ & $-0.171$ & $1.110$ & $1.105$ \\
+    $\fS{3}$               & $-0.271$ & $-0.270$ & $0.931$ & $0.925$ \\
+    $\fS{4}$               & $+0.052$ & $+0.053$ & $0.987$ & $0.981$ \\
+    $\deltaS{1}$           & $+0.591$ & $+0.588$ & $1.221$ & $1.215$ \\
+    $\deltaS{2}$           & $-0.171$ & $-0.169$ & $1.136$ & $1.133$ \\   
+    $\deltaS{3}$           & $+0.055$ & $+0.071$ & $0.963$ & $0.979$ \\
+    $\deltaS{4}$           & $+0.193$ & $+0.192$ & $1.028$ & $1.023$ \\   
+    \hline
+  \end{tabular}
+  \caption{Summary of toy study. Mean and rms of each pull distribution is shown for two case.
+           The first labeld as pull implies that the values are computed directly from the distribution,
+           whereas the second labeled as fit coorseponds to the fitted gaussian curve on to of each pull distribution.}
+  \label{pull_table}
 \end{table}
+
