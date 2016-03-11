@@ -3,13 +3,41 @@
 \label{Parameters_of_Interest}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+After seleceting the data as described in \secref{Event_Selection} the angular model of \secref{Angular_Analysis} is fitted to the data.
+The results of this fit are presented in the current section. \tabref{bestFitResult} summarizes the parameters
+of interest best fit values whearas \figref{angular_plot} shows the a plot of the fitted \pdf to the \BsJpsiKst data. The correlation matrix
+can be found in \tabref{correlation_matrix}.
 
-\begin{itemize}
-\item In this section we show the final results of the angualr fit.
-\item Point out tables and coorelation matrix in the appendix
-\item Comment the compatibility with the Bd fit to streangthen the agreement
-\item Maybe show fits to the \BdJpsiKst
-\end{itemize}
+
+\begin{figure}[h]
+\begin{center}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helcosthetaK}
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
+    \caption{}
+    \label{angPlot_ctk}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helcosthetaL}
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
+    \caption{}
+    \label{angPlot_ctl}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{angPlot_helphi} 
+    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helphi}}
+    \caption{}
+    \label{angPlot_phi}
+  \end{subfigure}
+  \caption{Fitted angular pdf projections on top of the \BsJpsiKst sWeighted data. 
+           Black solid: total, blue dashed \pwave even, blue dotted \pwave odd plus \pwave self interference, 
+           green dotted: \swave, red dotted dashed S-P interference. Notice the negative values of the \spwave interverence.
+           Pull distributions are shown as well.}
+  \label{angular_plot}
+\end{center}
+\end{figure}
+
 
 \begin{table}[!h]
   \center
@@ -41,63 +69,36 @@
   \label{bestFitResult}
 \end{table}
 
-\begin{figure}[h]
-\begin{center}
-%  \includegraphics[width=\textwidth]{Figures/Chapter4/canv_Bs_allKaons_3fb_mergeAccPer_allKpiBins_AcpZero_Pw_split}
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{angPlot_helcosthetaK}
-    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
-    \caption{}
-    \label{angPlot_ctk}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{angPlot_helcosthetaL}
-    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
-    \caption{}
-    \label{angPlot_ctl}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{angPlot_helphi} 
-    \scalebox{1.3}{\input{Figures/Chapter4/angPlot_helphi}}
-    \caption{}
-    \label{angPlot_phi}
-  \end{subfigure}
-  \caption{Fitted angular pdf projections on top of the \BsJpsiKst sWeighted data. 
-           Black solid: total, blue dashed \pwave even, blue dotted \pwave odd plus \pwave self interference, 
-           green dotted: \swave, red dotted dashed S-P interference. Notice the negative values of the \spwave interverence.
-           Pull distributions are shown as well.}
-  \label{angular_plot}
-\end{center}
-\end{figure}
+%% \begin{figure}[h]
+%%   \centering
+%%   \begin{subfigure}{0.5\textwidth}
+%%     \tikzsetnextfilename{pW_wave_yields}
+%%     \scalebox{0.60}{\input{Figures/Chapter4/pW_wave_yields}}
+%%     \caption{}
+%%     \label{skase}
+%%   \end{subfigure}%
+%%   \hfill%
+%%   \begin{subfigure}{0.5\textwidth}
+%%     \tikzsetnextfilename{sW_wave_yields}
+%%     \scalebox{0.60}{\input{Figures/Chapter4/sW_wave_yields}}
+%%     \caption{}
+%%     \label{opasd}
+%%   \end{subfigure}
+%%   \begin{subfigure}{0.5\textwidth}
+%%     \tikzsetnextfilename{phasesoffset_} 
+%%     \scalebox{0.60}{\input{Figures/Chapter4/phasesoffset_}}
+%%     \caption{}
+%%     \label{opa}
+%%   \end{subfigure}%
+%% \caption{\pwave and \swave trends of \BsJpsiKst \BdJpsiKst fractions and phases}
+%% \end{figure}
 
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{pW_wave_yields}
-    \scalebox{0.60}{\input{Figures/Chapter4/pW_wave_yields}}
-    \caption{}
-    \label{skase}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{sW_wave_yields}
-    \scalebox{0.60}{\input{Figures/Chapter4/sW_wave_yields}}
-    \caption{}
-    \label{opasd}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{phasesoffset_} 
-    \scalebox{0.60}{\input{Figures/Chapter4/phasesoffset_}}
-    \caption{}
-    \label{opa}
-  \end{subfigure}%
-\caption{\pwave and \swave trends of \BsJpsiKst \BdJpsiKst fractions and phases}
-\end{figure}
+
+\begin{itemize}
+\item {\color{red} Maybe show fits to the \BdJpsiKst}
+\end{itemize}
 
 \clearpage
-
-
 \clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -197,7 +198,7 @@ by the statistical uncertainties. Furthermore, the list of systematic uncertaint
 is \tabref{tab:syst_normalisation}.\\
 {\color{red} The above needs to be updated after I look into the systematic that I get from the flaoting acceptance (I
 have already ran this I need to look into it). The next tables will be updated later. It super tidieus to do that. 
-And I also felt like talking a lot Gerhahrd.}
+And I also felt like talking a lot.}
 
 \begin{table}[!h]
   \center
@@ -486,50 +487,15 @@ interpretation of the probability.}
 
 %% \clearpage
 
-%% \begin{figure}[h]
-%%   \centering
-%%   \begin{subfigure}{0.5\textwidth}
-%%     \tikzsetnextfilename{nll_ASPhase_bin1}
-%%     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin1}}
-%%     \caption{}
-%%     \label{skase}
-%%   \end{subfigure}%
-%%   \hfill%
-%%   \begin{subfigure}{0.5\textwidth}
-%%     \tikzsetnextfilename{nll_ASPhase_bin2}
-%%     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin2}}
-%%     \caption{}
-%%     \label{opasd}
-%%   \end{subfigure}
-%%   \begin{subfigure}{0.5\textwidth}
-%%     \tikzsetnextfilename{nll_ASPhase_bin3} 
-%%     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin3}}
-%%     \caption{}
-%%     \label{opa}
-%%   \end{subfigure}%
-%%   \hfill%
-%%   \begin{subfigure}{0.5\textwidth}
-%%     \tikzsetnextfilename{nll_ASPhase_bin4} 
-%%     \scalebox{0.60}{\input{Figures/Chapter4/nll_ASPhase_bin4}}
-%%     \caption{}
-%%     \label{opa}
-%%   \end{subfigure}
-%% \caption{Pofile likeliood scans.}
-%% \end{figure}
-
-
-\begin{itemize}
-\item {\color{red} Maybe show Bd likelihood scans and comare how steaper the likelihood scans are.}
-\item Comment double minima on the captions plots.
-\end{itemize}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Toy Experiments Study}
 \label{Toy_Experiments_Study}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\color{red} This is also easy to write text}
+
 \begin{itemize}
+\item Make sure first that you understand the generation of toys a bit better
+\item Or fix the fs3 first a bit.
 \item Toys are generated to check potential fit biases.
 \item Say what is a pul
 \item Pull distributions should follow a gaussian distribution with zero mean and sigma one.

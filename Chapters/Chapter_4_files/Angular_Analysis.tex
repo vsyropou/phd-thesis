@@ -238,7 +238,7 @@ same steps selection as the real data) as shown in \equref{eff_moms_calc}.
 \end{center}
 
 \noindent Combining \equref{eff_moms_def} and \equref{eff_moms_calc} the final expresion for computing the efficiency moments is shown
-in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_calc_final}  
+in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_table}/  
 
 \begin{center}
 \begin{equation}
@@ -249,14 +249,7 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 
 \begin{table}[h]
   \centering 
-  \caption{ Efficiency moments of \BsJpsiKst. The bigger the value of a moment the more the coresponding function contributes to the overal efficiency function.
-            The efficiency functions corresponding to the moments $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$ account for most of the hard acceptance drop in the 
-            $\cos\thetaK$ projection. The acceptance in the $\cos\thetamu$ projection is much softer compared to the one $\cos\thetaK$. This can be deduced from
-            \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$.
-            The value of the $\moment{0}{0}{0}$ is constrianed for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$. Details on
-            the constrian are explained in the current subsection.}
   \renewcommand{\arraystretch}{1.2}
-  \label{eff_moms_table}
   \begin{tabular}{ccc}
     \hline
     moment & central value & standard deviation \\
@@ -276,6 +269,14 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
   $\moment{2}{2}{2}$   & -0.0674  &  0.0117  \\
   \hline
   \end{tabular}
+  \caption{ Efficiency moments of \BsJpsiKst. The bigger the value of a moment the more the coresponding function contributes to the overal efficiency function.
+            The efficiency functions corresponding to the moments $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$ account for most of the hard acceptance drop in the 
+            $\cos\thetaK$ projection. The acceptance in the $\cos\thetamu$ projection is much softer compared to the one $\cos\thetaK$. This can be deduced from
+            \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$.
+            The value of the $\moment{0}{0}{0}$ is constrianed for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$. Details on
+            the constrian are explained in the current subsection. The efficiency momemtns are correlated the corresponding correlation matrix can be found 
+            in \tabref{eff_moms_corr}}
+   \label{eff_moms_table}
 \end{table}   
 
 
@@ -421,7 +422,6 @@ Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final
     \label{eff2D}
 \end{figure}
 
-
 \subsubsection{Alternative parameterization}
 As it was mentioned before there is at least one more way to parametrize the angular acceptance, namely the \emph{normalization weights}.
 The main difference between this aproach and the method adopted in this analysis is that essentially the normalization weights use the angular functions
@@ -477,14 +477,39 @@ of interest converge. The full procedure by steps can be summarized as:
 \item Go back to step 4 and repeat until change in the parameters of intereset are negligible ($<0.01\sigma$).
 \end{enumerate} 
 
-The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}. 
-At least 5 iterations are necessary to achieve convergence. Detailed evolution of the efficiency moments and the physics result after each iteration
-can be found in \appref{}. In \tabref{} and \figref{} it can also be seen that the effect of the acceptance correction is small. {\color{red}Those tables
-and plots will be added after I re-run the acceptance. They ofer little information for the effort they require to make }
+\begin{table}[!h]
+\centering
+\footnotesize
+\begin{tabular}{ c c c c c c c c c }
+  \hline
+  Iteration          &       1       &       2       &       3       &       4       &       5       &       6 \\  
+  \hline
+  $\Acp{0}$                           &  -0.0   &  -0.03  &  +0.03  &  +0.0   &  -0.0   &  -0.0    \\  
+  $\Acp{\text{S}}$                    &  -0.01  &  -0.17  &  +0.09  &  +0.06  &  +0.03  &  +0.01   \\  
+  $\Acp{\parallel}$                   &  +0.13  &  +0.04  &  -0.09  &  -0.04  &  -0.02  &  -0.01   \\  
+  $\Acp{\perp}$                       &  -0.19  &  +0.15  &  +0.02  &  +0.01  &  +0.0   &  +0.0    \\  
+  $\polFrac{0}$                       &  -1.15  &  +0.96  &  +0.19  &  +0.0   &  -0.02  &  -0.01   \\  
+  $\polFrac{\parallel}$               &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01   \\  
+  $\ampPhase{\parallel}-\ampPhase{0}$ &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.0    \\  
+  $\ampPhase{\perp}-\ampPhase{0}$     &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01   \\  
+  $\fS{1}$                            &  +0.86  &  -0.66  &  -0.32  &  -0.12  &  -0.05  &  -0.02   \\  
+  $\fS{2}$                            &  +0.84  &  -0.27  &  -0.18  &  -0.09  &  -0.05  &  -0.02   \\  
+  $\fS{3}$                            &  +0.0   &  -0.02  &  -0.0   &  +0.01  &  +0.02  &  +0.01   \\  
+  $\fS{4}$                            &  +0.47  &  -0.21  &  -0.14  &  -0.06  &  -0.04  &  -0.02   \\  
+  $\deltaS{1}$                        &  -2.08  &  +0.9   &  +0.66  &  +0.32  &  +0.13  &  +0.04   \\  
+  $\deltaS{2}$                        &  +0.13  &  -0.05  &  -0.02  &  -0.03  &  -0.01  &  -0.01   \\  
+  $\deltaS{3}$                        &  -0.9   &  +0.48  &  +0.19  &  +0.08  &  +0.04  &  +0.03   \\  
+  $\deltaS{4}$                        &  -2.43  &  +1.1   &  +0.53  &  +0.24  &  +0.13  &  +0.07   \\  
+  \hline
+\end{tabular}
+\caption{Parameters of intereset central values differences after each iteration. The differences are mesured in units of one
+         standard diviation. Larger changes are observed in the first two iterations. Subsquently the differences get progresivelly
+         smaller, which implies that the parameters of interest converge.}
+\label{pars_convergence}
+\end{table}
 
 \begin{table}[!h]
   \center
-  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
   \begin{tabular}{c c c}
     \hline
      variables & range & $\# \text{bins}$ \\
@@ -492,16 +517,18 @@ and plots will be added after I re-run the acceptance. They ofer little informat
     \hline
     $p_{K^{\pm}}$    &  $[0,140]    \;  \text{GeV}/\text{c}^2$  & 10      \\ 
     $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\ 
-   % $p(\Bs)$    &  $[x,y]   \;  \text{MeV}/\text{c}^2$  & 200      \\
-   % \mkpi       &  $[x,y] \; \text{MeV}/\text{c}$    & 100      \\
     \hline
   \end{tabular}
+  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
   \label{angAccBinning}
 \end{table}
 
+The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}. 
+At least 6 iterations are necessary to achieve convergence. Detailed evolution of the paramters of itnerest after each iteration are shown in
+\tabref{pars_convergence}. From the same table it can be deduced that the overall effect of the acceptance corrections is small. The central
+values of the parameters of itnereset does not change a lot. Also the acceptance is floated in the angular fit to the data in order to assign
+a systematic ucertainty, see \secref{systAngAcc}. The last two facts makes, in hindshight, the acceptance correction procedure not necessary. 
 
-\subsubsection{Validation of the iterative procedure}
-{\color{red} The code for that is half implemented.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\Kpi Invariant mass}
@@ -677,27 +704,12 @@ There is a relative minus sign difference in the imaginary terms originating fro
 \BsJpsiKst. As it was explained in \secref{TheBsJpsiKstDecay} those decays are flavour specific which means that a \Bs messon
 has always a negative kaons in the final state particles. The situations is inverted in the case of a \Bsb messon.
 Thus the data can easily be split into two parts based on the sign of one of the hadrons\footnote{In the current analysis the sign
-of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }. Furthermore
-the angular acceptance as described in \secref{Accceptance} is calculated seperatelly for the \BsJpsiKst and \BsbarJpsiKst samples.
-This is done purelly to simplify the computation of the efficiency moments as one avoids averaging the decay amplitudes over those
-the \BsJpsiKst, \BsbarJpsiKst categories. The last averaging is something that is done in the fit to the data and is covered in 
-the subsecuent part of the curent subsection.
-
-The next category that the data are split to was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence. 
-There are four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
-are parameters of interest that are different in each \mkpi bin. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
-Ina ddition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
-\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split in the \mkpi category since it was
-found to be slightly different in each \mkpi bin.
-
-{ \color{red} If necesssary mention the split in run periods for varius checks that has been done else avoid overflooding of information.}
-
-The data categories as described in the above paragraphs result an a simultanous fit of 8 categories. 
-All the relevant inputs for each of the categories can be found in the appendix. Particularly the efficiency moments 
-of each \mkpi bin and \kaon sign are shown in  whereas plots of 2D acceptance proections can be found in \figref{}.
-Finally the convergence tables of the iterative precedure can be found in \tabref{}.
-{\color{red} you need: Nominal acceptance tables. Convergence tables of moments. 2D figures of acceptance.
-These are all implemented, need to wait for the final numbers}
+of the \kaon is used to disctinguish betwen the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }.
+Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples is not too 
+bad and could be averaged into one set of efficiency moments. However, the angular acceptance as described in \secref{Accceptance}
+is calculated seperatelly for the those two samples. This is done to avoid involving the $\Acp{i}$ parameters of iterest
+in the efficeicny momennts computation\footnote{The $\Acp{i}$ paramters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes in one paramter,
+more details in \secref{cp_assymetries_and_total_decay_rate}.} and thus significantly simplifing the above computation.
 
 \begin{table}[!h]
 \centering
@@ -711,6 +723,32 @@ These are all implemented, need to wait for the final numbers}
 \caption{\CSP values for each \mkpi bin.}
 \label{csp_vals}
 \end{table}
+
+The next category that the data are split to was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence. 
+There are four \mkpi bins defining four more categories in the data. In addtion and contrary to the above mentioned data category, there 
+are parameters of interest that are different in each \mkpi bin. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
+In addition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted seperatelly for each component \pdf resulting in
+\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split in the \mkpi category since it was
+found to vary significantly different in each \mkpi bin, see \tabref{moms_final_neg} and \tabref{moms_final_pos}. The chosen \mkpi binning
+is shown in \tabref{Kbindef}.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c c c c}
+  \hline
+  Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+  \hline
+  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966) $ \\
+%  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
+  \hline
+\end{tabular}
+\caption{Definitions of \mkpi bins. Units are in \mevcc.}
+\label{Kbindef}
+\end{table}
+
+The data categories as described in the above paragraphs result an a simultanous fit of 8 categories.
+A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_pos}. 
+
 
 Having adressed the simultaneous feature of the fit it is intreasting to have an insight on
 the connection between a \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
@@ -758,32 +796,19 @@ algebra and using the well known expression of the poisson distribution results 
 
 \noindent Note that constant terms in the likelihood do not affect either the shape of the likelihood or the position of the minimum and thus neglected.
 
-\begin{table}[!h]
-\centering
-\begin{tabular}{c c c c}
-  \hline
-  Bin 0 & Bin 1 & Bin 2 & Bin 3\\
-  \hline
-  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966) $ \\
-%  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
-  \hline
-\end{tabular}
-\caption{Definitions of \mkpi bins. Units are in \mevcc.}
-\label{Kbindef}
-\end{table}
 
-\begin{table}[!h]
-\centering
-\begin{tabular}{c c c c c}
-  \hline
-  Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\	
-  \hline
-  $ [-1.0,-0.6) $ & $ [-0.6,-0.2) $  & $ [-0.2,0.2) $ & $ [0.2,0.6) $ & $ [0.6,1.0) $ \\
-  \hline
- \end{tabular}
-\caption{Definitions of $\cos\thetamu$ bins. Units are in rad}
-\label{cosThateMubindef} 
-\end{table}
+%% \begin{table}[!h]
+%% \centering
+%% \begin{tabular}{c c c c c}
+%%   \hline
+%%   Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\	
+%%   \hline
+%%   $ [-1.0,-0.6) $ & $ [-0.6,-0.2) $  & $ [-0.2,0.2) $ & $ [0.2,0.6) $ & $ [0.6,1.0) $ \\
+%%   \hline
+%%  \end{tabular}
+%% \caption{Definitions of $\cos\thetamu$ bins. Units are in rad}
+%% \label{cosThateMubindef} 
+%% \end{table}
 
 
 \subsubsection{\CP Assymetries as Free Parameters}
