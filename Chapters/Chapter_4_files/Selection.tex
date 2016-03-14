@@ -14,9 +14,9 @@ steps after Stripping are described in each of the subsequent subsections.
 The \BsJpsiKst signal yield out of the full 3 \invfb dataset is expected to be low, see \secref{TheBsJpsiKstDecay}. Thus, one would like to
 reject as much background as possible while keeping all the signal. One way to do that would be to tighten the Srtripping selection criteria
 one by one\footnote{also known as {\it cut-based analysis}}. Alternatively a multivariate approach (here after {\it MVA}) is adopted. 
-In that] case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifying variable}. 
+In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifying variable}. 
 The MVA approach tries exploits the correlations between input variables to get the maximum discriminating power out of their combination.
-The calssifing variable ranges from -1 to 1 and classifies each event to be more signal-like (closer to 1) or background-like (closer to -1). 
+The calssifing variable ranges from $-1$ to $+1$. Signal candidates tend to peak closer to $+1$, whereas background candidates closer to -1. 
 
 \begin{figure}[h]
 \begin{center}
@@ -29,15 +29,17 @@ The calssifing variable ranges from -1 to 1 and classifies each event to be more
 
 For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable 
 two sets, one signal-like and one background-like data sets, are needed. This pair of datasets is fed to the MVA algorithm 
-to construct the classifying variable. In that step the MVA algorithm is {\it trainnin} to distinguish between the signal 
+to construct the classifying variable. In that step the MVA algorithm is {\it trainnined} to distinguish between the signal 
 and background input data sets. Next another independent pair of sets is used to asses how successful the training step was, this step is called {\it testing}. 
 For the signal-like samples, \BsJpsiKst Monte-Carlo simulated data (here after simulated data)
 are used. The \Bs mass window for that sample is $\pm 25 \MeVcc$ around the \Bs peak. As for the background-like sample, candidates from the high mass side-band
 with invariant masses between $5401.3\mevcc$ and $5700\mevcc$ are used. Note that the simulated data are treated in the same way as
 the real data do by all the processing steps after the \lone trigger level. A boosted decision tree (here after BDTG) is used as the classifying variable. 
 
-The BDTG shows a good discrimination power over signal and background distributions \figref{BTDG_performance}.
-Once the training and testing steps are complete a cut on the BDTG is applied so that it maximizes the following figure of merit
+The BDTG shows a good discrimination power over signal and background distributions \figref{BTDG_performance}. Note also that the the
+BDTG was checked for posible overtraining. The last is a situation that the BDTG becomes sensitive to statistical fluctuations between
+statistically comaptible distributions, such as the testing and training sampels. The result is worst signal from background seperation.
+Once the training and testing steps are complete a cutoff value on the BDTG is applied so that it maximizes the following figure of merit
 (hear after {\it FoM})~\cite{Yuehong_fom}:
 
 \begin{equation}
@@ -88,7 +90,7 @@ N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times BR \times \varepsilon 
 and ${\mathcal{L}}$ is the luminosity of the data. Finally BR stands for the branching fraction of the particular peaking background. Since simulated data are used
 it is necessary to estimate the effective luminosity of that simulated sample and scale it to the luminosity of the data. After that the number of
 peaking background events from the simulated sample is a valid estimate of the one in real 
-data\footnote{ Assuming  .}.
+data\footnote{Assuming.}.
 
 The second and last step of the peaking background removal is to apply an angular correction factor to account for the fact that 
 simulated events are distributed uniformly in phase 
@@ -208,7 +210,8 @@ N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
 
 \noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category, 
 and the second uncertainties correspond to systematics. The correlations between the \Bd and \Bs yields in each fitting category
-are found to be small (smaller than $4\%$).
+are found to be small (smaller than $4\%$). Note that the mass fitting model has been validated with a procedure similar to the
+one described in \secref{Toy_Experiments_Study}. 
 
 \begin{figure}[h]
 \begin{center}
