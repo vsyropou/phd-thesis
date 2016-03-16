@@ -528,10 +528,10 @@ distributions. The generated data-set is fitted again with the same \pdf and a n
 biases on the parameters of interest are estimated based on the {\it pull} variable of \equref{pull_def}.
 
 \begin{equation}
-P^i = \frac{p^{\rm gen} - p^i}{ \sigma^i },\;\;\left. 
+P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left. 
   \begin{array}{ll}
-    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^{\rm gen} > p^i  \\
-    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^{\rm gen} < p^i 
+    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^i - p^{\rm gen} > 0   \\
+    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^i - p^{\rm gen} < 0 
   \end{array} \right. ,
 \label{pull_def}
 \end{equation}
@@ -650,7 +650,8 @@ The corresponding biases are summarized in \tabref{pull_table}.
     \caption{}
     \label{pull_ASPhase_bin4}
   \end{subfigure}
-\caption{Pull distributions of the parameters of the \swave interest. The distributions imply that the corresponding parameters are Gaussian distributed.}
+\caption{Pull distributions of the parameters of the \swave interest. The distributions imply that the corresponding parameters are Gaussian distributed.
+  {\color{red} Comment on the deltaS3 and fS3 after you accumulate all toys.}}
 \label{pull_swave}
 \end{figure}
 
@@ -662,44 +663,24 @@ The corresponding biases are summarized in \tabref{pull_table}.
     \cline{2-6}
     parameters & fit & pull & fit & pull & bias \\
     \cline{1-6}
-
-$                  \Acp{0}$ & $-0.205$ & $-0.201$ & $0.938$ & $0.937$  & $0.013$ \\
-$              \Acp{\perp}$ & $-0.129$ & $-0.126$ & $0.946$ & $0.943$  & $0.012$ \\
-$          \Acp{\parallel}$ & $-0.016$ & $-0.020$ & $0.990$ & $0.986$  & $0.003$ \\
-$                  \Acp{S}$ & $+0.374$ & $+0.375$ & $0.991$ & $0.986$  & $0.038$ \\
-\hline
-$                   \fP{0}$ & $+0.030$ & $+0.031$ & $0.986$ & $0.984$  & $0.001$ \\
-$           \fP{\parallel}$ & $+0.015$ & $+0.016$ & $1.016$ & $1.010$  & $0.000$ \\
-$         \ampPhase{\perp}$ & $-0.142$ & $-0.145$ & $0.954$ & $0.951$  & $0.016$ \\
-$     \ampPhase{\parallel}$ & $+0.037$ & $+0.041$ & $1.023$ & $1.025$  & $0.007$ \\
-\hline
-$                   \fS{1}$ & $+0.161$ & $+0.162$ & $1.107$ & $1.105$  & $0.013$ \\
-$                   \fS{2}$ & $-0.039$ & $-0.041$ & $1.044$ & $1.041$  & $0.002$ \\
-$                   \fS{3}$ & $+0.193$ & $+0.188$ & $0.920$ & $0.915$  & $0.006$ \\
-$                   \fS{4}$ & $-0.025$ & $-0.026$ & $1.123$ & $1.117$  & $0.003$ \\
-$               \deltaS{1}$ & $-0.394$ & $-0.391$ & $1.010$ & $1.000$  & $0.063$ \\
-$               \deltaS{2}$ & $-0.037$ & $-0.037$ & $1.086$ & $1.079$  & $0.009$ \\
-$               \deltaS{3}$ & $+0.138$ & $+0.135$ & $0.921$ & $0.916$  & $0.024$ \\
-$               \deltaS{4}$ & $-0.090$ & $-0.092$ & $0.975$ & $0.965$  & $0.013$ \\
-    %% $                  \Acp{0}$ & $+0.142$ & $+0.138$ & $0.924$ & $0.921$  & $0.009$ \\    
-    %% $              \Acp{\perp}$ & $+0.112$ & $+0.110$ & $0.955$ & $0.950$  & $0.011$ \\
-    %% $          \Acp{\parallel}$ & $+0.043$ & $+0.048$ & $1.000$ & $0.996$  & $0.008$ \\
-    %% $                  \Acp{S}$ & $-0.356$ & $-0.355$ & $1.001$ & $0.997$  & $0.036$ \\
-    %% \hline                                                                             
-    %% $                   \fP{0}$ & $-0.020$ & $-0.018$ & $1.003$ & $0.999$  & $0.000$ \\
-    %% $           \fP{\parallel}$ & $+0.002$ & $+0.002$ & $1.019$ & $1.014$  & $0.000$ \\
-    %% $         \ampPhase{\perp}$ & $+0.154$ & $+0.159$ & $0.972$ & $0.968$  & $0.018$ \\
-    %% $     \ampPhase{\parallel}$ & $-0.025$ & $-0.027$ & $1.039$ & $1.037$  & $0.004$ \\
-    %% \hline                                                                             
-    %% $                   \fS{1}$ & $-0.162$ & $-0.165$ & $1.110$ & $1.106$  & $0.013$ \\  
-    %% $                   \fS{2}$ & $+0.066$ & $+0.065$ & $1.048$ & $1.044$  & $0.002$ \\
-    %% $                   \fS{3}$ & $+0.012$ & $+0.013$ & $1.156$ & $1.150$  & $0.000$ \\
-    %% $                   \fS{4}$ & $+0.018$ & $+0.019$ & $1.129$ & $1.123$  & $0.002$ \\
-    %% $               \deltaS{1}$ & $+0.405$ & $+0.404$ & $1.019$ & $1.013$  & $0.074$ \\
-    %% $               \deltaS{2}$ & $+0.046$ & $+0.046$ & $1.098$ & $1.090$  & $0.010$ \\   
-    %% $               \deltaS{3}$ & $-0.117$ & $-0.108$ & $0.884$ & $0.882$  & $0.030$ \\
-    %% $               \deltaS{4}$ & $+0.095$ & $+0.096$ & $0.977$ & $0.969$  & $0.015$ \\   
-    %% \hline
+    $                  \Acp{0}$ & $-0.205$ & $-0.201$ & $0.938$ & $0.937$  & $0.013$ \\
+    $              \Acp{\perp}$ & $-0.129$ & $-0.126$ & $0.946$ & $0.943$  & $0.012$ \\
+    $          \Acp{\parallel}$ & $-0.016$ & $-0.020$ & $0.990$ & $0.986$  & $0.003$ \\
+    $                  \Acp{S}$ & $+0.374$ & $+0.375$ & $0.991$ & $0.986$  & $0.038$ \\
+    \hline
+    $                   \fP{0}$ & $+0.030$ & $+0.031$ & $0.986$ & $0.984$  & $0.001$ \\
+    $           \fP{\parallel}$ & $+0.015$ & $+0.016$ & $1.016$ & $1.010$  & $0.000$ \\
+    $         \ampPhase{\perp}$ & $-0.142$ & $-0.145$ & $0.954$ & $0.951$  & $0.016$ \\
+    $     \ampPhase{\parallel}$ & $+0.037$ & $+0.041$ & $1.023$ & $1.025$  & $0.007$ \\
+    \hline
+    $                   \fS{1}$ & $+0.161$ & $+0.162$ & $1.107$ & $1.105$  & $0.013$ \\
+    $                   \fS{2}$ & $-0.039$ & $-0.041$ & $1.044$ & $1.041$  & $0.002$ \\
+    $                   \fS{3}$ & $+0.193$ & $+0.188$ & $0.920$ & $0.915$  & $0.006$ \\
+    $                   \fS{4}$ & $-0.025$ & $-0.026$ & $1.123$ & $1.117$  & $0.003$ \\
+    $               \deltaS{1}$ & $-0.394$ & $-0.391$ & $1.010$ & $1.000$  & $0.063$ \\
+    $               \deltaS{2}$ & $-0.037$ & $-0.037$ & $1.086$ & $1.079$  & $0.009$ \\
+    $               \deltaS{3}$ & $+0.138$ & $+0.135$ & $0.921$ & $0.916$  & $0.024$ \\
+    $               \deltaS{4}$ & $-0.090$ & $-0.092$ & $0.975$ & $0.965$  & $0.013$ \\
   \end{tabular}
   \caption{Summary of toy study. Mean and rms of each pull distribution is shown for two case.
            The first labeled as pull implies that the values are computed directly from the distribution,

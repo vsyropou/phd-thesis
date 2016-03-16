@@ -71,14 +71,17 @@ After applying the BTDG cut there is still some combinatorial background remaini
 further using the \sPlot technique described in \secref{sWeighting_and_mass}. However, there is
 one more crucial step that is necessary to address prior to the \sPlot technique, namely that of the peaking backgrounds.
 Studies of simulated samples show contributions from several specific backgrounds, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
-Those backgrounds are the result of misidentified a final state particle, for example a pion can be confused for a kaon
-by the event building algorithms.  
-The invariant mass distribution of the above mentioned misidentified backgrounds peak near the \BJpsiKpi signal peaks. 
-This behavior makes it almost impossible to apply the next stage of selection described in \secref{sWeighting_and_mass}.
-Thus those specific backgrounds need to be removed. 
-In order to do that, specific simulated events with negative weights are appended to the data sample such that they cancel out the
-contribution of the peaking background events. The current section briefly addresses the treatment of peaking backgrounds 
-with negative weights (this is a two step procedure) as well as the special treatment of the \LbJpsippi peaking background.
+Those backgrounds are the result of misidentifying a final state particle by the event building algorithms, for example a pion can 
+be confused for a kaon. The invariant mass distribution of the above mentioned misidentified backgrounds peak
+near the \BJpsiKpi signal peaks. Furthermore given the low number of expected peaking background events, see \tabref{peaking_bkg_yields},
+their distribution is rather discontinuous with sharp spikes. This type of distributions have to be removed
+before the next selection step described in \secref{sWeighting_and_mass} is applied. The last technique is more effective
+when the distributions involved are broader and continuous. Therefore, specific simulated events with negative weights
+are appended to the data sample such that they cancel out the contribution of the peaking background 
+events\footnote{The term "cancel out" obtains more meaning in the context of the likelihood of each event which is built in
+the next selection step \secref{sWeighting_and_mass} based on a given mass \pdf. }.
+The current section briefly addresses the treatment of peaking backgrounds with negative weights (this is a two step procedure)
+as well as the special treatment of the \LbJpsippi peaking background.
 
 As a first step towards removing the peaking background contribution it is necessary to have an estimate on the expected
 peaking backgrounds yields on data. This is done using simulated data and based on the expression:
@@ -90,14 +93,14 @@ N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times BR \times \varepsilon 
 and ${\mathcal{L}}$ is the luminosity of the data. Finally BR stands for the branching fraction of the particular peaking background. Since simulated data are used
 it is necessary to estimate the effective luminosity of that simulated sample and scale it to the luminosity of the data. After that the number of
 peaking background events from the simulated sample is a valid estimate of the one in real 
-data\footnote{Assuming.}.
+data\footnote{Assuming blah. {\color{red} It will be fixed in the next iteration.}}.
 
 The second and last step of the peaking background removal is to apply an angular correction factor to account for the fact that 
 simulated events are distributed uniformly in phase 
 space\footnote{Phase space generated events use only kinematic variables for the generation
 thus there is no angular dependence. On the other hand real data have intrinsic angular dependence} 
 and hence do not contain the proper polarization amplitudes, mentioned in \secref{TheBsJpsiKstDecay}.
-This can cause the peaking background yield estimations to be inaccurate because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
+This can cause the peaking background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
 in a different way than the actual peaking background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK 
 which has been performed in~\cite{SheldonBdpipi},~\cite{SheldonBspipi},~\cite{SheldonKK} and~\cite{Gao:1701984} respectively provides enough information
 for the amplitude structure of those modes. Therefore the simulated events are weighted with
@@ -111,36 +114,33 @@ the particular amplitude structure of the certain peaking background mode. The c
 The final peaking background yields estimation after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
 
 \begin{table}
-\begin{center}
-%\scriptsize
-\begin{tabular}{c|c}%|c|c|c|c}
-Sample & $\pm70\mevcc$ window \\
-\hline 
-\BdJpsipipi 2011 & $51 \pm 10$ \\
-\BdJpsipipi 2012 & $115\pm 23$ \\  
-\BsJpsipipi 2011 & $9.3\pm 2.1$ \\
-\BsJpsipipi 2012 & $25.0\pm 5.4$\\
-\BsJpsiKK 2011 & $10.1 \pm 2.3$ \\
-\BsJpsiKK 2012 & $19.2 \pm 4.0$ \\ 
-\LbJpsipK 2011 & $36 \pm 17$ \\
-\LbJpsipK 2012 & $90 \pm 43$ \\ 
-%\LbJpsippi 2011 & $13.8 \pm 4.4$ \\
-%\LbJpsippi 2012 & $27.3 \pm 6.9$ \\ 
-\LbJpsippi 2011 & $13.8 \pm 5.3$ \\
-\LbJpsippi 2012 & $27.3 \pm 9.0$ \\
-\hline
-\end{tabular}
-\caption{Approximated expected yields in $\pm 70\mevcc$ $K\pi$ mass window of each background after re-weighting of 
-the phase space (the \LbJpsippi decay is not weighted since no amplitude analysis for that decay is published).}
-\label{peaking_bkg_yields}
-\end{center}
+   \begin{center}
+        \begin{tabular}{c|c}%|c|c|c|c}
+        Sample & $\pm70\mevcc$ window \\
+        \hline 
+        \BdJpsipipi 2011 & $51 \pm 10$ \\
+        \BdJpsipipi 2012 & $115\pm 23$ \\  
+        \BsJpsipipi 2011 & $9.3\pm 2.1$ \\
+        \BsJpsipipi 2012 & $25.0\pm 5.4$\\
+        \BsJpsiKK 2011 & $10.1 \pm 2.3$ \\
+        \BsJpsiKK 2012 & $19.2 \pm 4.0$ \\ 
+        \LbJpsipK 2011 & $36 \pm 17$ \\
+        \LbJpsipK 2012 & $90 \pm 43$ \\ 
+        \LbJpsippi 2011 & $13.8 \pm 5.3$ \\ 
+        \LbJpsippi 2012 & $27.3 \pm 9.0$ \\
+        \hline
+        \end{tabular}
+        \caption{Approximated expected yields in $\pm 70\mevcc$ $K\pi$ mass window of each background after re-weighting of 
+                the phase space (the \LbJpsippi decay is not weighted since no amplitude analysis for that decay is published).}
+        \label{peaking_bkg_yields}
+   \end{center}
 \end{table}
 
 
 As it was previously mentioned, the \LbJpsippi peaking background is treated specially. Instead of following the above
 procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as the
 combinatorial background in the next section. The reasons for this different treatment with respect to other
-peaking backgrounds are two:
+peaking backgrounds are twofold:
 \begin{itemize}
 \item The full amplitude structure of \LbJpsippi decays is not yet known, and thus the weighting of the simulated samples is not possible. 
 \item The peak of the misidentified \LbJpsippi decays in the \Jpsi$K\pi$ mass spectrum is broader than those of the other
@@ -198,9 +198,8 @@ Since these parameters need to be fixed in the mass fit, the latter is performed
 \mkpi invariant mass. In addition, due to correlations between the mass and one of the variables used in the subsequent angular fit 
 (meaning the $\cos\thetamu$ angle), the requirements of the \sPlot technique are not satisfied and thus it cannot be applied. 
 Therefore, each \mkpi invariant mass sub-sample is divided further in intervals of $\cos\thetamu$ where the \sPlot technique
-can be applied.  The results of the mass fit is shown in \tabref{massFitData_cosTmuBin0} to
-to \tabref{massFitData_cosTmuBin4} and the corresponding plot in \figref{mass_plot}. The overall \Bs and \Bd yields are obtained from the sum 
-of yields over the 20 fitting categories, giving
+can be applied.  The mass final mass fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
+
 
 \begin{align}
 N_{\Bd} &= 208656  \pm  462 ^{+ 78	}_{- 76}\\
