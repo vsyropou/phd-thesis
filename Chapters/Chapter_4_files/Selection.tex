@@ -1,5 +1,5 @@
 
-There are effectively four stages of offline event selection taking place after the data has been recorded. 
+There are effectively four stages of offline event selection taking place after the data has been recorded.
 First a set of selection criteria is applied (hereafter {\it Stripping}). Each of those criteria\footnote{also referred to as a {\it cut}}
 requires from a certain observable to satisfy some condition. For example the mass of the mother particle \Bs must be within
 a certain range\footnote{Or another type of cut could be the probability that a final state particle, like the pion, is misidentified
@@ -13,10 +13,10 @@ steps after Stripping are described in each of the subsequent subsections.
 
 The \BsJpsiKst signal yield out of the full 3 \invfb data-set is expected to be low, see \secref{TheBsJpsiKstDecay}. Thus, one would like to
 reject as much background as possible while keeping all the signal. One way to do that would be to tighten the Srtripping selection criteria
-one by one\footnote{also known as {\it cut-based analysis}}. Alternatively a multivariate approach (here after {\it MVA}) is adopted. 
-In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifying variable}. 
+one by one\footnote{also known as {\it cut-based analysis}}. Alternatively a multivariate approach (here after {\it MVA}) is adopted.
+In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifying variable}.
 The MVA approach tries exploits the correlations between input variables to get the maximum discriminating power out of their combination.
-The classifying variable ranges from $-1$ to $+1$. Signal candidates tend to peak closer to $+1$, whereas background candidates closer to -1. 
+The classifying variable ranges from $-1$ to $+1$. Signal candidates tend to peak closer to $+1$, whereas background candidates closer to -1.
 
 \begin{figure}[h]
 \begin{center}
@@ -27,14 +27,14 @@ The classifying variable ranges from $-1$ to $+1$. Signal candidates tend to pea
 \end{center}
 \end{figure}
 
-For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable 
-two sets, one signal-like and one background-like data sets, are needed. This pair of data-sets is fed to the MVA algorithm 
-to construct the classifying variable. In that step the MVA algorithm is {\it trained} to distinguish between the signal 
-and background input data sets. Next another independent pair of sets is used to asses how successful the training step was, this step is called {\it testing}. 
+For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable
+two sets, one signal-like and one background-like data sets, are needed. This pair of data-sets is fed to the MVA algorithm
+to construct the classifying variable. In that step the MVA algorithm is {\it trained} to distinguish between the signal
+and background input data sets. Next another independent pair of sets is used to asses how successful the training step was, this step is called {\it testing}.
 For the signal-like samples, \BsJpsiKst Monte-Carlo simulated data (here after simulated data)
 are used. The \Bs mass window for that sample is $\pm 25 \MeVcc$ around the \Bs peak. As for the background-like sample, candidates from the high mass side-band
 with invariant masses between $5401.3\mevcc$ and $5700\mevcc$ are used. Note that the simulated data are treated in the same way as
-the real data do by all the processing steps after the \lone trigger level. A boosted decision tree (here after BDTG) is used as the classifying variable. 
+the real data do by all the processing steps after the \lone trigger level. A boosted decision tree (here after BDTG) is used as the classifying variable.
 
 The BDTG shows a good discrimination power over signal and background distributions \figref{BTDG_performance}. Note also that the the
 BDTG was checked for possible over-training. The last is a situation that the BDTG becomes sensitive to statistical fluctuations between
@@ -47,11 +47,11 @@ Once the training and testing steps are complete a cutoff value on the BDTG is a
 F(w_i) = \frac{\left(\sum{w_{i}}\right)^2}{\sum{w_{i}^2}},
 \end{equation}
 
-\noindent where $w_i$ are weights associated to each event (here after \sWeights), and calculated with the \sPlot 
-technique\footnote{The \sPlot technique is a statistical tool to unfold data distributions~\cite{splot}. 
+\noindent where $w_i$ are weights associated to each event (here after \sWeights), and calculated with the \sPlot
+technique\footnote{The \sPlot technique is a statistical tool to unfold data distributions~\cite{splot}.
 For example disentangle signal from background. Further details in \secref{sWeighting_and_mass}. }.
 This FoM can be understood as an effective signal yield, which is inversely proportional to the square root of the total number of events.
-For a range of BDTG values the \sPlot technique provides a different set of \sWeights based on which a different FoM value can be obtained. 
+For a range of BDTG values the \sPlot technique provides a different set of \sWeights based on which a different FoM value can be obtained.
 The optimum BDTG value is chosen as the one that maximizes $F(w_i)$.
 
 \begin{figure}[h]
@@ -71,13 +71,13 @@ After applying the BTDG cut there is still some combinatorial background remaini
 further using the \sPlot technique described in \secref{sWeighting_and_mass}. However, there is
 one more crucial step that is necessary to address prior to the \sPlot technique, namely that of the peaking backgrounds.
 Studies of simulated samples show contributions from several specific backgrounds, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
-Those backgrounds are the result of misidentifying a final state particle by the event building algorithms, for example a pion can 
+Those backgrounds are the result of misidentifying a final state particle by the event building algorithms, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above mentioned misidentified backgrounds peak
 near the \BJpsiKpi signal peaks. Furthermore given the low number of expected peaking background events, see \tabref{peaking_bkg_yields},
 their distribution is rather discontinuous with sharp spikes. This type of distributions have to be removed
 before the next selection step described in \secref{sWeighting_and_mass} is applied. The last technique is more effective
 when the distributions involved are broader and continuous. Therefore, specific simulated events with negative weights
-are appended to the data sample such that they cancel out the contribution of the peaking background 
+are appended to the data sample such that they cancel out the contribution of the peaking background
 events\footnote{The term "cancel out" obtains more meaning in the context of the likelihood of each event which is built in
 the next selection step \secref{sWeighting_and_mass} based on a given mass \pdf. }.
 The current section briefly addresses the treatment of peaking backgrounds with negative weights (this is a two step procedure)
@@ -86,22 +86,22 @@ as well as the special treatment of the \LbJpsippi peaking background.
 As a first step towards removing the peaking background contribution it is necessary to have an estimate on the expected
 peaking backgrounds yields on data. This is done using simulated data and based on the expression:
 \begin{equation}
-N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times BR \times \varepsilon \times {\mathcal{L}}
+N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times BR \times \varepsilon \times {\mathcal{L}},
 \end{equation}
-\noindent Where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
+\noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
 (probability that the $b$ quark forms a meson with another quark type $q$), $\varepsilon$ is the total efficiency (reconstruction, selection and trigger)
 and ${\mathcal{L}}$ is the luminosity of the data. Finally BR stands for the branching fraction of the particular peaking background. Since simulated data are used
 it is necessary to estimate the effective luminosity of that simulated sample and scale it to the luminosity of the data. After that the number of
-peaking background events from the simulated sample is a valid estimate of the one in real 
+peaking background events from the simulated sample is a valid estimate of the one in real
 data\footnote{Assuming blah. {\color{red} It will be fixed in the next iteration.}}.
 
-The second and last step of the peaking background removal is to apply an angular correction factor to account for the fact that 
-simulated events are distributed uniformly in phase 
+The second and last step of the peaking background removal is to apply an angular correction factor to account for the fact that
+simulated events are distributed uniformly in phase
 space\footnote{Phase space generated events use only kinematic variables for the generation
-thus there is no angular dependence. On the other hand real data have intrinsic angular dependence} 
+thus there is no angular dependence. On the other hand real data have intrinsic angular dependence}
 and hence do not contain the proper polarization amplitudes, mentioned in \secref{TheBsJpsiKstDecay}.
 This can cause the peaking background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
-in a different way than the actual peaking background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK 
+in a different way than the actual peaking background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK
 which has been performed in~\cite{SheldonBdpipi},~\cite{SheldonBspipi},~\cite{SheldonKK} and~\cite{Gao:1701984} respectively provides enough information
 for the amplitude structure of those modes. Therefore the simulated events are weighted with
 
@@ -117,20 +117,20 @@ The final peaking background yields estimation after the above mentioned steps i
    \begin{center}
         \begin{tabular}{c|c}%|c|c|c|c}
         Sample & $\pm70\mevcc$ window \\
-        \hline 
+        \hline
         \BdJpsipipi 2011 & $51 \pm 10$ \\
-        \BdJpsipipi 2012 & $115\pm 23$ \\  
+        \BdJpsipipi 2012 & $115\pm 23$ \\
         \BsJpsipipi 2011 & $9.3\pm 2.1$ \\
         \BsJpsipipi 2012 & $25.0\pm 5.4$\\
         \BsJpsiKK 2011 & $10.1 \pm 2.3$ \\
-        \BsJpsiKK 2012 & $19.2 \pm 4.0$ \\ 
+        \BsJpsiKK 2012 & $19.2 \pm 4.0$ \\
         \LbJpsipK 2011 & $36 \pm 17$ \\
-        \LbJpsipK 2012 & $90 \pm 43$ \\ 
-        \LbJpsippi 2011 & $13.8 \pm 5.3$ \\ 
+        \LbJpsipK 2012 & $90 \pm 43$ \\
+        \LbJpsippi 2011 & $13.8 \pm 5.3$ \\
         \LbJpsippi 2012 & $27.3 \pm 9.0$ \\
         \hline
         \end{tabular}
-        \caption{Approximated expected yields in $\pm 70\mevcc$ $K\pi$ mass window of each background after re-weighting of 
+        \caption{Approximated expected yields in $\pm 70\mevcc$ $K\pi$ mass window of each background after re-weighting of
                 the phase space (the \LbJpsippi decay is not weighted since no amplitude analysis for that decay is published).}
         \label{peaking_bkg_yields}
    \end{center}
@@ -142,9 +142,9 @@ procedure, the \LbJpsippi invariant mass line shape is modeled and statistically
 combinatorial background in the next section. The reasons for this different treatment with respect to other
 peaking backgrounds are twofold:
 \begin{itemize}
-\item The full amplitude structure of \LbJpsippi decays is not yet known, and thus the weighting of the simulated samples is not possible. 
+\item The full amplitude structure of \LbJpsippi decays is not yet known, and thus the weighting of the simulated samples is not possible.
 \item The peak of the misidentified \LbJpsippi decays in the \Jpsi$K\pi$ mass spectrum is broader than those of the other
-      peaking backgrounds see \figref{mass_plot}, as a result the \sPlot technique still effective.  
+      peaking backgrounds see \figref{mass_plot}, as a result the \sPlot technique still effective.
 \end{itemize}
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -152,13 +152,13 @@ peaking backgrounds are twofold:
 \label{sWeighting_and_mass}
 
 After successfully appending simulated events with negative weights to remove the peaking background contributions, the data sample is left only with
-\BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background. These four modes (also refereed to as species) are statistically 
-disentangled using the \sPlot technique~\cite{splot}. The technique requires as an input a \pdf that estimates the yield of each 
+\BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background. These four modes (also refereed to as species) are statistically
+disentangled using the \sPlot technique~\cite{splot}. The technique requires as an input a \pdf that estimates the yield of each
 of the above specie. The current analysis uses the \pdf of the $\Jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each specie
-is estimated with an extended maximum likelihood fit to the mass distribution on data, hereafter mass fit. 
+is estimated with an extended maximum likelihood fit to the mass distribution on data, hereafter mass fit.
 
 \subsubsection{The mass \pdf}
-Before discussing to the mass fit description it is useful to briefly describe the \pdfs used for each of the individual species, which are the following:  
+Before discussing to the mass fit description it is useful to briefly describe the \pdfs used for each of the individual species, which are the following:
 
 \begin{itemize}
 \item Combinatorial background: Exponential decay.
@@ -166,37 +166,37 @@ Before discussing to the mass fit description it is useful to briefly describe t
 \item \Bd and \Bs signals: Hypatia distribution~\cite{Santos:2013gra}.
 \end{itemize}
 
-\noindent An exponential decay distribution, $e^{-km}$, is found to be appropriate description of the combinatorial background. It  accounts 
+\noindent An exponential decay distribution, $e^{-km}$, is found to be appropriate description of the combinatorial background. It  accounts
 for events where random combinations of final state particles are combined to a signal candidate. Those kind of events are not expected to
 exhibit any structure in the mass distribution, they simply follow a exponential distribution with a negative slope in the mass spectrum. The slope is
-negative because with increasing mass the frequency of those random combinations drops.  
+negative because with increasing mass the frequency of those random combinations drops.
 
-As for the \LbJpsippi background, the Amoroso distribution was found to provide good description of the data \figref{LbJpsippi_amoroso}. 
+As for the \LbJpsippi background, the Amoroso distribution was found to provide good description of the data \figref{LbJpsippi_amoroso}.
 The parameters of the distribution are obtained from simulated data and then fixed in the mass fit to the data. The first two parameters
-are the mean and width of the distribution, whereas the other two are related to the shape. Amoroso is actually a family of distributions. 
+are the mean and width of the distribution, whereas the other two are related to the shape. Amoroso is actually a family of distributions.
 Depending on the values of the shape parameters the resulting distribution can vary from an exponential to Gaussian like. This is a powerful
-feature that is exploited in order to describe the \LbJpsippi peaking background shape.  
+feature that is exploited in order to describe the \LbJpsippi peaking background shape.
 
 The Hypatia distribution is chosen mainly because it nicely describes the tails of the \Bs and \Bd invariant mass peaks which is
 of crucial importance. These two peaks are sufficiently close,
-see picture \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks 
+see picture \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks
 takes place. Several effects contribute to the structure of the tails apart from mass resolution of the detector. These effects
 can be radiative tails (a charged final state particle radiates a photon), interplay of radiative tail with \Jpsi mass constrain
 or badly reconstructed events caused by decays of the final state hadrons, see~\cite{Santos:2013gra}. The tail parameters ($\alpha$, $n$)
 are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution. The last makes sure that
-the tail parameters do not rely on detector simulation imperfections. 
-For the core of invariant mass distribution, Hypatia uses five shape parameters, namely $\zeta$, $\beta$, $\lambda$, $\sigma$, $\mu$. 
+the tail parameters do not rely on detector simulation imperfections.
+For the core of invariant mass distribution, Hypatia uses five shape parameters, namely $\zeta$, $\beta$, $\lambda$, $\sigma$, $\mu$.
 The first two are set to zero\footnote{$\zeta$ is empirically found to be very small whereas
 $\beta = 0$ implies that the core is symmetric left and right with respect to the mean.}, the third one is taken from the previous
-MC simulated sample along with the tail parameters \footnote{In the limit of $\zeta = 0$ $\lambda$ does not depend on detector 
-effects but only on particle kinematics, the same way as the tail parameters do.} whereas the last two which are the width and 
+MC simulated sample along with the tail parameters \footnote{In the limit of $\zeta = 0$ $\lambda$ does not depend on detector
+effects but only on particle kinematics, the same way as the tail parameters do.} whereas the last two which are the width and
 the mean of the core are allowed to float in the mass fit.
 
 \subsubsection{The mass fit}
-From MC studies, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi invariant mass. 
+From MC studies, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi invariant mass.
 Since these parameters need to be fixed in the mass fit, the latter is performed in bins of the
-\mkpi invariant mass. In addition, due to correlations between the mass and one of the variables used in the subsequent angular fit 
-(meaning the $\cos\thetamu$ angle), the requirements of the \sPlot technique are not satisfied and thus it cannot be applied. 
+\mkpi invariant mass. In addition, due to correlations between the mass and one of the variables used in the subsequent angular fit
+(meaning the $\cos\thetamu$ angle), the requirements of the \sPlot technique are not satisfied and thus it cannot be applied.
 Therefore, each \mkpi invariant mass sub-sample is divided further in intervals of $\cos\thetamu$ where the \sPlot technique
 can be applied.  The mass final mass fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
 
@@ -207,10 +207,10 @@ N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
 \label{signal_yields}
 \end{align}
 
-\noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category, 
+\noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category,
 and the second uncertainties correspond to systematical. The correlations between the \Bd and \Bs yields in each fitting category
 are found to be small (smaller than $4\%$). Note that the mass fitting model has been validated with a procedure similar to the
-one described in \secref{Toy_Experiments_Study}. 
+one described in \secref{Toy_Experiments_Study}.
 
 \begin{figure}[h]
 \begin{center}
@@ -221,21 +221,21 @@ one described in \secref{Toy_Experiments_Study}.
 \end{figure}
 
 \subsubsection{sWeighting}
-Having performed the mass fit all the necessary ingredients to remove the remaining background are in place. 
+Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.
 The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight (also called sWeight), to each event,
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
-\pdf a set of weights can be computed such that they project only that particular specie on the data while eliminating all the others.  
+\pdf a set of weights can be computed such that they project only that particular specie on the data while eliminating all the others.
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
 eliminated while \BJpsiKst events are projected with the above mentioned technique (also referred to as sWeighting).
 
-The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section. Specifically since the resulting 
+The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section. Specifically since the resulting
 \BsJpsiKst weighted events can be described by the signal \pdf, meaning there is no need to model the background shape of the angular distributions.
-Also the fit itself is faster and simpler to implement. On the other hand there are a few 
+Also the fit itself is faster and simpler to implement. On the other hand there are a few
 disadvantages such as the evaluation of some systematic uncertainties on the fitted angular parameters due to the mass \pdf modeling.
 Any variation on those models implies re-computing the \sWeights. Also special care needs to be taken such that the uncertainties
 of the fitted angular parameters are correct \cite{splot}. Particularly The uncertainties tend to be diluted in a fit with weighted
-events. This is because the per event weights in a weighted likelihood fit change the shape of the likelihood function. The last is 
-where the statistical uncertainty estimation comes from. Thus to correct for this dilution the scale factor 
+events. This is because the per event weights in a weighted likelihood fit change the shape of the likelihood function. The last is
+where the statistical uncertainty estimation comes from. Thus to correct for this dilution the scale factor
 
 \begin{equation}
 \alpha = \left(\frac{\sum_{i} w_i}{\sum_{i} w_i^2}\right)^{1/2}
@@ -244,4 +244,3 @@ where the statistical uncertainty estimation comes from. Thus to correct for thi
 
 \noindent has to be applied to each weight before performing the angular fit. The scale factor essentially forces the sum of weights
 to be the same as the number of events.
-
