@@ -171,6 +171,7 @@ cuts applied could also introduce some inefficiency.
   \end{subfigure}
   \caption{Angular acceptance shape from simulated data. Each event in the simulated sample has been weighted with the inverse integral
            of the \pdf that was used to generate them with, resulting to those three distributions that give a feeling of the acceptance shape.}
+  \label{angAcc_all}
 \end{figure}
 
 \subsubsection{Acceptance parametrization}
@@ -526,6 +527,35 @@ At least 6 iterations are necessary to achieve convergence. Detailed evolution o
 \tabref{pars_convergence}. From the same table it can be deduced that the overall effect of the acceptance corrections is small. The central
 values of the parameters of interest does not change a lot. Also the acceptance is floated in the angular fit to the data in order to assign
 a systematic uncertainty, see \secref{systAngAcc}. The last two facts makes, in hindsight, the acceptance correction procedure not necessary.
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{eff_mc_helcosthetaK_allKaons_binall_rew}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_mc_helcosthetaK_allKaons_binall_rew}}
+    \caption{}
+    \label{angAccCor_ctk}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{eff_mc_helcosthetaL_allKaons_binall_rew}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_mc_helcosthetaL_allKaons_binall_rew}}
+    \caption{}
+    \label{angAccCorr_ctl}
+  \end{subfigure}
+  \vspace*{0.02\textwidth}
+  \begin{subfigure}{0.49\textwidth}
+    \tikzsetnextfilename{eff_mc_helphi_allKaons_binall_rew}
+    \scalebox{1.3}{\input{Figures/Chapter4/eff_mc_helphi_allKaons_binall_rew}}
+    \caption{}
+    \label{angAccCorr_phi}
+  \end{subfigure}
+  \caption{Angular acceptance shape from simulated data before(black points) and after(red points) acceptance corrections.
+           Changes due to the last are hardly noticable for two of the decay angles. The $\cos\thetaK$ angle is affected more.
+           Since the $y$-axis scale is aribitrary it is not posible to quantify the amount of change. The plots show cahnges
+           in the acceptance shape only. The plots are made in the same way as in \figref{angAcc_all}.}
+  \label{angAggCorrections}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
