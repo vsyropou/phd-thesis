@@ -9,4 +9,7 @@
 *.blg
 *.out
 *.lot
+*.fdb_latexmk
+*.fls
+*.gz
 *~
