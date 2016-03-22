@@ -1,20 +1,23 @@
 
 The current section addresses the issue of the \BsJpsiKst branching fraction estimation, hearafter $\BRof\BsJpsiKst$,
-which is one of the necessary ingredients towards estimating the penguin contributions to \phis, covenred in \secref{penguins_formalism}.
-Absolute branching fraction measurements are more complecated to perform compared to relative ones. Thus the $\BRof\BsJpsiKst$
-is normalised with respect to the $\BRof\BsJpsiPhi$, which is suitable given the relevant formalism, see \secref{penguins_formalism},
-for the penguin contribution determination.
+which is one of the necessary ingredients for estimating the penguin contributions to \phis, covenred in \secref{penguins_formalism}.
+Absolute branching fraction measurements are more complecated to perform compared to relative ones. The $\BRof\BsJpsiKst$
+is normalised with respect to two diferent chanells, namelly $\BsJpsiPhi$ and $\BdJpsiKst$ and a single average is exctracted.
+
+
+\subsubsection{Normalization with respect to $\BsJpsiPhi$}
+Equation \ref{norm_jpsiPhi} is used to normalise $\BRof\BsJpsiKst$ with respect to $\BRof\BsJpsiPhi$, hereafter $\BRof{\BsJpsiKst}_\phi$.
+It requires as input the observed number of \BsJpsiKst and \BsJpsiPhi events. The first one is taken from \equref{signal_yields} as for
+the later a bit more efford is needed. Particularly the selection steps applied to $\BsJpsiPhi$ (also refered to as reference chanell)
+are chosen such that they are as similar as possible to that of \BsJpsiKst in \tabref{Bs2JpsiKstSelection}.
 
 \begin{align}
 \frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi} = \frac{N_{\BsJpsiKpi}}{N_{\BsJpsiKK}} &\times \frac{\varepsilon_{\BsJpsiPhi}^{MC}}{\varepsilon_{\BsJpsiKst}^{MC}} \times \nonumber \\
-                                                                          &\times \frac{\omega_{\BsJpsiPhi}}{\omega_{\BsJpsiKst}} \times \frac{\BRof{\phi\to\kaon^+\kaon^-}}{\BRof{\Kstar\to\kaon\pion}},
+                                                                          &\times \frac{\omega_{\BsJpsiPhi}}{\omega_{\BsJpsiKst}} \times \frac{\BRof{\phi\to\kaon^+\kaon^-}}{\BRof{\Kstar\to\kaon\pion}}.
 \label{norm_jpsiPhi}
 \end{align}
 
-\noindent The $\BRof\BsJpsiKst$ formula as shown in \equref{norm_jpsiPhi} is detached from the angular analisis. It requires as input the observed number
-of \BsJpsiKst and \BsJpsiPhi events. The first one is taken from \equref{signal_yields} as for the later a bit more efford is needed.
-Particularly the selection steps applied to $\BsJpsiPhi$ (also refered to as reference chanell) are chosen such that they are as
-similar as possible to that of \BsJpsiKst in \tabref{Bs2JpsiKstSelection}. Also the BDTG clasifier is applied to the refference chanell
+\noindent Also the BDTG clasifier is applied to the refference chanell
 with the same cut values as in the \BsJpsiKst chanell. The ratio of observed number of events is represented by the first fraction in \equref{norm_jpsiPhi},
 Whereas the ratio of total efficiencies between the two chanells by the second. The last is corrected for differenceses in efficiencies between real and
 simulated data. Addionally there is a correction factor to account for the presence of \swave in the two
@@ -22,24 +25,52 @@ chanells\footnote{The penguin estiamtion assumes no \swave contributiuon to \BsJ
 to the ratio of two angular \pdfs. One with the \swave parameters set to zero and \pwave to those obtaind in the angular fit,  whereas the other
 with both \pwave and \swave parameters as obtained from the same fit. The $\omega$ factors can be understood as overal \swave fraction which
 corrects the observed number of events.
-}. The branching fractions of the intermediate resonance to the final state di-hadron system are obtained from \cite{PDG}
+}.
+
+\begin{equation}
+\BRof\BsJpsiKst_{\phi} = (4.25 \pm 0.20 \pm 0.13 \pm 0.36) \times 10^{-5},
+\label{Br_JpsiPhi}
+\end{equation}
+
+\noindent The branching fractions of the intermediate resonance to the final state di-hadron system are obtained from \cite{PDG}
 \footnote{ $\BRof{\Kstar\to\kaon\pion} = 2/3$ whereas $\BRof{\phi\to\kaon^+\kaon^-}\simeq 1/2$}.
 The $\BRof\BsJpsiPhi$ \cite{SheldonKK} is updated with the latest hadronization \bquark quark fraction
 ratio\footnote{The quantity \fdfs expresses the ratio of probabilities that a \bquark quark will form a messon with a \dquark quark or an \squark quark}
 \cite{LHCb-CONF-2013-011}. Whereas the efficiency and the angular correction ratios are about $2$ and $0.9$ respectivelly.
+All the above information is used to extract $\BRof{\BsJpsiKst}_\phi$ shown in \equref{Br_JpsiPhi}, where the uncertainties
+are statistical systematic and due to  $\BRof\BsJpsiPhi$ respectivelly.
+
+
+\subsubsection{Normalization with respect to $\BdJpsiKst$}
+Equation \ref{norm_jpsiKst} is used to normalise $\BRof\BsJpsiKst$ with respect to $\BRof\BdJpsiKst$, hereafter $\BRof{\BsJpsiKst}_d$.
 
 \begin{equation}
-\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi} = (4.09 \pm 0.20 ({\rm stat}) )\% .\\
-\label{norm_jpsiPhi_result}
+\frac{\BRof\BsJpsiKst}{\BRof\BdJpsiKst} = \frac{N_{\BsJpsiKpi}}{N_{\BdJpsiKst}} \times \fdfs \times \frac{\varepsilon_{\BdJpsiKst}^{MC}}{\varepsilon_{\BsJpsiKst}^{MC}}
+                                                                          \times \frac{\omega_{\BdJpsiKst}}{\omega_{\BsJpsiKst}},
+\label{norm_jpsiKst}
 \end{equation}
 
-\noindent Using all the above information the right hand side of \equref{norm_jpsiPhi} can be evaluated resulting in
-the branching fractions ratio of \equref{norm_jpsiPhi_result}, or using the value of $\BRof\BsJpsiPhi$
-one gets the absolute $\BRof\BsJpsiKst$, in \equref{Br_JpsiPhi}
+\noindent The last is similar to \equref{norm_jpsiPhi} as far as the way efficiency and angular correaction ratios are obtained.
+The observed number of events are both obtained from \equref{signal_yields} and the latest measurement of the hadronization
+fraction from \cite{LHCb-CONF-2013-011}. The $\BRof\BdJpsiKst$ value is taken from \cite{Abe:2002haa}. The final result for $\BRof{\BsJpsiKst}_d$
+is shown in \equref{Br_JpsiKst}
 
 \begin{equation}
-\label{Br_JpsiPhi}
-\BRof\BsJpsiKst_{\phi} = (4.25 \pm 0.20  \text{(stat)} \pm 0.36 (\BRof\BsJpsiPhi))\times 10^{-5}
+\BRof\BsJpsiKst_{d} = (3.85 \pm 0.18 \pm 0.15 \pm 0.22 \pm 0.42 )\times 10^{-5},
+\label{Br_JpsiKst}
 \end{equation}
 
-\noindent Only statistical errors are shown in the above values. Systematic uncertainties are treated seperatelly in \secref{systemics}
+ \noindent where the first two uncertainties are statistical and systematic and the rest are comming from \fdfs and $\BRof\BdJpsiKst$ respectivelly.
+
+\subsubsection{Total  $\BRof\BsJpsiKst$}
+Both estimates of \equref{Br_JpsiPhi} and \equref{Br_JpsiKst} are compatible within uncorrelated systematics. A weighted average of these two
+estimates is performed where correlations are taken into account. Correlations between $\omega_{\BdJpsiKst}$ and $\omega_{\BsJpsiKst}$ originate from the
+expected number of events estimated with the mass fit in \secref{Event_Selection}. In addition the efficeincy ratios cannot be treated seperatelly
+and they have a common factor, nanmely $\varepsilon_{\BsJpsiKst}^{MC}$. The averaged  $\BRof\BsJpsiKst$ is shoen in \equref{Br_total}
+
+\begin{equation}
+\BRof\BsJpsiKst_{d} = (4.13 \pm 0.16 \pm 0.25 \pm 0.24 \pm 0.42 )\times 10^{-5},
+\label{Br_total}
+\end{equation}
+
+\noindent The last is in agreement with previous measurements \cite{LHCb-PAPER-2015-006}
