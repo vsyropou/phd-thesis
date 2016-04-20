@@ -24,95 +24,31 @@
 %% Standard Model %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Standard Model of Particle Physics}
-
-After a few decades of research in the subatomic scale it has been possible to account for a large number of phenomena
-in nature, based on the existance of only a handfull of particles. Which is impressive given the vast dimmensions that the
-universe spans over. Two distinct categories emerge from the above collection of particles, namelly the {\it gauge
-bossons} responsible for mediating three out of the four know fundamental forces of nature, and quarks plus leptons which are the
-constituents of matter (and antimatter)\footnote{Anitmatter is not as exotic as it sounds. It is a state of matter where the
-signs of all quantum numbers of a particle are fliped.}.The resently discoverd higgs bosson [refff] is a special category by
-itself due to each spacial role of explaining why particles have mass.
-Figure \figref{} illustrates those matter particles and their interactions via the gauge bossons (also known as force cariers).
-The mathematical "language necessary" to describe the expermental data is provided by the \textit{Standard Model} of Particle Physics
-which is a quantum field theory\footnote{Quantum field theories are[ref], roughly speaking, the result of combining Einstein's special theory of
-relativity[reference] and quantum mechanics[ref].}. In this framework particles are described by quantum fields which is a dificult
-to grasp but very usefull way to represent a particle\footnote{For further reading on quantum filed theories [refff]}.
-
-\begin{figure}[h]
-\begin{center}
-  \includegraphics[width=0.5\textwidth]{Figures/Chapter1/Standard_Model_Particles.png}
-  \caption{Standard Model matter particles. Combinations of three and two quarks build hadrons and messons respectivelly.
-           Hadrons are for example protons and neutrons wheares a messon could be the \Bs particle which is relevant for the current thesis.
-           Leptons can be charged (\electron,\mmu,\mtau) and uncharged (\neue,\neum,\neut). The first of the charged ones is the familiar
-           electron that exists in the neucleous of every atom and the rest are heavier "brothers" of it. Netrinos on the other hand
-           do not take part in any known nucleous-like formation they are also massless within the Standard Model making them extremelly (and notoriously)
-           difficult to detect. They live in the least well known "neighborhoud"of the Standard Model. Their presence is indirectly
-           implied in the radioactive decay of atoms and. The gauge bossons \g, g, \Wpm \Z  are responsible for mediating the electromagnetic,
-           strong, and weak interactions between quarcks or leptons repsectivelly. These possible interactions are indicated by the blue
-           lines. Some of the gauge bossons can interact with themselves which is illustrated by the blue closed loop lines.
-           In addition the quarks and the gluon quantum fields have an extra degre of freedom called color. Each quark can have three
-           any of the three color degrees of freadom. Which implies that as far as the strong interaction is concerned the the quarks are
-           actually 9 and not 3. In case of the gluons the color degree of freadom implies that there are eight gluons resulting from
-           the symmetry structure of the strong interaction. Lastly, the vast majority of the observed matter is built from \uquark, \dquark
-           quarks and \electron which makes the explanation of the triplet like structure of quarcks and leptons very enigmatic and difficult
-           to understand from first principles.}
-  \label{sm_particles}
-\end{center}
-\end{figure}
-
-The above mentioned mathematical language is shown its most compact form in \equref{lagrangian}. The last equation is so called lagrangian
-of the Standard Model. Lgrangians are elegant equations that discribe the dynamics of a system. They are used both in classical physical
-systems such as motions of planets and in the quantum world of tiny distances. The first {\it kinnetic}, term of \equref{lagrangian}
-describes the possible interactions between the quarcks or the leptons. The second, {\it Higgs}, term is the one explainng the masses
-of the gauge and higgs bosson. Whereas the last, {\it Yukawa}, attributes masses to the quarks and leptons\footnote{The first two terms
-appear more naturealy in the lagrangian wheras the last one is added by hand, which is perfectly fine.}
-By construction, the Lagrangian obeys the symmetry group $SU(3)_c\otimes SU(2)_L\otimes U(1)_Y$, which depicts the symmetry structure
-of the Strong, Weak and Electromagnetic fields respectively [reference??].
-
-% describe the interactions and couplings between the gauge () and the Higgs
-%  ($\phi$) fields. Those couplings emerge from the symmetry requirements of the Lagrangian and are generated by the covariant derivative $D^\mu$.
-%  The Yukawa part describes the coupling of the Higgs to the fermion fields and it is added by hand,
-%  that describes the interactions of elementary particles [{\color{red} REF??}]. Three out of the four known fundamental
-% interactions are described by it, Electromagnetic, Strong and Weak. The symmetries that particles obey as well as their allowed interactions, are described by an elegant mathematical object,
-% namely the Lagrangian, shown in \equref{lagrangian}.
-
-\begin{equation}
-\mathscr{L}_{SM} = \underbrace{i \bar\psi D^{\mu} \gamma _{\mu} \psi}_{\mathscr{L}_{\text{Kinetic}}} +
-                   % \underbrace{(D^\mu\phi)^{\dagger} (D^\mu\phi) -\mu^2\phi^{\dagger}\phi - \lambda(\phi^{\dagger}\phi)^2}_{\mathscr{L}_{\text{Higgs}}} +
-                   \underbrace{(D^\mu\phi)^{\dagger} (D^\mu\phi) + V(\phi)}_{\mathscr{L}_{\text{Higgs}}} +
-                   \underbrace{Y_{ij}\bar\psi_{Li}\phi\psi_{Rj} \; + \; h.c.}_{\mathscr{L}_{\text{Yukawa}}},
-\label{lagrangian}
-\end{equation}
-
-In \equref{lagrangian} $\psi$ and $\phi$ are the quark or lepton and higgs quantum fields respectivelly. The $\gamma_mu$ is a Dirac matrix
-that takes care of the additional structure of the fields due to their intrinsic spin quantum number. $V(\phi)$ is the potential term of the
-higgs field and it contains its mass. The $L$ and $R$ subscripts denote the left and right handed projections of the quarck or lepton fields.
-$Y_{ij}$ are called Yuakawa cuplings and they are very important for what follows in \secref{}.
-The symbol $D_{mu}$\footnote{$D^\mu=\partial ^\mu + ig_sG_{\alpha}^\mu L_{\alpha} +  igW_b^\mu\sigma_b + ig^\prime B^\mu Y$ \cite{covariant derivative??}}
-introduces the interactions of the gauge bossons quantum fields with the quarks or leptons and it is called covariant derivative.
-
-Within the accuracy of the current experiments the Standard Model has seen its predictions confirmed to a great extend.
-The most recent and perhaps one of the most crucial meaning the discovery of the mechanism that particles acquire mass, makes the Standard
-Model looks quite robust. However there are phenomena and observations that it can not account for. Perhaps the most stricking one is the
-absence of any discription about the most familiar and strong force of nature, meaning gravity\footnote{Gravity is not renormalisable[\cite{}]
-theory and thus cannot be described as a quantum field theory}. or the peculiar value of the cosmological constant leading to dark energy
-interpretations[\cite{}].But even at the heart of the Standard Model there obscure aspects for example the well established fact that neutrinos
-have non zero mass[\cite{}] or the unexplained amount of the observed matter-antimatter assymetry in the universe [\cite{}]. For all of the
-above reasons plus our curiosity driven nature scientists are compled to continue testing the Standard Model and look for deviations of
-its predictions.
-
+\label{The_Standard_Model}
+\input{Chapters/Chapter_1_files//The_Standard_Model}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Flavour Phisics %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Flavour Physics}
+
+\begin{equation}
+  \mathscr{L}_{\text{Yukawa}} = -Y_{ij}^d\bar\psi_{Li}\phi\psi_{Rj} \; + \; h.c.
+\end{equation}
+
+
+
 \begin{itemize}
+  \item Yukawa couplings.
   \item Quark mixing
   \item CKM picture
   \item three generatios anthopic principle.
-  \item The falvour physics puzzle, hits for Np, We need everything.
+  \item The falvour physics observables, puzzle fasi, hits for Np, We need everything.
 \end{itemize}
+Lastly, the vast majority of the observed matter is built from \uquark, \dquark
+    quarks and \electron which makes the explanation of the triplet like structure of quarcks and leptons very enigmatic and difficult
+    to understand from first principles
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The BBbar system%%

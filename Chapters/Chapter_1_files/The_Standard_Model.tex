@@ -1,0 +1,85 @@
+After a few decades of research in the subatomic scale it has been possible to account for a large number of phenomena
+in nature, based on the existance of only a handfull of particles. Which is impressive given the vast dimmensions that the
+universe spans over. Two distinct categories emerge from the above collection of particles, namelly the {\it gauge
+bossons} responsible for mediating three out of the four know fundamental forces of nature, and quarks plus leptons which are the
+constituents of matter
+(and antimatter)\footnote{Anitmatter is not as exotic as it sounds. It is a state of matter where the
+signs of all quantum numbers (like the electric charge) of a particle are fliped.}.
+The resently discoverd higgs bosson [refff] is a special category by itself due to each spacial role of explaining how particles acquire mass.
+Figure \figref{} illustrates those matter particles and their interactions via the gauge bossons (also known as force cariers).
+The mathematical "language" necessary to describe those interactions is spelled out by the \textit{Standard Model} of Particle Physics
+which is a quantum field
+theory\footnote{Quantum field theories are[ref], roughly speaking, the result of combining Einstein's special theory of
+relativity[reference] and quantum mechanics[ref].}.
+In this framework particles are described by quantum fields which is a dificult
+to grasp but very usefull way to represent a
+particle\footnote{For further reading on quantum filed theories [refff]}.
+
+\begin{equation}
+\mathscr{L}_{SM} = \underbrace{i \bar\psi D^{\mu} \gamma _{\mu} \psi}_{\mathscr{L}_{\text{Kinetic}}} +
+                   % \underbrace{(D^\mu\phi)^{\dagger} (D^\mu\phi) -\mu^2\phi^{\dagger}\phi - \lambda(\phi^{\dagger}\phi)^2}_{\mathscr{L}_{\text{Higgs}}} +
+                   \underbrace{(D^\mu\phi)^{\dagger} (D^\mu\phi) + V(\phi)}_{\mathscr{L}_{\text{Higgs}}} +
+                   \underbrace{Y_{ij}\bar\psi_{Li}\phi\psi_{Rj} \; + \; h.c.}_{\mathscr{L}_{\text{Yukawa}}},
+\label{lagrangian}
+\end{equation}
+
+% \footnote{$D^\mu=\partial ^\mu + ig_sG_{\alpha}^\mu L_{\alpha} +  igW_b^\mu\sigma_b + ig^\prime B^\mu Y$ \cite{covariant derivative??}}
+
+The above mentioned mathematical language in its most compact form i shown in \equref{lagrangian}. The last equation is the so called
+{\it lagrangian}\footnote{Lgrangians are elegant equations that discribe the dynamics of a system. They are used both in classical physical
+systems such as motions of planets and in the quantum world of tiny distances.}
+of the Standard Model. The first {\it Kinnetic}, term of \equref{lagrangian} describes the possible interactions between the quarcks or the leptons.
+The second, {\it Higgs}, term is the one that includes the masses of the gauge and higgs bossons. Whereas the last, {\it Yukawa}, attributes
+masses to the quarks and
+leptons\footnote{The {\it Kinnetic} and {\it Higgs} terms appear more naturealy in the lagrangian wheras the last one is added by hand, which is perfectly fine.}
+Quarcks or leptons and the higgs fields are represented by $\psi$ and $\phi$ in \equref{lagrangian} respectivelly. The $\gamma_\mu$ is a Dirac matrix
+that takes care of the additional structure of the fields due to their intrinsic spin. $V(\phi)$ is the potential term of the
+higgs field and it contains its mass. The $L$ and $R$ subscripts denote the left and right handed projections of the quarck or lepton fields.
+$Y_{ij}$ are called Yuakawa cuplings. Their meaning and relevance to the current thesis is shown in \secref{}.
+The symbol $D_\mu$ introduces the interactions of the gauge bossons with the quarks or leptons quantum fields and it is called covariant derivative[ref????].
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{Figures/Chapter1/Standard_Model_Particles.png}
+    \caption{Standard Model matter particles. Combinations of three and two quarks build hadrons and messons respectivelly.
+    Hadrons are for example protons and neutrons wheares a messon could be the \Bs particle which is relevant for the current thesis.
+    Leptons can be charged (\electron,\mmu,\mtau) and uncharged (\neue,\neum,\neut). The first of the charged ones is the familiar
+    electron that exists in the neucleous of every atom and the rest are heavier "brothers" of it. Netrinos on the other hand
+    do not take part in any known nucleous-like formation they are also massless within the Standard Model making them extremelly (and notoriously)
+    difficult to detect. They live in the least well known "neighborhoud"of the Standard Model. Their presence is indirectly
+    implied in the radioactive decay of atoms and. The gauge bossons \g, g, \Wpm \Z  are responsible for mediating the electromagnetic,
+    strong, and weak interactions between quarcks or leptons repsectivelly. These possible interactions are indicated by the blue
+    lines. Some of the gauge bossons can interact with themselves which is illustrated by the blue closed loop lines.}
+    \label{sm_particles}
+  \end{center}
+\end{figure}
+
+The core element that makes \equref{lagrangian} elegant is the so called {\it local gauge invariance}[ref??].
+Briefely speaking this means that \equref{lagrangian} is invariant (or symmetric) under spacetime dependant
+phase\footnote{the quark and lepton quantum fields are complex valued quantities. Thus phase here means complex phase.} transformations of the quark or lepton fields.
+By construction, the Lagrangian obeys the symmetry
+group\footnote{with the mathematical notion of a group implied} $SU(3)_c\otimes SU(2)_L\otimes U(1)_Y$.
+This means that there are three distinct transformations of the $\psi$ fields that \equref{lagrangian} is symetric to.
+Each one introduces the electromagnetic, weak and strong interactions between the fields. The mathematics
+behind the above mentioned transoformations really gives the current paragreaph proper meaning but it would
+be completeley out of context here. Further reading on the symmetries of th Standard Model can be found in [?????????]
+
+% In addition the quarks and the gluon quantum fields have an extra degre of freedom called color. Each quark can have three
+% any of the three color degrees of freadom. Which implies that as far as the strong interaction is concerned the the quarks are
+% actually 9 and not 3. In case of the gluons the color degree of freadom implies that there are eight gluons resulting from
+% the symmetry structure of the strong interaction. Lastly, the vast majority of the observed matter is built from \uquark, \dquark
+% quarks and \electron which makes the explanation of the triplet like structure of quarcks and leptons very enigmatic and difficult
+% to understand from first principles.In addition the quarks and the gluon quantum fields have an extra degre of freedom called color. Each quark can have three
+% any of the three color degrees of freadom. Which implies that as far as the strong interaction is concerned the the quarks are
+% actually 9 and not 3. In case of the gluons the color degree of freadom implies that there are eight gluons resulting from
+% the symmetry structure of the strong interaction.
+
+Within the accuracy of the current experiments the Standard Model has seen its predictions confirmed to a great extend.
+The most recent and perhaps one of the most crucial meaning the discovery of the mechanism that particles acquire mass, makes the Standard
+Model looks quite robust. However there are phenomena and observations that it can not account for. Perhaps the most stricking one is the
+absence of any discription about the most familiar and strong force of nature, meaning gravity\footnote{Gravity is not renormalisable[\cite{}]
+theory and thus cannot be described as a quantum field theory}. or the peculiar value of the cosmological constant leading to dark energy
+interpretations[\cite{}].But even at the heart of the Standard Model there obscure aspects for example the well established fact that neutrinos
+have non zero mass[\cite{}] or the unexplained amount of the observed matter-antimatter assymetry in the universe [\cite{}]. For all of the
+above reasons plus our curiosity driven nature scientists are compled to continue testing the Standard Model and look for deviations of
+its predictions.
