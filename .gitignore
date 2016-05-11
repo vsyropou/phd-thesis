@@ -13,5 +13,6 @@
 *.fls
 *.gz
 *auxlock
-main-blx.bib
 *~
+main-blx.bib
+main.pdf
