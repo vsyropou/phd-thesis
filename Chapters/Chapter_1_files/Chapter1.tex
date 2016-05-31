@@ -32,18 +32,29 @@
 %% Flavour Phisics %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Flavour Physics}
-
+\label{Flavour_Physics}
 As it was mentioned in blah quarks and leptons acquire mass through the Yukawa term.
-An intrasting aspect of the weak interaction, emerges from this term, namelly the quark field mixing.
+An important aspect of the weak interaction, emerges from this term, namelly the quark field mixing.
 The last is the core of the so called {\it Flavour Physics} section of the Standard Model.
 A brief description of the quarck mixing is given in order to better illustrate the goal of Flavour Physics.
 
-As it was mentioned in \secref{The_Standard_Model} quark and lepton fields aquire mass in the yuakawa
-term of the Standard Model lagrangian. The masses are introduced after the so called {\it spontaneus symmetry
-breaking}[ref] which is done by the
-higgs mechanism[ref]\footnote{The higgs mechanism is a situation were the higgs potential in \equref{lagrangian}
+As it was mentioned in \secref{The_Standard_Model} quark fields aquire mass in the yuakawa
+term of the Standard Model lagrangian after the so called {\it spontaneus symmetry breaking}[ref] which is done by the
+higgs mechanism[ref]\footnote{In the higgs mechanism the higgs potential in \equref{lagrangian}
 is chosen such that its lowest value, the so called {\it vacum expectation value}, breaks the symmetry of the lagranian.}.
-After that the quarck fields are expressed in the flavor
+After that step the yakawa
+term\footnote{Ommiting quark higgs field interaction terms.}
+for the quark fields takes the form shown in \equref{yukawa_flavour}.
+
+\begin{equation}
+  % -\mathscr{L}_{\text{Yukawa}} = M_{ij}^d \bar{d^I_{Li}} d^I_{Rj} + M_{ij}^u \bar{u^I_{Li}} u^I_{Rj} + h.c.,
+  -\mathscr{L}_{\text{Yukawa}} = \frac{v}{\sqrt{2}} \left[ y_{ij}^d \bar{d^I_{Li}} d^I_{Rj} + y_{ij}^u \bar{u^I_{Li}} u^I_{Rj} \right] + h.c.,
+  \label{yukawa_flavour}
+\end{equation}
+
+\noindent where $v$ is the higgs vacum expectation value and $y$
+
+After that quark fields are expressed in the flavor
 space\footnote{As explaine din \secref{The_Standard_Model} there are 6 quarck quantum numbers - flavours. The basis
 consisting of quarck flavours is usually called falvour space.}.
 The flavour eigen states of that space are not the same as the mass eigenstates. Thus is order to obtain
