@@ -12,7 +12,11 @@
 *.fdb_latexmk
 *.fls
 *.gz
+*.mp
+*.t1
+*.1
 *auxlock
 *~
+q.tex
 main-blx.bib
 main.pdf
