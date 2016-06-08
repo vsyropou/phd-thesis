@@ -4,6 +4,7 @@ namelly the quark field mixing. A brief description of quark mixing and its rele
 The section concludes with a brief status overview of the {\it flavour physics}, which as it was implied in \secref{The_Standard_Model}
 is the part of Standard Model responsible for up-down quark type transitions.
 
+\subsubsection{Quark Mixing}
 By applying the higgs mechanism to the Standard Model lagrangian the higgs field obtains a
 {\it vacum expectation value}\footnote{This is the lowest value of the higgs field potential.}.
 After this step the Yukawa term for the quark fields is
@@ -47,27 +48,31 @@ interaction. \equref{CClagrangian} shows the last term in both bases.
   \mathscr{L}_{\text{Kinetic}}^{CC} &\propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri} + {\color{red} h.c.??}  \\
                                &\propto \bar{u}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} {\Wp}^\mu \gamma_\mu u_{Ri}^m + {\color{red} h.c.??} \nonumber \\
                                &\propto \bar{u}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wp}^\mu u_{Ri}^m + {\color{red} h.c.??}
-   \label{CClagrangian}
+  \label{CClagrangian}
 \end{align}
 
-\noindent Where, \Wpm are the charged weak boson fields and $\gamma_\mu$ are a Dirac matrices.
-By convension $V_\text{CKM}$ matrix is absorbed in the down type quarks. CKM is the source of CP violation in the SM
+\noindent Where, \Wpm are the charged weak boson fields and $\gamma_\mu$ are Dirac matrices.
+\equref{CClagrangian} summarizes an important aspect of the weak interaction, namelly that the quark flavour eigenstates
+do not coincide with the mass eigenstates and thus quark flavours are mixed when quarks are expressed in the mass eigenstate basis.
+{\it Quark flavour mixing} allows for up-down flavour transitions between the generations, see \figref{QuarkMixing}.
+The probability of these transitions are described by the so called {\it CKM mixing matrix}, shown in \equref{CKMmatrix}.
+
+\subsubsection{CKM mixing matrix}
+The CKM mixing matrix, or simply CKM matrix, is a complex matrix which as already mentioned describes the
+strenght of quark couplings.
+CKM is the source of CP violation in the SM
+\begin{equation}
+  \left|V_{\text{CKM}}\right| = \begin{pmatrix} \Vud & \Vus & \Vub \\ \Vcd & \Vcs & \Vcb \\ \Vtd & \Vts & \Vtb \end{pmatrix}
+      \label{CKMmatrix}
+  \end{equation}
 
 \begin{figure}[h]
+  \centering
   {\sffamily \input{Figures/Chapter1/QuarkMixing.tex}}
-  \caption{Quark mixing, Time from left to right.}
+  \caption{Quark mixing. An up-type quark with specific flavour couples to any of the three, ($d,s,b$), down type quarks.
+           The coupling strength coresponds to an element of the CKM mixing matrix. Time flows from left to right.}
   \label{QuarkMixing}
 \end{figure}
-
-
-
-\noindent The matrix that performs the rotaion of the quarck fiedls from the flavour to the mass eigenstates is the
-well known {\it CKM} matrix shown in \equref{}.
-
-
-\begin{equation}
-      \equiv \begin{pmatrix} \Vud & \Vus & \Vub \\ \Vcd & \Vcs & \Vcb \\ \Vtd & \Vts & \Vtb \end{pmatrix}
-  \end{equation}
 
 
 
