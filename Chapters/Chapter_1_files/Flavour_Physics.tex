@@ -1,70 +1,90 @@
 As it was mentioned in \secref{The_Standard_Model} quarks and leptons acquire mass through the Yukawa term
-of the Standard Model lagrangian. An important aspect of the weak interaction, emerges from this term,
-namelly the quark field mixing. A brief description of quark mixing and its relevance to CP-Violation is given in what follows.
-The section concludes with a brief status overview of the {\it flavour physics}, which as it was implied in \secref{The_Standard_Model}
+of the Standard Model lagrangian. An important aspect of the weak interaction, emerges from the mass acquisition mechanism,
+namelly the quark flavour mixing. A brief description of the last and its relevance to CP-Violation is given in what follows.
+The section concludes with a brief status overview of {\it flavour physics}, which as it was implied in \ref{The_Standard_Model}
 is the part of Standard Model responsible for up-down quark type transitions.
 
-\subsubsection{Quark Mixing}
+\subsubsection{Quark Flavour Mixing}
 By applying the higgs mechanism to the Standard Model lagrangian the higgs field obtains a
-{\it vacum expectation value}\footnote{This is the lowest value of the higgs field potential.}.
-After this step the Yukawa term for the quark fields is
+{\it vacum expectation value}\footnote{This is the lowest value of the higgs field potential.} {\color{red} ref ivo,niels}.
+After this step a part of the Yukawa term for the quark fields is
 shown\footnote{Ignoring quark-higgs field interaction terms} in \equref{yukawa_flavour}.
 
 \begin{align}
   % -\mathscr{L}_{\text{Yukawa}} = M_{ij}^d \bar{d_{Li}} d_{Rj} + M_{ij}^u \bar{u_{Li}} u_{Rj} + h.c.,
-  -\mathscr{L}_{\text{Yukawa}} &= \left[ y_{ij}^d \bar{d}_{Li} d_{Rj} + y_{ij}^u \bar{u}_{Li} u_{Rj} \right] \frac{v}{\sqrt{2}} + h.c. \nonumber \\
-                               &= \left[ m_{ij}^d \bar{d}_{Li} d_{Rj} + m_{ij}^u \bar{u}_{Li} u_{Rj} \right] + h.c.,
-  \label{yukawa_flavour}
+  -\mathscr{L}_{\text{Yukawa}} &= \left[ y_{ij}^d \bar{d}_{Li} d_{Rj} + y_{ij}^u \bar{u}_{Li} u_{Rj} \right] \frac{v}{\sqrt{2}} + h.c. + ... \nonumber \\
+                               &= \left[ m_{ij}^d \bar{d}_{Li} d_{Rj} + m_{ij}^u \bar{u}_{Li} u_{Rj} \right] + h.c. + ..., \\
+                               \text{with} \;\;\; m^{u,d} = \frac{v}{\sqrt{2}} y_{ij}^{u,d} & \nonumber
+                               \label{yukawa_flavour}
 \end{align}
 
-\noindent where $v$ is the higgs vacum expectation value and $y_{ij}^{u,d}$ are free parametres that represent the
-coupling strength between higgs and quark fields. The matrix $\bf m^{u,d}$, which combines the last two contains
-expresees the quark masses. Indices $i,j$ label the three generations. Whereas indices $L,R$ idicate that the Left, Right handed
-projection\footnote{The weak interaction couples only to left handed particvles {\color{red} rephrase... }} of the quark field is used.
+\noindent where $v$ is the higgs vacum expectation value and $y_{ij}^{u,d}$ are called {\it yukawa couplings}.
+The last are free parametres that represent the coupling strength between higgs and quark fields.
+Indices $i,j$ label the three generations. Whereas indices $L,R\;$ idicate the Left, Right handed
+projection\footnote{The weak interaction couples only to left handed particvles {\color{red} rephrase... }} of the quark field.
+Finally the matrix $\bf m^{u,d}$ expresees the desired quark masses.
 
-Quark fields in \equref{yukawa_flavour} have a definite generation number and up or down type, or definite flavour as it
-is commonly termed. However, the mass matrix $\bf m^{u,d}$ is not diagonal which implies that quarks cannot be represented
-in single basis with definite flavour and mass. In order to obtain propper quark masses the last matrix has to be diagonalised,
-as shown in
+Quark fields $y_{ij}^{u,d}$ in \equref{yukawa_flavour} have a definite quantum number that labels the generation to which they belong
+to and also wheather they are of up or down type. This quantum number is commonly called {\it flavour}. Or in other words quark fields
+are flavour eigenstates. By constraction the mass matrix is not diagonal which implies that
+a quark with a well defined flavour does not have a well defined mass. Or in more formal pharasing flavour and mass eigenstates of
+the quark fields do not coincide. In order to obtain propper quark masses the matrix $\bf m^{u,d}$ has to be diagonalised, as shown in \equref{diagM}.
 
 \begin{equation}
   m^{d,u}_{\text diag} = V_L^{d,u} m^{d,u} \left(V_R^{d,u}\right)^{\dagger},
   \label{diagM}
 \end{equation}
 
-\noindent where the matrices $V$ are required to be unitary. Since \equref{yukawa_flavour} has to stay intact after the last
-rotaion, the quark fields need to be rotated, as shown in \equref{quark_rotation} such that they cancell the additional $V$ matrices.
+\noindent where the matrices $V$ are required to be unitary. Since \equref{yukawa_flavour} has to stay intact after $m^{d,u}$ is replaced with
+$m^{d,u}_{\text diag}$, the quark fields need to be rotated, as shown in \equref{quark_rotation} such that they cancell the additional $V$ matrices.
 
 \begin{equation}
   \left( d_{i}^m \right)_{L,R} = \left( V^d_{ij} d_{j} \right)_{L,R}, \;\;\;\; \left( u_{i}^m \right)_{L,R} = \left( V^u_{ij} u_{j} \right)_{L,R}
   \label{quark_rotation}
 \end{equation}
 
-The change of base of \equref{quark_rotation} needs to be applied to the rest of the \equref{lagrangian}. Specifically
+\noindent Since the quark fields are still flavour eigenstetes in the rest of the Standard Model lagrangian,
+the field rotations of \equref{quark_rotation} need to be applied there as well. Specifically
 to the kinetic term involving quark interactions with the charged weak bosons \Wpm, also known as {\it charged current}
-interaction. \equref{CClagrangian} shows the last term in both bases.
+interaction. In \equref{CClagrangian} the charged current interaction is exressed in two ways. One where the quarks
+are flavour and mass eigenstates respectivelly.
 
 \begin{align}
   \mathscr{L}_{\text{Kinetic}}^{CC} &\propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri} + {\color{red} h.c.??}  \\
                                &\propto \bar{u}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} {\Wp}^\mu \gamma_\mu u_{Ri}^m + {\color{red} h.c.??} \nonumber \\
-                               &\propto \bar{u}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wp}^\mu u_{Ri}^m + {\color{red} h.c.??}
+                               % &\propto \bar{u}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wp}^\mu u_{Ri}^m + {\color{red} h.c.??}
   \label{CClagrangian}
 \end{align}
 
 \noindent Where, \Wpm are the charged weak boson fields and $\gamma_\mu$ are Dirac matrices.
-\equref{CClagrangian} summarizes an important aspect of the weak interaction, namelly that the quark flavour eigenstates
-do not coincide with the mass eigenstates and thus quark flavours are mixed when quarks are expressed in the mass eigenstate basis.
-{\it Quark flavour mixing} allows for up-down flavour transitions between the generations, see \figref{QuarkMixing}.
-The probability of these transitions are described by the so called {\it CKM mixing matrix}, shown in \equref{CKMmatrix}.
+The matrix $V^u_LV^{d\dagger}_L$ is the so called {\it CKM mixing matrix}.
+
+The last equation summarizes an important aspect of the weak interaction, namelly that
+quark flavour mixing allows for flavour transitions between the generations,
+despite the fact that the charged weak bosons $\Wpm$ couple only to flavour eigenstates.
+The probability of these transitions are described by the elements of the CKM mixing matrix,
+or simply CKM matrix. Also, from the same equation it is deduced that CP-Violation in the Standard Model is possible
+only if \equref{diagM} is not invariant under complex conjugation. The last turns out to be true
+bacause of the fact that CKM matrix is a complex valued matrix. Thus quark masses and CP-Violation
+have a common origin in the standard model.
 
 \subsubsection{CKM mixing matrix}
-The CKM mixing matrix, or simply CKM matrix, is a complex matrix which as already mentioned describes the
-strenght of quark couplings.
-CKM is the source of CP violation in the SM
+The CKM matrix, is a complex matrix which as already mentioned describes the streanght of quark couplings,
+or the probability of a certain quark transition. The elements of the CKM matrix have been measured [{\color{red} ref pdg}]
+showing an intreasting structure, see \equref{CKMmatrix}. Essentially the structure implies that transitions between generations
+are supresed with respect to transitions in the same generation in a symmetric way. The most suppressed transitions are between
+the first and third generations then between second and third and the lesast suppressed are between first and second.
+
 \begin{equation}
-  \left|V_{\text{CKM}}\right| = \begin{pmatrix} \Vud & \Vus & \Vub \\ \Vcd & \Vcs & \Vcb \\ \Vtd & \Vts & \Vtb \end{pmatrix}
+  |V_{\text{CKM}}| \equiv |V^u_L V^{d\dagger}_L|
+                   = \begin{pmatrix} \VudMag & \VusMag & \VubMag \\ \VcdMag & \VcsMag & \VcbMag \\ \VtdMag & \VtsMag & \VtbMag \end{pmatrix}
+              \simeq \begin{pmatrix} 1 & 0.2 & 0.008 \\ 0.2 & 1 & 0.04 \\ 0.008 & 0.04 & 1 \end{pmatrix}
       \label{CKMmatrix}
   \end{equation}
+
+By construction the CKM matrix has 3 real paramters and one compelx phase\footnote{Due to unitary constraints plus quark field rotations.}
+The choise of the CKM matrix parametrazation is arbitrary. However, due to the observed structure the so called {\it Wolfenstein} parametrization
+is a common choise. see \equref{}.
 
 \begin{figure}[h]
   \centering
@@ -75,9 +95,12 @@ CKM is the source of CP violation in the SM
 \end{figure}
 
 
-
+There is no aprior hierarchy\footnote{neutrinos do not have the same hierarchy.}.
+Regardless of that the CKM matrix inside SM has to be consistent.
 
 \begin{itemize}
-  \item CKM picture
+  \item no aprior hierarchy
+  \item neutrinos do not have similar structure
+  \item consistency test
   \item The falvour physics observables, puzzle fasi, hits for Np, We need everything.
 \end{itemize}
