@@ -10,13 +10,15 @@ By applying the higgs mechanism to the Standard Model lagrangian the higgs field
 After this step a part of the Yukawa term for the quark fields is
 shown\footnote{Ignoring quark-higgs field interaction terms} in \equref{yukawa_flavour}.
 
-\begin{align}
+\begin{subequations}
+\label{yukawa_flavour}
+  \begin{align}
   % -\mathscr{L}_{\text{Yukawa}} = M_{ij}^d \bar{d_{Li}} d_{Rj} + M_{ij}^u \bar{u_{Li}} u_{Rj} + h.c.,
-  -\mathscr{L}_{\text{Yukawa}} &= \left[ y_{ij}^d \bar{d}_{Li} d_{Rj} + y_{ij}^u \bar{u}_{Li} u_{Rj} \right] \frac{v}{\sqrt{2}} + h.c. + ... \nonumber \\
-                               &= \left[ m_{ij}^d \bar{d}_{Li} d_{Rj} + m_{ij}^u \bar{u}_{Li} u_{Rj} \right] + h.c. + ..., \\
+  -\mathscr{L}_{\text{Yukawa}} &= \left[ y_{ij}^d \bar{d}_{Li} d_{Rj} + y_{ij}^u \bar{u}_{Li} u_{Rj} \right] \frac{v}{\sqrt{2}} + h.c. + ...  \\
+                               &= \left[ m_{ij}^d \bar{d}_{Li} d_{Rj} + m_{ij}^u \bar{u}_{Li} u_{Rj} \right] + h.c. + ...,  \\
                                \text{with} \;\;\; m^{u,d} = \frac{v}{\sqrt{2}} y_{ij}^{u,d} & \nonumber
-                               \label{yukawa_flavour}
-\end{align}
+  \end{align}
+\end{subequations}
 
 \noindent where $v$ is the higgs vacum expectation value and $y_{ij}^{u,d}$ are called {\it yukawa couplings}.
 The last are free parametres that represent the coupling strength between higgs and quark fields.
@@ -49,58 +51,84 @@ to the kinetic term involving quark interactions with the charged weak bosons \W
 interaction. In \equref{CClagrangian} the charged current interaction is exressed in two ways. One where the quarks
 are flavour and mass eigenstates respectivelly.
 
-\begin{align}
-  \mathscr{L}_{\text{Kinetic}}^{CC} &\propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri} + {\color{red} h.c.??}  \\
-                               &\propto \bar{u}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m \left( V^u_LV^{d\dagger}_L\right)_{ij} {\Wp}^\mu \gamma_\mu u_{Ri}^m + {\color{red} h.c.??} \nonumber \\
-                               % &\propto \bar{u}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} \gamma_\mu {\Wp}^\mu u_{Ri}^m + {\color{red} h.c.??}
+\begin{subequations}
   \label{CClagrangian}
-\end{align}
+  \begin{align}
+    \mathscr{L}_{\text{Kinetic}}^{CC} & \propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri}  \label{CClagrangianInt} \\
+                                      & \propto \bar{u}_{Li}^m  {V_{\text{CKM}}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} {\Wp}^\mu \gamma_\mu u_{Ri}^m \label{CClagrangianMass}
+  \end{align}
+\end{subequations}
 
 \noindent Where, \Wpm are the charged weak boson fields and $\gamma_\mu$ are Dirac matrices.
-The matrix $V^u_LV^{d\dagger}_L$ is the so called {\it CKM mixing matrix}.
+The matrix $V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L$ is the so called {\it CKM mixing matrix}, shown in \equref{quark_field_rotation}.
 
-The last equation summarizes an important aspect of the weak interaction, namelly that
-quark flavour mixing allows for flavour transitions between the generations,
-despite the fact that the charged weak bosons $\Wpm$ couple only to flavour eigenstates.
-The probability of these transitions are described by the elements of the CKM mixing matrix,
-or simply CKM matrix. Also, from the same equation it is deduced that CP-Violation in the Standard Model is possible
-only if \equref{diagM} is not invariant under complex conjugation. The last turns out to be true
-bacause of the fact that CKM matrix is a complex valued matrix. Thus quark masses and CP-Violation
-have a common origin in the standard model.
+\begin{equation}
+  \begin{pmatrix} \dquark \\ \squark \\ \bquark  \end{pmatrix} =
+  \underbrace{\begin{pmatrix} \Vud & \Vus & \Vub \\ \Vcd & \Vcs & \Vcb \\ \Vtd & \Vts & \Vtb \end{pmatrix}}_{V_{\text{CKM}}}
+    \begin{pmatrix} \dquark^m \\ \squark^m \\ \bquark^m  \end{pmatrix}
+  \label{quark_field_rotation}
+  \end{equation}
+
+The charged current term, \equref{CClagrangian}, incorporates an important aspect of the weak interaction,
+namelly that the quark mass eigenstates are superpositions of the flavour eigenstates. This feauture is called
+quark flavour mixing. By construction the $V_{\text{CKM}}$ rotates only the down type quarks, impling that
+the mass eigenstates of the up-type quarks are identical to the flavour eigenstates. Thus an up type quark
+changes its flavour to any of the down type quarks, see \figref{QuarkMixing}, with a certain probabilty.
+The probability of such a transitions is given by the elements of the CKM mixing matrix, or simply CKM matrix.
+
+\begin{figure}[h]
+  \centering
+  {\sffamily \input{Figures/Chapter1/QuarkMixing.tex}}
+  \caption{Quark flavour mixing. An up-type quark couples to any of the three, ($d,s,b$), down type quarks.
+           Time flows from left to right.}
+  \label{QuarkMixing}
+\end{figure}
+
+\noindent Also, from \equref{CClagrangianMass} it can be deduced[{\color{red} ref niels}] that CP-Violation
+in the Standard Model is possible only if \equref{diagM} is not invariant under complex conjugation.
+The last turns out to be true bacause of the fact that CKM matrix is a complex valued matrix.
+Thus quark masses and CP-Violation have a common origin in the standard model[{\color{red} KM paper}].
 
 \subsubsection{CKM mixing matrix}
 The CKM matrix, is a complex matrix which as already mentioned describes the streanght of quark couplings,
-or the probability of a certain quark transition. The elements of the CKM matrix have been measured [{\color{red} ref pdg}]
+or in other words the probability of a certain quark transition. The elements of the CKM matrix have been measured [{\color{red} ref pdg}]
 showing an intreasting structure, see \equref{CKMmatrix}. Essentially the structure implies that transitions between generations
 are supresed with respect to transitions in the same generation in a symmetric way. The most suppressed transitions are between
-the first and third generations then between second and third and the lesast suppressed are between first and second.
+the first and third generations followed by the ones between the second and third and the least suppressed are between first and second.
 
 \begin{equation}
-  |V_{\text{CKM}}| \equiv |V^u_L V^{d\dagger}_L|
+  |V_{\text{CKM}}|
                    = \begin{pmatrix} \VudMag & \VusMag & \VubMag \\ \VcdMag & \VcsMag & \VcbMag \\ \VtdMag & \VtsMag & \VtbMag \end{pmatrix}
               \simeq \begin{pmatrix} 1 & 0.2 & 0.008 \\ 0.2 & 1 & 0.04 \\ 0.008 & 0.04 & 1 \end{pmatrix}
       \label{CKMmatrix}
   \end{equation}
 
-By construction the CKM matrix has 3 real paramters and one compelx phase\footnote{Due to unitary constraints plus quark field rotations.}
-The choise of the CKM matrix parametrazation is arbitrary. However, due to the observed structure the so called {\it Wolfenstein} parametrization
-is a common choise. see \equref{}.
+As it will soon become apparent testing the consistency of the CKM elements measurments is a central goal of flavour physics.
+In order to achieve such consistency tests it is usefull to define a paramterization of the CKM matrix.
+By construction the CKM matrix has 3 real parameters and one compelx phase\footnote{Due to unitary constraints plus quark field rotations.,{\color{red} clarify}}
+The choise of the CKM matrix parametrazation is arbitrary, but due to the observed structure the so called {\it Wolfenstein}[{\color{red} ref pdg}]
+approximate parametrization is a common choise, see \equref{CKMwolfenstein}.
 
-\begin{figure}[h]
-  \centering
-  {\sffamily \input{Figures/Chapter1/QuarkMixing.tex}}
-  \caption{Quark mixing. An up-type quark with specific flavour couples to any of the three, ($d,s,b$), down type quarks.
-           The coupling strength coresponds to an element of the CKM mixing matrix. Time flows from left to right.}
-  \label{QuarkMixing}
-\end{figure}
+\begin{equation}
+  |V_{\text{CKM}}|
+                   \simeq \begin{pmatrix} \VudWolf & \VusWolf & \VubWolf \\
+                                          \VcdWolf & \VcsWolf & \VcbWolf \\
+                                          \VtdWolf & \VtsWolf & \VtbWolf \end{pmatrix}
+      \label{CKMwolfenstein}
+\end{equation}
+
+\noindent As it was previously mentioned the CKM matrix is a unitary matrix, meaning that $V_{\text{CKM}} V_{\text{CKM}}^\dagger = I_{3x3}$.
+This leads to the so called unitarity and orthogonality relations.
+
+From the orthogonality relations several triangles can be constructed in the rho eta plane
+tha nicely illustrate the
 
 
 There is no aprior hierarchy\footnote{neutrinos do not have the same hierarchy.}.
-Regardless of that the CKM matrix inside SM has to be consistent.
+
 
 \begin{itemize}
-  \item no aprior hierarchy
-  \item neutrinos do not have similar structure
+  \item no aprior hierarchy, neutrinos do not have similar structure
   \item consistency test
   \item The falvour physics observables, puzzle fasi, hits for Np, We need everything.
 \end{itemize}
