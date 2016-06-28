@@ -1,4 +1,4 @@
-The weak phase \phis is an important parameter in the \BBbarSyst. It quantifies the third
+The weak phase \phis is an important parameter of the \BBbarSyst system. It is related to the third
 type of CP-Violation mentioned in \secref{Phenomenology}, nameley in the interference between
 two decay amplitudes, see \figref{interference}. In the current section the parameter \phis
 and its relevance to the search for new particles is introduced. The status of the \phis
@@ -19,58 +19,91 @@ measurements concludes the section.
 \end{figure}
 
 The parameter \phis manifests in the so called $\bquark \rightarrow \cquark\cquarkbar\squark $ transitions, where the
-\bquark of the \Bs meson decays into three other quarks, a $\cquark\cquarkbar$ and an $\squark$, see \figref{b2ccs}.
-In addtion, the final state of the \Bs meson has to be a CP eigenstate, which implies that both \Bs and \Bsb
-can decay into it. The mixing releated phase $\phimixfig$ is governed by the $|\qoverp|$, as shown in \equref{phase_mix}.
-Whereas the phase ascociated with the decay comes from the ratio of two decays, shown in \equref{phase_decay}, {\color{red} give ref to both from pdg}, igonoring on shell part of the hamiltonian.
+\bquark of the \Bs meson decays into three other quarks. In addtion, the final state of the \Bs meson has to be a CP eigenstate,
+which implies that both \Bs and \Bsb can decay into it.
+
+A common parameter that is used to parametrize CP violation in the interference between mixing and decay is shown in \equref{lambda_cpv}.
+
+\begin{equation}
+ \lambda_{f} = \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
+\label{lambda_cpv}
+\end{equation}
+
+\noindent The ratios $|\qoverp|$ and $|\nicefrac{A_f}{\bar{A}_{f}}|$ are ascociated to the mixing and decay parts of \figref{interference} respectivelly.
+Given the so called {\it master equations}{\color{red} ref pdg} for the decay rates of a \Bs and \Bsb
+to a final state $f$, the asymmetry due to the interference between mixing and decay\footnote{assuming $|\qoverp|=1$ and $|\nicefrac{A_f}{\bar{A}_{\bar{f}}}| = 1$ consistet with {\color{red} ref for nocpv in mix and decay}.}
+is shown in \equref{cpv_interf}
+
+\newcommand{\half}{\frac{1}{2}}
+\begin{equation}
+  \Acp{\text{inter}}(t) = \frac{ - \Im(\lambda_f) \sin(\Delta m_s t)} {\cosh(\half \Delta\Gamma_s t) - \Re(\lambda_f)\sinh(\half\Delta\Gamma_s t)}.
+\label{cpv_interf}
+\end{equation}
+
+\noindent It is intreasting to point out that according to \equref{cpv_interf} CP asymmetry can be observed in the interference of decay and mixing
+even if no CP-Violation occurs in both the mixing and the decay. Since the CP asymmetry can vanish at a certain point of time or for a given time
+\equref{cpv_interf} has to remain time dependent.
 
 \begin{figure}[h]
   \centering
   {\sffamily \input{Figures/Chapter1/tree}}
   \caption{{\color{red} Fix this to look more like \figref{QuarkMixing} and put ckm elements on the vertices}}
-  \label{b2ccs}
+  \label{bs2jpsiphi}
 \end{figure}
 
+Given a certain final state $f$ \equref{lambda_cpv} can be expresed as a combination of CKM elements and thus obtain an
+estimate on $\Im(\lambda_f)$ based on the Standard Model. The typical choise for $f$ is the $\jpsi\phi$ for reasons
+explained later in this section. The leading order diagrams for the \BsJpsiPhi decay and the \BBbarSyst mixing are
+shown in \figref{bs2jpsiphi} and \figref{bs_box} repsectivelly. From those diagrams the $\qoverp$ and $\nicefrac{A_f}{\bar{A}_{f}}$
+can be read as shown in \equref{qoverp}\footnote{Here it has been used {\color{red} equation blah from pdg} } and \equref{af_afbar} repsectivelly.
+
 \begin{equation}
- \phimixfig \propto \frac{q}{p} = \sqrt{ \frac{\bra{\Bsb}\ket{\Bs}}{\bra{\Bs}\ket{\Bsb}}} = \frac{\Vtb^*\Vts}{\Vtb\Vts^*}
-\label{phase_mix}
+ \frac{q}{p} = \frac{\Vtb^*\Vts}{\Vtb\Vts^*}
+\label{qoverp}
 \end{equation}
 
 \begin{equation}
- \phifig = \text{arg}\parenthesis{\frac{\bra{f}\ket{\Bs}} {\bra{f}\ket{\Bsb}} } = \text{arg}\parenthesis{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}}
-\label{phase_decay}
+ \frac{\bar{A}_{\jpsi\phi}} {A_{\jpsi\phi}} = \frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}
+\label{af_afbar}
 \end{equation}
 
-\noindent A very common parameter that is used to parametrize CP violation in the interference between mixing and decay is shown in \equref{lambda_cpv}.
+\noindent From \equref{qoverp}, \equref{af_afbar} and \equref{lambda_cpv} the imaginary part of $\lambda_{f}$ is now computed in,
+\equref{phis_def}\footnote{Based on the fact that for a complex number's argument, $\argu{z}$ it is: $\argu{z^{-1}}=\argu{-z}=\argu{z^*}=-\argu{z}$}.
+
+\begin{align}
+ \Im(\lambda_f) =& \sin\parenthesis{ \argu{\frac{\Vtb^*\Vts}{\Vtb\Vts^*}} + \argu{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}} } \nonumber \\
+                =& \sin\parenthesis{ \argu{\parenthesis{\Vtb^*\Vts}^2}    + \argu{\frac{1}{\parenthesis{\Vcb^*\Vcs}^2}} }
+                = \sin\parenthesis{  2 \; \argu{\frac{\Vtb^*\Vts}{\Vcb^*\Vcs}} } \nonumber \\
+                =& \sin\parenthesis{-2\betas}
+                \equiv \sin\parenthesis{\phis}
+ \label{phis_def}
+\end{align}
+
+\noindent An additional implication arises from the choice of the $\jpsi\phi$ as the final state.
+Specifically due to the fact that the last particles have a non zero spin quantum number, their combined wavefunction
+is not a pure cp eigenstate. The eigenvalue($+1$ or $-1$) of the combined wavefunction dependants on the total angular momentum
+$l$ of the $\jpsi$ and $\phi$ particles. This dependancy has to be taken into acount in \equref{phis_def} resulting in \equref{phis_jpsiphi_def}
 
 \begin{equation}
- \lambda_{f} = \frac{q}{p} \frac{\bra{f}\ket{\Bs}} {\bra{f}\ket{\Bsb}} \equiv \frac{||}{}
-\label{lambda_cpv}
+ \Im(\lambda_{\jpsi\phi}) = (-1)^l\sin\parenthesis{\phis}
+ \label{phis_jpsiphi_def}
 \end{equation}
 
-Given the so called {\it master equations}{\color{red} ref pdg} for the decay rates of a \Bs and \Bsb
-to a final state $f$, the asymmetry due to the interference between mixing and decay\footnote{assuming no CP-Violation
-in the \BBbarSyst mixing} is shown in \equref{cpv_interf}
-
-\newcommand{\half}{\frac{1}{2}}
-\begin{equation}
-  \Acp{\text{inter}} = \frac{ - \Im(\lambda_f) \sin(\Delta m_s t)} {\cosh(\half \Delta\Gamma_s t) - \Re(\lambda_f)\sinh(\half\Delta\Gamma_s t)},
-\label{cpv_interf}
-\end{equation}
-
-
-\begin{itemize}
-  \item What is it, cartoon diagrams
-  \item q over p is equal to
-  \item decay part is equal to, feynman diagrams
-  \item Assymnetry is equal to
-  \item NP in \phis, New particles in the box, new vector boson. Mention some types of models.
-\end{itemize}
 
 \subsubsection{Measuring \phis}
 
+The parameter \phis has been measuremed by the \lhcb experiment by analysing the decays of \BsJpsiPhi.
+The
+Pros and cons of the final state
+Flavour taging, angular analysis
+clean phi resonance, high yield, muons and kaons are good for lhcb
+
+
 \begin{itemize}
-  \item Show how do you read phis from the decay time distribution.SHow terms in pdf
-  \item \phis status
-  \item Higher order effects in view of the current results. Connect with penguin analysis.
+  \item \phis measurement status
+  \item Show how do you read phis from the decay time distribution. Show terms in pdf (maybe)
 \end{itemize}
+
+\subsubsection{New Physics effects in \phis}
+All of the above was asuming tree decays only. But there are penguins as well. blhaaaaaaaaaaaaahhhhhhhhhhhhhhh.
+ New particles in the box, new vector boson. Mention some types of models.
