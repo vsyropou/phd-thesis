@@ -47,7 +47,7 @@ even if no CP-Violation occurs in both the mixing and the decay. Since the CP as
 \begin{figure}[h]
   \centering
   {\sffamily \input{Figures/Chapter1/tree}}
-  \caption{{\color{red} Fix this to look more like \figref{QuarkMixing} and put ckm elements on the vertices}}
+  \caption{{\color{red} Fix this to look more like \figref{QuarkMixing} and put ckm elements on the vertices}. Explain tha this is called tree diagram}
   \label{bs2jpsiphi}
 \end{figure}
 
@@ -71,6 +71,7 @@ can be read as shown in \equref{qoverp}\footnote{Here it has been used {\color{r
 \equref{phis_def}\footnote{Based on the fact that for a complex number's argument, $\argu{z}$ it is: $\argu{z^{-1}}=\argu{-z}=\argu{z^*}=-\argu{z}$}.
 
 \begin{align}
+  \centering
  \Im(\lambda_f) =& \sin\parenthesis{ \argu{\frac{\Vtb^*\Vts}{\Vtb\Vts^*}} + \argu{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}} } \nonumber \\
                 =& \sin\parenthesis{ \argu{\parenthesis{\Vtb^*\Vts}^2}    + \argu{\frac{1}{\parenthesis{\Vcb^*\Vcs}^2}} }
                 = \sin\parenthesis{  2 \; \argu{\frac{\Vtb^*\Vts}{\Vcb^*\Vcs}} } \nonumber \\
@@ -90,20 +91,45 @@ $l$ of the $\jpsi$ and $\phi$ particles. This dependancy has to be taken into ac
 \end{equation}
 
 
-\subsubsection{Measuring \phis}
+\subsubsection{Measuring \phis with the \lhcb detector}
+The parameter \phis has been measuremed in the \lhcb experiment by analysing the decays of \BsJpsiPhi {\color{red} ref 3fb papaer}.
+The particular choise of the last final state, where \phiKK and \Jpsimumu, was to do with several reasons. First the high number
+of selected \BsJpsiPhi decays available at \lhcb, roughly $90$k at the end of the \runtwo is an advantage. Second there are no other
+particles, decaying to a $K^+K^-K$, close to the mass of the $\phi$ particle. This allows for the analysis to be
+independant\footnote{There is some residual dependance left, which is very similar to what is described in \secref{Kpi_Invariant_mass}. }
+of the \mkk mass variable and thus much simpler. However an angular analysis is necessary to disentangle the posible polarisations
+of the intermediate particles $\jpsi$ and $\phi$. This way the CP eigenvalue of their combined wavefunction, used in \equref{phis_jpsiphi_def},
+can be determined. In addition, as it was already implied \phis can be correctly probed only when the time dependance of the \BsJpsiPhi decays
+is taken into
+account\footnote{Specifically \phis is the amplitude of the $\ket{\Bs{}_{,H}}$ and $\ket{\Bs{}_{,L}}$ time distribution oscilations
+mentioned in and shown in {\color{red} ref to something.} }.
+Furthermore knowledge on wheather the \Bs oscilated to a \Bsb or not before decaying into the final state $\jpsi\phi$
+improves the sensitivity of the \phis measuremnt. This is called {\it flavour tagging} and it complicates the analysis
+further\footnote{Add also the experimental effects such as angular and time efficiencies and time resolution and morel.}.
 
-The parameter \phis has been measuremed by the \lhcb experiment by analysing the decays of \BsJpsiPhi.
-The
-Pros and cons of the final state
-Flavour taging, angular analysis
-clean phi resonance, high yield, muons and kaons are good for lhcb
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, scale=0.8]{Figures/Chapter1/hfag_Spring2016_DGsphis_zoom.pdf}
+    \caption{Likelihood contours of $\Delta\Gamma-\phis$ (here $\phis\equiv \phis^{c\bar{cs}}$). Many individual measurements are
+             combined to the black elipse. Standard Model prediction is represented by the black band. The \lhcb measurement
+             mentioned in \equref{} is illustrated by the green elipse. The combined measurements agree with the Standard Model
+             predictions. Plot from \cite{HFAG} {\color{red} cite hfag} }
+    \label{hfag_phis_dg}
+  \end{center}
+\end{figure}
 
+\begin{align}
+  \centering
+  \phis^{\tiny \lhcb}           &=  -0.010 \pm 0.039(\text{total})  \;\; \text{rad}  \\
+  \phis^{\tiny \text{SM,tree}}  &=  -2\betas = -0.0376 {}^{+0.0008}_{-0.0007}  \;\; \text{rad}
+\label{phis_result}
+\end{align}
 
-\begin{itemize}
-  \item \phis measurement status
-  \item Show how do you read phis from the decay time distribution. Show terms in pdf (maybe)
-\end{itemize}
+The status of the \phis measurements is shown in \figref{hfag_phis_dg}, where \lhcb has the most precise measurement to date.
+The combined \phis value from the \lhcb experiment {\color{red} cite phiscombi} is shown in \equref{phis_result}. The last agrees with the Standard Model
+predictions within the current experimental ucertainty.
+
 
 \subsubsection{New Physics effects in \phis}
-All of the above was asuming tree decays only. But there are penguins as well. blhaaaaaaaaaaaaahhhhhhhhhhhhhhh.
- New particles in the box, new vector boson. Mention some types of models.
+
+{\color{red} Put some new physics models and explain the flavor puzzle a bit. and why it is important to monitor \phis}
