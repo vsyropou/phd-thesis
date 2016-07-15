@@ -1,5 +1,5 @@
 As it was mentioned in \secref{WeakPhase} \BsJpsiPhi decays are dominated by the tree diagram of \figref{bs2jpsiphi}.
-However the same decay could also take place via a higher order supressed diagram called {\it penguin} diagram (or topology)
+However the same decay could also take place via a higher order supressed process, for example the so called {\it penguin} diagram (or topology)
 shown in \figref{bs2jpsiphi_peng}. The \phis measurement of \equref{phis_lhcb} ignores the contribution of the last penguing diagram.
 
 \begin{figure}[h]
@@ -21,52 +21,92 @@ have to be estimated.
  \label{phis_sm_peng}
 \end{equation}
 
-\noindent The above situation is spelled out in \equref{phis_sm_peng}. The current section gives a brief discription of
-one [{\color{red} ref bs2jpsikst}] of the suggested strategies [{\color{red}{ref robs papers}} ]to estimate those penguin shifts.
-The necessary observables to extract the penguin shifts $\Delta\phiS{SM,penguin}$ are also introduced.
+\noindent The above situation is spelled out in \equref{phis_sm_peng}. The current section gives a brief discription
+of the strategy followed in order to estimate those penguin shifts in \phis. The full suggested framework for the
+current and future constrains on penguin shifts can be found in {\color{red} Krystofs thesis and roberts papers.}
 
+\subsubsection{Amplitude structure}
+Follwoing {\color{red} ref 106 in krystofs thesis.} the \BsJpsiPhi decay amplitude consists of four different types.
+Two of them were already introduced in \figref{bs2jpsiphi} and \figref{bs2jpsiphi_peng} which are called {\it color suppressed }$(C)$ and {\it penguin}$(P)$
+respectivelly. The other two types of diagrams namelly {\it exchage} and {\it penguin-anihilation} can be neglected according to {\color{red} krystofs thesis}
+given the current experimental precision. Given this assumption the \BsJpsiPhi amplitude is decomposed, taking into account the
+relevat CKM elements involved, as shown in \equref{bsjpsiphi_amp}.
 
-\subsubsection{Controling higher order effects in \phis}
-We rely on SU3 symmetry to estimate penguin shifts. Theoretical calulations include difficult calculations due to non perturbative qcd effects.
+\begin{equation}
+  A \parenthesis{\BsJpsiPhi} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
+ \label{bsjpsiphi_amp}
+\end{equation}
 
+\noindent where the suscribts in the penguin topologies, $P$, denote the flavour of the quark present in the loop of \figref{bs2jpsiphi_peng}.
 
-\subsubsection{The \BsJpsiKst decay as a control chanell}
+\subsubsection{Formalism}
+In order to
 
 \begin{itemize}
-  \item Why do we need a control chanell
-  \item Point out the 2x2 system structure
-  \item Why Bs2jpsiKst
-  \item Flavour specific final state (no oscilations, the sign tags the flavour at production)
+  \item The amplitude can be rewritten as a function of alpha and theta.
+  \item Acp mix and Acp dir which are measured are realeated to alpha and theta as in equation
+  \item This is a 2x2 system.
+  \item In principle you can solve it with only jpsiphi but you want to introduce more chanells to reduce uncertainty.
+  \item Thus for flavour specific final states you need branching ratio information.
 \end{itemize}
-
-\subsubsection{Observables for controling penguin shifts}
 
 
 \begin{itemize}
-  \item Define parameters of interest
-\end{itemize}
-
-
-{\small
-\begin{eqnarray}
-A^{CP} (B^0_{(s)} \to f_{(s)})  = &  \nonumber \\
-\frac{ \displaystyle \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to \bar{f_{(s)}}) + \Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}}) \Big]
-{\rm d}t \;-\; \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to f_{(s)}) + \Gamma(\bar{B^0_{(s)}} \to f_{(s)}) \Big]
-{\rm d}t}{ \displaystyle \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to \bar{f_{(s)}}) + \Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}}) \Big] {\rm d}t
- \;+\; \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to f_{(s)}) + \Gamma(\bar{B^0_{(s)}} \to f_{(s)}) \Big] {\rm d}t}  &
-\label{decayrates}
+\item $H_i$, related to the branching ratios and polarisation fractions,
+\begin{eqnarray}\label{Eq:Hobs_Vector}
+H_i & \equiv &  \frac{1}{\epsilon} \left|\frac{\mathcal{A}'_i}{\mathcal{A}_i}\right|^2
+\frac{\text{PhSp}\left(\BsJpsiPhi\right)}{\text{PhSp}(\BsJpsiKst)}
+\frac{\BR{\BsJpsiKst}_{\text{theo}}}{\BR{\BsJpsiPhi}_{\text{theo}}}
+\frac{f_i}{f'_i}\:,  \\
+  & = & \frac{1-2a_i \cos(\theta_i) \cos\gamma+a_i^{2}}{1+2\epsilon a'_i \cos\theta'_i\cos\gamma +\epsilon^2 a_i^{\prime 2}} \:, \nonumber
 \end{eqnarray}
- }
-
+\item $A^{CP}_i$, the direct CP violation asymmetries%
+\footnote{Conventions: $A^{CP}_i = -\mathcal{A}_{\text{dir}}^{\CP}$ used in Ref.~\cite{DeBruyn:2014oga}}.
+\begin{equation}\label{eq:ACPpeng}
+A^{\CP}_i= -\frac{2a_i\sin\theta_i\sin\gamma}{1-2a_i\cos\theta_i\cos\gamma+a_i^{2}}\:.
+\end{equation}
+\end{itemize}
 \begin{equation}
-%A_i^{CP} = \frac{ |\cAbarfbar(0)|^2 - |\cAf(0)|^2 }{ |\cAbarfbar(0)|^2 + |\cAf(0)|^2 }
-A^{CP} = \frac{\Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}})-\Gamma(B^0_{(s)} \to f_{(s)})}{\Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}})+ \Gamma(B^0_{(s)} \to f_{(s)})}
+\text{PhSp}(B\to V_1V_2) \equiv \frac{1}{16\pi m_B}\Phi\left(\frac{m_{V_1}}{m_B}, \frac{m_{V_2}}{m_B}\right)\:,
+\end{equation}
+\begin{equation}\label{Eq:penguin_relation}
+a_i = a'_i\:,\qquad \theta_i = \theta'_i\:,
+\end{equation}
+\begin{equation}\label{tandelta}
+\tan(\Delta\,\phi_{s,i}) = \frac{2\epsilon a'_i \cos\theta'_i \sin\gamma+\epsilon^2 a^{\prime 2}_i \sin2\gamma}{1+2\epsilon a'_i \cos\theta'_i \cos\gamma+ \epsilon^2 a^{\prime 2}_i \cos2\gamma}.
 \end{equation}
 
-{\color{red} Assuming negligible cpv in mixing, Mention this.}
 
-\begin{equation}
-A_{CP}^{\rm raw}(B^0_{(s)} \to f_{(s)}) = \frac{N^{\rm obs}(\bar{f_{(s)}}) -N^{\rm obs}(f_{(s)}) }{
-N^{\rm obs}(\bar{f_{(s)}}) + N^{\rm obs}(f_{(s)})}
-\label{acp_mes}
-\end{equation}
+
+\subsubsection{The \BsJpsiKst and Bsjpsirho control chanells}
+
+\begin{itemize}
+  \item H observable is necesary.
+  \item amplitude ratio is required introducing more uncertainty.
+  \item SU3 symmetry is used. but it increases systematic uncertainties.
+\end{itemize}
+
+%
+% {\small
+% \begin{eqnarray}
+% A^{CP} (B^0_{(s)} \to f_{(s)})  = &  \nonumber \\
+% \frac{ \displaystyle \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to \bar{f_{(s)}}) + \Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}}) \Big]
+% {\rm d}t \;-\; \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to f_{(s)}) + \Gamma(\bar{B^0_{(s)}} \to f_{(s)}) \Big]
+% {\rm d}t}{ \displaystyle \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to \bar{f_{(s)}}) + \Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}}) \Big] {\rm d}t
+%  \;+\; \int_0^\infty \Big[ \Gamma(B^0_{(s)} \to f_{(s)}) + \Gamma(\bar{B^0_{(s)}} \to f_{(s)}) \Big] {\rm d}t}  &
+% \label{decayrates}
+% \end{eqnarray}
+%  }
+%
+% \begin{equation}
+% %A_i^{CP} = \frac{ |\cAbarfbar(0)|^2 - |\cAf(0)|^2 }{ |\cAbarfbar(0)|^2 + |\cAf(0)|^2 }
+% A^{CP} = \frac{\Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}})-\Gamma(B^0_{(s)} \to f_{(s)})}{\Gamma(\bar{B^0_{(s)}} \to \bar{f_{(s)}})+ \Gamma(B^0_{(s)} \to f_{(s)})}
+% \end{equation}
+%
+% {\color{red} Assuming negligible cpv in mixing, Mention this.}
+%
+% \begin{equation}
+% A_{CP}^{\rm raw}(B^0_{(s)} \to f_{(s)}) = \frac{N^{\rm obs}(\bar{f_{(s)}}) -N^{\rm obs}(f_{(s)}) }{
+% N^{\rm obs}(\bar{f_{(s)}}) + N^{\rm obs}(f_{(s)})}
+% \label{acp_mes}
+% \end{equation}
