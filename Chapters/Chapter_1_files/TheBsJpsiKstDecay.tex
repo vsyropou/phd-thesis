@@ -13,11 +13,11 @@ shown in \figref{bs2jpsiphi_peng}. The \phis measurement of \equref{phis_lhcb} i
 Model prediction \phiS{SM,tree}, within the current experimental accuracy. However with increasing accuracy {\color{red} ref lhcb upgrade \phis sensitivy}the last assumption needs to be revisited.
 Specifically, because of the fact that penguin topology contributions shift the leading tree level Standard Model prediction.
 The last shift could be misinterpreted as $\Delta\phiS{NP}$ if those penguin contributions are not properly esimated.
-Thus in order to correctly probe New Physics contributions in fututre measurements the penguin topology contributions $\Delta\phiS{SM,penguin}$
+Thus in order to correctly probe New Physics contributions in fututre measurements the penguin topology contributions $\Delta\phiS{SM,peng}$
 have to be estimated.
 
 \begin{equation}
-\phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM, penguin} + \Delta\phis^{\tiny \text{NP}}
+\phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM,peng} + \Delta\phis^{\tiny \text{NP}}
  \label{phis_sm_peng}
 \end{equation}
 
@@ -26,28 +26,68 @@ of the strategy followed in order to estimate those penguin shifts in \phis. The
 current and future constrains on penguin shifts can be found in {\color{red} Krystofs thesis and roberts papers.}
 
 \subsubsection{Amplitude structure}
-Follwoing {\color{red} ref 106 in krystofs thesis.} the \BsJpsiPhi decay amplitude consists of four different types.
+Follwoing {\color{red} ref 106 in krystofs thesis.} the \BsJpsiPhi decay amplitude can take place via four different topologies.
 Two of them were already introduced in \figref{bs2jpsiphi} and \figref{bs2jpsiphi_peng} which are called {\it color suppressed }$(C)$ and {\it penguin}$(P)$
-respectivelly. The other two types of diagrams namelly {\it exchage} and {\it penguin-anihilation} can be neglected according to {\color{red} krystofs thesis}
-given the current experimental precision. Given this assumption the \BsJpsiPhi amplitude is decomposed, taking into account the
-relevat CKM elements involved, as shown in \equref{bsjpsiphi_amp}.
+topologies respectivelly. The other two types namelly {\it exchage} and {\it penguin-anihilation} can be neglected according to {\color{red} krystofs thesis}
+given the current experimental precision. Given this assumption the \BsJpsiPhi amplitude is decomposed in \equref{bsjpsiphi_amp}, taking into account the
+relevat CKM elements involved in each topology.
 
 \begin{equation}
-  A \parenthesis{\BsJpsiPhi} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
+A \parenthesis{\BsJpsiPhi} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
  \label{bsjpsiphi_amp}
 \end{equation}
 
-\noindent where the suscribts in the penguin topologies, $P$, denote the flavour of the quark present in the loop of \figref{bs2jpsiphi_peng}.
+\noindent where the suscribts in the penguin topologies, $P$, denote the flavour of the quark present inside the loop of \figref{bs2jpsiphi_peng}.
+The above expresion \equref{bsjpsiphi_amp} has to be re-expressed in such a way that it is posible to probe the penguin contributions to
+the \BsJpsiPhi decay amplitude. Given the unitarity feature of the CKM matrix plus the Wolfenstein paramtrization of \equref{CKMwolfenstein},
+the decay amplitude in \equref{bsjpsiphi_amp} can be rewritten as shown in \equref{bsjpsiphi_amp_param}.
+
+\begin{equation}
+  A \parenthesis{\BsJpsiPhi} = \parenthesis{1-\frac{\lambda^2}{2}} \polFrac{f} \brackets{ 1 + \epsilon a_f e^{i\theta_f} e^{i\gamma} },
+ \label{bsjpsiphi_amp_param}
+\end{equation}
+
+\noindent where the following definitions are used:
+
+\begin{equation}
+  \polFrac{f} \equiv \VcbMag \brackets{C + P_c - P_t}, \;\;\;\; a_f e^{i\theta_f} \equiv R_b \brackets{ \frac{P_c - P_t}{C + P_c - P_t} },
+  \label{bsjpsiphi_amp_param_defs}
+\end{equation}
+
+\noindent with
+
+\begin{equation}
+  \epsilon = \frac{\lambda^2}{1-\lambda^2} \;\;\text{and} \;\;  R_b = \parenthesis{1-\frac{\lambda^2}{2}} \frac{1}{\lambda} \modulo{\frac{\Vub}{\Vcb}},
+  \label{bsjpsiphi_amp_param_defs}
+\end{equation}
+
+Calculations for the penguin contributions to $A \parenthesis{\BsJpsiPhi}$ are available {\color{red} 40 and 41 in kyrstofs thesis}.
+However these cacluations are difficult to perform, since they involve non-perturbative long-distance QCD effects. Thus an alternative
+approach, according to {\color{red} krystof and rob}, is follwed in order to relate those penguin contributions to similar decay cahanells
+as \BsJpsiPhi using the $SU(3)_F$ falvour symmetry, see {\color{red} Krystof thesis section 3.4 ana elsewere.}.
+A minimal desctription of the necessesary formalism to extract the penguin shift, $\Delta\phiS{SM,peng}$, is given the rest of the current section.
 
 \subsubsection{Formalism}
-In order to
+
+Accroding to blah the penguin parameters beta and alpha can be related to the CP asymmetries, \equref{acp_mixing} and \equref{cpv_decay},
+as shown in \equref{}.
+
+
+In addition for modes that include are related to \BsJpsiPhi via the $SU(3)_F$ symmetry
+
+
+ Given the experimentally measured values of the above CP assymetries {\color{red} ref blah}, a $\chi^2$ fit is
+used, see ref {\color{red} krystof} to determine the penguin parameters alpha and beta.
+
+\subsubsection{Including more chanells}
+Using su3 flavour we can include more chanels.
+In order to increase sensitivuty or for a flavour sepcific finals atetes the Acp mix is nto there thus the H observable is constructed
+according to
 
 \begin{itemize}
-  \item The amplitude can be rewritten as a function of alpha and theta.
   \item Acp mix and Acp dir which are measured are realeated to alpha and theta as in equation
-  \item This is a 2x2 system.
-  \item In principle you can solve it with only jpsiphi but you want to introduce more chanells to reduce uncertainty.
   \item Thus for flavour specific final states you need branching ratio information.
+  \item footnote(In principle you can solve it with only jpsiphi but you want to introduce more chanells to reduce uncertainty).
 \end{itemize}
 
 
