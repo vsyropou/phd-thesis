@@ -26,11 +26,12 @@ A common way to parametrize CP violation in the interference between mixing and 
 \footnote{This $\lambda_f$ is not to be confused with the $\lambda$ of the WOlfenstein Prametrization.}.
 
 \begin{equation}
- \lambda_{f} = \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
+ \lambda_{f} = \eta_f \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
 \label{lambda_cpv}
 \end{equation}
 
 \noindent The ratios $|\qoverp|$ and $|\nicefrac{A_f}{\bar{A}_{f}}|$ are ascociated to the mixing and decay parts of \figref{interference} respectivelly.
+Whereas $\eta_f$ is the CP eigenvalue of the final state $f$ and can be either $+1$ or $-1$ corresponding to CP-even and CP-odd respectivelly.
 The above parameter $\lambda_f$ is also releated to the $\Acp{\rm mix}$ and $\Acp{\rm dir}$ as it can be seen in {\color{red}  simple ref to that}.
 Given the so called {\it master equations}{\color{red} ref pdg} for the decay rates of a \Bs and \Bsb
 to a final state $f$, the \CP asymmetry due to the interference between mixing and decay\footnote{assuming $|\qoverp|=1$ and $|\nicefrac{A_f}{\bar{A}_{\bar{f}}}| = 1$ consistet with {\color{red} ref for nocpv in mix and decay}.}
@@ -76,17 +77,17 @@ $\lambda_{f}$ of \equref{lambda_cpv} is can be computed, see \equref{phis_def}\f
 
 \begin{align}
   \centering
- \Im(\lambda_f) =& \sin\parenthesis{ \argu{\frac{\Vtb^*\Vts}{\Vtb\Vts^*}} + \argu{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}} } \nonumber \\
-                =& \sin\parenthesis{ \argu{\parenthesis{\Vtb^*\Vts}^2}    + \argu{\frac{1}{\parenthesis{\Vcb^*\Vcs}^2}} }
-                = \sin\parenthesis{  2 \; \argu{\frac{\Vtb^*\Vts}{\Vcb^*\Vcs}} } \nonumber \\
+ \Im(\lambda_f) =& \eta_f\sin\parenthesis{ \argu{\frac{\Vtb^*\Vts}{\Vtb\Vts^*}} + \argu{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}} } \nonumber \\
+                =& \eta_f\sin\parenthesis{ \argu{\parenthesis{\Vtb^*\Vts}^2}    + \argu{\frac{1}{\parenthesis{\Vcb^*\Vcs}^2}} }
+                = \eta_f\sin\parenthesis{  2 \; \argu{\frac{\Vtb^*\Vts}{\Vcb^*\Vcs}} } \nonumber \\
                 =& \sin\parenthesis{-2\betas}
-                \equiv \sin\parenthesis{\phis}
+                \equiv \eta_f\sin\parenthesis{\phis}
  \label{phis_def}
 \end{align}
 
 \noindent An additional implication arises from the choice of the $\jpsi\phi$ as the final state.
 Specifically due to the fact that the last particles have a non zero spin quantum number, their combined wavefunction
-is not a pure cp eigenstate. The eigenvalue ($+1$ or $-1$) of the last wavefunction dependants on the total angular momentum
+is not a pure cp eigenstate. The eigenvalue $\eta_f$ of the last wavefunction dependants on the total angular momentum
 $l$ of the $\jpsi$ and $\phi$ mesons. This dependancy has to be taken into acount in \equref{phis_def} resulting in \equref{phis_jpsiphi_def}
 
 \begin{equation}
@@ -117,10 +118,9 @@ of selected \BsJpsiPhi decays available at \lhcb, roughly $90$k at the end of th
 to select real $\phi$ over other mesons that decay to a $K^+K^-$ pair. This is due to the fact that the $\phi$ meson dominates the
 $K^+K^-$ mass distribution within a window of about $\pm 70 \mevcc$ around its mass. The last allows for the analysis to be
 independant\footnote{There is some residual dependance left, which is very similar to what is described in \secref{Kpi_Invariant_mass}. }
-of the \mkk mass variable and thus much simpler. However an angular analysis (very similar to the one discribed in \secref{Diferential_Decay_Rate} )
-is necessary to disentangle the posible polarisations of the intermediate particles $\jpsi$ and $\phi$. This way the CP eigenvalue of their combined
-wavefunction, used in \equref{phis_jpsiphi_def}, can be determined. In addition, as it was already implied \phis can be correctly probed only when the
-time dependance of the \BsJpsiPhi decays is taken into
+of the \mkk mass variable and thus much simpler. However an angular analysis, see \secref{Diferential_Decay_Rate} is necessary
+to disentangle the odd and even CP components of the final state $\jpsi\phi$, as it became apparent in \equref{phis_jpsiphi_def}.
+In addition, as it was already implied \phis can be correctly probed only when the time dependance of the \BsJpsiPhi decays is taken into
 account\footnote{Specifically \phis is the amplitude of the $\ket{\Bs{}_{,H}}$ and $\ket{\Bs{}_{,L}}$ time distribution oscilations
 mentioned in and shown in {\color{red} ref to something.} }.
 Furthermore knowledge on wheather the final state $\jpsi\phi$ originated from a \Bs or a \Bsb is necessary since it
