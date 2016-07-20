@@ -95,7 +95,7 @@ $l$ of the $\jpsi$ and $\phi$ mesons. This dependancy has to be taken into acoun
  \label{phis_jpsiphi_def}
 \end{equation}
 
-\subsubsection{New Physics effects in \phis}
+\subsection{New Physics effects in \phis}
 
 \begin{itemize}
  \item How NP effects can manifest in \phis (loop diagrams), Zprime
@@ -111,7 +111,7 @@ We measure
  \label{phis_meas}
 \end{equation}
 
-\subsubsection{Measuring \phis with the \lhcb detector}
+\subsection{Measuring \phis with the \lhcb detector}
 The parameter \phis has been measuremed in the \lhcb experiment by analysing the decays of \BsJpsiPhi {\color{red} ref 3fb papaer}.
 The particular choise of the last final state, where \phiKK and \Jpsimumu, was to do with several reasons. First the high number
 of selected \BsJpsiPhi decays available at \lhcb, roughly $90$k at the end of the \runtwo is an advantage. Second it is relatively easy
@@ -151,3 +151,36 @@ and it complicates the analysis further\footnote{One should also take into acoun
 The status of the \phis measurements is shown in \figref{hfag_phis_dg}, where \lhcb has the most precise measurement to date.
 The combined \phis value from the \lhcb experiment {\color{red} cite phiscombi} is shown in \equref{phis_lhcb}.
 The last agrees with the Standard Model of \equref{phis_theo}, predictions within the current experimental ucertainty.
+
+\subsection{Higher Order Effects in \phis}
+\label{TheBsJpsiKstDecay}
+As it was mentioned in \secref{WeakPhase} \BsJpsiPhi decays are dominated by the tree diagram of \figref{bs2jpsiphi}.
+However the same decay could also take place via a higher order supressed process, for example the so called {\it penguin} diagram (or topology)
+shown in \figref{bs2jpsiphi_peng}. The \phis measurement of \equref{phis_lhcb} ignores the contribution of the last penguing diagram.
+
+\begin{figure}[h]
+  \centering
+  {\sffamily \input{Figures/Chapter1/penguin}}
+  \caption{{\color{red} Fix this to look more like \figref{QuarkMixing} and put ckm elements on the vertices}. Explain tha this is called tree diagram}
+  \label{bs2jpsiphi_peng}
+\end{figure}
+
+\noindent This has been a reasonable assumtion before the \lhcb measurement which showed that the measured \phiS{eff} value is consistent with the Standard
+Model prediction \phiS{SM,tree}, within the current experimental accuracy. However with increasing accuracy {\color{red} ref lhcb upgrade \phis sensitivy}the last assumption needs to be revisited.
+Specifically, because of the fact that penguin topology contributions shift the leading tree level Standard Model prediction.
+The last shift could be misinterpreted as $\Delta\phiS{NP}$ if those penguin contributions are not properly esimated.
+Thus in order to correctly probe New Physics contributions in fututre measurements the penguin topology contributions $\Delta\phiS{SM,peng}$
+have to be estimated.
+
+\begin{equation}
+\phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM,peng} + \Delta\phis^{\tiny \text{NP}}
+ \label{phis_sm_peng}
+\end{equation}
+
+\noindent The above situation is spelled out in \equref{phis_sm_peng}.
+Calculations for the penguin contributions to $\Delta\phiS{SM,peng}$ are available {\color{red} 40 and 41 in kyrstofs thesis}.
+However, these cacluations are difficult to perform, since they involve non-perturbative long-distance QCD effects. Thus an alternative
+approach, according to {\color{red} krystof and rob}, is followed in order to experimentally extract $\Delta\phiS{SM,peng}$ by relying to
+similar decay cahanells as \BsJpsiPhi as well. By doing so the presition on the penguin contributions increases. A desctription
+of the necessesary formalism to extract the penguin shift, $\Delta\phiS{SM,peng}$, using also the chanells \BsJpsiKst and \BsJpsiRho is
+given in \chapref{Penguins}.
