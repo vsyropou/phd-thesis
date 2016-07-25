@@ -1,13 +1,14 @@
 As it was mentioned in \secref{The_Standard_Model} quarks and leptons acquire mass through the Yukawa term
 of the Standard Model lagrangian. An important aspect of the weak interaction, emerges from that term,
-namelly the quark flavour mixing. A brief description of the last and its relevance to CP-Violation is given in what follows.
-The section concludes with a brief status overview of {\it flavour physics}, which as it was implied in \ref{The_Standard_Model}
-is the part of Standard Model responsible for up-down quark type transitions.
+namelly the {\it quark flavour mixing}. A brief description of the last and its relevance to CP-Violation is given in what follows.
+The section concludes with introducing the so called {\it CKM-mixing matrix}, which is the core of the
+{\it flavor physics} in the quark sector of the Standard Model.
 
 \subsubsection{Quark Flavour Mixing}
-By applying the higgs mechanism to the Standard Model lagrangian the higgs field obtains a
-{\it vacum expectation value}\footnote{This is the lowest value of the higgs field potential.}.
-After this step the Yukawa term for the quark fields is shown\footnote{Ignoring quark-higgs field interaction terms} in \equref{yukawa_flavour}.
+By applying the higgs mechanism {\color{red} refff} to the Standard Model lagrangian the higgs field obtains a
+{\it vacum expectation value}, which is the lowest value of the higgs field potential.
+After this step the Yukawa term for the quark fields is shown in \equref{yukawa_flavour},
+ ignoring quark-higgs field interaction terms.
 
 \begin{subequations}
 \label{yukawa_flavour}
@@ -21,12 +22,13 @@ After this step the Yukawa term for the quark fields is shown\footnote{Ignoring 
 
 \noindent where $v$ is the higgs vacum expectation value and $y_{ij}^{u,d}$ are complex valued numbers called {\it yukawa couplings}.
 The last are free parametres that represent the coupling strength between higgs and quark fields.
-Indices $i,j$ label the three generations. Whereas indices $L,R\;$ idicate the Left, Right handed
-projection\footnote{The weak interaction couples only to left handed particvles {\color{red} rephrase... }} of the quark field.
+Note that for equations \equref{yukawa_flavour} to \equref{CClagrangian} it is implied that $u$ and $d$ indicate
+an up or a down type quark. The exact generation of the up(down) type quark is specified by the indices $i,j$.
+Whereas, indices $L,R\;$ idicate the left or right handedness of the quark field.
 Finally the matrix $\bf m^{u,d}$ expresees the desired quark masses.
 
 The quark fields, $u$ and $d$,  in \equref{yukawa_flavour} have a definite quantum number that labels the generation to which they belong
-to and also wheather they are of up or down type. This quantum number is commonly called {\it flavour}. Impling that quark fields
+to and also wheather they are of up or down type. This quantum number is commonly called {\it flavour} and thus the quark fields
 are flavour eigenstates. By constraction the mass matrix is not diagonal which means that
 a quark with a well defined flavour does not have a well defined mass. Or in more formal pharasing flavour and mass eigenstates of
 the quark fields do not coincide. In order to obtain propper quark masses the matrix $\bf m^{u,d}$ has to be diagonalised, as shown in \equref{diagM}.
@@ -48,19 +50,20 @@ of \equref{diagM}.
 \noindent Since the quark fields are still flavour eigenstetes in the rest of the Standard Model lagrangian,
 the field rotations of \equref{quark_rotation} need to be applied there as well. Specifically
 to the kinetic term involving quark interactions with the charged weak bosons \Wpm, also known as {\it charged current}
-interaction. In \equref{CClagrangian} the charged current interaction is exressed in two ways.
-First the quarks are flavour, \equref{CClagrangianInt}, and second mass, \equref{CClagrangianMass}, eigenstates.
+interaction, shown in \equref{CClagrangian}. In the last equation the charged current interaction is exressed in two ways.
+Once with quark fields expresed as flavour eigenstates, \equref{CClagrangianInt}, and second with the quarks as mass eigenstates, \equref{CClagrangianMass}.
 
 \begin{subequations}
   \label{CClagrangian}
   \begin{align}
     \mathscr{L}_{\text{Kinetic}}^{CC} & \propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri}  \label{CClagrangianInt} \\
-                                      & \propto \bar{u}_{Li}^m  {V_{\text{CKM}}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} {\Wp}^\mu \gamma_\mu u_{Ri}^m \label{CClagrangianMass}
+                                      & \propto \bar{u}_{Li}^m  {V_{\text{CKM}}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} {\Wp}^\mu \gamma_\mu u_{Ri}^m \label{CClagrangianMass} \\
+                                      \text{with} \;\;\; V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L, & \nonumber
   \end{align}
 \end{subequations}
 
-\noindent Where, \Wpm are the charged weak boson fields and $\gamma_\mu$ are Dirac matrices.
-The matrix $V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L$ is the so called {\it CKM mixing matrix}, shown in \equref{quark_field_rotation}.
+\noindent and \Wpm the charged weak boson fields, whereas $\gamma_\mu$ are Dirac matrices.
+The matrix $V_{\text{CKM}}$ is the so called {\it CKM mixing matrix}, shown in \equref{quark_field_rotation}.
 
 \begin{equation}
   \begin{pmatrix} \dquark \\ \squark \\ \bquark  \end{pmatrix} =
@@ -70,8 +73,8 @@ The matrix $V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L$ is the so called {\it CKM
   \end{equation}
 
 The charged current term, \equref{CClagrangian}, incorporates an important aspect of the weak interaction,
-namelly that the quark mass eigenstates are superpositions of the flavour eigenstates. This feauture is called
-quark flavour mixing.
+namelly the {\it quark flavor mixing}. The last is due to the fact that quark mass eigenstates are superpositions
+of the flavour eigenstates.
 
 \begin{figure}[h]
   \centering
@@ -102,10 +105,10 @@ the first and third generations followed by the ones between the second and thir
 
 Testing the consistency of the CKM elements measurments is a central goal of flavour physics.
 In order to achieve such tests it is usefull to define a paramterization of the CKM matrix.
-By construction the CKM matrix has 3 real parameters and one compelx phase\footnote{Due to unitary constraints plus quark field rotations.,{\color{red} clarify}}
-The choise of the CKM matrix parametrazation is arbitrary. Due to the observed structure the so called {\it Wolfenstein}~\cite{Wolfenstein:1983yz,Buras-wolfenstein}
-parametrization shown in \equref{CKMwolfenstein} is a standard parametrization, where one can see the three real parameters, $\lambda,A,\rho$
-and the complex one $\eta$. Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$.
+By construction the CKM matrix has 3 real parameters and one compelx phase\footnote{After exploiting the unitarity of $V_{\rm CKM}$ and all the redundant quark field phases.}
+The choise of the CKM matrix parametrazation is arbitrary. However due to the observed structure the so called {\it Wolfenstein}~\cite{Wolfenstein:1983yz,Buras-wolfenstein}
+parametrization shown in \equref{CKMwolfenstein} is a standard parametrization. Where the three real parameters, $\lambda,A,\rho$
+and the complex one $\eta$ can be seen.
 
 \begin{equation}
   |V_{\text{CKM}}|
@@ -117,9 +120,10 @@ and the complex one $\eta$. Note that the CKM element $\Vts$ has a complex part 
 
 \noindent As it was previously mentioned the CKM matrix is a unitary matrix, meaning that $V_{\text{CKM}} V_{\text{CKM}}^\dagger = I_{3x3}$.
 This leads to the so called unitarity and orthogonality relations. The last are sums of complex numbers that are equal to zero, thus can be
-represented by triangles in the complex plane. There are six orthogonality releations two of which are relevant fo the current thesis since
-the CKM elements present in those relations govern the dynamics in the \Bs and \Bd meson systems. These two relations and their corresponding
-triangles are show in \equref{unitConstraints}, \figref{unitTriangles} respectivelly.
+represented by triangles in the complex plane. There are six orthogonality releations two of which are relevant for the current thesis since
+the CKM elements present in those relations govern the dynamics in the \Bs and \Bd meson systems. These two relations are shown in
+\equref{unitConstraints}. The last equations are devidied by $\Vcd\Vcb^*$ for \Bd and $\Vcs\Vcb^*$ for \Bs and then illustrated in \figref{unitTriangles}.
+Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$, see section 13.3 of ~\cite{PDG}.
 
 \begin{subequations}
   \label{unitConstraints}
@@ -147,13 +151,12 @@ triangles are show in \equref{unitConstraints}, \figref{unitTriangles} respectiv
   \end{subfigure}
   \caption{CKM-unitarity triangles. (A) \Bd triangle, corresponding to \equref{unitConstraints_Bd}. (B) \Bs triangle,
            corresponding to \equref{unitConstraints_Bs}. Triangle sides have been normalised with respect to to one of them.
-           This way one of the sides is real with unit leangth. Note that triangles are not drawn to scale. Figures from {\color{red} Jeroen}
-           rho bar and eta bar is defined as {\color{red} define rho bar eta bar}.  }
+           This way one of the sides is real with unit leangth. Note that triangles are not drawn to scale. Figures from~\cite{jeroenThesis}. }
   \label{unitTriangles}
 \end{figure}
 
-\noindent The angles in \figref{unitTriangles} are defined by inspecting the triangles in the complex plane,
-as shown in \equref{bdAnglesDef} and \equref{bdAnglesDef}.
+The coordinates of the apex in the two triangles are defined as $(\bar{\rho},\bar{\eta})$ and $(\bar{\rho}_s,\bar{\eta}_s)$ respectivelly for \figref{unitTriangles_bd} and
+\figref{unitTriangles_bs}. Whreas by inspecting the triangles one can define the angles as shown in \equref{bdAnglesDef} and \equref{bsAnglesDef}.
 
 \begin{equation}
   \label{bdAnglesDef}
@@ -176,20 +179,23 @@ as shown in \equref{bdAnglesDef} and \equref{bdAnglesDef}.
 \begin{figure}[h]
   \begin{center}
     \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
-    \caption{Show rhobar and etabar wrt rho and eta and lamda.... Mention one side is real because we devided by it.}
+    \caption{Global fit of the apex $(\bar{\rho},\bar{\eta)}$ of the \Bd triangle by the CKM fitter group~\cite{ckm-fitter-phis-pred}.
+             Inputs from measurements of flavor physics observables are indicated by colored bands.}
     \label{unitarity_triangle}
   \end{center}
 \end{figure}
 
 There is no fundamental reason known in the Standard model for the observed hierarchy of the CKM elemetns.
-One of the main goals of flavour physics is to check the consistency of all CKM elements measurements by overlaying them on the
-complex plane, see \figref{unitarity_triangle}. For complteness it is intreasting to mention that in the lepton sector a similar
-mixing matrix is active but with completelly different structure.
+One of the main goals of flavour physics is to check the consistency of the CKM picture.
+Overlaying many measurements of flavour physics observables in the complex plane should show a consistent
+picture, see \figref{unitarity_triangle}. For completnes it is intreasting to mention that in the lepton
+sector a similar mixing matrix is active. The hierarchy there is completelly different which is yet another
+intriguing detail of the Standard Model.
 
 
-\subsubsection{Standard Model CP Violation}
-From \equref{CClagrangianMass} it can be deduced[{\color{red} ref niels}] that CP-Violation
-in the Standard Model is possible only if \equref{diagM} is not invariant under complex conjugation.
-The last turns out to be true bacause of the fact that CKM matrix is a complex valued matrix.
-Thus, the CKM matrix which was introduced to asign propper masses to the quarks is also the source of
-CP-Violation in the Standard Model~\cite{KM-mechanism}, which is is an intreasting coinsidence.
+\subsubsection{CP-Violation and fermion masses}
+It is intreasting to point out the common origin of CP-Violation and fermion masses in the Standard Model~\cite{KM-mechanism}.
+From the one hand the CKM matrix which was introduced to couple the higgs to the fermions and thus give them mass.
+On the other hand the fact that $V_{\rm CKM}$ is a complex valued matrix allows for CP-Violation in the
+Standard Model by the weak intraction. This is because the charged current interaction of \equref{CClagrangianMass}
+will be invariant under the CP operation only if $V_{\rm CKM}=V_{\rm CKM}^*$, which is not true.

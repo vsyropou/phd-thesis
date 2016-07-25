@@ -1,12 +1,14 @@
 
 
-The \Bs meson\footnote{Mesons are bound states of two quarks.} is an electrically neutral
-particle that consists of two quarks, a \bquarkbar and an \squark. An important feature of
+The \Bs meson\footnote{Mesons are bound by the strong interaction states of two quarks.} is an electrically neutral
+particle that consists of two quarks, particularly (\bquarkbar\squark). An important feature of
 the \Bs meson, and all neutral mesons, is that it can spontaneously change into its antiparticle,
-the \Bsb meson and vice versa. This oscilating feauture is posible in the Standard Model via the
-so called {\it box diagram}, see \figref{bs_box}. {\it Neutral Meson oscilations}, as they commonly
-quoted, play a central role in understanding and constraining the CKM matrix. Furthermore they are
-usefull probes of new particles as it will be explained soon.
+the \Bsb meson and vice versa. This feauture is called {\it meson oscilations} and it is posible
+in the Standard Model via the so called {\it box diagram} of \figref{bs_box}.
+Meson oscilations play a central role in flavor physics. Particularly because they are sensitive to the
+existance of new particles as it will be explained in \secref{probe_new_phys}. CP-Violating effects can
+apper in the \BBbarSyst oscilations and in the subsequent decay. The current section as well
+as \secref{WeakPhase} will qualitatively address the way that these effects manifest themselves.
 
 \begin{figure}[h]
   \centering
@@ -22,18 +24,29 @@ usefull probes of new particles as it will be explained soon.
     \caption{}
     \label{bs_box_2}
   \end{subfigure}
-  \caption{Lowest-order diagrams for mixing~\cite{LHCb-PAPER-2013-002}.}
+  \caption{Leading order diagrams for \BBbarSyst oscilations. Figures from~\cite{jeroenThesis}.}
   \label{bs_box}
 \end{figure}
 
-The \Bs and \Bsb mesons in \figref{bs_box} are flavour eigenstates. Since the weak intreraction
-is active in those oscilations there is no reason to expect that the flavour eigenstates \Bs (and \Bsb)
-coincide with the mass eigenstates. This situation invites a phenomenological
-aproach when describing the time evolution of a \Bs meson[{\color{red} pdg oscilations ref}]. Specifically
-an {\it effective hamiltonian}~\cite{eff-hamiltonian-bs-syst,DeBruyn-thesis} is used to describe the \Bs and \Bsb
-as a quantum mechanical system. The effective hamiltonian for the \BBbarSyst is a $2x2$ non hermitian matrix,
-with the off-diagonal elements acounting for the \Bs to \Bsb oscilations.
-The mass eigenstates of the $\BBbarSyst$ are obtained after diagonalizing the effective hamiltonian, yielding \equref{bs_mass_eigen}.
+\subsubsection{The \BBbarSyst System}
+
+The oscilating behaviour of the \Bs and \Bsb mesons invites a phenomenological approach
+where the two mesons are treated as a coupled quantum mechanical system. This approach
+is based on~\cite{Weisskopf:1930au,Weisskopf:1930ps} approach and uses an {\it effective hamiltonian}~\cite{eff-hamiltonian-bs-syst,DeBruyn-thesis}
+to describe the time evolution of the \Bs or \Bsb meson. The wavefunctions of the last mesons
+are defined in \equref{bs_wavefunctions}
+
+\begin{equation}
+\ket{\Bs}  \equiv  \ket{\bquarkbar\squark}, \;\;\; \ket{\Bsb} \equiv  \ket{\bquark\squarkbar}
+\label{bs_wavefunctions}
+\end{equation}
+
+\noindent impling that the states \Bs and \Bsb have a definite quark content or in other words
+thei are flavour eigenstates. The effective hamiltonian, $H_{\rm eff}$ is a 2x2 non diagonal non hermitian matrix.
+The non diagonal feature is due to the oscilating feature of the \BBbarSyst system whreas the non
+hermirianity takes into acount the probability that the system will eventually decay to some final state.
+By diagonalising the effective on can obtain the mass eigenstates, \ket{\Bs{}_{,H}}, \ket{\Bs{}_{,L}}, of the system, shown in \equref{bs_mass_eigen}.
+More details on the exact calcualtions can be found in section 13.1 of~\cite{PDG} and in ~\cite{jeroenThesis,DeBruyn-thesis}.
 
 \begin{align}
 \ket{\Bs{}_{,H}} &= p \ket{\Bs} + q \ket{\Bsb}, \nonumber \\
@@ -41,38 +54,38 @@ The mass eigenstates of the $\BBbarSyst$ are obtained after diagonalizing the ef
 \label{bs_mass_eigen}
 \end{align}
 
-\noindent Where \ket{\Bs}, \ket{\Bsb} and \ket{\Bs{}_{,H}}, \ket{\Bs{}_{,L}} are the flavour and mass
-eigenstates respectively. The difference in mass and lifetime between the two mass eigenstates are important
-observables of the \BBbarSyst and are denoted as $\Delta m_s$ and $\Delta\Gamma_s$ respectively.
-The amount of mixing between the mass and flavour eigenstates is governed by
-the complex parameters $p,q$. The last are releated to the elements of the effective hamiltonian and can be
-copmputed theoretically{\color{red} give ref}. Experimentally and theoretically it has been found{\color{red} ref for no cpv in mixing.}
-that their ratio for the \BBbarSyst is one within the uncertainties.
+The amount of mixing between the mass and flavour eigenstates is governed by the complex parameters $p,q$.
+The ratio $|\qoverp|$ is compatible with one. This is supported both from theoretical calculations~\cite{Lenz:2011ti}
+and from experimental measurement~\cite{asl-paper} measurements\footnote{Some tensions between theory and experiment will be resolved in the future. The tensions are
+mainly fue to the \dzero measuremnt~\cite{Abazov:2013uma}}. In addition the difference in mass and lifetime between the two
+mass eigenstates are important observables of the \BBbarSyst and are denoted as $\Delta m_s$ and $\Delta\Gamma_s$ respectively.
 
-An important\footnote{and usefull for the next section} message releated to the ratio $|\qoverp|$ is that
-the last characterizes a type of CP-Violation. In more detail the so called CP-Violation {\it in the mixing} (of neutral mesons),
-$\Acp{\text{mix}}$, vanshes if $|\qoverp|= 1$, see \equref{acp_mixing}.
+\subsubsection{Types of CP-Violation}
+The ratio $|\qoverp|$ is connected a type of CP-Violation. Specifically the CP-Violation {\it in the mixing} (of the \BBbarSyst system).
+The connection is shown in the asymmetry of \equref{acp_mixing}.
 
 \begin{equation}
 \Acp{\text{mix}}      = \frac{\bra{\Bsb}\ket{\Bs} - \bra{\Bs}\ket{\Bsb}} {\bra{\Bsb}\ket{\Bs} + \bra{\Bs}\ket{\Bsb}}
-                \propto \left|\frac{q}{p}\right|^2 \parenthesis{ 1 - \left|\frac{p}{q}\right|^4}
+                \propto \left|\frac{q}{p}\right|^2 \parenthesis{ 1 - \left|\frac{p}{q}\right|^4},
 \label{acp_mixing}
 \end{equation}
 
-\noindent In addition it is usefull to define another type of CP-Violation.
-This type of CP violation is not restricted to neutral mesons only and it is active when the amplitude $A_f$ of a certain
-process and its CP conjugated $\bar{A}_{\bar{f}}$ are not the same. Or in other words when $|\nicefrac{A_f}{\bar{A}_{\bar{f}}}| \neq 1$.
-This type is called CPV {\it in the decay} or {\it direct} and its corresponding asymmetry is shown in \equref{cpv_decay}.
+\noindent where it can be seen that $\Acp{\text{mix}}$ vanshes if $|\qoverp|= 1$.
+
+Another type of CP-Violation is called {\it in the decay} and its based on the amplitude, $A_f$, of a certain meson decay to some final state $f$.
+Using the CP conjugated $\bar{A}_{\bar{f}}$ amplitude the asymmetry of \equref{cpv_decay} can be constructed.
+The last asymmetry vanishes in case $|\nicefrac{\bar{A}_{\bar{f}}}{A_f}| = 1$  and it is also relevant to other charged mesons as well.
 
 \begin{equation}
-% \Acp{\text{dir}} \propto \Gamma(\Bs \rightarrow f) - \Gamma(\Bsb \rightarrow \bar{f}),
-\Acp{\text{dir}} = \frac{ \bra{\Bs}\ket{f} - \bra{\Bsb}\ket{f} } {\bra{\Bs}\ket{f} + \bra{\Bsb}\ket{f}}
-                = \frac{ |A_f| - |\bar{A}_{\bar{f}}| } { |A_f| + |\bar{A}_{\bar{f}}|}
+\Acp{\text{dir}} = \frac{\Gamma(\Bs \rightarrow f) - \Gamma(\Bsb \rightarrow \bar{f})} {\Gamma(\Bs \rightarrow f) + \Gamma(\Bsb \rightarrow \bar{f})}
+                = \frac{ |\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 - 1}{|\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 + 1}
 \label{cpv_decay}
 \end{equation}
 
-\noindent where $\Gamma$ is the decay rate of the $\Bs \rightarrow f$ process and $f$ is some final state,
-like $D_s^{\pm}K^{\mp}$. There is one more type of CP Violation and that is in the {\it interference} between
+\noindent where $\Gamma$ is the decay rate of the $\Bs \rightarrow f$ process and $f$ is some final state.
+Both calsifications are based on section 13.1.4 of~\cite{PDG}.
+
+There is one more type of CP Violation and that is in the {\it interference} between
 a neutral meson decying directlly to a final state $f$ or first oscialting to its antiparticle and then decaying
 to the same final state $f$. Due to its relevance to the current thesis, this type of CP-Violation is explained
 in the next section.
