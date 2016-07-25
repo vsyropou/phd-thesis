@@ -1,0 +1,143 @@
+\section{\hltone muon identification}
+\label{sec:hlt1_rev}
+
+The algorithm sequence of the \hltone muon lines during \runone was tuned in order to
+comply with the output rate limitations given the existinng computing infrastructure,
+namely the Event Filter Farm (EFF).
+Since then the EFF has undergone a significant upgrade resulting in an increased processing
+power along with increased storage capabilities.
+In view of this infrastructure upgrade as well as the \runtwo \lhc running conditions
+the total output rate of the entire trigger system was increased
+from 5\khz to 12.5\khz.
+The impact on the \hltone is that its output rate is roughly doubled and additional processing time is available.
+This offered chances for optimization of the \hltone muon identificationa and muon trigger lines.
+
+\subsection{\hltone muon lines algorithm sequence}
+\label{sec:hlt1run2}
+
+The role of \hltone is to select interesting events based on reduced event information.
+The software is divided in lines selecting different physics signatures.
+The \hltone muon lines are mainly organized in single muon and dimuon ones; both
+exploit the same muon identification procedure which will be described in the following.
+Between \runone and \runtwo not only the muon-identification but also some of the lines algorithms were
+reoptimized and others were added; the change in the lines will not be described in the present document,
+where only the differences due to the MuonID will be underlined.
+
+The efficiency of the muon lines during \runone is shown in \figref{fig:hlt1_eff_run1}.
+It can be observed that a low \pt turn on and a large efficiency loss in the dimuon lines are present.
+In order to understand the origin of this efficiency loss
+the \hltone algorith sequence is analysed further in the current section.
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[trim=11cm 20.5cm 2cm 3cm, clip=true,scale=1.]{hlt1_muon_eff_run1.pdf}
+  \caption{ Single and dimuon \hltone line efficiencies in \runone ~\cite{LHCb-PROC-2014-005}. }
+  \label{fig:hlt1_eff_run1}
+\end{figure}
+
+
+The \hltone muon trigger lines sequence during \runone is shown in \figref{fig:hlt1_algo_seq}(a).
+Here we only give a brief summary of this procedure while more details can be found in Ref.~\cite{LHCb-PUB-2011-017}.
+During \runone the muon identification started directly from VELO tracks
+which were identified as muons with a simple extrapolation through the \mvm algorithm~\cite{LHCb-PUB-2011-017}
+which will be detailed in \secref{sec:muon_matching},
+before being upgraded to long tracks by the \FwD tracking algorithm.
+After this, the \kw{IsMuon} algorithm was applied.
+In addition there were some quality cuts between each algorithm step, such as the number of VELO hits
+of the track or the fitted track $\chi^2_{\text {dof}}$ as well as momentum cuts applied after the \FwD tracking algorithm.
+The minimum momentum and transverse momentum was 6 \gevc and 0.5 \gevc respectively.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[node distance=.5cm and 2.cm]
+       \node [block, source] (test-0) {Velo Tracks};
+       \node [block, op, below=of test-0, ] (test-1) {MatchVeloMuon};
+	\node [block, op,  below=of test-1] (test-2) {Forward Tracking};
+	\node [block, cut, below=of test-2] (test-3) {Cuts on track};
+	\node [block, op, below=of test-2] (test-3) {IsMuon(Tight)};
+	\node [block, op, below=of test-3] (test-4) {Fit track};
+	\node [block, op, below=of test-4] (test-5) {Make dimuons };
+	\node [block, cut, below=of test-5] (test-6) {Additional	 cuts};
+	\node [block, sink, below=of test-6] (test-7) {Decision};
+       \path [line] (test-0) -- (test-1);
+       \path [line] (test-1) -- (test-2);
+       \path [line] (test-2) -- (test-3);
+       \path [line] (test-3) -- (test-4);
+       \path [line] (test-4) -- (test-5);
+       \path [line] (test-5) -- (test-6);
+       \path [line] (test-6) -- (test-7);
+ \end{tikzpicture}\hspace{1 cm}
+ \begin{tikzpicture}[node distance=.5cm and 2.cm, every node/.style={rectangle,fill=white}]
+       \node [block, source] (test-0) {Velo Tracks};
+       \node [block, cut, below=of test-0, ] (test-1) {$\pt > 500$ MeV/c};
+       \node [block, op, below=of test-1,  xshift=2cm] (test-2) {MatchVeloTTMuon};
+       \node [block, op, below=of test-2] (test-20) {Forward Tracking};
+       \node [block, op, below=of test-20] (test-4) {Fit track};
+	\node [block, source, below=of test-1,  xshift=-2cm] (test-3) {Get long track};
+ 	\node [block, cut, below=of test-4,   xshift=-2cm] (test-5) {Cuts on track};
+ 	\node [block, op, below=of test-5] (test-6) {IsMuon};
+ 	\node [block, op, below=of test-6] (test-7) {Make dimuons };
+ 	\node [block, cut, below=of test-7] (test-8) {Additional cuts};
+ 	\node [block, sink,below=of test-8] (test-9) {Decision};
+       \path [line] (test-0) -- (test-1);
+       \path [line] (test-1) -- node {no} (test-2);
+       \path [line] (test-1) -- node {yes} (test-3);
+       \path [line] (test-2) -- (test-20);
+       \path [line] (test-20) -- (test-4);
+       \path [line] (test-3) -- (test-5);
+       \path [line] (test-4) -- (test-5);
+       \path [line] (test-5) -- (test-6);
+       \path [line] (test-6) -- (test-7);
+       \path [line] (test-7) -- (test-8);
+       \path [line] (test-8) -- (test-9);
+    \end{tikzpicture}
+\end{center}
+ \caption{ \runone and \runtwo \hltone algoriths compared. }
+  \label{fig:hlt1_algo_seq}
+\end{figure}
+
+
+The detailed efficiency of the \runone \hltone muon lines is shown in \autoref{fig:effPie} and \autoref{tab:effBefore},
+where it can be seen that the main source of efficiency loss is due to the quality and momentum cuts.
+In addition the \mvm algorithm reduces the efficiency by roughly $4\%$.
+
+The updated scheme of \hltone for \runtwo includes two major changes.
+One in the code sequence of the \hltone muon lines. Two it upgrades the \mvm algorithm for softer muons. The first one is adressed
+in the currect section whereas the later in \secref{sec:muon_matching}.
+
+During the course of this work it became apparent that the HLT1 \kw{IsMuon} calculation in \runone
+did not use the correct pad sizes for uncrossed hits.
+The tool used an internal definition of the pad sizes for each station and
+region instead of the information from the hit object itself.
+The use of these incorrect pad sizes resulted simply in uncrossed hits being wrongly
+rejected, transforming \emph{de facto} the \kw{IsMuon} request into an \kw{IsMuonTight} one.
+This does not have any impact in the performances of LHCb, corresponding only to a lower efficiency:
+in LHCb physics publications the trigger efficiency is always measured directly on data so that this
+does not cause any shift in measurable quantities.
+
+The updated \hltone algorith sequence for \runtwo is shown in \figref{fig:hlt1_algo_seq}(b).
+For the majority of the tracks, which have transverse momentum larger than 500 MeV, the sequence is different with respect to
+Run I:
+full tracking is performed for these tracks, so that the start for muon finding is already with long tracks.
+After soft quality cuts these get passed through the standard \kw{IsMuon} algorithm in order to be identified;
+positively identified muons are then combined into dimuons as in Run I.
+The combination of the use of long tracks and standard muon identification is much more efficient than the
+procedure in Run I, and is exactly the same as the one of offline reconstruction.
+Furtheremore, correct pad sizes are being used so that the inclusion of uncrossed increases the efficiency further on.
+
+Tracks with transverse momentum smaller than 500 MeV cannot be immediately upgraded to long tracks for timing reasons.
+However some of them will be muons, and the efficiency for these could be recovered using a different strategy,
+explained in the following.
+
+% \S~\ref{sec:matchvelottmuon}.
+
+%% \begin{figure}[!h]
+%%   \centering
+%%   \includegraphics[trim=0.5cm 1cm 8cm 1cm, clip=true,scale=0.9]{ineff_budget_single.pdf}
+%%   \hspace{0.5cm}
+%% \caption{ \hltone single muon trigger line effciency versus transverse momentum.
+%%   The efficiency improves each time an algorithm of the old \hltone sequence, left of \figref{fig:hlt1_algo_seq}, is removed.
+%% {\color{red}, } }
+%%   \label{fig:ineff_budget}
+%% \end{figure}
