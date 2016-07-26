@@ -15,49 +15,61 @@ the search for new particles is discussed.
   \label{interference}
 \end{figure}
 
-The parameter \phis manifests in the so called $\bquark \rightarrow \cquark\cquarkbar\squark $ transitions,
-an example of which is shown in \figref{bs2jpsiphi}. In addtion, the final state of the \Bs meson has to be
+The parameter \phis manifests in the time dependance of the so called $\bquark \rightarrow \cquark\cquarkbar\squark $ transitions.
+An example of the last is shown in \figref{bs2jpsiphi}. In addtion, the final state of the \Bs meson has to be
 a CP eigenstate, which implies that both \Bs and \Bsb can decay into it, such that the two decay paths
 of \figref{interference} can interfere.
 
 A common way to parametrize CP violation in the interference between mixing and decay is shown in \equref{lambda_cpv}
-\footnote{This $\lambda_f$ is not to be confused with the $\lambda$ of the WOlfenstein Prametrization.}.
+\footnote{This $\lambda_f$ is not to be confused with the $\lambda$ of the Wolfenstein Prametrization.}.
 
 \begin{equation}
- \lambda_{f} = \eta_f \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
+ \lambda_{f} = \eta_f \frac{q}{p} \frac{\bar{A}_f}{A_f}, % \equiv \left|\lambda_f\right| e^{i\phis}.
 \label{lambda_cpv}
 \end{equation}
 
-\noindent The ratios $|\qoverp|$ and $|\nicefrac{A_f}{\bar{A}_{f}}|$ are ascociated to CPViolation in the mixing and decay respectivelly.
-Whereas $\eta_f$ is the CP eigenvalue of the final state $f$ and can be either $+1$ or $-1$ corresponding to CP-even and CP-odd respectivelly.
-The above parameter $\lambda_f$ is also releated to the $\Acp{\rm mix}$ and $\Acp{\rm dir}$, see section 4.2 of~\cite{DeBruyn-thesis}.
-Given the so called {\it master equations}{\color{red} ref pdg} for the decay rates of a \Bs and \Bsb
-to a final state $f$, the \CP asymmetry due to the interference between mixing and decay\footnote{assuming $|\qoverp|=1$ and $|\nicefrac{A_f}{\bar{A}_{\bar{f}}}| = 1$ consistet with {\color{red} ref for nocpv in mix and decay}.}
-is shown in \equref{cpv_interf}
+\noindent where the parameter $\eta_f$ is the CP eigenvalue of the final state $f$ and can be either $+1$ or $-1$
+corresponding to CP-even and CP-odd respectivelly. Assumption no CP-Violation in both \BBbarSyst mixing and in the
+decay to the CP eigenstate $f$, asymmetry ascosiated to the interference can be written as shown in \equref{cpv_interf}.
 
 \newcommand{\half}{\frac{1}{2}}
 \begin{equation}
-  \Acp{\text{inter}}(t) = \frac{ - \Im(\lambda_f) \sin(\Delta m_s t)} {\cosh(\half \Delta\Gamma_s t) - \Re(\lambda_f)\sinh(\half\Delta\Gamma_s t)}.
+  a_{\rm CP}^{\rm interf}(t) = \frac{ - \Im(\lambda_f) \sin(\Delta m_s t)} {\cosh(\half \Delta\Gamma_s t) - \Re(\lambda_f)\sinh(\half\Delta\Gamma_s t)},
 \label{cpv_interf}
 \end{equation}
 
-\noindent It is intreasting to point out that according to \equref{cpv_interf} CP asymmetry can still be observed in the interference between decay and
+\noindent where $\Delta\Gamma_s$ and $\Delta m_s$ are the lifetime and mass differences of the mass eigenstates \equref{bs_mass_eigen}.
+
+For completion, according to ~\cite{DeBruyn-thesis,jeroenThesis}, the parameter $\lambda_f$ is also releated to the $\Acp{\rm dir}$ as well as to two
+other types of asymetries. The asymetries are shown in \equref{cp_asym_lambda} and they come from the differential decay rate equations of the $\Bs\to f$
+ and $\Bsb\to f$.
+
+\begin{equation}
+  \Acp{\rm dir}      \equiv \frac{ 1-|\lambda_f|^2} {1 + |\lambda_f|^2},\;\;\;\;\;
+  \Acp{\rm mix}      \equiv \frac{ 2 \Im\lambda_f} {1 + |\lambda_f|^2},\;\;\;\;\;
+  \Acp{\Delta\Gamma} \equiv \frac{ 2 \Re\lambda_f} {1 + |\lambda_f|^2}.
+\label{cp_asym_lambda}
+\end{equation}
+
+The second assymetry, \Acp{\rm mix}, expresses the mixing induced CP asymetry, whereas \Acp{\Delta\Gamma} is ascosiated with the
+difference in the decay rate of the mass eigenstates of \equref{bs_mass_eigen}. It is intreasting to point out that according
+to \equref{cpv_interf} and the \Acp{\rm dr} of \equref{cp_asym_lambda} CP asymmetry can still be observed in the interference between decay and
 mixing even if no CP-Violation occurs in both the mixing and decay. This is posible if the overal phase of $\lambda_f$ in \equref{lambda_cpv} is not zero.
 The asymmetry of \equref{cpv_interf} can vanish at a particular point of time or for a given time interval. Because of that \equref{lambda_cpv} should not
 be integrated over time when measuring \phis. Impling that the time interval between the production and decay of a \Bs (\Bsb) meson has to be
-known\footnote{This interval is called {\it decay time}.}.
+known. This interval is called {\it decay time}.
 
 \begin{figure}[h]
   \centering
   {\sffamily \input{Figures/Chapter1/tree}}
-  \caption{{\color{red} Fix this to look more like \figref{QuarkMixing} and put ckm elements on the vertices}. Explain tha this is called tree diagram}
+  \caption{Leading order tree diagram of the decay \BsJpsiPhi. Figure from~\cite{jeroenThesis}}
   \label{bs2jpsiphi}
 \end{figure}
 
 Given a certain final state $f$ \equref{lambda_cpv} can be expresed as a combination of CKM elements and thus obtain the
 Standard Model estimate of $\Im(\lambda_f)$. The two mesons $\jpsi$ and $\phi$ is a typical choice for $f$ for reasons that are
 explained later in this section. The leading order diagrams for the \BsJpsiPhi decay and the \BBbarSyst mixing are
-shown in \figref{bs2jpsiphi} and \figref{bs_box} repsectivelly. From those diagrams the ratios $\qoverp$ and $\nicefrac{A_f}{\bar{A}_{f}}$
+shown in \figref{bs2jpsiphi} and \figref{bs_box} repsectivelly. Based on these diagrams the ratios $\qoverp$ and $\nicefrac{A_f}{\bar{A}_{f}}$
 can be read as shown in \equref{qoverp}\footnote{Here it has been used {\color{red} equation blah from pdg} } and \equref{af_afbar} repsectivelly.
 
 \begin{equation}
@@ -71,7 +83,9 @@ can be read as shown in \equref{qoverp}\footnote{Here it has been used {\color{r
 \end{equation}
 
 \noindent Combining \equref{qoverp}, \equref{af_afbar} and using the $\beta_s$ angle definition frm \equref{bsAnglesDef} the imaginary part of
-$\lambda_{f}$ of \equref{lambda_cpv} is can be computed, see \equref{phis_def}\footnote{Based on the fact that for a complex number's argument, $\argu{z}$ it is: $\argu{z^{-1}}=\argu{-z}=\argu{z^*}=-\argu{z}$}.
+$\lambda_{f}$ of \equref{lambda_cpv} is can be computed, see \equref{phis_def}.
+
+% \footnote{Based on the fact that for a complex number's argument, $\argu{z}$ it is: $\argu{z^{-1}}=\argu{-z}=\argu{z^*}=-\argu{z}$}.
 
 \begin{align}
   \centering
@@ -96,20 +110,19 @@ $l$ of the $\jpsi$ and $\phi$ mesons. This dependancy has to be taken into acoun
 \subsection{Measuring \phis}
 \label{measuring_phis}
 
-The parameter \phis has been measuremed in the \lhcb experiment by analysing the decays of \BsJpsiPhi~\cite{phis-3fb-paper}.
+The parameter \phis has been measuremed at the \lhcb experiment by studing the decays of \BsJpsiPhi~\cite{phis-3fb-paper}.
 The particular choise of the last final state, where \phiKK and \Jpsimumu, was to do with several reasons. First the high number
 of selected \BsJpsiPhi decays available at \lhcb, roughly $90$k at the end of the \runtwo is an advantage. Second it is relatively easy
 to select real $\phi$ over other mesons that decay to a $K^+K^-$ pair. This is due to the fact that the $\phi$ meson dominates the
-$K^+K^-$ mass distribution within a window of about $\pm 70 \mevcc$ around its mass. The last allows for the analysis to be
-independant\footnote{There is some residual dependance left, which is very similar to what is described in \secref{Kpi_Invariant_mass}. }
-of the \mkk mass variable and thus much simpler. However an angular analysis, see \secref{Diferential_Decay_Rate} is necessary
+$K^+K^-$ mass distribution within a window of about $\pm 60 \mevcc$ around its mass. The last allows for the analysis to be
+independant\footnote{some residual dependance left, very similar to what is described in \secref{Kpi_Invariant_mass}. }
+of the \mkk mass variable and thus much simpler. However an angular analysis, similar to the one in \secref{Diferential_Decay_Rate} is necessary
 to disentangle the odd and even CP components of the final state $\jpsi\phi$, as it became apparent in \equref{phis_jpsiphi_def}.
 In addition, as it was already implied \phis can be correctly probed only when the time dependance of the \BsJpsiPhi decays is taken into
-account\footnote{Specifically \phis is the amplitude of the $\ket{\Bs{}_{,H}}$ and $\ket{\Bs{}_{,L}}$ time distribution oscilations
-mentioned in and shown in {\color{red} ref to something.} }.
-Furthermore knowledge on wheather the final state $\jpsi\phi$ originated from a \Bs or a \Bsb is necessary since it
+account. Furthermore knowledge on wheather the final state $\jpsi\phi$ originated from a \Bs or a \Bsb is necessary since it
 improves the sensitivity of the \phis measuremnt. The techinique used to deduce this information is called {\it flavour tagging}
-and it complicates the analysis further\footnote{One should also take into acount the experimental effects such as angular and time efficiencies plus modeling the \lhcb detector's time resolution.}.
+and it complicates the analysis further. On to p of that experimental effects such as angular and time efficiencies plus modeling the
+\lhcb detector's time resolution need to be taken into account.
 
 \begin{figure}[h]
   \begin{center}
@@ -136,20 +149,18 @@ and it complicates the analysis further\footnote{One should also take into acoun
 
 The status of the \phis measurements is shown in \figref{hfag_phis_dg}, where \lhcb has the most precise measurement to date.
 The combined \phis value from the \lhcb experiment~\cite{phis-3fb-paper} is shown in \equref{phis_lhcb}.
-The last is consistent with the Standard Model prediction of \equref{phis_theo}~\cite{ckm-fitter-phis-pred}\footnote{updated with summer 2015 result from the CKM-fitter group.}
+The last is consistent with global fits to the Standard Model parameters \equref{phis_theo}~\cite{ckm-fitter-phis-pred}\footnote{updated with summer 2015 result from the CKM-fitter group.}
  within the current experimental ucertainty.
 
 \subsection{Probing New Physics}
 \label{probe_new_phys}
 
-{\color{red} consider citations fromt he jpsiKst paper.}
-
 As it was explained at the end of \secref{The_Standard_Model} it seems that the Standard Model of particle physics needs to be extended
 to describe effects and pehonomena beyond our current theoretical framework. In the majority of the Standard Model
-extentions some new particle (field) is introduced, which is usually a new gauge boson or some symetry related
-counter part of an existing particle. An example of the first could be the suggested $Z'$ {\color{red} ref}, hinted by
-the recent \lhcb measuremnt. Whereas for the later {\it {Supersymetry}} {\color{red} ref to susy} doubles the
-number of elementary particles by predicting a supersymetric version for each one of them.
+extentions some new particle (field) is introduced. For example {\it Supersymetry} ~\cite{Golfand:1971iw,Volkov:1973ix,Wess:1974tw}
+doubles the number of elementary particles by predicting a supersymetric version for each one of them
+Supersymetry is appealing since it could solve important problems such as, the {\it hierarchy problem} related to the value of the
+higgs boson mass.
 
 There are typicaly two ways that those particles are sought for, namelly directly or inderctly. The first implies that the
 assumed new particle is created in high energy physics colisions and its presentce is infered by detecting the products of
@@ -170,10 +181,10 @@ as the sum of the Standard Model prediction $\Delta\phiS{SM}$ and the intoduced 
  \label{phis_meas}
 \end{equation}
 
-In view of the combined \phis result illustrated in \figref{hfag_phis_dg} New Physics effects must be small.
+In view of the combined \phis result illustrated in \figref{hfag_phis_dg} New Physics effects, if there in the first place, must be small.
 This is supported by other intreasting measuremnts of flavour physics observables where deviations from Standard Model are not significant enough
-to claim the presence of New Physics effects. Such hints come from the rare decays $\Bmm$, $\BdKstmumu$ or from the \Vub CKM element
-where different type of measurements exhibit tentions with each other that are not expected from the Standard Model.
+to claim the presence of New Physics effects. Such hints come from the rare decays $\Bmm$~\cite{CMS:2014xfa}, $\BdKstmumu$~\cite{Aaij:2015oid}
+or from the \Vub CKM element~\cite{Aaij:2015bfa} where different type of measurements exhibit tentions with each other that are not expected from the Standard Model.
 An intreasting fact that could be helpfull in the future is that all those deviations and tentions are
 corelated with each other. Meaning that under the assumption of a certain New Physics model all the falvor physics
 observables need to from a consistent picture such that the assumed model can unambiguislly be identified.
@@ -194,13 +205,12 @@ shown in \figref{bs2jpsiphi_peng}. The \phis measurement of \equref{phis_lhcb} i
 \begin{figure}[h]
   \centering
   {\sffamily \input{Figures/Chapter1/penguin}}
-  \caption{ Higher order-penguin diagram. {\color{red} Quote the ckm suppresion that you explain in the penguin chapter}}
+  \caption{ Higher order-penguin diagram. Figure from~\cite{jeroenThesis}. This diagram is suppressed by the CKM matrix elements ivolved as explained in \secref{Penguins}}
   \label{bs2jpsiphi_peng}
 \end{figure}
 
-\noindent This has been a reasonable assumtion before the \lhcb measurement which showed that the measured \phiS{eff} value is consistent with the Standard
-Model prediction \phiS{SM,tree}, within the current experimental accuracy. However with increasing accuracy {\color{red} ref lhcb upgrade \phis sensitivy}
-the last assumption needs to be revisited.
+This has been a reasonable assumtion before the \lhcb measurement which showed that the measured \phiS{eff} value is consistent with the Standard
+Model prediction \phiS{SM,tree}, within the current experimental accuracy. However with the increasing accuracy at the \lhcb experiment the last assumption needs to be revisited.
 Specifically, because of the fact that penguin topology contributions shift the leading tree level Standard Model prediction.
 The last shift could be misinterpreted as $\Delta\phiS{NP}$ if those penguin contributions are not properly esimated.
 Thus in order to correctly probe New Physics contributions in fututre measurements the penguin topology contributions $\Delta\phiS{SM,peng}$
@@ -212,9 +222,9 @@ have to be estimated.
 \end{equation}
 
 \noindent The above situation is spelled out in \equref{phis_sm_peng}.
-Calculations for the penguin contributions to $\Delta\phiS{SM,peng}$ are available {\color{red} 40 and 41 in kyrstofs thesis}.
+Calculations for the penguin contributions to $\Delta\phiS{SM,peng}$ are available~\cite{Liu:2013nea,Frings:2015eva}.
 However, these cacluations are difficult to perform, since they involve non-perturbative long-distance QCD effects. Thus an alternative
-approach, according to {\color{red} krystof and rob}, is followed in order to experimentally extract $\Delta\phiS{SM,peng}$ by relying to
+approach, according to ~\cite{DeBruyn:2014oga,Frings:2015eva,Faller:2008gt,Liu:2013nea,DeBruyn-thesis}, is followed in order to experimentally extract $\Delta\phiS{SM,peng}$ by relying to
 similar decay cahanells as \BsJpsiPhi as well. By doing so the presition on the penguin contributions increases. A desctription
 of the necessesary formalism to extract the penguin shift, $\Delta\phiS{SM,peng}$, using also the chanells \BsJpsiKst and \BsJpsiRho is
 given in \chapref{Penguins}.
