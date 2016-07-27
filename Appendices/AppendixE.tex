@@ -2,6 +2,56 @@
 
 \chapter{Additional Tables}
 \label{AdditionalTables}
+
+\begin{table}[htb]
+  \centerline{
+    \rotatebox{90}{
+    \footnotesize
+    \begin{tabular}{|l|r|l|l|}\hline
+      Decay mode      &  Cut parameter                         & Stripping line            & Final selection \\
+      \hline \hline
+      $\jpsi\to\mumu$ & $\DLL{\mu}{\pi}(\mu)$                  & $>0$                      & --        \\
+      {}              & $\chi^2_{\rm vtx}/{\rm nDoF}(\jpsi)$   & $<16$                     & --        \\
+      {}              & $\chi^2_{\rm DOCA}/{\rm nDoF}(\jpsi)$  & $<20$                     & --        \\
+      {}              & $\chi_\text{IP}^2(\mu)$                & --                        & $>16$     \\
+      {}              & \pt($\mu$)                             & $>0.5$\gevc               & --        \\
+      {}              & IsMuon$(\mu)$                          & $>0$                      & --        \\
+      {}              & $|M(\mu^+\mu^-)-M(\jpsi)|$             & $<150\mevcc$               & --        \\
+      \hline \hline
+      $\Kstarzb\to\Km\pip$ & $\DLL{K}{\pi}(K)$                         & $>0$                      & --          \\
+      {}                   & \pt($K$)                                  & $>0.5$\gevc               & $>0.5$\gevc \\
+      {}                   & $\text{Prob}_{\rm ghost}(\rm track)(K)$   & $<0.8$                    & --          \\
+      {}                   & $\chi_\text{IP}^2(K)$                     & --                        & $>2$        \\
+      {}                   & ${\rm ProbNNK}(K)$                        & --                        & $>0.21$     \\
+      {}                   & ${\rm ProbNNK}(K)/{\rm ProbNNp}(K)$ (*)   & --                        & $>0.99$     \\
+      {}                   & $\DLL{K}{\pi}(\pi)$                       & $<0$                      & --          \\
+      {}                   & \pt($\pi$)                                & $>0.5$\gevc               & $>0.5$\gevc \\
+      {}                   & $\text{Prob}_{\rm ghost}(\rm track)(\pi)$ & $<0.8$                    & --          \\
+      {}                   & $\chi_\text{IP}^2(\pi)$                   & --                        & $>2$        \\
+      {}                   & $\rm ProbNNK(\pi)$                        & --                        & $<0.01$     \\
+      {}                   & $\rm ProbNN\pi(\pi)/ProbNNp(\pi)$ (*)     & --                        & $>21.9$     \\
+      {}                   & $\chi^2_{\rm vtx}/{\rm nDoF}(\Kstarzb)$   & $<25$                     & --          \\
+      {}                   & $\chi^2_{\rm DOCA}/{\rm nDoF}(\Kstarzb)$  & $<30$                     & --          \\
+      {}                   & $M(K^-\pi^+)$                             & $\in [750,\,1900]\mevcc$  & --          \\
+      {}                   & $|M(K^-\pi^+)-896|$               & --                        & $<70\mevcc$ \\
+      \hline \hline
+      \BsJpsiKst        & $M(\Bs)$                                 & $\in [5100,\,5700]\mevcc$ & $\in [5150,\,5650]\mevcc$   \\
+      {}             & $\chi^2_{\rm vtx}/{\rm nDoF}(\Bs)$       & $<10$                     & --                          \\
+      {}             & ${\rm DIRA}(\Bs)$                        & $>0.999$                  & --                          \\ %DIRA w.r.t. OWNPV
+      {}             & VS                                     & $>1.5\mm$                 & --                          \\ % B_s0_FD_OWNPV
+      \BuJK veto     & $|M(\jpsi, K)-5279|$                     & --                        & $>60\mevcc$                 \\
+      \hline \hline
+      BDTG (MVA)     & 2011 data/MC (**)                        & --                        & $>0.2$                      \\
+      {}             & 2012 data/MC (**)                        & --                        & $>0.12$                     \\
+      \hline
+    \end{tabular}}
+}
+  \caption{Selection criteria for \BsJpsiKst\ candidates. Both at stripping and final stage selection. Also, (*) cuts are introduced for \LbJpsipK and \LbJpsippi peaking backgrounds suppression
+           The nominal PDG value for M(\jpsi) is used for the \jpsi. VS stands for the separation between a vertex w.r.t. its associated PV. {\color{red} Explain some of the variables above maybe...}}
+  \label{Bs2JpsiKstSelection}
+\end{table}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Iterative procedure convergence tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
