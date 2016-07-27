@@ -39,7 +39,11 @@ headsepline, % Uncomment to get a line under the header
 \setcounter{tocdepth}{2} % Excludes subsubsection from the toc
 
 \usepackage{xspace}
-\usepackage{xcolor}
+\usepackage{color}
+\usepackage[cmyk]{xcolor}
+\usepackage{amsmath}
+\usepackage{libertine}
+
 \usepackage{upgreek}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -57,8 +61,11 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{cancel} % cross out terms with a label
 
 \usepackage{pgfplots} % externally build tex plots. re build only if they change.
-\usetikzlibrary{external}
+\usepackage{tikz}
+\usepackage{varwidth}
+\usetikzlibrary{external,arrows,positioning,shapes}
 \tikzexternalize[prefix=Figures/tikz/]
+\input{flow-charts-preample} % some definitions for droawing flow charts
 
 \usepackage[backend=bibtex,style=numeric-comp,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{main.bib} % The filename of the bibliography

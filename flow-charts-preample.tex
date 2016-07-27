@@ -1,0 +1,59 @@
+
+
+\colorlet{Source}{green!20}
+\colorlet{Op}{blue!20}
+\colorlet{Cut}{orange!20}
+\colorlet{Sink}{green!20}
+\colorlet{Text}{black}
+\colorlet{Line}{black!75}
+
+\tikzset{
+  block/.style = {
+    rectangle,
+    text centered,
+    execute at begin node={\begin{varwidth}{2.0in}\centering},
+    execute at end node={\end{varwidth}}
+  },
+  source/.style = {
+    fill=Source,
+    draw=Source,
+    text=Text,
+    font=\bfseries,
+  },
+  op/.style = {
+    fill=Op,
+    draw=Op,
+    text=Text
+  },
+  cut/.style = {
+    fill=Cut,
+    draw=Cut,
+    text=Text
+  },
+  sink/.style = {
+    fill=Sink,
+    draw=Sink,
+    text=Text,
+    font=\bfseries,
+  },
+  connect/.style = {
+    draw,
+    very thick,
+    color=Line,
+    -latex'
+  },
+   line/.style = {
+    draw,
+    thick,
+    color=Line,
+    ->,
+    >=stealth',
+  },
+}
+
+\def\connect#1#2#3#4{
+  \path [connect] (#1) -- (#2);
+  %\draw [draw=#3, fill=#3] (#1.south west) -- ($(#1.south)!0.5!(#2.north)$) -- (#1.south east) -- cycle;
+  %\draw [draw=Line] (#1.south west) -- ($(#1.south)!0.5!(#2.north)$) -- (#1.south east);
+  %\fill [fill=#4] (#1.south west) -- (#2.north west) -- (#2.north east) -- (#1.south east) -- ($(#1.south)!0.5!(#2.north)$) -- cycle;
+}

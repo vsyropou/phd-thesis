@@ -1,0 +1,24 @@
+\begin{tikzpicture}[node distance=.5cm and 2.cm, every node/.style={rectangle,fill=white}]
+       \node [block, source] (test-0) {Velo Tracks};
+       \node [block, cut, below=of test-0, ] (test-1) {$\pt > 500$ MeV/c};
+       \node [block, op, below=of test-1,  xshift=2cm] (test-2) {MatchVeloTTMuon};
+       \node [block, op, below=of test-2] (test-20) {Forward Tracking};
+       \node [block, op, below=of test-20] (test-4) {Fit track};
+        \node [block, source, below=of test-1,  xshift=-2cm] (test-3) {Get long track};
+        \node [block, cut, below=of test-4,   xshift=-2cm] (test-5) {Cuts on track};
+        \node [block, op, below=of test-5] (test-6) {IsMuon};
+        \node [block, op, below=of test-6] (test-7) {Make dimuons };
+	\node [block, cut, below=of test-7] (test-8) {Additional cuts};
+	\node [block, sink,below=of test-8] (test-9) {Decision};
+       \path [line] (test-0) -- (test-1);
+       \path [line] (test-1) -- node {no} (test-2);
+       \path [line] (test-1) -- node {yes} (test-3);
+       \path [line] (test-2) -- (test-20);
+       \path [line] (test-20) -- (test-4);
+       \path [line] (test-3) -- (test-5);
+       \path [line] (test-4) -- (test-5);
+       \path [line] (test-5) -- (test-6);
+       \path [line] (test-6) -- (test-7);
+       \path [line] (test-7) -- (test-8);
+       \path [line] (test-8) -- (test-9);
+\end{tikzpicture}
