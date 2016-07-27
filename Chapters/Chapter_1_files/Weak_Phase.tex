@@ -10,8 +10,7 @@ the search for new particles is discussed.
 \begin{figure}[h]
   \centering
   \resizebox{0.4\textwidth}{!}{\input{Figures/Chapter1/decay.pdftex_t}}
-  \caption{The two interfering decay paths leading to the same final state.
-  {\color{red} Explain and make sure you understannd where the phases tha tyou show are coming from.}           }
+  \caption{The two interfering decay paths leading to the same final state.}
   \label{interference}
 \end{figure}
 
@@ -39,6 +38,8 @@ decay to the CP eigenstate $f$, asymmetry ascosiated to the interference can be 
 \end{equation}
 
 \noindent where $\Delta\Gamma_s$ and $\Delta m_s$ are the lifetime and mass differences of the mass eigenstates \equref{bs_mass_eigen}.
+Thus it can be seen that the assymetry of \equref{cpv_interf} shows an oscilatory behaviour versus time, see figure 4.3 in~\cite{jeroenThesis}.
+The frequency of the oscilation is driven by $\Delta m_s$, whereas the amplitude by $\Im\lambda_f$.
 
 For completion, according to ~\cite{DeBruyn-thesis,jeroenThesis}, the parameter $\lambda_f$ is also releated to the $\Acp{\rm dir}$ as well as to two
 other types of asymetries. The asymetries are shown in \equref{cp_asym_lambda} and they come from the differential decay rate equations of the $\Bs\to f$
@@ -54,7 +55,7 @@ other types of asymetries. The asymetries are shown in \equref{cp_asym_lambda} a
 The second assymetry, \Acp{\rm mix}, expresses the mixing induced CP asymetry, whereas \Acp{\Delta\Gamma} is ascosiated with the
 difference in the decay rate of the mass eigenstates of \equref{bs_mass_eigen}. It is intreasting to point out that according
 to \equref{cpv_interf} and the \Acp{\rm dr} of \equref{cp_asym_lambda} CP asymmetry can still be observed in the interference between decay and
-mixing even if no CP-Violation occurs in both the mixing and decay. This is posible if the overal phase of $\lambda_f$ in \equref{lambda_cpv} is not zero.
+mixing even if no CP-Violation occurs in both the mixing and decay. This is posible if the imaginary part, $\Im\lambda_f$, in \equref{lambda_cpv} is not zero.
 The asymmetry of \equref{cpv_interf} can vanish at a particular point of time or for a given time interval. Because of that \equref{lambda_cpv} should not
 be integrated over time when measuring \phis. Impling that the time interval between the production and decay of a \Bs (\Bsb) meson has to be
 known. This interval is called {\it decay time}.
@@ -66,46 +67,49 @@ known. This interval is called {\it decay time}.
   \label{bs2jpsiphi}
 \end{figure}
 
-Given a certain final state $f$ \equref{lambda_cpv} can be expresed as a combination of CKM elements and thus obtain the
-Standard Model estimate of $\Im(\lambda_f)$. The two mesons $\jpsi$ and $\phi$ is a typical choice for $f$ for reasons that are
-explained later in this section. The leading order diagrams for the \BsJpsiPhi decay and the \BBbarSyst mixing are
-shown in \figref{bs2jpsiphi} and \figref{bs_box} repsectivelly. Based on these diagrams the ratios $\qoverp$ and $\nicefrac{A_f}{\bar{A}_{f}}$
-can be read as shown in \equref{qoverp}\footnote{Here it has been used {\color{red} equation blah from pdg} } and \equref{af_afbar} repsectivelly.
+The imagianary part of \equref{lambda_cpv} can be expresed as a combination of CKM elements, given a certain final state $f$, like $\jpsi\phi$.
+Furthermore, for the last final state only the leading order diagrams of \figref{bs_box} and \figref{bs2jpsiphi} are assumed for the \Bs, \Bsb
+mixing and decay respectivelly. Under these assumptuons \equref{lambdaf_ckm} shows the leading order Standard Model estimate of $\Im(\lambda_f)$.
 
 \begin{equation}
- \frac{q}{p} = \frac{\Vtb^*\Vts}{\Vtb\Vts^*}
-\label{qoverp}
-\end{equation}
-
-\begin{equation}
- \frac{\bar{A}_{\jpsi\phi}} {A_{\jpsi\phi}} = \frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}
-\label{af_afbar}
-\end{equation}
-
-\noindent Combining \equref{qoverp}, \equref{af_afbar} and using the $\beta_s$ angle definition frm \equref{bsAnglesDef} the imaginary part of
-$\lambda_{f}$ of \equref{lambda_cpv} is can be computed, see \equref{phis_def}.
-
-% \footnote{Based on the fact that for a complex number's argument, $\argu{z}$ it is: $\argu{z^{-1}}=\argu{-z}=\argu{z^*}=-\argu{z}$}.
-
-\begin{align}
   \centering
- \Im(\lambda_f) =& \eta_f\sin\parenthesis{ \argu{\frac{\Vtb^*\Vts}{\Vtb\Vts^*}} + \argu{\frac{\Vcb\Vcs^*}{\Vcb^*\Vcs}} } \nonumber \\
-                =& \eta_f\sin\parenthesis{ \argu{\parenthesis{\Vtb^*\Vts}^2}    + \argu{\frac{1}{\parenthesis{\Vcb^*\Vcs}^2}} }
-                = \eta_f\sin\parenthesis{  2 \; \argu{\frac{\Vtb^*\Vts}{\Vcb^*\Vcs}} } \nonumber \\
-                =& \sin\parenthesis{-2\betas}
-                \equiv \eta_f\sin\parenthesis{\phis}
+ \Im(\lambda_f) = \eta_f \Im\parenthesis{ \frac{\Vts\Vtb^*}{\Vts^*\Vtb} \; \Vcs^*\Vcb \; \frac{1}{\Vcs\Vcb^*} },
+ \label{lambdaf_ckm}
+\end{equation}
+
+\noindent where the first fraction is releated to the mixing part \qoverp whereas the second and third come from the \Bsb and \Bs
+decay amplitudes respectivelly. Re-writing the imaginary part of \equref{lambdaf_ckm} taking into acount \equref{bsAnglesDef},
+one can obtain \equref{lambda_ckm_manip}
+
+\begin{equation}
+  \centering
+  \Im\parenthesis{ \brackets{ \frac{\Vts\Vtb^*}{\Vcs\Vcb^*}}^2 } =
+  \sin \parenthesis{2 \arg \parenthesis{\frac{\Vts\Vtb^*}{\Vcs\Vcb^*}}} =
+  \sin \parenthesis{-2\betas}.
+ \label{lambda_ckm_manip}
+\end{equation}
+
+\noindent The parameter \phis is finally defined as
+
+\begin{equation}
+  \centering
+  \phis\equiv-2\betas,
  \label{phis_def}
-\end{align}
+\end{equation}
 
 \noindent An additional implication arises from the choice of the $\jpsi\phi$ as the final state.
-Specifically due to the fact that the last particles have a non zero spin quantum number, their combined wavefunction
-is not a pure cp eigenstate. The eigenvalue $\eta_f$ of the last wavefunction dependants on the total angular momentum
-$l$ of the $\jpsi$ and $\phi$ mesons. This dependancy has to be taken into acount in \equref{phis_def} resulting in \equref{phis_jpsiphi_def}
+Specifically, due to the fact that the last particles have a non zero spin quantum number, their combined wavefunction
+is not a pure CP eigenstate. The eigenvalue $\eta_f$ of the last wavefunction dependnts on the total angular momentum
+$l$ of the $\jpsi$ and $\phi$ mesons. This dependancy has to be taken into acount when going from \equref{lambdaf_ckm}
+to \equref{phis_jpsiphi_def}, resulting in \equref{phis_jpsiphi_def}
 
 \begin{equation}
  \Im(\lambda_{\jpsi\phi}) = (-1)^l\sin\parenthesis{\phis}
  \label{phis_jpsiphi_def}
 \end{equation}
+
+\noindent As it was previously mentioned $\Im\lambda_{\jpsi\phi}$ is the amplitude of the time dependant asymmetry of \equref{cpv_interf}.
+
 
 \subsection{Measuring \phis}
 \label{measuring_phis}
