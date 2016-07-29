@@ -1,116 +1,84 @@
 Following {\color{red} 0810.4248v1} the penguin parameters $\alpha_f$ and $\beta_f$ of \equref{bsjpsiphi_amp_param}
-can be related to the CP asymmetries, \equref{acp_mixing} and \equref{cpv_decay},
-as shown in \equref{}.
+can be related to the CP asymmetries of \equref{cp_asym_lambda} as shown in \equref{bsjpsiphi_peng_acp_obs}.
 
-\begin{align}
-  \Acp{\rm dir}\parenthesis{\BsJpsiPhi}_f &= \frac{ -2\epsilon a_f \sin\theta_f \sin\gamma} {1 + 2\epsilon a_f \cos\theta_f \cos\gamma + \epsilon^2 a_f^{2}} \\
-  \Acp{\rm mix}\parenthesis{\BsJpsiPhi}_f &= \eta_f \brackets{\frac{\sin\phis - 2\epsilon\alpha_f \cos\theta_f\sin(\phis+\gamma) + \epsilon^2\alpha_f^2 \sin(\phis+2\gamma)}
-                                                                 {1 + 2\epsilon a_f \cos\theta_f \cos\gamma + \epsilon^2a_f^{2}} }
+\begin{subequations}
   \label{bsjpsiphi_peng_acp_obs}
+\begin{align}
+  \Acp{\rm dir}\parenthesis{\B\to f} &= \frac{ \akPeng \sin\thkPeng \sin\gamma} {1 - 2 a_k \cos\thkPeng \cos\gamma + a_k^{2}}
+  \label{bsjpsiphi_peng_acp_dir} \\
+  \Acp{\rm mix}\parenthesis{\B\to f} &= \nonumber \\
+   = \eta_k & \brackets{\frac{\sin\phiq - 2\akPeng \cos\thkPeng\sin(\phiq+\gamma) + \akPeng^2 \sin(\phiq+2\gamma)}
+                                                                 {1 - 2 a_k \cos\thkPeng \cos\gamma + a_k^{2}} },
+  \label{bsjpsiphi_peng_acp_mix}
 \end{align}
+\end{subequations}
 
-Given the experimentally measured values of the above CP assymetries {\color{red} ref blah}, a $\chi^2$ fit could be used,
-see ref {\color{red} krystof} to determine the penguin parameters alpha and beta. Subsequently and according to rob
-the penguin parameters $\alpha_a$ and $\theta_f$ can be related to $\Delta\phiS{SM,peng}$ as shown in \equref{tandelta}.
+\noindent where $\phiq$ represents the Standard Model prediction for either the weak phase \phis of \equref{phis_theo},
+or the equivalent weak phase \phid of the \Bd meson defined in \equref{phid_theo}.
+Equations \ref{bsjpsiphi_peng_acp_obs} form a $2x2$ system in terms of $(\akPeng,\thkPeng)$ that can in principle be solved.
+Subsequently the penguin shift to \phis could be determined from \equref{tandelta}.
 
 \begin{equation}
-\tan(\Delta{\phis}_f) = \frac{2\epsilon a_f \cos\theta_f \sin\gamma+\epsilon^2 a^2_f \sin2\gamma}{1+2\epsilon a_f \cos\theta_f \cos\gamma+ \epsilon^2 a^2_f \cos2\gamma}.
+\centering
+\tan(\Delta\phis^k) = \frac{ 2\akPengPrime\epsilon\cos\thkPengPrime \sin\gamma + \epsilon^2\akPengPrime^2 \sin2\gamma}
+                             {1 + 2\epsilon\akPengPrime \cos\thkPengPrime \cos\gamma + \epsilon^2\akPengPrime^2 \cos2\gamma},
 \label{tandelta}
 \end{equation}
 
-However, the preciosion on $\Delta{\phis}_f$ increases by releating it to other chanells, described in the subsequent section.
-Thus the final $\chi^2$ fit is postponed untill after the \BsJpsiKst and \BsJpsiRho chanells are introduced in \secref{penguin_more_chanells}
+\noindent where $\Delta\phis^k$ is identified with the polarisation dependant $\Delta\phiS{SM, peng}$ of \equref{phis_sm_peng}.
 
-{\color{red} The chi square fit overconstrains delta phis instead of solving for it. This way you exploit from many measurements}
-\section{Control Channels}
-\label{penguin_more_chanells}
+However, as it was metnioned in the begining of the currrent chapter, the goal is to increase the precision on $\Delta{\phis}$
+by relating similar to \BsJpsiPhi chanells in the penguin estimation on grounds of the $\grpsuthree$ quark symmetry.
+Thus, the measured values of the observables \equref{bsjpsiphi_peng_acp_obs} from the chanells \BsJpsiKst and \BdJpsiRho
+are combined in a $\chi^2$ fit to estimate $(\akPeng,\thkPeng)$. The details of this fit are given in \secref{penguin_chi2_fit}.
 
-For this relation it is assumed that, as far as the strong interaction is concerned, quark flavor is irrelevant,
-since the strong interaction couples to color and not to flavor. This assumption is based on the so called $SU(3)_F$ or $U$-sppin symmetry,
-see {\color{red} Krystof thesis section 3.4 ana elsewere.}.
 
-In order to increase sensitivuty or for a flavour sepcific finals atetes the Acp mix is nto there thus the H observable is constructed
-according to
-
-\subsection{The \BsJpsiKst chanell}
+\subsubsection{Information from Branching ratios}
+Addional information from branching ratios can be exploited via the $H$ observable, shown in \equref{bsjpsikst_Hobs_def}.
 
 \begin{equation}
-  \Acp{\rm dir}\parenthesis{\BsJpsiKst}_f = \frac{ 2a'_f \sin\theta'_f \sin\gamma} {1 - 2a'_f \cos\theta'_f \cos\gamma +  {a'_f}^{2}}
-  \label{bsjpsikst_peng_acp_obs}
-\end{equation}
-
-Note the absence of the suppresion factor $\epsilon$
-
-Additional information from \BsJpsiKst can be imported via
-\begin{equation}
-  H_f \equiv \frac{1}{\epsilon} \left|\frac{\mathcal{A}'_f}{\mathcal{A}_f}\right|^2
-  \frac{\text{PhSp}\left(\BsJpsiPhi\right)}{\text{PhSp}(\BsJpsiKst)}
-  \frac{\BR{\BsJpsiKst}_{\text{theo}}}{\BR{\BsJpsiPhi}_{\text{theo}}}
-  \frac{f_i}{f'_i}\:,  \\
+\centering
+  \Hobs{k} \equiv   \frac{1}{\epsilon}
+            \modulo{\frac{\formFctr{k}'}{\formFctr{k}}}^2
+                    \frac{\PhSp{\BsJpsiPhi}} {\PhSp{\B\to f}}
+                    \frac{\tau_{\Bs}}{\tau_{\Bq}}
+                    \frac{\BRof{\B\to f}_{\rm theo}}{\BRof{\BsJpsiPhi}_{\rm theo}}
+                    \frac{\fP{k}}{{\fP{k}'}},
 \label{bsjpsikst_Hobs_def}
 \end{equation}
-{\color{red} SITE PAPER HERE. avoid defining phase space functions, and the isue with the teoretical vs expermental branching rations.}
 
-% \begin{equation}
-% \text{PhSp}(B\to V_1V_2) \equiv \frac{1}{16\pi m_B}\Phi\left(\frac{m_{V_1}}{m_B}, \frac{m_{V_2}}{m_B}\right)\:,
-% \label{bsjpsikst_Hobs_def_params}
-% \end{equation}
-
-\begin{equation}
-  H_f = \frac{1-2a_i \cos(\theta_i) \cos\gamma+a_i^{2}}{1+2\epsilon a'_i \cos\theta'_i\cos\gamma +\epsilon^2 a_i^{\prime 2}}
-\label{bsjpsikst_Hobs_param}
-\end{equation}
-
-\begin{align}
-\left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
-%%%
-\left|\frac{\mathcal{A}'_{\parallel}(\BsJpsiPhi)}{\mathcal{A}_{\parallel}(\BsJpsiKst)}\right| & = 1.28 \pm 0.15\:,\\
-%%%
-\left|\frac{\mathcal{A}'_{\perp}(\BsJpsiPhi)}{\mathcal{A}_{\perp}(\BsJpsiKst)}\right| & = 1.20 \pm 0.12\:,\label{Eq:AmpRat_JpsiKstar_perp}
-\end{align}
-
-
-\subsection{The \BsJpsiRho chanell}
-
-This is addes in a similar way as to \BsJpsiKst but including Acp mix.
-Ref reff krystof and paper
-
-Plus several hypothesis {\color{red} study a bit from ana ana paper}
-% \begin{align}
-%   \Acp{\rm dir}\parenthesis{\BsJpsiRho}_f &= \frac{ 2a''_f \sin\theta''_f \sin\gamma} {1 - 2a''_f \cos\theta''_f \cos\gamma +  {a''_f}^{2}} \\
-%   \Acp{\rm mix}\parenthesis{\BsJpsiPhi}_f &= \eta_f \brackets{\frac{\sin\phis - 2\epsilon\alpha_f \cos\theta_f\sin(\phis+\gamma) + \epsilon^2\alpha_f^2 \sin(\phis+2\gamma)}
-%                                                                  {1 + 2\epsilon a_f \cos\theta_f \cos\gamma + \epsilon^2a_f^{2}} }
-%   \label{bsjpsirho_peng_acp_obs}
-% \end{align}
-
-
-
-\subsubsection{Fitting for the $\alpha_f$ and $\theta_f$}
-
-By invoking \grpsuthree symmetry, as shown in \equref{su3_apply}, the acpmix and acp dir and ah obserbales from the chanells \BsJpsiPhi \BsJpsiRho \BsJpsiKst
-are used to define a $\chi^2$, see ref. Minimizing the $\chi^2$ yields the penguin paramtgers $\alpha_f$ $\theta_f$ whic are
-then translated, using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis.
+\noindent where, the ${}^\prime$ superscript labels quantities releated to the \BsJpsiPhi chanell necessary to be
+distinguisehed from the ones releated to the control chanell $\B\to f$. The subscript "theo" is there to distinguish
+between the concept of branching fraction used in theoretical calculations and the ones that are measured experimentally,
+see \secref{penguin_more_chanells} for more details. The polarization fractions $\fP{k}$ are identical to the ones
+efined in \equref{amps_param}. Whereas the average decay time of the \Bs and \Bq are denoted by $\tau_{\Bs}$ and $\tau_{\Bq}$
+respectivelly. The phase space factor $\PhSp{X}$ is defined in \equref{phase_space_eq_def}.
 
 \begin{equation}
-a_i = a'_i\:,\qquad \theta_i = \theta'_i\:,
-\label{su3_apply}
+\centering
+   \PhSp{\BJpsiX}  = \brackets{ \mass{\Bq} \PhSpPhi{ \nicefrac{\mass{\jpsi}}{\mass{\Bq}}, \nicefrac{\mass{X}}{\mass{\Bq}}  } }^3,
+\label{phase_space_eq_def}
 \end{equation}
 
-and similartly for \BsJpsiRho
-
-The following inputs have been used for the fit.
-
-\subsubsection{\grpsuthree breaking}
-\label{su3_breaking}
-
-The fact that the \grpsuthree syummetry is a broken symmetry is taken into account in the fit by re parametrizing
-$\alpha_f$ and $\theta_f$ as shown in \equref{su3_breaking}.
+\noindent where,
 
 \begin{equation}
-a_i \to \xi \; \alpha_i \quad \theta_i \to \delta + \theta'_i
-\label{su3_breaking}
+\centering
+   \PhSpPhi{x,y} = \sqrt{ (1-(x+y)^2)(1-(x-y)^2) },
+\label{phase_space_phi_eq_def}
 \end{equation}
 
-As there are no dedicated studies for \grpsuthree breaking. It is assumed that $\xi=1$ and $\delta=0$ but include uncertainties
-on these paorameters as gaussian constrains in the $\chi^2$ fit. The dependance of $\Delta\phiS{SM,peng}$ on the $\xi$ and $\delta$
-uncertainties was found to be irrelavant, {\color{red} see jpsiKst paper}, due to the particular structure of \equref{tanddelta}.
+\noindent is the standard two body decay phase space function. Lastly, the $H$ observable is releated to the penguin parameters
+$(\akPeng,\thkPeng)$ as shown in \equref{Hobs_peng_param}.
+
+\begin{equation}
+\centering
+  \Hobs{k} = \frac{1-2\akPeng\cos\thkPeng\cos\gamma + \akPeng^2}{1+2\epsilon\akPengPrime\cos\thkPeng\cos\gamma + \epsilon^2\akPeng^2}
+\label{Hobs_peng_param}
+\end{equation}
+
+The observable is usefull for final states where the \Acp{\rm mix} observable vanishes. Such final states are called {\it flavour specific}
+where CP-Violation in the interference is not active, implying that either \Bs or \Bsb can decay to this final state but not both.
+Despite providing the second equation in flavour specific states the $\Hobs{}$ relies in external input, particularly the hadronic quantities $\formFctr{k}$.
+The last come from theoretical calculations and introduce additional uncertainty to the exrtaction of the penguin paramters.
+For this reason the $\Hobs{}$ is not always prefared. The exact details on the treatment of this observable is postponed for \secref{penguin_more_chanells}.

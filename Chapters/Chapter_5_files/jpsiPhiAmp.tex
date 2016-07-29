@@ -8,24 +8,24 @@ given the current experimental precision. Given this assumption the \BsJpsiPhi a
 relevat CKM elements involved in each topology.
 
 \begin{equation}
-A \parenthesis{\BsJpsiPhi} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
+\mathcal{A} \parenthesis{\BsJpsiPhiPolState{k}} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
  \label{bsjpsiphi_amp}
 \end{equation}
 
 \noindent where the suscribts in the penguin topologies, $P$, denote the flavour of the quark present inside the loop of \figref{bs2jpsiphi_peng}.
-The above expresion \equref{bsjpsiphi_amp} has to be re-expressed in such a way that it is posible to probe the penguin contributions to
-the \BsJpsiPhi decay amplitude. Given the unitarity feature of the CKM matrix plus the Wolfenstein paramtrization of \equref{CKMwolfenstein},
+The above expresion has to be parameterized in such a way that it is posible to probe the penguin contributions to
+the \BsJpsiPhi decay amplitude. Given the unitarity feature of the CKM matrix and using the Wolfenstein parametrization of \equref{CKMwolfenstein},
 the decay amplitude in \equref{bsjpsiphi_amp} can be rewritten as shown in \equref{bsjpsiphi_amp_param}.
 
 \begin{equation}
-  A \parenthesis{\BsJpsiPhi} = \eta_f  \parenthesis{1-\frac{\lambda^2}{2}} \polFrac{f} \brackets{ 1 + \epsilon a_f e^{i\theta_f} e^{i\gamma} },
+  \mathcal{A} \parenthesis{\BsJpsiPhiPolState{k}} = \eta_k  \parenthesis{1-\frac{\lambda^2}{2}} \formFctr{k} \brackets{ 1 - \epsilon \akPeng e^{i\thkPeng} e^{i\gamma} },
  \label{bsjpsiphi_amp_param}
 \end{equation}
 
 \noindent where the following definitions are used:
 
 \begin{equation}
-  \polFrac{f} \equiv \VcbMag \brackets{C + P_c - P_t}, \;\;\;\; a_f e^{i\theta_f} \equiv R_b \brackets{ \frac{P_c - P_t}{C + P_c - P_t} },
+  \formFctr{k} \equiv \VcbMag \brackets{C + P_c - P_t}, \;\;\;\; \akPeng e^{i\thkPeng} \equiv R_b \brackets{ \frac{P_c - P_t}{C + P_c - P_t} },
   \label{bsjpsiphi_amp_param_defs}
 \end{equation}
 
@@ -36,9 +36,11 @@ the decay amplitude in \equref{bsjpsiphi_amp} can be rewritten as shown in \equr
   \label{bsjpsiphi_amp_param_defs_II}
 \end{equation}
 
-\noindent The quantities in $\alpha_f$ and $\theta_f$ in \equref{bsjpsiphi_amp_param} parameterize the penguin contribution to the overall \BsJpsiPhi
-decay amplitude. The subsctipt $f$ denotes the \BsJpsiPhi amplitude polarization which is introduced for reasons mentioned at the end
-of \secref{Flavour_Physics} and is also present in the \BsJpsiKst angular analysis in \secref{Diferential_Decay_Rate}.
+\noindent The quantities in $\akPeng$ and $\thkPeng$ in \equref{bsjpsiphi_amp_param} parameterize the penguin contribution to the overall \BsJpsiPhi
+decay amplitude. Whereas the hadronic parameters $\formFctr{k}$ are discussed in \secref{penguin_more_chanells}.
+The subsctipt $k$ denotes the \BsJpsiPhi amplitude polarization which is introduced for reasons mentioned at the end of
+\secref{Flavour_Physics}\footnote{Subscript $k$ is identical to the one defined in \equref{amps_param} of \chapref{Data_Analysis}.}.
 The complex phase $\gamma$ is introduced via the $\Vub$ element of the CKM matrix. The parameter $\lambda$ here is the one of the
-CKM matrix parametrization of \secref{CKMwolfenstein}. Note the suppression factor $\epsilon$ in \equref{bsjpsiphi_amp_param} which implies
-that penguin level contributions to the \BsJpsiPhi amilitude are smaller by rouglty 2 orders of magnitude with respect to the ones from tree level.
+CKM matrix parametrization of \secref{CKMwolfenstein}. Whrease the eigenvalue, $\eta_k$, of the final state $f$ is identified with the one in \equref{lambda_cpv}.
+Note the suppression factor $\epsilon$ in \equref{bsjpsiphi_amp_param} which implies that penguin contributions to the \BsJpsiPhi amilitude are smaller
+by rouglty 2 orders of magnitude with respect to the ones from tree level.

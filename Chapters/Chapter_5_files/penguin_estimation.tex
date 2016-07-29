@@ -1,0 +1,80 @@
+
+
+For this relation it is assumed that, as far as the strong interaction is concerned, quark flavor is irrelevant,
+since the strong interaction couples to color and not to flavor. This assumption is based on the so called $SU(3)_F$ or $U$-sppin symmetry,
+see {\color{red} Krystof thesis section 3.4 ana elsewere.}.
+
+
+\subsection{The \BsJpsiKst chanell}
+
+\begin{equation}
+  \Acp{\rm dir}\parenthesis{\BsJpsiKst}_f = \frac{ 2a'_f \sin\theta'_f \sin\gamma} {1 - 2a'_f \cos\theta'_f \cos\gamma +  {a'_f}^{2}}
+  \label{bsjpsikst_peng_acp_obs}
+\end{equation}
+
+Note the absence of the suppresion factor $\epsilon$
+
+Additional information from \BsJpsiKst can be imported via
+
+
+{\color{red} SITE PAPER HERE. avoid defining phase space functions, and the isue with the teoretical vs expermental branching rations.}
+
+\begin{equation}
+  H_f = \frac{1-2a_i \cos(\theta_i) \cos\gamma+a_i^{2}}{1+2\epsilon a'_i \cos\theta'_i\cos\gamma +\epsilon^2 a_i^{\prime 2}}
+\label{bsjpsikst_Hobs_param}
+\end{equation}
+
+\begin{align}
+\left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
+%%%
+\left|\frac{\mathcal{A}'_{\parallel}(\BsJpsiPhi)}{\mathcal{A}_{\parallel}(\BsJpsiKst)}\right| & = 1.28 \pm 0.15\:,\\
+%%%
+\left|\frac{\mathcal{A}'_{\perp}(\BsJpsiPhi)}{\mathcal{A}_{\perp}(\BsJpsiKst)}\right| & = 1.20 \pm 0.12\:,\label{Eq:AmpRat_JpsiKstar_perp}
+\end{align}
+
+
+\subsection{The \BsJpsiRho chanell}
+
+This is addes in a similar way as to \BsJpsiKst but including Acp mix.
+Ref reff krystof and paper
+
+Plus several hypothesis {\color{red} study a bit from ana ana paper}
+% \begin{align}
+%   \Acp{\rm dir}\parenthesis{\BsJpsiRho}_f &= \frac{ 2a''_f \sin\theta''_f \sin\gamma} {1 - 2a''_f \cos\theta''_f \cos\gamma +  {a''_f}^{2}} \\
+%   \Acp{\rm mix}\parenthesis{\BsJpsiPhi}_f &= \eta_f \brackets{\frac{\sin\phis - 2\epsilon\alpha_f \cos\theta_f\sin(\phis+\gamma) + \epsilon^2\alpha_f^2 \sin(\phis+2\gamma)}
+%                                                                  {1 + 2\epsilon a_f \cos\theta_f \cos\gamma + \epsilon^2a_f^{2}} }
+%   \label{bsjpsirho_peng_acp_obs}
+% \end{align}
+
+
+
+\subsection{$\chi^2$ fit}
+\label{penguin_chi2_fit}
+
+By invoking \grpsuthree symmetry, as shown in \equref{su3_apply}, the acpmix and acp dir and ah obserbales from the chanells \BsJpsiPhi \BsJpsiRho \BsJpsiKst
+are used to define a $\chi^2$, see ref. Minimizing the $\chi^2$ yields the penguin paramtgers $\alpha_f$ $\theta_f$ whic are
+then translated, using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis.
+
+\begin{equation}
+a_i = a'_i\:,\qquad \theta_i = \theta'_i\:,
+\label{su3_apply}
+\end{equation}
+
+and similartly for \BsJpsiRho
+
+The following inputs have been used for the fit.
+
+\subsubsection{\grpsuthree breaking}
+\label{su3_breaking}
+
+The fact that the \grpsuthree syummetry is a broken symmetry is taken into account in the fit by re parametrizing
+$\alpha_f$ and $\theta_f$ as shown in \equref{su3_breaking}.
+
+\begin{equation}
+a_i \to \xi \; \alpha_i \quad \theta_i \to \delta + \theta'_i
+\label{su3_breaking}
+\end{equation}
+
+As there are no dedicated studies for \grpsuthree breaking. It is assumed that $\xi=1$ and $\delta=0$ but include uncertainties
+on these paorameters as gaussian constrains in the $\chi^2$ fit. The dependance of $\Delta\phiS{SM,peng}$ on the $\xi$ and $\delta$
+uncertainties was found to be irrelavant, {\color{red} see jpsiKst paper}, due to the particular structure of \equref{tanddelta}.
