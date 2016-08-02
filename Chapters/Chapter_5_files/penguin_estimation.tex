@@ -1,51 +1,102 @@
 
 
-For this relation it is assumed that, as far as the strong interaction is concerned, quark flavor is irrelevant,
-since the strong interaction couples to color and not to flavor. This assumption is based on the so called $SU(3)_F$ or $U$-sppin symmetry,
-see {\color{red} Krystof thesis section 3.4 ana elsewere.}.
+The recent \lhcb measurement of \phis comes with the measurement of the $\lambda_{\jpsi\phi}$ of \equref{lambda_cpv}~\cite{phis-3fb-paper}.
+These two parameters, shown in \equref{phis_lambda_result}, can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
+Based on \equref{cp_asym_lambda} and according to the formalism in \secref{penguin_formalism}, the $\DeltaPhis{}$ estimation
+from \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of~\cite{DeBruyn-thesis}, which is not precise
+enough given the central value of $\phis^{\jpsi\phi}$.
+
+In order to increase the precision on \DeltaPhis{} the \grpsuthree flavour symmetry, also known as $U-spin$ symmetry {\color{red} rob or sth},
+is invoked in order to extract \DeltaPhis{} from similar to \BsJpsiPhi chanells.
+Note that the information from those chanells entering through the observables, \equref{bsjpsiphi_peng_acp_obs} and \equref{hobs_def}
+is polarization dependant. This is due to the fact that new physics dynamics might enter in a different way in each polarization as mentioned {\color{red}somewhere in krystof.}
+This section summarizes the details of each of the aditional chanells, \BsJpsiKst and \BdJpsiRho as well as the assumptions and external inputs of the $\chi^2$ fit.
+Results are discussed at the end.
+
+\begin{equation}
+  \centering
+  \phis^{\jpsi\phi}     =  -0.058 \pm 0.049(\text{stat})  \;\; \text{rad}, \;\;\;\;\;
+  \lambda^{\jpsi\phi}   =  +0.964 \pm 0.019(\text{stat}).
+  \label{phis_lambda_result}
+\end{equation}
 
 
 \subsection{The \BsJpsiKst chanell}
 
-\begin{equation}
-  \Acp{\rm dir}\parenthesis{\BsJpsiKst}_f = \frac{ 2a'_f \sin\theta'_f \sin\gamma} {1 - 2a'_f \cos\theta'_f \cos\gamma +  {a'_f}^{2}}
-  \label{bsjpsikst_peng_acp_obs}
-\end{equation}
+The \BsJpsiKst chanell is a flavour specific decay with the same topology as \BsJpsiPhi, see \figref{bs2jpsikst_tree}.
+The amplitude of \BsJpsiKst, shown in \equref{bsjpsikst_amp}, is parametrised following the same concept as in the case of \BsJpsiPhi.
 
-Note the absence of the suppresion factor $\epsilon$
-
-Additional information from \BsJpsiKst can be imported via
-
-
-{\color{red} SITE PAPER HERE. avoid defining phase space functions, and the isue with the teoretical vs expermental branching rations.}
+\begin{figure}[h]
+  \centering
+  {\sffamily \input{Figures/Chapter5/tree_penguin_jpsikst}}
+  \caption{Leading order tree diagram of the decay \BsJpsiPhi.}
+  \label{bs2jpsikst_tree}
+\end{figure}
 
 \begin{equation}
-  H_f = \frac{1-2a_i \cos(\theta_i) \cos\gamma+a_i^{2}}{1+2\epsilon a'_i \cos\theta'_i\cos\gamma +\epsilon^2 a_i^{\prime 2}}
-\label{bsjpsikst_Hobs_param}
+  \mathcal{A} \parenthesis{\BsJpsiKstPolState{k}} = -\lambda \formFctr{k}' \brackets{ 1 - \akPeng' e^{i\thkPeng'} e^{i\gamma} },
+  \label{bsjpsikst_amp}
 \end{equation}
 
-\begin{align}
-\left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
-%%%
-\left|\frac{\mathcal{A}'_{\parallel}(\BsJpsiPhi)}{\mathcal{A}_{\parallel}(\BsJpsiKst)}\right| & = 1.28 \pm 0.15\:,\\
-%%%
-\left|\frac{\mathcal{A}'_{\perp}(\BsJpsiPhi)}{\mathcal{A}_{\perp}(\BsJpsiKst)}\right| & = 1.20 \pm 0.12\:,\label{Eq:AmpRat_JpsiKstar_perp}
-\end{align}
+\noindent where the ${}^\prime$ from here and on labels parameters related to the \BsJpsiKst decay. Note the absence of the
+subression factor $\epsilon$, which implies that the penguin diagram contributes equally to the total amplitude, in contrast
+to the \BsJpsiPhi decay.
+
+As mentioned in \secref{penguin_formalism} \BsJpsiKst provides acess to \Acp{\rm dir} only. Additional information is required via the $\Hobs{}$,
+in order to probe $(\akPeng,\thkPeng)$. Both observables are measured in \chapref{Data_Analysis} of the current thesis.
+The first one, \Acp{\rm dir}\parenthesis{\BsJpsiKstPolState{k}} is reported in \tabref{bestFitResult}\footnote{including systematics from \tabref{systematics_acp}}.
+Whereas the $\Hobs{k}$ observable is constructed from the \BRof{\BsJpsiKst} reported in \equref{Br_total} and shown in \equref{hobs_jpsikst}.
+
+\begin{alignat}{2}
+  % \Hobs{0}         & = 0.99 \pm 0.07\:\text{(stat)} \pm 0.06\:\text{(syst)} \pm 0.27\:(|\formFctr{0}'/\formFctr{0}|) && = 0.99 \pm 0.28\:,\\
+  % \Hobs{\parallel} & = 0.91 \pm 0.14\:\text{(stat)} \pm 0.08\:\text{(syst)} \pm 0.21\:(|\formFctr{\parallel}'/\formFctr{\parallel}|) && = 0.91 \pm 0.27\:,\\
+  % \Hobs{\perp}     & = 1.47 \pm 0.14\:\text{(stat)} \pm 0.11\:\text{(syst)} \pm 0.28\:(|\formFctr{\perp}'/\formFctr{\perp}|) && = 1.47 \pm 0.33\:.
+  \Hobs{0}         & = 0.99 \pm 0.07\:\text{(stat)} \pm 0.06\:\text{(syst)} \pm 0.27\:(\text{hadr}) && = 0.99 \pm 0.28\:,\\
+  \Hobs{\parallel} & = 0.91 \pm 0.14\:\text{(stat)} \pm 0.08\:\text{(syst)} \pm 0.21\:(\text{hadr}) && = 0.91 \pm 0.27\:,\\
+  \Hobs{\perp}     & = 1.47 \pm 0.14\:\text{(stat)} \pm 0.11\:\text{(syst)} \pm 0.28\:(\text{hadr}) && = 1.47 \pm 0.33\:.
+  \label{hobs_jpsikst}
+\end{alignat}
+
+\noindent Where "hadr" referes to the hadronisation factor $|\formFctr{k}'/\formFctr{k}|$ necessary for the construction of $\Hobs{k}$.
+The hadronization factors need to be calculated theoretically. Such calcualtions are available in {\color{red} somewhere} and were
+used in \equref{hobs_jpsikst}. Note how the hadronization factor dominates the error on the $\Hobs{k}$, as it was mentioned in \secref{penguin_formalism}.
+
+% \begin{align}
+% \left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
+% %%%
+% \left|\frac{\mathcal{A}'_{\parallel}(\BsJpsiPhi)}{\mathcal{A}_{\parallel}(\BsJpsiKst)}\right| & = 1.28 \pm 0.15\:,\\
+% %%%
+% \left|\frac{\mathcal{A}'_{\perp}(\BsJpsiPhi)}{\mathcal{A}_{\perp}(\BsJpsiKst)}\right| & = 1.20 \pm 0.12\:,\label{Eq:AmpRat_JpsiKstar_perp}
+% \end{align}
 
 
 \subsection{The \BsJpsiRho chanell}
+The topology of the \BsJpsiRho decay is shown in \figref{jpsirho}. The amplitude structure is very similar to that
+of \BsJpsiKst resulting in \equref{bsjpsirho_amp}. same The finals state is a cp ei the chanells
 
-This is addes in a similar way as to \BsJpsiKst but including Acp mix.
-Ref reff krystof and paper
+\begin{figure}[h]
+  \centering
+  {\sffamily \input{Figures/Chapter5/tree_penguin_jpsirho}}
+  \caption{Leading order tree diagram of the decay \BsJpsiRho.}
+  \label{bs2jpsikst_penguin}
+\end{figure}
 
-Plus several hypothesis {\color{red} study a bit from ana ana paper}
-% \begin{align}
-%   \Acp{\rm dir}\parenthesis{\BsJpsiRho}_f &= \frac{ 2a''_f \sin\theta''_f \sin\gamma} {1 - 2a''_f \cos\theta''_f \cos\gamma +  {a''_f}^{2}} \\
-%   \Acp{\rm mix}\parenthesis{\BsJpsiPhi}_f &= \eta_f \brackets{\frac{\sin\phis - 2\epsilon\alpha_f \cos\theta_f\sin(\phis+\gamma) + \epsilon^2\alpha_f^2 \sin(\phis+2\gamma)}
-%                                                                  {1 + 2\epsilon a_f \cos\theta_f \cos\gamma + \epsilon^2a_f^{2}} }
-%   \label{bsjpsirho_peng_acp_obs}
-% \end{align}
+\begin{equation}
+  \mathcal{A} \parenthesis{\BsJpsiRhoPolState{k}} = -\lambda \formFctr{k}'' \brackets{ 1 - \akPeng'' e^{i\thkPeng''} e^{i\gamma} },
+  \label{bsjpsirho_amp}
+\end{equation}
 
+\noindent where the ${}^{\prime\prime}|$ from here and on labels parameters related to the \BsJpsiRho decay. Note again
+the absence of the subression factor $\epsilon$.
+
+The \BsJpsiRho chanells provides acess to both \Acp{\rm dir}, \Acp{\rm mix} since the final state $\jpsi\rho$ is a CP eigenstate
+and thus $\BdBdbarSyst$ oscilations are active. Both of the above observables are available from \lhcb, based on the
+time dependant analysis of \BdJpsiRho decays~\cite{Aaij:2014vda} and are listed in table 5.5 of~\cite{DeBruyn-thesis}.
+
+H observable is also used, listed in blah
+Mention details on the factoriazable vs non facroizable shit.
+
+All of the above is again polarization dependant. in a polarization dependent
 
 
 \subsection{$\chi^2$ fit}
@@ -62,7 +113,11 @@ a_i = a'_i\:,\qquad \theta_i = \theta'_i\:,
 
 and similartly for \BsJpsiRho
 
+Hypothesis of the combined fit will go here.
+\subsubsection{Constrains}
 The following inputs have been used for the fit.
+Also the teoretical vs expermental branching rations is corrected for.
+
 
 \subsubsection{\grpsuthree breaking}
 \label{su3_breaking}
