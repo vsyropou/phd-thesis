@@ -4,9 +4,9 @@ can be related to the CP asymmetries of \equref{cp_asym_lambda} as shown in \equ
 \begin{subequations}
   \label{bsjpsiphi_peng_acp_obs}
 \begin{align}
-  \Acp{\rm dir}\parenthesis{\B\to (f)^k} &= \frac{ \akPeng \sin\thkPeng \sin\gamma} {1 - 2 a_k \cos\thkPeng \cos\gamma + a_k^{2}}
+  \Acp{\rm dir}\parenthesis{\Bq\to (f)^k} &= \frac{ \akPeng \sin\thkPeng \sin\gamma} {1 - 2 a_k \cos\thkPeng \cos\gamma + a_k^{2}}
   \label{bsjpsiphi_peng_acp_dir} \\
-  \Acp{\rm mix}\parenthesis{\B\to (f)^k} &= \nonumber \\
+  \Acp{\rm mix}\parenthesis{\Bq\to (f)^k} &= \nonumber \\
    = \eta_k & \brackets{\frac{\sin\phiq - 2\akPeng \cos\thkPeng\sin(\phiq+\gamma) + \akPeng^2 \sin(\phiq+2\gamma)}
                                                                  {1 - 2 a_k \cos\thkPeng \cos\gamma + a_k^{2}} },
   \label{bsjpsiphi_peng_acp_mix}
@@ -15,17 +15,20 @@ can be related to the CP asymmetries of \equref{cp_asym_lambda} as shown in \equ
 
 \noindent where $\phiq$ represents the Standard Model prediction for either the weak phase \phis of \equref{phis_theo},
 or the equivalent weak phase \phid of the \Bd meson defined in \equref{phid_theo}.
-Equations \ref{bsjpsiphi_peng_acp_obs} form a $2x2$ system in terms of $(\akPeng,\thkPeng)$ that can in principle be solved.
-Subsequently the penguin shift to \phis could be determined from \equref{tandelta}.
+Equations \ref{bsjpsiphi_peng_acp_obs} form a $2x2$ system in terms of $(\akPeng,\thkPeng)$ that can in principle be solved
+for. Note that in the case where \eqref{bsjpsiphi_peng_acp_obs} refer to \BsJpsiPhi, the penguin supression factor
+needs to be appied. This implies that following transformation has to take place $(\akPeng\to-\epsilon\akPeng)$.
+After an estimation of $(\akPeng,\thkPeng)$ is available the penguin shift to \phis could be determined from \equref{tandelta}.
 
 \begin{equation}
 \centering
-\tan(\Delta\phis^k) = \frac{ 2\akPengPrime\epsilon\cos\thkPengPrime \sin\gamma + \epsilon^2\akPengPrime^2 \sin2\gamma}
-                             {1 + 2\epsilon\akPengPrime \cos\thkPengPrime \cos\gamma + \epsilon^2\akPengPrime^2 \cos2\gamma},
+\tan(\Delta\phis^k) = \frac{ 2\akPeng\epsilon\cos\thkPeng \sin\gamma + \epsilon^2\akPeng^2 \sin2\gamma}
+                             {1 + 2\epsilon\akPeng \cos\thkPeng \cos\gamma + \epsilon^2\akPeng^2 \cos2\gamma},
 \label{tandelta}
 \end{equation}
 
-\noindent where $\Delta\phis^k$ is identified with the polarisation dependant $\Delta\phiS{SM, peng}$ of \equref{phis_sm_peng}.
+\noindent where $\Delta\phis^k$ denotes the polarisation
+dependant version of $\Delta\phiS{SM, peng}$ of \equref{phis_sm_peng}.
 
 However, as it was metnioned in the begining of the currrent chapter, the goal is to increase the precision on $\Delta{\phis}$
 by relating similar to \BsJpsiPhi chanells in the penguin estimation on grounds of the $\grpsuthree$ quark symmetry.
@@ -39,16 +42,15 @@ Addional information from branching ratios can be exploited via the $H$ observab
 \begin{equation}
 \centering
   \Hobs{k} \equiv   \frac{1}{\epsilon}
-            \modulo{\frac{\formFctr{k}'}{\formFctr{k}}}^2
-                    \frac{\PhSp{\BsJpsiPhi}} {\PhSp{\B\to f}}
+            \modulo{\frac{\formFctr{k}}{\formFctr{k}'}}^2
+                    \frac{\PhSp{\BsJpsiPhi}} {\PhSp{\Bq\to f}}
                     \frac{\tau_{\Bs}}{\tau_{\Bq}}
-                    \frac{\BRof{\B\to f}_{\rm theo}}{\BRof{\BsJpsiPhi}_{\rm theo}}
-                    \frac{\fP{k}}{{\fP{k}'}},
+                    \frac{\BRof{\Bq\to f}_{\rm theo}}{\BRof{\BsJpsiPhi}_{\rm theo}}
+                    \frac{\fP{k}'}{{\fP{k}}},
 \label{hobs_def}
 \end{equation}
 
-\noindent where, the ${}^\prime$ superscript labels quantities releated to the \BsJpsiPhi chanell necessary to be
-distinguisehed from the ones releated to the control chanell $\B\to f$. The subscript "theo" is there to distinguish
+\noindent where the superscript prime$({}^\prime)$ labels quantities related to $\Bq\to f$. The subscript "theo" is there to distinguish
 between the concept of branching fraction used in theoretical calculations and the ones that are measured experimentally,
 see \secref{penguin_more_chanells} for more details. The polarization fractions $\fP{k}$ are identical to the ones
 efined in \equref{amps_param}. Whereas the average decay time of the \Bs and \Bq are denoted by $\tau_{\Bs}$ and $\tau_{\Bq}$
@@ -81,4 +83,20 @@ The observable is usefull for final states where the \Acp{\rm mix} observable va
 where CP-Violation in the interference is not active, implying that either \Bs or \Bsb can decay to this final state but not both.
 Despite providing the second equation in flavour specific states the $\Hobs{}$ relies in external input, particularly the hadronic quantities $\formFctr{k}$.
 The last come from theoretical calculations and introduce additional uncertainty to the exrtaction of the penguin paramters.
-For this reason the $\Hobs{}$ is not always prefared. The exact details on the treatment of this observable is postponed for \secref{penguin_more_chanells}.
+For this reason the $\Hobs{}$ is not always prefared.
+{\color{red} Study the details on the Hobs for the jpsikst and jpsirho and mention the potential implications arising from the H observable
+ regarding the factoriazable vs non facroizable su3 breaking effects}.
+
+
+\subsubsection{Invoking \grpsuthree Symmetry}
+The \grpsuthree symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
+In practice this relation is implemented by assuming that the penguin parameters $(\akPeng,\thkPeng)$
+are the same between all of the above chanells, as shown in \equref{invoke_su3}
+
+\begin{equation}
+\centering
+\akPeng' = \akPeng, \;\;\; \thkPeng' = \thkPeng .
+\label{invoke_su3}
+\end{equation}
+
+\noindent The robustness of this assumption is addressed in \secref{su3_breaking}.

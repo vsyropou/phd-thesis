@@ -1,14 +1,12 @@
 
 
 % \begin{alignat}{2}
-% H_0 & = 0.99 \pm 0.07\:\text{(stat)} \pm 0.06\:\text{(syst)} \pm 0.27\:(|\mathcal{A}'_i/\mathcal{A}_i|) && = 0.99 \pm 0.28\:,\\
-% H_\parallel & = 0.91 \pm 0.14\:\text{(stat)} \pm 0.08\:\text{(syst)} \pm 0.21\:(|\mathcal{A}'_i/\mathcal{A}_i|) && = 0.91 \pm 0.27\:,\\
-% H_\perp & = 1.47 \pm 0.14\:\text{(stat)} \pm 0.11\:\text{(syst)} \pm 0.28\:(|\mathcal{A}'_i/\mathcal{A}_i|) && = 1.47 \pm 0.33\:.
+% H_0 & = 0.99 \pm 0.07\:\text{(stat)} \pm 0.06\:\text{(syst)} \pm 0.27\:(\text{hadr}) && = 0.99 \pm 0.28\:,\\
+% H_\parallel & = 0.91 \pm 0.14\:\text{(stat)} \pm 0.08\:\text{(syst)} \pm 0.21\:(\text{hadr}) && = 0.91 \pm 0.27\:,\\
+% H_\perp & = 1.47 \pm 0.14\:\text{(stat)} \pm 0.11\:\text{(syst)} \pm 0.28\:(\text{hadr}) && = 1.47 \pm 0.33\:.
 % \end{alignat}
 %
-\begin{equation}\label{Eq:Gamma_GC}
-\gamma  = \left(73.2_{-7.0}^{+6.3}\right)^{\circ} \quad\text{(CKMfitter \cite{Charles:2015gya})}\:,
-\end{equation}
+
 
 % \begin{align}
 % \Re[a_0] & = \phantom{-}0.01_{-0.32}^{+0.97}\:, & \Im[a_0] & = \phantom{-}0.025_{-0.031}^{+0.035}\:, & \chi^2_{\text{min}} & = 1.1 \times 10^{-7}\:,\label{Eq:Pen_Re_Im_Long}\\
@@ -30,15 +28,15 @@ a_\perp & = 0.45^{+0.21}_{-0.27}\:, & \theta_\perp & = \phantom{-}\left(175 \pm 
 
 \begin{alignat}{2}
 \Delta\phi^{\jpsi{}\phi}_{s,0} & =
-\phantom{-}0.001^{+0.087}_{-0.011}\:\text{(stat)}^{+0.013}_{-0.008}\:\text{(syst)}^{+0.048}_{-0.030}\:(|\mathcal{A}'_i/\mathcal{A}_i|)
+\phantom{-}0.001^{+0.087}_{-0.011}\:\text{(stat)}^{+0.013}_{-0.008}\:\text{(syst)}^{+0.048}_{-0.030}\:(\text{hadr})
 && = \phantom{-}0.001^{+0.100}_{-0.033}\:,\\
 %
 \Delta\phi^{\jpsi{}\phi}_{s,\parallel} & =
-\phantom{-}0.031^{+0.049}_{-0.038}\:\text{(stat)}^{+0.013}_{-0.013}\:\text{(syst)}^{+0.031}_{-0.033}\:(|\mathcal{A}'_i/\mathcal{A}_i|)
+\phantom{-}0.031^{+0.049}_{-0.038}\:\text{(stat)}^{+0.013}_{-0.013}\:\text{(syst)}^{+0.031}_{-0.033}\:(\text{hadr})
 && = \phantom{-}0.031^{+0.059}_{-0.052}\:,\\
 %
 \Delta\phi^{\jpsi{}\phi}_{s,\perp} & =
--0.046^{+0.012}_{-0.012}\:\text{(stat)}^{+0.007}_{-0.008}\:\text{(syst)}^{+0.017}_{-0.024}\:(|\mathcal{A}'_i/\mathcal{A}_i|)
+-0.046^{+0.012}_{-0.012}\:\text{(stat)}^{+0.007}_{-0.008}\:\text{(syst)}^{+0.017}_{-0.024}\:(\text{hadr})
 && = -0.046^{+0.022}_{-0.028}\:,
 \end{alignat}
 
@@ -66,3 +64,25 @@ a_\perp & = 0.45^{+0.21}_{-0.27}\:, & \theta_\perp & = \phantom{-}\left(175 \pm 
   \label{pengPlot_para}
 \end{center}
 \end{figure}
+
+\section{Further Corsechecks}
+Here the su3 breaking and the polarization correlations are dressed.
+
+\subsubsection{\grpsuthree breaking}
+\label{su3_breaking}
+
+The fact that the \grpsuthree syummetry is a broken symmetry is taken into account in the fit by re parametrizing
+$\alpha_f$ and $\theta_f$ as shown in \equref{su3_breaking}.
+
+\begin{equation}
+a_i \to \xi \; \alpha_i \quad \theta_i \to \delta + \theta'_i
+\label{su3_breaking}
+\end{equation}
+
+As there are no dedicated studies for \grpsuthree breaking. It is assumed that $\xi=1$ and $\delta=0$ but include uncertainties
+on these paorameters as gaussian constrains in the $\chi^2$ fit. The dependance of $\Delta\phiS{SM,peng}$ on the $\xi$ and $\delta$
+uncertainties was found to be irrelavant, {\color{red} see jpsiKst paper}, due to the particular structure of \equref{tanddelta}.
+
+\subsubsection{Correlations of Polarization States}
+Correlation between the $k$ polarizations of $\Acp{k}$ and $\fP{k}$ are ignored in the coming from between the polarizations.
+For that we did blah.
