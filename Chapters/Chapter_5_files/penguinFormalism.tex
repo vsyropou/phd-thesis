@@ -35,6 +35,11 @@ by relating similar to \BsJpsiPhi chanells in the penguin estimation on grounds 
 Thus, the measured values of the observables \equref{bsjpsiphi_peng_acp_obs} from the chanells \BsJpsiKst and \BdJpsiRho
 are combined in a $\chi^2$ fit to estimate $(\akPeng,\thkPeng)$. The details of this fit are given in \secref{penguin_chi2_fit}.
 
+\subsubsection{Invoking \grpsuthree Symmetry}
+The \grpsuthree symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
+In practice this relation is implemented by assuming that the hadronic and penguin parameters
+ $\formFctr{k}$, $(\akPeng,\thkPeng)$ respectivelly are the same between all the above chanells,
+as shown in \equref{invoke_su3}. The robustness of this assumption is addressed in \secref{su3_breaking}.
 
 \subsubsection{Information from Branching ratios}
 Addional information from branching ratios can be exploited via the $H$ observable, shown in \equref{hobs_def}
@@ -84,19 +89,3 @@ where CP-Violation in the interference is not active, implying that either \Bs o
 Despite providing the second equation in flavour specific states the $\Hobs{}$ relies in external input, particularly the hadronic quantities $\formFctr{k}$.
 The last come from theoretical calculations and introduce additional uncertainty to the exrtaction of the penguin paramters.
 For this reason the $\Hobs{}$ is not always prefared.
-{\color{red} Study the details on the Hobs for the jpsikst and jpsirho and mention the potential implications arising from the H observable
- regarding the factoriazable vs non facroizable su3 breaking effects}.
-
-
-\subsubsection{Invoking \grpsuthree Symmetry}
-The \grpsuthree symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
-In practice this relation is implemented by assuming that the penguin parameters $(\akPeng,\thkPeng)$
-are the same between all of the above chanells, as shown in \equref{invoke_su3}
-
-\begin{equation}
-\centering
-\akPeng' = \akPeng, \;\;\; \thkPeng' = \thkPeng .
-\label{invoke_su3}
-\end{equation}
-
-\noindent The robustness of this assumption is addressed in \secref{su3_breaking}.
