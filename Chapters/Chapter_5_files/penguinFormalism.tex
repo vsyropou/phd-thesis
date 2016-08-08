@@ -36,10 +36,10 @@ Thus, the measured values of the observables \equref{bsjpsiphi_peng_acp_obs} fro
 are combined in a $\chi^2$ fit to estimate $(\akPeng,\thkPeng)$. The details of this fit are given in \secref{penguin_chi2_fit}.
 
 \subsubsection{Invoking \grpsuthree Symmetry}
-The \grpsuthree symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
-In practice this relation is implemented by assuming that the hadronic and penguin parameters
- $\formFctr{k}$, $(\akPeng,\thkPeng)$ respectivelly are the same between all the above chanells,
-as shown in \equref{invoke_su3}. The robustness of this assumption is addressed in \secref{su3_breaking}.
+The $\grpsuthree_{F}$ symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
+In practice this relation is implemented by assuming that the penguin parameters $(\akPeng,\thkPeng)$
+are the same between all the above chanells, as shown in \equref{invoke_su3}. In additon $\grpsuthree_{F}$
+is also exploited in hadronic parameter ratios between different cahnells, as explained in \secref{penguin_chi2_fit}.
 
 \subsubsection{Information from Branching ratios}
 Addional information from branching ratios can be exploited via the $H$ observable, shown in \equref{hobs_def}
@@ -89,3 +89,29 @@ where CP-Violation in the interference is not active, implying that either \Bs o
 Despite providing the second equation in flavour specific states the $\Hobs{}$ relies in external input, particularly the hadronic quantities $\formFctr{k}$.
 The last come from theoretical calculations and introduce additional uncertainty to the exrtaction of the penguin paramters.
 For this reason the $\Hobs{}$ is not always prefared.
+
+Lastly note that the $\Hobs{}$ observable are constructed in terms of the theoretical branching fractions
+defined at zero decay time, which difer from the measured time-integrated branching fractions~\cite{DeBruyn:2012wj}
+due to the non-zero decay-width diference of the \Bs meson~\cite{hfag-2014}. The calculation of the convertion factor
+is done as in~\cite{bsjpsikst-paper}. The results denpend on the CP eigenvalue of the final state and shown in
+\tabref{br_conversions}
+
+\begin{table}[!h]
+  \center
+  \begin{tabular}{c c }
+    \hline
+                        & $\BRof{\B\to f}_{\rm theo} / \BRof{\B\to f}_{\rm exp} $ \\
+    \hline
+      CP-even          &  $1.0608 \pm 0.0045$ \\
+      CP-odd           &  $0.9392 \pm 0.0045$ \\
+      flavor specific  &  $0.9963 \pm 0.0006$ \\
+
+    \hline
+  \end{tabular}
+  \caption{\small Conversion facrors.}
+  \label{br_conversions}
+\end{table}
+
+\noindent The results for the CP-even and CP-odd are $1.0608 \rm 0.0045$ and  $0.9392 \rm 0.0045$.
+While for the flavor specific final states is  $0.9963 \rm 0.0006$
+Note that kst is a flavlour specific final state

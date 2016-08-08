@@ -1,30 +1,38 @@
-In the penguin parameter estimation, the hadronic factors $\formFctr{k}$ become relevant when building
-the neccessarry observables, see \equref{hobs_def}. Calculating these factrors is very dificult{\color{red} ref}
-and the ascociated uncertainties are large. These calculations rely on the so called {\it factorization} assumption
-when computing the decay amplitude of a $\B\to M_1M_2$ transition, where $M_1$ and $M_2$ are two mesons.
-In the factorization framework it is assumed that the $\B\to M_1M_2$ decay amplitude can be written as
-the product of a {\it decay constant} and a {\it form factor}. Especially for \BJpsiX decay modes, the
-last assupmtion leads to large corrections from {\it non-factorizable} effects that are not taken into
-account. The strategy described in \secref{penguin_formalism} and \secref{penguin_more_chanells}, uses
-ratios of decay amplitudes, as much as possible, when building the necessary observables such that hadronic
-factors would cancell out. An important aspect on achieving this is by invoking the \grpsuthree flavour symetry,
-explained in the next paragraph.
+In the penguin contribution estimation of the current chapter, the hadronic factors $\formFctr{k}$ become relevant when building
+one of the neccessarry observables, see \equref{hobs_def}. These factors involve the computation of a
+\BJpsiX decay amplitude which is dificult{\color{red} ref} to perform and the ascociated uncertainty is large.
+The dificulty comes in the {\it hadronization} process, which is the process of quarks forming bound
+states\footnote{ {\it Hadrons} are bound, by the strong interaction, states of two, three and recently{\color{red} ref pentaquarks} of more quarks.},
+like the $\jpsi$ and $\phi$ for example. During this process quarks might interact with each other via
+the storng force before hadronizing. This class of strong interactions, also refered to as {\it long distance QCD effcts}
+are difficult to compute within the context of {\it perturbation theory}. An alternative approach
+to computing the \BJpsiX decay amplitude is the {\it factorization} assumption{\color{red} ref},
+However its power is limited. Hence the last computation suffers from large uncertainties necessary
+to account for these {\it non-factorizable} effects{\color{red} make sure this is the case, read}.
 
-In a naive interpretation of the actual \grpsuthree flavour symmetry{ref} the dynamics of the strong
-interaction are the same for the three lightest quarks (\uquark,\dquark,\squark). This is attributed
-to the small masses of those quakrs with respect to the hadronization scale of the QCD.
-In the context of the current chapter the invoking \grpsuthree allows to relate hadronic quantities
-between different \BJpsiX modes.
+The strategy described in the current chapter avoids the use of the full decay amplitude, of \equref{bsjpsiphi_amp},
+when building the observables of \equref{bsjpsiphi_peng_acp_obs}. This way the hadronic factors $\formFctr{k}$
+are not needed and the above mentioned calculations are not necessary. However, the observable of \equref{hobs_def}
+does require the explicit calculation of ratios of hadronic factors. Thus, introducing the last observable
+provides additional information on estimating the penguin parameters on the one hand, on the other hand
+it itroduces further uncertainty from non-factorizable qcd effects. As it is explained in \secref{penguin_formalism}
+the observable \equref{hobs_def} can be sometimes avoided.
 
-%
-%
-% \begin{itemize}
-%   \item The eff hamiltoniasn decompozedecay amplitudes into wilson coeef and a matrix elements
-%   \item Calculating matirx elements is very dificult, invloving long disntace - -non perturbative qcd.
-%   \item Facrtorization makes these calculations easirer, whne aplicable.( by decompozing the matrix element in a decay constant and a form afactor.(do not mention this)
-%   \item In JpsiX facrorization does not realy work. Expected large correltuions from non factorizable.
-%   \item A way out is to exploit ratios where amplitudes cancell out
-%   \item For that it helps to invoke su3 symmetry. to relate a chanell of intreast to decays with similar topology.
-%   \item Drawback non facrtorizable long distance qcd effects that do not cancell in ratios.
-%   \item Experimental info is usefull and more precise.
-% \end{itemize}
+{\color{red} hadronic ratios were calcualted based on table  }
+Show tables with form factors \\
+
+
+An important feature that the current chapter makes use of is the so called $\grpsuthree_{\rm F}$ {it flavour symetry} {\color{red} ref}.
+In a naive interpretation $\grpsuthree_{\rm F}$ flavour symmetry implies that the three lightest quarks (\uquark,\dquark,\squark)
+are indistinguishable by the strong interaction. The last symmetry is broken by the fact that the above
+mentioned qurks have indeed different mass. However, those differences in mass are small with respect
+to the hadronization scale \lqcd of the strong iteraction, such that $\grpsuthree_{\rm F}$
+remains a usefull approximate symmetry. Particularly in the case of $\Bq$ meson decays where hadronic
+parameters can be releated between different decay modes and thus avoiding calculating them in the first place.
+The penguin parameter estimation of the current chapter is an example use case of $\grpsuthree_{\rm F}$.
+
+
+According to~\cite{ela} the estimated amount of $\grpsuthree_{\rm F}$ breaking is about $20\%$.
+The imapact of the last symemtry breaking is crucial to the penguin paramter estimation of the current chapter
+and needs to be investigated as a source of systematic uncertainty. The last is adressed in \secref{su3_breaking}.
+For completion other estiamtes on the $\grpsuthree_{\rm F}$ breaking can be found in {\color{red} blahhh}.

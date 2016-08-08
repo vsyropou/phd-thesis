@@ -22,6 +22,8 @@ This section introduces the aditional chanells, \BsJpsiKst and \BdJpsiRho. The d
 
 
 \subsection{The \BsJpsiKst chanell}
+\label{bsjpsikst_chanell}
+
 The \BsJpsiKst chanell is a flavour specific decay with the same topology as \BsJpsiPhi, see \figref{bs2jpsikst}.
 The amplitude of \BsJpsiKst, is parametrised following the same concept as in the case of \BsJpsiPhi and is shown in \equref{bsjpsikst_amp}.
 
@@ -44,7 +46,7 @@ contributes as much as the tree diagram does to the total amplitude, in contrast
 As mentioned in \secref{penguin_formalism} the \BsJpsiKst chanell provides acess to \Acp{\rm dir} only.
 Thus, additional information is required, via the $\Hobs{k}'$ observable, in order to probe $(\akPeng,\thkPeng)$.
 Both observables are based on measurements that took place in \chapref{Data_Analysis} of the current thesis.
-The first one\footnote{Note the notation convension \Acp{\rm dir}\parenthesis{\BsJpsiKstPolState{k}} = \Acp{k}.}
+The first one\footnote{Note the notation convension $\Acp{\rm dir}\parenthesis{\Bq\to (f)^k}$ = \Acp{k}.}
 is reported in \tabref{bestFitResult}, with the ascociated systematic quoted in \tabref{systematics_acp}.
 Whereas the $\Hobs{k}'$ observable is constructed from the \BRof{\BsJpsiKst} reported in \equref{Br_total} and shown in \equref{hobs_jpsikst}.
 
@@ -89,6 +91,8 @@ to the one described later. Hence its details are postopned untill \secref{pengu
 
 
 \subsection{The \BdJpsiRho chanell}
+\label{bsjpsirho_chanell}
+
 The topology of the \BdJpsiRho decay is shown in \figref{bs2jpsirho_diagram}. The amplitude structure is identical
 to that of the \BsJpsiKst mode resulting in \equref{bsjpsirho_amp}. same The finals state is a cp ei the chanells
 
@@ -129,28 +133,46 @@ to the small value of the penguin parameter $\thkPeng{k}''$, which is around $90
 \subsection{Combined $\chi^2$ Fit}
 \label{penguin_chi2_fit}
 
-\begin{itemize}
- \item Say what goes int he chi2
- \item show formula
- \item mention constrains on phis and phid and gamma
- \item mention the hadronic function assumption for the 2 contrl chanells
- \item point ou the reduced uncertainty wrt to teory calcuations.
-\end{itemize}
-
-By invoking \grpsuthree symmetry, as shown in \equref{su3_apply}, the acpmix and acp dir and ah obserbales from the chanells \BsJpsiPhi \BdJpsiRho \BsJpsiKst
-are used to define a $\chi^2$, see ref. Minimizing the $\chi^2$ yields the penguin paramtgers $\alpha_f$ $\theta_f$ whic are
-then translated, using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis.
+The parameters $(\akPeng,\thkPeng)$ of \equref{bsjpsiphi_amp_param}, which quantify the penguin topology contributions
+to the \BsJpsiPhi decay, are estiamted by means of a $\chi^2$ fit. The $\chi^2$ is defined after some assuptions have been made.
+First perfect $\grpsuthree_{\rm F}$ symmetry, shown in \equref{su3_apply}, is assumed between the \BsJpsiPhi and the
+additional chaneels \BsJpsiKst and \BdJpsiRho.
 
 \begin{equation}
-\akPeng= \akPeng' = \akPeng'' \qquad \thkPeng = \thkPeng' = \thkPeng'',
+\akPeng= \akPeng' = \akPeng'' \qquad \thkPeng = \thkPeng' = \thkPeng''.
 \label{su3_apply}
 \end{equation}
+
+\noindent Second, the hadronic ratios necessary for building the $\Hobs{k}$ is assumed to be the same between
+the two aditional channells \BsJpsiKst and \BdJpsiRho as shown in \equref{had_ratios_assuption}.
+
+\begin{equation}
+  \centering
+  % \modulo{ \frac{\formFctr{k}\parenthesis{\BsJpsiPhi}}{\formFctr{k}'\parenthesis{\BsJpsiKst}}  } =
+  % \modulo{ \frac{\formFctr{k}\parenthesis{\BsJpsiPhi}}{\formFctr{k}''\parenthesis{\BdJpsiRho}}  }.
+  \modulo{ \frac{\formFctr{k}}{\formFctr{k}'}  } =
+  \modulo{ \frac{\formFctr{k}}{\formFctr{k}''}  }.
+  \label{had_ratios_assuption}
+\end{equation}
+
+\noindent By doing so it is possible to void using any explicit calculations of the hadronic factors
+by treating the single hadronic ratio, based on the assumption of \equref{had_ratios_assuption},
+as a free parameter in the $\chi^2$ fit. In this way it is prefered to avoid introducing uncertainty
+from the theoretical calculations on the hadronic parameters. This choice is supported by~\cite{DeBruyn-thesis}
+where it can be seen that the hadronic paramters estimated form data are more precise that those
+coming from theopretical calculalations.
+
+Under the above assuptions the observales from the \BsJpsiKst and \BdJpsiRho channels as described
+in \secref{bsjpsirho_chanell} and \secref{bsjpsikst_chanell} respectivelly are used to define the
+$\chi^2$ of \equref{chisq_form}.
 
 \begin{equation}
   \centering
   \chi^2_k = \sum \frac{O^{\rm theo}_k - O^{\rm exp}_k} {\sigma(O^{\rm exp}_k)},
   \label{chisq_form}
 \end{equation}
+
+\noindent{where}
 
 \begin{equation}
   \centering
@@ -159,12 +181,9 @@ then translated, using \equref{tandelta}, to the final estimate for the penguin 
   \label{chisq_form_with}
 \end{equation}
 
-Hypothesis of the combined fit will go here.
-
-\subsubsection{Assumptions and Constrains}
-The following inputs have been used for the fit.
-Also the teoretical vs expermental branching rations is corrected for.
-
+\noindent Note also that the CKM angle $\gamma$ and the weak phase $\phid$ are necessary for computating the ${\Acp{\rm dir}}'_k$,
+${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$ observables. The last parameters are allowed to be free in the
+$\chi^2$ fit with a gausian constrain around their Standard Model value, shown in \tabref{chi2_fit_constrains}.
 
 \begin{table}[!h]
   \center
@@ -172,15 +191,14 @@ Also the teoretical vs expermental branching rations is corrected for.
     \hline
     parameter & value & source \\
     \hline
-    $\gamma$           & $\left(73.2_{-7.0}^{+6.3}\right)^{\circ}$ & CKMfitter \cite{Charles:2015gya} \\
-    $\phiS{k}$         & some value & \lhcb \cite{phis-3fb-paper} \\
-    $\phid^k$            & some value & \lhcb \cite{phis-3fb-paper} \\
+    $\gamma$      & $\left(73.2_{-7.0}^{+6.3}\right)^{\circ}$ & CKMfitter \cite{Charles:2015gya} \\
+    $\phid$       & some value & \lhcb \cite{shelodn } \\
     \hline
   \end{tabular}
   \caption{\small Constrains enterign the $\chi^2$ fit.}
   \label{chi2_fit_constrains}
 \end{table}
 
-\begin{equation}\label{Eq:Gamma_GC}
-\gamma  = \left(73.2_{-7.0}^{+6.3}\right)^{\circ} \quad\text{(CKMfitter \cite{Charles:2015gya})}\:,
-\end{equation}
+Minimizing the above $\chi^2$ yields the penguin paramtgers $\alpha_f$ $\theta_f$ which are then translated,
+using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis. The results of the
+$\chi^2$ fit are shown in \secref{penguin_results}.
