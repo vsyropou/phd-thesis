@@ -1,30 +1,17 @@
+The results of the \chisq fit described in \secref{penguin_more_chanells} are shown in \equref{peng_a_theta_results}.
+which are then translated, using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis,
+shown in \equref{delta_phis_result}.
 
-
-% \begin{alignat}{2}
-% H_0 & = 0.99 \pm 0.07\:\text{(stat)} \pm 0.06\:\text{(syst)} \pm 0.27\:(\text{hadr}) && = 0.99 \pm 0.28\:,\\
-% H_\parallel & = 0.91 \pm 0.14\:\text{(stat)} \pm 0.08\:\text{(syst)} \pm 0.21\:(\text{hadr}) && = 0.91 \pm 0.27\:,\\
-% H_\perp & = 1.47 \pm 0.14\:\text{(stat)} \pm 0.11\:\text{(syst)} \pm 0.28\:(\text{hadr}) && = 1.47 \pm 0.33\:.
-% \end{alignat}
-%
-
-
-% \begin{align}
-% \Re[a_0] & = \phantom{-}0.01_{-0.32}^{+0.97}\:, & \Im[a_0] & = \phantom{-}0.025_{-0.031}^{+0.035}\:, & \chi^2_{\text{min}} & = 1.1 \times 10^{-7}\:,\label{Eq:Pen_Re_Im_Long}\\
-% %
-% \Re[a_\parallel] & = \phantom{-}0.31_{-0.51}^{+0.58}\:, & \Im[a_\parallel] & = -0.082_{-0.087}^{+0.074}\:,& \chi^2_{\text{min}} & = 1.2 \times 10^{-3}\:,\label{Eq:Pen_Re_Im_Para}\\
-% %
-% \Re[a_\perp] & = -0.44_{-0.21}^{+0.27}\:, & \Im[a_\perp] & = \phantom{-}0.037_{-0.076}^{+0.079}\:,& \chi^2_{\text{min}} & = 1.5 \times 10^{-6}\:,\label{Eq:Pen_Re_Im_Perp}
-% \end{align}
-
+\begin{subequations}
+\label{peng_a_theta_results}
 \begin{align}
-a_0 & = 0.03^{+0.97}_{-0.03}\:, & \theta_0 & = \phantom{-}\left(64^{+116}_{-244}\right)^{\circ}\:,\\
-%
-a_\parallel & = 0.32^{+0.58}_{-0.32}\:, & \theta_\parallel & = -\left(15^{+150}_{-14}\right)^{\circ}\:,\\
-%
-a_\perp & = 0.45^{+0.21}_{-0.27}\:, & \theta_\perp & = \phantom{-}\left(175 \pm 10\right)^{\circ}\:.
+    \aPeng{0}         & = 0.03^{+0.97}_{-0.03}\:, & \thPeng{0}         & = +\parenthesis{64^{+116}_{-244}}^\circ\:,\\
+    \aPeng{\parallel} & = 0.32^{+0.58}_{-0.32}\:, & \thPeng{\parallel} & = -\parenthesis{15^{+150}_{-14}}^\circ\:,\\
+    \aPeng{\perp}     & = 0.45^{+0.21}_{-0.27}\:, & \thPeng{\perp}     & = +\parenthesis{175 \pm 10}^\circ\:.
 \end{align}
+\end{subequations}
 
-
+\noindent were the uncertainties are the quadratic sum of statistical and systematic ones.
 
 \begin{alignat}{2}
 \Delta\phi^{\jpsi{}\phi}_{s,0} & =
@@ -38,8 +25,30 @@ a_\perp & = 0.45^{+0.21}_{-0.27}\:, & \theta_\perp & = \phantom{-}\left(175 \pm 
 \Delta\phi^{\jpsi{}\phi}_{s,\perp} & =
 -0.046^{+0.012}_{-0.012}\:\text{(stat)}^{+0.007}_{-0.008}\:\text{(syst)}^{+0.017}_{-0.024}\:(\text{hadr})
 && = -0.046^{+0.022}_{-0.028}\:,
+\label{delta_phis_result}
 \end{alignat}
 
+Note that the penguin paramters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitues. Given that it is
+intreasting to point out that any factorizable $\grpsuthree_F$ breaking effets entering through the asumption
+of \equref{} cancell out. (A small subtlity enterign through the second schanell jspsirho).
+Thus the results reported here suffer from non facroraizable $\grpsuthree_F$ breaking which are probably
+small, accroding to blah. The last statement is supported by the values of t the fitted hadronic parameter
+ratios which are close to the once calculated assuming factorization. Thus, as it is mentioned in krystof,
+it is either that the non factorization $\grpsuthree_F$ effects are small or thei ratio with respct to
+the factorizable $\grpsuthree_F$ effects is small.
+
+Note also that the H observables have almost no effect on the result.
+It was also noticed that the H observables are in tention with respct to the cetral value of the fit result.
+This suggests probably that the assuption \equref{} probably not true.
+
+\begin{itemize}
+  \item interpretaion of the hadronic ratio result formt he fit.
+  \item put results with hadronic ratios
+  \item investigate the C = -Acp
+  \item explain plots
+  \item modify plot legend to
+  \item maybe
+\end{itemize}
 
 \begin{figure}[h]
 \begin{center}
@@ -65,24 +74,52 @@ a_\perp & = 0.45^{+0.21}_{-0.27}\:, & \theta_\perp & = \phantom{-}\left(175 \pm 
 \end{center}
 \end{figure}
 
-\section{Further Corsechecks}
-Here the su3 breaking and the polarization correlations are dressed.
+% \begin{align}
+% \Re[a_0] & = \phantom{-}0.01_{-0.32}^{+0.97}\:, & \Im[a_0] & = \phantom{-}0.025_{-0.031}^{+0.035}\:, & \chi^2_{\text{min}} & = 1.1 \times 10^{-7}\:,\label{Eq:Pen_Re_Im_Long}\\
+% %
+% \Re[a_\parallel] & = \phantom{-}0.31_{-0.51}^{+0.58}\:, & \Im[a_\parallel] & = -0.082_{-0.087}^{+0.074}\:,& \chi^2_{\text{min}} & = 1.2 \times 10^{-3}\:,\label{Eq:Pen_Re_Im_Para}\\
+% %
+% \Re[a_\perp] & = -0.44_{-0.21}^{+0.27}\:, & \Im[a_\perp] & = \phantom{-}0.037_{-0.076}^{+0.079}\:,& \chi^2_{\text{min}} & = 1.5 \times 10^{-6}\:,\label{Eq:Pen_Re_Im_Perp}
+% \end{align}
+
+
+\subsection{Further Corsechecks}
+There are two important issues that the fitting strategy as described in \secref{penguin_chi2_fit}
+does not take into account. Namelly, $\grpsuthree_F$ breaking effects and correlations between
+the measurements of the observables \equref{chisq_form_with}. Bothe of these issues addressed in the current section.
 
 \subsubsection{\grpsuthree breaking}
 \label{su3_breaking}
-
-The fact that the \grpsuthree syummetry is a broken symmetry is taken into account in the fit by re parametrizing
-$\alpha_f$ and $\theta_f$ as shown in \equref{su3_breaking}.
+Potential $\grpsuthree_F$ effects manifest themeselfs in the calculations of the hadronic parameters ratios
+when computing the $\Hobs{}$ and in the assumption of \equref{su3_apply}. However, due to the followed strategy
+the hadronic parameter ratios do not rely on any $\grpsuthree_F$ since the are fitted for.
+As far as the assumption of \equref{su3_apply} is concerned, the penguin parameter $(\akPeng,\thkPeng)$ are
+reparametrized as shown in \equref{su3_breaking}
 
 \begin{equation}
-a_i \to \xi \; \alpha_i \quad \theta_i \to \delta + \theta'_i
+  \akPeng \to \xi_k \; \akPeng \quad \thkPeng \to \delta_k + \thkPeng,
 \label{su3_breaking}
 \end{equation}
 
-As there are no dedicated studies for \grpsuthree breaking. It is assumed that $\xi=1$ and $\delta=0$ but include uncertainties
-on these paorameters as gaussian constrains in the $\chi^2$ fit. The dependance of $\Delta\phiS{SM,peng}$ on the $\xi$ and $\delta$
-uncertainties was found to be irrelavant, {\color{red} see jpsiKst paper}, due to the particular structure of \equref{tanddelta}.
+\noindent the parameters $\xi_k$ and $\delta_k$ are free parameters and can absorb potential $\grpsuthree_F$ effects
+that will break the assuption of \equref{su3_apply}\footnote{\color{red} Here it is assumed that the su3 breakign effects enter in the same way in the two chanells}.
+According to what was mentioned at the end of \secref{had_pars_suthree} the estimated $20\%$ $\grpsuthree_F$ breaking
+is translated as gausian constrains around the cental values of $\xi$, $\delta$. These central values imply perfect
+$\grpsuthree_F$ smmetry, meaning $\xi=1$, $\delta=0$.
+
+Under these modification the \chisq fit is reapeated. The effect of $\grpsuthree_F$ was found to be blah.
+
+Furhtermore, the effect of the amount of $\grpsuthree_F$ breaking of $\DeltaPhis{k}$ is in investigated.
+Specifically varying the $\xi$ parameter from $0-50\%$ and repaeting the fit yields a new set of
+$(\akPeng,\thkPeng)$, which are then tranlated in $\DeltaPhis{k}$. The resulted $\DeltaPhis{k} - \xi_k$ contour,
+shown in \figref{}. suggests that the dependance of $\DeltaPhis{k}$ on the $\xi$ and $\delta$
+uncertainties is negeligible. This is due to the particular structure of \equref{tanddelta}. {\color{red}strong theta pahse maybe. what do you eman here.}
 
 \subsubsection{Correlations of Polarization States}
-Correlation between the $k$ polarizations of $\Acp{k}$ and $\fP{k}$ are ignored in the coming from between the polarizations.
-A correlated chisq fit was perfomed showin a slightly increase in the uncertainties for some parameters, see jpsiKst paper.
+Correlations between the $k$ polarizations of the observables entering the \chisq fit were ignored in the
+current analysis. These correlations enter mainly via the $\Acp{k}$ and $\fP{k}$. For example, see the
+correlation matrix \tabref{correlation_matrix} of the angular analysis performed in \chapref{Data_Analysis}.
+In order to check the effect of those corrlations on the estimation of the penguin paramters $(\akPeng,\thkPeng)$,
+an additonal \chisq fit is performed. In that fit the correlations are indeed taken into account.
+The results show a small increase on the error of the penguin paramter $\thPeng{0}$.
+The last result suggest that the impact of the coorelations on the parameters of intereset is negligible.

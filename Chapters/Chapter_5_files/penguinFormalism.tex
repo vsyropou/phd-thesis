@@ -33,7 +33,7 @@ dependant version of $\Delta\phiS{SM, peng}$ of \equref{phis_sm_peng}.
 However, as it was metnioned in the begining of the currrent chapter, the goal is to increase the precision on $\Delta{\phis}$
 by relating similar to \BsJpsiPhi chanells in the penguin estimation on grounds of the $\grpsuthree$ quark symmetry.
 Thus, the measured values of the observables \equref{bsjpsiphi_peng_acp_obs} from the chanells \BsJpsiKst and \BdJpsiRho
-are combined in a $\chi^2$ fit to estimate $(\akPeng,\thkPeng)$. The details of this fit are given in \secref{penguin_chi2_fit}.
+are combined in a $\chisq$ fit to estimate $(\akPeng,\thkPeng)$. The details of this fit are given in \secref{penguin_chi2_fit}.
 
 \subsubsection{Invoking \grpsuthree Symmetry}
 The $\grpsuthree_{F}$ symmetry is used to relate chanells like \BsJpsiKst and \BsJpsiRho to \BsJpsiPhi.
@@ -92,26 +92,15 @@ For this reason the $\Hobs{}$ is not always prefared.
 
 Lastly note that the $\Hobs{}$ observable are constructed in terms of the theoretical branching fractions
 defined at zero decay time, which difer from the measured time-integrated branching fractions~\cite{DeBruyn:2012wj}
-due to the non-zero decay-width diference of the \Bs meson~\cite{hfag-2014}. The calculation of the convertion factor
-is done as in~\cite{bsjpsikst-paper}. The results denpend on the CP eigenvalue of the final state and shown in
-\tabref{br_conversions}
+due to the non-zero decay-width diference, $\Delta\Gamma_s$, of the \Bs meson~\cite{hfag-2014}. The necessary convertion factor
+is shown in \equref{br_conversion_formula}.
 
-\begin{table}[!h]
-  \center
-  \begin{tabular}{c c }
-    \hline
-                        & $\BRof{\B\to f}_{\rm theo} / \BRof{\B\to f}_{\rm exp} $ \\
-    \hline
-      CP-even          &  $1.0608 \pm 0.0045$ \\
-      CP-odd           &  $0.9392 \pm 0.0045$ \\
-      flavor specific  &  $0.9963 \pm 0.0006$ \\
+\begin{equation}
+  \centering
+  \frac{\BRof{\B\to f}_{\rm theo}}{\BRof{\B\to f}_{\rm exp}} = \frac{1-y_s^2}{1-y_s\cos\parenthesis{\phiS{\rm SM, tree}}},
+  \label{br_conversion_formula}
+\end{equation}
 
-    \hline
-  \end{tabular}
-  \caption{\small Conversion facrors.}
-  \label{br_conversions}
-\end{table}
-
-\noindent The results for the CP-even and CP-odd are $1.0608 \rm 0.0045$ and  $0.9392 \rm 0.0045$.
-While for the flavor specific final states is  $0.9963 \rm 0.0006$
-Note that kst is a flavlour specific final state
+\noindent with $y_s = \Delta\Gamma_s / \Gamma_s$. The parameter $\Gamma_s$ is the average decay width of the two
+mass eigenstates of the $\BBbarSyst$ introduced in \secref{the_bbar_system}. The exact numbers for the CP-even,
+CP-odd, and flavour specific final states are reported in Section 9.1 of~\cite{bsjpsikst-paper}.

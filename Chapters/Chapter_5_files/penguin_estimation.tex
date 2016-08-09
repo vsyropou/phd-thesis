@@ -1,5 +1,3 @@
-
-
 The recent \lhcb measurement~\cite{phis-3fb-paper} of \phis comes along with $\lambda_{\jpsi\phi}$, mentioned \equref{lambda_cpv}.
 These two parameters, shown in \equref{phis_lambda_result}, can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 
@@ -18,7 +16,7 @@ In order to increase the precision on \DeltaPhis{} the \grpsuthree flavour symme
 is invoked in order to extract \DeltaPhis{} from similar to \BsJpsiPhi chanells.
 Note that the information from those chanells entering through the observables, \equref{bsjpsiphi_peng_acp_obs} and \equref{hobs_def}
 has to be polarization dependant. This is due to the fact that new physics dynamics might enter in a different way in each polarization as mentioned {\color{red}somewhere in krystof.}
-This section introduces the aditional chanells, \BsJpsiKst and \BdJpsiRho. The details of the $\chi^2$ fit are presented in \secref{penguin_chi2_fit}.
+This section introduces the aditional chanells, \BsJpsiKst and \BdJpsiRho. The details of the $\chisq$ fit are presented in \secref{penguin_chi2_fit}.
 
 
 \subsection{The \BsJpsiKst chanell}
@@ -86,7 +84,7 @@ The results on \DeltaPhis{k}~\cite{bsjpsikst-paper}, are shown in \equref{delta_
   \end{align}
 \end{subequations}
 
-\noindent Where most of the error is statistical in nature.The $\chi^2$ fit performed here is similar
+\noindent Where most of the error is statistical in nature.The $\chisq$ fit performed here is similar
 to the one described later. Hence its details are postopned untill \secref{penguin_chi2_fit}.
 
 
@@ -130,13 +128,13 @@ unbroken. The exact treatment of this uncertainty is postponed for \secref{su3_b
 $\DeltaPhisJpsiPhi{k}$ comapred to \equref{delta_phis_jpsikst}. According to~\cite{DeBruyn-thesis} the last is attributed
 to the small value of the penguin parameter $\thkPeng{k}''$, which is around $90^{\degrees}$.
 
-\subsection{Combined $\chi^2$ Fit}
+\subsection{Fitting Strategy}
 \label{penguin_chi2_fit}
 
 The parameters $(\akPeng,\thkPeng)$ of \equref{bsjpsiphi_amp_param}, which quantify the penguin topology contributions
-to the \BsJpsiPhi decay, are estiamted by means of a $\chi^2$ fit. The $\chi^2$ is defined after some assuptions have been made.
-First perfect $\grpsuthree_{\rm F}$ symmetry, shown in \equref{su3_apply}, is assumed between the \BsJpsiPhi and the
-additional chaneels \BsJpsiKst and \BdJpsiRho.
+to the \BsJpsiPhi decay, are estiamted by means of a $\chisq$ fit. The $\chisq$ is defined after some assumptions have
+been made. First perfect $\grpsuthree_{\rm F}$ symmetry between the \BsJpsiPhi and the additional chaneels \BsJpsiKst
+and \BdJpsiRho is assumed, as shown in \equref{su3_apply},
 
 \begin{equation}
 \akPeng= \akPeng' = \akPeng'' \qquad \thkPeng = \thkPeng' = \thkPeng''.
@@ -155,20 +153,20 @@ the two aditional channells \BsJpsiKst and \BdJpsiRho as shown in \equref{had_ra
   \label{had_ratios_assuption}
 \end{equation}
 
-\noindent By doing so it is possible to void using any explicit calculations of the hadronic factors
-by treating the single hadronic ratio, based on the assumption of \equref{had_ratios_assuption},
-as a free parameter in the $\chi^2$ fit. In this way it is prefered to avoid introducing uncertainty
-from the theoretical calculations on the hadronic parameters. This choice is supported by~\cite{DeBruyn-thesis}
-where it can be seen that the hadronic paramters estimated form data are more precise that those
-coming from theopretical calculalations.
+\noindent Doing so makes it possible to avoid using any explicit calculations of the hadronic factors
+and the single hadronic ratio, based on the assumption of \equref{had_ratios_assuption}, is directly
+estiamted from the fit, since it is treated as a free parameter. This way the uncertainty from the theoretical
+calculations on the hadronic parameters does not enter the fit. This choice is supported by~\cite{DeBruyn-thesis}
+where it can be seen that the hadronic paramters estimated form experimental data are more precise
+that those coming from theopretical calculalations.
 
-Under the above assuptions the observales from the \BsJpsiKst and \BdJpsiRho channels as described
-in \secref{bsjpsirho_chanell} and \secref{bsjpsikst_chanell} respectivelly are used to define the
-$\chi^2$ of \equref{chisq_form}.
+Under the above assuptions the observales related to the \BsJpsiKst and \BdJpsiRho channels along
+with their corresponding esperimental measurements, as described in \secref{bsjpsirho_chanell} and
+\secref{bsjpsikst_chanell}, are used to define the $\chisq$ of \equref{chisq_form}.
 
 \begin{equation}
   \centering
-  \chi^2_k = \sum \frac{O^{\rm theo}_k - O^{\rm exp}_k} {\sigma(O^{\rm exp}_k)},
+  \chisq_k = \sum \frac{O^{\rm theo}_k - O^{\rm exp}_k} {\sigma(O^{\rm exp}_k)},
   \label{chisq_form}
 \end{equation}
 
@@ -183,7 +181,7 @@ $\chi^2$ of \equref{chisq_form}.
 
 \noindent Note also that the CKM angle $\gamma$ and the weak phase $\phid$ are necessary for computating the ${\Acp{\rm dir}}'_k$,
 ${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$ observables. The last parameters are allowed to be free in the
-$\chi^2$ fit with a gausian constrain around their Standard Model value, shown in \tabref{chi2_fit_constrains}.
+$\chisq$ fit with a gausian constrain around their measured value which are shown in \tabref{chi2_fit_constrains}.
 
 \begin{table}[!h]
   \center
@@ -192,13 +190,12 @@ $\chi^2$ fit with a gausian constrain around their Standard Model value, shown i
     parameter & value & source \\
     \hline
     $\gamma$      & $\left(73.2_{-7.0}^{+6.3}\right)^{\circ}$ & CKMfitter \cite{Charles:2015gya} \\
-    $\phid$       & some value & \lhcb \cite{shelodn } \\
+    $\phid$       & $0.767 \pm 0.029$ rad & DeBruyn K.\cite{DeBruyn-thesis} \\
     \hline
   \end{tabular}
-  \caption{\small Constrains enterign the $\chi^2$ fit.}
+  \caption{\small Constrains enterign the $\chisq$ fit.}
   \label{chi2_fit_constrains}
 \end{table}
 
-Minimizing the above $\chi^2$ yields the penguin paramtgers $\alpha_f$ $\theta_f$ which are then translated,
-using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis. The results of the
-$\chi^2$ fit are shown in \secref{penguin_results}.
+\noindent Minimizing the above $\chisq$ yields the penguin paramters $\alpha_f$ $\theta_f$.
+The results of the fit are shown in \secref{penguin_results}.
