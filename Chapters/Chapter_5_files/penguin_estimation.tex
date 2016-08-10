@@ -61,8 +61,8 @@ Whereas the $\Hobs{k}'$ observable is constructed from the \BRof{\BsJpsiKst} rep
 \end{subequations}
 
 \noindent Where "hadr" referes to the hadronisation factor $|\formFctr{k}/\formFctr{k}'|$ necessary for the construction of $\Hobs{k}'$.
-The hadronization factors are calculated theoretically. Such calcualtions are available in {\color{red} somewhere} and were
-used in \equref{hobs_jpsikst}. Note how the error on $\Hobs{k}'$ is dominated by the hadronization factor.
+The hadronization factors are calculated theoretically based on the method suggested in ~\cite{eff-hamiltonian-bs-syst}.
+The exact numbers used can be found in ~\cite{DeBruyn-thesis}. Note how the error on $\Hobs{k}'$ is dominated these factors.
 
 % \begin{align}
 % \left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
@@ -148,9 +148,9 @@ the two aditional channells \BsJpsiKst and \BdJpsiRho as shown in \equref{had_ra
   \centering
   % \modulo{ \frac{\formFctr{k}\parenthesis{\BsJpsiPhi}}{\formFctr{k}'\parenthesis{\BsJpsiKst}}  } =
   % \modulo{ \frac{\formFctr{k}\parenthesis{\BsJpsiPhi}}{\formFctr{k}''\parenthesis{\BdJpsiRho}}  }.
-  \modulo{ \frac{\formFctr{k}}{\formFctr{k}'}  } =
-  \modulo{ \frac{\formFctr{k}}{\formFctr{k}''}  }.
-  \label{had_ratios_assuption}
+  \hadRatio{k}{}{\prime} =
+  \hadRatio{k}{}{\prime\prime}
+    \label{had_ratios_assuption}
 \end{equation}
 
 \noindent Doing so makes it possible to avoid using any explicit calculations of the hadronic factors
