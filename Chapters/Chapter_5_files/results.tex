@@ -1,6 +1,4 @@
 The results of the \chisq fit described in \secref{penguin_more_chanells} are shown in \equref{peng_a_theta_results}.
-which are then translated, using \equref{tandelta}, to the final estimate for the penguin phase shift on \phis,
-shown in \equref{delta_phis_result}.
 
 \begin{subequations}
 \label{peng_a_theta_results}
@@ -11,7 +9,9 @@ shown in \equref{delta_phis_result}.
 \end{align}
 \end{subequations}
 
-\noindent were the uncertainties are the quadratic sum of statistical and systematic ones.
+\noindent The quoted uncertainties are the quadratic sum of statistical and systematic ones.
+The results of \equref{peng_a_theta_results} are then translated, using \equref{tandelta},
+to the final estimate of the phase shift $\DeltaPhisJpsiPhi{k}$, due to penguin topologies which is shown in \equref{delta_phis_result}.
 
 \begin{alignat}{2}
 \DeltaPhisJpsiPhi{0} & =
@@ -28,25 +28,24 @@ shown in \equref{delta_phis_result}.
 \label{delta_phis_result}
 \end{alignat}
 
-Note that the penguin paramters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitues. Given that it is
+{\color{red} I still need to comment on the uncertainties. I have not decicded which I am goin to quote.}
+A systematic uncertainty to $\DeltaPhis{k}$ is asigned by assuming $20\%$ $\grpsuthree_F$ breaking,
+according to what was mentioned at the end of \secref{had_pars_suthree}. The systematic is asigned
+by performing a special fit explained in \secref{su3_breaking}. Note that the penguin paramters
+$(\akPeng,\thkPeng)$ are ratios of hadronic amplitues. Given that it is
 intreasting to point out that any factorizable $\grpsuthree_F$ breaking effets entering through the asumption
-of \equref{} cancell out. (A small subtlity enterign through the second schanell jspsirho).
-Thus the results reported here suffer from non facroraizable $\grpsuthree_F$ breaking which are probably
-small, accroding to blah. The last statement is supported by the values of t the fitted hadronic parameter
-ratios which are close to the once calculated assuming factorization. Thus, as it is mentioned in krystof,
-it is either that the non factorization $\grpsuthree_F$ effects are small or thei ratio with respct to
-the factorizable $\grpsuthree_F$ effects is small.
+of \equref{su3_apply} cancell out.
+Thus the results reported here suffer from non facroraizable $\grpsuthree_F$ breaking which are small,
+accroding to ~\cite{DeBruyn-thesis}. The last statement is supported by the values of the fitted hadronic parameter
+ratios which are close to the once calculated assuming factorization holds. As it is mentioned in~\cite{DeBruyn-thesis},
+either the non factorization $\grpsuthree_F$ effects or their ratio with respct to the factorizable $\grpsuthree_F$
+ones are small.
 
-Note also that the H observables have almost no effect on the result.
-It was also noticed that the H observables are in tention with respct to the cetral value of the fit result.
-This suggests probably that the assuption \equref{} probably not true.
-
-Figures blah show the reuslts. {\color{red} explain contours}
-\begin{itemize}
-  \item investigate the C = -Acp
-  \item modify plot legend maybe
-  \item Conclude that the penguin shift is small
-\end{itemize}
+The results of the paramters $(\akPeng,\thkPeng)$ are summarised in the contours of
+Figs \ref{pengPlot_long}, \ref{pengPlot_perp} and \ref{pengPlot_para}. Note that the $\Hobs{k}$ observables have almost no
+effect on the result due to their asscociated large uncertainty. Also note that, the $\Hobs{k}$ observables are in
+tention with respect to the cetral value of the fit result. This suggests probably that the assuption
+\equref{had_ratios_assuption} probably not true. {\color{red} I will rewrite-polish this once I update the final contours.}
 
 \begin{figure}[h]
 \begin{center}
@@ -80,34 +79,40 @@ Figures blah show the reuslts. {\color{red} explain contours}
 % \Re[a_\perp] & = -0.44_{-0.21}^{+0.27}\:, & \Im[a_\perp] & = \phantom{-}0.037_{-0.076}^{+0.079}\:,& \chi^2_{\text{min}} & = 1.5 \times 10^{-6}\:,\label{Eq:Pen_Re_Im_Perp}
 % \end{align}
 
+The results of the penguin shift $\DeltaPhisJpsiPhi{k}$ quoted in \equref{delta_phis_result}
+suggest that they controbutions of penguin topologies to the \BsJpsiPhi decay amplitude are small.
+{\color{red} Maybe add some comments on future prospet, in view of the intreated precition.}
 
 \subsection{Further Corsechecks}
 There are two important issues that the fitting strategy as described in \secref{penguin_chi2_fit}
-does not take into account. Namelly, $\grpsuthree_F$ breaking effects and correlations between
-the measurements of the observables \equref{chisq_form_with}. Bothe of these issues addressed in the current section.
+does not take into account. Namelly, $\grpsuthree_F$ breaking effects and correlations, from the
+experimental measurement, between the observables \equref{chisq_form_with}. Both of these issues
+addressed in the current section.
 
 \subsubsection{\grpsuthree breaking}
 \label{su3_breaking}
 Potential $\grpsuthree_F$ effects manifest themeselfs in the calculations of the hadronic parameters ratios
-when computing the $\Hobs{}$ and in the assumption of \equref{su3_apply}. However, due to the followed strategy
-the hadronic parameter ratios do not rely on any $\grpsuthree_F$ since the are fitted for.
+when computing the $\Hobs{k}$ observable and in the assumption of \equref{su3_apply}. However, due to the
+followed strategy the hadronic parameter ratios are not affected by $\grpsuthree_F$ breaking since the are fitted for.
 As far as the assumption of \equref{su3_apply} is concerned, a special fit is performed using only observables
-releated to \BdJpsiRho channel. For that, $(\akPeng,\thkPeng)$ are re-expressed as shown in \equref{su3_breaking}
+releated to \BdJpsiRho channel, to investigate the effect of $\grpsuthree_F$. For that, $(\akPeng,\thkPeng)$
+are re-expressed as shown in \equref{su3_breaking}
 
 \begin{equation}
   \akPeng \to \xi_k \; \akPeng'' \quad \thkPeng \to \delta_k + \thkPeng''.
 \label{su3_breaking}
 \end{equation}
 
-\noindent The quantities $\xi_k$ and $\delta_k$ are free parameters with a gaiussian constrian and can absorb
-potential $\grpsuthree_F$ effects that will break the assuption of \equref{su3_apply}. The effect of various
-amounts of $\grpsuthree_F$ breaking is investigated by means of a $\xi_k-\DeltaPhis{k}$ contour. The errors on the
-$\xi_k$ and $\delta_k$ parameters, tha constrain their central valuee, are varied from $0-50\%$ and $(0-40)^{\circ}$.
-Then the above mentioned special fit is pepreated several times. The results showed no dependence on the value
-of $\DeltaPhis{k}$ on $\xi_k$. This is most likely due to the particular structure of \equref{tanddelta}. {\color{red}strong theta pahse maybe. what do you eman here.}
-
-In addition, a systematic uncertainty to $\DeltaPhis{k}$ is asigned by assuming $20\%$ $\grpsuthree_F$ breaking,
-according to what was mentioned at the end of \secref{had_pars_suthree}.
+\noindent The quantities $\xi_k$ and $\delta_k$ are allowed to vary in the fit and can thus absorb
+potential $\grpsuthree_F$ effects that will break the assuption of \equref{su3_apply}.
+The central vaues of $\xi_k$ and $\delta_k$ assume perfect $\grpsuthree_F$ symmetry, meaning $\xi_k=1$ and $\delta_k=0$.
+However, a gausian contrain allows them to vary within a range of up to $50\%$
+$\grpsuthree_F$\footnote{Meaning $\sigma{\xi_k}\in\brackets{0,0.5}$ and $\sigma_{\delta_k}\in\brackets{0,40}^\circ$ }.
+Repeating the above mentioned special fit showed that the extracted value of $\DeltaPhis{k}$
+does not depend on the amount of allowed $\grpsuthree_F$ symmetrty breaking.
+This is most likely due to the particular structure of \equref{tandelta}, meaning that
+the value of $\akPeng$, or $\xi_k$ in that case, becomes less pronounced by values of
+$\thkPeng$ which are close to $90^\circ$.
 
 \subsubsection{Correlations of Polarization States}
 Correlations between the $k$ polarizations of the observables entering the \chisq fit were ignored in the

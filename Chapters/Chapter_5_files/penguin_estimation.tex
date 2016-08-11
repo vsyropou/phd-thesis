@@ -1,4 +1,4 @@
-The recent \lhcb measurement~\cite{phis-3fb-paper} of \phis comes along with $\lambda_{\jpsi\phi}$, mentioned \equref{lambda_cpv}.
+The recent \lhcb measurement~\cite{phis-3fb-paper} of \phis comes along with $\lambda_{\jpsi\phi}$, mentioned in \equref{lambda_cpv}.
 These two parameters, shown in \equref{phis_lambda_result}, can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 
 \begin{equation}
@@ -9,13 +9,15 @@ These two parameters, shown in \equref{phis_lambda_result}, can be used to estim
 \end{equation}
 
 \noindent Based on \equref{cp_asym_lambda} and according to the formalism in \secref{penguin_formalism}, the $\DeltaPhis{}$ estimation
-from \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of~\cite{DeBruyn-thesis}, which is not precise
-enough given the central value of $\phis^{\jpsi\phi}$.
+due to penguin topologies based on \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of~\cite{DeBruyn-thesis}, which is not precise
+enough given the central value of $\phis^{\jpsi\phi}$. This is releated to the supresion factor $\epsilon$, mentioned in
+\secref{jpsiphi_amp_struct}, that the penguin topologies receive in the \BsJpsiPhi decay.
 
 In order to increase the precision on \DeltaPhis{} the \grpsuthree flavour symmetry,
 is invoked in order to extract \DeltaPhis{} from similar to \BsJpsiPhi chanells.
 Note that the information from those chanells entering through the observables, \equref{bsjpsiphi_peng_acp_obs} and \equref{hobs_def}
-has to be polarization dependant. This is due to the fact that new physics dynamics might enter in a different way in each polarization as mentioned {\color{red}somewhere in krystof.}
+has to be polarization dependant. This is due to the fact that new physics dynamics might enter in a different way in each polarization,
+as mentioned in~\cite{DeBruyn-thesis}.
 This section introduces the aditional chanells, \BsJpsiKst and \BdJpsiRho. The details of the $\chisq$ fit are presented in \secref{penguin_chi2_fit}.
 
 
@@ -23,12 +25,13 @@ This section introduces the aditional chanells, \BsJpsiKst and \BdJpsiRho. The d
 \label{bsjpsikst_chanell}
 
 The \BsJpsiKst chanell is a flavour specific decay with the same topology as \BsJpsiPhi, see \figref{bs2jpsikst}.
-The amplitude of \BsJpsiKst, is parametrised following the same concept as in the case of \BsJpsiPhi and is shown in \equref{bsjpsikst_amp}.
+The amplitude of \BsJpsiKst, is parametrised following the same concept as in the case of \BsJpsiPhi and is
+shown in \equref{bsjpsikst_amp}.
 
 \begin{figure}[h]
   \centering
   {\sffamily \input{Figures/Chapter5/tree_penguin_jpsikst}}
-  \caption{Leading order tree diagram of the decay \BsJpsiPhi.}
+  \caption{Leading order diagrams of the decay \BsJpsiKst. Left: Color supressed tree topology. Right: Penguin topology.}
   \label{bs2jpsikst}
 \end{figure}
 
@@ -39,7 +42,7 @@ The amplitude of \BsJpsiKst, is parametrised following the same concept as in th
 
 \noindent where primed$({}^\prime$) quantities from here and on will be ascociated with the \BsJpsiKst decay only.
 Note the absence of the subression factor $\epsilon$ in \equref{bsjpsikst_amp}, which implies that the penguin diagram
-contributes as much as the tree diagram does to the total amplitude, in contrast to the \BsJpsiPhi decay.
+contributes as much as the color supressed tree diagram does to the total amplitude, in contrast to the \BsJpsiPhi decay.
 
 As mentioned in \secref{penguin_formalism} the \BsJpsiKst chanell provides acess to \Acp{\rm dir} only.
 Thus, additional information is required, via the $\Hobs{k}'$ observable, in order to probe $(\akPeng,\thkPeng)$.
@@ -85,14 +88,14 @@ The results on \DeltaPhis{k}~\cite{bsjpsikst-paper}, are shown in \equref{delta_
 \end{subequations}
 
 \noindent Where most of the error is statistical in nature.The $\chisq$ fit performed here is similar
-to the one described later. Hence its details are postopned untill \secref{penguin_chi2_fit}.
+to the one described in \secref{penguin_chi2_fit}. Hence its details are postopned for later.
 
 
 \subsection{The \BdJpsiRho chanell}
 \label{bsjpsirho_chanell}
 
 The topology of the \BdJpsiRho decay is shown in \figref{bs2jpsirho_diagram}. The amplitude structure is identical
-to that of the \BsJpsiKst mode resulting in \equref{bsjpsirho_amp}. same The finals state is a cp ei the chanells
+to that of the \BsJpsiKst mode resulting in \equref{bsjpsirho_amp}.
 
 \begin{figure}[h]
   \centering
@@ -123,8 +126,7 @@ in Section 5.5.3. of ~\cite{DeBruyn-thesis} are shown in \equref{delta_phis_jpsi
   \end{align}
 \end{subequations}
 
-\noindent Where the most of the uncertainty is statistical in nature. The rest comes from the assumption that \grpsuthree is
-unbroken. The exact treatment of this uncertainty is postponed for \secref{su3_breaking}. Note the small uncertainty on
+\noindent Where the most of the uncertainty is statistical in nature. Note the small uncertainty on
 $\DeltaPhisJpsiPhi{k}$ comapred to \equref{delta_phis_jpsikst}. According to~\cite{DeBruyn-thesis} the last is attributed
 to the small value of the penguin parameter $\thkPeng{k}''$, which is around $90^{\degrees}$.
 
@@ -153,15 +155,15 @@ the two aditional channells \BsJpsiKst and \BdJpsiRho as shown in \equref{had_ra
     \label{had_ratios_assuption}
 \end{equation}
 
-\noindent Doing so makes it possible to avoid using any explicit calculations of the hadronic factors
-and the single hadronic ratio, based on the assumption of \equref{had_ratios_assuption}, is directly
+\noindent Doing so makes it possible to avoid using theoretical calculations of the hadronic factors.
+Instead the single hadronic ratio, based on the assumption of \equref{had_ratios_assuption}, is directly
 estiamted from the fit, since it is treated as a free parameter. This way the uncertainty from the theoretical
 calculations on the hadronic parameters does not enter the fit. This choice is supported by~\cite{DeBruyn-thesis}
 where it can be seen that the hadronic paramters estimated form experimental data are more precise
-that those coming from theopretical calculalations.
+that those coming from theoretical calculalations.
 
 Under the above assuptions the observales related to the \BsJpsiKst and \BdJpsiRho channels along
-with their corresponding esperimental measurements, as described in \secref{bsjpsirho_chanell} and
+with their corresponding experimental measurements, as described in \secref{bsjpsirho_chanell} and
 \secref{bsjpsikst_chanell}, are used to define the $\chisq$ of \equref{chisq_form}.
 
 \begin{equation}
@@ -197,5 +199,5 @@ $\chisq$ fit with a gausian constrain around their measured value which are show
   \label{chi2_fit_constrains}
 \end{table}
 
-\noindent Minimizing the above $\chisq$ yields the penguin paramters $\alpha_f$ $\theta_f$.
+\noindent Minimizing the above $\chisq$ yields the penguin paramters $(\akPeng$,$\thkPeng)$.
 The results of the fit are shown in \secref{penguin_results}.
