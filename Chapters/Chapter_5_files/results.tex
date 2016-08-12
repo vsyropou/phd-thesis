@@ -10,7 +10,24 @@ The results of the \chisq fit described in \secref{penguin_more_chanells} are sh
 \end{subequations}
 
 \noindent The quoted uncertainties are the quadratic sum of statistical and systematic ones.
-The results of \equref{peng_a_theta_results} are then translated, using \equref{tandelta},
+The results of the parameters $(\akPeng,\thkPeng)$ can be visualised better in the contours of
+Figs \ref{pengPlot_long}, \ref{pengPlot_perp} and \ref{pengPlot_para}.{\color{red} Contours to be updated. H observable is nto there.} Note that the $\Hobs{k}$
+observables have almost no effect on the result due to their associated large uncertainty.
+Also note that, the $\Hobs{k}$ observables are in tension with respect to the central value of
+the fit result. This suggests probably that the assumption \equref{had_ratios_assuption} probably
+not true.
+
+\begin{figure}[h]
+\begin{center}
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.33]{Figures/Chapter5/Penguin_Contribution_Ang_vs_Abs_allB2VV_Para.pdf}
+  \caption{Limits on the penguin parameters $\aPeng{\parallel}$ and $\thPeng{\parallel}$ obtained from intersecting contours derived from
+           the CP asymmetries and branching fraction measurements in $\BsJpsiKst$ and $\BdJpsiRho$ channels.  Superimposed are the confidence
+           level contours obtained from a $\chi^2$ fit to the data. Figures thanks to~\cite{DeBruyn-thesis}. {\color{red} $C$ and $S$ will be made consistent}}
+  \label{pengPlot_para}
+\end{center}
+\end{figure}
+
+The best fit estimates of \equref{peng_a_theta_results} are subsequently translated, using \equref{tandelta},
 to the final estimate of the phase shift $\DeltaPhisJpsiPhi{k}$, due to penguin topologies which is shown in \equref{delta_phis_result}.
 
 \begin{alignat}{2}
@@ -28,11 +45,12 @@ to the final estimate of the phase shift $\DeltaPhisJpsiPhi{k}$, due to penguin 
 \label{delta_phis_result}
 \end{alignat}
 
-{\color{red} I still need to comment on the uncertainties. I have not decided which I am going to quote.}
+{\color{red} Comment on the uncertainties later. Need to re-check the breakdown of the uncertainties done in Krystofs code.}
 A systematic uncertainty to $\DeltaPhis{k}$ is assigned by assuming $20\%$ $\grpsuthree_F$ breaking,
 according to what was mentioned at the end of \secref{had_pars_suthree}. The systematic is assigned
-by performing a special fit explained in \secref{su3_breaking}. Note that the penguin parameters
-$(\akPeng,\thkPeng)$ are ratios of hadronic amplitudes. Given that it is
+by performing a special fit explained in \secref{su3_breaking}.
+
+Note that the penguin parameters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitudes. Given that it is
 interesting to point out that any factorizable $\grpsuthree_F$ breaking effects entering through the assumption
 of \equref{su3_apply} cancel out.
 Thus the results reported here suffer from non factorizable $\grpsuthree_F$ breaking which are small,
@@ -41,13 +59,7 @@ ratios which are close to the once calculated assuming factorization holds. As i
 either the non factorization $\grpsuthree_F$ effects or their ratio with respect to the factorizable $\grpsuthree_F$
 ones are small.
 
-The results of the parameters $(\akPeng,\thkPeng)$ are summarized in the contours of
-Figs \ref{pengPlot_long}, \ref{pengPlot_perp} and \ref{pengPlot_para}. Note that the $\Hobs{k}$ observables have almost no
-effect on the result due to their associated large uncertainty. Also note that, the $\Hobs{k}$ observables are in
-tension with respect to the central value of the fit result. This suggests probably that the assumption
-\equref{had_ratios_assuption} probably not true. {\color{red} I will rewrite-polish this once I update the final contours.}
-
-\begin{figure}[h]
+\begin{figure}[h!]
 \begin{center}
   \begin{subfigure}{1\textwidth}
     \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Ang_vs_Abs_allB2VV_Long.pdf}
@@ -59,17 +71,14 @@ tension with respect to the central value of the fit result. This suggests proba
     \caption{}
     \label{pengPlot_perp}
   \end{subfigure}
-  \caption{Penguin parameter contours. Figures from~\cite{DeBruyn-thesis}}
+  \caption{Limits on the penguin parameters for: $\aPeng{0}$, $\thPeng{0}$ (top) and $\aPeng{\perp}$, $\thPeng{\perp}$ (bottom).
+           Limits are obtained from intersecting contours derived from
+           the CP asymmetries and branching fraction measurements in $\BsJpsiKst$ and $\BdJpsiRho$ channels.  Superimposed are the confidence
+           level contours obtained from a $\chi^2$ fit to the data. Figures thanks to~\cite{DeBruyn-thesis}. {\color{red} $C$ and $S$ will be made consistent} }
 \end{center}
 \end{figure}
 
-\begin{figure}[h]
-\begin{center}
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.33]{Figures/Chapter5/Penguin_Contribution_Ang_vs_Abs_allB2VV_Para.pdf}
-  \caption{Penguin parameter contours. Figures from~\cite{DeBruyn-thesis}}
-  \label{pengPlot_para}
-\end{center}
-\end{figure}
+
 
 % \begin{align}
 % \Re[a_0] & = \phantom{-}0.01_{-0.32}^{+0.97}\:, & \Im[a_0] & = \phantom{-}0.025_{-0.031}^{+0.035}\:, & \chi^2_{\text{min}} & = 1.1 \times 10^{-7}\:,\label{Eq:Pen_Re_Im_Long}\\
@@ -79,7 +88,7 @@ tension with respect to the central value of the fit result. This suggests proba
 % \Re[a_\perp] & = -0.44_{-0.21}^{+0.27}\:, & \Im[a_\perp] & = \phantom{-}0.037_{-0.076}^{+0.079}\:,& \chi^2_{\text{min}} & = 1.5 \times 10^{-6}\:,\label{Eq:Pen_Re_Im_Perp}
 % \end{align}
 
-The results of the penguin shift $\DeltaPhisJpsiPhi{k}$ quoted in \equref{delta_phis_result}
+Lstly the penguin shifts $\DeltaPhisJpsiPhi{k}$ quoted in \equref{delta_phis_result}
 suggest that they contributions of penguin topologies to the \BsJpsiPhi decay amplitude are small.
 {\color{red} Maybe add some comments on future prospect, in view of the increased precision.}
 
