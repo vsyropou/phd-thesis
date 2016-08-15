@@ -12,17 +12,23 @@ along with the \ACP parameters of interest, which are introduced in a special wa
 \subsection{Angular Dependence}
 \label{Diferential_Decay_Rate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The decay of interest, \BJpsiKst, is a P2VV
-process\footnote{P2VV is an acronym referring to the spin of the particles involved in the decay.
-The $\Bs$ (and $\Bd$) is spin-0 parity minus (Pseudo-scalar) particle, whereas the intermediate resonances $\jpsi$ and $\phi$
-are spin-1 (Vector) particles. Hence the acronym P2VV.}
-with 4 particles in the final state. There are at least two ways to describe the angular dependence of that decay, namely the transversity framework \cite{transvFrameworkI,transvFrameworkII}
-and the helicity formalism \cite{helicityFormI,helicityFormII}. In both cases the goal is to come up with an angular dependent description of the total decay amplitude.
-In the transversity framework the decay amplitude is decomposed to the three possible polarization states of the intermediate particles \jpsi and \Kst with respect to
-the \Bs rest frame using polarization vectors of the decay amplitude. For the current analysis the helicity formalism is adopted where the angular dependence is
-introduced by summing all possible spin configurations of the intermediate vector particles relative to their momentum direction in the \Bs rest mass frame
-and squaring the sum. Or in more compact wording, from summing up all possible helicity configurations of the intermediate vector particles. A detailed derivation of both
-approaches within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectively for the transvercity and helicity formalism.
+The decay of interest, \BJpsiKst, is a P2VV process with 4 charged particles in the final state.
+The acronym P2VV acronym refers to the spin of the particles involved in the decay. Specifically, the
+\Bs (and \Bd) is spin-0 parity minus (Pseudo-scalar) particle, whereas the intermediate resonances
+\jpsi and \Kstarzb are spin-1 (Vector) particles. Hence the acronym P2VV. The final state partciles are
+two muons, \mmu, and two kaons, $K$, coming from the decay of the \jpsi and \Kstarzb respectivelly.
+The angular dependence of the \BsJpsiKst decay can be described using eiter the transversity framework~\cite{transvFrameworkI,transvFrameworkII}
+or the helicity formalism~\cite{helicityFormI,helicityFormII}. For the current analysis the helicity
+formalism is adopted. This implies that the angular dependence is introduced by summing all possible
+spin configurations of the intermediate vector particles relative to their momentum direction in the
+\Bs rest mass frame and squaring the sum. Or, in more compact wording, from summing up all possible
+helicity configurations of the intermediate vector particles. A detailed derivation of both approaches
+within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectively
+for the transvercity and helicity formalism.
+
+% In the transversity framework the decay
+% amplitude is decomposed to the three possible polarization states of the intermediate particles \jpsi and \Kst with respect to
+% the \Bs rest frame using polarization vectors of the decay amplitude
 
 \begin{table}[!h]
   \centering
@@ -92,8 +98,9 @@ approaches within the scope of a P2VV decay can be found in \cite{daanThesis} an
   \end{tabular}
 \end{table}
 
-The current paragraph aims at very briefly explaining the steps needed to arrive to an expression for the angular decay rate for \BsJpsiKst decays, which is the sum of ten terms.
-As shown in \equref{ang_terms}
+Her, the steps to arrive at an expression for the angular decay rate for \BsJpsiKst decays. In \equref{ang_terms}
+the amplitude $\mathcal{A}(\text{\BJpsiKst})$ is decomposed in its \pwave ($0$, $\parallel$, $\perp$) and \swave ($S$)
+polarizations.
 
 \begin{align}
   \frac{d\Gamma(\text{\BJpsiKst})}{d\Omega\;d\mkpi} \propto |\mathcal{A}&(\text{\BJpsiKst})|^2 = \nonumber \\
@@ -101,23 +108,26 @@ As shown in \equref{ang_terms}
   \label{ang_terms}
 \end{align}
 
-\noindent where the term $\mathcal{A}(\text{\BJpsiKst})$ is the amplitude of the decay which is decomposed in its \pwave ($0$, $\parallel$, $\perp$) and \swave ($S$) polarizations.
-The terms $a_n$ come from squaring the amplitude and their exact expressions are shown in the first column of
+\noindent where the terms $a_n$ orginate from squaring the amplitude and their exact expressions are shown in the first column of
 \tabref{ang_distr}\footnote{It is interesting to see in \cite{jeroenThesis} how the $\Re$ and $\Im$ parts of the interference terms show up.}.
-Note the appearance of \pwave self interference and \spwave interference terms. The functions $h$ represent the angular dependence of each term, whereas $\mKpiAmp$ stands
-for the \mkpi dependence of the amplitude and its special treatment is postponed for the next section. \tabref{ang_distr} lists the angular part of the decay rate
-(meaning the $h$ functions) equation which is the result of applying the \emph{helicity formalism} in the \BJpsiKst decay. The compact
-notation $\Omega$ stands for the so called \emph{heliciy angles}. Three angles are required in a 4 body decay which along with the \mkpi
-total the degrees of freedom necessary to describe such a system. Those angles are $\thetaK,\thetamu,\phihel$ and are defined in \figref{helAngles}.
-In that figure it can be seen that $\thetamu$ is the angle of the positive $\mu$ with respect to the momentum of the \jpsi in the \Bs rest frame.
-Similarly for $\thetaK$, the \kaon is used to define the angle with respect to the momentum of the intermediate \Kpi resonance. Finally $\phihel$ is
-the relative angle between the \Kpi and dimuon decay planes, where each plane is defined in the rest frame of the respective intermediate resonance.
+Note the appearance of \pwave and \spwave interference terms. The functions $h_n$ represent the angular dependence of each term,
+and $\mKpiAmp$ the \mkpi dependence of the amplitude. The treatment of the \mkpi dependence is postponed for the next section.
+\tabref{ang_distr} lists the angular part of the decay rate equation ({\it i.e.} the $h_n$ functions) which is the result of
+applying the \emph{helicity formalism} in the \BJpsiKst decay. To descrbe a 4-body decay, such as the \BJpsiKst decay, three
+angles, denoted by $\Omega$, plus the \mkpi are required. As shown in \figref{helAngles}, the three \emph{heliciy angles} angles
+$\thetaK$, $\thetamu$ and $\phihel$, are defined as follows: $\thetamu$ is the angle of the positive $\mu$ with respect to the
+momentum of the \jpsi in the \Bs rest frame; similarly for $\thetaK$, the \kaon is used to define the angle with respect to
+the momentum of the intermediate \Kpi resonance; finally $\phihel$ is the relative angle between the \Kpi and dimuon decay
+planes, where each plane is defined in the rest frame of the correspondig intermediate resonance.
 
-Lastly, the mathematically elegant orthogonal angular basis of $P$ and $Y$
-\footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical harmonics can be expressed as
-Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
-is adopted in the current analysis, since the integrals of type $\int_{-1}^{1}Pd\cos\thetaK$ and $\int_{\cos\theta=-1,\varphi=-\pi}^{\cos\theta=1,\varphi=\pi}Yd\cos\theta d\varphi$ are known
-analytically thus significantly reducing the fitting time and simplifying the implementation of the angular functions.
+Lastly, the orthogonal angular basis of $P$ and $Y$
+\footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
+harmonics can be expressed as Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
+is adopted in the current analysis. This choice is favoured by the fact that the integrals of the product of
+two $P$ or two $Y$ are known analytically. The last significantly imporves the description and implementation
+of the angular acceptance, see see \secref{Accceptance}.
+
+% $\int_{-1}^{1}Pd\cos\thetaK$ and $\int_{\cos\theta=-1,\varphi=-\pi}^{\cos\theta=1,\varphi=\pi}Yd\cos\theta d\varphi$
 
 \begin{figure}[h]
 \begin{center}
@@ -131,11 +141,15 @@ analytically thus significantly reducing the fitting time and simplifying the im
 \subsection{Acceptance}
 \label{Accceptance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-While the effects of angular resolution are known to be negligible for this analysis, angular acceptance on the other hand can
-not be neglected. The current section introduces the acceptance shape. After that the parametrization of the acceptance is discussed
-and finally an important issue related to the choice of parametrization is dealt with.
+While the effects of angular resolution are known to be small for this analysis{\color{red} ref tristran.},
+on the other hand, sources introducing angular acceptance need to be acounted for. Diviations from a perfect
+angular acceptance can be introduced by selection criteria imposed during the Stripping or by the detector itself.
+As explained in \secref{lhcb_detector} the \lhcb detector does not cover the full $4\pi$ solid angle, plus the fact that
+along there are no detector elemntents in the \lhc beam pipe. The current section introduces the treatment of
+angular acceptance shape. After that the parametrization of the acceptance is discussed and finally an important
+issue related to the choice of parametrization is dealt with.
 
-The shape of the acceptance can be seen in \figref{angAcc_ctk} to \figref{angAcc_phi}. The most striking feature is the drop of efficiency
+The shape of the acceptance can be seen in \figref{angAcc_all}. The most striking feature is the drop of efficiency
 close to $\cos\thetaK=1$, which implies that the pion is more likely to fly out of the geometrical acceptance of the detector, compared to a kaon,
 and thus not be detected. This feature can be understood given the  definition of $\cos\thetaK$ in \figref{helAngles}.
 The scenario where $\cos\thetaK\rightarrow 1$ and hence $\thetaK \rightarrow 0$ corresponds to a soft pion after boosting
@@ -143,9 +157,9 @@ to the lab frame. Since the pion is lighter than a kaon it is more likely that i
 often than a kaon does, creating the observed asymmetric efficiency loss in the $\cos\thetaK$ projection. With that said, it is intuitive that
 this type of efficiency loss is driven by the mass difference between the two particles. In the case of the $\cos\thetamu$ the
 inefficiency introduced as described before for the $\cos\thetaK$ projection, is symmetric with respect to the positive and negative muons since
-they have the same mass. As for the acceptance in the $\phihel$ plane it is very close to being flat. By staring again \figref{helAngles} one does not expect any
-reason for a strong acceptance effect in that projection. In addition to this type of acceptance effects any of the selection
-cuts applied could also introduce some inefficiency.
+they have the same mass. As for the acceptance in the $\phihel$ plane it is very close to being uniform.
+No reason for a a strong acceptance effect in that projection is expected. In addition to this type of
+
 
 \begin{figure}[h]
   \centering
@@ -178,9 +192,9 @@ cuts applied could also introduce some inefficiency.
 \label{Acceptance parametrization}
 As for the parametrization of the angular acceptance there are at least two ways to proceed,
 namely the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}.
-The current analysis implements the first one, where the efficiency function is parametrized using orthogonal functions (nicely
-combined with the angular description formalism in the previous subsection). Such a parameterization can be seen in the next equation
-\equref{eff_func}. The symbol $\effbase$ is introduced as a shorter notation.
+The current analysis implements the first one. The efficiency function is thus parametrized using orthogonal functions,
+which when combined with the angular description formalism in the previous subsection, allows fort fast aalytical
+integration. Such a parameterization is defined by \equref{eff_func}.
 
 \begin{center}
 \begin{equation}
@@ -189,37 +203,38 @@ combined with the angular description formalism in the previous subsection). Suc
 \end{equation}
 \end{center}
 
-\noindent where the familiar from the previous section spherical harmonics ($Y$) and associated Legendre polynomials ($P$) show up as the basis
-functions on which the angular acceptance is decomposed to the $PY$ basis by means of the coefficients $c^i_{k}$, hereafter efficiency moments (or simply moments).
-The reason of choosing the particular parameterizations is obviously for the known analytical integrals of product of two $P$ or $Y$.
-Following the above parameterizations one just needs to choose a set of $c^i_{jk}$ and find a way compute them. In principle there are infinite efficiency moments
+\noindent where the spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
+functions on which the angular acceptance is decomposed to, by means of the coefficients $c^i_{k}$, hereafter efficiency moments (or simply moments).
+The reason of choosing the particular parameterizations is for the known analytical integrals of products of two $P$ or two $Y$.
+Following the above parameterizations one just needs to obtain a set of $c^i_{jk}$. There are infinite efficiency moments
 since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However in practice only a small number of efficiency moments
-contribute significantly to the proper description of the angular acceptance shape. The efficiency moments used to describe the acceptance
+contribute significantly to the angular acceptance shape\footnote{This is due to the fact that higher moments introduce
+variations on the acceptance shape that are effectivelly whashed out by the finite angular resolution.}.
+The efficiency moments used to describe the acceptance
 shape are shown in the first column of \tabref{eff_moms_table}. The choice of those particular moments is connected to an important issue with the acceptance
 structure close to $\cos\thetaK=1$ and it is addressed at the end of the current section.
 
 In order for the efficiency moments $c^i_{jk}$ to be computed a definition of the efficiency is necessary. Note that this computation relies on
-simulated data where all the generating conditions are known. The efficiency then is defined as the ratio of two angular dependent \pdfs, namely
+simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular dependent \pdfs, namely
 \Pobs and \Pgen. The first is the angular \pdf that the simulated data follow after all stages of selection, whereas
-the later is the angular \pdf which the simulated data have been generated with. It follows that the efficiency is defined as the ratio of the first
-over the later and it is shown in equation \equref{eff_def}.
+the later is the angular \pdf which the simulated data have been generated with. It follows that the efficiency is defined by \equref{eff_def}.
 
 \begin{center}
 \begin{equation}
-  \epsilon(\Omega) \equiv \frac{\Pobs}{\Pgen}.
+  \Pobs = \epsilon(\Omega) \Pgen \quad \Rightarrow \quad \epsilon(\Omega) \equiv \frac{\Pobs}{\Pgen}.
   \label{eff_def}
 \end{equation}
 \end{center}
 
 \noindent Computing the efficiency moments is done by projecting the efficiency as defined in \equref{eff_def} on the orthogonal $PY$ basis.
-This projection is shown in \equref{eff_moms_def}. Where the factor $j+\frac{1}{2}$ is used to account for the fact that the associated Legendre
+This projection is shown in \equref{eff_moms_def}. The factor $j+\frac{1}{2}$ is used to account for the fact that the associated Legendre
 polynomials form an orthogonal basis but in fact the orthonormal behavior is required to properly compute the efficiency moments.
 
 
 \begin{center}
 \begin{align}
-   c^i_{jk}  \equiv &(j + \frac{1}{2}) \; \int \; d\Omega \; \effbase \; \epsilon(\Omega) \nonumber \\
-                 = &(j + \frac{1}{2}) \; \int \; d\Omega \; \Pobs \; \frac{\effbase}{\Pgen}.
+   c^i_{jk}  \equiv & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \effbase \; \epsilon(\Omega) \nonumber \\
+                 =  & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \Pobs \; \frac{\effbase}{\Pgen}.
   \label{eff_moms_def}
 \end{align}
 \end{center}
@@ -268,12 +283,12 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
   $\moment{2}{2}{2}$   & -0.0674  &  0.0117  \\
   \hline
   \end{tabular}
-  \caption{ Efficiency moments of \BsJpsiKst. The bigger the value of a moment the more the corresponding function contributes to the overall efficiency function.
+  \caption{ Efficiency moments of \BsJpsiKst. The larger the value of a moment, the more the corresponding function contributes to the overall efficiency function.
             The efficiency functions corresponding to the moments $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$ account for most of the hard acceptance drop in the
-            $\cos\thetaK$ projection. The acceptance in the $\cos\thetamu$ projection is much softer compared to the one $\cos\thetaK$. This can be deduced from
+            $\cos\thetaK$ projection. Acceptanceeffecets in the $\cos\thetamu$ projection are less pronounced compared to the one $\cos\thetaK$. This can be deduced from
             \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$.
             The value of the $\moment{0}{0}{0}$ is constrained for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$. Details on
-            the constrain are explained in the current subsection. The efficiency moments are correlated the corresponding correlation matrix can be found
+            the constraint are explained in the current subsection. The efficiency moments are correlated and the corresponding correlation matrix can be found
             in \tabref{eff_moms_corr}}
    \label{eff_moms_table}
 \end{table}
