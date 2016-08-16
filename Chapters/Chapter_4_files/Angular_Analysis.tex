@@ -443,12 +443,15 @@ similarly to the case of efficiency moments.
   \label{norm_weights_pdf}
 \end{equation}
 
-The advantages of this method is that it is immune from any issue with negative efficiency values. After all the acceptance shape is not parametrized at all.
-On the other hand the fitting time increases due to the fact that the \pdf is not expressed in an orthogonal basis any more. Also other
-implementation and plotting issues arise when using normalization weights. Lastly the two methods can give identical values on the fitted parameters by mapping
-the normalization weights to efficiency moments. This can be done if one solves the normalization integral, $\int d\Omega\;\Pgen\times\epsilon(\Omega)$
-of the \pdf of \tabref{ang_distr} and the efficiency function in \equref{eff_func}, then the mapping of $\moment{i}{j}{k} \rightarrow \xi_n$ follows naturally
-by exploiting the orthogonality of $P$ and $Y$. More details on the normalization weights approach can be found in \cite{jeroenThesis}.
+The advantages of this method is that it is by construction immune from any issue with negative efficiency values.
+After all the acceptance shape is not parametrized at all. The biggest disadvantage on the other hand, is that plotting becomes impossible
+when using normalization weights and other methods need to be implemented. Lastly the two methods can give identical values on the
+fitted parameters by mapping the normalization weights to efficiency moments. This can be done if one solves the normalization integral,
+$\int d\Omega\;\Pgen\times\epsilon(\Omega)$ of the \pdf of \tabref{ang_distr} and the efficiency function in \equref{eff_func},
+then the mapping of $\moment{i}{j}{k} \rightarrow \xi_n$ follows naturally by exploiting the orthogonality of $P$ and $Y$.
+However, the above mentioned mapping is not unique and not always invertable. It depends on the choice of the particular choice
+of efficiency moments. Furthermore, finding a mapping for a given set of efficicnecy moments is not always guranteeed.
+More details on the normalization weights approach can be found in \cite{jeroenThesis} {\color{red} and tristraaan}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance Corrections}
@@ -459,8 +462,8 @@ Thus the acceptance determination can be trusted only if the simulation accurate
 physical amplitudes of the \BsJpsiKst decay. Specifically real and simulated data differences\footnote{Final state momenta distributions were found to differ at a few
 percent level between real and simulated data.} in the momentum distributions
 of the final state particles  may reflect a different acceptance in data compared to MC. On the other hand,
-non perfect acceptance simulation could be also attributed to differences in the underlying physical parameter values generating
-the simulated data and those present on real data. For example, the presence of S-wave in the real data (and its absence on simulated data)
+differences between data and simulation could be also attributed to differences in the underlying physical parameter values generating
+the simulated data compared to those present in real data. For example, the presence of S-wave in the real data (and its absence on simulated data)
 can cause a difference in the observed kaon momentum spectrum even though the angular acceptance may be perfectly simulated.
 Both of the above mentioned effects have an impact on the decay angles distribution since the helicity angles are defined
 from the momenta of the final state particles.
@@ -481,7 +484,7 @@ of interest converge. The full procedure by steps can be summarized as:
 \item Compare the $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
       real data, and weight again each simulated event for the difference.
 \item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
-\item Go back to step 4 and repeat until change in the parameters of interest are negligible ($<0.01\sigma$).
+\item Go back to step 4 and repeat until change in the parameters of interest are negligible.
 \end{enumerate}
 
 \begin{table}[!h]
@@ -495,10 +498,12 @@ of interest converge. The full procedure by steps can be summarized as:
   $\Acp{\text{S}}$                    &  -0.01  &  -0.17  &  +0.09  &  +0.06  &  +0.03  &  +0.01   \\
   $\Acp{\parallel}$                   &  +0.13  &  +0.04  &  -0.09  &  -0.04  &  -0.02  &  -0.01   \\
   $\Acp{\perp}$                       &  -0.19  &  +0.15  &  +0.02  &  +0.01  &  +0.0   &  +0.0    \\
-  $\polFrac{0}$                       &  -1.15  &  +0.96  &  +0.19  &  +0.0   &  -0.02  &  -0.01   \\
-  $\polFrac{\parallel}$               &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01   \\
-  $\ampPhase{\parallel}-\ampPhase{0}$ &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.0    \\
-  $\ampPhase{\perp}-\ampPhase{0}$     &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01   \\
+  \hline
+  $\fP{0}$                            &  -1.15  &  +0.96  &  +0.19  &  +0.0   &  -0.02  &  -0.01   \\
+  $\fP{\parallel}$                    &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01   \\
+  $\ampPhase{\parallel}$              &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.0    \\
+  $\ampPhase{\perp}$                  &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01   \\
+  \hline
   $\fS{1}$                            &  +0.86  &  -0.66  &  -0.32  &  -0.12  &  -0.05  &  -0.02   \\
   $\fS{2}$                            &  +0.84  &  -0.27  &  -0.18  &  -0.09  &  -0.05  &  -0.02   \\
   $\fS{3}$                            &  +0.0   &  -0.02  &  -0.0   &  +0.01  &  +0.02  &  +0.01   \\
@@ -532,10 +537,9 @@ of interest converge. The full procedure by steps can be summarized as:
 
 The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}.
 At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
-\tabref{pars_convergence}. The central values of the parameters of interest does not change a lot impling that the overall effect of the acceptance
-corrections is small. \figref{angAggCorrections} show (in arbitrary units) the shape of the acceptance beforea nd after corrections.
-Lastly, the acceptance can be floated in the angular fit to the data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
-The last makes, in hindsight, the acceptance correction procedure (with the current number of observed evetns) not necessary.
+\tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implyng that the overall effect of the
+acceptance corrections is small. \figref{angAggCorrections} shows (in arbitrary units) the shape of the acceptance before and after corrections.
+This is also supported by the effect of these corrections on the paramters of intereset which are shown in \tabref{phys_pars_change_iter}.
 
 \begin{figure}[h]
   \centering
@@ -560,11 +564,45 @@ The last makes, in hindsight, the acceptance correction procedure (with the curr
     \label{angAccCorr_phi}
   \end{subfigure}
   \caption{Angular acceptance shape from simulated data before(black points) and after(red points) acceptance corrections.
-           Changes due to the last are hardly noticable for two of the decay angles. The $\cos\thetaK$ angle is affected more.
-           Since the $y$-axis scale is aribitrary it is not posible to quantify the amount of change. The plots show cahnges
-           in the acceptance shape only. The plots are made in the same way as in \figref{angAcc_all}.}
+           The plots are made in the same way as in \figref{angAcc_all}.}
   \label{angAggCorrections}
 \end{figure}
+
+
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{c c c}
+ \hline
+ parameter   &     difference   &  difference / $\sigma$ \\
+ \hline
+$\Acp{0}$                & -0.0000  & -0.00   \\
+$\Acp{\text{S}}$         & -0.0008  & -0.01   \\
+$\Acp{\parallel}$        & +0.0196  & +0.13   \\
+$\Acp{\perp}$            & -0.0190  & -0.19   \\
+\hline
+$\fP{0}$                 & -0.0276  & -1.14   \\
+$\fP{\parallel}$         & -0.0014  & -0.05   \\
+$\ampPhase{\parallel}$   & -0.0583  & -0.37   \\
+$\ampPhase{\perp}$       & -0.0640  & -0.57   \\
+\hline
+$\fS{1}$                 & +0.0975  & +0.87   \\
+$\fS{2}$                 & +0.0209  & +0.74   \\
+$\fS{3}$                 & +0.0001  & +0.00   \\
+$\fS{4}$                 & +0.0525  & +0.48   \\
+$\deltaS{1}$             & -0.3205  & -2.09   \\
+$\deltaS{2}$             & +0.0283  & +0.12   \\
+$\deltaS{3}$             & -0.1866  & -1.02   \\
+$\deltaS{4}$             & -0.3165  & -2.39   \\
+    \hline
+ \end{tabular}
+ \caption{Differences in the parameters of intereset before and after corrections.}
+ \label{phys_pars_change_iter}
+\end{table}
+
+
+Lastly, the acceptance can be floated in the angular fit to the data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
+This last step makes, in hindsight, the acceptance correction procedure (with the current number of observed events) unnecessary.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
