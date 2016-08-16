@@ -296,13 +296,13 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 
 \subsubsection{Choice of efficiency moments}
 The choice of efficiency moments has to do with the structure of the acceptance at $\cos\thetaK=1$. At that point the acceptance goes to zero
-which is not a problem by itself. However within the parametrization that is adopted in this analysis it can happen that the acceptance function
-\equref{eff_func} can take negative values depending on the choice of certain efficiency moments. In other words the approach of efficiency moments does
-not guarantee that the acceptance shape described by the same equation is a positive definite quantity. Note that this is an artifact of the parametrization
-and by no means is there something wrong in the data or the detector. The problem is mathematical in nature and there is no standard solution (known
-to the author when those lines were written). The approach followed to solve this problem has two steps. First a constrain on the acceptance function, \equref{eff_func}, is
-introduced to force its value positive and second a constrained fit to the efficiency moments is performed to optimize the acceptance shape description.
-The result is a hybrid acceptance function that is positive definite.
+which is not a problem by itself. However, the parametrization of the acceptance function, \equref{eff_func} may become negative.
+In other words the method of efficiency moments does not guarantee that the acceptance shape is a positive definite quantity.
+Note that this is an artifact of the parametrization. The problem is mathematical in nature and there is no standard solution (known
+to the author when these lines were written). The approach followed to solve this problem has two steps: First a constrain on the
+acceptance function, \equref{eff_func}, is introduced to force it to be positiv definite and second, a fit to the efficiency
+moments is performed to optimize the acceptance parametrization. The result is a hybrid acceptance function that is by
+construction positive definite.
 
 \begin{figure}[h]
   \centering
@@ -332,20 +332,25 @@ The result is a hybrid acceptance function that is positive definite.
   \label{angAcc_constr}
 \end{figure}
 
-Before laying out the formulas behind the above mentioned steps it is useful to literally see the problem caused by the parametrization, see \figref{angAcc_nom}
+Before laying out the formulas behind the above mentioned steps it is useful to visualise the problem caused by the parametrization, see \figref{angAcc_nom}
 and the corresponding caption. Having done that the most natural thing to do before making any effort to force the value of \equref{eff_func}, hereafter efficiency function,
-positive at $\cos\thetaK=1$ is to make the best choice of efficiency moments. The moments are chosen such that the value of the efficiency function is as ``less negative``
-as
-possible\footnote{It is actually not trivial to find a good choice of efficiency moments. Two things are relevant when trying to describe a
+positive at $\cos\thetaK=1$ is to make the best choice of efficiency moments. The moments are chosen such that the efficiency function becomes negative
+at the largest posible value of $\cos\thetaK$. In other words the crossing point of the red curve with the horizontal axis in \figref{angAcc_nom},
+has to be as close to $\cos\thetaK=1$ as possible.
+
+It is actually not trivial to find a good choice of efficiency moments. Two things are relevant when trying to describe a
 distribution with orthogonal functions like $P$ and $Y$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
 For example the efficiency term $\moment{1}{0}{0}P_1Y_{00}$ is necessary to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{1}{0}{0}$
 is too large making the total efficiency function negative. Thus one could add the term $P_3Y_{00}\moment{3}{0}{0}$ where $\moment{3}{0}{0}$ is positive
 (see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunately it is not enough. Things get more complicated
 when trying to choose efficiency moments that affect the acceptance shape in all of its three dimensions at the same time.
-}.
 
-Having chosen the best possible set of efficiency moments the value of the efficiency function is constrained by solving it for
-one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. The constrain that is imposed is shown in \equref{eff_func_constr}
+
+
+
+
+Having chosen a set of moments the efficiency function has to be constrained such that the
+condition of \equref{eff_func_constr} is satisfied.
 
 \begin{center}
 \begin{equation}
@@ -354,51 +359,39 @@ one of the efficiency moments, which can be easily done for $\moment{0}{0}{0}$. 
 \end{equation}
 \end{center}
 
-\noindent Starting from the efficiency function of \equref{eff_func} (where the sum now runs over the indices of the first column in \tabref{eff_moms_table}):
+\noindent It turns out that this condition can be easilisy satisfied if the basis that the
+efficiency function is decomposed, see \equref{eff_func}, is modified as shown in \equref{eff_basis_transform}
 
 \begin{center}
-\begin{align}
-  \epsilon(\Omega) =& \sum_{ijk} \; c^i_{jk} \legendre{i}{0} \spharm{j}{k} \nonumber \\
-                   =& \moment{0}{0}{0} \legendre{0}{0} \spharm{0}{0} + \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k}.
-  \label{eff_func_rewriten}
-\end{align}
+  \begin{align}
+   \effbase \to \parenthesis{\effbase}^\prime = \left[\legendre{i}{0}-P_i^0(1)\right] \spharm{j}{k},
+  \label{eff_basis_transform}
+  \end{align}
 \end{center}
 
-\noindent Given \equref{eff_func_constr} and also $P_{0}^{0}=1$,  $Y_{00} = \frac{1}{2\sqrt{\pi}}$ \equref{eff_func_rewriten} can be
-easily solved for $\moment{0}{0}{0}$ resulting in \equref{eff_constr_mom}.
+\noindent resulting in the following efficiency function of \equref{eff_func_new}.
 
 \begin{center}
-\begin{equation}
-  \moment{0}{0}{0} = -2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} P_i^0(1) \spharm{j}{k}
-  \label{eff_constr_mom}
-\end{equation}
+  \begin{align}
+  \epsilon(\Omega) = \sum_{ijk} \; \moment{i}{j}{k} \; \left[\legendre{i}{0}-P_i^0(1)\right] \; \spharm{j}{k}.
+  \label{eff_func_new}
+  \end{align}
 \end{center}
 
-\noindent \equref{eff_func_rewriten} is used along with \equref{eff_constr_mom} resulting finally in \equref{eff_func_final}.
-The last is an updated efficiency function which is guaranteed to be positive definite at $\cos\thetaK=1$.
-
-\begin{center}
-\begin{align}
-  \epsilon(\Omega) &= \left[-2\sqrt{\pi} \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \cancelto{1}{P_i^0(1)} \spharm{j}{k} \right] \cancelto{1}{\legendre{0}{0}} \cancelto{\frac{1}{2\sqrt{\pi}}}{\spharm{0}{0}} \nonumber \\
-                   &+ \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} = \nonumber \\
-                   &= \left[- \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \spharm{j}{k} \right] + \sum_{ijk}^{ijk\neq 000} \; \moment{i}{j}{k} \legendre{i}{0} \spharm{j}{k} = \nonumber\\
-                   &= \sum_{ijk}^{ijk\neq 000} \moment{i}{j}{k} \left[ \legendre{i}{0} - 1 \right]\spharm{j}{k}
-  \label{eff_func_final}
-\end{align}
-\end{center}
-
-\noindent The result of the above constrain is shown in figure \figref{angAcc_constr_fit}, where it can be seen that the acceptance projection on $\cos\thetaK=1$
+\noindent Note that the subscript $i$ in $P_i^0(1)$ is irrelevant since $P_i^0(1)=1$ for any value of $i$.
+The result of the above constraint is shown in figure \figref{angAcc_constr_fit}, where it can be seen that the acceptance projection on $\cos\thetaK=1$
 is not zero anymore. In addition it has also been checked whether the acceptance is negative in 2D and 3D, since it is possible for a 2D
-projection of the acceptance to take negative values as well while the 1D projections are positive. Two dimentional projection of the constrained acceptance
+projection of the acceptance to take negative values whilst the 1D projections are positive. Two dimentional projection of the constrained acceptance
 can be seen in \figref{eff2D}.
 
-Constraining the acceptance in this manner described above comes with a small penalty, meaning that the shape of the 1D acceptance
-projections is distorted a bit. In order to undo this distortion and describe better the acceptance shape an additional step is implemented.
-As it was previously mentioned the acceptance function of \equref{eff_func_final} is further fitted to the simulated data where the efficiency
-moments are allowed to float with Gaussian constraints of one standard deviation and properly taking into account their correlations by
-means of a multivariate Gaussian constrain. The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
-data was generated with multiplied with the efficiency function \eqref{eff_func_final} times the multivariate Gaussian constrain.
-The generated parameters are fixed so that only the efficiency moments are allowed to float.
+Constraining the acceptance in this manner described above comes with a small penalty; that the shape of the 1D acceptance
+projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
+As previously mentioned, the acceptance function of \equref{eff_func_new} is further fitted to the simulated data
+where the efficiency moments are allowed to vary within one standard deviation from their measured values, of \tabref{eff_moms_table}.
+The last is imlpemented by a multivariat Gaussian onstraint where correlations between effciency moments are taken into account.
+The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
+data was generated with multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
+The physics parameters used to generated the simulation sample are fixed and only the efficiency moments are allowed to vary.
 The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments within one standard deviation is shown in \equref{mvm_constr}.
 
 \begin{center}
@@ -409,9 +402,9 @@ The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the effi
 \end{align}
 \end{center}
 
-\noindent where $\vec{\bf c}$ represents the floating efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments computed
-with \equref{eff_constr_mom}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectively.
-Lastly $k$ is the number of efficiency moments present in \equref{eff_func_final}.
+\noindent where $\vec{\bf c}$ represents the estimated efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments
+of \tabref{eff_moms_table}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectively.
+Lastly, $k$ is the number of efficiency moments present in \equref{eff_func_final}.
 
 \begin{figure}[h]
   \centering
