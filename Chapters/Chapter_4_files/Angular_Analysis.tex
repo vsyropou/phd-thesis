@@ -514,9 +514,9 @@ of interest converge. The full procedure by steps can be summarized as:
   $\deltaS{4}$                        &  -2.43  &  +1.1   &  +0.53  &  +0.24  &  +0.13  &  +0.07   \\
   \hline
 \end{tabular}
-\caption{Parameters of interest central values differences after each iteration. The differences are shown in units of one
-         standard deviation. Larger changes are observed in the first two iterations. Subsequently the differences get progressively
-         smaller, which implies that the parameters of interest converge.}
+\caption{Parameters of interest change after each iteration. The amount of change is expresed in units of one standard deviation.
+         Larger changes are observed in the first two iterations. Differences get progressively smaller, which implies that the
+         parameters of interest converge.}
 \label{pars_convergence}
 \end{table}
 
@@ -610,27 +610,37 @@ This last step makes, in hindsight, the acceptance correction procedure (with th
 \label{Kpi_Invariant_mass}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Dependence on \mkpi and CSP factors}
 The dependence of the \BJpsiKpi decay amplitude on \mkpi as it was introduced in \equref{ang_terms} is treated in a special way.
-The $\mKpiAmp$ functions are not implemented but they are integrated over \mkpi instead the fitting real data sample is binned in four parts.
-where in each part the \mkpi line-shape is assumed to be flat.
-The choice of this strategy is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the well
-known \pwave. In addition the angular structure of the \swave is not known from first principles. Thus, developing a full model for the both
-the \pwave and \swave is not the first priority in this analysis.
-
-Despite the \mkpi integration there is still some residual dependence left. It originates from integrals
-like the one in equation \equref{spIntegrals}
+The $\mKpiAmp$ functions are not implemented, but instead they are integrated over in four intervals. The choice of this strategy
+is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the $\Kstar$ \pwave.
+while the \swave component is small. Furthermore developing a full model for the both the \pwave and \swave, which is is not the
+first priority in the current analysis, can be avoided. Despite the \mkpi integration there is still some residual dependence left.
+It originates from integrals like the one in equation \equref{spIntegrals}
 
 \begin{equation}
   \label{spIntegrals}
   \int d\mkpi \; \Phi \; \mKpiAmp^* \mKpiAmp[m],
 \end{equation}
 
-\noindent where $\mKpiAmp[n,m]$ run in the same way as in \equref{ang_terms}. $\Phi$ is a phase space
-factor\footnote{$\Phi = \left[ \lambda(m_\mu,m_\kaon,m_\pion) \lambda(m_{\Bs},m_\jpsi,m_\mu) \right] / \; 4 m_\mu^2$  and \\
-$\lambda(m_1,m_2,m_3) = \left[ m_1^2 - 2m_1^2(m_2^2 + m_3^2) + m_2^2 + m_3^2 - 2m_2^2m_3^2 \right] / m_1^2 $
-} and it eventually manifests only in the \spwave interference terms of \tabref{eff_moms_table} as shown
-in \equref{csp_def}.
+\noindent where $\mKpiAmp[n,m]$ run in the same way as in \equref{ang_terms}, whilst $\Phi$ is a phase space
+factor shown in \equref{csp_ph_sp_factor}
+
+\begin{equation}
+  \centering
+  \Phi = \frac{\lambda(m_\mmu,m_\kaon,m_\pion) \lambda(m_{\Bs},m_\jpsi,m_\mmu)}{ 4 m_\mmu^2},
+  \label{csp_ph_sp_factor}
+\end{equation}
+
+with,
+
+\begin{equation}
+  \centering
+  \lambda(m_1,m_2,m_3) = \frac{m_1^2 - 2m_1^2(m_2^2 + m_3^2) + m_2^2 + m_3^2 - 2m_2^2m_3^2 } {m_1^2} \nonumber
+  \label{csp_ph_sp_factor_def}
+\end{equation}
+
+Inegrals like the one of \equref{spIntegrals} eventually manifest thenselves only in the \spwave interference
+terms\footnote{The diagonal $m=n$ integrals are by construction equal to 1.} of \tabref{eff_moms_table} as shown in \equref{csp_def}.
 
 \begin{equation}
   \label{csp_def}
@@ -638,11 +648,10 @@ in \equref{csp_def}.
 \end{equation}
 
 \noindent where $s$ and $p$ stand for the \swave and \pwave line-shapes respectively. Evaluating those complex valued integrals yield
-the so called $\CSP$ factors which are inserted in the angular functions of \tabref{ang_distr}. Particularly the real part is inserted
-as a multiplicative factor in front of all \spwave interference
-terms\footnote{for example $\ReAmp{0}{S} \rightarrow \CSP * \ReAmp{0}{S} $}.
-Whereas the imaginary part, is absorbed by the phase difference of the same interference
-terms\footnote{ $\arg(A_0^*A_S) \rightarrow \arg(A_0^*A_S) - \ThetaSP$}. Floating the $\CSP$ factors in the fit is not preferred due
+the so called $\CSP$ factors which are inserted in the angular functions of \tabref{ang_distr}. Particularly, the real part is inserted
+as a multiplicative factor in front of all \spwave interference terms, for example $\ReAmp{0}{S} \rightarrow \CSP * \ReAmp{0}{S}$.
+The imaginary part is absorbed by the phase difference of the same interference
+terms, $\ie \arg(A_0^*A_S) \rightarrow \arg(A_0^*A_S) - \ThetaSP$. Floating the $\CSP$ factors in the fit is not preferred due
 to high correlations with the decay amplitudes. Instead it would be better to extend the angular fit so that the \mkpi dependence
 is modeled directly via the $\mKpiAmp$ terms of \equref{ang_terms}. The above mentioned \swave line-shapes that are necessary
 to compute the $\CSP$ factors are a Isobar combination of a \KstENT and \KstOFOZ for $p$ and a LASS parametrization of a \KstOFTZ
@@ -652,16 +661,17 @@ with angular momentum barrier factors. Whereas Isobar is a superposition of reso
 
 
 \subsubsection{sWeighted \mkpi distribution}
-While the \Bs and \Bd muon sWeighted distributions have very similar shape, the \mkpi spectrum exhibit different shapes.
-Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted, \figref{mkpiPlot_raw}. Since there is no reason why the \Kst$~$\pwave
-should have different shape between \BsJpsiKst and \BdJpsiKst. This could be due to the presence of interference between
+While the \Bs and \Bd muon pair mass, $m_\mumu$, sWeighted distributions have very similar shapes, the \mkpi specta exhibit different shapes.
+Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted, \figref{mkpiPlot_raw}. Since there is no \aprior reason why the \Kst$~$\pwave
+should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
 the $K\pi$ \swave and the \Kstarz, which may be stronger in the \Bs decays compared to the \Bd ones. In order
-to check the validity of this hypothesis, two additional studies are performed. First it was checked that the peaking
+to check the validity of this hypothesis, two additional studies are performed. First it was checked that the non-resonant
 background treatment propagated to the \sWeights was not responsible for this behavior. Indeed, no significant difference
-between the \Bs \mkpi spectrum using \sWeights computed with and without simulated data injection was found. Second the \mkpi
-distribution is corrected for angular efficiency effects. This way the interference between the $K\pi$ \swave and the
-\Kstarz $ $ \pwave vanishes. This happens because for a perfect acceptance the interference terms in \tabref{ang_terms} integrated over all angles
-evaluate to zero. Which is exactly what is shown in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
+between the \Bs \mkpi spectrum using \sWeights computed with and without simulated data injection was found. Second, the \mkpi
+is corrected for angular efficiency effects, by weighting each event with the inverse of the acceptance function as obtained
+in \equref{eff_func_new}. This way the interference between the $K\pi$ \swave and the \Kstarz $ $ \pwave vanishes, since
+for a perfect acceptance the interference terms in \tabref{ang_terms}, integrated over all angles, evaluate to zero.
+This is demonstrated in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
 the efficiency correction. This is a clear indication of the presence of stronger interference in the \Bs case compared to the \Bd one.
 
 \begin{figure}[h]
@@ -687,11 +697,9 @@ the efficiency correction. This is a clear indication of the presence of stronge
   \end{subfigure}
 \caption{Comparison of the intermediate state particles mass distributions between \Bs and \Bd.
          The plots are background subtracted (sWeighted). Top row shows the \mkpi distribution before (left)
-         and after (right) correcting for angular acceptance effects. The correction is applied by weighting
-          each event with the inverse of the acceptance function as obtained in \equref{eff_func_final}.
-         The \jpsi mass background subtracted distribution is shown at the bottom. It was checked that the
-         acceptance correction has negligible effects on the shapes of the \jpsi mass distributions. }
-
+         and after (right) correcting for angular acceptance effects. The \jpsi mass background subtracted
+         distribution is shown at the bottom. It was checked that the acceptance correction has negligible
+         effects on the shapes of the \jpsi mass distributions.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -699,12 +707,13 @@ the efficiency correction. This is a clear indication of the presence of stronge
 \label{experimentalAssym}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The nature of the current analysis is such that it is affected by asymmetries related to experimental effects.
-This is intuitive considering the $\Acp{}$ parameter of interest. As explained in \secref{TheBsJpsiKstDecay}
-the last quantifies if the decay \BsJpsiKst takes place more often that its charge conjugate. Now in case the
-collisions at \lhc favor one over the other or the detector has different efficiency for positive and negative
-kaons (or pions) then the $\Acp{}$ asymmetries will be diluted from those experimental effects. It happens so that
-both of those effects are in action. Particularly the \lhc is a \proton\proton colider and not a \proton\antiproton .
-This implies that at the region of collision there are more \bquark quarks \bquarkbar quarks.
+Particularly, the diffence between the number of observed \BsJpsiKst and \BsbarJpsiKst is releated to one of
+the parameters of intereset, $\Acp{}$, introduced in \secref{cp_assymetries_and_total_decay_rate}.
+Considering now the case where collisions at \lhc favor the \BsJpsiKst decay over its CP conjugate, \BsbarJpsiKst;
+Or the fact that the detector might have different efficiency for positive and negative kaons (or pions),
+then $\Acp{}$ will be biased by these experimental effects. In fact it happens so that both of those effects are in action.
+SPecifically, the \lhc is a \proton\proton colider and not a \proton\antiproton .
+This implies that at the region of collision there are more \bquark quarks than \bquarkbar quarks.
 Thus in such an environment the \bquark quarks are enhanced and hence the \BsbarJpsiKst
 decays as well. This effect is quantified by the production asymmetry $\Aprod$. The other effect mentioned before
 is called detection asymmetry, $\Adet$, and it becomes relevant at the \lhcb detector as described earlier in the
@@ -717,17 +726,17 @@ as shown in \equref{acp_corrected}.
 \end{equation}
 
 \noindent where $\zeta = -1$, and $\kappa$ account for the dilution due to $B^0_s-\bar{B^0_s}$
-oscillations~\cite{LHCb-PAPER-2013-018}. The factor $\kappa$ is shown in \equref{kappa} and it evaluates to $0.06\%$,
-which implies that the $\Bs-\Bs$ oscillations are so fast that nearly all the production asymmetry
-is washed out by them.
+oscillations~\cite{LHCb-PAPER-2013-018}. The factor $\kappa$, is shown in \equref{kappa}.
 
 \begin{equation}
- \kappa = \frac{\int_0^\infty  e^{-\Gamma_s t} \cos \!\left( \Delta m_s t \right ) \varepsilon(t)\mathrm{d}t}{\int_0^\infty  e^{-\Gamma_s t} \cosh \left( \frac{\Delta \Gamma_s}{2} t \right ) \varepsilon(t)\mathrm{d}t},
+ \kappa = \frac{\int_0^\infty  e^{-\Gamma_s t} \cos \!\left( \Delta m_s t \right ) \varepsilon(t)\mathrm{d}t}{\int_0^\infty  e^{-\Gamma_s t} \cosh \left( \frac{\Delta \Gamma_s}{2} t \right ) \varepsilon(t)\mathrm{d}t}.
 \label{kappa}
 \end{equation}
 
-\noindent where the quantities $\Gamma_s$, $\Delta\Gamma_s$ and $\Delta m_s$ have been described in \secref{Phenomenology}
-and the decay time efficiency function $\varepsilon(t)$ is estimated on sWeighted \BsJpsiKst
+\noindent It evaluates to $0.06\%$, which implies that the $\Bs-\Bs$ oscillations are fast compared to the
+average lifeteime of the \BBbarSyst, $\Gamma_s$, such that nearly all the production asymmetry is washed out by them.
+The quantities $\Delta\Gamma_s$ and $\Delta m_s$ have been described in \secref{Phenomenology},
+while the decay time efficiency function $\varepsilon(t)$ is estimated on sWeighted \BsJpsiKst
 data\footnote{and parametrized with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found in ~\cite{LHCb-PAPER-2014-053}}
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry ~\cite{LHCb-PAPER-2014-042}
@@ -748,7 +757,7 @@ one gets the production asymmetry estimate shown in \equref{prod_assym}.
 
 \noindent Coming now to the detection asymmetry it is computed starting from the \lhcb study of the detection asymmetry
 in ~\cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution found there to much the one of the \BsJpsiKst
-decay of the current analysis. The result is shown in \equref{det_assym}. {\color{red} Why do we quote only statistical uncertainty}
+decay of the current analysis. The result is shown in \equref{det_assym}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood fit and Total Decay Rate}
@@ -766,79 +775,78 @@ involved is discussed in the last part of the current subsection.
 \label{Simutaneous_Likelihood_fit}
 There are several categories that the data are split to for particular reasons.
 For example the special treatment of the \mkpi dependence, as described in \secref{Kpi_Invariant_mass} requires that the data are
-split in four \mkpi bins. This results in defining a corresponding \pdf for each data category\footnote{also referred to as component \pdf}.
+split in four \mkpi intervals. This impies that for eachdata category, a corresponding component \pdf must be defined.
 Some parameters of interest differ between the categories while some others are shared.
 However in order to avoid doing four independent fits and averaging the common parameters of interest,
-a simultaneous fit is implemented. In a simultaneous fit each component \pdf is assigned to a certain part of the data\footnote{also referred to as slice}
-such the corresponding component \pdf is invoked when the total \pdf needs to be evaluated. The current section summarizes
+a simultaneous fit is implemented. In a simultaneous fit each component \pdf is assigned to a certain part of the data
+such that the corresponding component \pdf is invoked when the total \pdf needs to be evaluated. The current section summarizes
 all the categories that the data are split to and all the implications arising from that. Lastly a brief insight in some aspects
 of the likelihood parameter estimation method is included.
 
 Starting from the angular \pdf terms as shown in \tabref{ang_terms}. The last cannot describe both \BsJpsiKst and \BsbarJpsiKst.
 There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of
-\BsJpsiKst. As it was explained in \secref{TheBsJpsiKstDecay} those decays are flavor specific which means that a \Bs meson
-has always a negative kaons in the final state particles. The situations is inverted in the case of a \Bsb meson.
-Thus the data can easily be split into two parts based on the sign of one of the hadrons\footnote{In the current analysis the sign
-of the \kaon is used to distinguish between the \BsJpsiKst (negative \kaon) and \BsbarJpsiKst (positive \kaon) }.
-Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples is not too
-bad and could be averaged into one set of efficiency moments. However, the angular acceptance as described in \secref{Accceptance}
-is calculated separately for the those two samples. This is done to avoid involving the $\Acp{i}$ parameters of interest
+\BsJpsiKst. As it is mentioned in \secref{penguin_formalism} the above decays are {\it flavor specific} which means that a \Bs meson
+has always a negative kaon in the final state and vice verca in the case of a \Bsb meson.
+Thus the data can easily be split into two parts based on the sign of the kaon.
+Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples
+is sufficient for them to be averaged into one set of efficiency moments. However, the angular acceptance as described in \secref{Accceptance}
+is calculated separately for these two samples. This is done to avoid involving the $\Acp{i}$ parameters of interest
 in the efficiency moments computation\footnote{The $\Acp{i}$ parameters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes in one parameter,
-more details in \secref{cp_assymetries_and_total_decay_rate}.} and thus significantly simplifying the above computation.
+more details in \secref{cp_assymetries_and_total_decay_rate}.}. This significantly simplifyies the above computation.
 
 \begin{table}[!h]
 \centering
 \begin{tabular}{c c c c c}
   \hline
-             & Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+             & interval 0 & interval 1 & interval 2 & interval 3\\
   \hline
   \CSP       & $ 0.9681 $ & $ 0.9312 $ & $ 0.9519 $ & $ 0.9880 $ \\
   \hline
 \end{tabular}
-\caption{\CSP values for each \mkpi bin.}
+\caption{\CSP values for each \mkpi interaval.}
 \label{csp_vals}
 \end{table}
 
-The next category that the data are split to was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence.
-There are four \mkpi bins defining four more categories in the data. In addition and contrary to the above mentioned data category, there
-are parameters of interest that are different in each \mkpi bin. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
+The next observable used to split the data was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence.
+There are four \mkpi intervals defining four more categories in the data. In addition, and contrary to the above mentioned data category, there
+are parameters of interest that are different in each \mkpi interval. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 In addition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
-\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi bin. The acceptance is also split in the \mkpi category since it was
-found to vary significantly different in each \mkpi bin, see \tabref{moms_final_neg} and \tabref{moms_final_pos}. The chosen \mkpi binning
+\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category since it was
+found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}. The chosen \mkpi binning
 is shown in \tabref{Kbindef}.
 
 \begin{table}[!h]
 \centering
 \begin{tabular}{c c c c}
   \hline
-  Bin 0 & Bin 1 & Bin 2 & Bin 3\\
+  interval 0 & interval 1 & interval 2 & interval 3\\
   \hline
-  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966) $ \\
+  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966] $ \\
 %  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
   \hline
 \end{tabular}
-\caption{Definitions of \mkpi bins. Units are in \mevcc.}
+\caption{Definitions of \mkpi intervals. Units are in \mevcc.}
 \label{Kbindef}
 \end{table}
 
 The data categories as described in the above paragraphs result an a simultaneous fit of 8 categories.
 A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_pos}.
 
-
 Having addressed the simultaneous feature of the fit it is interesting to have an insight on
 the connection between a \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
-any \pdf $\mathcal{P}$ a likelihood function can be built as shown in \equref{likelihood}. By definition the likelihood
-function is the product of probabilities of every event according to the given \pdf. Note that opposite to the \pdf
-the likelihood is a function of the free parameters given all the events in the data. It is
-useful to realize that at the maximum of the likelihood function one gets the best estimate for the parameters of
-interest, $\vec{p}$, given the data.
+any \pdf $\mathcal{P}$ a likelihood function can be built as shown in \equref{likelihood}.
 
 \begin{equation}
 L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p}).
 \label{likelihood}
 \end{equation}
 
-\noindent Whereas the inverse of the covariance matrix is given by the negative second derivative of the likelihood at the maximum as shown in \equref{covariance}.
+\noindent By definition the likelihood
+function is the product of probabilities of every event according to the given \pdf. Note that opposite to the \pdf
+the likelihood is a function of the parameters given all the events in the data. It is
+useful to realize that at the maximum of the likelihood function one gets the best estimate for the parameters of
+interest, $\vec{p}$, given the data. The inverse of the covariance matrix for the estiamted parameters is given
+by the negative second derivative of the likelihood at the maximum,
 
 \begin{equation}
 \left( V^{-1} \right)_{ij} = - \left. \frac{\partial^2\ln L}{\partial p_1 \partial p_2} \right|_{ \vec{p}_{\rm\bf max}}.
@@ -848,9 +856,9 @@ L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p}).
 \noindent Another typical way to estimate and better visualize the standard deviations is shown in \secref{nllscans}.
 
 Coming now to the concept of the extended likelihood. In \equref{likelihood} the number of events is fixed. However it is possible to
-extend the last equation such that the expected number of events shows up as a parameter in the likelihood function which can be floated.
+extend the last equation such that the expected number of events shows up as a parameter in the likelihood function and can thus be estimated.
 This is useful in cases where the \pdf consists of two species, such as signal and background, or if the expected number of events depends on the
-parameters of interest $\vec{p}$. For the current analysis the later is exploited in order to float the the $\Acp{}$ asymmetries in the fit,
+parameters of interest $\vec{p}$. For the current analysis, the latter is exploited in order to estimate the $\Acp{}$ asymmetries in the fit,
 see end of current subsection. Extending the \pdf is achieved by multiplying the likelihood with a poison distribution as shown in \equref{extlikelihood}.
 
 \begin{equation}
@@ -858,7 +866,7 @@ L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \label{extlikelihood}
 \end{equation}
 
-\noindent where $\mu(\vec{p})$ is the expected number of events. As it can be seen it depends on the parameters of interest which in
+\noindent where $\mu(\vec{p})$ is the expected number of events. As can be seen, it depends on the parameters of interest which in
 principle reduces the uncertainty on them since additional information is added to the likelihood function.
 For purely practical reasons one would typically choose to minimize the negative logarithm of the likelihood, which after some simple
 algebra and using the well known expression of the Poisson distribution results in \equref{extloglikelihood},
@@ -869,37 +877,24 @@ algebra and using the well known expression of the Poisson distribution results 
 \label{extloglikelihood}
 \end{align}
 
-\noindent Note that constant terms in the likelihood do not affect either the shape of the likelihood or the position of the minimum and thus neglected.
-
-
-%% \begin{table}[!h]
-%% \centering
-%% \begin{tabular}{c c c c c}
-%%   \hline
-%%   Bin 0 & Bin 1 & Bin 2 & Bin 3 & Bin 4\\
-%%   \hline
-%%   $ [-1.0,-0.6) $ & $ [-0.6,-0.2) $  & $ [-0.2,0.2) $ & $ [0.2,0.6) $ & $ [0.6,1.0) $ \\
-%%   \hline
-%%  \end{tabular}
-%% \caption{Definitions of $\cos\thetamu$ bins. Units are in rad}
-%% \label{cosThateMubindef}
-%% \end{table}
+\noindent Note that constant terms in the likelihood affect neither the shape of the likelihood nor the position of the minimum
+and can thus be neglected.
 
 
 \subsubsection{\CP Asymmetries as Free Parameters}
 \label{cp_assymetries_and_total_decay_rate}
 The \CP asymmetries discussed in \secref{TheBsJpsiKstDecay} can be measured from the raw asymmetry observed in data.
-This is done by counting $\BsbarJpsiKst$ and $\BsJpsiKst$ events and use them as shown \equref{acp_mes} defines.
+This is done by counting $\BsbarJpsiKst$ and $\BsJpsiKst$ events and use them to determine
 
 \begin{equation}
 \Acp{\text{raw}} \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},
 \label{acp_mes}
 \end{equation}
 
-\noindent where $\Nplus$ and $\Nminus$ stands for the number of observed \BsbarJpsiKst and \BsJpsiKst respectively.
-Going one step further $\Acp{\text{raw}}$ can be implemented as a free parameter in the fit. The advantage
-is that the entire statistical uncertainty propagation for those parameters is built in the likelihood thus avoiding
-unnecessary calculations. In addition the above quantities can be measured in a polarization dependent way. In order
+\noindent where $\Nplus$ and $\Nminus$ stand for the number of observed \BsbarJpsiKst and \BsJpsiKst respectively.
+Going one step further, $\Acp{\text{raw}}$ can be implemented as a parameter to be estimated in the fit. The advantage
+is that the statistical uncertainty propagation for those parameters is implicit in the likelihood thus avoiding
+explicit calculations. In addition, the above quantities can be measured in a polarization dependent way. In order
 to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in a different way shown in \equref{acp_param}.
 
 \begin{equation}
@@ -908,9 +903,9 @@ to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in
 \label{acp_param}
 \end{equation}
 
-\noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude present in the \BsbarJpsiKst
+\noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude in the \BsbarJpsiKst
 and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$  $\AmpMnSq{i}$. The idea
-is that the last parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs respectively.
+is that the latter parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs respectively.
 This way both samples are fitted simultaneously in one fit. Solving \equref{acp_param} for $\AmpSq{\pm}$ yields:
 
 \begin{equation}
@@ -919,7 +914,7 @@ This way both samples are fitted simultaneously in one fit. Solving \equref{acp_
 \end{equation}
 
 \noindent The $\AmpPlSq{i}$ and $\AmpMnSq{i}$ are the amplitude expressions that are used along with the angular functions of \tabref{ang_terms}.
-Whereas the normalization factors in front of them can be re-expressed as function of $\Acp{\text{raw}}$ using \equref{acp_mes}.
+The normalization factors in front of them can be re-expressed as function of $\Acp{\text{raw}}$ using \equref{acp_mes}.
 
 \begin{align}
 \xi = \frac{\Nplus+\Nminus}{2\Nplus} &= \frac{1}{2}\left( 1 + \frac{\yieldMn{}}{\yieldPl{}}\right) = \nonumber \\
@@ -929,10 +924,10 @@ Whereas the normalization factors in front of them can be re-expressed as functi
 \label{amp_norms}
 \end{align}
 
-The quantities that are actually fitted are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$. Having said that, and by looking at \equref{acp_free}
-one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$ to be meaningful and consistent, the sum of all amplitudes $\sum\AmpSq{i}$
-(with $i:{0,\parallel,\perp,S}$ ) must add up to one. Thus imposing the condition $\sum\AmpSq{i} = 1$ one can re-express the $\AmpSq{i}$
-as relative fractions which is shown in the following equation.
+The quantities that are actually estimated in the likelihood fit are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$.
+Having said that, and by looking at \equref{acp_free}, one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$
+to be meaningful and consistent, the sum of all amplitudes $\sum\AmpSq{i}$ (with $i:{0,\parallel,\perp,S}$ ) must add up to one.
+Thus imposing the condition $\sum\AmpSq{i} = 1$ one can re-express the $\AmpSq{i}$ as relative fractions:
 
 \begin{equation}
 \AmpSq{S} = \fS{} \;\;\;\text{and}\;\;\; \AmpSq{k} = (1-\fS{})\fP{k}.
@@ -948,9 +943,9 @@ The final expressions of the $\AmpSqPm{i}$ after all the above is given in \equr
 \label{amps_final}
 \end{equation}
 
-\noindent where the $i$ index runs through all amplitudes whereas $k$ only through the \pwave ones.
+\noindent where the $i$ index runs through all amplitudes whereas $k$ only through the \pwave amplitudes.
 
-There is one more step required to properly build the full extended \pdf. That is the normalization of each component \pdf. Tempting as it might be to
+There is one more step required to properly build the complete extended \pdf. That is the normalization of each component \pdf. Tempting as it might be to
 normalize the component \pdfs to the number of observed events it would be wrong since the observed number of events are diluted by production and detection
 asymmetry. Given that the parameters of interest, \ACP, quantify the difference between the observed \BsbarJpsiKst and \BsJpsiKst decays, it follows that
 the observed  number of those decays need to be corrected for. With input from \secref{experimentalAssym} where the production and detection
