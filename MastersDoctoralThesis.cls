@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Masters/Doctoral Thesis 
+% Masters/Doctoral Thesis
 % Class File
 % Version 1.2 (21/11/15)
 %
@@ -12,7 +12,7 @@
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (main.tex).
-% 2) It has been written in such a way that under most circumstances you 
+% 2) It has been written in such a way that under most circumstances you
 % should not need to edit it.
 %
 % Class license:
@@ -55,7 +55,7 @@
 %	CLASS OPTIONS
 %----------------------------------------------------------------------------------------
 
-\ifbool{parskip}{\RequirePackage{parskip}} % If the parskip option is passed to the class, require the parskip package 
+\ifbool{parskip}{\RequirePackage{parskip}} % If the parskip option is passed to the class, require the parskip package
 
 \patchcmd{\@makechapterhead}{\vspace*{50\p@}}{\abovechapterspace}{}{}
 \patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{\abovechapterspace}{}{}
@@ -156,7 +156,7 @@
 
 %----------------------------------------------------------------------------------------
 
-\newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
+\newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active
 \if@openright\cleardoublepage\else\clearpage\fi
 }
 
@@ -221,8 +221,8 @@
 \pagestyle{thesis}
 \ifbool{headsepline}{\KOMAoption{headsepline}{true}}{}
 \PreventPackageFromLoading[\ClassError{\classname}{Package `fancyhdr' is
-incompatible\MessageBreak with this class}{The pagesyles are defined 
-using package `scrlayer-scrpage', please consult the\MessageBreak 
+incompatible\MessageBreak with this class}{The pagesyles are defined
+using package `scrlayer-scrpage', please consult the\MessageBreak
 KOMA-script documentation for details.}]{fancyhdr}
 
 
@@ -396,7 +396,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \ifbool{hyperrefsupport}{% If the nohyperref class option has not been specified
-\AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility 
+\AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility
 \RequirePackage{hyperref} % Required for customising links and the PDF
 \hypersetup{pdfpagemode={UseOutlines},
 bookmarksopen=true,
