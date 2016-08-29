@@ -17,11 +17,19 @@ the search for new particles is discussed.
 The parameter \phis manifests itself in the time dependence of the so called $\bquark \rightarrow \cquark\cquarkbar\squark $ transitions.
 An example of the last is shown in \figref{bs2jpsiphi}. In addition, the final state of the \Bs meson has to be
 a CP eigenstate, which implies that both \Bs and \Bsb can decay into it, such that the two decay paths
-illustrated in \figref{interference} can interfere with eachother..
+illustrated in \figref{interference} can interfere with eachother.
+
+\begin{figure}[!h]
+  \centering
+  {\sffamily \input{Figures/Chapter1/tree}}
+  \caption{Leading order tree diagram of the decay \BsJpsiPhi. Figure from~\cite{jeroenThesis}}
+  \label{bs2jpsiphi}
+\end{figure}
 
 A common way to parametrize CP violation in the interference between mixing and decay is
 
 \begin{equation}
+  \centering
  \lambda_{f} = \frac{q}{p} \frac{\bar{A}_f}{A_f}, % \equiv \left|\lambda_f\right| e^{i\phis}.
 \label{lambda_cpv}
 \end{equation}
@@ -35,6 +43,7 @@ associated to the interference can be written as:
 
 \newcommand{\half}{\frac{1}{2}}
 \begin{equation}
+  \centering
   a_{\rm CP}^{\rm interf}(t) = \frac{ - \Im(\lambda_f) \sin(\Delta m_s t)} {\cosh(\half \Delta\Gamma_s t) - \Re(\lambda_f)\sinh(\half\Delta\Gamma_s t)},
 \label{cpv_interf}
 \end{equation}
@@ -48,6 +57,7 @@ other types of asymmetries. The asymmetries are shown in \equref{cp_asym_lambda}
  and $\Bsb\to f$.
 
 \begin{equation}
+  \centering
   \Acp{\rm dir}      \equiv \frac{ 1-|\lambda_f|^2} {1 + |\lambda_f|^2},\;\;\;\;\;
   \Acp{\rm mix}      \equiv \frac{ 2 \Im\lambda_f} {1 + |\lambda_f|^2},\;\;\;\;\;
   \Acp{\Delta\Gamma} \equiv \frac{ 2 \Re\lambda_f} {1 + |\lambda_f|^2}.
@@ -62,13 +72,6 @@ The asymmetry of \equref{cpv_interf} can vanish at a particular point of time or
 be integrated over time when measuring \phis. This implies that this asymmetry shoud be measasured as a function of the
 {\it decay time} of the \Bs (\Bsb) meson. Decay time is the time interval between the production and decay of a particle.
 
-\begin{figure}[h]
-  \centering
-  {\sffamily \input{Figures/Chapter1/tree}}
-  \caption{Leading order tree diagram of the decay \BsJpsiPhi. Figure from~\cite{jeroenThesis}}
-  \label{bs2jpsiphi}
-\end{figure}
-
 The imaginary part of \equref{lambda_cpv} can be expressed as a combination of CKM elements, given a certain final state $f$, like $\jpsi\phi$.
 Under the assuption that for this final state only the leading order diagrams of \figref{bs_box} and \figref{bs2jpsiphi} contribute to the
 the \Bs, \Bsb mixing and decay respectively; Then the leading order Standard Model estimate of $\Im(\lambda_f)$ is written as:
@@ -80,7 +83,7 @@ the \Bs, \Bsb mixing and decay respectively; Then the leading order Standard Mod
 \end{equation}
 
 \noindent where the first fraction is related to the mixing part \qoverp whereas the second and third come from the \Bsb and \Bs
-decay amplitudes respectively. Re-writing the imaginary part of \equref{lambdaf_ckm} taking into account \equref{bsAnglesDef},
+decay amplitudes respectively. Re-writing the imaginary part of \equref{lambdaf_ckm} taking into account \equref{ckm_angles_def},
 one can obtain \equref{lambda_ckm_manip}
 
 \begin{equation}
@@ -120,14 +123,16 @@ easy to select $\phi$ over other mesons that decay to a $K^+K^-$ pair. This is d
 the $K^+K^-$ mass distribution within a window of about $\pm 60 \mevcc$ around its mass. This allows for the analysis to be
 independent\footnote{some residual dependence left, very similar to what is described in \secref{Kpi_Invariant_mass}. }
 of the \mkk mass variable simplifying the procedure. However an angular analysis, similar to the one in \secref{Diferential_Decay_Rate} is necessary
-to disentangle the odd and even CP components of the final state $\jpsi\phi$, as it is apparent from \equref{phis_jpsiphi_def}.
+to disentangle the odd and even CP components of the final state $\jpsi\phi$.
 In addition, as it was already implied \phis can be correctly probed only when the decay time dependence of the \BsJpsiPhi decays is taken into
 account. Furthermore knowledge on whether the final state $\jpsi\phi$ originated from a \Bs or a \Bsb is necessary since it
 significantly improves the sensitivity of the \phis measurement. The technique used to deduce this information is called {\it flavour tagging}
 and it complicates the analysis further. On top of that experimental effects such as angular and time deficiencies plus modeling the
 \lhcb detector's time resolution need to be taken into account.
 
-\begin{figure}[h]
+The status of the \phis measurements is shown in \figref{hfag_phis_dg}, where \lhcb has the most precise measurement to date.
+
+\begin{figure}[!h]
   \begin{center}
     \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, scale=0.8]{Figures/Chapter1/hfag_Spring2016_DGsphis_zoom.pdf}
     \caption{Likelihood contours of $\Delta\Gamma-\phis$ (here $\phis\equiv \phis^{c\bar{cs}}$). Many individual measurements are
@@ -138,8 +143,7 @@ and it complicates the analysis further. On top of that experimental effects suc
   \end{center}
 \end{figure}
 
-The status of the \phis measurements is shown in \figref{hfag_phis_dg}, where \lhcb has the most precise measurement to date.
-The combined \phis value from the \lhcb experiment~\cite{phis-3fb-paper} is shown in \equref{phis_lhcb}.
+\noindent The combined \phis value from the \lhcb experiment~\cite{phis-3fb-paper} is shown in \equref{phis_lhcb}.
 
 \begin{subequations}
   \begin{align}
@@ -180,6 +184,7 @@ This situation is shown in \equref{phis_meas} where the measured value \phiS{eff
 as the sum of the Standard Model prediction $\Delta\phiS{SM}$ and the introduced from New Physics shift $\Delta\phiS{NP}$.
 
 \begin{equation}
+  \centering
  \phis^{\text {eff}} = \phis^{\tiny \text{SM}} + \Delta\phiS{NP}.
  \label{phis_meas}
 \end{equation}
@@ -206,7 +211,7 @@ However the decay also receives contributions from a higher order suppressed pro
 {\it penguin} diagrams (or topologies) shown in \figref{bs2jpsiphi_peng}. The \phis measurement of \equref{phis_lhcb}
 ignores the contribution of these penguin diagrams.
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   {\sffamily \input{Figures/Chapter1/penguin}}
   \caption{ Higher order-penguin diagram. Figure from~\cite{jeroenThesis}. This diagram is suppressed by the CKM matrix elements involved as explained in \secref{Penguins}}
@@ -221,6 +226,7 @@ Thus in order to correctly probe New Physics contributions in future measurement
 have to be estimated.
 
 \begin{equation}
+\centering
  \phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM,peng} + \Delta\phis^{\tiny \text{NP}}.
  \label{phis_sm_peng}
 \end{equation}

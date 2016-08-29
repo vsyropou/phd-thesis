@@ -12,11 +12,12 @@ After this step the Yukawa term for the quark fields is shown in \equref{yukawa_
 
 \begin{subequations}
 \label{yukawa_flavour}
+\centering
   \begin{align}
   % -\mathscr{L}_{\text{Yukawa}} = M_{ij}^d \bar{d_{Li}} d_{Rj} + M_{ij}^u \bar{u_{Li}} u_{Rj} + h.c.,
   -\mathscr{L}_{\text{Yukawa}} &= \left[ y_{ij}^d \bar{d}_{Li} d_{Rj} + y_{ij}^u \bar{u}_{Li} u_{Rj} \right] \frac{v}{\sqrt{2}} + h.c. + ...  \\
                                &= \left[ m_{ij}^d \bar{d}_{Li} d_{Rj} + m_{ij}^u \bar{u}_{Li} u_{Rj} \right] + h.c. + ...,  \\
-                               \text{with} \;\;\; m^{u,d}_{i,j} = \frac{v}{\sqrt{2}} y_{ij}^{u,d} & \nonumber
+                               \text{with} \;\;\; m^{u,d}_{i,j} = \frac{v}{\sqrt{2}} & y_{ij}^{u,d} \nonumber
   \end{align}
 \end{subequations}
 
@@ -31,18 +32,20 @@ The quark fields, $u$ and $d$,  in \equref{yukawa_flavour} have a definite quant
 and also whether they are of up or down type. This quantum number is commonly called {\it flavour} and thus the quark fields
 are flavour eigenstates. By construction the mass matrix is not diagonal which means that
 a quark with a well defined flavour does not have a well defined mass. Or, in more formal phrasing, flavour and mass eigenstates of
-the quark fields do not coincide. In order to obtain proper quark masses the matrix $\bf m^{u,d}$ has to be diagonalized, as shown in \equref{diagM}.
+the quark fields do not coincide. In order to obtain proper quark masses the matrix $\bf m^{u,d}$ has to be diagonalized, as:
 
 \begin{equation}
+  \centering
   m^{d,u}_{\text diag} = V_L^{d,u} m^{d,u} \left(V_R^{d,u}\right)^{\dagger},
   \label{diagM}
 \end{equation}
 
 \noindent where the matrices $V$ are required to be unitary. Since \equref{yukawa_flavour} has to stay intact after $m^{d,u}$ is replaced with
-$m^{d,u}_{\text diag}$, the quark fields need to be rotated, as shown in \equref{quark_rotation} such that they cancel the additional $V$ matrices
+$m^{d,u}_{\text diag}$, the quark fields need to be rotated, as shown in \equref{quark_rotation}, such that they cancel the additional $V$ matrices
 of \equref{diagM}.
 
 \begin{equation}
+  \centering
   \left( d_{i}^m \right)_{L,R} = \left( V^d_{ij} d_{j} \right)_{L,R}, \;\;\;\; \left( u_{i}^m \right)_{L,R} = \left( V^u_{ij} u_{j} \right)_{L,R}.
   \label{quark_rotation}
 \end{equation}
@@ -54,29 +57,30 @@ interaction, shown in \equref{CClagrangian}. In the last equation the charged cu
 Once with quark fields expressed as flavour eigenstates, \equref{CClagrangianInt}, and second with the quarks as mass eigenstates, \equref{CClagrangianMass}.
 
 \begin{subequations}
-  \label{CClagrangian}
+  \centering
   \begin{align}
     \mathscr{L}_{\text{Kinetic}}^{CC} & \propto \bar{u}_{Li} \gamma_\mu {\Wm}^\mu d_{Ri} + \bar{d}_{Li} \gamma_\mu {\Wp}^\mu u_{Ri}  \label{CClagrangianInt} \\
-                                      & \propto \bar{u}_{Li}^m  {V_{\text{CKM}}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} {\Wp}^\mu \gamma_\mu u_{Ri}^m \label{CClagrangianMass} \\
-                                      \text{with} \;\;\; V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L, & \nonumber
+                                      & \propto \bar{u}_{Li}^m  {V_{\text{CKM}}} \gamma_\mu {\Wm}^\mu d_{Ri}^m + \bar{d}_{Li}^m V_{\text{CKM}} {\Wp}^\mu \gamma_\mu u_{Ri}^m \label{CClagrangianMass}
   \end{align}
+  \label{CClagrangian}
 \end{subequations}
 
-\noindent and \Wpm the charged weak boson fields, whereas $\gamma_\mu$ are Dirac matrices.
+\noindent with $V_{\text{CKM}} \equiv V^u_LV^{d\dagger}_L$ and \Wpm the charged weak boson fields, whereas $\gamma_\mu$ are Dirac matrices.
 The resulting matrix $V_{\text{CKM}}$ is the so called {\it CKM mixing matrix}, shown in \equref{quark_field_rotation}.
 
 \begin{equation}
+  \centering
   \begin{pmatrix} \dquark \\ \squark \\ \bquark  \end{pmatrix} =
   \underbrace{\begin{pmatrix} \Vud & \Vus & \Vub \\ \Vcd & \Vcs & \Vcb \\ \Vtd & \Vts & \Vtb \end{pmatrix}}_{V_{\text{CKM}}}
     \begin{pmatrix} \dquark^m \\ \squark^m \\ \bquark^m  \end{pmatrix}.
-  \label{quark_field_rotation}
+      \label{quark_field_rotation}
   \end{equation}
 
 The charged current term, \equref{CClagrangian}, incorporates an important aspect of the weak interaction,
 namely the {\it quark flavor mixing}. The last is due to the fact that quark mass eigenstates are super-positions
 of the flavour eigenstates.
 
-\begin{figure}[h]
+\begin{figure}[h!]
   \centering
   {\sffamily \input{Figures/Chapter1/QuarkMixing.tex}}
   \caption{Feynman diagram where an up-type quark couples to any of the three, ($d,s,b$), down type quarks,
@@ -92,9 +96,7 @@ The probability of such a transitions is given by the elements of the CKM mixing
 \subsubsection{CKM mixing matrix}
 The CKM matrix is a unitary matrix which, as previousy mentioned, describes the strength of quark couplings,
 or, in other words, the probability of quark flavour transitions. The elements of the CKM matrix have been measured, see \eg Chapter 12 of~\cite{PDG},
-showing an interesting structure, see \equref{CKMmatrix}. Essentially the structure implies that transitions between generations
-are suppressed with respect to transitions within the same generation, in a symmetric way. The most suppressed transitions are between
-the first and third generations followed by the ones between the second and third and the least suppressed are between first and second.
+showing the following interesting structure.
 
 \begin{equation}
   |V_{\text{CKM}}|
@@ -102,6 +104,10 @@ the first and third generations followed by the ones between the second and thir
               \simeq \begin{pmatrix} 1 & 0.2 & 0.008 \\ 0.2 & 1 & 0.04 \\ 0.008 & 0.04 & 1 \end{pmatrix}.
       \label{CKMmatrix}
   \end{equation}
+
+\noindent Essentially the structure implies that transitions between generations
+are suppressed with respect to transitions within the same generation, in a symmetric way. The most suppressed transitions are between
+the first and third generations followed by the ones between the second and third and the least suppressed are between first and second.
 
 Testing the unitarity of the CKM matrix is a central goal of flavour physics.
 In order to achieve such tests it is useful to define a parametrization of the CKM matrix. By construction the CKM matrix has
@@ -111,6 +117,7 @@ The choice of the CKM matrix parametrization is \aprior arbitrary. However due t
 standard parametrization. It utilizes the three real parameters, $\lambda,A,\rho$ and the imaginary one $i\eta$.
 
 \begin{equation}
+\centering
   |V_{\text{CKM}}|
                    = \begin{pmatrix} \VudWolf & \VusWolf & \VubWolf \\
                                      \VcdWolf & \VcsWolf & \VcbWolf \\
@@ -120,12 +127,11 @@ standard parametrization. It utilizes the three real parameters, $\lambda,A,\rho
 
 \noindent As previously mentioned, the CKM matrix is a unitary matrix, meaning that $V_{\text{CKM}} V_{\text{CKM}}^\dagger = I_{3x3}$.
 This leads to the so called unitarity and orthogonality relations. The last are sums of complex numbers that are equal to zero, thus can be
-represented by triangles in the complex plane. There are six orthogonality relations, two of which are relevant for this thesis since
-the CKM elements present in those relations govern the dynamics in the \Bs and \Bd meson systems. These two relations, shown in
-\equref{unitConstraints}, after dividing by $\Vcd\Vcb^*$, $\Vcs\Vcb^*$ respectivelly for \Bd and \Bs, are illustrated in \figref{unitTriangles}.
-Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$, see section 13.3 of ~\cite{PDG}.
+represented by triangles in the complex plane. There are six orthogonality relations, two of which, shown in \equref{unitConstraints}, are
+relevant for this thesis since the CKM elements present in those relations govern the dynamics in the \Bs and \Bd meson systems.
 
 \begin{subequations}
+  \centering
   \label{unitConstraints}
   \begin{align}
     \Bd : & \quad \Vud\Vub^* + \Vcd\Vcb^* + \Vtd\Vtb^* = 0,
@@ -134,6 +140,11 @@ Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$
     \label{unitConstraints_Bs}
   \end{align}
 \end{subequations}
+
+\noindent These two relations, after dividing by $\Vcd\Vcb^*$, $\Vcs\Vcb^*$ respectivelly for \Bd and \Bs, are illustrated in \figref{unitTriangles}.
+Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$, see section 13.3 of ~\cite{PDG}.
+The coordinates of the apex of the two triangles are defined as $(\bar{\rho},\bar{\eta})$ and $(\bar{\rho}_s,\bar{\eta}_s)$ respectively for \figref{unitTriangles_bd} and
+\figref{unitTriangles_bs}. By inspecting the triangles one can define the angles as shown in \equref{ckm_angles_def}.
 
 \begin{figure}[h]
   \centering
@@ -155,37 +166,18 @@ Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$
   \label{unitTriangles}
 \end{figure}
 
-The coordinates of the apex of the two triangles are defined as $(\bar{\rho},\bar{\eta})$ and $(\bar{\rho}_s,\bar{\eta}_s)$ respectively for \figref{unitTriangles_bd} and
-\figref{unitTriangles_bs}. By inspecting the triangles one can define the angles as shown in \equref{bdAnglesDef} and \equref{bsAnglesDef}.
-
-\begin{equation}
-  \label{bdAnglesDef}
+\begin{align}
+  \centering
   \alpha \equiv \arg\left( -\frac{\Vtd\Vtb^*}{\Vud\Vub^*} \right),
-  \quad
-  \beta  \equiv \arg\left( -\frac{\Vcd\Vcb^*}{\Vtd\Vtb^*} \right),
-  \quad
-  \gamma \equiv \arg\left( -\frac{\Vud\Vub^*}{\Vcd\Vcb^*} \right),
-\end{equation}
+  \;\;
+  \beta  \equiv & \arg\left( -\frac{\Vcd\Vcb^*}{\Vtd\Vtb^*} \right),
+  \;\;
+  \gamma \equiv \arg\left( -\frac{\Vud\Vub^*}{\Vcd\Vcb^*} \right), \nonumber \\
+  \betas \equiv & \arg\left( -\frac{\Vts\Vtb^*}{\Vcs\Vcb^*} \right).
+  \label{ckm_angles_def}
+\end{align}
 
-\begin{equation}
-  \label{bsAnglesDef}
-  %\alpha_s \equiv \arg\left( -\frac{\Vus\Vub^*}{\Vts\Vtb^*} \right)
-  %\quad
-  \betas \equiv \arg\left( -\frac{\Vts\Vtb^*}{\Vcs\Vcb^*} \right).
-  %\quad
-  %\gamma_s \equiv \arg\left( -\frac{\Vcs\Vcb^*}{\Vus\Vub^*} \right)
-\end{equation}
-
-\begin{figure}[h]
-  \begin{center}
-    \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
-    \caption{Global fit of the apex $(\bar{\rho},\bar{\eta)}$ of the \Bd triangle by the CKM fitter group~\cite{ckm-fitter-phis-pred}.
-             Inputs from measurements of flavor physics observables are indicated by colored bands.}
-    \label{unitarity_triangle}
-  \end{center}
-\end{figure}
-
-\noindent Note that the definitions \equref{bdAnglesDef} and \equref{bsAnglesDef} are independant of
+\noindent Note that the definitions \equref{ckm_angles_def} are independant of
 the quark field phases. Thus the above angles are usufull observables, regardless of the chossen
 CKM matrix pramtetriation.
 
@@ -196,6 +188,14 @@ picture, see \figref{unitarity_triangle}. For completeness it is interesting to 
 sector a similar mixing matrix is active. The hierarchy there is completely different which is yet another
 intriguing feature of the Standard Model.
 
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[trim=0cm 0.5cm 0cm 1.5cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
+    \caption{Global fit of the apex $(\bar{\rho},\bar{\eta)}$ of the \Bd triangle~\cite{ckm-fitter-phis-pred}.
+             Inputs from measurements of flavor physics observables are indicated by colored bands.}
+    \label{unitarity_triangle}
+  \end{center}
+\end{figure}
 
 \subsubsection{CP-Violation and fermion masses}
 It is interesting to point out the common origin of CP Violation and fermion masses in the Standard Model~\cite{KM-mechanism}.

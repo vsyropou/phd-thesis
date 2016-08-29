@@ -1,5 +1,3 @@
-
-
 The \Bs meson is an electrically neutral particle that consists of two quarks, specificaly (\bquarkbar\squark).
 The two quarks in the mesons are bound by the strong interaction. An important feature of
 the \Bs meson, and all heavy neutral mesons, is that it can spontaneously change into its antiparticle,
@@ -11,17 +9,17 @@ appear in \BBbarSyst oscillations, in the subsequent decay and in the interferen
 and decay. The current section as well as \secref{WeakPhase} will qualitatively address the way that
 these effects manifest themselves.
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    {\sffamily \input{Figures/Chapter1/box1}}
+    \scalebox{0.9}{\sffamily \input{Figures/Chapter1/box1}}
     \caption{}
     \label{bs_box_1}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    {\sffamily \input{Figures/Chapter1/box2}}
+    \scalebox{0.9}{\sffamily \input{Figures/Chapter1/box2}}
     \caption{}
     \label{bs_box_2}
   \end{subfigure}
@@ -39,8 +37,9 @@ to describe the time evolution of the \Bs or \Bsb meson. The wave-functions of t
 are defined as:
 
 \begin{equation}
-\ket{\Bs}  \equiv  \ket{\bquarkbar\squark}, \;\;\; \ket{\Bsb} \equiv  \ket{\bquark\squarkbar},
-\label{bs_wavefunctions}
+  \centering
+  \ket{\Bs}  \equiv  \ket{\bquarkbar\squark}, \;\;\; \ket{\Bsb} \equiv  \ket{\bquark\squarkbar},
+  \label{bs_wavefunctions}
 \end{equation}
 
 \noindent implying that the states \Bs and \Bsb have a definite quark content, or in other words,
@@ -51,9 +50,10 @@ By diagonalizing the effective Hamiltonian one can obtain the mass eigenstates, 
 of the system, shown in \equref{bs_mass_eigen}.
 
 \begin{align}
- \ket{\Bs{}_{,H}} &= p \ket{\Bs} + q \ket{\Bsb}, \nonumber \\
- \ket{\Bs{}_{,L}} &= p \ket{\Bs} - q \ket{\Bsb}.
-\label{bs_mass_eigen}
+  \centering
+  \ket{\Bs{}_{,H}} &= p \ket{\Bs} + q \ket{\Bsb}, \nonumber \\
+  \ket{\Bs{}_{,L}} &= p \ket{\Bs} - q \ket{\Bsb}.
+  \label{bs_mass_eigen}
 \end{align}
 
 More details on the exact calculations can be found in section 13.1 of~\cite{PDG} and in ~\cite{jeroenThesis,DeBruyn-thesis}.
@@ -70,9 +70,10 @@ The ratio $|\qoverp|$ is connected a type of CP-Violation. Specifically the CP-V
 The connection is shown in the asymmetry of \equref{acp_mixing}.
 
 \begin{equation}
-a_{\rm sl}^{s}  \equiv \frac{\bra{\Bsb}\ket{\Bs} - \bra{\Bs}\ket{\Bsb}} {\bra{\Bsb}\ket{\Bs} + \bra{\Bs}\ket{\Bsb}}
-                     = \frac{1 - \left|\nicefrac{q}{p}\right|^4}{1 + \left|\nicefrac{p}{q}\right|^4},
-\label{acp_mixing}
+  \centering
+  a_{\rm sl}^{s}  \equiv \frac{\bra{\Bsb}\ket{\Bs} - \bra{\Bs}\ket{\Bsb}} {\bra{\Bsb}\ket{\Bs} + \bra{\Bs}\ket{\Bsb}}
+                       = \frac{1 - \left|\nicefrac{q}{p}\right|^4}{1 + \left|\nicefrac{p}{q}\right|^4},
+  \label{acp_mixing}
 \end{equation}
 
 \noindent where it can be seen that $a_{\rm sl}^{s}$ vanishes if $|\qoverp|= 1$. The subscript $sl$ stands for a semileptonic
@@ -85,8 +86,9 @@ Using the CP conjugated $\bar{A}_{\bar{f}}$ amplitude the asymmetry of \equref{c
 This asymmetry vanishes in case $|\nicefrac{\bar{A}_{\bar{f}}}{A_f}| = 1$.
 
 \begin{equation}
-\Acp{\text{dir}} = \frac{\Gamma(\Bs \rightarrow f) - \Gamma(\Bsb \rightarrow \bar{f})} {\Gamma(\Bs \rightarrow f) + \Gamma(\Bsb \rightarrow \bar{f})}
-                 = \frac{ |\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 - 1}{|\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 + 1}.
+  \centering
+  \Acp{\text{dir}} = \frac{\Gamma(\Bs \rightarrow f) - \Gamma(\Bsb \rightarrow \bar{f})} {\Gamma(\Bs \rightarrow f) + \Gamma(\Bsb \rightarrow \bar{f})}
+                   = \frac{ |\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 - 1}{|\nicefrac{\bar{A}_{\bar{f}}}{A_f}|^2 + 1}.
 \label{cpv_decay}
 \end{equation}
 
