@@ -23,27 +23,26 @@ The MVA approach can exploit the correlations between input variables to get the
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accummulate near $+1$,
 whereas background candidates near to -1. In the current analysis the calsifyer variable is aslo refered to as BDT, which states
 the class of MVA algorithm implemented, namelly {\it Boosted Decision Tree}. For further information on these types of algorithms
-can be found in {\color{red}Ref TMVA toolkit and some paper on boosted decision trees maybeeeee.......}
-
-\begin{figure}[!h]
-\begin{center}
-  \tikzsetnextfilename{bdtg}
-  \scalebox{1}{\input{Figures/Chapter4/bdtg}}
-  \caption{BDT distribution on real data. $y$-axis in logarithmic scale. Signal (Background) candidates accumulate mainly towards left the right (left). }
-  \label{BTDG_performance}
-\end{center}
-\end{figure}
+can be found in {\color{red}Ref TMVA }
 
 For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background. {\color{red} These sampels are shown with blah color in \figref{BTDG_performance}}
 This pair of data sets is provided as input to the MVA algorithm to construct the classifying variable.
-In that step the MVA algorithm is {\it trained} to distinguish between the signal
-and background input data sets. Next another, independent, pair of sets is used to asses how successful the training step was. This step is called {\it testing}.
+In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
+Next another, independent, pair of sets is used to asses how successful the training step was. This step is called {\it testing}.
 For the signal representative samples, \BsJpsiKst Monte-Carlo simulated data (here after simulated data)
 are used. As for the background representative sample, real data candidates are used. These candidates are taken from a control
 region, usually refered to as {\it mass sideband}, away from the \BsJpsiKst mass peak. This way the background representative sample
 is not affected by non perfect simulation and it is also indipendant of the signal representative one.
 Note that the simulated data are treated in the same way as the real data do by all the processing steps after the \lone trigger level.
+
+\begin{figure}[t]
+\centering
+  \tikzsetnextfilename{bdtg}
+  \scalebox{1}{\input{Figures/Chapter4/bdtg}}
+  \caption{BDT distribution on real data. $y$-axis in logarithmic scale. Signal (Background) candidates accumulate mainly towards left the right (left). }
+  \label{BTDG_performance}
+\end{figure}
 
 The two well seperated peaks in \figref{BTDG_performance} suggest that the discriminating variable, BDT, shows a good discrimination
 power over signal and background distributions \figref{BTDG_performance}.
@@ -72,19 +71,9 @@ The optimum BDT value is chosen as the one that maximizes $F(w_i)$.
 After applying the BTD cut there is still some combinatorial background remaining, see \figref{mass_BDTG_selection}, which is removed
 further by means of the \sWeights described in \secref{sWeighting_and_mass}. However, there is
 one more crucial step that is necessary to address prior to the application of the \sPlot technique,
-namely that of non-combinatorial background.
-Studies of simulated samples show contributions from several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
-
-\begin{figure}[!h]
-  \begin{center}
-  \tikzsetnextfilename{mass_before_after_bdtg}
-  \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
-  \caption{Mass distribution before (black) and after (red) BDT selection. $y$-axis in logarithmic scale}
-  \label{mass_BDTG_selection}
-  \end{center}
-\end{figure}
-
-\noindent Those backgrounds are the result of misidentifying a final state particle, for example a pion can
+namely that of non-combinatorial background. Studies of simulated samples show contributions from
+several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
+Those backgrounds are the result of misidentifying a final state particle, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above mentioned misidentified backgrounds
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
 see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinues. This type of distribution has to be removed
@@ -95,6 +84,14 @@ events\footnote{The term "cancel out" obtains more meaning in the context of the
 the next selection step \secref{sWeighting_and_mass} based on a given mass \pdf. }.
 The current section briefly addresses the treatment of the non-combinatorial background with negative weights
 as well as the special treatment of the \LbJpsippi non-combinatorial background.
+
+\begin{figure}[t]
+  \centering
+  \tikzsetnextfilename{mass_before_after_bdtg}
+  \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
+  \caption{Mass distribution before (black) and after (red) BDT selection. $y$-axis in logarithmic scale}
+  \label{mass_BDTG_selection}
+\end{figure}
 
 As a first step towards removing the above mentioned type of background contribution it is necessary to have an estimate
 on the expected non-combinatorial background yield on data. This is done using simulated data and based on the expression:
@@ -123,9 +120,11 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, m_{hh}  | A_k^i)} {P_{\rm MC}^i(\Om
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs\footnote{\pdf is an acronym for Probability Density Function}.
 The index $i$ labels the specie of the particuar non-combinatorial background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
 Whreas the polarization states, $0$, $\parallel$, $\perp$, of each of the above mentioned species is represented by the $k$ index.
+The role of the amplitude polarization becomes more clear in \secref{Angular_Analysis}.
+The final non-combinatorial background yields estimation after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
 
-\begin{table}[!h]
-   \begin{center}
+\begin{table}[t]
+   \centering
         \begin{tabular}{c c c}
           \hline
           \multicolumn{2}{c}{Sample} & $\pm70\mevcc$ window \\
@@ -149,11 +148,7 @@ Whreas the polarization states, $0$, $\parallel$, $\perp$, of each of the above 
         \caption{Approximated expected yields in $\pm 70\mevcc$ $K\pi$ mass window of each background after re-weighting
                  the angular distributions, with the exception of the \LbJpsippi for which the amplitude structure is not yet deterimened.}
         \label{peaking_bkg_yields}
-   \end{center}
 \end{table}
-
-\noindent The role of the mplitude polarization becomes more clear in \secref{Angular_Analysis}.
-The final non-combinatorial background yields estimation after the above mentioned steps is shown in \tabref{non-combinatorial_bkg_yields}
 
 As it was previously mentioned, the \LbJpsippi background is treated specially. Instead of following the above
 procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as the
@@ -222,24 +217,16 @@ Therefore, each \mkpi invariant mass sub-sample is divided further in intervals 
 can be applied.  The mass final mass fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
 
 \begin{align}
-N_{\Bd} &= 208656  \pm  462 ^{+ 78	}_{- 76}\\
-N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
-\label{signal_yields}
+  \centering
+  N_{\Bd} &= 208656  \pm  462 ^{+ 78	}_{- 76}\\
+  N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
+  \label{signal_yields}
 \end{align}
 
 \noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category,
 and the second uncertainties correspond to systematical. The correlations between the \Bd and \Bs yields in each fitting category
 are found to be less than $4\%$. Note that the mass fitting model has been validated with a procedure similar to the
 one described in \secref{Toy_Experiments_Study}.
-
-\begin{figure}[!h]
-\begin{center}
-  \tikzsetnextfilename{mass_plot}
-  \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
-  \caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
-  \label{mass_plot}
-\end{center}
-\end{figure}
 
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.
@@ -248,6 +235,14 @@ based on the likelihood function built from the input \pdf. The main idea of \sP
 \pdf a set of weights can be computed such that they project out only that particular species while effectivelly subtract the others.
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
 subtracted while \BJpsiKst events are projected with the above mentioned technique (also referred to as sWeighting).
+
+\begin{figure}[t]
+  \centering
+  \tikzsetnextfilename{mass_plot}
+  \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
+  \caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
+  \label{mass_plot}
+\end{figure}
 
 The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section.
 Specifically, the resulting weighted events can be described by the signal \pdf only, meaning there is no need to explicitly model
@@ -260,8 +255,8 @@ where the statistical uncertainty estimation comes from. Thus to correct for thi
 
 \begin{equation}
   \centering
-\alpha = \left(\frac{\sum_{i} w_i}{\sum_{i} w_i^2}\right)^{1/2}
-\label{sWeights_scale_factor}
+  \alpha = \left(\frac{\sum_{i} w_i}{\sum_{i} w_i^2}\right)^{1/2}
+  \label{sWeights_scale_factor}
 \end{equation}
 
 \noindent is applied to each weight before performing the angular fit. The scale factor essentially ensures that the sum of weights

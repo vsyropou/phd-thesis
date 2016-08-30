@@ -8,13 +8,14 @@ in \secref{experimentalAssym}. Some aspects of the maximum likelihood fit are pr
 along with the \ACP parameters of interest, which are introduced in a special way in angular fit when building the full decay rate \pdf.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Angular Dependence}
 \label{Diferential_Decay_Rate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 The decay of interest, \BJpsiKst, is a P2VV process with 4 charged particles in the final state.
-The acronym P2VV acronym refers to the spin of the particles involved in the decay. Specifically, the
-\Bs (and \Bd) is spin-0 parity minus (Pseudo-scalar) particle, whereas the intermediate resonances
+The acronym P2VV acronym refers to the spin of the particles involved in the decay.
+Specifically, the \Bs (and \Bd) is spin-0 parity minus (Pseudo-scalar) particle, whereas the intermediate resonances
 \jpsi and \Kstarzb are spin-1 (Vector) particles. Hence the acronym P2VV. The final state partciles are
 two muons, \mmu, and two kaons, $K$, coming from the decay of the \jpsi and \Kstarzb respectivelly.
 The angular dependence of the \BsJpsiKst decay can be described using eiter the transversity framework~\cite{transvFrameworkI,transvFrameworkII}
@@ -26,93 +27,30 @@ helicity configurations of the intermediate vector particles. A detailed derivat
 within the scope of a P2VV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectively
 for the transvercity and helicity formalism.
 
-% In the transversity framework the decay
-% amplitude is decomposed to the three possible polarization states of the intermediate particles \jpsi and \Kst with respect to
-% the \Bs rest frame using polarization vectors of the decay amplitude
-
-\begin{table}[!h]
+\begin{figure}[t]
   \centering
-  \caption{ Angular functions corresponding to each term in \equref{ang_terms} for the \BJpsiKst decay. Pure and interference \pwave terms are shown in the upper part,
-    whereas the \swave plus \spwave interference in the lower. The angular functions are expressed in the helicity basis. The angles $\cos\thetaK,\cos\thetamu,\phihel$
-    are called \emph{helicity angles} and in \figref{helAngles} are put into perspective. The middle column express the angular dependence in an orthogonal basis and it
-    is equivalent to the last column. The $P$ and $Y$ symbols denote associated Legendre polynomials and real valued spherical harmonics
-    respectively. }
-  \renewcommand{\arraystretch}{1.2}
-  \label{ang_distr}
-  \begin{tabular}{ccc}
-    \hline
-    $a_n$                             &
-    %$hh'$                                  &
-      $h_n(\Omega) \times 16\sqrt{\pi}$      &
-      $h_n(\Omega) \times \tfrac{32\pi}{9}$  \\
+  \includegraphics[width=\textwidth]{Figures/Chapter4/helAngles.pdf}
+  \caption{Definition of helicity angles.}
+  \label{helAngles}
+\end{figure}
 
-    \hline
-    $\AmpSq{0}$  &
-    %00  &
-      $4\, (P_0^0 + 2\, P_2^0)\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  &
-      $2\, \cos^2\thetaK\, \sin^2\thetamu$  \\
-
-    $\AmpSq{\parallel}$  &
-    %$\parallel\parallel$  &
-      $P_2^2\, (2\, Y_{0,\,0} + \tfrac{1}{\sqrt{5}}\, Y_{2,\,0} - \sqrt{\tfrac{3}{5}}\, Y_{2,\,+2})$  &
-      $\sin^2\thetaK\, (1 - \sin^2\thetamu\, \cos^2\phihel)$  \\
-
-    $\AmpSq{\perp}$  &
-    %$\perp\perp$  &
-      $P_2^2\, (2\, Y_{0,\,0} + \tfrac{1}{\sqrt{5}}\, Y_{2,\,0} + \sqrt{\tfrac{3}{5}}\, Y_{2,\,+2})$  &
-      $\sin^2\thetaK\, (1 - \sin^2\thetamu\, \sin^2\phihel)$  \\
-
-    $\ReAmp{0}{\parallel}$  &
-    %0$\parallel$ ($\Re$)  &
-      $+2\sqrt{2}\sqrt{\tfrac{3}{5}}\, P_2^1\, Y_{2,\,+1}$  &
-      $+\frac{1}{\sqrt{2}}\, \sin2\thetaK\, \sin2\thetamu\, \cos\phihel$  \\
-
-    $\ImAmp{0}{\perp}$  &
-    %0$\perp$ ($\Im$)  &
-      $-2\sqrt{2}\sqrt{\tfrac{3}{5}}\, P_2^1\, Y_{2,\,-1}$  &
-      $-\frac{1}{\sqrt{2}}\, \sin2\thetaK\, \sin2\thetamu\, \sin\phihel$  \\
-
-
-    $\ImAmp{\parallel}{\perp}$  &
-    %$\parallel\perp$ ($\Im$)  &
-      $+2\sqrt{\tfrac{3}{5}}\, P_2^2\, Y_{2,\,-2}$  &
-      $+\sin^2\thetaK\, \sin^2\thetamu\, \sin2\phihel$  \\
-
-    \hline
-    $\AmpSq{{\text{S}}}$  &
-      $4\, P_0^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  &
-      $\tfrac{2}{3}\, \sin^2\thetamu$  \\
-
-    $\ReAmp{0}{{\text{S}}}$  &
-      $8\sqrt{3}\, P_1^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  &
-      $\tfrac{4}{3}\sqrt{3}\, \cos\thetaK\, \sin^2\thetamu$  \\
-
-    $\ReAmp{\parallel}{{\text{S}}}$  &
-      $+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,+1}$  &
-      $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \cos\phihel$  \\
-
-    $\ImAmp{\perp}{{\text{S}}}$  &
-      $+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,-1}$  &
-      $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \sin\phihel$  \\
-    \hline
-  \end{tabular}
-\end{table}
-
-Here, the steps to arrive at an expression for the angular decay rate for \BsJpsiKst decays. In \equref{ang_terms}
-the amplitude $\mathcal{A}(\text{\BJpsiKst})$ is decomposed in its \pwave ($0$, $\parallel$, $\perp$) and \swave ($S$)
-polarizations.
+Here, the steps to arrive at an expression for the angular decay rate of \BsJpsiKst are briefly described.
+The total decay amplitude $\mathcal{A}(\text{\BJpsiKst})$ is decomposed in its \pwave ($0$, $\parallel$, $\perp$)
+and \swave ($S$) polarizations as shown in the following equation.
 
 \begin{align}
-  \frac{d\Gamma(\text{\BJpsiKst})}{d\Omega\;d\mkpi} \propto |\mathcal{A}&(\text{\BJpsiKst})|^2 = \nonumber \\
-                                                    &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n \mKpiAmp,
+  \centering
+  \frac{d\Gamma(\text{\BJpsiKst})}{d\Omega\;d\mkpi} &\propto |\mathcal{A}(\text{\BJpsiKst})|^2 = \nonumber \\
+                                                    &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n \mKpiAmp.
   \label{ang_terms}
 \end{align}
 
-\noindent where the terms $a_n$ orginate from squaring the amplitude and their exact expressions are shown in the first column of
-\tabref{ang_distr}\footnote{It is interesting to see in \cite{jeroenThesis} how the $\Re$ and $\Im$ parts of the interference terms show up.}.
-Note the appearance of \pwave and \spwave interference terms. The functions $h_n$ represent the angular dependence of each term,
-and $\mKpiAmp$ the \mkpi dependence of the amplitude. The treatment of the \mkpi dependence is postponed for the next section.
-\tabref{ang_distr} lists the angular part of the decay rate equation ({\it i.e.} the $h_n$ functions) which is the result of
+\noindent Note the appearance of \pwave and \spwave interference terms; See in~\cite{jeroenThesis} how the $\Re$
+and $\Im$ parts of the interference terms show up. The terms $a_n$, in the same equation,
+orginate from squaring the amplitude and their exact expressions are shown in the first column of \tabref{ang_distr}.
+The functions $h_n$ represent the angular dependence of each term $a_n$ term and $\mKpiAmp$ the \mkpi dependence of
+the amplitude. The treatment of the \mkpi dependence is postponed for the next section. \tabref{ang_distr} lists the angular
+part of the decay rate equation ({\it i.e.} the $h_n$ functions) which is the result of
 applying the \emph{helicity formalism} in the \BJpsiKst decay. To descrbe a 4-body decay, such as the \BJpsiKst decay, three
 angles, denoted by $\Omega$, plus the \mkpi are required. As shown in \figref{helAngles}, the three \emph{heliciy angles} angles
 $\thetaK$, $\thetamu$ and $\phihel$, are defined as follows: $\thetamu$ is the angle of the positive $\mu$ with respect to the
@@ -127,40 +65,78 @@ is adopted in the current analysis. This choice is favoured by the fact that the
 two $P$ or two $Y$ are known analytically. The last significantly imporves the description and implementation
 of the angular acceptance, see see \secref{Accceptance}.
 
-% $\int_{-1}^{1}Pd\cos\thetaK$ and $\int_{\cos\theta=-1,\varphi=-\pi}^{\cos\theta=1,\varphi=\pi}Yd\cos\theta d\varphi$
+\begin{table}[t]
+  \centering
+  \caption{ Angular functions corresponding to each term in \equref{ang_terms} for the \BJpsiKst decay. Pure and interference \pwave terms are shown in the upper part,
+    whereas the \swave plus \spwave interference in the lower. The angular functions, $h_n$, are expressed in the helicity basis. The $P$ and $Y$ symbols denote
+    associated Legendre polynomials and real valued spherical harmonics respectively.}
+  \renewcommand{\arraystretch}{1.2}
+  \label{ang_distr}
+  \begin{tabular}{cc}
+    \hline
+      $a_n$  &
+      $h_n(\Omega) \times 16\sqrt{\pi}$       \\ %&
+      % $h_n(\Omega) \times \tfrac{32\pi}{9}$   \\
 
-\begin{figure}[h]
-\begin{center}
-  \includegraphics[width=\textwidth]{Figures/Chapter4/helAngles.pdf}
-  \caption{Definition of the decay angles in the helicity formalism.}
-  \label{helAngles}
-\end{center}
-\end{figure}
+    \hline
+      $\AmpSq{0}$   &
+      $4\, (P_0^0 + 2\, P_2^0)\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  \\ %&
+      % $2\, \cos^2\thetaK\, \sin^2\thetamu$  \\
+
+    $\AmpSq{\parallel}$  &
+      $P_2^2\, (2\, Y_{0,\,0} + \tfrac{1}{\sqrt{5}}\, Y_{2,\,0} - \sqrt{\tfrac{3}{5}}\, Y_{2,\,+2})$ \\ % &
+      % $\sin^2\thetaK\, (1 - \sin^2\thetamu\, \cos^2\phihel)$  \\
+
+    $\AmpSq{\perp}$  &
+      $P_2^2\, (2\, Y_{0,\,0} + \tfrac{1}{\sqrt{5}}\, Y_{2,\,0} + \sqrt{\tfrac{3}{5}}\, Y_{2,\,+2})$  \\ %&
+      % $\sin^2\thetaK\, (1 - \sin^2\thetamu\, \sin^2\phihel)$  \\
+
+    $\ReAmp{0}{\parallel}$  &
+      $+2\sqrt{2}\sqrt{\tfrac{3}{5}}\, P_2^1\, Y_{2,\,+1}$  \\ %&
+      % $+\frac{1}{\sqrt{2}}\, \sin2\thetaK\, \sin2\thetamu\, \cos\phihel$  \\
+
+    $\ImAmp{0}{\perp}$  &
+      $-2\sqrt{2}\sqrt{\tfrac{3}{5}}\, P_2^1\, Y_{2,\,-1}$  \\ %&
+      % $-\frac{1}{\sqrt{2}}\, \sin2\thetaK\, \sin2\thetamu\, \sin\phihel$  \\
+
+
+    $\ImAmp{\parallel}{\perp}$  &
+      $+2\sqrt{\tfrac{3}{5}}\, P_2^2\, Y_{2,\,-2}$  \\ %&
+      % $+\sin^2\thetaK\, \sin^2\thetamu\, \sin2\phihel$  \\
+
+    \hline
+    $\AmpSq{{\text{S}}}$  &
+      $4\, P_0^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$  \\ %&
+      % $\tfrac{2}{3}\, \sin^2\thetamu$  \\
+
+    $\ReAmp{0}{{\text{S}}}$  &
+      $8\sqrt{3}\, P_1^0\, (Y_{0,\,0} - \tfrac{1}{\sqrt{5}}\, Y_{2,\,0})$ \\ % &
+      % $\tfrac{4}{3}\sqrt{3}\, \cos\thetaK\, \sin^2\thetamu$  \\
+
+    $\ReAmp{\parallel}{{\text{S}}}$  &
+      $+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,+1}$  \\ % &
+      % $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \cos\phihel$  \\
+
+    $\ImAmp{\perp}{{\text{S}}}$  &
+      $+6\sqrt{2}\tfrac{1}{\sqrt{5}}\, P_1^1\, Y_{2,\,-1}$  \\ %&
+      % $+\tfrac{1}{3}\sqrt{6}\, \sin\thetaK\, \sin2\thetamu\, \sin\phihel$  \\
+    \hline
+  \end{tabular}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance}
 \label{Accceptance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While the effects of angular resolution are known to be small for this analysis{\color{red} ref tristran.},
-on the other hand, sources introducing angular acceptance need to be acounted for. Diviations from a perfect
-angular acceptance can be introduced by selection criteria imposed during the Stripping or by the detector itself.
+on the other hand, sources introducing angular acceptance need to be acounted for.
+Diviations from a perfect angular acceptance can be introduced by selection criteria imposed during the Stripping or by the detector itself.
 As explained in \secref{lhcb_detector} the \lhcb detector does not cover the full $4\pi$ solid angle, plus the fact that
 along there are no detector elemntents in the \lhc beam pipe. The current section introduces the treatment of
 angular acceptance shape. After that the parametrization of the acceptance is discussed and finally an important
 issue related to the choice of parametrization is dealt with.
 
-The shape of the acceptance can be seen in \figref{angAcc_all}. The most striking feature is the drop of efficiency
-close to $\cos\thetaK=1$, which implies that the pion is more likely to fly out of the geometrical acceptance of the detector, compared to a kaon,
-and thus not be detected. This feature can be understood given the  definition of $\cos\thetaK$ in \figref{helAngles}.
-The scenario where $\cos\thetaK\rightarrow 1$ and hence $\thetaK \rightarrow 0$ corresponds to a soft pion after boosting
-to the lab frame. Since the pion is lighter than a kaon it is more likely that it flies out of the acceptance more
-often than a kaon does, creating the observed asymmetric efficiency loss in the $\cos\thetaK$ projection. With that said, it is intuitive that
-this type of efficiency loss is driven by the mass difference between the two particles. In the case of the $\cos\thetamu$ the
-inefficiency introduced as described before for the $\cos\thetaK$ projection, is symmetric with respect to the positive and negative muons since
-they have the same mass. As for the acceptance in the $\phihel$ plane it is very close to being uniform.
-No reason for a a strong acceptance effect in that projection is expected. In addition to this type of
-
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.49\textwidth}
     \tikzsetnextfilename{eff_mc_helcosthetaK_allKaons_binall}
@@ -183,24 +159,34 @@ No reason for a a strong acceptance effect in that projection is expected. In ad
     \label{angAcc_phi}
   \end{subfigure}
   \caption{Angular acceptance shape from simulated data. Each event in the simulated sample has been weighted with the inverse integral
-           of the \pdf that was used to generate them with, resulting to those three distributions that give a feeling of the acceptance shape.}
+           of the \pdf that was used to generate them with.}
   \label{angAcc_all}
 \end{figure}
+
+The shape of the acceptance can be seen in \figref{angAcc_all}. The most striking feature is the drop of efficiency
+close to $\cos\thetaK=1$, which implies that the pion is more likely to fly out of the geometrical acceptance of the detector, compared to a kaon,
+and thus not be detected. This feature can be understood given the  definition of $\cos\thetaK$ in \figref{helAngles}.
+The scenario where $\cos\thetaK\rightarrow 1$ and hence $\thetaK \rightarrow 0$ corresponds to a soft pion after boosting
+to the lab frame. Since the pion is lighter than a kaon it is more likely that it flies out of the acceptance more
+often than a kaon does, creating the observed asymmetric efficiency loss in the $\cos\thetaK$ projection. With that said, it is intuitive that
+this type of efficiency loss is driven by the mass difference between the two particles. In the case of the $\cos\thetamu$ the
+inefficiency introduced as described before for the $\cos\thetaK$ projection, is symmetric with respect to the positive and negative muons since
+they have the same mass. As for the acceptance in the $\phihel$ plane it is very close to being uniform.
+No reason for a a strong acceptance effect in that projection is expected. In addition to this type of
 
 \subsubsection{Acceptance parametrization}
 \label{Acceptance parametrization}
 As for the parametrization of the angular acceptance there are at least two ways to proceed,
 namely the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}.
 The current analysis implements the first one. The efficiency function is thus parametrized using orthogonal functions,
-which when combined with the angular description formalism in the previous subsection, allows fort fast aalytical
+which when combined with the angular description formalism in the previous subsection, allows for fast analytical
 integration. Such a parameterization is defined by \equref{eff_func}.
 
-\begin{center}
 \begin{equation}
+  \centering
   \epsilon(\Omega) = \sum_{ijk} \; \moment{i}{j}{k} \; P_i^0(\cos\thetaK) \; Y_{jk}(\cos\thetamu,\phihel) \equiv \moment{i}{j}{k} \; \effbase,
   \label{eff_func}
 \end{equation}
-\end{center}
 
 \noindent where the spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
 functions on which the angular acceptance is decomposed to, by means of the coefficients $c^i_{k}$, hereafter efficiency moments (or simply moments).
@@ -209,58 +195,11 @@ Following the above parameterizations one just needs to obtain a set of $c^i_{jk
 since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However in practice only a small number of efficiency moments
 contribute significantly to the angular acceptance shape\footnote{This is due to the fact that higher moments introduce
 variations on the acceptance shape that are effectivelly whashed out by the finite angular resolution.}.
-The efficiency moments used to describe the acceptance
-shape are shown in the first column of \tabref{eff_moms_table}. The choice of those particular moments is connected to an important issue with the acceptance
+The efficiency moments used to describe the acceptance shape are shown in the first column of \tabref{eff_moms_table}.
+The choice of those particular moments is connected to an important issue with the acceptance
 structure close to $\cos\thetaK=1$ and it is addressed at the end of the current section.
 
-In order for the efficiency moments $c^i_{jk}$ to be computed a definition of the efficiency is necessary. Note that this computation relies on
-simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular dependent \pdfs, namely
-\Pobs and \Pgen. The first is the angular \pdf that the simulated data follow after all stages of selection, whereas
-the later is the angular \pdf which the simulated data have been generated with. It follows that the efficiency is defined by \equref{eff_def}.
-
-\begin{center}
-\begin{equation}
-  \Pobs = \epsilon(\Omega) \Pgen \quad \Rightarrow \quad \epsilon(\Omega) \equiv \frac{\Pobs}{\Pgen}.
-  \label{eff_def}
-\end{equation}
-\end{center}
-
-\noindent Computing the efficiency moments is done by projecting the efficiency as defined in \equref{eff_def} on the orthogonal $PY$ basis.
-This projection is shown in \equref{eff_moms_def}. The factor $j+\frac{1}{2}$ is used to account for the fact that the associated Legendre
-polynomials form an orthogonal basis but in fact the orthonormal behavior is required to properly compute the efficiency moments.
-
-
-\begin{center}
-\begin{align}
-   c^i_{jk}  \equiv & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \effbase \; \epsilon(\Omega) \nonumber \\
-                 =  & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \Pobs \; \frac{\effbase}{\Pgen}.
-  \label{eff_moms_def}
-\end{align}
-\end{center}
-
-\noindent The last step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
-This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
-that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
-same steps selection as the real data) as shown in \equref{eff_moms_calc}.
-
-\begin{center}
-\begin{equation}
-  E\left[ \int \; d\Omega \; \effbase \frac{\Pobs}{\Pgen} \right] = \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}.
-  \label{eff_moms_calc}
-\end{equation}
-\end{center}
-
-\noindent Combining \equref{eff_moms_def} and \equref{eff_moms_calc} the final expression for computing the efficiency moments is shown
-in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_table}/
-
-\begin{center}
-\begin{equation}
- c^i_{jk} \equiv (j + \frac{1}{2})  \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}
-  \label{eff_moms_calc_final}
-\end{equation}
-\end{center}
-
-\begin{table}[h]
+\begin{table}[!t]
   \centering
   \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{ccc}
@@ -284,13 +223,57 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
   \end{tabular}
   \caption{ Efficiency moments of \BsJpsiKst. The larger the value of a moment, the more the corresponding function contributes to the overall efficiency function.
             The efficiency functions corresponding to the moments $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$ account for most of the hard acceptance drop in the
-            $\cos\thetaK$ projection. Acceptanceeffecets in the $\cos\thetamu$ projection are less pronounced compared to the one $\cos\thetaK$. This can be deduced from
-            \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$.
-            The value of the $\moment{0}{0}{0}$ is constrained for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$. Details on
-            the constraint are explained in the current subsection. The efficiency moments are correlated and the corresponding correlation matrix can be found
-            in \tabref{eff_moms_corr}}
+            $\cos\thetaK$ projection.}
    \label{eff_moms_table}
 \end{table}
+
+In order for the efficiency moments $c^i_{jk}$ to be computed a definition of the efficiency is necessary. Note that this computation relies on
+simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular dependent \pdfs, namely
+\Pobs and \Pgen. The first is the angular \pdf that the simulated data follow after all stages of selection, whereas
+the later is the angular \pdf which the simulated data have been generated with. It follows that the efficiency is defined by \equref{eff_def}.
+
+\begin{equation}
+  \centering
+  \Pobs = \epsilon(\Omega) \Pgen \quad \Rightarrow \quad \epsilon(\Omega) \equiv \frac{\Pobs}{\Pgen}.
+  \label{eff_def}
+\end{equation}
+
+\noindent Computing the efficiency moments is done by projecting the efficiency as defined in \equref{eff_def}
+on the orthogonal $PY$ basis. This projection is shown in the followign equation:
+
+\begin{align}
+  \centering
+   c^i_{jk}  \equiv & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \effbase \; \epsilon(\Omega) \nonumber \\
+                 =  & \parenthesis{j + \frac{1}{2}} \; \int \; d\Omega \; \Pobs \; \frac{\effbase}{\Pgen}.
+  \label{eff_moms_def}
+\end{align}
+
+\noindent The factor $j+\frac{1}{2}$ is used to account for the fact that the associated Legendre
+polynomials form an orthogonal basis but in fact the orthonormal behavior is required to properly compute the efficiency moments.
+The last step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
+This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
+that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
+same steps selection as the real data) as shown in \equref{eff_moms_calc}. Acceptance effecets in the $\cos\thetamu$ projection are less
+pronounced compared to the one $\cos\thetaK$. This can be deduced from \figref{angAcc_ctl} as well as from the values of moments like
+$\moment{0}{j}{k}$ compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$. The value of the $\moment{0}{0}{0}$
+is constrained for reasons that have to do with the value of the acceptance close to $\cos\thetaK=1$.
+Details on the constraint are explained in the current subsection. The efficiency moments are correlated and the corresponding
+correlation matrix can be found in \tabref{eff_moms_corr}
+
+\begin{equation}
+\centering
+  E\left[ \int \; d\Omega \; \effbase \frac{\Pobs}{\Pgen} \right] = \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}.
+  \label{eff_moms_calc}
+\end{equation}
+
+\noindent Combining \equref{eff_moms_def} and \equref{eff_moms_calc} the final expression for computing the efficiency moments is shown
+in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_table}
+
+\begin{equation}
+\centering
+ c^i_{jk} \equiv (j + \frac{1}{2})  \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}
+  \label{eff_moms_calc_final}
+\end{equation}
 
 
 \subsubsection{Choice of efficiency moments}
@@ -303,7 +286,13 @@ acceptance function, \equref{eff_func}, is introduced to force it to be positiv 
 moments is performed to optimize the acceptance parametrization. The result is a hybrid acceptance function that is by
 construction positive definite.
 
-\begin{figure}[h]
+Before laying out the formulas behind the above mentioned steps it is useful to visualise the problem caused by the parametrization, see \figref{angAcc_nom}
+and the corresponding caption. Having done that the most natural thing to do before making any effort to force the value of \equref{eff_func}, hereafter efficiency function,
+positive at $\cos\thetaK=1$ is to make the best choice of efficiency moments. The moments are chosen such that the efficiency function becomes negative
+at the largest posible value of $\cos\thetaK$. In other words the crossing point of the red curve with the horizontal axis in \figref{angAcc_nom},
+has to be as close to $\cos\thetaK=1$ as possible.
+
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{eff_helcosthetaK_neg_all_raw_zoom}
@@ -331,12 +320,6 @@ construction positive definite.
   \label{angAcc_constr}
 \end{figure}
 
-Before laying out the formulas behind the above mentioned steps it is useful to visualise the problem caused by the parametrization, see \figref{angAcc_nom}
-and the corresponding caption. Having done that the most natural thing to do before making any effort to force the value of \equref{eff_func}, hereafter efficiency function,
-positive at $\cos\thetaK=1$ is to make the best choice of efficiency moments. The moments are chosen such that the efficiency function becomes negative
-at the largest posible value of $\cos\thetaK$. In other words the crossing point of the red curve with the horizontal axis in \figref{angAcc_nom},
-has to be as close to $\cos\thetaK=1$ as possible.
-
 It is actually not trivial to find a good choice of efficiency moments. Two things are relevant when trying to describe a
 distribution with orthogonal functions like $P$ and $Y$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
 For example the efficiency term $\moment{1}{0}{0}P_1Y_{00}$ is necessary to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{1}{0}{0}$
@@ -347,31 +330,28 @@ when trying to choose efficiency moments that affect the acceptance shape in all
 Having chosen a set of moments the efficiency function has to be constrained such that the
 condition of \equref{eff_func_constr} is satisfied.
 
-\begin{center}
 \begin{equation}
+  \centering
   \epsilon(\cos\thetaK = 1, \cos\thetamu, \phihel) = 0.
   \label{eff_func_constr}
 \end{equation}
-\end{center}
 
 \noindent It turns out that this condition can be easilisy satisfied if the basis that the
 efficiency function is decomposed, see \equref{eff_func}, is modified as shown in \equref{eff_basis_transform}
 
-\begin{center}
-  \begin{align}
+\begin{align}
+  \centering
    \effbase \to \parenthesis{\effbase}^\prime = \left[\legendre{i}{0}-P_i^0(1)\right] \spharm{j}{k},
   \label{eff_basis_transform}
   \end{align}
-\end{center}
 
 \noindent resulting in the following efficiency function of \equref{eff_func_new}.
 
-\begin{center}
-  \begin{align}
+\begin{align}
+    \centering
   \epsilon(\Omega) = \sum_{ijk} \; \moment{i}{j}{k} \; \left[\legendre{i}{0}-P_i^0(1)\right] \; \spharm{j}{k}.
   \label{eff_func_new}
-  \end{align}
-\end{center}
+\end{align}
 
 \noindent Note that the subscript $i$ in $P_i^0(1)$ is irrelevant since $P_i^0(1)=1$ for any value of $i$.
 The result of the above constraint is shown in figure \figref{angAcc_constr_fit}, where it can be seen that the acceptance projection on $\cos\thetaK=1$
@@ -379,29 +359,7 @@ is not zero anymore. In addition it has also been checked whether the acceptance
 projection of the acceptance to take negative values whilst the 1D projections are positive. Two dimentional projection of the constrained acceptance
 can be seen in \figref{eff2D}.
 
-Constraining the acceptance in this manner described above comes with a small penalty; that the shape of the 1D acceptance
-projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
-As previously mentioned, the acceptance function of \equref{eff_func_new} is further fitted to the simulated data
-where the efficiency moments are allowed to vary within one standard deviation from their measured values, of \tabref{eff_moms_table}.
-The last is imlpemented by a multivariat Gaussian onstraint where correlations between effciency moments are taken into account.
-The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
-data was generated with multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
-The physics parameters used to generated the simulation sample are fixed and only the efficiency moments are allowed to vary.
-The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments within one standard deviation is shown in \equref{mvm_constr}.
-
-\begin{center}
-\begin{align}
-  \mathcal{P}= \Pgen \times\epsilon(\Omega;\vec{\bf c})&  \times G(\vec{\bf{c}}), \nonumber\\
-  \text{with} \;\; & G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) },
-  \label{mvm_constr}
-\end{align}
-\end{center}
-
-\noindent where $\vec{\bf c}$ represents the estimated efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments
-of \tabref{eff_moms_table}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectively.
-Lastly, $k$ is the number of efficiency moments present in \equref{eff_func_final}.
-
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \includegraphics[width=\textwidth]{Figures/Chapter4/canv_cosThK_cosThL_Sim08_3fb_hel_negKaons_all.pdf}
@@ -423,6 +381,35 @@ Lastly, $k$ is the number of efficiency moments present in \equref{eff_func_fina
          The equivalent plots for \BsbarJpsiKst are indistinguishable by eye. The scale of the $y$-axis is arbitrary.}
     \label{eff2D}
 \end{figure}
+
+
+Constraining the acceptance in this manner described above comes with a small penalty; that the shape of the 1D acceptance
+projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
+As previously mentioned, the acceptance function of \equref{eff_func_new} is further fitted to the simulated data
+where the efficiency moments are allowed to vary within one standard deviation from their measured values, of \tabref{eff_moms_table}.
+The last is imlpemented by a multivariat Gaussian onstraint where correlations between effciency moments are taken into account.
+The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
+data was generated with multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
+The physics parameters used to generated the simulation sample are fixed and only the efficiency moments are allowed to vary.
+The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments within one standard deviation is shown in \equref{mvm_constr}.
+
+\begin{equation}
+  \centering
+  \mathcal{P}= \Pgen \times\epsilon(\Omega;\vec{\bf c})  \times G(\vec{\bf{c}}),
+  \label{mvm_constr}
+\end{equation}
+
+\noindent with
+
+\begin{equation}
+\centering
+  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) },
+\label{mvm_constr_gauss}
+\end{equation}
+
+\noindent where $\vec{\bf c}$ represents the estimated efficiency moments, whereas $<\vec{\bf c}>$ are the efficiency moments
+of \tabref{eff_moms_table}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectively.
+Lastly, $k$ is the number of efficiency moments present in \equref{eff_func_new}.
 
 \subsubsection{Alternative parameterization}
 As it was mentioned before there is at least one more way to parameterize the angular acceptance, namely the \emph{normalization weights}.
@@ -470,73 +457,7 @@ The efficiency moments are re-evaluated using the weighted simulated sample and 
 This changes the best estimate of the physical parameters of interest. This procedure is repeated until the parameters
 of interest converge. The full procedure by steps can be summarized as:
 
-\begin{enumerate}
-\item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
-\item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
-\item Weight each event in the simulated sample for the difference between the obtained from the previous fit angular \pdf and the angular \pdf used to
-      generate the simulated data sample with.
-      This essentially means that the underlying physics of the re-weighted simulated  sample corresponds to the physics obtained in the previous step.
-\item Compare the $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
-      real data, and weight again each simulated event for the difference.
-\item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
-\item Go back to step 4 and repeat until change in the parameters of interest are negligible.
-\end{enumerate}
-
-\begin{table}[!h]
-\centering
-\footnotesize
-\begin{tabular}{ c c c c c c c c c }
-  \hline
-  Iteration          &       1       &       2       &       3       &       4       &       5       &       6 \\
-  \hline
-  $\Acp{0}$                           &  -0.0   &  -0.03  &  +0.03  &  +0.0   &  -0.0   &  -0.0    \\
-  $\Acp{\text{S}}$                    &  -0.01  &  -0.17  &  +0.09  &  +0.06  &  +0.03  &  +0.01   \\
-  $\Acp{\parallel}$                   &  +0.13  &  +0.04  &  -0.09  &  -0.04  &  -0.02  &  -0.01   \\
-  $\Acp{\perp}$                       &  -0.19  &  +0.15  &  +0.02  &  +0.01  &  +0.0   &  +0.0    \\
-  \hline
-  $\fP{0}$                            &  -1.15  &  +0.96  &  +0.19  &  +0.0   &  -0.02  &  -0.01   \\
-  $\fP{\parallel}$                    &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01   \\
-  $\ampPhase{\parallel}$              &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.0    \\
-  $\ampPhase{\perp}$                  &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01   \\
-  \hline
-  $\fS{1}$                            &  +0.86  &  -0.66  &  -0.32  &  -0.12  &  -0.05  &  -0.02   \\
-  $\fS{2}$                            &  +0.84  &  -0.27  &  -0.18  &  -0.09  &  -0.05  &  -0.02   \\
-  $\fS{3}$                            &  +0.0   &  -0.02  &  -0.0   &  +0.01  &  +0.02  &  +0.01   \\
-  $\fS{4}$                            &  +0.47  &  -0.21  &  -0.14  &  -0.06  &  -0.04  &  -0.02   \\
-  $\deltaS{1}$                        &  -2.08  &  +0.9   &  +0.66  &  +0.32  &  +0.13  &  +0.04   \\
-  $\deltaS{2}$                        &  +0.13  &  -0.05  &  -0.02  &  -0.03  &  -0.01  &  -0.01   \\
-  $\deltaS{3}$                        &  -0.9   &  +0.48  &  +0.19  &  +0.08  &  +0.04  &  +0.03   \\
-  $\deltaS{4}$                        &  -2.43  &  +1.1   &  +0.53  &  +0.24  &  +0.13  &  +0.07   \\
-  \hline
-\end{tabular}
-\caption{Parameters of interest change after each iteration. The amount of change is expresed in units of one standard deviation.
-         Larger changes are observed in the first two iterations. Differences get progressively smaller, which implies that the
-         parameters of interest converge.}
-\label{pars_convergence}
-\end{table}
-
-\begin{table}[!h]
-  \center
-  \begin{tabular}{c c c}
-    \hline
-     variables & range & $\# \text{bins}$ \\
-     %\multicolumn{2}{c}{range}   &  vs        \\
-    \hline
-    $p_{K^{\pm}}$    &  $[0,140]    \;  \text{GeV}/\text{c}^2$  & 10      \\
-    $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\
-    \hline
-  \end{tabular}
-  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
-  \label{angAccBinning}
-\end{table}
-
-The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}.
-At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
-\tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implyng that the overall effect of the
-acceptance corrections is small. \figref{angAggCorrections} shows (in arbitrary units) the shape of the acceptance before and after corrections.
-This is also supported by the effect of these corrections on the paramters of intereset which are shown in \tabref{phys_pars_change_iter}.
-
-\begin{figure}[h]
+\begin{figure}[!t]
   \centering
   \begin{subfigure}{0.49\textwidth}
     \tikzsetnextfilename{eff_mc_helcosthetaK_allKaons_binall_rew}
@@ -564,37 +485,71 @@ This is also supported by the effect of these corrections on the paramters of in
 \end{figure}
 
 
-\begin{table}
-\centering
-\footnotesize
-\begin{tabular}{c c c}
- \hline
- parameter   &     difference   &  difference / $\sigma$ \\
- \hline
-$\Acp{0}$                & -0.0000  & -0.00   \\
-$\Acp{\text{S}}$         & -0.0008  & -0.01   \\
-$\Acp{\parallel}$        & +0.0196  & +0.13   \\
-$\Acp{\perp}$            & -0.0190  & -0.19   \\
-\hline
-$\fP{0}$                 & -0.0276  & -1.14   \\
-$\fP{\parallel}$         & -0.0014  & -0.05   \\
-$\ampPhase{\parallel}$   & -0.0583  & -0.37   \\
-$\ampPhase{\perp}$       & -0.0640  & -0.57   \\
-\hline
-$\fS{1}$                 & +0.0975  & +0.87   \\
-$\fS{2}$                 & +0.0209  & +0.74   \\
-$\fS{3}$                 & +0.0001  & +0.00   \\
-$\fS{4}$                 & +0.0525  & +0.48   \\
-$\deltaS{1}$             & -0.3205  & -2.09   \\
-$\deltaS{2}$             & +0.0283  & +0.12   \\
-$\deltaS{3}$             & -0.1866  & -1.02   \\
-$\deltaS{4}$             & -0.3165  & -2.39   \\
+\begin{enumerate}
+\item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
+\item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
+\item Weight each event in the simulated sample for the difference between the obtained from the previous fit angular \pdf and the angular \pdf used to
+      generate the simulated data sample with.
+      This essentially means that the underlying physics of the re-weighted simulated  sample corresponds to the physics obtained in the previous step.
+\item Compare the $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
+      real data, and weight again each simulated event for the difference.
+\item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
+\item Go back to step 4 and repeat until change in the parameters of interest are negligible.
+\end{enumerate}
+
+\begin{table}[!h]
+  \center
+  \begin{tabular}{c c c}
     \hline
- \end{tabular}
- \caption{Differences in the parameters of intereset before and after corrections.}
- \label{phys_pars_change_iter}
+     variables & range & $\# \text{bins}$ \\
+     %\multicolumn{2}{c}{range}   &  vs        \\
+    \hline
+    $p_{K^{\pm}}$    &  $[0,140]    \;  \text{GeV}/\text{c}^2$  & 10      \\
+    $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\
+    \hline
+  \end{tabular}
+  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
+  \label{angAccBinning}
 \end{table}
 
+The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}.
+At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
+\tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implyng that the overall effect of the
+acceptance corrections is small. \figref{angAggCorrections} shows (in arbitrary units) the shape of the acceptance before and after corrections.
+This is also supported by the effect of these corrections on the paramters of intereset which are shown in \tabref{pars_convergence}.
+
+\begin{table}[t]
+\centering
+\footnotesize
+\begin{tabular}{ c c c c c c c c c | c}
+  \hline
+  Iteration          &       1       &       2       &       3       &       4       &       5       &       6  & total\\
+  \hline
+  $\Acp{0}$                           &  -0.00  &  -0.03  &  +0.03  &  +0.00  &  -0.00  &  -0.00  & -0.00   \\
+  $\Acp{\text{S}}$                    &  -0.01  &  -0.17  &  +0.09  &  +0.06  &  +0.03  &  +0.01  & -0.01   \\
+  $\Acp{\parallel}$                   &  +0.13  &  +0.04  &  -0.09  &  -0.04  &  -0.02  &  -0.01  & +0.13   \\
+  $\Acp{\perp}$                       &  -0.19  &  +0.15  &  +0.02  &  +0.01  &  +0.00  &  +0.00  & -0.19 \\
+  \hline
+  $\fP{0}$                            &  -1.15  &  +0.96  &  +0.19  &  +0.00  &  -0.02  &  -0.01  & -1.14  \\
+  $\fP{\parallel}$                    &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01  & -0.05  \\
+  $\ampPhase{\parallel}$              &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.00  & -0.37  \\
+  $\ampPhase{\perp}$                  &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01  & -0.57 \\
+  \hline
+  $\fS{1}$                            &  +0.86  &  -0.66  &  -0.32  &  -0.12  &  -0.05  &  -0.02  & +0.87  \\
+  $\fS{2}$                            &  +0.84  &  -0.27  &  -0.18  &  -0.09  &  -0.05  &  -0.02  & +0.74  \\
+  $\fS{3}$                            &  +0.00  &  -0.02  &  -0.00  &  +0.01  &  +0.02  &  +0.01  & +0.00   \\
+  $\fS{4}$                            &  +0.47  &  -0.21  &  -0.14  &  -0.06  &  -0.04  &  -0.02  & +0.48  \\
+  $\deltaS{1}$                        &  -2.08  &  +0.90  &  +0.66  &  +0.32  &  +0.13  &  +0.04  & -2.09 \\
+  $\deltaS{2}$                        &  +0.13  &  -0.05  &  -0.02  &  -0.03  &  -0.01  &  -0.01  & +0.12  \\
+  $\deltaS{3}$                        &  -0.90  &  +0.48  &  +0.19  &  +0.08  &  +0.04  &  +0.03  & -1.02   \\
+  $\deltaS{4}$                        &  -2.43  &  +1.10  &  +0.53  &  +0.24  &  +0.13  &  +0.07  & -2.39   \\
+  \hline
+\end{tabular}
+\caption{Parameters of interest change after each iteration. The amount of change is expresed in units of one standard deviation.
+         Larger changes are observed in the first two iterations. Differences get progressively smaller, which implies that the
+         parameters of interest converge.{\color{red} update needed}}
+\label{pars_convergence}
+\end{table}
 
 Lastly, the acceptance can be floated in the angular fit to the data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
 This last step makes, in hindsight, the acceptance correction procedure (with the current number of observed events) unnecessary.
@@ -626,7 +581,7 @@ factor shown in \equref{csp_ph_sp_factor}
   \label{csp_ph_sp_factor}
 \end{equation}
 
-with,
+\noindent with,
 
 \begin{equation}
   \centering
@@ -638,6 +593,7 @@ Inegrals like the one of \equref{spIntegrals} eventually manifest thenselves onl
 terms\footnote{The diagonal $m=n$ integrals are by construction equal to 1.} of \tabref{eff_moms_table} as shown in \equref{csp_def}.
 
 \begin{equation}
+  \centering
   \label{csp_def}
   \frac{\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; s^* \times p} {\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; |s|^2 \; \int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi |p|^2} = \CSP \; e^{-i\ThetaSP} \ ,
 \end{equation}
@@ -656,6 +612,35 @@ with angular momentum barrier factors. Whereas Isobar is a superposition of reso
 
 
 \subsubsection{sWeighted \mkpi distribution}
+
+\begin{figure}[!t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{eff_corrected_raw_mdau2}
+    \scalebox{0.56}{\input{Figures/Chapter4/eff_corrected_raw_mdau2}}
+    \caption{}
+    \label{mkpiPlot_raw}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{eff_corrected_eff_mdau2}
+    \scalebox{0.56}{\input{Figures/Chapter4/eff_corrected_eff_mdau2}}
+    \caption{}
+    \label{mkpiPlot_eff}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{eff_corrected_raw_mdau1}
+    \scalebox{0.56}{\input{Figures/Chapter4/eff_corrected_raw_mdau1}}
+    \caption{}
+    \label{jpsiPlot}
+  \end{subfigure}
+\caption{Comparison of the intermediate state particles mass distributions between \Bs and \Bd.
+         The plots are background subtracted (sWeighted). Top row shows the \mkpi distribution before (left)
+         and after (right) correcting for angular acceptance effects. The \jpsi mass background subtracted
+         distribution is shown at the bottom. It was checked that the acceptance correction has negligible
+         effects on the shapes of the \jpsi mass distributions.}
+\end{figure}
+
 While the \Bs and \Bd muon pair mass, $m_\mumu$, sWeighted distributions have very similar shapes, the \mkpi specta exhibit different shapes.
 Indeed, the \Bs \mkpi \sPlot seems to be slightly distorted, \figref{mkpiPlot_raw}. Since there is no \aprior reason why the \Kst$~$\pwave
 should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
@@ -668,34 +653,6 @@ in \equref{eff_func_new}. This way the interference between the $K\pi$ \swave an
 for a perfect acceptance the interference terms in \tabref{ang_terms}, integrated over all angles, evaluate to zero.
 This is demonstrated in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
 the efficiency correction. This is a clear indication of the presence of stronger interference in the \Bs case compared to the \Bd one.
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{eff_corrected_raw_mdau2}
-    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_raw_mdau2}}
-    \caption{}
-    \label{mkpiPlot_raw}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{eff_corrected_eff_mdau2}
-    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_eff_mdau2}}
-    \caption{}
-    \label{mkpiPlot_eff}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{eff_corrected_raw_mdau1}
-    \scalebox{0.65}{\input{Figures/Chapter4/eff_corrected_raw_mdau1}}
-    \caption{}
-    \label{jpsiPlot}
-  \end{subfigure}
-\caption{Comparison of the intermediate state particles mass distributions between \Bs and \Bd.
-         The plots are background subtracted (sWeighted). Top row shows the \mkpi distribution before (left)
-         and after (right) correcting for angular acceptance effects. The \jpsi mass background subtracted
-         distribution is shown at the bottom. It was checked that the acceptance correction has negligible
-         effects on the shapes of the \jpsi mass distributions.}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Production and Detection Asymmetries}
@@ -716,6 +673,7 @@ current paragraph. Both of those effects need to be estimated so that the observ
 as shown in \equref{acp_corrected}.
 
 \begin{equation}
+\centering
 \Acp\;(\BsJpsiKst) = \Acp{\rm raw} - \zeta \Adet\ - \kappa\Aprod,
 \label{acp_corrected}
 \end{equation}
@@ -724,6 +682,7 @@ as shown in \equref{acp_corrected}.
 oscillations~\cite{LHCb-PAPER-2013-018}. The factor $\kappa$, is shown in \equref{kappa}.
 
 \begin{equation}
+  \centering
  \kappa = \frac{\int_0^\infty  e^{-\Gamma_s t} \cos \!\left( \Delta m_s t \right ) \varepsilon(t)\mathrm{d}t}{\int_0^\infty  e^{-\Gamma_s t} \cosh \left( \frac{\Delta \Gamma_s}{2} t \right ) \varepsilon(t)\mathrm{d}t}.
 \label{kappa}
 \end{equation}
@@ -739,19 +698,21 @@ and replacing the yield fractions in bins of \Bs momentum of Table 3 in the same
 one gets the production asymmetry estimate shown in \equref{prod_assym}.
 
 \begin{align}
+\centering
 % \Aprod(\Bd) &= (-1.04 \pm 0.48 \stat \pm 0.14 \syst)\%\:,\nonumber\\
 \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst)\%
 \label{prod_assym}
 \end{align}
 
 \begin{align}
+  \centering
 % \Adet(\Bd) &= (+1.115 \pm 0.547 \stat)\%,\nonumber\\
 \Adet &= (-1.086 \pm 0.531 \stat)\%
 \label{det_assym}
 \end{align}
 
 \noindent Coming now to the detection asymmetry it is computed starting from the \lhcb study of the detection asymmetry
-in ~\cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution found there to much the one of the \BsJpsiKst
+in~\cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution found there to much the one of the \BsJpsiKst
 decay of the current analysis. The result is shown in \equref{det_assym}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -832,6 +793,7 @@ the connection between a \pdf and the likelihood estimation of the parameters of
 any \pdf $\mathcal{P}$ a likelihood function can be built as shown in \equref{likelihood}.
 
 \begin{equation}
+  \centering
 L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p}).
 \label{likelihood}
 \end{equation}
@@ -844,6 +806,7 @@ interest, $\vec{p}$, given the data. The inverse of the covariance matrix for th
 by the negative second derivative of the likelihood at the maximum,
 
 \begin{equation}
+  \centering
 \left( V^{-1} \right)_{ij} = - \left. \frac{\partial^2\ln L}{\partial p_1 \partial p_2} \right|_{ \vec{p}_{\rm\bf max}}.
 \label{covariance}
 \end{equation}
@@ -857,6 +820,7 @@ parameters of interest $\vec{p}$. For the current analysis, the latter is exploi
 see end of current subsection. Extending the \pdf is achieved by multiplying the likelihood with a poison distribution as shown in \equref{extlikelihood}.
 
 \begin{equation}
+  \centering
 L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \label{extlikelihood}
 \end{equation}
@@ -867,6 +831,7 @@ For purely practical reasons one would typically choose to minimize the negative
 algebra and using the well known expression of the Poisson distribution results in \equref{extloglikelihood},
 
 \begin{align}
+  \centering
   -\nll &= -\ln\left( \frac{\expEvnts}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
         &= - n\ln(\expEvnts) + \expEvnts - \sum_e^n \ln( \mathcal{P}(\vec{x};\vec{p}) ).
 \label{extloglikelihood}
