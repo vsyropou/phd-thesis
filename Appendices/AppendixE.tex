@@ -5,49 +5,52 @@
 
 \begin{table}[htb]
   \centerline{
-    \rotatebox{90}{
+    % \rotatebox{90}{
     \footnotesize
-    \begin{tabular}{|l|r|l|l|}\hline
+    \begin{tabular}{lrll}\hline
       Decay mode      &  Cut parameter                         & Stripping line            & Final selection \\
-      \hline \hline
-      $\jpsi\to\mumu$ & $\DLL{\mu}{\pi}(\mu)$                  & $>0$                      & --        \\
+      \hline
+      $\jpsi\to\mmu\mmu$ & $\DLL{\mu}{\pi}(\mu)$                  & $>0$                      & --        \\
       {}              & $\chi^2_{\rm vtx}/{\rm nDoF}(\jpsi)$   & $<16$                     & --        \\
       {}              & $\chi^2_{\rm DOCA}/{\rm nDoF}(\jpsi)$  & $<20$                     & --        \\
       {}              & $\chi_\text{IP}^2(\mu)$                & --                        & $>16$     \\
       {}              & \pt($\mu$)                             & $>0.5$\gevc               & --        \\
       {}              & IsMuon$(\mu)$                          & $>0$                      & --        \\
-      {}              & $|M(\mu^+\mu^-)-M(\jpsi)|$             & $<150\mevcc$               & --        \\
-      \hline \hline
-      $\Kstarzb\to\Km\pip$ & $\DLL{K}{\pi}(K)$                         & $>0$                      & --          \\
+      {}              & $|M(\mu^+\mu^-)-M(\jpsi)|$             & $<150$               & --        \\
+      \hline
+      $\Kstarzb\to\kaon\pion$ & $\DLL{K}{\pi}(K)$                         & $>0$                      & --          \\
       {}                   & \pt($K$)                                  & $>0.5$\gevc               & $>0.5$\gevc \\
-      {}                   & $\text{Prob}_{\rm ghost}(\rm track)(K)$   & $<0.8$                    & --          \\
+      {}                   & $\text{P}_{\rm ghost}(\rm track)(K)$   & $<0.8$                    & --          \\
       {}                   & $\chi_\text{IP}^2(K)$                     & --                        & $>2$        \\
-      {}                   & ${\rm ProbNNK}(K)$                        & --                        & $>0.21$     \\
-      {}                   & ${\rm ProbNNK}(K)/{\rm ProbNNp}(K)$ (*)   & --                        & $>0.99$     \\
+      {}                   & ${\rm PNNK}(K)$                        & --                        & $>0.21$     \\
+      {}                   & ${\rm PNNK}(K)/{\rm PNNp}(K)$ (*)   & --                        & $>0.99$     \\
       {}                   & $\DLL{K}{\pi}(\pi)$                       & $<0$                      & --          \\
       {}                   & \pt($\pi$)                                & $>0.5$\gevc               & $>0.5$\gevc \\
-      {}                   & $\text{Prob}_{\rm ghost}(\rm track)(\pi)$ & $<0.8$                    & --          \\
+      {}                   & $\text{P}_{\rm ghost}(\rm track)(\pi)$ & $<0.8$                    & --          \\
       {}                   & $\chi_\text{IP}^2(\pi)$                   & --                        & $>2$        \\
-      {}                   & $\rm ProbNNK(\pi)$                        & --                        & $<0.01$     \\
-      {}                   & $\rm ProbNN\pi(\pi)/ProbNNp(\pi)$ (*)     & --                        & $>21.9$     \\
+      {}                   & $\rm PNNK(\pi)$                        & --                        & $<0.01$     \\
+      {}                   & $\rm PNN\pi(\pi)/PNNp(\pi)$ (*)     & --                        & $>21.9$     \\
       {}                   & $\chi^2_{\rm vtx}/{\rm nDoF}(\Kstarzb)$   & $<25$                     & --          \\
       {}                   & $\chi^2_{\rm DOCA}/{\rm nDoF}(\Kstarzb)$  & $<30$                     & --          \\
-      {}                   & $M(K^-\pi^+)$                             & $\in [750,\,1900]\mevcc$  & --          \\
-      {}                   & $|M(K^-\pi^+)-896|$               & --                        & $<70\mevcc$ \\
-      \hline \hline
-      \BsJpsiKst        & $M(\Bs)$                                 & $\in [5100,\,5700]\mevcc$ & $\in [5150,\,5650]\mevcc$   \\
+      {}                   & $M(K^-\pi^+)$                             & $[750,\,1900]$  & --          \\
+      {}                   & $|M(K^-\pi^+)-896|$               & --                        & $<70$ \\
+      \hline
+      \Bs            & $M(\Bs)$                                 & $[5100,\,5700]$ & $[5150,\,5650]$   \\
       {}             & $\chi^2_{\rm vtx}/{\rm nDoF}(\Bs)$       & $<10$                     & --                          \\
       {}             & ${\rm DIRA}(\Bs)$                        & $>0.999$                  & --                          \\ %DIRA w.r.t. OWNPV
       {}             & VS                                     & $>1.5\mm$                 & --                          \\ % B_s0_FD_OWNPV
-      \BuJK veto     & $|M(\jpsi, K)-5279|$                     & --                        & $>60\mevcc$                 \\
-      \hline \hline
-      BDTG (MVA)     & 2011 data/MC (**)                        & --                        & $>0.2$                      \\
+      \Bu veto          & $|M(\jpsi, K)-5279|$                     & --                        & $>60$                 \\
+      \hline
+      BDT            & 2011 data/MC (**)                        & --                        & $>0.2$                      \\
       {}             & 2012 data/MC (**)                        & --                        & $>0.12$                     \\
       \hline
     \end{tabular}}
-}
-  \caption{Selection criteria for \BsJpsiKst\ candidates. Both at stripping and final stage selection. Also, (*) cuts are introduced for \LbJpsipK and \LbJpsippi peaking backgrounds suppression
-           The nominal PDG value for M(\jpsi) is used for the \jpsi. VS stands for the separation between a vertex w.r.t. its associated PV. {\color{red} Explain some of the variables above maybe...}}
+%}
+  \caption{Selection criteria for \BsJpsiKst\ candidates. Both at stripping and final stage selection.
+           Cuts labeld with (*) are introduced for \LbJpsipK and \LbJpsippi peaking backgrounds suppression.
+           The nominal PDG value for M(\jpsi) is used for the \jpsi. VS stands for the separation between a
+           vertex w.r.t. its associated PV.
+           {\color{red} Explain some of the variables above maybe...} Massess are in units of \mevcc }.
   \label{Bs2JpsiKstSelection}
 \end{table}
 
@@ -79,7 +82,7 @@
   \hline
 \end{tabular}
 \caption{Comparison between efficiency moments values obtained from the 2011 and 2012 \BsbarJpsiKst simulation samples.
-         The overall $\chi^2$ over the 12 degrees of freedom is 1.5, corresponding to a $\chi^2$ probability of $11\%$.}
+         The overall $\chi^2$ over the 12 degrees of freedom is 1.5, corresponding to a $\chi^2$ Pability of $11\%$.}
 \label{moms_comp_periods_pos}
 \end{table}
 
@@ -108,7 +111,7 @@
   \hline
 \end{tabular}
 \caption{Comparison between efficiency moments values obtained from the 2011 and 2012 \BsJpsiKst simulation samples.
-         The overall $\chi^2$ over the 12 degrees of freedom is 2.4, corresponding to a $\chi^2$ probability of $0.37\%$.}
+         The overall $\chi^2$ over the 12 degrees of freedom is 2.4, corresponding to a $\chi^2$ Pability of $0.37\%$.}
 \label{moms_comp_periods_neg}
 \end{table}
 
@@ -138,7 +141,7 @@
 \end{tabular}
 \caption{Comparison between efficiency moments values obtained from the \BsJpsiKst and \BsbarJpsiKst simulation samples.
          Production periods 2011 and 2012 are merged. The overall $\chi^2$ over the 12 degrees of freedom is 1.7,
-         corresponding to a $\chi^2$ probability of $5.7\%$.}
+         corresponding to a $\chi^2$ Pability of $5.7\%$.}
 \label{moms_comp_signs}
 \end{table}
 
@@ -151,22 +154,41 @@
 \begin{table}
 \centering
 \footnotesize
-\begin{tabular}{c c c c c}
+\begin{tabular}{c c c}
   \hline
-        moment         &  \mkpi \; {\rm bin} 1  &  \mkpi \; {\rm bin} 2   &  \mkpi \; {\rm bin} 3  &   \mkpi \; {\rm bin} 4 \\
+        moment         &  \mkpi \; {\rm bin} 1  &  \mkpi \; {\rm bin} 2    \\
   \hline
-  $\moment{1}{0}{0}$   & -3.1421 $\pm$  0.0536  &  -2.2392 $\pm$  0.0194  & -1.8757 $\pm$  0.0172  &  -1.3891 $\pm$  0.0449 \\
-  $\moment{2}{0}{0}$   & +0.6198 $\pm$  0.0745  &  -1.5482 $\pm$  0.0305  & -1.7036 $\pm$  0.0246  &  -1.5303 $\pm$  0.0479 \\
-  $\moment{3}{0}{0}$   & -1.2819 $\pm$  0.0861  &  -0.5077 $\pm$  0.0364  & -0.3875 $\pm$  0.0289  &  -0.3059 $\pm$  0.0622 \\
-  $\moment{4}{0}{0}$   & +0.1335 $\pm$  0.1025  &  +0.4200 $\pm$  0.0425  & +0.0522 $\pm$  0.0334  &  -0.7166 $\pm$  0.0691 \\
-  $\moment{5}{0}{0}$   & +0.1604 $\pm$  0.1146  &  +0.1465 $\pm$  0.0464  & +0.1763 $\pm$  0.0375  &  -0.0305 $\pm$  0.0770 \\
-  $\moment{0}{2}{0}$   & +0.3156 $\pm$  0.0352  &  +0.3023 $\pm$  0.0141  & +0.2957 $\pm$  0.0127  &  +0.2540 $\pm$  0.0258 \\
-  $\moment{0}{2}{2}$   & +0.0069 $\pm$  0.0267  &  +0.0414 $\pm$  0.0103  & +0.0725 $\pm$  0.0113  &  +0.0930 $\pm$  0.0257 \\
-  $\moment{0}{4}{0}$   & +0.0984 $\pm$  0.0326  &  +0.0766 $\pm$  0.0145  & +0.0887 $\pm$  0.0127  &  +0.0410 $\pm$  0.0262 \\
-  $\moment{1}{2}{0}$   & -0.2174 $\pm$  0.0759  &  -0.2362 $\pm$  0.0317  & -0.1925 $\pm$  0.0214  &  -0.1725 $\pm$  0.0445 \\
-  $\moment{1}{4}{0}$   & -0.1033 $\pm$  0.0676  &  -0.0682 $\pm$  0.0333  & -0.0638 $\pm$  0.0215  &  -0.0503 $\pm$  0.0456 \\
-  $\moment{2}{2}{0}$   & -0.0738 $\pm$  0.0962  &  -0.0742 $\pm$  0.0477  & -0.1120 $\pm$  0.0306  &  -0.1287 $\pm$  0.0526 \\
-  $\moment{2}{2}{2}$   & +0.0039 $\pm$  0.0609  &  -0.0487 $\pm$  0.0220  & -0.0745 $\pm$  0.0233  &  -0.0434 $\pm$  0.0451 \\
+  $\moment{1}{0}{0}$   & -3.1421 $\pm$  0.0536  &  -2.2392 $\pm$  0.0194   \\
+  $\moment{2}{0}{0}$   & +0.6198 $\pm$  0.0745  &  -1.5482 $\pm$  0.0305   \\
+  $\moment{3}{0}{0}$   & -1.2819 $\pm$  0.0861  &  -0.5077 $\pm$  0.0364   \\
+  $\moment{4}{0}{0}$   & +0.1335 $\pm$  0.1025  &  +0.4200 $\pm$  0.0425   \\
+  $\moment{5}{0}{0}$   & +0.1604 $\pm$  0.1146  &  +0.1465 $\pm$  0.0464   \\
+  $\moment{0}{2}{0}$   & +0.3156 $\pm$  0.0352  &  +0.3023 $\pm$  0.0141   \\
+  $\moment{0}{2}{2}$   & +0.0069 $\pm$  0.0267  &  +0.0414 $\pm$  0.0103   \\
+  $\moment{0}{4}{0}$   & +0.0984 $\pm$  0.0326  &  +0.0766 $\pm$  0.0145   \\
+  $\moment{1}{2}{0}$   & -0.2174 $\pm$  0.0759  &  -0.2362 $\pm$  0.0317   \\
+  $\moment{1}{4}{0}$   & -0.1033 $\pm$  0.0676  &  -0.0682 $\pm$  0.0333   \\
+  $\moment{2}{2}{0}$   & -0.0738 $\pm$  0.0962  &  -0.0742 $\pm$  0.0477   \\
+  $\moment{2}{2}{2}$   & +0.0039 $\pm$  0.0609  &  -0.0487 $\pm$  0.0220   \\
+  \hline
+\end{tabular}
+
+\begin{tabular}{c c c}
+  \hline
+        moment         &   \mkpi \; {\rm bin} 3  &   \mkpi \; {\rm bin} 4  \\
+  \hline                                                                 
+  $\moment{1}{0}{0}$   &  -1.8757 $\pm$  0.0172  &  -1.3891 $\pm$  0.0449  \\
+  $\moment{2}{0}{0}$   &  -1.7036 $\pm$  0.0246  &  -1.5303 $\pm$  0.0479  \\
+  $\moment{3}{0}{0}$   &  -0.3875 $\pm$  0.0289  &  -0.3059 $\pm$  0.0622  \\
+  $\moment{4}{0}{0}$   &  +0.0522 $\pm$  0.0334  &  -0.7166 $\pm$  0.0691  \\
+  $\moment{5}{0}{0}$   &  +0.1763 $\pm$  0.0375  &  -0.0305 $\pm$  0.0770  \\
+  $\moment{0}{2}{0}$   &  +0.2957 $\pm$  0.0127  &  +0.2540 $\pm$  0.0258  \\
+  $\moment{0}{2}{2}$   &  +0.0725 $\pm$  0.0113  &  +0.0930 $\pm$  0.0257  \\
+  $\moment{0}{4}{0}$   &  +0.0887 $\pm$  0.0127  &  +0.0410 $\pm$  0.0262  \\
+  $\moment{1}{2}{0}$   &  -0.1925 $\pm$  0.0214  &  -0.1725 $\pm$  0.0445  \\
+  $\moment{1}{4}{0}$   &  -0.0638 $\pm$  0.0215  &  -0.0503 $\pm$  0.0456  \\
+  $\moment{2}{2}{0}$   &  -0.1120 $\pm$  0.0306  &  -0.1287 $\pm$  0.0526  \\
+  $\moment{2}{2}{2}$   &  -0.0745 $\pm$  0.0233  &  -0.0434 $\pm$  0.0451  \\
   \hline
 \end{tabular}
 \caption{Final efficiency moments values from the \BsJpsiKst simulation sample after applying the corrections described in
@@ -185,22 +207,40 @@
 \begin{table}
 \centering
 \footnotesize
-\begin{tabular}{c c c c c}
+\begin{tabular}{c c c}
   \hline
-        moment         &  \mkpi \; {\rm bin} 1  &  \mkpi \; {\rm bin} 2   &  \mkpi \; {\rm bin} 3  &   \mkpi \; {\rm bin} 4 \\
+        moment         &  \mkpi \; {\rm bin} 1  &  \mkpi \; {\rm bin} 2    \\
   \hline
-  $\moment{1}{0}{0}$   & -4.0320 $\pm$  0.0562  &  -2.8430 $\pm$  0.0150  & -1.8788 $\pm$  0.0173  &  -0.5687 $\pm$  0.0365 \\
-  $\moment{2}{0}{0}$   & +1.2914 $\pm$  0.1030  &  -1.2462 $\pm$  0.0227  & -1.7805 $\pm$  0.0246  &  -3.0352 $\pm$  0.0458 \\
-  $\moment{3}{0}{0}$   & -1.0834 $\pm$  0.1225  &  +0.4463 $\pm$  0.0274  & -0.5942 $\pm$  0.0289  &  -0.8462 $\pm$  0.0543 \\
-  $\moment{4}{0}{0}$   & +0.5572 $\pm$  0.1397  &  -0.1800 $\pm$  0.0311  & +0.2157 $\pm$  0.0325  &  +0.1747 $\pm$  0.0652 \\
-  $\moment{5}{0}{0}$   & -0.1778 $\pm$  0.1538  &  -0.0238 $\pm$  0.0345  & +0.2763 $\pm$  0.0365  &  +0.3265 $\pm$  0.0707 \\
-  $\moment{0}{2}{0}$   & +0.2204 $\pm$  0.0446  &  +0.2853 $\pm$  0.0117  & +0.2893 $\pm$  0.0124  &  +0.3296 $\pm$  0.0252 \\
-  $\moment{0}{2}{2}$   & +0.0052 $\pm$  0.0330  &  +0.0321 $\pm$  0.0101  & +0.0413 $\pm$  0.0108  &  +0.0599 $\pm$  0.0240 \\
-  $\moment{0}{4}{0}$   & +0.0400 $\pm$  0.0423  &  +0.0863 $\pm$  0.0118  & +0.0714 $\pm$  0.0123  &  +0.0708 $\pm$  0.0248 \\
-  $\moment{1}{2}{0}$   & -0.2249 $\pm$  0.1083  &  -0.2692 $\pm$  0.0215  & -0.2004 $\pm$  0.0219  &  -0.1287 $\pm$  0.0389 \\
-  $\moment{1}{4}{0}$   & -0.0109 $\pm$  0.1007  &  -0.0732 $\pm$  0.0222  & -0.0649 $\pm$  0.0217  &  -0.0526 $\pm$  0.0386 \\
-  $\moment{2}{2}{0}$   & -0.0013 $\pm$  0.1450  &  -0.0534 $\pm$  0.0292  & -0.1268 $\pm$  0.0307  &  -0.2497 $\pm$  0.0491 \\
-  $\moment{2}{2}{2}$   & -0.0262 $\pm$  0.0882  &  +0.0252 $\pm$  0.0204  & -0.0496 $\pm$  0.0222  &  -0.0652 $\pm$  0.0464 \\
+  $\moment{1}{0}{0}$   & -4.0320 $\pm$  0.0562  &  -2.8430 $\pm$  0.0150   \\
+  $\moment{2}{0}{0}$   & +1.2914 $\pm$  0.1030  &  -1.2462 $\pm$  0.0227   \\
+  $\moment{3}{0}{0}$   & -1.0834 $\pm$  0.1225  &  +0.4463 $\pm$  0.0274   \\
+  $\moment{4}{0}{0}$   & +0.5572 $\pm$  0.1397  &  -0.1800 $\pm$  0.0311   \\
+  $\moment{5}{0}{0}$   & -0.1778 $\pm$  0.1538  &  -0.0238 $\pm$  0.0345   \\
+  $\moment{0}{2}{0}$   & +0.2204 $\pm$  0.0446  &  +0.2853 $\pm$  0.0117   \\
+  $\moment{0}{2}{2}$   & +0.0052 $\pm$  0.0330  &  +0.0321 $\pm$  0.0101   \\
+  $\moment{0}{4}{0}$   & +0.0400 $\pm$  0.0423  &  +0.0863 $\pm$  0.0118   \\
+  $\moment{1}{2}{0}$   & -0.2249 $\pm$  0.1083  &  -0.2692 $\pm$  0.0215   \\
+  $\moment{1}{4}{0}$   & -0.0109 $\pm$  0.1007  &  -0.0732 $\pm$  0.0222   \\
+  $\moment{2}{2}{0}$   & -0.0013 $\pm$  0.1450  &  -0.0534 $\pm$  0.0292   \\
+  $\moment{2}{2}{2}$   & -0.0262 $\pm$  0.0882  &  +0.0252 $\pm$  0.0204   \\
+  \hline
+\end{tabular}
+\begin{tabular}{c c c}
+  \hline
+        moment         &  \mkpi \; {\rm bin} 3  &  \mkpi \; {\rm bin} 4    \\
+  \hline
+  $\moment{1}{0}{0}$   &  -1.8788 $\pm$  0.0173  &  -0.5687 $\pm$  0.0365  \\
+  $\moment{2}{0}{0}$   &  -1.7805 $\pm$  0.0246  &  -3.0352 $\pm$  0.0458  \\
+  $\moment{3}{0}{0}$   &  -0.5942 $\pm$  0.0289  &  -0.8462 $\pm$  0.0543  \\
+  $\moment{4}{0}{0}$   &  +0.2157 $\pm$  0.0325  &  +0.1747 $\pm$  0.0652  \\
+  $\moment{5}{0}{0}$   &  +0.2763 $\pm$  0.0365  &  +0.3265 $\pm$  0.0707  \\
+  $\moment{0}{2}{0}$   &  +0.2893 $\pm$  0.0124  &  +0.3296 $\pm$  0.0252  \\
+  $\moment{0}{2}{2}$   &  +0.0413 $\pm$  0.0108  &  +0.0599 $\pm$  0.0240  \\
+  $\moment{0}{4}{0}$   &  +0.0714 $\pm$  0.0123  &  +0.0708 $\pm$  0.0248  \\
+  $\moment{1}{2}{0}$   &  -0.2004 $\pm$  0.0219  &  -0.1287 $\pm$  0.0389  \\
+  $\moment{1}{4}{0}$   &  -0.0649 $\pm$  0.0217  &  -0.0526 $\pm$  0.0386  \\
+  $\moment{2}{2}{0}$   &  -0.1268 $\pm$  0.0307  &  -0.2497 $\pm$  0.0491  \\
+  $\moment{2}{2}{2}$   &  -0.0496 $\pm$  0.0222  &  -0.0652 $\pm$  0.0464  \\
   \hline
 \end{tabular}
 \caption{Final efficiency moments values from the \BsbarJpsiKst simulation sample after applying the corrections described in
@@ -245,6 +285,58 @@ quite large. The choice of efficiency moments was not done based on minimum corr
 \end{sidewaystable}
 
 
+\begin{table}
+\centering
+\footnotesize
+\begin{tabular}{ccccccccc}
+  \hline
+  & $\Acp{0}$ & $\Acp{\parallel}$ & $\Acp{\perp}$ & $\Acp{S}$ & $\fP{0}$ & $\fP{\parallel}$ & $\ampPhase{\parallel}$ & $\ampPhase{\perp}$  \\
+  \hline
+$             \Acp{0}$ &  $+1.00$ &          &          &          &          &          &          &           \\
+$     \Acp{\parallel}$ &     -    &  $+1.00$ &          &          &          &          &          &           \\
+$         \Acp{\perp}$ &     -    &  $-0.42$ &  $+1.00$ &          &          &          &          &           \\
+$             \Acp{S}$ &  $+0.10$ &     -    &     -    &  $+1.00$ &          &          &          &           \\
+$              \fP{0}$ &     -    &     -    &     -    &     -    &  $+1.00$ &          &          &           \\
+$      \fP{\parallel}$ &     -    &  $-0.15$ &     -    &     -    &  $-0.35$ &  $+1.00$ &          &           \\
+$\ampPhase{\parallel}$ &     -    &  $+0.13$ &     -    &     -    &     -    &  $-0.11$ &  $+1.00$ &           \\
+$    \ampPhase{\perp}$ &     -    &     -    &     -    &     -    &     -    &     -    &  $+0.66$ &  $+1.00$  \\
+$              \fS{1}$ &     -    &     -    &     -    &  $+0.16$ &  $+0.11$ &     -    &     -    &  $-0.18$  \\
+$              \fS{2}$ &     -    &     -    &     -    &     -    &  $+0.10$ &     -    &     -    &  $-0.11$  \\
+$              \fS{3}$ &     -    &     -    &     -    &     -    &     -    &     -    &     -    &     -     \\
+$              \fS{4}$ &     -    &  $+0.13$ &     -    &  $-0.15$ &  $-0.11$ &     -    &  $+0.10$ &     -     \\
+$          \deltaS{1}$ &     -    &     -    &     -    &     -    &     -    &     -    &     -    &  $+0.18$  \\
+$          \deltaS{2}$ &     -    &     -    &     -    &     -    &  $+0.14$ &  $-0.13$ &  $+0.20$ &  $+0.17$  \\
+$          \deltaS{3}$ &     -    &     -    &     -    &     -    &  $+0.25$ &     -    &     -    &     -     \\
+$          \deltaS{4}$ &     -    &  $-0.12$ &     -    &     -    &  $+0.13$ &     -    &     -    &     -     \\
+\end{tabular}
+
+\begin{tabular}{ccccccccc}
+  \hline
+  & $\fS{1}$ & $\fS{2}$ & $\fS{3}$ & $\fS{4}$ & $\deltaS{1}$ & $\deltaS{2}$ & $\deltaS{3}$ & $\deltaS{4}$  \\
+  \hline
+$             \Acp{0}$ &     -    &    &          & &  & & & \\
+$     \Acp{\parallel}$ &     -    &    &          & &  & & & \\
+$         \Acp{\perp}$ &     -    &    &          & &  & & & \\
+$             \Acp{S}$ &     -    &    &     -    & &  & & & \\
+$              \fP{0}$ &     -    &    &     -    & &  & & & \\
+$      \fP{\parallel}$ &     -    &    &     -    & &  & & & \\
+$\ampPhase{\parallel}$ &     -    &    &     -    & &  & & & \\
+$    \ampPhase{\perp}$ &     -    &    &     -    & &  & & & \\
+$              \fS{1}$ & $+1.00$ &  &  &  &  &  &  & \\
+$              \fS{2}$ &    -    &  $+1.00$ &  &  &  &  &  &  \\                                                
+$              \fS{3}$ &    -    &     -    &  $+1.00$ &  &  &  &  &  \\                                        
+$              \fS{4}$ &    -    &     -    &     -    &  $+1.00$ &  &  &  &  \\                                
+$          \deltaS{1}$ & $-0.34$ &     -    &     -    &     -    &  $+1.00$ &  &  &  \\                        
+$          \deltaS{2}$ &    -    &  $-0.55$ &     -    &     -    &     -    &  $+1.00$ &  &  \\                
+$          \deltaS{3}$ &    -    &     -    &  $+0.23$ &     -    &     -    &     -    &  $+1.00$ &  \\        
+$          \deltaS{4}$ &    -    &     -    &     -    &  $-0.38$ &     -    &     -    &     -    &  $+1.00$ \\
+\end{tabular}
+
+\caption{Correlation matrix of the parameters of interest. Correlations below $10\%$ are not shown. {\color{red} Comment a bit on the values and move it to the result section} }
+\label{correlation_matrix}
+\end{table}
+
+  
 
 \begin{sidewaystable}[p!]
 \centering
