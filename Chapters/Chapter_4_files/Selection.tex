@@ -31,18 +31,21 @@ This pair of data sets is provided as input to the MVA algorithm to construct th
 In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
 Next another, independent, pair of sets is used to asses how successful the training step was. This step is called {\it testing}.
 For the signal representative samples, \BsJpsiKst Monte-Carlo simulated data (here after simulated data)
-are used. As for the background representative sample, real data candidates are used. These candidates are taken from a control
-region, usually refered to as {\it mass sideband}, away from the \BsJpsiKst mass peak. This way the background representative sample
-is not affected by non perfect simulation and it is also indipendant of the signal representative one.
-Note that the simulated data are treated in the same way as the real data do by all the processing steps after the \lone trigger level.
+are used.
 
-\begin{figure}[t]
+\begin{figure}[!t]
 \centering
   \tikzsetnextfilename{bdtg}
   \scalebox{1}{\input{Figures/Chapter4/bdtg}}
-  \caption{BDT distribution on real data. $y$-axis in logarithmic scale. Signal (Background) candidates accumulate mainly towards left the right (left). }
+  \caption{Real data BDT distribution (black points). Signal (blue points) and background (red points) distributions
+           tend to accumulte mainly to the right and left respectively.}
   \label{BTDG_performance}
 \end{figure}
+
+\noindent As for the background representative sample, real data candidates are used. These candidates are taken from a control
+region, usually refered to as {\it mass sideband}, away from the \BsJpsiKst mass peak. This way the background representative sample
+is not affected by non perfect simulation and it is also indipendant of the signal representative one.
+Note that the simulated data are treated in the same way as the real data do by all the processing steps after the \lone trigger level.
 
 The two well seperated peaks in \figref{BTDG_performance} suggest that the discriminating variable, BDT, shows a good discrimination
 power over signal and background distributions \figref{BTDG_performance}.
@@ -78,20 +81,22 @@ be confused for a kaon. The invariant mass distribution of the above mentioned m
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
 see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinues. This type of distribution has to be removed
 before the next selection step described in \secref{sWeighting_and_mass} can be applied as it is more effective
-when the distributions involved are smooth. Therefore, specific simulated events with negative weights
+when the distributions involved are smooth.
+
+\begin{figure}[!t]
+  \centering
+  \tikzsetnextfilename{mass_before_after_bdtg}
+  \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
+  \caption{Mass distribution after offline selection (black points), before (blue points) and after (red points) BDT selection.}
+  \label{mass_BDTG_selection}
+\end{figure}
+
+\noindent Therefore, specific simulated events with negative weights
 are injected to the data sample such that they cancel out the contribution of the above mentioned non-combinatorial background
 events\footnote{The term "cancel out" obtains more meaning in the context of the likelihood function which is built in
 the next selection step \secref{sWeighting_and_mass} based on a given mass \pdf. }.
 The current section briefly addresses the treatment of the non-combinatorial background with negative weights
 as well as the special treatment of the \LbJpsippi non-combinatorial background.
-
-\begin{figure}[t]
-  \centering
-  \tikzsetnextfilename{mass_before_after_bdtg}
-  \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
-  \caption{Mass distribution before (black) and after (red) BDT selection. $y$-axis in logarithmic scale}
-  \label{mass_BDTG_selection}
-\end{figure}
 
 As a first step towards removing the above mentioned type of background contribution it is necessary to have an estimate
 on the expected non-combinatorial background yield on data. This is done using simulated data and based on the expression:
