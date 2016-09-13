@@ -271,7 +271,7 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
 
 \begin{equation}
 \centering
- c^i_{jk} \equiv (j + \frac{1}{2})  \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}
+ c^i_{jk} \equiv (j + \frac{1}{2})  \frac{1}{\Nobs} \sum_e^{\Nobs} \frac{\effbase}{\Pgen}.
   \label{eff_moms_calc_final}
 \end{equation}
 
@@ -328,7 +328,7 @@ is too large making the total efficiency function negative. Thus one could add t
 when trying to choose efficiency moments that affect the acceptance shape in all of its three dimensions at the same time.
 
 Having chosen a set of moments the efficiency function has to be constrained such that the
-condition of \equref{eff_func_constr} is satisfied.
+condition,
 
 \begin{equation}
   \centering
@@ -336,7 +336,7 @@ condition of \equref{eff_func_constr} is satisfied.
   \label{eff_func_constr}
 \end{equation}
 
-\noindent It turns out that this condition can be easilisy satisfied if the basis that the
+\noindent is satisfied. It turns out that this condition can be easilisy satisfied if the basis that the
 efficiency function is decomposed, see \equref{eff_func}, is modified as shown in \equref{eff_basis_transform}
 
 \begin{align}
@@ -403,7 +403,7 @@ The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the effi
 
 \begin{equation}
 \centering
-  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) },
+  G(\vec{\bf{c}}) = \frac{1}{\sqrt{(2\pi)^k}|C|} \; e^{-\frac{1}{2}(  \vec{\bf{c}} - <{\bf{c}}>  )^{\text{T}} C^{-1} (\vec{\bf{c}} - <{\bf{c}}> ) }.
 \label{mvm_constr_gauss}
 \end{equation}
 
@@ -581,7 +581,7 @@ factor shown in \equref{csp_ph_sp_factor}
   \label{csp_ph_sp_factor}
 \end{equation}
 
-\noindent with,
+\noindent with
 
 \begin{equation}
   \centering
@@ -701,7 +701,7 @@ one gets the production asymmetry estimate shown in \equref{prod_assym}.
   \label{exp_assym}
   \begin{align}
     \centering
-    \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst) \label{prod_assym} \\
+    \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst), \label{prod_assym} \\
     \Adet  &= (-1.086 \pm 0.531 \stat) \label{det_assym}
   \end{align}
 \end{subequations}
@@ -749,7 +749,7 @@ more details in \secref{cp_assymetries_and_total_decay_rate}.}. This significant
 \centering
 \begin{tabular}{c c c c c}
   \hline
-             & interval 0 & interval 1 & interval 2 & interval 3\\
+             & interval 1 & interval 2 & interval 3 & interval 4\\
   \hline
   \CSP       & $ 0.9681 $ & $ 0.9312 $ & $ 0.9519 $ & $ 0.9880 $ \\
   \hline
@@ -770,7 +770,7 @@ The chosen \mkpi intervals are shown in \tabref{Kbindef}.
 \centering
 \begin{tabular}{c c c c}
   \hline
-  interval 0 & interval 1 & interval 2 & interval 3\\
+  interval 1 & interval 2 & interval 3 & interval 4\\
   \hline
   $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966] $ \\
 %  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
@@ -852,11 +852,12 @@ is that the statistical uncertainty propagation for those parameters is implicit
 explicit calculations. In addition, the above quantities can be measured in a polarization dependent way. In order
 to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in a different way shown in \equref{acp_param}.
 
-\begin{equation}
-\Acp{i} = \frac{\Nplus\AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus\AmpPlSq{i} + \Nminus\AmpMnSq{i} }\;\; \text{and} \;\;
-\AmpSq{i} = \frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus},
+\begin{align}
+\Acp{i} = \frac{\Nplus\AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus\AmpPlSq{i} + \Nminus\AmpMnSq{i} }, & \\
+\text{with} \quad \AmpSq{i} &= \frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus} \nonumber ,
 \label{acp_param}
-\end{equation}
+\end{align}
+
 
 \noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude in the \BsbarJpsiKst
 and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$  $\AmpMnSq{i}$. The idea
@@ -874,8 +875,8 @@ The normalization factors in front of them can be re-expressed as function of $\
 \begin{align}
 \xi = \frac{\Nplus+\Nminus}{2\Nplus} &= \frac{1}{2}\left( 1 + \frac{\yieldMn{}}{\yieldPl{}}\right) = \nonumber \\
                                      &= \frac{1}{2}\left( 1 + \frac{1-\Acp{\text{raw}}}{1+\Acp{\text{raw}}}\right) =
-                                        \frac{1}{1+\Acp{\text{raw}}}  \\
-\frac{\xi}{2\xi-1} = \frac{1}{2-\nicefrac{1}{\xi}} &= \frac{1}{1-\sum_i\Acp{\text{raw}}}
+                                        \frac{1}{1+\Acp{\text{raw}}},  \\
+\frac{\xi}{2\xi-1} = \frac{1}{2-\nicefrac{1}{\xi}} &= \frac{1}{1-\sum_i\Acp{\text{raw}}}.
 \label{amp_norms}
 \end{align}
 
@@ -907,8 +908,8 @@ the observed  number of those decays need to be corrected for. With input from \
 asymmetries were estimated, the observed yields are made dependent on the \ACP asymmetry in \equref{acp_yields}
 
 \begin{align}
-\yieldPl{CP} &= \frac{ \yieldRaw{\text{total}} }{2} \left( \fS{}\; \Acp{S} + \sum_k^{0,\parallel,\perp} (1-\fS{})\fP{k}\Acp{k}  \right) \nonumber \\
-\yieldMn{CP} &=  \yieldRaw{\text{total}} - \yieldPl{CP}
+\yieldPl{CP} &= \frac{ \yieldRaw{\text{total}} }{2} \left( \fS{}\; \Acp{S} + \sum_k^{0,\parallel,\perp} (1-\fS{})\fP{k}\Acp{k}  \right), \\
+\yieldMn{CP} &=  \yieldRaw{\text{total}} - \yieldPl{CP},
 \label{acp_yields}
 \end{align}
 
