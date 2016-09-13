@@ -508,11 +508,11 @@ of interest converge. The full procedure by steps can be summarized as:
     $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\
     \hline
   \end{tabular}
-  \caption{\small Binning scheme for each of the re weighted variables. Bins have equal width.}
+  \caption{\small Re-weighted variable intervals.}
   \label{angAccBinning}
 \end{table}
 
-The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, with a binning scheme that is shown in \tabref{angAccBinning}.
+The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the MC sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
 At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
 \tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implyng that the overall effect of the
 acceptance corrections is small. \figref{angAggCorrections} shows (in arbitrary units) the shape of the acceptance before and after corrections.
@@ -694,7 +694,7 @@ while the decay time efficiency function $\varepsilon(t)$ is estimated on sWeigh
 data\footnote{and parametrized with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found in ~\cite{LHCb-PAPER-2014-053}}
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry ~\cite{LHCb-PAPER-2014-042}
-and replacing the yield fractions in bins of \Bs momentum of Table 3 in the same reference with the sWeighted \BsJpsiKst ones of the current analysis,
+and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the sWeighted \BsJpsiKst ones of the current analysis,
 one gets the production asymmetry estimate shown in \equref{prod_assym}.
 
 \begin{subequations}
@@ -763,8 +763,8 @@ There are four \mkpi intervals defining four more categories in the data. In add
 are parameters of interest that are different in each \mkpi interval. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 In addition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
 \tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category since it was
-found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}. The chosen \mkpi binning
-is shown in \tabref{Kbindef}.
+found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
+The chosen \mkpi intervals are shown in \tabref{Kbindef}.
 
 \begin{table}[!h]
 \centering
