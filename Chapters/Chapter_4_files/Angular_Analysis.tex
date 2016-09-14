@@ -828,11 +828,12 @@ algebra and using the well known expression of the Poisson distribution results 
 \begin{align}
   \centering
   -\nll &= -\ln\left( \frac{\expEvnts}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
-        &= - n\ln(\expEvnts) + \expEvnts - \sum_e^n \ln( \mathcal{P}(\vec{x};\vec{p}) ).
+        &= - n\ln(\expEvnts) + \expEvnts  + \ln n! - \sum_e^n \ln\parenthesis{\mathcal{P}(\vec{x};\vec{p})} \nonumber \\
+        &=  \expEvnts  - \sum_e^n \ln\parenthesis{\expEvnts \; \mathcal{P}(\vec{x};\vec{p}) }.
 \label{extloglikelihood}
 \end{align}
 
-\noindent Note that constant terms in the likelihood affect neither the shape of the likelihood nor the position of the minimum
+\noindent Note that constant terms in the likelihood, like $\ln n!$, affect neither the shape of the likelihood nor the position of the minimum
 and can thus be neglected.
 
 
