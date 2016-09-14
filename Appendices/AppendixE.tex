@@ -3,9 +3,32 @@
 \chapter{Additional Tables}
 \label{AdditionalTables}
 
-\begin{table}[htb]
+The current appendix contains tables releated to the Selection section \ref{Event_Selection}.
+Also tables releated to the angular accpetance of \secref{Accceptance} are included.
+The correlation matrix of the angular fit that comes along with the fitted paramters
+of interest of \tabref{bestFitResult} can also be found here.
+
+\subsubsection{Candidate selection variabes}
+The symbols used in \tabref{Bs2JpsiKstSelection} are explained in the current paragraph.
+The variables $\DLL$ and PNN are partice identification variables. The first is the
+liklihood ratio of two patcle id hypothesis, whereas the particle identification information
+tha the second provides is based on neural network aproaoch. The IsMuon variable is another
+partcile identification variable dedicated to muons. The quality of the fitted vertices
+of two reconstructed tracks is expressed by $\chi^2_{\rm vtx}/{\rm nDoF}(\jpsi)$, where nDoF
+is the number of dergees of freadom of that fit. The variable DOCA (Distance Of Closest Aproach)
+refers to the closest distance between the a vertex and the detector's z-axis. The impact parameter,
+IP, variabe is the distace between a track and the primary vertex of the $p-p$ colission.
+A certain type of fake tracks called {\it ghost tracks} is suppressed by the $\text{P}_{\rm ghost}(\rm track)$
+variable. The variable ${\rm DIRA}(\Bs)$ is the cosine of the angle between the momentum of the \Bs particle
+and the direction fo flight from the best PV to the \Bs decay vertex. The VS variable stands for
+the separation between a vertex with respect to its associated PV. Nominal PDG values are used for
+partice masses, wherever it required. Massess are in units of \mevcc. Cuts labeld with (*) are introduced
+for \LbJpsipK and \LbJpsippi peaking backgrounds suppression.
+
+\begin{table}[h!]
   \centerline{
     % \rotatebox{90}{
+    % \scalebox{0.85}{
     \footnotesize
     \begin{tabular}{lrll}\hline
       Decay mode      &  Cut parameter                         & Stripping line            & Final selection \\
@@ -45,12 +68,8 @@
       {}             & 2012 data/MC (**)                        & --                        & $>0.12$                     \\
       \hline
     \end{tabular}}
-%}
-  \caption{Selection criteria for \BsJpsiKst\ candidates. Both at stripping and final stage selection.
-           Cuts labeld with (*) are introduced for \LbJpsipK and \LbJpsippi peaking backgrounds suppression.
-           The nominal PDG value for M(\jpsi) is used for the \jpsi. VS stands for the separation between a
-           vertex w.r.t. its associated PV.
-           {\color{red} Explain some of the variables above maybe...} Massess are in units of \mevcc }.
+% }
+  \caption{\BsJpsiKst selection creteria.}.
   \label{Bs2JpsiKstSelection}
 \end{table}
 
@@ -171,6 +190,7 @@
   $\moment{2}{2}{0}$   & -0.0738 $\pm$  0.0962  &  -0.0742 $\pm$  0.0477   \\
   $\moment{2}{2}{2}$   & +0.0039 $\pm$  0.0609  &  -0.0487 $\pm$  0.0220   \\
   \hline
+  \vspace{0.5cm}
 \end{tabular}
 
 \begin{tabular}{c c c}
@@ -224,6 +244,7 @@
   $\moment{2}{2}{0}$   & -0.0013 $\pm$  0.1450  &  -0.0534 $\pm$  0.0292   \\
   $\moment{2}{2}{2}$   & -0.0262 $\pm$  0.0882  &  +0.0252 $\pm$  0.0204   \\
   \hline
+\vspace{0.5cm}
 \end{tabular}
 \begin{tabular}{c c c}
   \hline
@@ -308,20 +329,21 @@ $          \deltaS{1}$ &     -    &     -    &     -    &     -    &     -    & 
 $          \deltaS{2}$ &     -    &     -    &     -    &     -    &  $+0.14$ &  $-0.13$ &  $+0.20$ &  $+0.17$  \\
 $          \deltaS{3}$ &     -    &     -    &     -    &     -    &  $+0.25$ &     -    &     -    &     -     \\
 $          \deltaS{4}$ &     -    &  $-0.12$ &     -    &     -    &  $+0.13$ &     -    &     -    &     -     \\
+\hline
+\vspace{0.5cm}
 \end{tabular}
-
 \begin{tabular}{ccccccccc}
   \hline
   & $\fS{1}$ & $\fS{2}$ & $\fS{3}$ & $\fS{4}$ & $\deltaS{1}$ & $\deltaS{2}$ & $\deltaS{3}$ & $\deltaS{4}$  \\
   \hline
-$             \Acp{0}$ &     -    &    &          & &  & & & \\
-$     \Acp{\parallel}$ &     -    &    &          & &  & & & \\
-$         \Acp{\perp}$ &     -    &    &          & &  & & & \\
-$             \Acp{S}$ &     -    &    &     -    & &  & & & \\
-$              \fP{0}$ &     -    &    &     -    & &  & & & \\
-$      \fP{\parallel}$ &     -    &    &     -    & &  & & & \\
-$\ampPhase{\parallel}$ &     -    &    &     -    & &  & & & \\
-$    \ampPhase{\perp}$ &     -    &    &     -    & &  & & & \\
+% $             \Acp{0}$ &     -    &    &          & &  & & & \\
+% $     \Acp{\parallel}$ &     -    &    &          & &  & & & \\
+% $         \Acp{\perp}$ &     -    &    &          & &  & & & \\
+% $             \Acp{S}$ &     -    &    &     -    & &  & & & \\
+% $              \fP{0}$ &     -    &    &     -    & &  & & & \\
+% $      \fP{\parallel}$ &     -    &    &     -    & &  & & & \\
+% $\ampPhase{\parallel}$ &     -    &    &     -    & &  & & & \\
+% $    \ampPhase{\perp}$ &     -    &    &     -    & &  & & & \\
 $              \fS{1}$ & $+1.00$ &  &  &  &  &  &  & \\
 $              \fS{2}$ &    -    &  $+1.00$ &  &  &  &  &  &  \\
 $              \fS{3}$ &    -    &     -    &  $+1.00$ &  &  &  &  &  \\
@@ -332,36 +354,6 @@ $          \deltaS{3}$ &    -    &     -    &  $+0.23$ &     -    &     -    &  
 $          \deltaS{4}$ &    -    &     -    &     -    &  $-0.38$ &     -    &     -    &     -    &  $+1.00$ \\
 \end{tabular}
 
-\caption{Correlation matrix of the parameters of interest. Correlations below $10\%$ are not shown. {\color{red} Comment a bit on the values and move it to the result section} }
+\caption{Correlation matrix of the parameters of interest. Correlations below $10\%$ are not shown.}
 \label{correlation_matrix}
 \end{table}
-
-
-
-\begin{sidewaystable}[p!]
-\centering
-\footnotesize
-\begin{tabular}{ccccccccccccccccc}
-  \hline
-  & $\Acp{0}$ & $\Acp{\parallel}$ & $\Acp{\perp}$ & $\Acp{S}$ & $\fP{0}$ & $\fP{\parallel}$ & $\ampPhase{\parallel}$ & $\ampPhase{\perp}$ & $\fS{1}$ & $\fS{2}$ & $\fS{3}$ & $\fS{4}$ & $\deltaS{1}$ & $\deltaS{2}$ & $\deltaS{3}$ & $\deltaS{4}$ \\
-  \hline
-$             \Acp{0}$ &  $+1.00$ &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
-$     \Acp{\parallel}$ &     -    &  $+1.00$ &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
-$         \Acp{\perp}$ &     -    &  $-0.42$ &  $+1.00$ &  &  &  &  &  &  &  &  &  &  &  &  &  \\
-$             \Acp{S}$ &  $+0.10$ &     -    &     -    &  $+1.00$ &  &  &  &  &  &  &  &  &  &  &  &  \\
-$              \fP{0}$ &     -    &     -    &     -    &     -    &  $+1.00$ &  &  &  &  &  &  &  &  &  &  &  \\
-$      \fP{\parallel}$ &     -    &  $-0.15$ &     -    &     -    &  $-0.35$ &  $+1.00$ &  &  &  &  &  &  &  &  &  &  \\
-$\ampPhase{\parallel}$ &     -    &  $+0.13$ &     -    &     -    &     -    &  $-0.11$ &  $+1.00$ &  &  &  &  &  &  &  &  &  \\
-$    \ampPhase{\perp}$ &     -    &     -    &     -    &     -    &     -    &     -    &  $+0.66$ &  $+1.00$ &  &  &  &  &  &  &  &  \\
-$              \fS{1}$ &     -    &     -    &     -    &  $+0.16$ &  $+0.11$ &     -    &     -    &  $-0.18$ &  $+1.00$ &  &  &  &  &  &  &  \\
-$              \fS{2}$ &     -    &     -    &     -    &     -    &  $+0.10$ &     -    &     -    &  $-0.11$ &     -    &  $+1.00$ &  &  &  &  &  &  \\
-$              \fS{3}$ &     -    &     -    &     -    &     -    &     -    &     -    &     -    &     -    &     -    &     -    &  $+1.00$ &  &  &  &  &  \\
-$              \fS{4}$ &     -    &  $+0.13$ &     -    &  $-0.15$ &  $-0.11$ &     -    &  $+0.10$ &     -    &     -    &     -    &     -    &  $+1.00$ &  &  &  &  \\
-$          \deltaS{1}$ &     -    &     -    &     -    &     -    &     -    &     -    &     -    &  $+0.18$ &  $-0.34$ &     -    &     -    &     -    &  $+1.00$ &  &  &  \\
-$          \deltaS{2}$ &     -    &     -    &     -    &     -    &  $+0.14$ &  $-0.13$ &  $+0.20$ &  $+0.17$ &     -    &  $-0.55$ &     -    &     -    &     -    &  $+1.00$ &  &  \\
-$          \deltaS{3}$ &     -    &     -    &     -    &     -    &  $+0.25$ &     -    &     -    &     -    &     -    &     -    &  $+0.23$ &     -    &     -    &     -    &  $+1.00$ &  \\
-$          \deltaS{4}$ &     -    &  $-0.12$ &     -    &     -    &  $+0.13$ &     -    &     -    &     -    &     -    &     -    &     -    &  $-0.38$ &     -    &     -    &     -    &  $+1.00$ \\
-\end{tabular}
-\caption{Correlation matrix of the parameters of interest. Correlations below $10\%$ are not shown. {\color{red} Comment a bit on the values and move it to the result section} }
-\label{correlation_matrix}
-\end{sidewaystable}
