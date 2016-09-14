@@ -39,6 +39,7 @@ b5paper
 
 \setcounter{tocdepth}{2} % Excludes subsubsection from the toc
 
+% packages
 \usepackage{xspace}
 \usepackage[cmyk]{xcolor}
 \usepackage{amsmath}
@@ -77,6 +78,13 @@ b5paper
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \DeclareRobustCommand{\kw}[1]{\texttt{#1}}
 
+
+%----------------------------------------------------------------------------------------
+%	Symbols and functions
+%----------------------------------------------------------------------------------------
+\input{Symbols/lhcb-symbols-def}
+\input{Symbols/my-symbols-def}
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
@@ -95,7 +103,7 @@ b5paper
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
-\thesistitle{Control of penguin polutions in the weak phase \phis with \BsJpsiKst decays with the \lhcb detector. } % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Penguin Polution in the \BsJpsiPhi decays \\ {\small Controling higher order effects in the weak phase \phis with the \lhcb detector} } % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{prof. Dr. Gerhard \textsc{Raven}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Doctor of Philosophy} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -113,7 +121,6 @@ b5paper
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 \hypersetup{linkcolor=black}
-
 
 %------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %	                                                                              BEGIN DOCUMENT

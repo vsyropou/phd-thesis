@@ -254,9 +254,6 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
 
-\input{Symbols/lhcb-symbols-def}
-\input{Symbols/my-symbols-def}
-
 % colors
 \newcommand{\tred}[1]{\textcolor{red}{#1}}
 
