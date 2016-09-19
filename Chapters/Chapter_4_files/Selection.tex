@@ -21,9 +21,9 @@ one by one\footnote{also known as {\it cut-based analysis}}. Instead, a multivar
 In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifier variable}.
 The MVA approach can exploit the correlations between input variables to get the maximum discriminating power out of their combination.
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accummulate near $+1$,
-whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the calsifyer variable is aslo refered
-to as BDT, which states the class of MVA algorithm implemented, namelly {\it Boosted Decision Tree}. For further information on these
-types of algorithms can be found in {\color{red}Ref BDT }.
+whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the calsifyer variable is a
+{\it Boosted Decision Tree}, BDT in short, which is a class of machine learning algoritm algorithm. Further information
+on the BDT algorithm used can be found in Section 7.2 of~\cite{TMVA}.
 
 For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background.
@@ -157,7 +157,7 @@ As it was previously mentioned, the \LbJpsippi background is treated specially. 
 procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as the
 combinatorial background in the next section. The reasons for this different treatment with respect to other
 non-combinatorial backgrounds are twofold. First, the full amplitude structure of \LbJpsippi decays was not
-sufficiently known when the analysis was cncluded and thus the weighting of the simulated samples is not possible.
+sufficiently known~\cite{Aaij:2014zoa} when the analysis was concluded and thus the weighting of the simulated samples is not possible.
 Second, the peak of the misidentified \LbJpsippi decays in the \jpsi$K\pi$ mass spectrum is broader than those
 of the other non-combinatorial backgrounds, see \figref{mass_plot}, as a result the \sPlot technique is still
 effective.
