@@ -663,22 +663,41 @@ the $\Acp{k}$ parameters of intereset introduced in \secref{cp_assymetries_and_t
 Considering now the case where collisions at \lhc favor the \BsJpsiKst decay over its CP conjugate, \BsbarJpsiKst;
 Or the fact that the detector might have different efficiency for positive and negative kaons (or pions),
 then $\Acp{}$ will be biased by these experimental effects. In fact it happens so that both of those effects are in action.
-Specifically, the \lhc is a \proton\proton colider and not a \proton\antiproton .
-This implies that at the region of collision there are more \bquark quarks than \bquarkbar quarks.
-Thus in such an environment the \bquark quarks are enhanced and hence the \BsbarJpsiKst
-decays as well. This effect is quantified by the production asymmetry $\Aprod$. The other effect mentioned before
-is called detection asymmetry, $\Adet$, and it becomes relevant at the \lhcb detector as described earlier in the
-current paragraph. Both of those effects need to be estimated so that the experimentally measured assymetry,
-$\Acp{\rm raw}$ is corrected for as shown in \equref{acp_corrected}. The last asymmetry defined in \equref{acp_mes}.
+The first one where the creation of a \Bs or \Bsb is favoured is called production asymmetry, $\Aprod$.
+Whereas the second effect is called detection asymmetry, $\Adet$, and it becomes relevant
+at the \lhcb detector as described earlier in the current paragraph. The production and detection
+asymmetries are defined in the following equation:
 
 \begin{equation}
 \centering
-\Acp\;(\BsJpsiKst) = \Acp{\rm raw} - \zeta \Adet\ - \kappa\Aprod,
+         \Aprod = \frac{ \crosSec{\Bsb} - \crosSec{\Bs} }{\crosSec{\Bsb} + \crosSec{\Bs}}
+  \quad  \Adet  = \frac{ \effDet{\Kstarz} - \effDet{\Kstarzb} }{\effDet{\Kstarz} + \effDet{\Kstarzb}},
+\label{exp_asym_def}
+\end{equation}
+
+\noindent where $\sigma$ is the production cross section of either \Bs or \Bb , whereas \edet is the efficiency
+of detecting the \Bs(\Bsb) final state which is a $\jpsi\Kstarzb$($\jpsi\Kstarz$), see also \secref{cp_assymetries_and_total_decay_rate}.
+Both of the production and detection asymmetries have to be estimated so that the experimentally measured assymetry, $\Acp{\rm raw}$,
+defined in \equref{acp_mes}, is corrected for as follows:
+
+\begin{equation}
+\centering
+\Acp\;(\BsJpsiKst) = \Acp{\rm raw} +\Adet - \kappa\Aprod,
 \label{acp_corrected}
 \end{equation}
 
-\noindent where $\zeta = -1$, and $\kappa$ account for the dilution due to $B^0_s-\bar{B^0_s}$
-oscillations~\cite{LHCb-PAPER-2013-018}. The factor $\kappa$, is shown in \equref{kappa}.
+\noindent where the corrected asymmetry \Acp\;(\BsJpsiKst) is releated to the \BsJpsiKst decay
+amplitudes, defined in \equref{ang_terms}, as:
+
+\begin{align}
+\centering
+  \Acp\;(\BsJpsiKst&) = \nonumber \\
+  = &\frac{\totAmp{\BsbarJpsiKst} - \totAmp{\BsJpsiKst}}{\totAmp{\BsbarJpsiKst} + \totAmp{\BsJpsiKst}}.
+\label{acp_corrected_amps}
+\end{align}
+
+\noindent The factor $\kappa$ of \equref{acp_corrected} accounts for the dilution due to $B^0_s-\bar{B^0_s}$
+oscillations~\cite{LHCb-PAPER-2013-018} and is spelled out in the follwoing equation:
 
 \begin{equation}
   \centering
@@ -718,7 +737,7 @@ Nearly all the necessary ingredients to fit for the parameters of interest are a
 However there are a few important details still pending for description. The current subsection addresses the
 implications arising from the necessary splitting of the data in slices and the impact of this in the adopted
 fitting strategy which is a simultaneous maximum likelihood fit. Lastly but most importantly the issue of defining
-the polariation dependant CP assymetries, \Acp{k}, as free parameters in the angular fit and how this becomes
+the polariation dependant CP asymetries, \Acp{k}, as free parameters in the angular fit and how this becomes
 relevant in the normalization of the \pdfs involved is discussed in the last part of the current subsection.
 
 \subsubsection{Simultaneous likelihood fit}
