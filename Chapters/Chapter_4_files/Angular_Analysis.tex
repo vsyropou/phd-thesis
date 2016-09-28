@@ -167,46 +167,43 @@ The shape of the acceptance can be seen in \figref{angAcc_all}. The most strikin
 close to $\cos\thetaK=1$. The latter is mainly caussed by one of the candidate selection requirements of \tabref{Bs2JpsiKstSelection},
 specifically the requirement on the \kaon and \pion transverse momentum, \pt, to be larger that $500\mevc$.
 Before attempting to explain the acceptance shape it is usefull to illustrate how the decay angles are
-distributed according to the \pdf of \equref{ang_terms} \ie without any acceptance effect, see \figref{angDistr_all}.
+distributed according to the \pdf of \equref{ang_terms}, \ie without any acceptance effect, see \figref{angDistr_all}.
 
-Understanding the shape of the acceptance in the $\cos\thetaK$ projection starts with the observation that
-a large number of pions accumulate more towards the $\parenthesis{\pt=916\mevcc,\cos\thetaK=-1}$ phase space region
-comapred to the region of $\parenthesis{\pt=916\mevcc,\cos\thetaK=+1}$. This picture is less pronounced
-in the case of kaons where the $\pt$ spectrum is harder and the kaons populate the above regions of phase space more evenly.
-Given the above correlations it follows that applying the \pt requirement on both \kaon and \pion makes the $\cos\thetaK$
-distribution assymetric in $\cos\thetaK=\pm 1$.
+Understanding the shape of the acceptance in the $\cos\thetaK$ projection is equivalent to understanding the observation
+that a large number of pions accumulate more towards $\cos\thetaK=-1$ in the the $\parenthesis{\pt,\cos\thetaK}$ phase
+space region comapred to $\cos\thetaK=+1$. This picture is less pronounced in the case of kaons, where the $\pt$ spectrum
+is harder, and they populate the above regions of phase space more evenly. Given the above correlations it follows
+that applying the \pt requirement on both \kaon and \pion makes the $\cos\thetaK$ distribution assymetric around $\cos\thetaK=0$.
 
 \begin{figure}[t]
   \centering
   \begin{subfigure}{0.33\textwidth}
     \tikzsetnextfilename{mc_ang_ctk}
-    \scalebox{0.75}{\input{Figures/Chapter4/mc_ang_ctk}}
+    \scalebox{0.7}{\input{Figures/Chapter4/mc_ang_ctk}}
     \caption{}
     \label{angDistr_ctk}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.33\textwidth}
     \tikzsetnextfilename{mc_ang_ctl}
-    \scalebox{0.75}{\input{Figures/Chapter4/mc_ang_ctl}}
+    \scalebox{0.7}{\input{Figures/Chapter4/mc_ang_ctl}}
     \caption{}
     \label{angDistr_ctl}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.33\textwidth}
     \tikzsetnextfilename{mc_ang_phi}
-    \scalebox{0.75}{\input{Figures/Chapter4/mc_ang_phi}}
+    \scalebox{0.7}{\input{Figures/Chapter4/mc_ang_phi}}
     \caption{}
     \label{angDistr_phi}
   \end{subfigure}
-  \caption{Decay angles distributions in the simulation sample before any selection.}
+  \caption{Decay angles distributions in the simulation sample prior to any selection applied. Histograms are normalised to unity.}
   \label{angDistr_all}
 \end{figure}
 
-
-
-The above situation is related to kinematic constrains in two body decays particularly close to the physical boundaries
-of the phase space. The latter constrain manifests itself when computing the angle of the \pion with respect to the boost
-direction in the lab frame as shown in the following equation:
+The above situation is related to kinematic constrains in two body decays particularly close to phase
+space physical boundaries. The latter constrain manifests itself when computing the angle of the pion
+with respect to the boost direction in the lab frame, as shown in the following equation:
 
 \begin{equation}
   \centering
@@ -216,17 +213,17 @@ direction in the lab frame as shown in the following equation:
   \label{pi_angle}
 \end{equation}
 
-\noindent where, $\thetapi^lab$ is the angle of the \pion momentum vector with respect to the boost direction in the lab frame.
-The subscripts T,L label the transeverse and longditudinal components of the \pion momentum, \ptot. The \CM
+\noindent where, $\thetapi^\lab$ is the angle of the pion momentum vector with respect to the boost direction in the lab frame.
+The subscripts T,L label the transeverse and longditudinal components of the pion momentum, $\ptot_{\pi}$. The \CM
 superscript indcates quantities evaluated in the \Kstarz rest frame. The symbol $E$ stands for the energy of
 the pions. The lorentz boost factor and the relativistic speed are labeled by $\gamma$ and $\beta$ repectively.
-The angle $\thetapi$ is the angle of the pion momentum in \Kstarz rest frame and it is releated to $\cos\thetaK$
-as: $\thetapi = \cos\thetaK + \pi$. Now, the origin of the above mentioned assymetry is understood better in the
+The angle $\thetapi$ is the angle of the pion momentum in \Kstarz rest frame and it is releated to $\thetaK$
+as: $\thetapi = \thetaK + \pi$. Now, the origin of the above mentioned assymetry is understood better in the
 limit of a massless pion, in which case \equref{pi_angle} reduces to:
 
 \begin{equation}
   \centering
-  \tan\thetapi = \frac{\sin\thetapi}{\gamma\parenthesis{\cos\thetapi + 1} }.
+  \tan\thetapi^\lab = \frac{\sin\thetapi}{\gamma\parenthesis{\cos\thetapi + 1} }.
   \label{pi_angle_massless}
 \end{equation}
 
@@ -234,12 +231,13 @@ limit of a massless pion, in which case \equref{pi_angle} reduces to:
 for pions coming from \BJpsiKpi decays. It can be seen in \equref{pi_angle_massless} that decays where $\cos\thetapi=-1$
 are not allowed. The later implies a low transverse momentum pion with $\cos\thetaK = -\cos\thetapi = +1$, which explains
 why the shape of the $\cos\thetaK$ distribution becomes asymmetric when excuding low mementa pions. This effect is more
-general and it is releated to the lightes of the two particles in a two body decay.
+general and it is driven by the mass difference between the two particles in a two body decay.
 
 Coming now to the case of the $\cos\thetamu$ acceptance shape, the two decay products of the \jpsi have
-the same mass. A consequence of latter is that the transeverse momentum of each of the two muons
-is similarly distributed in the $\parenthesis{\ptrans{\mmu},\cos\thetamu}$, thus excluding low transverse
-momentum muons does not introduce any assymetry in the $\cos\thetamu$ distribution.
+the same mass. A consequence of latter is that the transeverse momentum spectrum of each of the two muons
+is almost identical and thus the two muons populate the $\parenthesis{\ptrans,\cos\thetamu}$ plane similarly.
+Based on the latter it follows that excluding low transverse momentum muons does not introduce any assymetry
+in the $\cos\thetamu$ distribution.
 
 As for the acceptance in the $\phihel$ plane it is very close to being uniform.
 No reason for a a strong acceptance effect in that projection is expected.
