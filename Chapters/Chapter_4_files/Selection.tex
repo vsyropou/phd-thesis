@@ -2,8 +2,8 @@
 Effectively there are four stages of offline event selection which take place after the data has been recorded.
 First a set of selection criteria is applied called {\it Stripping}. The purpose of stripping is to perform
 a loose rejection of the {\it combinatorial} background and prepare the data for the next selection stages.
-Combinatorial background is the type of background typical in particle colision where a large number of
-particles is produed. It is casued by random combinations of non-signal partices that build a signal
+Combinatorial background is the type of background typical in particle collision where a large number of
+particles is produced. It is caused by random combinations of non-signal particles that build a signal
 candidate during the event reconstruction, see \secref{reconstruction}.
 Stripping is also a way to save disk space when permanently storing events offline, since it is impossible to save anything
 that the detector writes out. Each of the stripping selection criteria, also referred to as a {\it cut},
@@ -20,9 +20,9 @@ reject as much background as possible while keeping all the signal. One way to d
 one by one\footnote{also known as {\it cut-based analysis}}. Instead, a multivariate approach, here after MVA, is adopted.
 In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifier variable}.
 The MVA approach can exploit the correlations between input variables to get the maximum discriminating power out of their combination.
-The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accummulate near $+1$,
-whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the calsifyer variable is a
-{\it Boosted Decision Tree}, BDT in short, which is a class of machine learning algoritm algorithm. Further information
+The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accumulate near $+1$,
+whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the classifier variable is a
+{\it Boosted Decision Tree}, BDT in short, which is a class of machine learning  algorithm. Further information
 on the BDT algorithm used can be found in Section 7.2 of~\cite{TMVA}.
 
 For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
@@ -38,20 +38,20 @@ As for the background representative sam-
   \tikzsetnextfilename{bdtg}
   \scalebox{1}{\input{Figures/Chapter4/bdtg}}
   \caption{Real data BDT distribution (black points). Signal (blue points) and background (red points) distributions
-           tend to accumulte mainly to the right and left respectively.}
+           tend to accumulate mainly to the right and left respectively.}
   \label{BTDG_performance}
 \end{figure}
 
 \noindent -ple real data candidates are used. These candidates are taken from a control
-region away from the \BsJpsiKst mass peak, usually refered to as {\it mass sideband}. This way the background representative sample
-is not affected by non perfect simulation and it is also indipendant of the signal representative sample.
+region away from the \BsJpsiKst mass peak, usually referred to as {\it mass side-band}. This way the background representative sample
+is not affected by non perfect simulation and it is also independent of the signal representative sample.
 Note that the simulated data are treated by all the processing steps after the \lone trigger level in the same way as real data.
 
-The two well seperated peaks in \figref{BTDG_performance} suggest that the BDT variable, shows a good discrimination
+The two well separated peaks in \figref{BTDG_performance} suggest that the BDT variable, shows a good discrimination
 power over signal and background distributions. The BDT was also checked for possible over-training. The last is a
 situation where the BDT variable becomes sensitive to statistical fluctuations of the training samples.
-This means that statisically compatible distribution, such as the testing and training samples,
-apear to have significantly different BDT distrinbutions. Which is a not desireable situation that leads to
+This means that statistically compatible distribution, such as the testing and training samples,
+appear to have significantly different BDT distributions. Which is a not desirable situation that leads to
 bad BDT performance. Once the training and testing steps are complete, a cutoff value on the BDT is applied
 so that it maximizes the following figure of merit, hereafter {\it FoM}:
 
@@ -83,7 +83,7 @@ see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and dis
 This type of distribution has to be removed before the next selection step can be applied as it is more effective
 when the distributions involved are smooth. Therefore, specific simulated events with negative weights
 are injected to the data sample such that they cancel out the contribution of the above mentioned non-combinatorial background
-events\footnote{The term "cancel out" obtains propper meaning in the context of the likelihood which is built
+events\footnote{The term "cancel out" obtains proper meaning in the context of the likelihood which is built
 in \secref{sWeighting_and_mass} based on the mass probability density function.}.
 The current section briefly addresses the treatment of the non-combinatorial background with negative weights
 as well as the special treatment of the \LbJpsippi non-combinatorial background.
@@ -103,14 +103,14 @@ N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BR \times \varepsilon
 \end{equation}
 \noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
 (probability that the $b$ quark forms a meson with another quark type $q$), $\varepsilon$ is the total efficiency (including reconstruction,
-selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity, hearafter just luminosity, of the data. Finally \BR stands for the
+selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity, hereafter just luminosity, of the data. Finally \BR stands for the
 branching fraction of the particular background of \tabref{peaking_bkg_yields}. Since simulated data are used it is necessary to determine
-the effective luminosity of that simulated sample and adust it such that it mathes the estimated luminosity of the data. After that, the
+the effective luminosity of that simulated sample and adjust it such that it matches the estimated luminosity of the data. After that, the
 number of non-combinatorial background events from the simulated sample is a valid estimate of the one in real
-data\footnote{Assuming same total efficiecny between the simulationa and real data sample.}.
+data\footnote{Assuming same total efficiency between the simulation and real data sample.}.
 
 The second and last step of the non-combinatorial background removal is to apply an angular correction factor to account for the fact that
-simulated events are distributed uniformly in phase space and hence do not represent a proper decay amplitude stracture.
+simulated events are distributed uniformly in phase space and hence do not represent a proper decay amplitude structure.
 This can cause the non-combinatorial background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
 in a different way than the actual non-combinatorial background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK
 which has been performed in~\cite{SheldonBdpipi},~\cite{SheldonBspipi},~\cite{SheldonKK} and~\cite{Gao:1701984} respectively provides
@@ -122,9 +122,9 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, m_{hh}  | A_k^i)} {P_{\rm MC}^i(\Om
 \end{equation}
 
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs\footnote{\pdf is an acronym for Probability Density Function}.
-The index $i$ labels the specie of the particuar non-combinatorial background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
-Whreas the polarization states, $0$, $\parallel$, $\perp$, of each of the above mentioned species is represented by the $k$ index.
-The estiamted yields of non-combinatorial background after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
+The index $i$ labels the specie of the particular non-combinatorial background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
+Whereas the polarization states, $0$, $\parallel$, $\perp$, of each of the above mentioned species is represented by the $k$ index.
+The estimated yields of non-combinatorial background after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
 
 \begin{table}[t]
    \centering
@@ -167,8 +167,8 @@ effective.
 \subsection{sWeighting and Invariant Mass Distribution}
 \label{sWeighting_and_mass}
 
-After successfully inecting simulated events with negative weights to cancel non-combinatorial background contributions,
-the data sample is effectivelly composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
+After successfully injecting simulated events with negative weights to cancel non-combinatorial background contributions,
+the data sample is effectively composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
 multivariate based selection. These four modes are statistically disentangled using the \sPlot technique~\cite{splot}.
 The technique requires as an input a \pdf that estimates the yield of each
 of the above species. The current analysis uses the \pdf of the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each specie
@@ -187,7 +187,7 @@ Before discussing the mass fit description it is useful to briefly describe the 
 for events where random combinations of final state particles are combined to a signal candidate. These kind of events are not expected to
 exhibit any structure in the mass distribution, they simply follow a exponential distribution with a negative slope in the mass spectrum.
 The slope is negative because with increasing mass the frequency of those random combinations drops: Since high momentum particles are more
-likely to orginate from a singal than low momentum ones. This is beacuse the singal patciles like the \Bs messon is quite heavy which is
+likely to originate from a signal than low momentum ones. This is because the signal particles like the \Bs meson is quite heavy which is
 depicted in high momentum of the final state particles that it decays into.
 
 As for the \LbJpsippi background, the Amoroso distribution was found to provide good description of the data.
@@ -235,7 +235,7 @@ similar to the one described in \secref{Toy_Experiments_Study}.
 Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.
 The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called sWeight, to each event
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
-\pdf a set of weights can be computed such that they project out only that particular species while effectivelly subtract the others.
+\pdf a set of weights can be computed such that they project out only that particular species while effectively subtract the others.
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
 subtracted while \BJpsiKst events are projected with the above mentioned technique, also referred to as sWeighting.
 
@@ -252,7 +252,7 @@ Specifically, the resulting weighted events can be described by the signal \pdf 
 the background angular distributions. As a result the fit itself is faster and simpler to implement. On the other hand there are a few
 disadvantages such as the evaluation of systematic uncertainties on the estimated angular parameters due to the mass \pdf modeling:
 Any variation of these models implies re-computing the \sWeights. Also care needs to be taken such that the uncertainties
-of the fitted angular parameters are prperly estiamted \cite{splot}. The uncertainties tend to be underestimated in a fit with weighted
+of the fitted angular parameters are properly estimated \cite{splot}. The uncertainties tend to be underestimated in a fit with weighted
 events. This is because the per event weights in a weighted likelihood fit change the shape of the likelihood function.
 The last is where the statistical uncertainty estimation comes from. Thus to correct for this distortion of the likelihood
 function shape the scale factor,
