@@ -170,7 +170,7 @@ Before attempting to explain the acceptance shape it is useful to illustrate how
 distributed according to the \pdf of \equref{ang_terms}, \ie without any acceptance effect, see \figref{angDistr_all}.
 
 Understanding the shape of the acceptance in the $\cos\thetaK$ projection is equivalent to understanding the observation
-that a large number of pions accumulate more towards $\cos\thetaK=-1$ in the the $(\pt,\cos\thetaK)$ phase
+that a large number of pions accumulate more towards $\cos\thetaK=-1$ in the the $(\pt-\cos\thetaK)$ phase
 space region compared to $\cos\thetaK=+1$. This picture is less pronounced in the case of kaons, where the $\pt$ spectrum
 is harder, and they populate the above regions of phase space more evenly. Given the above correlations it follows
 that applying the \pt requirement on both \kaon and \pion makes the $\cos\thetaK$ distribution asymmetric around $\cos\thetaK=0$.
@@ -207,19 +207,20 @@ with respect to the boost direction in the lab frame, as shown in the following 
 
 \begin{equation}
   \centering
-  \tan\thetapi^\lab = \frac{\ptrans{\pi}}{\plongd{\pi}}
-               = \frac{\ptrans{\pi}^\CM}{\gamma\parenthesis{\plongd{\pi}^\CM + \beta E^\CM_\pi} }
-               = \frac{\ptot_{\pi}^\CM \sin\thetapi}{\gamma\parenthesis{\ptot_{\pi}^\CM \cos\thetapi + \beta E^\CM_\pi} },
+  \tan\thetapi^\lab = \frac{\ptrans{\pi}^\lab}{\plongd{\pi}^\lab}
+               = \frac{\ptrans{\pi}}{\gamma\parenthesis{\plongd{\pi} + \beta E_\pi} }
+               = \frac{\ptot_{\pi} \sin\thetapi}{\gamma\parenthesis{\ptot_{\pi} \cos\thetapi + \beta E_\pi} },
   \label{pi_angle}
 \end{equation}
 
-\noindent where, $\thetapi^\lab$ is the angle of the pion momentum vector with respect to the boost direction in the lab frame.
-The subscripts T,L label the transverse and longitudinal components of the pion momentum, $\ptot_{\pi}$. The \CM
-superscript indicates quantities evaluated in the \Kstarz rest frame. The symbol $E$ stands for the energy of
-the pions. The Lorentz boost factor and the relativistic speed are labeled by $\gamma$ and $\beta$ respectively.
-The angle $\thetapi$ is the angle of the pion momentum in \Kstarz rest frame and it is related to $\thetaK$
-as: $\thetapi = \thetaK + \pi$. Now, the origin of the above mentioned asymmetry is understood better in the
-limit of a mass less pion, in which case \equref{pi_angle} reduces to:
+\noindent where, $\thetapi^\lab$ is the angle of the pion momentum vector with respect to the boost direction
+in the lab frame. Absence of the \lab superscript refers to quantities computed in teh \Kstarz rest frame.
+The subscripts T,L label the transverse and longitudinal components of the pion momentum, $\ptot_{\pi}$.
+The symbol $E$ stands for the energy of the pions. The Lorentz boost factor and the relativistic speed
+are labeled by $\gamma$ and $\beta$ respectively. The angle $\thetapi$ is the angle of the pion momentum,
+in \Kstarz rest frame, which is releated to $\thetaK$ in \figref{helAngles} as: $\thetapi = \thetaK + \pi$.
+Now, the origin of the above mentioned asymmetry is understood better in the limit of a mass less pion,
+in which case \equref{pi_angle} reduces to:
 
 \begin{equation}
   \centering
@@ -227,15 +228,15 @@ limit of a mass less pion, in which case \equref{pi_angle} reduces to:
   \label{pi_angle_massless}
 \end{equation}
 
-\noindent Note that for a mass-less particle the energy is equal to its total momentum and also that $\beta \simeq 1$
-for pions coming from \BJpsiKpi decays. It can be seen in \equref{pi_angle_massless} that decays where $\cos\thetapi=-1$
-are not allowed. The later implies a low transverse momentum pion with $\cos\thetaK = -\cos\thetapi = +1$, which explains
-why the shape of the $\cos\thetaK$ distribution becomes asymmetric when excluding low momenta pions. This effect is more
-general and it is driven by the mass difference between the two particles in a two body decay.
+\noindent Note that the energy of a mass-less particle is equal to its total momentum and also that $\beta \simeq 1$
+for pions coming from \BJpsiKpi decays in \lhcb. From \equref{pi_angle_massless} it follows that decays where $\cos\thetapi=-1$
+are not allowed. The situation corresponds to a low transverse momentum pion for which $\cos\thetaK = -\cos\thetapi = +1$.
+This explains why the shape of the $\cos\thetaK$ distribution becomes asymmetric when excluding low momenta pions.
+This effect is more general and it is driven by the mass difference between the two particles in a two body decay.
 
 Coming now to the case of the $\cos\thetamu$ acceptance shape, the two decay products of the \jpsi have
 the same mass. A consequence of latter is that the transverse momentum spectrum of each of the two muons
-is almost identical and thus the two muons populate the $(\pt,\cos\thetamu)$ plane similarly.
+is almost identical and thus the two muons populate the $(\pt-\cos\thetamu)$ plane similarly.
 Based on the latter it follows that excluding low transverse momentum muons does not introduce any asymmetry
 in the $\cos\thetamu$ distribution.
 
@@ -258,7 +259,7 @@ integration. Such a parametrization is defined by \equref{eff_func}.
 
 \noindent where the spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
 functions to which the angular acceptance is decomposed by means of the coefficients $c^i_{k}$, hereafter efficiency moments or simply moments.
-Following the above parametrization one just needs to obtain a set of $c^i_{jk}$. Now, there are infinite efficiency moments
+Following parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Now, there are infinite efficiency moments
 since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However in practice only a small number of efficiency moments
 contribute significantly to the angular acceptance shape\footnote{This is due to the fact that higher moments introduce
 variations on the acceptance shape that are effectively washed out by the finite angular resolution.}.
@@ -558,7 +559,7 @@ converge. The full procedure by steps can be summarized as:
 \item Weight each event in the simulated sample for the difference between the obtained from the previous fit angular \pdf and the angular \pdf used to
       generate the simulated data sample with.
       This essentially means that the underlying physics of the re-weighted simulated  sample corresponds to the physics obtained in the previous step.
-\item Compare the $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
+\item Compare the $p_{K^{\pm}}-p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
       real data, and weight again each simulated event for the difference.
 \item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
 \item Go back to step 4 and repeat until change in the parameters of interest are negligible.
@@ -579,7 +580,7 @@ converge. The full procedure by steps can be summarized as:
   \label{angAccBinning}
 \end{table}
 
-The $p_{K^{\pm}},p_{\pi^{\mp}}$ weighting of the simulated data sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
+The $p_{K^{\pm}}-p_{\pi^{\mp}}$ weighting of the simulated data sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
 At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
 \tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implying that the overall effect of the
 acceptance corrections is small. \figref{angAggCorrections} shows the shape of the acceptance before and after corrections.
@@ -715,7 +716,7 @@ to check the validity of this hypothesis, two additional studies are performed. 
 background treatment propagated to the \sWeights was not responsible for this behavior. Indeed, no significant difference
 between the \Bs \mkpi spectrum using \sWeights computed with and without simulated data injection was found. Second, the \mkpi
 is corrected for angular acceptance effects, by weighting each event with the inverse of the acceptance function of \equref{eff_func_new}.
-This way the interference between the $K\pi$ \swave and the \Kstarz $ $ \pwave vanishes, since
+This way the interference between the $K\pi$ \swave and the \Kstarz \pwave vanishes, since
 for a perfect acceptance the interference terms in \tabref{ang_terms}, integrated over all angles, evaluate to zero.
 This is demonstrated in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
 the efficiency correction. This is a clear indication of the presence of stronger interference in the \Bs case compared to the \Bd.
