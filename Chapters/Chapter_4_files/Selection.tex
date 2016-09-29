@@ -23,9 +23,9 @@ The MVA approach can exploit the correlations between input variables to get the
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accumulate near $+1$,
 whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the classifier variable is a
 {\it Boosted Decision Tree}, BDT in short, which is a class of machine learning  algorithm. Further information
-on the BDT algorithm used can be found in Section 7.2 of~\cite{TMVA}.
+on the BDT algorithm used can be found in Section 7.2 of\cite{TMVA}.
 
-For the current analysis the TMVA toolkit~\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
+For the current analysis the TMVA toolkit\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background.
 This pair of data sets is provided as input to the MVA algorithm to construct the classifying variable.
 In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
@@ -62,7 +62,7 @@ so that it maximizes the following figure of merit, hereafter {\it FoM}:
 \end{equation}
 
 \noindent where $w_i$ are weights associated to each event, here after \sWeights, and calculated with the
-\sPlot technique. The last  is a statistical tool to unfold data distributions~\cite{splot}. More details are provided
+\sPlot technique. The last  is a statistical tool to unfold data distributions\cite{splot}. More details are provided
 in \secref{sWeighting_and_mass}. The above mentioned FoM can be understood as an effective signal yield.
 For a range of BDT values the \sPlot technique provides a different set of \sWeights based on which a different
 FoM value can be obtained. The optimum BDT value is chosen such that it maximizes $F(w_i)$.
@@ -113,7 +113,7 @@ The second and last step of the non-combinatorial background removal is to apply
 simulated events are distributed uniformly in phase space and hence do not represent a proper decay amplitude structure.
 This can cause the non-combinatorial background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
 in a different way than the actual non-combinatorial background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK
-which has been performed in~\cite{SheldonBdpipi},~\cite{SheldonBspipi},~\cite{SheldonKK} and~\cite{Gao:1701984} respectively provides
+which has been performed in\cite{SheldonBdpipi},\cite{SheldonBspipi},\cite{SheldonKK} and\cite{Gao:1701984} respectively provides
 the necessary knowledge to compute the correction factors
 
 \begin{equation}
@@ -157,7 +157,7 @@ As it was previously mentioned, the \LbJpsippi background is treated specially. 
 procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as the
 combinatorial background in the next section. The reasons for this different treatment with respect to other
 non-combinatorial backgrounds are twofold. First, the full amplitude structure of \LbJpsippi decays was not
-sufficiently known~\cite{Aaij:2014zoa} when the analysis was concluded and thus the weighting of the simulated samples is not possible.
+sufficiently known\cite{Aaij:2014zoa} when the analysis was concluded and thus the weighting of the simulated samples is not possible.
 Second, the peak of the misidentified \LbJpsippi decays in the \jpsi$K\pi$ mass spectrum is broader than those
 of the other non-combinatorial backgrounds, see \figref{mass_plot}, as a result the \sPlot technique is still
 effective.
@@ -169,7 +169,7 @@ effective.
 
 After successfully injecting simulated events with negative weights to cancel non-combinatorial background contributions,
 the data sample is effectively composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
-multivariate based selection. These four modes are statistically disentangled using the \sPlot technique~\cite{splot}.
+multivariate based selection. These four modes are statistically disentangled using the \sPlot technique\cite{splot}.
 The technique requires as an input a \pdf that estimates the yield of each
 of the above species. The current analysis uses the \pdf of the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each specie
 is estimated with an extended maximum likelihood fit to the mass distribution of real data, hereafter mass fit.
@@ -179,8 +179,8 @@ Before discussing the mass fit description it is useful to briefly describe the 
 
 \begin{itemize}
 \item Combinatorial background: Exponential distribution.
-\item \LbJpsippi decays: Amoroso distribution~\cite{Amoroso}
-\item \Bd and \Bs signals: Hypatia distribution~\cite{Santos:2013gra}.
+\item \LbJpsippi decays: Amoroso distribution\cite{Amoroso}
+\item \Bd and \Bs signals: Hypatia distribution\cite{Santos:2013gra}.
 \end{itemize}
 
 \noindent An exponential distribution, $e^{-km}$, is found to be an appropriate description of the combinatorial background. It  accounts
@@ -201,7 +201,7 @@ of crucial importance. These two peaks are sufficiently close,
 see picture \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks
 takes place. Several effects contribute to the structure of the tails apart from mass resolution of the detector. These effects
 can be radiative tails (a charged final state particle radiates a photon), interplay of radiative tail with \jpsi mass constraint
-or badly reconstructed events caused by decays of the final state hadrons, see~\cite{Santos:2013gra}. The tail parameters ($\alpha$, $n$)
+or badly reconstructed events caused by decays of the final state hadrons, see\cite{Santos:2013gra}. The tail parameters ($\alpha$, $n$)
 are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution. The last makes sure that
 the tail parameters do not rely on detector simulation imperfections.
 For the core of invariant mass distribution, Hypatia uses five shape parameters, namely $\zeta$, $\beta$, $\lambda$, $\sigma$, $\mu$.
