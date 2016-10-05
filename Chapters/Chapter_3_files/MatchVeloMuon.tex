@@ -39,17 +39,143 @@ all tracks above 500 \mevc of \pt.
 For tracks below 500 \mevc of \pt the \mvm algorithm could still recover efficiency for the muon lines,
 however in view of the already upgraded VELO-TT tracks, this tool was rewritten in order to better exploit these tracks.
 
-\begin{figure}[!h]
- \centering
- \includegraphics[trim=0.4cm 0.1cm 0.5cm 0.3cm, clip=true,scale=0.33]{Figures/Chapter3/MvM/vim_efficiency_p.pdf}
- \includegraphics[trim=0.4cm 0.1cm 0.5cm 0.3cm, clip=true,scale=0.33]{Figures/Chapter3/MvM/vim_efficiency_pt.pdf}\\
- \includegraphics[trim=0.4cm 0.1cm 0.5cm 0.3cm, clip=true,scale=0.33]{Figures/Chapter3/MvTTM/vim_efficiency_p.pdf}
- \includegraphics[trim=0.4cm 0.1cm 0.5cm 0.3cm, clip=true,scale=0.33]{Figures/Chapter3/MvTTM/vim_efficiency_pt.pdf}
 
- \caption{ Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
+    \caption{}
+    \label{mvTTm_eff_p}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
+    \caption{}
+    \label{mvm_eff_p}
+  \end{subfigure}
+  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
  The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
- \label{fig:mvm_eff}
+ \label{mvm_eff_p_comp}
 \end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_pt}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt}}
+    \caption{}
+    \label{mvTTm_eff_p}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_pt}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt}}
+    \caption{}
+    \label{mvm_eff_p}
+  \end{subfigure}
+  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
+ The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
+ \label{mvm_eff_p_comp}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
+    \caption{}
+    \label{mvTTm_eff_p}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
+    \caption{}
+    \label{mvm_eff_p}
+  \end{subfigure}
+  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
+ The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
+ \label{mvm_eff_p_comp}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_chi2_sigp_bigger}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/chi2_sigp_bigger_10000}}
+    \caption{}
+    \label{mvTTm_chi2}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_chi2_sigp_smaller}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/chi2_sigp_smaller_10000}}
+    \caption{}
+    \label{mvm_chi2}
+  \end{subfigure}
+  \caption{\chisq comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.}
+ \label{mvm_chi2_comp}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_wind_eff_total_x}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_total_x}}
+    \caption{}
+    \label{mvTTm_res_x}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_wind_eff_total_y}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_total_y}}
+    \caption{}
+    \label{mvm_res_y}
+  \end{subfigure}
+  \caption{Residulas.  }
+ \label{mvm_res}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_wind_eff_pos_neg_dx_norm}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+    \caption{}
+    \label{mvTTm_pos_neg_x_norm}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvm_wind_eff_pos_neg_dx_norm}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+    \caption{}
+    \label{mvm_pos_neg_x_norm}
+  \end{subfigure}
+  \caption{positive negative normalised x residuals. }
+ \label{mvm_pos_neg_x_norm_comp}
+\end{figure}
+
+% \begin{figure}[h]
+%   \centering
+%   \begin{subfigure}{0.5\textwidth}
+%     \tikzsetnextfilename{mvTTm_wind_eff_bra}
+%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_bra}}
+%     \caption{}
+%     \label{mvTTm_wind_eff_bra}
+%   \end{subfigure}%
+%   \hfill%
+%   \begin{subfigure}{0.5\textwidth}
+%     \tikzsetnextfilename{mvm_wind_eff_bra}
+%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_bra}}
+%     \caption{}
+%     \label{mvm_wind_eff_bra}
+%   \end{subfigure}
+%   \caption{2D M3 residuals. }
+%  \label{mvm_wind_eff_bra_comp}
+% \end{figure}
+
 
 In addition to the above mentioned improvement there are several more points that \mvm can benefit from.
 First due to the fact that the \veloTTCand have momentum and charge information, it is possible to open better
