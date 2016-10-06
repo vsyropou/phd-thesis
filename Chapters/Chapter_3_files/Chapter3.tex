@@ -1,11 +1,23 @@
 % Chapter 3
-
 \chapter{Muon Identification in the \lhcb High Level Trigger}
 \label{Muon_id_hlt}
-\input{Chapters/Chapter_3_files/introduction}
 
-\section{\muonID in \hltone}
+The \lhcb trigger system has been briefly described in \secref{lhcb_trigger}. The current chapter focuses on the muon identification
+part of the trigger. Muons are important for the \lhcb experment, since a large fraction of its physics programme is based on
+the identification of muons in the final state: for example the measurement of \phis through \BsJpsiPhi decays, the study of CP
+violation through semileptonic decays, and the measurement
+in several rare decays such as \BdKstmumu and \Bsmm. It is therefore of major importance to maintain and improve the efficiency
+and purity of identified muons in the Run II data-taking of LHCb. During the shutdown period between \runone and II, effort has
+been put to re-optimize the software performing the muon identification. A unified software that can be run both online in the
+LHCb software trigger and in the offline reconstruction has been obtained. Furthermore, the detection effciency of low momentum
+muons is improved given the available comptuting resources of \runtwo. Low momentum muons are intreasting {\color{red} for these analysis, site diego kaon physics}
+A brief description of the unified \muonID code is given in \secref{muid_hlt1}. The low momentum muon efficiency optimization
+is addressed in \secref{mvm_algorrithm}.
+
+\section{\muonID in \hlt}
+\label{muid_hlt1}
 \input{Chapters/Chapter_3_files/hlt1_muonID}
 
 \section{MatchVeloMuon update}
+\label{mvm_algorrithm}
 \input{Chapters/Chapter_3_files/MatchVeloMuon}

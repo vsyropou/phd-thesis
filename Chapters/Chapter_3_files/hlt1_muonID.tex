@@ -1,5 +1,18 @@
-\section{\hltone muon identification}
-\label{sec:hlt1_rev}
+
+The muon identification software \cite{LHCb-PUB-2009-013,LHCb-PUB-2010-002} (\muonID),
+that is used both in the High Level Trigger (\hlt) \cite{LHCb-PUB-2011-017} and offline reconstruction has been
+revisited in view of the \lhc \runtwo.
+The main goals of this revisiting were the following two. First to use the same \muonID in \hlt and offline as much as possible.
+Second to optimize the efficiency of muon identification in the new HLT software.
+In particular, the \muonID has undergone a significant refactory resulting in a modularised common code base
+between \hlt and offline event processing.
+Bacause of that the \muonID in \hlt and offline is now identical. After the modularization readability and maintenance
+of the code were improved.  An increase in performance was also achieved both in CPU and memory usage.
+
+Specifically for \hltone due to looser timing constrains in \runtwo all the tracks above 500 \mevc
+are passed directly to the forward trackng and track fitting algorithms without any preselection. This was not the
+case in \runone.
+
 
 The algorithm sequence of the \hltone muon lines during \runone was tuned in order to
 comply with the output rate limitations given the existinng computing infrastructure,
@@ -11,6 +24,8 @@ the total output rate of the entire trigger system was increased
 from 5\khz to 12.5\khz.
 The impact on the \hltone is that its output rate is roughly doubled and additional processing time is available.
 This offered chances for optimization of the \hltone muon identificationa and muon trigger lines.
+
+In \hlt2 the \muonID is the same with offline.
 
 \subsection{\hltone muon lines algorithm sequence}
 \label{sec:hlt1run2}
@@ -89,15 +104,3 @@ Furtheremore, correct pad sizes are being used so that the inclusion of uncrosse
 Tracks with transverse momentum smaller than 500 MeV cannot be immediately upgraded to long tracks for timing reasons.
 However some of them will be muons, and the efficiency for these could be recovered using a different strategy,
 explained in the following.
-
-% \S\ref{sec:matchvelottmuon}.
-
-%% \begin{figure}[!h]
-%%   \centering
-%%   \includegraphics[trim=0.5cm 1cm 8cm 1cm, clip=true,scale=0.9]{ineff_budget_single.pdf}
-%%   \hspace{0.5cm}
-%% \caption{ \hltone single muon trigger line effciency versus transverse momentum.
-%%   The efficiency improves each time an algorithm of the old \hltone sequence, left of \figref{fig:hlt1_algo_seq}, is removed.
-%% {\color{red}, } }
-%%   \label{fig:ineff_budget}
-%% \end{figure}
