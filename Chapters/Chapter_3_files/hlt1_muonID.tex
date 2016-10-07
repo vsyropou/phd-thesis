@@ -1,47 +1,39 @@
 
 The muon identification software \cite{LHCb-PUB-2009-013,LHCb-PUB-2010-002} (\muonID),
 that is used both in the High Level Trigger (\hlt) \cite{LHCb-PUB-2011-017} and offline reconstruction has been
-revisited in view of the \lhc \runtwo.
-The main goals of this revisiting were the following two. First to use the same \muonID in \hlt and offline as much as possible.
-Second to optimize the efficiency of muon identification in the new HLT software.
+revisited in view of the \lhc \runtwo. The main goals were: First to use the same \muonID and offline as much as
+possible. Second to optimize the efficiency of muon identification of low momentum muons in the \hlt.
 In particular, the \muonID has undergone a significant refactory resulting in a modularised common code base
-between \hlt and offline event processing.
-Bacause of that the \muonID in \hlt and offline is now identical. After the modularization readability and maintenance
-of the code were improved.  An increase in performance was also achieved both in CPU and memory usage.
+between \hlt and offline event processing {\color{red} Site kevin or some pub note.}. Bacause of that
+muon indentification in the \hltone and offline are identical \footnote{The \muonID in \hlttwo was the same as offline already in \runone.},
+which combined with the novel {\it online detector alignment and calibration} endeavour, {\color{red} sitation} allows for the trigger to produce offline quality data.
+After the modularization readability and maintenance of the code were improved. An increase in performance
+of the \muonID code was also achieved both in CPU and memory usage.
 
-Specifically for \hltone due to looser timing constrains in \runtwo all the tracks above 500 \mevc
-are passed directly to the forward trackng and track fitting algorithms without any preselection. This was not the
-case in \runone.
-
-
-The algorithm sequence of the \hltone muon lines during \runone was tuned in order to
+The algorithm sequence of the \hltone muon trigger lines{\it defined in blah} during \runone was tuned in order to
 comply with the output rate limitations given the existinng computing infrastructure,
-namely the Event Filter Farm (EFF).
-Since then the EFF has undergone a significant upgrade resulting in an increased processing
-power along with increased storage capabilities.
-In view of this infrastructure upgrade as well as the \runtwo \lhc running conditions
-the total output rate of the entire trigger system was increased
-from 5\khz to 12.5\khz.
-The impact on the \hltone is that its output rate is roughly doubled and additional processing time is available.
-This offered chances for optimization of the \hltone muon identificationa and muon trigger lines.
-
-In \hlt2 the \muonID is the same with offline.
+named {\it Event Filter Farm} (EFF). Since then the EFF has undergone a significant upgrade resulting in an
+increased processing power along with increased storage capabilities. In view of this infrastructure upgrade
+as well as the \runtwo \lhc running conditions the total output rate{\color{red} define rate in the detector chapter.} of the entire trigger system was increased
+from 5\khz to 12.5\khz. The impact on the \hltone is that its output rate is roughly doubled and additional processing time is available.
+This boost in computing power allowed for changes in the \muonID alogorithm sequence regarding muons above 500 \mevc.
+Particularly the preselection of the above tracks that was present during \runone, see \figref{hlt1_algo_seq},
+was removed. Instead all these muons are passed directly to the next stages of the \muonID.
 
 \subsection{\hltone muon lines algorithm sequence}
-\label{sec:hlt1run2}
+\label{hlt1run2}
 
-The role of \hltone is to select interesting events based on reduced event information.
-The software is divided in lines selecting different physics signatures.
-The \hltone muon lines are mainly organized in single muon and dimuon ones; both
-exploit the same muon identification procedure which will be described in the following.
-Between \runone and \runtwo not only the muon-identification but also some of the lines algorithms were
-reoptimized and others were added; the change in the lines will not be described in the present document,
-where only the differences due to the MuonID will be underlined.
+The role of the trigger system and the decitions that it provides were presented in \secref{}.
+The concept of calssifing and selecting events based on different physics signatures is implemented by
+the so called {\it trigger line}, also introcude in the same section. The \hltone muon trigger lines are
+mainly organized in single muon and dimuon ones; both exploit the same muon identification procedure which
+is described in the current subsection. Between \runone and \runtwo, as mentioned earlier, both muon identification
+and also some of the muon line's algorithms were reoptimized and others were added. Only the differences due
+to the MuonID are underlined in the current chapter. { More details for the lines can be found in blah.}
 
 The efficiency of the muon lines during \runone is shown in \figref{fig:hlt1_eff_run1}.
 It can be observed that a low \pt turn on and a large efficiency loss in the dimuon lines are present.
-In order to understand the origin of this efficiency loss
-the \hltone algorith sequence is analysed further in the current section.
+In order to understand the origin of this efficiency loss the \hltone algorithm sequence is analysed further.
 
 
 \begin{figure}[h!]
@@ -53,15 +45,14 @@ the \hltone algorith sequence is analysed further in the current section.
 
 
 The \hltone muon trigger lines sequence during \runone is shown in \figref{fig:hlt1_algo_seq}(a).
-Here we only give a brief summary of this procedure while more details can be found in Ref.\cite{LHCb-PUB-2011-017}.
-During \runone the muon identification started directly from VELO tracks
-which were identified as muons with a simple extrapolation through the \mvm algorithm\cite{LHCb-PUB-2011-017}
-which will be detailed in \secref{sec:muon_matching},
-before being upgraded to long tracks by the \FwD tracking algorithm.
-After this, the \kw{IsMuon} algorithm was applied.
-In addition there were some quality cuts between each algorithm step, such as the number of VELO hits
-of the track or the fitted track $\chi^2_{\text {dof}}$ as well as momentum cuts applied after the \FwD tracking algorithm.
-The minimum momentum and transverse momentum was 6 \gevc and 0.5 \gevc respectively.
+Only a brief summary of this procedure is given here,  while more details can be found in \cite{LHCb-PUB-2011-017}.
+During \runone the muon identification started directly from \velo tracks,{\color{red} define in blah}
+and identified muons with a simple extrapolation, done by the \mvm algorithm\cite{LHCb-PUB-2011-017}.
+Subsequently those potential muons were upgraded to long tracks, {\color{red} define in blah}, by the
+\FwD tracking algorithm. After this, the \kw{IsMuon} algorithm was applied {\color{red} site isMuon algo}.
+In addition there were some quality cuts between each algorithm step, such as the number of \velo hits
+of the track or the fitted track $\chisq_{\text {nDoF}}$ as well as momentum cuts applied after the \FwD
+tracking algorithm. The minimum momentum and transverse momentum was 6 \gevc and 0.5 \gevc respectively.
 
 \begin{figure}[h!]
   \centering
@@ -73,34 +64,18 @@ The minimum momentum and transverse momentum was 6 \gevc and 0.5 \gevc respectiv
   \label{hlt1_algo_seq}
 \end{figure}
 
-The detailed efficiency of the \runone \hltone muon lines is shown in \autoref{fig:effPie} and \autoref{tab:effBefore},
-where it can be seen that the main source of efficiency loss is due to the quality and momentum cuts.
-In addition the \mvm algorithm reduces the efficiency by roughly $4\%$.
-
-The updated scheme of \hltone for \runtwo includes two major changes.
-One in the code sequence of the \hltone muon lines. Two it upgrades the \mvm algorithm for softer muons. The first one is adressed
-in the currect section whereas the later in \secref{sec:muon_matching}.
-
-During the course of this work it became apparent that the HLT1 \kw{IsMuon} calculation in \runone
-did not use the correct pad sizes for uncrossed hits.
-The tool used an internal definition of the pad sizes for each station and
-region instead of the information from the hit object itself.
-The use of these incorrect pad sizes resulted simply in uncrossed hits being wrongly
-rejected, transforming \emph{de facto} the \kw{IsMuon} request into an \kw{IsMuonTight} one.
-This does not have any impact in the performances of LHCb, corresponding only to a lower efficiency:
-in LHCb physics publications the trigger efficiency is always measured directly on data so that this
-does not cause any shift in measurable quantities.
+A detailed efficiency breakdown{\color{red} site kevin} of the \runone \hltone muon lines showed that the main source of efficiency
+loss is due to the quality and momentum cuts. In addition the \mvm algorithm reduces the efficiency by roughly $4\%$.
+As mentioned earlier the updated scheme of \hltone for \runtwo includes two major changes. One in the code sequence of the
+\hltone muon lines, more details in {\color{red} site shit}. Two it upgrades the \mvm algorithm for softer muons. The focus of the current chapter is on the later.
 
 The updated \hltone algorith sequence for \runtwo is shown in \figref{fig:hlt1_algo_seq}(b).
 For the majority of the tracks, which have transverse momentum larger than 500 MeV, the sequence is different with respect to
-Run I:
-full tracking is performed for these tracks, so that the start for muon finding is already with long tracks.
+Run I: full tracking is performed for these tracks, so that the start for muon finding is already with long tracks.
 After soft quality cuts these get passed through the standard \kw{IsMuon} algorithm in order to be identified;
 positively identified muons are then combined into dimuons as in Run I.
 The combination of the use of long tracks and standard muon identification is much more efficient than the
 procedure in Run I, and is exactly the same as the one of offline reconstruction.
-Furtheremore, correct pad sizes are being used so that the inclusion of uncrossed increases the efficiency further on.
-
 Tracks with transverse momentum smaller than 500 MeV cannot be immediately upgraded to long tracks for timing reasons.
 However some of them will be muons, and the efficiency for these could be recovered using a different strategy,
-explained in the following.
+explained in \secref{mvm_algorrithm}.
