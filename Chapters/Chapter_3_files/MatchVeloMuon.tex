@@ -1,39 +1,72 @@
+In \runone all \velo tracks in \hltone were filtered by the \mvm algorithm. The latter performs a quick check,
+given the muon stations hits, on wheather a \velo track is comaptible with being identified as a muon by the subsecuent
+tracking algorithms, before these algorithms are actualy run. If the \velo track passes certain simple requirements it
+is accepted, otherwise it is discarded permanently and not processed further by the \hlt muon lines. As a result
+valuable computing time is saved, since the \FwD tracking and fiting algorithms are time costly.
+
 \subsection{The MatchVeloMuon algorithm}
 \label{sec:muon_matching}
 
-In \runone all \velo tracks in \hltone were filtered by the \mvm tool. The latter algorithm performs a quick check,
-given the muon stations hits, on wheather a \velo track is comaptible with being identified as a muon by the subsecuent
-tracking algorithms, before these algorithms are actualy run. If the \velo track passes certain simple requirements it
-is accepted, otherwise it is discarded permanently and not processed further by the \hltone muon lines. As a result
-valuable computing time is saved, since the \FwD tracking and fiting algorithms are time costly.
-
-The \mvm alogorithm takes a VELO track as input and searches for hits inside a search window in the M3 muon station.
-M3 is the first station to search for hits for two reasons.
-First the occupancy{\color{red} define} in M2 is very high thus an initial a single VELO track candidate would create
-a huge number of seed hits{\color{red} define seeding}. Second the offline muon reconstruction will always fail if
+The \mvm alogorithm, as it was implemented for \runone \cite{roelThesis}, takes a VELO track{\color{red} define velo track} as input
+and searches for hits inside a search window, also know as {\it Filed of interest} (FoI), in the M3 muon station.
+M3 is the first station to search for hits for two reasons. First the occupancy{\color{red} define} in M2 is very high{\color{red}see roel plot}
+thus an initial a single VELO track candidate would create
+a huge number of seed hits{\color{red} define seeding}. Second the muon reconstruction algorithm (\isMuon) will always fail if
 there is no M3 muon hit asigned to a VELO track.
-No momentum or charge information is available for the \velo track at that stage of reconstruction. Thus the size of the search window,
-also know as {\it Filed of interest} (FoI),
-was defined based on the maximum deflection that the \lhcb magnet would give to a track passing trough.
-Given \lhcb magnetic field strength the maximum deflection was calculated assuming
-a minimum momentum track of 6 \gevc. After seeding additional muon hits are added to the M3 seed hits
-by extrapolating from each M3 seed hit further to the rest of the muon stations.
-At least 3 hits in the muon stations M2-M5 are required by the algorithm in order to accept the initial VELO track.
-At the end of this procedure all muon candidate tracks that could result from an initial VELO track were considered.
-Note that at that at this stage an estimate of the momentum of the initial VELO track becomes available assuming
-a certain M3 seed hit and using the kick method \cite{roelThesis}, which is blah......
-As a last step the candidate muon tracks originating from the seeding procedure are filtered by a $\chisq/{\rm DoF}$
-requirement. The \chisq is simple to compute since there is no magnetic field in the region of the muon stations
-and all tracks are in pronciple straight lines\footnote{Of course there is multiple scattering as well.}
-The \chisq reduces the chances that random combinations fake a real muon track.
-Once a track was identified as muon with the \mvm tool it follows the subsequen steps shown in \figref{}
 
-You need to mentione the magnet hit somehow.
-\subsection{Upgrade to MatchVeloTTMuon }
+As it can be seen in \figref{}, the \lhcb magnet is between the \velo tracker and the and muon system.
+The \lhcb magnetic field deflects tracks based on their momentum. The lower the momentum of a atrack the more
+it is deflected by the magnetic field. Since, no momentum or charge information is available for the \velo
+track before the \FwD algorithm is run, the size of the M3 FoI is defined assuming a minimum track momentum of 6 \gevc.
+This particular momentum value corresponds to the lowest momentum tracks that the subsequent \isMuon algorithm accepts.
+
+After considering all the M3 muons hits inside the FoI, additional muon hits are added to
+the M3 seed hits by extrapolating from each M3 seed hit further to the rest of the muon stations.
+Since there is no magnetic field between the muons stations the above mentione extrapolations are simple straight lines.
+The corresponding FoIs for the rest of the muon stations are smaller since there is no deflection involved.
+These FoIs account for the fact that the presence of heavy material between the muon stations change the
+trajectory of a muon passing thorough, this effect is called multiple scattering, {\color{red} cite panos or other shit.}
+and it is more pronounced for low momentum tracks.
+
+At least 3 hits in the muon stations M2-M5 are required by the \mvm algorithm in order to accept the initial VELO track.
+At the end of this procedure all {\it muon candidate tracks} that could result from an initial VELO track were considered.
+Within the scope of the current chapter a muon candidate track is defined as the track formed by muon hits only.
+Note that at this stage of the algorithm an estimate of the momentum of the initial VELO track becomes available
+for each candidate muon track using the kick method \cite{roelThesis}, {\color{red} there is a better citation for that.}.
+The kick method provides an estimate of the track momentum given the change in its slope when passing through a magnetic
+field of a given streagth. The relation between the change in slope and the track momentum is empiracally estimated
+in \cite{roelThesis}.
+
+As a last step the candidate muon tracks originating from the above procedure are filtered by a $\chisq/{\rm DoF}$
+requirement. The \chisq is simple to compute since there is no magnetic field in the region of the muon stations
+and all tracks are in principle almost straight lines, taking into account the presence of multiple scattering, mentioned above.
+The \chisq requirement reduces the chances that random combinations of muon hits can fake a real muon track.
+The requirement is particularly usefull for low momentum tracks for which the number of M3 seed hits is larger,
+due to larger corresponding M3 FoI, and thus the number of posible random combinations of muon tracks incereases.
+
+An important detail that increases the discriminating power of the above mentioned \chisq requirement is the
+so called {\it magnet hit}. The last is not a hit comming from a tracking station but rather the $(x,y)$ coorodinates
+of the $z$ focal plane of the \lhcb magnet. The focal plane is essentially the plane defiend by the $z$ coordinate
+where the change in the slope of a track, due to the magnetic field,  "instantaneously" takes place. Note that this
+instantaneous change in slope is an approximation. In reality the track follows a smooth trajectory inside the whole
+area of the amgnetc field, see {\color{red} ecent dispalay}. However estimating this trajectory uses valuable computation time during \hltone, while
+\mvm can perform efficiently enough without a smooth track trajectory using the focal pane approximation.
+The position of the $z$ focal plane has been studied \cite{} and used in the \mvm algorithm.
+As mentioned in the begining of the paragraph including the magnet hit helps rejecting fake muon tracks.
+Including the magnet hit in the \chisq essentialy requires that the muon hits are aligned in a straight line that
+also passes from the magnet hit, which is true for real muon tracks only.
+
+% The distance between the magnet hit and
+% the muon system also plays a role, since the pointing of a fake muon track within a given hit resolution
+% , $\sim 10 \m$, compared to the one
+% between the muon hits, $\sim 1 \m$.
+
+\subsection{Upgrade to MatchVeloTTMuon}
 \label{sec:matchvelottmuon}
 There are blah things that are different in run2 (veloTT and larger EFF). This makes room for improvement.
 MVM is improved in those steps(smaller foI, magnetic field paramterization, chisq)
-As described in \cite{LHCb-PUB-2015-005} in the \runtwo data-taking all the tracks are upgraded as VELO-TT segments,
+
+As described in \cite{LHCb-PUB-2015-005} in the \runtwo data-taking all the tracks are upgraded as VELO-TT segments, {\color{red} define}
 exploiting information from the \ttracker tracking station which, being closer to the magnet,
 guarantees a first momentum estimated. As already said, forward tracking is then passed on
 all tracks above 500 \mevc of \pt.
@@ -185,17 +218,6 @@ FoI in M3 to search for seed hits. The sign information of \veloTTCand halves th
 and the momentum knowledge reduces the FoI size further, since the assumption of a momentum of 6 \mev
 is no longer necessary. The last carries a big improvement potential
 since smaller FoIs implies less seed hits in M3 and thus less fake muon candidates and less processing time per input VELO track.
-Another improvement that follows naturally from the previous one is the usage of offline FoIs.
-The offline FoIs are momentum dependant search windows that are used
-by the \muonID in the offline muon reconstruction. It is trivial to see that the combination of the above improvements
-make the extrapolation of a VELO-TT segment to the M3 muon station more precise.
-
-
-%% The effect of better FoI is also depicted in the middle row of \figref{fig:mvm_extrap}, where the distrance $\text{d}^{\text{true-extrap}}_x$ between the true M3 hit and the
-%% extrapolation point (from veloTT to M3) is shown. There are two things that improve when comparing the left (\mvm) and right (\mvTTm). First the double structure
-%% peak\footnotemark is not present anymore and the width is significantly imporoved, impling that the extrapolation to M3 is more precise.
-
-%% \footnotetext[10]{ The structure is caused by a not perfect parametrization of the magnetic field.}
 
 Furthermore, the \chisq fit that \mvm calculates is also improved since the vertical plane is added in \mvTTm. In more detail, the \chisq fit is a straight line fit
 performed to all the possible muon candidate tracks that originate from the seed hits of a given initial VELO track. The fit used to be performed only in the horizontal
