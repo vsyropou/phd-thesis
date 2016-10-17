@@ -63,7 +63,14 @@ also passes from the magnet hit, which is true for real muon tracks only.
 
 \subsection{Upgrade to MatchVeloTTMuon}
 \label{sec:matchvelottmuon}
-There are blah things that are different in run2 (veloTT and larger EFF). This makes room for improvement.
+As mentioned in \secref{muid_hlt1}, improvements in the computing infrasstructure allowed for all the tracks
+above 500\mev to be directly updated to long tracks and fitted. In addtion the velocandidates are upgraded to
+VeloTT which they have a mometum and charge estimate and lower ghost rate as well. Meaning a more pure velo track candidates.
+Now as far as tracks below that threshold,
+hearafter refered to as low momenta tracks, there are several things that can be exploited such that
+the low pt threshold is pushed further increasing the effiency of low pt tracks, while keepign the \hlt rate
+at a managable level.
+
 MVM is improved in those steps(smaller foI, magnetic field paramterization, chisq)
 
 As described in \cite{LHCb-PUB-2015-005} in the \runtwo data-taking all the tracks are upgraded as VELO-TT segments, {\color{red} define}
