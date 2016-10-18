@@ -63,70 +63,36 @@ also passes from the magnet hit, which is true for real muon tracks only.
 
 \subsection{Upgrade to MatchVeloTTMuon}
 \label{sec:matchvelottmuon}
-As mentioned in \secref{muid_hlt1}, improvements in the computing infrasstructure allowed for all the tracks
-above 500\mev to be directly updated to long tracks and fitted. In addtion the velocandidates are upgraded to
-VeloTT which they have a mometum and charge estimate and lower ghost rate as well. Meaning a more pure velo track candidates.
-Now as far as tracks below that threshold,
-hearafter refered to as low momenta tracks, there are several things that can be exploited such that
-the low pt threshold is pushed further increasing the effiency of low pt tracks, while keepign the \hlt rate
-at a managable level.
+As mentioned in \secref{muid_hlt1}, due to the inceased \hltone rate in \runtwo it becomes possible to
+remove the \mvm algorithm form the sequence of the \hltone muon lines and upgrade all \veloTracks with $\pt>500 \mevc$ to long tracks and fit them.
+Furthermore, another improvement is the use of information from the \ttracker tracker when reconstructing \velo trakcs \cite{LHCb-PUB-2015-005}.
+Note that, the \ttracker is posistioned close enough to the \lhcb magnet to allow for a first track momentum estimate.
+The \ttracker momentum resolution is inferior, $\sim 15\%$, compared to the one of long tracks. However filtering
+\velo tracks with \ttracker information increases the purity\footnote{by reducing the number of a type of fake tracks called {\it ghost tracks}, see {\color{red} cite ghost}}.
+The above mentioned improvements offer oportunities for reconstructing muons with $\pt<500 \mevc$, hearafter low momenta muons,
+by upgrading the old \mvm algorithm. The upgraded alrorithm is used by newlly introdced \hltone muon lines which aim
+at reconstructing low \pt muons.
 
-MVM is improved in those steps(smaller foI, magnetic field paramterization, chisq)
+The upgraded \mvTTm algorithm improves in three points with respect to the old \mvm algorithm.
+First the newly available momentum, and hence charge, information from the \ttracker is used to open smaller M3 FoIs.
+This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm, since the number of
+random combinations that coould fake a muon reduces with the number of M3 seed hits.
+Second, the parametrization of the magnet $z$ focal plane as well as the errors on the magnet hit $(x,y)$ coordinates
+are tuned using simulated data. Lastly the vertical, non-bending, $y$ plane is included in the \chisq
+computation\footnote{Note that the $y$ projection of a track is almost a straight line, since the magnetic field is parallel to the $y$ axis
+and thus exherting no force along this direction.}, which was not the case in the old \mvm algoritm.
+The last two impovements both incerease the discriminating power of the \chisq.
+Lastly, an important caveat arises from the fact that there can be \veloTTracks that they do not have any information from
+the \ttracker. These tracks are normal high momentum tracks that pass through the \ttracker station's inner hole
+where there is no active detector material. Since there is no reason to discard these tracks the upgraded \mvTTm treats
+those tracks as the old \mvm algorithm did\footnote{Meaning that the M3 FoI are big enough to include the posibility for
+both positively and negatively charged tracks, see \cite{roelThesis}}.
 
-As described in \cite{LHCb-PUB-2015-005} in the \runtwo data-taking all the tracks are upgraded as VELO-TT segments, {\color{red} define}
-exploiting information from the \ttracker tracking station which, being closer to the magnet,
-guarantees a first momentum estimated. As already said, forward tracking is then passed on
-all tracks above 500 \mevc of \pt.
-
-For tracks below 500 \mevc of \pt the \mvm algorithm could still recover efficiency for the muon lines,
-however in view of the already upgraded VELO-TT tracks, this tool was rewritten in order to better exploit these tracks.
-
-
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
-    \caption{}
-    \label{mvTTm_eff_p}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
-    \caption{}
-    \label{mvm_eff_p}
-  \end{subfigure}
-  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
- The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
- \label{mvm_eff_p_comp}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_pt}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt}}
-    \caption{}
-    \label{mvTTm_eff_p}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_pt}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt}}
-    \caption{}
-    \label{mvm_eff_p}
-  \end{subfigure}
-  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
- The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
- \label{mvm_eff_p_comp}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
+    \tikzsetnextfilename{mvm_efficiency_pt_zoom}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_pt_zoom}}
     \caption{}
     \label{mvTTm_eff_p}
   \end{subfigure}%
@@ -139,21 +105,52 @@ however in view of the already upgraded VELO-TT tracks, this tool was rewritten 
   \end{subfigure}
   \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
  The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
+ \label{mvm_eff_pt_zoom_comp}
+\end{figure}
+
+After the improvements mentioned in the above paragraph took place, the efficiency of the upgraded \mvTTm algorithm
+is estimated versus the total and transverse momentum and compared with the old algorithm. A common cutoff value for
+the $\chisq/\nDoF$ of 2 is chosen for a fair comparision. The efficiency projected verseus the total momentum, $\ptot$
+can be seen in \figref{mvm_eff_p_comp}, where the imrovement of the upgraded \mvTTm agorithm are significant.
+Given that the aim of the \mvTTm upgrade is to optimise for high efficiency of low transverse momenta muons,
+the efficiency is also projected versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned in \secref{muid_hlt1}
+all the high $\pt$ muons will not be processed by the \mvTTm algorithm the last figure focuses on the region where $\pt\in[0,0.5]\gevc$.
+The relative efieciency increase with respect to the old \mvm algorithm in the last region is $\sim 50\%$.
+For the efficiency studies simulated \Sigmapmumu events were used, where the mean transverse momentum is $\sim 300\mevc$.
+Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the old and upgraded algorithm is shown in \figref{mvm_chi2_comp}.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_p}}
+    \caption{}
+    \label{mvTTm_eff_p}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
+    \caption{}
+    \label{mvm_eff_p}
+  \end{subfigure}
+  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
+ The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
  \label{mvm_eff_p_comp}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_chi2_sigp_bigger}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/chi2_sigp_bigger_10000}}
+    \tikzsetnextfilename{mvm_chi2_sigpt_smaller}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/chi2_sigpt_smaller_500}}
     \caption{}
     \label{mvTTm_chi2}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_chi2_sigp_smaller}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/chi2_sigp_smaller_10000}}
+    \tikzsetnextfilename{mvTTm_chi2_sigpt_smaller}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/chi2_sigpt_smaller_500}}
     \caption{}
     \label{mvm_chi2}
   \end{subfigure}
@@ -161,7 +158,13 @@ however in view of the already upgraded VELO-TT tracks, this tool was rewritten 
  \label{mvm_chi2_comp}
 \end{figure}
 
-\begin{figure}[h]
+\subsubsection{z focal plane parametrization}
+The formulas that are used are blah
+
+\subsubsection{Residuals}
+The formulas that are used are blah
+
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{mvTTm_wind_eff_total_x}
@@ -180,24 +183,50 @@ however in view of the already upgraded VELO-TT tracks, this tool was rewritten 
  \label{mvm_res}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_wind_eff_pos_neg_dx_norm}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+    \tikzsetnextfilename{mvm_wind_eff_total_x}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/wind_eff_total_x}}
     \caption{}
-    \label{mvTTm_pos_neg_x_norm}
+    \label{mvTTm_res_x}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvm_wind_eff_pos_neg_dx_norm}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+    \tikzsetnextfilename{mvm_wind_eff_total_y}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/wind_eff_total_y}}
     \caption{}
-    \label{mvm_pos_neg_x_norm}
+    \label{mvm_res_y}
   \end{subfigure}
-  \caption{positive negative normalised x residuals. }
- \label{mvm_pos_neg_x_norm_comp}
+  \caption{Residulas.  }
+ \label{mvm_res}
 \end{figure}
+
+% \begin{figure}[h]
+%   \centering
+%   \begin{subfigure}{0.5\textwidth}
+%     \tikzsetnextfilename{mvTTm_wind_eff_pos_neg_dx_norm}
+%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+%     \caption{}
+%     \label{mvTTm_pos_neg_x_norm}
+%   \end{subfigure}%
+%   \hfill%
+%   \begin{subfigure}{0.5\textwidth}
+%     \tikzsetnextfilename{mvm_wind_eff_pos_neg_dx_norm}
+%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
+%     \caption{}
+%     \label{mvm_pos_neg_x_norm}
+%   \end{subfigure}
+%   \caption{positive negative normalised x residuals. }
+%  \label{mvm_pos_neg_x_norm_comp}
+% \end{figure}
+
+
+% The optimization aims in pushing the low momenta boundary down while increasing the signal efficiency and keeping the output
+% \hltone rate managable. Note that there are a LOT more low pt tracks.
+%
+
+
 
 % \begin{figure}[h]
 %   \centering
@@ -219,27 +248,6 @@ however in view of the already upgraded VELO-TT tracks, this tool was rewritten 
 % \end{figure}
 
 
-In addition to the above mentioned improvement there are several more points that \mvm can benefit from.
-First due to the fact that the \veloTTCand have momentum and charge information, it is possible to open better
-FoI in M3 to search for seed hits. The sign information of \veloTTCand halves the FoI size
-and the momentum knowledge reduces the FoI size further, since the assumption of a momentum of 6 \mev
-is no longer necessary. The last carries a big improvement potential
-since smaller FoIs implies less seed hits in M3 and thus less fake muon candidates and less processing time per input VELO track.
-
-Furthermore, the \chisq fit that \mvm calculates is also improved since the vertical plane is added in \mvTTm. In more detail, the \chisq fit is a straight line fit
-performed to all the possible muon candidate tracks that originate from the seed hits of a given initial VELO track. The fit used to be performed only in the horizontal
-plane ($x$ coordinate ). Adding the vertical plane improves the discriminating power of the \chisq.
-
-%% The \chisq distributions for two momentum ranges are show in \figref{fig:mvm_chiSq}
-
-Finally, the efficiency curves after all the improvements are shown in \figref{fig:mvm_eff}.
-Top row shows the efficiency for \mvm versus $p$ and \pt, whereas
-the bottom one the \mvTTm. Both algorithms get the same input tracks, namely \veloTTCand.
-For low momenta the improvement is clear, whereas for high momenta
-there is no efficiency loss within the statistical uncertainties. However any potential loss
-after 500 \mevc in \pt is not relevant since, as it was stated
-in the beginning of the current section, \mvTTm runs only on tracks with low momenta.
-
 \begin{table}[!h]
  \centering
  \caption{Timing comparison between the old \mvm and the new \mvTTm, for three representative \hltone trigger lines.}
@@ -257,31 +265,3 @@ in the beginning of the current section, \mvTTm runs only on tracks with low mom
 
 \vspace{0.5cm}
 \end{table}
-
-Furthermore, the per event processing time is also reduced by $\sim 20\% - 40 \%$ using \mvTTm
-with respect to the old \mvm, see \tabref{tab:mvm_time_diff}.
-This is clearly because of the less number of seed hits in M3 resulting from the smaller FoI. Lastly, an important caveat arises from the fact that there can be tracks
-that are labelled as \veloTTCand but they actually do not have \ttracker hits. These tracks are normal high \pt tracks that pass through the \ttracker station's inner hole
-where there is no active detector material.
-Thus they are just copied to the list of output tracks when the \veloTTCand are reconstructed.
-\mvTTm does not discard this type of tracks either but deals with them properly
-by invoking the old \mvm algorithm for such type of tracks.
-
-%% \begin{table}
-%%   \centering
-%%  \caption{skase}
-%% \label{tab:mvm_fine_tune}
-%%   \begin{tabular}{ c c c c c }
-%%    \toprule
-%%    $\nicefrac{\text {foiX}}{\chi^2}$ &   5  &   10  &   20  &   30      \\
-%%   \midrule
-%%   x3 &  97.2 &  97.7 &  97.4 &  97.6  \\
-%%   x4 &  97.8 &  98.1 &  97.9 &  98.1  \\
-%%   x5 &  98.5 &  98.8 &  98.7 &  98.8  \\
-%%   x6 &  98.5 &  98.8 &  98.8 &  98.9  \\
-%%   x7 &  98.8 &  99.1 &  99.3 &  99.3  \\
-%%   x8 &  98.8 &  99.1 &  99.3 &  99.3  \\
-%%   x9 &  98.8 &  99.1 &  99.3 &  99.3  \\
-%%  \bottomrule
-%%   \end{tabular}
-%% \end{table}
