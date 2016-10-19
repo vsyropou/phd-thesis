@@ -1,6 +1,6 @@
-In \runone all \velo tracks in \hltone were filtered by the \mvm algorithm. The latter performs a quick check,
-given the muon stations hits, on wheather a \velo track is comaptible with being identified as a muon by the subsecuent
-tracking algorithms, before these algorithms are actualy run. If the \velo track passes certain simple requirements it
+In \runone all \veloTracks in \hltone were filtered by the \mvm algorithm. The latter performs a quick check,
+given the muon stations hits, on wheather a \veloTrack is comaptible with being identified as a muon by the subsecuent
+tracking algorithms, before these algorithms are actualy run. If the \veloTrack passes certain simple requirements it
 is accepted, otherwise it is discarded permanently and not processed further by the \hlt muon lines. As a result
 valuable computing time is saved, since the \FwD tracking and fiting algorithms are time costly.
 
@@ -16,8 +16,8 @@ there is no M3 muon hit asigned to a VELO track.
 
 As it can be seen in \figref{}, the \lhcb magnet is between the \velo tracker and the and muon system.
 The \lhcb magnetic field deflects tracks based on their momentum. The lower the momentum of a atrack the more
-it is deflected by the magnetic field. Since, no momentum or charge information is available for the \velo
-track before the \FwD algorithm is run, the size of the M3 FoI is defined assuming a minimum track momentum of 6 \gevc.
+it is deflected by the magnetic field. Since, no momentum or charge information is available for the \veloTrack
+before the \FwD algorithm is run, the size of the M3 FoI is defined assuming a minimum track momentum of 6 \gevc.
 This particular momentum value corresponds to the lowest momentum tracks that the subsequent \isMuon algorithm accepts.
 
 After considering all the M3 muons hits inside the FoI, additional muon hits are added to
@@ -37,7 +37,7 @@ The kick method provides an estimate of the track momentum given the change in i
 field of a given streagth. The relation between the change in slope and the track momentum is empiracally estimated
 in \cite{roelThesis}.
 
-As a last step the candidate muon tracks originating from the above procedure are filtered by a $\chisq/{\rm DoF}$
+As a last step the candidate muon tracks originating from the above procedure are filtered by a $\chisq/\nDoF$
 requirement. The \chisq is simple to compute since there is no magnetic field in the region of the muon stations
 and all tracks are in principle almost straight lines, taking into account the presence of multiple scattering, mentioned above.
 The \chisq requirement reduces the chances that random combinations of muon hits can fake a real muon track.
@@ -65,10 +65,10 @@ also passes from the magnet hit, which is true for real muon tracks only.
 \label{sec:matchvelottmuon}
 As mentioned in \secref{muid_hlt1}, due to the inceased \hltone rate in \runtwo it becomes possible to
 remove the \mvm algorithm form the sequence of the \hltone muon lines and upgrade all \veloTracks with $\pt>500 \mevc$ to long tracks and fit them.
-Furthermore, another improvement is the use of information from the \ttracker tracker when reconstructing \velo trakcs \cite{LHCb-PUB-2015-005}.
+Furthermore, another improvement is the use of information from the \ttracker tracker when reconstructing \veloTracks \cite{LHCb-PUB-2015-005}.
 Note that, the \ttracker is posistioned close enough to the \lhcb magnet to allow for a first track momentum estimate.
 The \ttracker momentum resolution is inferior, $\sim 15\%$, compared to the one of long tracks. However filtering
-\velo tracks with \ttracker information increases the purity\footnote{by reducing the number of a type of fake tracks called {\it ghost tracks}, see {\color{red} cite ghost}}.
+\veloTracks with \ttracker information increases the purity\footnote{by reducing the number of a type of fake tracks called {\it ghost tracks}, see {\color{red} cite ghost}}.
 The above mentioned improvements offer oportunities for reconstructing muons with $\pt<500 \mevc$, hearafter low momenta muons,
 by upgrading the old \mvm algorithm. The upgraded alrorithm is used by newlly introdced \hltone muon lines which aim
 at reconstructing low \pt muons.
@@ -161,8 +161,9 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
 \subsubsection{z focal plane parametrization}
 The formulas that are used are blah
 
-\subsubsection{Residuals}
+\subsubsection{\hltone rate considerations}
 The formulas that are used are blah
+
 
 \begin{figure}[t]
   \centering

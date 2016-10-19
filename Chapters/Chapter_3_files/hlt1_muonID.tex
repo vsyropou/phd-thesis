@@ -46,12 +46,12 @@ In order to understand the origin of this efficiency loss the \hltone algorithm 
 
 The \hltone muon trigger lines sequence during \runone is shown in \figref{fig:hlt1_algo_seq}(a).
 Only a brief summary of this procedure is given here,  while more details can be found in \cite{LHCb-PUB-2011-017}.
-During \runone the muon identification started directly from \velo tracks,{\color{red} define in blah}
+During \runone the muon identification started directly from \veloTracks,{\color{red} define in blah}
 and identified muons with a simple extrapolation, done by the \mvm algorithm\cite{LHCb-PUB-2011-017}.
 Subsequently those potential muons were upgraded to long tracks, {\color{red} define in blah}, by the
-\FwD tracking algorithm. After this, the \kw{IsMuon} algorithm was applied {\color{red} site isMuon algo}.
+\FwD tracking algorithm. After this, the \isMuon algorithm was applied {\color{red} site isMuon algo}.
 In addition there were some quality cuts between each algorithm step, such as the number of \velo hits
-of the track or the fitted track $\chisq_{\text {nDoF}}$ as well as momentum cuts applied after the \FwD
+of the track or the fitted track $\chisq/\nDoF$ as well as momentum cuts applied after the \FwD
 tracking algorithm. The minimum momentum and transverse momentum was 6 \gevc and 0.5 \gevc respectively.
 
 \begin{figure}[h!]
@@ -72,7 +72,7 @@ As mentioned earlier the updated scheme of \hltone for \runtwo includes two majo
 The updated \hltone algorith sequence for \runtwo is shown in \figref{fig:hlt1_algo_seq}(b).
 For the majority of the tracks, which have transverse momentum larger than 500 MeV, the sequence is different with respect to
 Run I: full tracking is performed for these tracks, so that the start for muon finding is already with long tracks.
-After soft quality cuts these get passed through the standard \kw{IsMuon} algorithm in order to be identified;
+After soft quality cuts these get passed through the standard \isMuon algorithm in order to be identified;
 positively identified muons are then combined into dimuons as in Run I.
 The combination of the use of long tracks and standard muon identification is much more efficient than the
 procedure in Run I, and is exactly the same as the one of offline reconstruction.
