@@ -159,11 +159,21 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
 \end{figure}
 
 \subsubsection{z focal plane parametrization}
-The formulas that are used are blah
+The emperical parametrization of the magnet focal plane $z$ coordinate \cite{blah}, already used in  the old \mvm,
+is corrected using simulated data. The correction is a function of the inverse momentum. It is extracted by comparing
+a proper extrapolation, that describes the magnetic field, with the kick method. The correction is based on the fact
+that a good estimate of the z magnet coordinate is the one that gives a momentum estiamte as close to the one from MC.
 
-\subsubsection{\hltone rate considerations}
-The formulas that are used are blah
+For the erros something similar is done but I still need to study it a bit. (this correction was done after i submitted my code.)
 
+\subsubsection{M3 hit residuals}
+The FoIs opended to look for hits in M3 do not rely on an track extrapolation from the \velo to the M3.
+Instead, the $x$ coordinate FoI edges are computed under the assumption of a maximum deflection, similarly
+to the way it was done in the old \mvm. The only difference is the use of charge information from the \ttracker
+which almost halves the FoI size. In order to get a feeling of how large the FoIs have to be, simulated events are
+used to visualise the distance of the true hit in M3 from the middle of the FoI. The results are shown in \figref{mvm_res}.
+The y plane is the non-bending plane hence the difference in the width of the residual distributions.
+The very bad events correspond to caseses were the charge estimate of the \velo TT track is wrong.
 
 \begin{figure}[t]
   \centering
@@ -184,70 +194,19 @@ The formulas that are used are blah
  \label{mvm_res}
 \end{figure}
 
-\begin{figure}[t]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvm_wind_eff_total_x}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/wind_eff_total_x}}
-    \caption{}
-    \label{mvTTm_res_x}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvm_wind_eff_total_y}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/wind_eff_total_y}}
-    \caption{}
-    \label{mvm_res_y}
-  \end{subfigure}
-  \caption{Residulas.  }
- \label{mvm_res}
-\end{figure}
-
-% \begin{figure}[h]
-%   \centering
-%   \begin{subfigure}{0.5\textwidth}
-%     \tikzsetnextfilename{mvTTm_wind_eff_pos_neg_dx_norm}
-%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
-%     \caption{}
-%     \label{mvTTm_pos_neg_x_norm}
-%   \end{subfigure}%
-%   \hfill%
-%   \begin{subfigure}{0.5\textwidth}
-%     \tikzsetnextfilename{mvm_wind_eff_pos_neg_dx_norm}
-%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_pos_neg_dx_norm}}
-%     \caption{}
-%     \label{mvm_pos_neg_x_norm}
-%   \end{subfigure}
-%   \caption{positive negative normalised x residuals. }
-%  \label{mvm_pos_neg_x_norm_comp}
-% \end{figure}
-
-
-% The optimization aims in pushing the low momenta boundary down while increasing the signal efficiency and keeping the output
-% \hltone rate managable. Note that there are a LOT more low pt tracks.
-%
+\begin{equation}
+xMin and xMax =
+\end{equation}
 
 
 
-% \begin{figure}[h]
-%   \centering
-%   \begin{subfigure}{0.5\textwidth}
-%     \tikzsetnextfilename{mvTTm_wind_eff_bra}
-%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_bra}}
-%     \caption{}
-%     \label{mvTTm_wind_eff_bra}
-%   \end{subfigure}%
-%   \hfill%
-%   \begin{subfigure}{0.5\textwidth}
-%     \tikzsetnextfilename{mvm_wind_eff_bra}
-%     \scalebox{.6}{\input{Figures/Chapter3/MvTTM/wind_eff_bra}}
-%     \caption{}
-%     \label{mvm_wind_eff_bra}
-%   \end{subfigure}
-%   \caption{2D M3 residuals. }
-%  \label{mvm_wind_eff_bra_comp}
-% \end{figure}
-
+\subsubsection{\hltone timming and rate considerations}
+After all the improvemntes described above take place, the \mvTTm algorithm needds to be tunded to comply with the
+\hltone output rate mentioned in \secref{}. The targer rate for the lines aiming at soft muons is X. Given that the
+cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2. Based on the distributions of \figref{}, the
+last value imples that a \veloTrack which is accepted by the \mvTTm algorithm has X percent probability of being
+a real muon ad Y percent to originate frm random combiantions in the muon stations. The overal \mvTTm efficiency
+for the above cutoff value is that much.
 
 \begin{table}[!h]
  \centering
