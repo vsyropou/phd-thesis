@@ -103,8 +103,7 @@ both positively and negatively charged tracks, see \cite{roelThesis}}.
     \caption{}
     \label{mvm_eff_p}
   \end{subfigure}
-  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
- The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
+  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of transverse momentum.}
  \label{mvm_eff_pt_zoom_comp}
 \end{figure}
 
@@ -134,8 +133,7 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
     \caption{}
     \label{mvm_eff_p}
   \end{subfigure}
-  \caption{Efficiency comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.
- The efficiency is projected versus total (left column) and transverse (right column) momentum.  }
+  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of total momentum.}
  \label{mvm_eff_p_comp}
 \end{figure}
 
@@ -154,7 +152,8 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
     \caption{}
     \label{mvm_chi2}
   \end{subfigure}
-  \caption{\chisq comparison between the old \mvm (top row) and the new \mvTTm (bottom row) algorithms.}
+  \caption{Distribution of the \chisq variable between the old (left) and the new (right) matching algorithms.
+           Only low momentum \veloTracks are considered.}
  \label{mvm_chi2_comp}
 \end{figure}
 
@@ -166,14 +165,18 @@ that a good estimate of the z magnet coordinate is the one that gives a momentum
 
 For the erros something similar is done but I still need to study it a bit. (this correction was done after i submitted my code.)
 
-\subsubsection{M3 hit residuals}
-The FoIs opended to look for hits in M3 do not rely on an track extrapolation from the \velo to the M3.
-Instead, the $x$ coordinate FoI edges are computed under the assumption of a maximum deflection, similarly
-to the way it was done in the old \mvm. The only difference is the use of charge information from the \ttracker
-which almost halves the FoI size. In order to get a feeling of how large the FoIs have to be, simulated events are
-used to visualise the distance of the true hit in M3 from the middle of the FoI. The results are shown in \figref{mvm_res}.
-The y plane is the non-bending plane hence the difference in the width of the residual distributions.
-The very bad events correspond to caseses were the charge estimate of the \velo TT track is wrong.
+\subsubsection{M3 Field of Intereset}
+As explained in \secref{sec:muon_matching} the M3 FoI $x$ coordintes are computed assuming a minimum track momentum, and thus maximum deflection,
+of $6\gevc$. For a $6\gevc$ muon the deflection caused by the \lhcb magnet is computed using the empirical paramtetrization mentioned in Section blah of \cite{roelThesis}.
+Using this techinique makes it possible to estimate the region in M3 that a muon track will arrive at without performing the computation
+expensive calculation of its trajectory through the \lhcb magnet, also refered to track {\it extrapolation}. In order to visualise the FoI sizes,
+simulated events are used to compute the distance of the true hit in M3 from the middle of the FoI, respectivelly in the $x$ and $y$ planes.
+The results are shown in \figref{mvm_res}. The average FoI half-width is $2.7\m$ and $0.4\m$ respectivelly for the $x$ and $y$ planes.
+Which imples that most of the times the true hit is inside the FoI. The outliers in the \figref{mvTTm_res_x} in with $|d^{M3}|>3\m$
+correspond to cases were the track charge estimate by the \ttracker is wrong. Remember that charge information is used to
+look for hits only in the one side of the M3 station. Lastly the y plane is the non-bending plane hence the FoI sizes
+are smaller, compared to the ones for the $x$ plane, since only multiple scattering is present in that plane.
+
 
 \begin{figure}[t]
   \centering
@@ -190,38 +193,23 @@ The very bad events correspond to caseses were the charge estimate of the \velo 
     \caption{}
     \label{mvm_res_y}
   \end{subfigure}
-  \caption{Residulas.  }
+  \caption{Hit pseudo-residuals in M3. The distributions correspond to the distnace between the center of the FoI and the true M3 hit
+           in the $x$ (left) and $y$ (right) planes respectively.}
  \label{mvm_res}
 \end{figure}
 
-\begin{equation}
-xMin and xMax =
-\end{equation}
-
-
-
 \subsubsection{\hltone timming and rate considerations}
-After all the improvemntes described above take place, the \mvTTm algorithm needds to be tunded to comply with the
-\hltone output rate mentioned in \secref{}. The targer rate for the lines aiming at soft muons is X. Given that the
-cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2. Based on the distributions of \figref{}, the
-last value imples that a \veloTrack which is accepted by the \mvTTm algorithm has X percent probability of being
-a real muon ad Y percent to originate frm random combiantions in the muon stations. The overal \mvTTm efficiency
-for the above cutoff value is that much.
+After all the improvemntes the \mvTTm algorithm needs to be tunded to comply with the \hltone output rate of 12
+\khz mentioned in \secref{sec:muon_matching}. Given that the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
+Based on the signal and background distributions of \figref{mvTTm_chi2}, the last value imples that a \veloTrack which
+is accepted by the \mvTTm algorithm has {\color{red} X (to be computed)} percent probability of being
+a real muon and {\color{red} Y (to be computed)} percent to originate frm random combiantions in the muon stations. The overal \mvTTm efficiency in the $\pt<0.5\gevc$
+for the above cutoff value is $\epsilon = 55 \pm 1.5 \%$. In addition it was checked that the changes introduced in the upgraded \mvTTm algorithm
+do not ncrease the excecution time. It turns out that the procesing time per input track is actually smaller comapred to
+the old \mvm, this improvement is attributed to the reduced number of M3 seed hits.
 
-\begin{table}[!h]
- \centering
- \caption{Timing comparison between the old \mvm and the new \mvTTm, for three representative \hltone trigger lines.}
- \label{tab:mvm_time_diff}
- \begin{tabular}{l c c c c}
-  \toprule
-                   & \multicolumn{2}{c}{\mvm}       & \multicolumn{2}{c}{\mvTTm}\\
-  HLT1 line        &  per event [ms] &  total [s]  &  per event [ms] &  total [s] \\
-  \midrule
-  DiMuonHighMass   &        9.04     &     5.05    &     4.64        &     2.58   \\
-  DiMuonLowMass    &        0.33     &     0.18    &     0.22        &     0.14   \\
-  SingleMuonHighPT &        0.23     &     0.13    &     0.17        &     0.10   \\
-  \bottomrule
- \end{tabular}
-
-\vspace{0.5cm}
-\end{table}
+\subsubsection{Possible imporvements}
+\begin{itemize}
+  \item velo UT increased momentum estimate 5 percent
+  \item Given that use offline FoIs, which are momentum dependant and thus smaller. save time and reduce background.
+\end{itemize}
