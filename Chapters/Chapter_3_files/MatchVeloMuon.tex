@@ -158,12 +158,12 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
 \end{figure}
 
 \subsubsection{z focal plane parametrization}
-The emperical parametrization of the magnet focal plane $z$ coordinate \cite{blah}, already used in  the old \mvm,
-is corrected using simulated data. The correction is a function of the inverse momentum. It is extracted by comparing
-a proper extrapolation, that describes the magnetic field, with the kick method. The correction is based on the fact
-that a good estimate of the z magnet coordinate is the one that gives a momentum estiamte as close to the one from MC.
+The emperical parametrization of the magnet focal plane $z$ coordinate \cite{blah}, already used in the old \mvm,
+is updated. Furhtermore the $x,y$ errors on the position of the magnet hit are empirically estimated using the simulated data.
+Specifically, since the true muon track is known it is possible to tune these errors such that they yield the same momentum
+estimation as the full computation of the muon trajectory would do. Note that a momentum esitmate is available by the
+\mvTTm algorith as soon as a seed hit in M3 is found.
 
-For the erros something similar is done but I still need to study it a bit. (this correction was done after i submitted my code.)
 
 \subsubsection{M3 Field of Intereset}
 As explained in \secref{sec:muon_matching} the M3 FoI $x$ coordintes are computed assuming a minimum track momentum, and thus maximum deflection,
@@ -176,7 +176,6 @@ Which imples that most of the times the true hit is inside the FoI. The outliers
 correspond to cases were the track charge estimate by the \ttracker is wrong. Remember that charge information is used to
 look for hits only in the one side of the M3 station. Lastly the y plane is the non-bending plane hence the FoI sizes
 are smaller, compared to the ones for the $x$ plane, since only multiple scattering is present in that plane.
-
 
 \begin{figure}[t]
   \centering
@@ -209,7 +208,15 @@ do not ncrease the excecution time. It turns out that the procesing time per inp
 the old \mvm, this improvement is attributed to the reduced number of M3 seed hits.
 
 \subsubsection{Possible imporvements}
-\begin{itemize}
-  \item velo UT increased momentum estimate 5 percent
-  \item Given that use offline FoIs, which are momentum dependant and thus smaller. save time and reduce background.
-\end{itemize}
+The most straight forward way to improve the matching allgorithm in terms of efficiency is
+by relaxing the value of the $\chisq/\nDoF$ cut-off value. On the other hand side, doing so will increase the number
+of ouput tracks to the point that the \hltone rate requirement of 12 \khz is not fulfilted.
+Alternatevely, one might attempt to imporve the $\chisq/\nDoF$ discriminating variable itselt,
+by finding a better paramterization for the magntet hit position and errors. However the current
+paramterization seems to be quite good with respect to the one present in the old \mvm algorithm.
+Lastly, in case the momentum estimate of \ttracker improves\footnote{For example in the upgraded it
+UT tracker that will replace the \ttracker} then it is worth investigating using the FoI used in the
+\muonID code mentioned in \secref{}. The last FoIs are momentum dependant search windows, impling
+that smaller FoIs are more suitable for hight momentum muons and \viceversa for low momentum ones.
+This effectivelly reduces the number of M3 seed hits and thus increasing the purity of output tracks
+which might allow to relax the $\chisq/\nDoF$ requirement.
