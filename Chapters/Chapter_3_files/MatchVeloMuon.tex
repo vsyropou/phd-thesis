@@ -9,8 +9,8 @@ valuable computing time is saved, since the \FwD tracking and fiting algorithms 
 
 The \mvm alogorithm, as it was implemented for \runone \cite{roelThesis}, takes a VELO track{\color{red} define velo track} as input
 and searches for hits inside a search window, also know as {\it Filed of interest} (FoI), in the M3 muon station.
-M3 is the first station to search for hits for two reasons. First the occupancy{\color{red} define} in M2 is very high{\color{red}see roel plot}
-thus an initial a single VELO track candidate would create
+M3 is the first station to search for hits for two reasons. First the occupancy{\color{red} define} in M2 is very high,
+see Figure 3.2 in \cite{roelThesis}, thus an initial a single VELO track candidate would create
 a huge number of seed hits{\color{red} define seeding}. Second the muon reconstruction algorithm (\isMuon) will always fail if
 there is no M3 muon hit asigned to a VELO track.
 
@@ -24,15 +24,14 @@ After considering all the M3 muons hits inside the FoI, additional muon hits are
 the M3 seed hits by extrapolating from each M3 seed hit further to the rest of the muon stations.
 Since there is no magnetic field between the muons stations the above mentione extrapolations are simple straight lines.
 The corresponding FoIs for the rest of the muon stations are smaller since there is no deflection involved.
-These FoIs account for the fact that the presence of heavy material between the muon stations change the
-trajectory of a muon passing thorough, this effect is called multiple scattering, {\color{red} cite panos or other shit.}
-and it is more pronounced for low momentum tracks.
+These FoIs account for the fact that the presence of heavy material between the muon stations affects the
+trajectory of a muon passing thorough, this effect is called multiple scattering, and it is more pronounced for low momentum tracks.
 
 At least 3 hits in the muon stations M2-M5 are required by the \mvm algorithm in order to accept the initial VELO track.
 At the end of this procedure all {\it muon candidate tracks} that could result from an initial VELO track were considered.
 Within the scope of the current chapter a muon candidate track is defined as the track formed by muon hits only.
 Note that at this stage of the algorithm an estimate of the momentum of the initial VELO track becomes available
-for each candidate muon track using the kick method \cite{roelThesis}, {\color{red} there is a better citation for that.}.
+for each candidate muon track using the kick method \cite{Hommels:999327}.
 The kick method provides an estimate of the track momentum given the change in its slope when passing through a magnetic
 field of a given streagth. The relation between the change in slope and the track momentum is empiracally estimated
 in \cite{roelThesis}.
@@ -68,7 +67,8 @@ remove the \mvm algorithm form the sequence of the \hltone muon lines and upgrad
 Furthermore, another improvement is the use of information from the \ttracker tracker when reconstructing \veloTracks \cite{LHCb-PUB-2015-005}.
 Note that, the \ttracker is posistioned close enough to the \lhcb magnet to allow for a first track momentum estimate.
 The \ttracker momentum resolution is inferior, $\sim 15\%$, compared to the one of long tracks. However filtering
-\veloTracks with \ttracker information increases the purity\footnote{by reducing the number of a type of fake tracks called {\it ghost tracks}, see {\color{red} cite ghost}}.
+\veloTracks with \ttracker information increases the purity\footnote{by reducing the number a certain type of fake
+tracks called {\it ghost tracks}}\cite{Bowen:2105078}.
 The above mentioned improvements offer oportunities for reconstructing muons with $\pt<500 \mevc$, hearafter low momenta muons,
 by upgrading the old \mvm algorithm. The upgraded alrorithm is used by newlly introdced \hltone muon lines which aim
 at reconstructing low \pt muons.
@@ -158,7 +158,7 @@ Finally, the improvement of the $\chisq/\nDoF$ disriminating power between the o
 \end{figure}
 
 \subsubsection{z focal plane parametrization}
-The emperical parametrization of the magnet focal plane $z$ coordinate \cite{blah}, already used in the old \mvm,
+The emperical parametrization of the magnet focal plane $z$ coordinate already used in the old \mvm\cite{roelThesis},
 is updated. Furhtermore the $x,y$ errors on the position of the magnet hit are empirically estimated using the simulated data.
 Specifically, since the true muon track is known it is possible to tune these errors such that they yield the same momentum
 estimation as the full computation of the muon trajectory would do. Note that a momentum esitmate is available by the
