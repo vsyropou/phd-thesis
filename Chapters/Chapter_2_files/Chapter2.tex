@@ -15,13 +15,24 @@ The \kaon and \pion are a typical pair that are commonly mis-identified in the a
 identification. Furthermore a particle that is not stoped by the calorimeters is most likely identified
 as a muon, since muons can penetrate the entire \lhcb detector without decaying. There are two
 {\it Cherenkov} based PID sub-detectors in \lhcb, namely \richone and \richtwo, each one performing
-better for low and high momentum tracks respectivelly. The pid effieciencies are shown in the table \tabref{}
+better for low and high momentum tracks respectivelly. The PID system finally outputs the likelihood
+ratio of two particle hypothesis. The pid effieciencies are shown in the table \tabref{}
 
-\begin{itemize}
-  \item Electron ID  90 % for ~ 5 % e→h mis-id probability
-  \item Kaon ID 95 % for ~ 5 % π→K mis-id probability
-  \item Muon ID 97 % for 1-3 % π→μ mis-id probability
-\end{itemize}
+\begin{table}[!h]
+  \center
+  \begin{tabular}{c c c}
+    \hline
+      particle      & $\epsilon_{\rm PID}$  & given mis-id probability \\
+     \hline
+      $\electron$   &  $90\%$  & $\sim 5\%$    \electron - hadron  \\
+      $\kaon$       &  $95\%$  & $\sim 5\%$    \pion - \kaon       \\
+      $\mmu$        &  $97\%$  & $\sim 1-3\%$  \pion - \mup        \\
+      \hline
+  \end{tabular}
+  \caption{\small Best fit of the parameters of interest.}
+  \label{pid_efficiencies}
+\end{table}
+
 
 \section{Calorimetery}
 \label{det_calo}
@@ -55,9 +66,25 @@ of mis-identifing a hadron for a muon, as it was also explained in \secref{det_p
 
 \section{The \BJpsiKst Decay in \lhcb}
 \label{BspsiKst_at_lhcb}
-\begin{itemize}
-  \item Production of \Bs mesons (how many),
-  \item Estimate of the expected yield
-  \item Event display
-  \item Maybe define observables
-\end{itemize}
+
+The \BsJpsiKst process is a typical channel that the \lhcb has a high detection efficiency.
+The presence of muon in the final state makes yields a hih trigger effciency, while the intermediate
+\Kstar resonance decays within the \velo into a \kaon and a \pion thus resulting in two long tracks.
+Thanks to the PID information and the optimised selection described in \secref{} most of the background
+events are filterd out. The only difficult point is the the low branching fraction of \BsJpsiKst process
+compared to the \BdJpsiKst which happen to accumulate very close to the \BsJpsiKst events, see \secref{}.
+Thus special care needs to be taken when modeling the mass distribution of those two channells.
+
+The \BsJpsiKst expected yield for the full \runone is about blah, see \equref{}.
+A typical \BsJpsiKst event is  shown in \figref{}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
+  \hspace{0.2cm}
+  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
+  \caption{\runone trigger scheam.}
+  \label{run_one_trigger}
+\end{figure}
+
+The event is preaty and has nice tracks of high-low pt. the kst is there the pv is there the sv is there.

@@ -8,6 +8,15 @@ level, \lzero, reads the detector at a rate of $40\mhz$, while the subsequent {\
 \hltone and \hlttwo, write the out to storage at $5\khz$. The first trigger level is a hardware implementation
 whilst the other two are pure software.
 
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
+  \hspace{0.2cm}
+  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
+  \caption{\runone trigger scheam.}
+  \label{run_one_trigger}
+\end{figure}
+
 The organization of the trigger system is done in the so called {\it streams} and {\it trigger lines} (or simply lines).
 The streams are relevant for the \lzero level where the triggered data are categorised as {\it Hadron}, {\it Muon},
 {\it DiMuon} and {\it Photon}. Since \lzero has to reduce the output rate to \hltone by aproximatelly one order of
@@ -31,11 +40,3 @@ to improve other feutures of the trigger system. The second intreasting feature 
 makes it possible that the output data quality of the trigger becomes identical to the offline data quality.
 This means that offline data analysis can be performed straight from the output of the trigger, which saves
 a lot of computing resources, accelerates the analysis and minimises the chances of introducing mistakes.
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.4\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
-  \includegraphics[width=0.4\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
-  \caption{\runone trigger scheam.}
-  \label{run_one_trigger}
-\end{figure}
