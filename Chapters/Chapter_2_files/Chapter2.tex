@@ -4,20 +4,18 @@
 \label{lhcb_detector}
 \input{Chapters/Chapter_2_files/intro}
 
-
 \section{Tracking Systems}
 \label{det_tracking}
 \input{Chapters/Chapter_2_files/tracking}
-
 
 \section{Particle Identification}
 \label{det_pid}
 Two particle identification, PID, systems are used in \lhcb to increase the purity of the analysed data.
 The \kaon and \pion are a typical pair that are commonly mis-identified in the absence of partice
 identification. Furthermore a particle that is not stoped by the calorimeters is most likely identified
-as a muon. There are two {\it Cherenkov} based PID sub-detectors in \lhcb, namely \richone and \richtwo,
-each one performing better for low and high momentum tracks respectivelly. The pid effieciencies are shown
-in the following table
+as a muon, since muons can penetrate the entire \lhcb detector without decaying. There are two
+{\it Cherenkov} based PID sub-detectors in \lhcb, namely \richone and \richtwo, each one performing
+better for low and high momentum tracks respectivelly. The pid effieciencies are shown in the table \tabref{}
 
 \begin{itemize}
   \item Electron ID  90 % for ~ 5 % e→h mis-id probability
@@ -27,60 +25,33 @@ in the following table
 
 \section{Calorimetery}
 \label{det_calo}
-Calorimeters provide energy information for neutrals.
-Sambling calorimeters, ecal and hcal.
-They also stop hadrons, whereas mip muons penetrate led.
-Information from calorimeters are not used
-Mention spd and ps.
+Calorimeters in \lhcb measure the energy of neutral particeles, for example photons or \piz,
+as this type of particles are undetectable by the trackig system. There are four relevant sub-detectors
+that enable proper calorimetry at \lhcb. First the combination of the {\it Scintilating Pad Detector} \spd
+and the {\it Pre Shower} detector with a led layer in-between them enables to distinguish hadrons from
+photons\footnote{and photons from electrons, which leave the same signature in the subsequent electromagnetic calorimeter.}.
+Subsequently the electromagnetic, \ecal, and hadronic, \hcal, calorimeters measure the energy of photons
+and neutral hadrons respectively. The calorimeter systemt is not expliitly used in the analysis of \chapref{Data_Analysis}.
+However, they are implicitly relevant since information from the \spd and \ps sub-detectors are used
+by the \lzero trigger system to roughly estimate the energy of an overall event. Furthermore, the
+led material that is interlayerd between the \ecal and \hcal active detector material, stops\footnote{Stop here
+means that the particle decays and all its decay products are contained inside the calorimeter volume.} most of
+the hadrons and thus preventing them from interacting with the muon system. This reduces the chance
+of mis-identifing a hadron for a muon, as it was also explained in \secref{det_pid}.
 
 \section{The trigger system}
 \label{det_trigger}
+\input{Chapters/Chapter_2_files/trigger}
 
-The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
-at a managable level, since it is not feesible to save every event. The three levels of the \lhcb trigger system
-are able to quickly, $\sim 25\ns$, decide weather a certain colsion, {\it event}, is intreating from physics point
-of view and should thus be writen out to storage. The creteria used to filter out the intreasting events, {\it signal}, get
-progresively more stringent at each trigger level. The whole trigger chain is optimised for maximum
-signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
-level, \lzero, reads the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
-\hltone and \hlttwo, write the out to storage at $5\khz$. The first trigger level is a hardware implementation
-whilst the other two are pure software.
-
-The organization of the trigger system is done in the so called {\it streams} and {\it trigger lines} (or simply lines).
-The streams are relevant for the \lzero level where the triggered data are categorised as {\it Hadron}, {\it Muon},
-{\it DiMuon} and {\it Photon}. Since \lzero has to reduce the output rate to \hltone by aproximatelly one order of
-magnitute, there is not enough computing time available to perform complecated selection creteria. On the other
-hand in the subsequent trigger levels more advanced selection can be required since tracking and PID information
-become available. The \hltone and \hlttwo trigger levels organise their output in trigger lines. Essentially,
-each trigger line is a collection of selection criteria similar, but looser, to the ones applied during the
-offline data analysis.
-
-The overal performance of the \lhcb trigger system is $\sim 90\%$ for dimuon chanells and $\sim 30\%$ for
-multibody hadronic final states. A complete performance study of the trigger system can be found in \cite{}.
-The current section focuses on the trigger performance involving muons; The correspondin efficiencies can
-are shown in \figref{}.
-
-Lastly there are two more worth mentioning features of the \lhcb trigger system. First is the so called
-{\it deferal} trigger, where $20\%$ of the data triggered by \lzero are buffered and procced by the \hltone
-during the preparation time of the \lhc, where \lhcb does not record any collisions. This keeps resources busy and increases the amount of data that are written.
-The second intreasting feature is the novel tecnique of {\it online detector alignment and calibration} that was
-enabled in view of the \runtwo. The technique makes it possible that the output data quality of the trigger
-becomes identical to the offline data quality. This means that offline data analysis can be performed straight
-from the output of the trigger, which saves a lot of computing resources, accelerates the analysis and minimises
-the chances of introducing mistakes.
-
-
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=0.4\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
-  \includegraphics[width=0.4\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
-  \caption{\runone trigger scheam.}
-  \label{run_one_trigger}
-\end{figure}
-
-
-\section{Favour Tagging}
-\label{det_tagging}
+% \section{Favour Tagging}
+% \label{det_tagging}
+%
+% Several important analysis in \lhcb have the feature that either of the initial \B or \Bbar messons
+% can decay to the same final state $f$. A typical example is the \BsJpsiPhi decay that is used to
+% measure the weak phase \phis, mentioned in \secref{}. In this analsys the precition of the \phis
+% measurement increases when the exact flavor of the initial particle is known\footnote{meaning wheather
+% the inital particle was a \Bs or \Bsbar, see also \secref{measuring_phis}}. Thus \lhcb has developed
+% several {\it flavor tagging} algorithms, \cite{}.
 
 \section{The \BJpsiKst Decay in \lhcb}
 \label{BspsiKst_at_lhcb}
