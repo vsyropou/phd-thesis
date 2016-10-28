@@ -1,12 +1,12 @@
 The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
 at a managable level, since it is not feesible to save every event. The three levels of the \lhcb trigger system
 are able to quickly, $\sim 25\ns$, decide weather a certain colsion, {\it event}, is intreating from physics point
-of view and should thus be writen out to storage. The creteria used to filter out the intreasting events, {\it signal}, get
+of view and should thus be writen out to storage. The creteria used to filter out the intreasting events, get
 progresively more stringent at each trigger level. The whole trigger chain is optimised for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
-\hltone and \hlttwo, write the out to storage at $5\khz$. The first trigger level is a hardware implementation
-whilst the other two are pure software.
+\hltone and \hlttwo, write the out to storage at $5\khz$. The first trigger level is a pure hardware
+implementation whilst the other two are software only.
 
 \begin{figure}[t]
   \centering
