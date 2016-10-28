@@ -15,8 +15,9 @@ The \kaon and \pion are a typical pair that are commonly mis-identified in the a
 identification. Furthermore a particle that is not stoped by the calorimeters is most likely identified
 as a muon, since muons can penetrate the entire \lhcb detector without decaying. There are two
 {\it Cherenkov} based PID sub-detectors in \lhcb, namely \richone and \richtwo, each one performing
-better for low and high momentum tracks respectivelly. The PID system finally outputs the likelihood
-ratio of two particle hypothesis. The pid effieciencies are shown in the table \tabref{}
+better for low and high momentum tracks respectivelly. The way the PID systems provides particle
+identification information is by means of a likelihood ratio of two particle hypothesis.
+The nominal PID effieciencies are shown in the table \tabref{}
 
 \begin{table}[!h]
   \center
@@ -39,16 +40,16 @@ ratio of two particle hypothesis. The pid effieciencies are shown in the table \
 Calorimeters in \lhcb measure the energy of neutral particeles, for example photons or \piz,
 as this type of particles are undetectable by the trackig system. There are four relevant sub-detectors
 that enable proper calorimetry at \lhcb. First the combination of the {\it Scintilating Pad Detector} \spd
-and the {\it Pre Shower} detector with a led layer in-between them enables to distinguish hadrons from
-photons\footnote{and photons from electrons, which leave the same signature in the subsequent electromagnetic calorimeter.}.
+and the {\it Pre Shower} detector with a led layer in-between them enables to distinguish \piz from
+photons, and photons from electrons which leave the same signature in the electromagnetic calorimeter.
 Subsequently the electromagnetic, \ecal, and hadronic, \hcal, calorimeters measure the energy of photons
-and neutral hadrons respectively. The calorimeter systemt is not expliitly used in the analysis of \chapref{Data_Analysis}.
-However, they are implicitly relevant since information from the \spd and \ps sub-detectors are used
+and neutral hadrons respectively. The calorimeter system is not expliitly used in the analysis of \chapref{Data_Analysis}.
+However, they are implicitly used since information from the \spd and \ps sub-detectors are used
 by the \lzero trigger system to roughly estimate the energy of an overall event. Furthermore, the
-led material that is interlayerd between the \ecal and \hcal active detector material, stops\footnote{Stop here
-means that the particle decays and all its decay products are contained inside the calorimeter volume.} most of
-the hadrons and thus preventing them from interacting with the muon system. This reduces the chance
-of mis-identifing a hadron for a muon, as it was also explained in \secref{det_pid}.
+led material that is interlayerd between the \ecal and \hcal active detector material, stops\footnote{Stop
+in this context means that the particle decays and all its decay products are contained inside the calorimeter
+volume, such that energy of the initial particle is estimated.} most of the hadrons and thus preventing them
+from being mis-identified by as muons by the subsequent muon stations.
 
 \section{The trigger system}
 \label{det_trigger}
