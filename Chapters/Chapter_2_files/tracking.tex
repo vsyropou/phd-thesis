@@ -5,7 +5,7 @@ three distinct tracking sub-detectors in \lhcb shown in \figref{lhcb_detector_cr
 the {\it VErtex LOcator}, \velo, then just before the \lhcb magnet is the {\it Tracking Turisensis}, \ttracker,
 and  lastly the {\it Outer Tracker} \ot. There are several track types that are {\it reconstructed} by
 the tracking algorithms, depending on which of the tracking sub-detectors provided information to produce
-the track object. The varius track types are shown in \figref{}. The most common tracks used are {\it long}
+the track object. The varius track types are shown in \figref{track_types}. The most common tracks used are {\it long}
 which have the highest momentum resolution. The overal reconstruction efficiency of long tracks is $\sim 96\%$.
 
 \begin{figure}[t]
@@ -26,7 +26,7 @@ cascade of partcile decays (also refered to as {\it decay chanell}). The mass me
 on the specific decay chanell. Two body \B decays including a \jpsi have the most precise mass resolution of about
 $8 \mevcc$. On the other hand decay chanells including neutral particles, \ie $\Bs\to\phi\gamma$, have a worst resolution of
 about $100 \mevcc$. Note that neutral particles are undetected by the tracking system. Instead the calorimetry,
-explained in \secref{}, system is responsible for reconstructing these type of particles.
+introduced in \secref{det_calo}, system is responsible for reconstructing these type of particles.
 
 \begin{figure}[t]
   \centering
@@ -34,7 +34,7 @@ explained in \secref{}, system is responsible for reconstructing these type of p
     \raggedright
     \includegraphics[width=\textwidth]{Figures/Chapter2/dppVsp-crop-cmyk}
     \caption{}
-    \label{det_dpvp}
+    \label{det_deltappvp}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \raggedleft
@@ -50,11 +50,11 @@ Certain important analysis performed with the \lhcb detector rely on measuring t
 Flight distance is typically the distance between the point were the two protons colideed, called {\it Primary Vertex} (PV)
 and the point were the \Bs, in that case, decayed. This last point is called {\it Secondary Vertex} (SV). The \velo sub-detector
 was designed for optimum spacial resolution, by placing the \velo sensors as close to the beam as posible, $\sim 8 \mm$.
-The PV position resolution depends strongly on the number of tracks used to build the vertex and can be seen in \figref{}.
+The PV position resolution depends strongly on the number of tracks used to build the vertex and can be seen in \figref{det_velo_pv_res}.
 Measuring the flight distance translates to a {\it decay time} time measurement. The latter is the time interval between
 the production and decay of a particle and it is the actual quantity that a typical {\it time dependant} analysis,
 \eg \BsJpsiPhi, requires. The average decay time resolution measured with the above channel is $\sim 45\fs$, which
-implies that the \phis measurement discussed in \secref{}, is indded posibe to perform.
+implies that the \phis measurement discussed in \secref{measuring_phis}, is indded posibe to perform.
 
 Lastly, a big part of the \lhcb physics program includes muons. The muon system cositis of {\it Multi Wire Proportional Chambers}
 (MWPC). It is positioned after the calorimeters, with the exception of the first, M1, muon station.
