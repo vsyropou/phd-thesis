@@ -67,25 +67,35 @@ from being mis-identified by as muons by the subsequent muon stations.
 
 \section{The \BJpsiKst Decay in \lhcb}
 \label{BspsiKst_at_lhcb}
+{\color{red} To be revisited after I make an event display.}
 
 The \BsJpsiKst process is a typical channel that the \lhcb has a high detection efficiency.
-The presence of muon in the final state makes yields a hih trigger effciency, while the intermediate
+The presence of muon in the final state yields a high trigger effciency, while the intermediate
 \Kstar resonance decays within the \velo into a \kaon and a \pion thus resulting in two long tracks.
-Thanks to the PID information and the optimised selection described in \secref{} most of the background
+Thanks to PID information and the optimised selection described in \secref{} most of the background
 events are filterd out. The only difficult point is the the low branching fraction of \BsJpsiKst process
 compared to the \BdJpsiKst which happen to accumulate very close to the \BsJpsiKst events, see \secref{}.
-Thus special care needs to be taken when modeling the mass distribution of those two channells.
-
-The \BsJpsiKst expected yield for the full \runone is about blah, see \equref{}.
+Thus, special care needs to be taken when modeling the mass distribution of those two channells.
+The total \BsJpsiKst signal yield accumulated over the full \runone is about 1800 events, see \equref{}.
 A typical \BsJpsiKst event is  shown in \figref{}
+
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
-  \hspace{0.2cm}
-  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
-  \caption{\runone trigger scheam.}
-  \label{run_one_trigger}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \includegraphics[width=\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
+    \caption{}
+    %\label{run_one_trigger}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \includegraphics[width=\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
+    \caption{}
+    %\label{run_one_trigger}
+  \end{subfigure}
+  \caption{ trigger scheams.}
+  \label{det_evt_display}
 \end{figure}
 
 The event is preaty and has nice tracks of high-low pt. the kst is there the pv is there the sv is there.
