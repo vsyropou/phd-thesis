@@ -5,31 +5,69 @@ of view and should thus be writen out to storage. The creteria used to filter ou
 progresively more stringent at each trigger level. The whole trigger chain is optimised for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
-\hltone and \hlttwo, write the out to storage at $5\khz$. The first trigger level is a pure hardware
+\hltone and \hlttwo, write out to storage at $5\khz$. The first trigger level is a pure hardware
 implementation whilst the other two are software only.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
-  \hspace{0.2cm}
-  \includegraphics[width=0.45\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
-  \caption{\runone trigger scheam.}
-  \label{run_one_trigger}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \includegraphics[width=\textwidth]{Figures/Chapter2/LHCb_Trigger_RunIAlgDetail_May2015}
+    \caption{}
+    \label{run_one_trigger}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \includegraphics[width=\textwidth]{Figures/Chapter2/LHCb_Trigger_RunII_May2015}
+    \caption{}
+    \label{run_one_trigger}
+  \end{subfigure}
+  \caption{ trigger scheams.}
+  \label{trigger_scheams}
 \end{figure}
 
-The organization of the trigger system is done in the so called {\it streams} and {\it trigger lines} (or simply lines).
-The streams are relevant for the \lzero level where the triggered data are categorised as {\it Hadron}, {\it Muon},
-{\it DiMuon} and {\it Photon}. Since \lzero has to reduce the output rate to \hltone by aproximatelly one order of
-magnitute, there is not enough computing time available to perform complecated selection creteria. On the other
-hand in the subsequent trigger levels more advanced selection can be required since tracking and PID information
-become available. The \hltone and \hlttwo trigger levels organise their output in trigger lines. Essentially,
-each trigger line is a collection of selection criteria similar, but looser, to the ones applied during the
-offline data analysis.
+The organization of the trigger system is done in {\it streams} and {\it trigger lines}.
+The four strems, {\it Hadron}, {\it Muon}, {\it DiMuon} and {\it Photon}, coorespond to the possible
+ways that an event can be pass through the \lzero trigger level. Complicated selection creteria are
+not affordable from computation pawer point of view at this stage, since the $40\mhz$ input rate of \lzero is quite
+big. After the rate is reduced by $\sim 1$ order of magnitute the data are fed to the subsequent
+higher level trigger, where tracking and PID information become available. The \hltone and \hlttwo
+trigger levels organise their output in trigger lines. Essentially, each trigger line is a collection
+of selection criteria similar to the ones applied during the offline data analysis, but looser.
+Furthermore, the trigger lines are software implementations and can thus be quite general as to what
+they trigger on, or on the other hand they can be very dedicated.
 
 The overal performance of the \lhcb trigger system is $\sim 90\%$ for dimuon chanells and $\sim 30\%$ for
 multibody hadronic final states. A complete performance study of the trigger system can be found in \cite{}.
 The current section focuses on the trigger performance involving muons; The correspondin efficiencies can
 are shown in \figref{}.
+
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \includegraphics[width=\textwidth,trim=0.45cm 0cm 0.4cm 0cm, clip=true]{Figures/Chapter2/l0_muon_eff}
+    \caption{}
+    \label{run_one_l0_muon_line_eff}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \includegraphics[width=\textwidth,trim=0.45cm 0cm 0.4cm 0cm, clip=true]{Figures/Chapter2/hlt1_muon_eff}
+    \caption{}
+    \label{run_one_hlt1_muon_line_eff}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \includegraphics[width=\textwidth,trim=0.45cm 0cm 0.4cm 0cm, clip=true]{Figures/Chapter2/hlt2_muon_eff}
+    \caption{}
+    \label{run_one_hlt2_muon_line_eff}
+  \end{subfigure}
+  \caption{\runone muon lines efficiencies.}
+  \label{run_one_muon_line_eff}
+\end{figure}
+
+
 
 Lastly there are two more worth mentioning features of the \lhcb trigger system. First is the so called
 {\it deferal} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and procced by the \hltone
