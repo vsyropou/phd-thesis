@@ -1,5 +1,55 @@
 % Appendix B
 
 \chapter{Horizontal Reweighting}
-
 \label{AppendixB}
+
+\begin{itemize}
+  \item Reaons - motivation
+  \item Describe steps (bullets)
+  \item Elaborate on steps (show some math), maybe a scheach??
+  \item Show results
+\end{itemize}
+
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{kplus_original}
+    \scalebox{1.15}{\input{Figures/Appendix/Kplus_P_original}}
+    \caption{}
+    \label{kplus_rew_original}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pminus_original}
+    \scalebox{1.15}{\input{Figures/Appendix/piminus_P_original}}
+    \caption{}
+    \label{pminus_rew_original}
+  \end{subfigure}
+  \caption{ Original distributions.}
+  \label{rew_original}
+\end{figure}
+
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{kplus_matched}
+    \scalebox{1.15}{\input{Figures/Appendix/Kplus_P_matched}}
+    \caption{}
+    \label{kplus_rew_matched}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pminus_matched}
+    \scalebox{1.15}{\input{Figures/Appendix/piminus_P_matched}}
+    \caption{}
+    \label{pminus_rew_matched}
+  \end{subfigure}
+  \caption{ matched distributions.}
+  \label{rew_matched}
+\end{figure}
