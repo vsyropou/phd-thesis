@@ -10,14 +10,14 @@
 
 \section{Particle Identification}
 \label{det_pid}
-Two particle identification, PID, systems are used in \lhcb to increase the purity of the analysed data.
-The \kaon and \pion are a typical pair that are commonly mis-identified in the absence of partice
-identification. Furthermore a particle that is not stoped by the calorimeters is most likely identified
+Two particle identification, PID, systems are used in \lhcb to increase the purity of the analyzed data.
+The \kaon and \pion are a typical pair that are commonly mis-identified in the absence of particle
+identification. Furthermore a particle that is not stopped by the calorimeters is most likely identified
 as a muon, since muons can penetrate the entire \lhcb detector without decaying. There are two
 {\it Cherenkov} based PID sub-detectors in \lhcb, namely \richone and \richtwo, each one performing
-better for low and high momentum tracks respectivelly. The way the PID systems provides particle
+better for low and high momentum tracks respectively. The way the PID systems provides particle
 identification information is by means of a likelihood ratio of two particle hypothesis.
-The nominal PID effieciencies are shown in \tabref{pid_efficiencies}.
+The nominal PID efficiencies are shown in \tabref{pid_efficiencies}.
 
 \begin{table}[!h]
   \center
@@ -30,24 +30,24 @@ The nominal PID effieciencies are shown in \tabref{pid_efficiencies}.
       $\mmu$        &  $97\%$  & $\sim 1-3\%$  \pion - \mup        \\
       \hline
   \end{tabular}
-  \caption{\small Nominal efficiencies of the pid system. The miss-id probabilities quoted in the third
+  \caption{\small Nominal efficiencies of the PID system. The miss-id probabilities quoted in the third
            column are required for the efficiency computation. }
   \label{pid_efficiencies}
 \end{table}
 
 
-\section{Calorimetery}
+\section{Calorimetry}
 \label{det_calo}
-Calorimeters in \lhcb measure the energy of neutral particeles, for example photons or \piz,
-as this type of particles are undetectable by the trackig system. There are four relevant sub-detectors
-that enable proper calorimetry at \lhcb. First the combination of the {\it Scintilating Pad Detector} \spd
+Calorimeters in \lhcb measure the energy of neutral particles, for example photons or \piz,
+as this type of particles are undetectable by the tracking system. There are four relevant sub-detectors
+that enable proper calorimetry at \lhcb. First the combination of the {\it Scintillating Pad Detector} \spd
 and the {\it Pre Shower} detector with a led layer in-between them enables to distinguish \piz from
 photons, and photons from electrons which leave the same signature in the electromagnetic calorimeter.
 Subsequently the electromagnetic, \ecal, and hadronic, \hcal, calorimeters measure the energy of photons
-and neutral hadrons respectively. The calorimeter system is not expliitly used in the analysis of \chapref{Data_Analysis}.
+and neutral hadrons respectively. The calorimeter system is not explicitly used in the analysis of \chapref{Data_Analysis}.
 However, they are implicitly used since information from the \spd and \ps sub-detectors are used
 by the \lzero trigger system to roughly estimate the energy of an overall event. Furthermore, the
-led material that is interlayerd between the \ecal and \hcal active detector material, stops\footnote{Stop
+led material that is interlayered between the \ecal and \hcal active detector material, stops\footnote{Stop
 in this context means that the particle decays and all its decay products are contained inside the calorimeter
 volume, such that energy of the initial particle is estimated.} most of the hadrons and thus preventing them
 from being mis-identified by as muons by the subsequent muon stations.
@@ -71,12 +71,12 @@ from being mis-identified by as muons by the subsequent muon stations.
 {\color{red} To be revisited after I make an event display.}
 
 The \BsJpsiKst process is a typical channel that the \lhcb has a high detection efficiency.
-The presence of muon in the final state yields a high trigger effciency, while the intermediate
+The presence of muon in the final state yields a high trigger efficiency, while the intermediate
 \Kstar resonance decays within the \velo into a \kaon and a \pion thus resulting in two long tracks.
-Thanks to PID information and the optimised selection described in \secref{det_pid} most of the background
-events are filterd out. The only difficult point is the the low branching fraction of \BsJpsiKst process
+Thanks to PID information and the optimized selection described in \secref{det_pid} most of the background
+events are filtered out. The only difficult point is the the low branching fraction of \BsJpsiKst process
 compared to the \BdJpsiKst which happen to accumulate very close to the \BsJpsiKst events, see \secref{mass_BDTG_selection}.
-Thus, special care needs to be taken when modeling the mass distribution of those two channells.
+Thus, special care needs to be taken when modeling the mass distribution of those two channels.
 The total \BsJpsiKst signal yield accumulated over the full \runone is about 1800 events, see \equref{signal_yields}.
 A typical \BsJpsiKst event is  shown in \figref{det_evt_display}
 
@@ -99,4 +99,4 @@ A typical \BsJpsiKst event is  shown in \figref{det_evt_display}
   \label{det_evt_display}
 \end{figure}
 
-The event is preaty and has nice tracks of high-low pt. the kst is there the pv is there the sv is there.
+The event is pretty and has nice tracks of high-low pt. the kst is there the pv is there the sv is there.

@@ -1,8 +1,8 @@
 The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
-at a managable level, since it is not feesible to save every event. The three levels of the \lhcb trigger system
-are able to quickly, $\sim 25\ns$, decide weather a certain colsion, {\it event}, is intreating from physics point
-of view and should thus be writen out to storage. The creteria used to filter out the intreasting events, get
-progresively more stringent at each trigger level. The whole trigger chain is optimised for maximum
+at a manageable level, since it is not feasible to save every event. The three levels of the \lhcb trigger system
+are able to quickly, $\sim 25\ns$, decide weather a certain collision, {\it event}, is interesting from physics point
+of view and should thus be written out to storage. The criteria used to filter out the interesting events, get
+progressively more stringent at each trigger level. The whole trigger chain is optimized for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
 \hltone and \hlttwo, write out to storage at $5\khz$. The first trigger level is a pure hardware
@@ -22,23 +22,23 @@ implementation whilst the other two are software only.
     \caption{}
     \label{det_run_two_trigger}
   \end{subfigure}
-  \caption{ \runone (A) and \runtwo (B) trigger system scheams.}
+  \caption{ \runone (A) and \runtwo (B) trigger system schemes.}
   \label{det_trigger_scheams}
 \end{figure}
 
 The organization of the trigger system is done in {\it streams} and {\it trigger lines}.
-The four strems, {\it Hadron}, {\it Muon}, {\it DiMuon} and {\it Photon}, coorespond to the possible
-ways that an event can be pass through the \lzero trigger level. Complicated selection creteria are
-not affordable from computation pawer point of view at this stage, since the $40\mhz$ input rate of \lzero is quite
-big. After the rate is reduced by $\sim 1$ order of magnitute the data are fed to the subsequent
+The four streams, {\it Hadron}, {\it Muon}, {\it DiMuon} and {\it Photon}, correspond to the possible
+ways that an event can be pass through the \lzero trigger level. Complicated selection criteria are
+not affordable from computation power point of view at this stage, since the $40\mhz$ input rate of \lzero is quite
+big. After the rate is reduced by $\sim 1$ order of magnitude the data are fed to the subsequent
 higher level trigger, where tracking and PID information become available. The \hltone and \hlttwo
-trigger levels organise their output in trigger lines. Essentially, each trigger line is a collection
+trigger levels organize their output in trigger lines. Essentially, each trigger line is a collection
 of selection criteria similar to the ones applied during the offline data analysis, but looser.
 Furthermore, the trigger lines are software implementations and can thus be quite general as to what
 they trigger on, or on the other hand they can be very dedicated.
 
-The overal performance of the \lhcb trigger system is $\sim 90\%$ for dimuon chanells and $\sim 30\%$ for
-multibody hadronic final states. A complete performance study of the trigger system can be found in chapter
+The overall performance of the \lhcb trigger system is $\sim 90\%$ for dimuon channels and $\sim 30\%$ for
+multi-body hadronic final states. A complete performance study of the trigger system can be found in chapter
 5 of \cite{Aaij:2014jba}. The current section focuses on the trigger performance involving muons; The corresponding
 efficiencies can are shown in \figref{det_run_one_muon_line_eff}.
 
@@ -70,11 +70,11 @@ efficiencies can are shown in \figref{det_run_one_muon_line_eff}.
 
 
 Lastly there are two more worth mentioning features of the \lhcb trigger system. First is the so called
-{\it deferal} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and procced by the \hltone
-during the periods where the \lhc does not provide coliding beams and thus the \lhcb computing infrastructure
+{\it deferral} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and proceed by the \hltone
+during the periods where the \lhc does not provide colliding beams and thus the \lhcb computing infrastructure
 would normally idle. This effectively increases the amount of available computing power which can be used
-to improve other feutures of the trigger system. The second intreasting feature is the novel tecnique of
+to improve other features of the trigger system. The second interesting feature is the novel technique of
 {\it online detector alignment and calibration} that was enabled in view of the \runtwo, see \cite{Aaij:2016rxn}.
 The technique makes it possible that the output data quality of the trigger becomes identical to the offline data quality.
 This means that offline data analysis can be performed straight from the output of the trigger, which saves
-a lot of computing resources, accelerates the analysis and minimises the chances of introducing mistakes.
+a lot of computing resources, accelerates the analysis and minimizes the chances of introducing mistakes.
