@@ -76,6 +76,25 @@ The above mentioned improvements offer opportunities for reconstructing muons wi
 hereafter low momenta muons, by upgrading the old \mvm algorithm. The upgraded algorithm can be
 used by newly introduced \hltone muon lines which aim at reconstructing low \pt muons.
 
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvm_efficiency_pt_zoom}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_pt_zoom}}
+    \caption{}
+    \label{mvTTm_eff_p}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
+    \caption{}
+    \label{mvm_eff_p}
+  \end{subfigure}
+  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of transverse momentum.}
+ \label{mvm_eff_pt_zoom_comp}
+\end{figure}
+
 The upgraded \mvTTm algorithm improves in three points with respect to the old \mvm algorithm.
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
 This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm,
@@ -96,20 +115,20 @@ the possibility for both positively and negatively charged tracks.
 \begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvm_efficiency_pt_zoom}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_pt_zoom}}
+    \tikzsetnextfilename{mvm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_p}}
     \caption{}
     \label{mvTTm_eff_p}
   \end{subfigure}%
   \hfill%
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
+    \tikzsetnextfilename{mvTTm_efficiency_p}
+    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
     \caption{}
     \label{mvm_eff_p}
   \end{subfigure}
-  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of transverse momentum.}
- \label{mvm_eff_pt_zoom_comp}
+  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of total momentum.}
+ \label{mvm_eff_p_comp}
 \end{figure}
 
 After the improvements mentioned in the above paragraph, the efficiency of the upgraded \mvTTm algorithm
@@ -127,25 +146,6 @@ of the $\chisq/\nDoF$ discriminating power between the old and upgraded algorith
 \begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_p}}
-    \caption{}
-    \label{mvTTm_eff_p}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \tikzsetnextfilename{mvTTm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
-    \caption{}
-    \label{mvm_eff_p}
-  \end{subfigure}
-  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of total momentum.}
- \label{mvm_eff_p_comp}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
     \tikzsetnextfilename{mvm_chi2_sigpt_smaller}
     \scalebox{.6}{\input{Figures/Chapter3/MvM/chi2_sigpt_smaller_500}}
     \caption{}
@@ -159,7 +159,7 @@ of the $\chisq/\nDoF$ discriminating power between the old and upgraded algorith
     \label{mvm_chi2}
   \end{subfigure}
   \caption{Distribution of the \chisq variable between the old (left) and the new (right) matching algorithms.
-           Only low momentum \veloTracks are considered.}
+           Only low momentum \veloTracks are considered. Matched (not matched) muon tracks are shown with orange (blue).}
  \label{mvm_chi2_comp}
 \end{figure}
 
@@ -169,19 +169,6 @@ is updated. Furthermore the $x,y$ errors on the position of the magnet hit are e
 Specifically, since the true muon track is known it is possible to tune these errors such that they yield the same momentum
 estimation as the full computation of the muon trajectory would do. Note that a momentum estimate is available by the
 \mvTTm algorithm as soon as a seed hit in M3 is found, using the kick method.
-
-
-\subsubsection{M3 Field of Interest}
-As explained in \secref{sec:muon_matching} the M3 FoI $x$ coordinates are computed assuming a minimum track momentum, and thus maximum deflection,
-of $6\gevc$. For a $6\gevc$ muon the deflection caused by the \lhcb magnet is computed using the empirical parametrization mentioned in Section blah of \cite{roelThesis}.
-Using this technique makes it possible to estimate the region in M3 that a muon track will arrive at without performing the computation
-expensive calculation of its trajectory through the \lhcb magnet, also referred to track {\it extrapolation}. In order to visualize the FoI sizes,
-simulated events are used to compute the distance of the true hit in M3 from the middle of the FoI, respectively in the $x$ and $y$ planes.
-The results are shown in \figref{mvm_res}. The average FoI half-width is $2.7\m$ and $0.4\m$ respectively for the $x$ and $y$ planes.
-Which implies that most of the times the true hit is inside the FoI. The outliers in the \figref{mvTTm_res_x} in with $|d^{M3}|>3\m$
-correspond to cases were the track charge estimate by the \ttracker is wrong. Remember that charge information is used to
-look for hits only in the one side of the M3 station. Lastly the y plane is the non-bending plane hence the FoI sizes
-are smaller, compared to the ones for the $x$ plane, since only multiple scattering is present in that plane.
 
 \begin{figure}[t]
   \centering
@@ -201,6 +188,41 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
   \caption{Hit pseudo-residuals in M3. The distributions correspond to the distance between the center of the FoI and the true M3 hit
            in the $x$ (left) and $y$ (right) planes respectively.}
  \label{mvm_res}
+\end{figure}
+
+\subsubsection{M3 Field of Interest}
+As explained in \secref{sec:muon_matching} the M3 FoI $x$ coordinates are computed assuming a minimum track momentum, and thus maximum deflection,
+of $6\gevc$. For a $6\gevc$ muon the deflection caused by the \lhcb magnet is computed using the empirical parametrization mentioned in Section blah of \cite{roelThesis}.
+Using this technique makes it possible to estimate the region in M3 that a muon track will arrive at without performing the computation
+expensive calculation of its trajectory through the \lhcb magnet, also referred to track {\it extrapolation}. In order to visualize the FoI sizes,
+simulated events are used to compute the distance of the true hit in M3 from the middle of the FoI, respectively in the $x$ and $y$ planes.
+The results are shown in \figref{mvm_res}. The average FoI half-width is $2.7\m$ and $0.4\m$ respectively for the $x$ and $y$ planes.
+Which implies that most of the times the true hit is inside the FoI. The outliers in the \figref{mvTTm_res_x} in with $|d^{M3}|>3\m$
+correspond to cases were the track charge estimate by the \ttracker is wrong. Remember that charge information is used to
+look for hits only in the one side of the M3 station. Lastly the y plane is the non-bending plane hence the FoI sizes
+are smaller, compared to the ones for the $x$ plane, since only multiple scattering is present in that plane.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{cdf_sig_bkg_mvm}
+    \scalebox{0.6}{\input{Figures/Chapter3/cdf_sig_bkg_mvm}}
+    \caption{}
+    \label{mvm_cdf}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{roc_curve_mvm}
+    \scalebox{0.6}{\input{Figures/Chapter3/roc_curve_mvm}}
+    \caption{}
+    \label{mvm_roc}
+  \end{subfigure}
+  \caption{Tunning of the \mvTTm algorithm. Left: \chisq Cumulative Distribution Function, CDF,
+           of matched (orange) and not matched (blue) muon tracks (the blue curve is actualy $1-{\rm CDF}$).
+           Right: ROC curve made from the previous \chisq CDF. Only soft muon tracks are considered. }
+ \label{mvm_tuning}
 \end{figure}
 
 \subsubsection{\hltone timing and rate considerations}
