@@ -228,9 +228,11 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
 \subsubsection{\hltone timing and rate considerations}
 After all the improvements the \mvTTm algorithm needs to be tuned to comply with the \hltone output rate of 12
 \khz mentioned in \secref{sec:muon_matching}. Given that the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
-Based on the signal and background distributions of \figref{mvTTm_chi2}, the last value implies that a \veloTrack which
+Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the last value implies that a \veloTrack which
 is accepted by the \mvTTm algorithm has {\color{red} X ?? (to be computed)} percent probability of being
 a real muon and {\color{red} Y ?? (to be computed)} percent to originate from random combinations in the muon stations.
+Furthermore the roc curve of \figref{mvm_roc} is made from the cdf distributions of \figref{mvm_cdf}, illustrating
+the discriminating power of the \chisq computed from the \mvTTm algorithm.
 The overall \mvTTm efficiency in the $\pt<0.5\gevc$ region for the above cutoff value is $\epsilon = 55 \pm 1.5 \%$.
 In addition it was checked that the changes introduced in the upgraded \mvTTm algorithm
 do not increase the algorithm's running time. It turns out that the processing time per input track is actually
