@@ -49,7 +49,7 @@ Hence, doing several one dimensional reweighting steps will simply ignore these 
 The horizontal approach to matching distributuons is meant to bypass the problem of binning, especially
 in many dimmenssions, and thus make it possible to match an arbitrary of variables between source and target.
 The basic idea of the approach is to apply as chain of transformations to both source and target distributions
-such that the become uncorrrelated. Subsequently the transformation chain applied that has been applied to
+such that they become uncorrrelated. Subsequently the transformation chain applied that has been applied to
 the targer distributions are inverted and then applied to the source ones. The full logic is shown in \figref{}
 and it is inspired by discussions with Gerhard Raven and Diego Martinez Santos.
 
@@ -63,13 +63,11 @@ and it is inspired by discussions with Gerhard Raven and Diego Martinez Santos.
 S_\text{matched} = S_\text{gaussian uncorr} \times (\gamma_t^{\text{gauusian uncorr}})^{-1} \times (\gamma_t^{\text{gauusian}})^{-1} \times (\gamma_t^{\text{flat}})^{-1} \nonumber
 \end{equation}
 
-The logic presented in \figref{} can be understood requires three distinct transformations and the orresponding
-inverted transformation as well. These transformations are based in well known mathematical techiniques; Namelly
+The logic presented in \figref{} requires three distinct steps-transformations and the corresponding
+inverted ones. These transformations make use of two well known mathematical techiniques. Namelly,
 { \it Inverse Transformation Sampling} \cite{} and {\it Matrix diagonilization} \cite{}.
 
-\vspace{1cm}
-
-\noindent {\it Probability Integral Transform} ($\gamma_s^{\text{flat}}$) :
+\noindent The {\it Probability Integral Transform} theorem states that:
 \begin{center}
 \begin{itemize}
 \item Let $x$ be a random variable following the pdf $P$.
@@ -78,52 +76,50 @@ inverted transformation as well. These transformations are based in well known m
 \end{itemize}
 \end{center}
 
+\noindent The cdf is defined as:
 \begin{equation}
 F_x(X) = \int_{-\infty}^X P(t)dt  = \text{prob}({\bf x} \leq X) \nonumber
 \end{equation}
 
-\noindent {\it Inverse Transformation Sampling} (${\gamma_s^{\text{flat}}}^{-1}$):
+\noindent The innverted version of the previous theorem states that {\it Inverse Transformation Sampling}:
 \begin{center}
 \begin{itemize}
 \item Let Y be a uniformly distributed variable.
 \item x has a cdf, call it $F_x$.
-\item Then the variable $x^\prime = F_x^{-1}(Y)$ is distributed as x.
+\item Then the variable $x^\prime = F_x^{-1}(Y)$ is distributed as x {\color{red} for small x steps, check!!!}.
 \end{itemize}
 \end{center}
 
-Note tha the above transformation is general and can be aplpyied to any distribution
-even if the distribution does not have known analytica shape.
-It is usefull to point out that a binning is introduced when computing the cumulative of a
-distribution during the flattening step. However this binning can be arbitrarily fine\footnote{However
-from implementation point of you the larger the number of bins the slower the flatening, and inverse flatening,
-procedure becomes. Here is where the built-in function {\tt numpy.digitise()} of {\tt python} proves to be
-usefull, as the timming scales nicelly with the number of bins.} without  having the problems explained
-in the introduction, since it is not used to much any distribution.
+\noindent The above theorem applies to the \gTrans{flat}, while the transformation \gTrans{gaussian} is
+a special case of the same theorem. Note tha the shape of the initial source or target distributions are
+not required to have a known analytica shape for their cdf to be computed. Insted these distributons can
+be binned so that the cumulative sum in each bin can be computed. It is important to point out that this
+binning can be arbitrarily fine\footnote{However from implementation point of you the larger the number of
+bins the slower the flatening, and inverse flatening, procedure becomes. Here is where the built-in function
+{\tt numpy.digitise()} of {\tt python} proves to be usefull, as the timming scales nicelly with the number of bins.}
+without having the problems explained in the introduction, since it is not used to much any distribution.
 
-\vspace{1cm}
+% \vspace{1cm}
+%
+% \noindent {\it From Uniform to Normal} ($\gamma_s^{\text{gaussian}}$):
+% \begin{center}
+% \begin{itemize}
+% \item Let $x$ be a uniformly distributed variable.
+% \item Then the variable $y=m + \sqrt{2} \; \sigma \; \text{ErfInverse}(x)$ is normally distributed.
+% \end{itemize}
+% \end{center}
+%
+% \noindent {\it From Normal to Uniform} (${\gamma_s^{\text{gaussian}}}^{-1}$):
+% \begin{center}
+% \begin{itemize}
+% \item Let $x$ be a uniformly distributed variable.
+% \item Then the variable $u= \frac{\text{ErfComp}\left( (x - m)/\sqrt{2}\sigma \right)}{2}$ is uniformly distributed.
+% \end{itemize}
+% \end{center}
 
+The steps for obtaining a set of uncorrelated values from an initial set of correlated gaussian distributed
+variables are based on the concept of {\it Matrix diagonalization} and are shown in the following:
 
-\noindent {\it From Uniform to Normal} ($\gamma_s^{\text{gaussian}}$):
-\begin{center}
-\begin{itemize}
-\item Let $x$ be a uniformly distributed variable.
-\item Then the variable $y=m + \sqrt{2} \; \sigma \; \text{ErfInverse}(x)$ is normally distributed.
-\end{itemize}
-\end{center}
-
-\noindent {\it From Normal to Uniform} (${\gamma_s^{\text{gaussian}}}^{-1}$):
-\begin{center}
-\begin{itemize}
-\item Let $x$ be a uniformly distributed variable.
-\item Then the variable $u= \frac{\text{ErfComp}\left( (x - m)/\sqrt{2}\sigma \right)}{2}$ is uniformly distributed.
-\end{itemize}
-\end{center}
-
-
-\vspace{1cm}
-
-
-\noindent {\it De-correlate Variables aka Diagonalization}:
 \begin{center}
 \begin{itemize}
 \item Let $\vec{x}$ be a set of correlated variables.
