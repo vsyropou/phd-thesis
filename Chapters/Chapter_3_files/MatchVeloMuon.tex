@@ -97,16 +97,17 @@ used by newly introduced \hltone muon lines which aim at reconstructing low \pt 
  \label{mvm_eff_pt_zoom_comp}
 \end{figure}
 
-The upgraded \mvTTm algorithm improves in three points with respect to the old \mvm algorithm.
+The upgraded \mvTTm algorithm improves in several points with respect to the old \mvm algorithm.
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
 This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm,
-as explained earlier in \secref{sec:muon_matching}.
-Second, the parametrization of the magnet $z$ focal plane as well as the errors on the magnet hit
-$(x,y)$ coordinates are updated and tuned for optimum using simulated data. Lastly the vertical,
-non-bending, $y$ plane is included in the \chisq computation\footnote{Note that the $y$ projection
-of a track is almost a straight line, since the magnetic field is parallel to the $y$ axis
-and thus exerting no force along this direction.}, which was not the case in the old \mvm algorithm.
-The last two improvements both increase the discriminating power of the \chisq.
+as explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
+focal plane as well as the errors on the magnet hit $(x,y)$ coordinates are updated and tuned for
+optimum using simulated data. Furthermore, the non-bending, $y$, plane is included in the \chisq
+computation\footnote{Note that the $y$ projection of a track is almost a straight line, since the magnetic
+field is parallel to the $y$ axis and thus exerting no force along this direction.}, which was not the
+case in the old \mvm algorithm. The last two improvements increase the discriminating power of the \chisq.
+Finally the required number of hits in the muon stations, menioned in the previous subsection, is increased
+to four in order to further supress the fake muon track rate.
 
 An important caveat arises from the fact that there can be \veloTTracks that they do not have any information from
 the \ttracker. These tracks are mainly normal high momentum tracks that pass through the \ttracker station's inner hole
@@ -236,9 +237,9 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
 \subsubsection{\hltone timing and rate considerations}
 After all the improvements the \mvTTm algorithm needs to be tuned to comply with the \hltone output rate of 12
 \khz mentioned in \secref{sec:muon_matching}. Given that the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
-Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the last value implies that a \veloTrack which
-is accepted by the \mvTTm algorithm has {\color{red} X ?? (to be computed)} percent probability of being
-a real muon and {\color{red} Y ?? (to be computed)} percent to originate from random combinations in the muon stations.
+Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the last value implies that;
+A \veloTrack which is accepted by the \mvTTm algorithm has $97\%$ probability of being a real muon against orignating from
+random combinations in the muon stations.
 Furthermore the roc curve of \figref{mvm_roc} is made from the cdf distributions of \figref{mvm_cdf}, illustrating
 the discriminating power of the \chisq computed from the \mvTTm algorithm.
 The overall \mvTTm efficiency in the $\pt<0.5\gevc$ region for the above cutoff value is $\epsilon = 55 \pm 1.5 \%$.
