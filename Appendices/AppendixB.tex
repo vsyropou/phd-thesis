@@ -48,24 +48,31 @@ Hence, doing several one dimensional reweighting steps will simply ignore these 
 \subsubsection{Horizontal Reweighting}
 The horizontal approach to matching distributuons is meant to bypass the problem of binning, especially
 in many dimmenssions, and thus make it possible to match an arbitrary of variables between source and target.
-The basic idea of the approach is to apply as chain of transformations to both source and target distributions
-such that they become uncorrrelated. Subsequently the transformation chain applied that has been applied to
-the targer distributions are inverted and then applied to the source ones. The full logic is shown in \figref{}
-and it is inspired by discussions with Gerhard Raven and Diego Martinez Santos.
+The basic idea of the approach is to apply as chain of transformations to both source, \equref{source_trans},
+and target, \equref{target_trans}, distributions such that they become uncorrrelated. Subsequently the
+transformation chain that has been applied to the target distributions are inverted and then applied to the
+source ones, \equref{match_distributions}. The function of three transforamtions involded is:
+Transformation $(A)$ converts the input distribution to flat. Transformation $(B)$ converts a flat distribution
+to a normal distribution, while the last $(C)$ converts removes the correlation between two distributions.
+The necessary mathematical tool are presented in the next paragraph. The logic is inspired by discussions
+with Gerhard Raven and Diego Martinez Santos.
 
 \begin{equation}
- S \underbrace{\rightarrow}_{\gamma_s^{\text{flat}}}  S_\text{flat} \underbrace{\rightarrow}_{\gamma_s^{\text{gaussian}}} S_{gaussian} \underbrace{\rightarrow}_{\gamma_s^{\text{gaussian uncoor}}} S_\text{gaussian uncorr} \nonumber
+  \label{source_trans}
+  S \times \gFlat{S} \rightarrow S_{\rm flat} \times \gGaus{S} \rightarrow S_{\rm gaus} \times \gGausUn{S} \rightarrow S_\text{\rm uncor gaus}
 \end{equation}
 \begin{equation}
- T \underbrace{\rightarrow}_{\gamma_t^{\text{flat}}}  T_\text{flat} \underbrace{\rightarrow}_{\gamma_t^{\text{gaussian}}} T_{gaussian} \underbrace{\rightarrow}_{\gamma_t^{\text{gaussian uncoor}}} T_\text{gaussian uncorr} \nonumber
+  \label{target_trans}
+  T \times \gFlat{T} \rightarrow T_{\rm flat} \times \gGaus{T} \rightarrow T_{\rm gaus} \times \gGausUn{T} \rightarrow T_\text{\rm uncor gaus}
 \end{equation}
 \begin{equation}
-S_\text{matched} = S_\text{gaussian uncorr} \times (\gamma_t^{\text{gauusian uncorr}})^{-1} \times (\gamma_t^{\text{gauusian}})^{-1} \times (\gamma_t^{\text{flat}})^{-1} \nonumber
+  \label{match_distributions}
+  S_{\rm matched} = S_{\rm uncor gaus} \times \gGausUnInv{T} \times \gGausInv{T} \times \gFlatInv{T}
 \end{equation}
 
-The logic presented in \figref{} requires three distinct steps-transformations and the corresponding
-inverted ones. These transformations make use of two well known mathematical techiniques. Namelly,
-{ \it Inverse Transformation Sampling} \cite{} and {\it Matrix diagonilization} \cite{}.
+The logic presented above requires three distinct steps-transformations and the corresponding
+inverted ones. These transformations make use of two well known mathematical techiniques.
+Namelly, { \it Inverse Transformation Sampling} and {\it Matrix diagonilization}.
 
 \noindent The {\it Probability Integral Transform} theorem states that:
 \begin{center}
@@ -90,7 +97,7 @@ F_x(X) = \int_{-\infty}^X P(t)dt  = \text{prob}({\bf x} \leq X) \nonumber
 \end{itemize}
 \end{center}
 
-\noindent The above theorem applies to the \gTrans{flat}, while the transformation \gTrans{gaussian} is
+\noindent The above theorem applies to the \gFlat{}, while the transformation \gGaus{} is
 a special case of the same theorem. Note tha the shape of the initial source or target distributions are
 not required to have a known analytica shape for their cdf to be computed. Insted these distributons can
 be binned so that the cumulative sum in each bin can be computed. It is important to point out that this
@@ -101,7 +108,7 @@ without having the problems explained in the introduction, since it is not used 
 
 % \vspace{1cm}
 %
-% \noindent {\it From Uniform to Normal} ($\gamma_s^{\text{gaussian}}$):
+% \noindent {\it From Uniform to Normal} ($\gTransS{flat}$):
 % \begin{center}
 % \begin{itemize}
 % \item Let $x$ be a uniformly distributed variable.
@@ -109,7 +116,7 @@ without having the problems explained in the introduction, since it is not used 
 % \end{itemize}
 % \end{center}
 %
-% \noindent {\it From Normal to Uniform} (${\gamma_s^{\text{gaussian}}}^{-1}$):
+% \noindent {\it From Normal to Uniform} (${\gTransS{flat}}^{-1}$):
 % \begin{center}
 % \begin{itemize}
 % \item Let $x$ be a uniformly distributed variable.
@@ -125,8 +132,8 @@ variables are based on the concept of {\it Matrix diagonalization} and are shown
 \item Let $\vec{x}$ be a set of correlated variables.
 \item Let $C$ be the covariance matrix of $\vec{x}$.
 \item Let $P^{-1}$ be the matrix that has the eigen-vectors of $C$ as columns.
-\item ($\gamma_t^{\text{gauusian uncorr}}$): The set of values $\vec{x^\prime} = P\vec{x}$ is an uncorrelated set of $\vec{x}$. .
-\item (${\gamma_t^{\text{gauusian uncorr}}}^{-1}$): The set of values $\vec{x} = P^{-1}\vec{x}$ is the corresponding correlated set of $\vec{x^{\prime}}$.
+\item ($\gGausUn{}$): The set of values $\vec{x^\prime} = P\vec{x}$ is an uncorrelated set of $\vec{x}$. .
+\item (${\gGausUn{}}^{-1}$): The set of values $\vec{x} = P^{-1}\vec{x}$ is the corresponding correlated set of $\vec{x^{\prime}}$.
 \end{itemize}
 \end{center}
 
@@ -138,19 +145,19 @@ c_{ij} = \frac{1}{N} \sum (x_i-<x_i>)(x_j-<x_j>), \;\; \text {with} <x> = \frac{
 \label{hor_reww_correlation_formula}
 \end{equation}
 
-The necessary ingridients necessary to apply the logic of \figref{} have been presented.
+The necessary ingridients necessary to apply the techinique presented have been covered.
 An implementation of the full matching algorithm can be found in github here blahhh.
 
 \subsubsection{Example-Discussion}
 To illustrate that the sdvertised techinique works a typical problem in high energy physics is addressed.
 Specifically, the \Kstarz particle from the \BsJpsiKst mode decays into a \kaon and a \pion. The momenta
 distributions of these two particles $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ is found to defer betwen
-monte carlo (source) and background subtracted real data (target), see \figref{rew_original}. Furthermore,
-the previous distributions are correlated and combined with a fine binning will yield problems as explained
+monte carlo (source) and background subtracted real data (target), see the top two plots of \figref{hor_rew_example_figs}.
+Furthermore, the previous distributions are correlated and combined with a fine binning will yield problems as explained
 earlier in the veticl reweighting subsection. After appling the technique advertised before the
 $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions statistically comaptible, bypassing the risks associated
-to a multidimensional fine binning scheam. The matched distributions are shown in \figref{}. Furthermore,
-a Kolmogorov-Smirinov test is performed to quantify the matching of each source-target distribution.
+to a multidimensional fine binning scheam. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
+In addition, a Kolmogorov–Smirnov test is performed to quantify the matching of each source-target distribution.
 The results are summarised in \tabref{hor_rew_ks_test}.
 
 \begin{figure}[t]
@@ -187,7 +194,7 @@ The results are summarised in \tabref{hor_rew_ks_test}.
   \end{subfigure}
   \caption{Comparision before and after matching. Source(Target) distributions are shown in red(blue) color.
    The upper(lower) two distributions are the original(matched) distributions.}
-  \label{rew_original}
+  \label{hor_rew_example_figs}
 \end{figure}
 
 \begin{table}[!h]
