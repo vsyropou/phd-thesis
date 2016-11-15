@@ -6,8 +6,8 @@ Combinatorial background is the type of background typical in particle collision
 particles is produced. It is caused by random combinations of non-signal particles that build a signal
 candidate during the event reconstruction, see \secref{det_tracking}.
 Stripping is also a way to save disk space when permanently storing events offline, since it is impossible to save anything
-that the detector writes out. Each of the stripping selection criteria, also referred to as a {\it cut},
-requires from a certain observable to satisfy some condition. For example the mass of the mother particle \Bs must be within
+that the detector writes to disk. Each of the stripping selection criteria, also referred to as a {\it cut},
+requires from a certain observable to satisfy some condition. For example the mass of the \Bs candidate must be within
 a certain range. Or another type of cut could be the probability that a final state particle, like the pion, is misidentified
 as a muon. A detailed table of the Stripping selection is given in \tabref{Bs2JpsiKstSelection}. The remaining three selection
 steps after Stripping are described in each of the subsequent subsections.
@@ -21,23 +21,23 @@ one by one\footnote{also known as {\it cut-based analysis}}. Instead, a multivar
 In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifier variable}.
 The MVA approach can exploit the correlations between input variables to get the maximum discriminating power out of their combination.
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accumulate near $+1$,
-whereas background candidates near -1, see \figref{BTDG_performance}. In the current analysis the classifier variable is a
-{\it Boosted Decision Tree}, BDT in short, which is a class of machine learning  algorithm. Further information
-on the BDT algorithm used can be found in Section 7.2 of\cite{TMVA}.
+whereas background candidates near -1, see \figref{BTDG_performance}.
 
+In the current analysis the classifier variable is a {\it Boosted Decision Tree}, BDT in short, which is a class
+of machine learning  algorithm. Further information on the BDT algorithm used can be found in Section 7.2 of\cite{TMVA}.
 For the current analysis the TMVA toolkit\cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background.
 This pair of data sets is provided as input to the MVA algorithm to construct the classifying variable.
 In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
 Next another, independent, pair of sets is used to asses how successful the training step was. This step is called {\it testing}.
 For the signal representative samples, \BsJpsiKst Monte-Carlo (MC) simulated data are used, here after simulated data.
-As for the background representative sam-
+For the background representative sam-
 
 \begin{figure}[!t]
 \centering
   \tikzsetnextfilename{bdtg}
   \scalebox{1}{\input{Figures/Chapter4/bdtg}}
-  \caption{Real data BDT distribution (black points). Signal (blue points) and background (red points) distributions
+  \caption{Data BDT distribution (black points). Signal (blue points) and background (red points) distributions
            tend to accumulate mainly to the right and left respectively.}
   \label{BTDG_performance}
 \end{figure}
@@ -47,13 +47,13 @@ region away from the \BsJpsiKst mass peak, usually referred to as {\it mass side
 is not affected by non perfect simulation and it is also independent of the signal representative sample.
 Note that the simulated data are treated by all the processing steps after the \lzero trigger level in the same way as real data.
 
-The two well separated peaks in \figref{BTDG_performance} suggest that the BDT variable, shows a good discrimination
-power over signal and background distributions. The BDT was also checked for possible over-training. The last is a
+The two well-separated peaks in \figref{BTDG_performance} suggest that the BDT variable, shows a good discrimination
+power over signal and background distributions. The BDT was also checked for possible over-training. The later is a
 situation where the BDT variable becomes sensitive to statistical fluctuations of the training samples.
-This means that statistically compatible distribution, such as the testing and training samples,
-appear to have significantly different BDT distributions. Which is a not desirable situation that leads to
+This means that statistically compatible distributions, such as the testing and training samples,
+appear to have significantly different BDT distributions, which is a not desirable situation that leads to
 bad BDT performance. Once the training and testing steps are complete, a cutoff value on the BDT is applied
-so that it maximizes the following figure of merit, hereafter {\it FoM}:
+so that it maximizes the following figure of merit, hereafter FoM:
 
 \begin{equation}
   \centering
@@ -61,9 +61,9 @@ so that it maximizes the following figure of merit, hereafter {\it FoM}:
 \label{eqn:fom}
 \end{equation}
 
-\noindent where $w_i$ are weights associated to each event, here after \sWeights, and calculated with the
+\noindent where $w_i$ are weights associated to each event, hereafter \sWeights, and calculated with the
 \sPlot technique. The last  is a statistical tool to unfold data distributions\cite{splot}. More details are provided
-in \secref{sWeighting_and_mass}. The above mentioned FoM can be understood as an effective signal yield.
+in \secref{sWeighting_and_mass}. The above-mentioned FoM can be understood as an effective signal yield.
 For a range of BDT values the \sPlot technique provides a different set of \sWeights based on which a different
 FoM value can be obtained. The optimum BDT value is chosen such that it maximizes $F(w_i)$.
 
@@ -79,7 +79,7 @@ several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsip
 These backgrounds are the result of misidentifying a final state particle, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above mentioned misidentified backgrounds
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
-see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinues.
+see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinuous.
 This type of distribution has to be removed before the next selection step can be applied as it is more effective
 when the distributions involved are smooth. Therefore, specific simulated events with negative weights
 are injected to the data sample such that they cancel out the contribution of the above mentioned non-combinatorial background
