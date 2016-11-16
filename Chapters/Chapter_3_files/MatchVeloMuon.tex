@@ -13,7 +13,7 @@ searching for hits inside an area in the M3 muon station. This area is called {\
 The hits found inside the M3 FoI are called {\it seed hits} and they are used as starting space points to look
 for more hits in the rest of the muon stations. For each M3 seed hit, additional hits are looked for
 by extrapolating from each M3 seed hit further to the rest of the muon stations.
-Since there is no magnetic field between the muons stations the above mentioned extrapolations are simple straight lines.
+Since there is no magnetic field between the muons stations the above-mentioned extrapolations are simple straight lines.
 The corresponding FoIs for the rest of the muon stations are smaller, compared to the M3 FoI, since there
 is no deflection involved. These smaller FoIs account for the fact that the presence of heavy material
 between the muon stations affects the trajectory of a muon passing thorough. This effect is called {\it multiple
@@ -48,7 +48,7 @@ can fake a real muon track. The requirement is particularly useful for low momen
 of M3 seed hits is larger. This is because the corresponding M3 FoI are larger, and thus the number of possible
 random combinations of muon tracks increases.
 
-An important detail that increases the discriminating power of the above mentioned \chisq requirement is the
+An important detail that increases the discriminating power of the above-mentioned \chisq requirement is the
 so called {\it magnet hit}. The last is not a hit coming from a tracking station but rather the $(x,y)$ coordinates
 of the $z$ focal plane of the \lhcb magnet. The focal plane is essentially the plane defined by the $z$ coordinate
 where the change in the slope of a track, due to the magnetic field,  "instantaneously" takes place. Note that this
@@ -72,7 +72,7 @@ information from the \ttracker the purity\footnote{by reducing the number a cert
 tracks called {\it ghost tracks}}\cite{Bowen:2105078} of the \veloTracks. The resulting set of
 tracks are called \veloTTracks.
 
-The above mentioned improvements offer opportunities for reconstructing muons with $\pt<500 \mevc$,
+The above-mentioned improvements offer opportunities for reconstructing muons with $\pt<500 \mevc$,
 hereafter low momenta muons, by upgrading the old \mvm algorithm. The upgraded algorithm can be
 used by newly introduced \hltone muon lines which aim at reconstructing low \pt muons.
 
@@ -101,7 +101,7 @@ The upgraded \mvTTm algorithm improves in several points with respect to the old
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
 This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm,
 as explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
-focal plane as well as the errors on the magnet hit $(x,y)$ coordinates are updated and tuned for
+focal plane as well as the undertainties on the magnet hit $(x,y)$ coordinates are updated and tuned for
 optimum using simulated data. Furthermore, the non-bending, $y$, plane is included in the \chisq
 computation\footnote{Note that the $y$ projection of a track is almost a straight line, since the magnetic
 field is parallel to the $y$ axis and thus exerting no force along this direction.}, which was not the
@@ -172,8 +172,8 @@ of the $\chisq/\nDoF$ discriminating power between the old and upgraded algorith
 
 \subsubsection{z focal plane parametrization}
 The empirical parametrization of the magnet focal plane $z$ coordinate already used in the old \mvm\cite{roelThesis},
-is updated. Furthermore the $x,y$ errors on the position of the magnet hit are empirically estimated using the simulated data.
-Specifically, since the true muon track is known it is possible to tune these errors such that they yield the same momentum
+is updated. Furthermore the $x,y$ uncertainties on the position of the magnet hit are empirically estimated using the simulated data.
+Specifically, since the true muon track is known it is possible to tune these uncertainties such that they yield the same momentum
 estimation as the full computation of the muon trajectory would do. Note that a momentum estimate is available by the
 \mvTTm algorithm as soon as a seed hit in M3 is found, using the kick method.
 
@@ -252,7 +252,7 @@ The most straight forward way to improve the matching algorithm in terms of effi
 by relaxing the value of the $\chisq/\nDoF$ cut-off value. On the other hand side, doing so will increase the number
 of output tracks to the point that the \hltone rate requirement of 12 \khz is not fulfilled.
 Alternatively, one might attempt to improve the $\chisq/\nDoF$ discriminating variable itself,
-by finding a better parametrization for the magnet hit position and errors. However the current
+by finding a better parametrization for the magnet hit position and uncertainty. However the current
 parametrization seems to be quite good with respect to the one present in the old \mvm algorithm.
 Lastly, in case the momentum estimate of \ttracker improves\footnote{For example in the upgraded it
 UT tracker that will replace the \ttracker} then it is worth trying the FoI used in the \muonID code

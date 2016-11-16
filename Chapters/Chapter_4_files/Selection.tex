@@ -77,12 +77,12 @@ one more crucial step that is necessary to address prior to the application of t
 namely that of non-combinatorial background. Studies of simulated samples show contributions from
 several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
 These backgrounds are the result of misidentifying a final state particle, for example a pion can
-be confused for a kaon. The invariant mass distribution of the above mentioned misidentified backgrounds
+be confused for a kaon. The invariant mass distribution of the above-mentioned misidentified backgrounds
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
 see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinuous.
 This type of distribution has to be removed before the next selection step can be applied as it is more effective
 when the distributions involved are smooth. Therefore, specific simulated events with negative weights
-are injected to the data sample such that they cancel out the contribution of the above mentioned non-combinatorial background
+are injected to the data sample such that they cancel out the contribution of the above-mentioned non-combinatorial background
 events\footnote{The term "cancel out" obtains proper meaning in the context of the likelihood which is built
 in \secref{sWeighting_and_mass} based on the mass probability density function.}.
 The current section briefly addresses the treatment of the non-combinatorial background with negative weights
@@ -96,7 +96,7 @@ as well as the special treatment of the \LbJpsippi non-combinatorial background.
   \label{mass_BDTG_selection}
 \end{figure}
 
-As a first step towards removing the above mentioned type of background contribution it is necessary to have an estimate
+As a first step towards removing the above-mentioned type of background contribution it is necessary to have an estimate
 on the expected non-combinatorial background yield on data. This is done using simulated data and based on the expression:
 \begin{equation}
 N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BR \times \varepsilon \times {\mathcal{L}},
@@ -123,8 +123,8 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, m_{hh}  | A_k^i)} {P_{\rm MC}^i(\Om
 
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs\footnote{\pdf is an acronym for Probability Density Function}.
 The index $i$ labels the specie of the particular non-combinatorial background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
-Whereas the polarization states, $0$, $\parallel$, $\perp$, of each of the above mentioned species is represented by the $k$ index.
-The estimated yields of non-combinatorial background after the above mentioned steps is shown in \tabref{peaking_bkg_yields}
+Whereas the polarization states, $0$, $\parallel$, $\perp$, of each of the species is represented by the $k$ index.
+The estimated yields of non-combinatorial background after the above-mentioned steps is shown in \tabref{peaking_bkg_yields}
 
 \begin{table}[t]
    \centering
@@ -238,7 +238,7 @@ The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
 \pdf a set of weights can be computed such that they project out only that particular species while effectively subtracting the others.
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
-subtracted while \BJpsiKst events are projected with the above mentioned technique, also referred to as sWeighting.
+subtracted while \BJpsiKst events are projected with the above-mentioned technique, also referred to as sWeighting.
 
 \begin{figure}[t]
   \centering
