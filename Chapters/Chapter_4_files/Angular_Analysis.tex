@@ -13,9 +13,9 @@ along with the \Acp{} parameters of interest, which are introduced in a special 
 \label{Diferential_Decay_Rate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The decay of interest, \BJpsiKst, is a P2VV process with 4 charged particles in the final state.
+The decay of interest, \BsJpsiKst, is a P2VV process with 4 charged particles in the final state.
 The acronym P2VV acronym refers to the spin of the particles involved in the decay.
-Specifically, the \Bs (and \Bd) is spin zero parity minus particle (or pseudo-scalar), whereas the intermediate resonances
+Specifically, the \Bs (and \Bd) is a spin zero parity minus particle (or pseudo-scalar), whereas the intermediate resonances
 \jpsi and \Kstarzb are spin one (or vector) particles. Hence the acronym P2VV. The final state particles are
 two muons, \mmu, and a kaon-pion pair, $\kaon\pion$, coming from the decay of the \jpsi and \Kstarzb respectively.
 The angular dependence of the \BsJpsiKst decay can be described using either the transversity framework\cite{transvFrameworkI,transvFrameworkII}
@@ -45,14 +45,14 @@ and \swave ($S$) polarizations as shown in the following equation.
   \label{ang_terms}
 \end{align}
 
-\noindent Note the appearance of \pwave and \spwave interference terms; See in\cite{jeroenThesis} how the $\Re$
+\noindent Note the appearance of \pwave and \spwave interference terms, in \tabref{ang_distr}; See in\cite{jeroenThesis} how the $\Re$
 and $\Im$ parts of the interference terms show up. The terms $a_n$, in the same equation,
 originate from squaring the amplitude and their exact expressions are shown in \tabref{ang_distr}.
 The functions $h_n$ represent the angular dependence of each term $a_n$ term and $\mKpiAmp$ the \mkpi dependence of
 the amplitude. The treatment of the \mkpi dependence is postponed for the next section. \tabref{ang_distr} lists the angular
 part of the decay rate equation, \ie the $h_n$ functions, which is the result of
 applying the \emph{helicity formalism} in the \BJpsiKst decay. In order to describe the 4-body decay \BJpsiKst, three
-angles, denoted by $\Omega$, plus the \mkpi are required. As shown in \figref{helAngles}, the three \emph{helicity angles} angles
+angles, denoted by $\Omega$, plus \mkpi are required. As shown in \figref{helAngles}, the three \emph{helicity angles} angles
 $\thetaK$, $\thetamu$ and $\phihel$, are defined as follows: $\thetamu$ is the angle of the positive $\mu$ with respect to the
 momentum of the \jpsi in the \Bs rest frame; similarly for $\thetaK$, the \kaon is used to define the angle with respect to
 the momentum of the intermediate \Kpi resonance; finally $\phihel$ is the relative angle between the \Kpi and di-muon decay
@@ -62,7 +62,7 @@ Lastly, the orthogonal angular basis
 \footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
 harmonics can be expressed as Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
 of $P$ and $Y$ is adopted in the current analysis. This choice is favoured by the fact that the integrals
-of the product of two $P$ or two $Y$ are known analytically. The last significantly improves the description and implementation
+of the product of two $P$ or two $Y$ are known analytically. The latter significantly improves the description and implementation
 of the angular acceptance described in the following section.
 
 \begin{table}[t]
@@ -130,7 +130,7 @@ of the angular acceptance described in the following section.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 While the effects of angular resolution are known to be small for this analysis \cite{tristanThesis},
 on the other hand, sources introducing angular acceptance need to be accounted for.
-Deviations from a perfect angular acceptance can be introduced by selection criteria imposed during the Stripping or by the detector itself.
+Deviations from a perfect angular acceptance can be introduced by selection criteria mentioned in \secref{Event_Selection} or by the detector itself.
 As explained in \secref{lhcb_detector} the \lhcb detector does not cover the full $4\pi$ solid angle, plus the fact that
 there are no detector elements inside the \lhc beam pipe. The current section introduces the treatment of
 the angular acceptance function. After that the parametrization of the acceptance is discussed and finally an important
@@ -220,12 +220,12 @@ with respect to the boost direction in the lab frame, as shown in the following 
 \end{equation}
 
 \noindent where, $\thetapi^\lab$ is the angle of the pion momentum vector with respect to the boost direction
-in the lab frame. Absence of the \lab superscript refers to quantities computed in teh \Kstarz rest frame.
+in the lab frame. Absence of the \lab superscript refers to quantities computed in the \Kstarz rest frame.
 The subscripts T,L label the transverse and longitudinal components of the pion momentum, $\ptot_{\pi}$.
 The symbol $E$ stands for the energy of the pions. The Lorentz boost factor and the relativistic speed
 are labeled by $\gamma$ and $\beta$ respectively. The angle $\thetapi$ is the angle of the pion momentum,
-in \Kstarz rest frame, which is releated to $\thetaK$ in \figref{helAngles} as: $\thetapi = \thetaK + \pi$.
-Now, the origin of the above mentioned asymmetry is understood better in the limit of a mass less pion,
+in the \Kstarz rest frame, which is releated to $\thetaK$ in \figref{helAngles} as: $\thetapi = \thetaK + \pi$.
+Now, the origin of the above mentioned asymmetry is understood better in the limit of a massless pion,
 in which case \equref{pi_angle} reduces to:
 
 \begin{equation}
@@ -234,7 +234,7 @@ in which case \equref{pi_angle} reduces to:
   \label{pi_angle_massless}
 \end{equation}
 
-\noindent Note that the energy of a mass-less particle is equal to its total momentum and also that $\beta \simeq 1$
+\noindent Note that the energy of a massless particle is equal to its total momentum and also that $\beta \simeq 1$
 for pions coming from \BJpsiKpi decays in \lhcb. From \equref{pi_angle_massless} it follows that decays where $\cos\thetapi=-1$
 are not allowed. The situation corresponds to a low transverse momentum pion for which $\cos\thetaK = -\cos\thetapi = +1$.
 This explains why the shape of the $\cos\thetaK$ distribution becomes asymmetric when excluding low momenta pions.
@@ -247,7 +247,7 @@ Based on the latter it follows that excluding low transverse momentum muons does
 in the $\cos\thetamu$ distribution.
 
 As for the acceptance in the $\phihel$ plane it is very close to being uniform.
-No reason for a a strong acceptance effect in that projection is expected.
+No strong acceptance effect in that projection is expected.
 
 \subsubsection{Acceptance parametrization}
 \label{Acceptance parametrization}
@@ -265,8 +265,8 @@ integration. Such a parametrization is defined by \equref{eff_func}.
 
 \noindent where the spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
 functions to which the angular acceptance is decomposed by means of the coefficients $c^i_{k}$, hereafter efficiency moments or simply moments.
-Following parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Now, there are infinite efficiency moments
-since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However in practice only a small number of efficiency moments
+Following parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Note that there are infinite efficiency moments
+since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However, in practice only a small number of efficiency moments
 contribute significantly to the angular acceptance shape\footnote{This is due to the fact that higher moments introduce
 variations on the acceptance shape that are effectively washed out by the finite angular resolution.}.
 The efficiency moments used to describe the acceptance shape are shown in the first column of \tabref{eff_moms_table}.
@@ -283,19 +283,19 @@ issue with the acceptance structure close to $\cos\thetaK=1$ and it is addressed
     \hline
     moment & central value & standard deviation \\
     \hline
-  $\moment{0}{0}{0}$   & +3.7454  &  0.0023  \\
-  $\moment{1}{0}{0}$   & -2.0982  &  0.0084  \\
-  $\moment{2}{0}{0}$   & -1.9116  &  0.0126  \\
-  $\moment{3}{0}{0}$   & -0.0317  &  0.0151  \\
-  $\moment{4}{0}{0}$   & +0.1146  &  0.0175  \\
-  $\moment{5}{0}{0}$   & +0.1384  &  0.0193  \\
-  $\moment{0}{2}{0}$   & +0.2820  &  0.0066  \\
-  $\moment{0}{2}{2}$   & +0.0612  &  0.0058  \\
-  $\moment{0}{4}{0}$   & +0.0864  &  0.0066  \\
-  $\moment{1}{2}{0}$   & -0.1900  &  0.0115  \\
-  $\moment{1}{4}{0}$   & -0.0720  &  0.0118  \\
-  $\moment{2}{2}{0}$   & -0.1315  &  0.0161  \\
-  $\moment{2}{2}{2}$   & -0.0674  &  0.0117  \\
+  $\moment{0}{0}{0}$   & $+3.7454$  &  $0.0023$  \\
+  $\moment{1}{0}{0}$   & $-2.0982$  &  $0.0084$  \\
+  $\moment{2}{0}{0}$   & $-1.9116$  &  $0.0126$  \\
+  $\moment{3}{0}{0}$   & $-0.0317$  &  $0.0151$  \\
+  $\moment{4}{0}{0}$   & $+0.1146$  &  $0.0175$  \\
+  $\moment{5}{0}{0}$   & $+0.1384$  &  $0.0193$  \\
+  $\moment{0}{2}{0}$   & $+0.2820$  &  $0.0066$  \\
+  $\moment{0}{2}{2}$   & $+0.0612$  &  $0.0058$  \\
+  $\moment{0}{4}{0}$   & $+0.0864$  &  $0.0066$  \\
+  $\moment{1}{2}{0}$   & $-0.1900$  &  $0.0115$  \\
+  $\moment{1}{4}{0}$   & $-0.0720$  &  $0.0118$  \\
+  $\moment{2}{2}{0}$   & $-0.1315$  &  $0.0161$  \\
+  $\moment{2}{2}{2}$   & $-0.0674$  &  $0.0117$  \\
   \hline
   \end{tabular}
   \caption{Efficiency moments of \BsJpsiKst.}
@@ -355,13 +355,13 @@ The choice of efficiency moments has to do with the structure of the acceptance 
 which is not a problem by itself. However, within the parametrization of the acceptance function, \equref{eff_func} may become negative.
 In other words the method of efficiency moments does not guarantee that the acceptance function is a positive definite quantity.
 Note that this is an artifact of the parametrization. The problem is mathematical in nature and there is no standard solution (known
-to the author when these lines were written). The approach followed to solve this problem has two steps: First a constrain on the
+to the author when these lines were written). The approach followed to solve this problem has two steps: First a constraint on the
 efficiency function, \equref{eff_func}, is introduced to force it to be positive definite and second, a fit to the efficiency
 moments is performed to optimize the acceptance shape description. The result is a hybrid acceptance function that is by
 construction positive definite.
 
 Before laying out the formulas behind the above mentioned steps it is useful to visualize the problem caused by the parametrization, see \figref{angAcc_nom}
-and the corresponding caption. Having done that the most natural thing to do before making any effort to force the value of \equref{eff_func}
+and the corresponding caption. Subsequently, the most natural thing to do before making any effort to force the value of \equref{eff_func}
 positive at $\cos\thetaK=1$ is to make the best possible choice of efficiency moments. The moments are chosen such that the efficiency function becomes negative
 at the largest possible value of $\cos\thetaK$. In other words the crossing point of the red curve with the horizontal axis in \figref{angAcc_nom},
 has to be as close to $\cos\thetaK=1$ as possible.
@@ -428,7 +428,7 @@ efficiency function is decomposed, see \equref{eff_func}, is modified as shown i
 \end{align}
 
 \noindent Note that the subscript $i$ in $P_i^0(1)$ is irrelevant since $P_i^0(1)=1$ for any value of $i$.
-The result of the above constraint is shown in figure \figref{angAcc_constr_fit}, where it can be seen that
+The result of the above constraint is shown in \figref{angAcc_constr_fit}, where it can be seen that
 the acceptance projection on $\cos\thetaK=1$ is not negative anymore. In addition it has also been checked
 whether the acceptance is negative in 2D and 3D, since it is possible for a 2D projection of the acceptance
 to take negative values whilst the 1D projections are positive. Two dimensional projection of the constrained
@@ -455,7 +455,7 @@ acceptance can be seen in \figref{eff2D}.
     \caption{}
     \label{eff2D_lp}
   \end{subfigure}
-\caption{Two dimensional efficiency projections of the \BsJpsiKst simulation sample, after the constrain of \equref{eff_func_constr}.
+\caption{Two dimensional efficiency projections of the \BsJpsiKst simulation sample, after the constraint of \equref{eff_func_constr}.
          The equivalent plots for \BsbarJpsiKst are indistinguishable by eye. The scale of the $y$-axis is arbitrary.}
     \label{eff2D}
 \end{figure}
@@ -529,7 +529,7 @@ can cause a difference in the observed kaon momentum spectrum even though the an
 Both of the above mentioned effects have an impact on the decay angles distribution since the helicity angles are functions
 of the momenta of the final state particles.
 
-In order to over-come the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure.
+In order to overcome the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure.
 At each step of the weighting procedure the simulated data are corrected for the current best estimate of the physics
 parameters and the two dimensional $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution as well.
 The efficiency moments are re-evaluated using the weighted simulated sample and the fit to the real data is repeated.
@@ -605,26 +605,26 @@ This is also supported by the effect of these corrections on the parameters of i
 \footnotesize
 \begin{tabular}{ c c c c c c c c c | c}
   \hline
-  Iteration          &       1       &       2       &       3       &       4       &       5       &       6  & total\\
+  Iteration          &       $1$       &       $2$       &       $3$       &       $4$       &       $5$       &       $6$  & total\\
   \hline
-  $\Acp{0}$                       &  -0.00  &  -0.03  &  +0.03  &  +0.00  &  -0.00  &  -0.00  &  +0.00    \\
-  $\Acp{\parallel}$               &  +0.13  &  +0.04  &  -0.09  &  -0.04  &  -0.02  &  -0.01  &  +0.01    \\
-  $\Acp{\perp}$                   &  -0.19  &  +0.15  &  +0.02  &  +0.01  &  +0.00  &  +0.00  &  -0.01    \\
-  $\Acp{\text{S}}$                &  -0.01  &  -0.17  &  +0.09  &  +0.06  &  +0.03  &  +0.01  &  +0.01    \\
+  $\Acp{0}$                       &  $-0.00$  &  $-0.03$  &  $+0.03$  &  $+0.00$  &  $-0.00$  &  $-0.00$  &  $+0.00$    \\
+  $\Acp{\parallel}$               &  $+0.13$  &  $+0.04$  &  $-0.09$  &  $-0.04$  &  $-0.02$  &  $-0.01$  &  $+0.01$    \\
+  $\Acp{\perp}$                   &  $-0.19$  &  $+0.15$  &  $+0.02$  &  $+0.01$  &  $+0.00$  &  $+0.00$  &  $-0.01$    \\
+  $\Acp{\text{S}}$                &  $-0.01$  &  $-0.17$  &  $+0.09$  &  $+0.06$  &  $+0.03$  &  $+0.01$  &  $+0.01$    \\
   \hline
-  $\fP{0}$                        &  -1.15  &  +0.96  &  +0.19  &  +0.00  &  -0.02  &  -0.01  &  -0.03    \\
-  $\fP{\parallel}$                &  -0.05  &  -0.06  &  +0.03  &  +0.04  &  +0.02  &  +0.01  &  -0.01    \\
-  $\ampPhase{\parallel}$          &  -0.37  &  +0.23  &  +0.09  &  +0.03  &  +0.01  &  +0.0   &  -0.01    \\
-  $\ampPhase{\perp}$              &  -0.57  &  +0.28  &  +0.16  &  +0.07  &  +0.03  &  +0.01  &  -0.02    \\
+  $\fP{0}$                        &  $-1.15$  &  $+0.96$  &  $+0.19$  &  $+0.00$  &  $-0.02$  &  $-0.01$  &  $-0.03$    \\
+  $\fP{\parallel}$                &  $-0.05$  &  $-0.06$  &  $+0.03$  &  $+0.04$  &  $+0.02$  &  $+0.01$  &  $-0.01$    \\
+  $\ampPhase{\parallel}$          &  $-0.37$  &  $+0.23$  &  $+0.09$  &  $+0.03$  &  $+0.01$  &  $+0.0 $  &  $-0.01$    \\
+  $\ampPhase{\perp}$              &  $-0.57$  &  $+0.28$  &  $+0.16$  &  $+0.07$  &  $+0.03$  &  $+0.01$  &  $-0.02$    \\
   \hline
-  $\fS{1}$                        &  +0.86  &  -0.66  &  -0.32  &  -0.12  &  -0.05  &  -0.02  &  -0.31    \\
-  $\fS{2}$                        &  +0.84  &  -0.27  &  -0.18  &  -0.09  &  -0.05  &  -0.02  &  +0.23    \\
-  $\fS{3}$                        &  +0.00  &  -0.02  &  -0.00  &  +0.01  &  +0.02  &  +0.01  &  +0.02    \\
-  $\fS{4}$                        &  +0.47  &  -0.21  &  -0.14  &  -0.06  &  -0.04  &  -0.02  &  -0.00   \\
-  $\deltaS{1}$                    &  -2.08  &  +0.90  &  +0.66  &  +0.32  &  +0.13  &  +0.04  &  -0.03    \\
-  $\deltaS{2}$                    &  +0.13  &  -0.05  &  -0.02  &  -0.03  &  -0.01  &  -0.01  &  +0.01    \\
-  $\deltaS{3}$                    &  -0.90  &  +0.48  &  +0.19  &  +0.08  &  +0.04  &  +0.03  &  -0.08    \\
-  $\deltaS{4}$                    &  -2.43  &  +1.10  &  +0.53  &  +0.24  &  +0.13  &  +0.07  &  -0.36    \\
+  $\fS{1}$                        &  $+0.86$  &  $-0.66$  &  $-0.32$  &  $-0.12$  &  $-0.05$  &  $-0.02$  &  $-0.31$    \\
+  $\fS{2}$                        &  $+0.84$  &  $-0.27$  &  $-0.18$  &  $-0.09$  &  $-0.05$  &  $-0.02$  &  $+0.23$    \\
+  $\fS{3}$                        &  $+0.00$  &  $-0.02$  &  $-0.00$  &  $+0.01$  &  $+0.02$  &  $+0.01$  &  $+0.02$    \\
+  $\fS{4}$                        &  $+0.47$  &  $-0.21$  &  $-0.14$  &  $-0.06$  &  $-0.04$  &  $-0.02$  &  $-0.00$    \\
+  $\deltaS{1}$                    &  $-2.08$  &  $+0.90$  &  $+0.66$  &  $+0.32$  &  $+0.13$  &  $+0.04$  &  $-0.03$    \\
+  $\deltaS{2}$                    &  $+0.13$  &  $-0.05$  &  $-0.02$  &  $-0.03$  &  $-0.01$  &  $-0.01$  &  $+0.01$    \\
+  $\deltaS{3}$                    &  $-0.90$  &  $+0.48$  &  $+0.19$  &  $+0.08$  &  $+0.04$  &  $+0.03$  &  $-0.08$    \\
+  $\deltaS{4}$                    &  $-2.43$  &  $+1.10$  &  $+0.53$  &  $+0.24$  &  $+0.13$  &  $+0.07$  &  $-0.36$    \\
   \hline
 \end{tabular}
 \caption{Parameters of interest after each iteration. The amount of change is expressed as a fraction of one standard deviation.
@@ -643,7 +643,7 @@ This feature makes, in hindsight, the acceptance correction procedure unnecessar
 
 The dependence of the \BJpsiKpi decay amplitude on \mkpi as introduced in \equref{ang_terms} is treated in a special way.
 The $\mKpiAmp$ functions are not implemented, but instead they are integrated over in four intervals. The choice of this strategy
-is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the $\Kstar$ \pwave.
+is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the $\Kstar$ \pwave,
 while the \swave component is small. Furthermore developing a full model for both the \pwave and \swave, which is not the
 first priority in the current analysis, can be avoided. Despite the \mkpi integration there is still some residual dependence left.
 It originates from integrals like the one in the following equation:
@@ -726,7 +726,7 @@ a non-resonant term, coming from elastic scattering.
 
 While the \Bs and \Bd sWeighted muon pair mass sWeighted, $\mmumu$, have very similar shapes, the \mkpi spectra exhibit different shapes.
 Indeed, the \Bs \mkpi \sPlot of \figref{mkpiPlot_raw} seems to be slightly distorted compared to the one of \Bd \mkpi.
-Since there is no \aprior reason why the \Kst \pwave
+Since there is no \aprior reason why the \Kstarz \pwave
 should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
 the $K\pi$ \swave and the \Kstarz, which may be stronger in the \Bs decays compared to the \Bd ones. In order
 to check the validity of this hypothesis, two additional studies are performed. First it was checked that the non-resonant
@@ -804,8 +804,8 @@ one gets the production asymmetry estimate shown in \equref{prod_assym}.
   \label{exp_assym}
   \begin{align}
     \centering
-    \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst), \label{prod_assym} \\
-    \Adet  &= (-1.086 \pm 0.531 \stat) \label{det_assym}
+    \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst) \;\%, \label{prod_assym} \\
+    \Adet  &= (-1.086 \pm 0.531 \stat) \;\%. \label{det_assym}
   \end{align}
 \end{subequations}
 
@@ -837,7 +837,7 @@ such that the corresponding component \pdf is invoked when the total \pdf needs 
 all the categories that the data are split to and all the implications arising from that. Lastly a brief insight in some aspects
 of the likelihood parameter estimation method are included.
 
-Starting from the angular \pdf terms as shown in \tabref{ang_terms}. The last cannot describe both \BsJpsiKst and \BsbarJpsiKst.
+Starting from the angular \pdf terms as shown in \tabref{ang_distr}; The latter cannot describe both \BsJpsiKst and \BsbarJpsiKst.
 There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of
 \BsJpsiKst. As it is mentioned in \secref{penguin_formalism} the above decays are {\it flavor specific} which means that a \Bs meson
 has always a negative kaon in the final state and \viceversa in the case of a \Bsb meson.
@@ -862,9 +862,9 @@ more details in \secref{cp_assymetries_and_total_decay_rate}.} which  significan
 \end{table}
 
 The next observable used to split the data was already mentioned in \secref{Kpi_Invariant_mass} that dealt with the \mkpi dependence.
-There are four \mkpi intervals defining four more categories in the data. In addition, and contrary to the above mentioned data category, there
+There are four \mkpi intervals defining four more categories in the data. Furthermore, and contrary to the above mentioned data category, there
 are parameters of interest that are different in each \mkpi interval. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
-In addition the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
+In addition, the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
 \tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category since it was
 found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
 The chosen \mkpi intervals are shown in \tabref{Kbindef}.
@@ -943,7 +943,7 @@ and can thus be neglected.
 \subsubsection{\CP asymmetries as free parameters}
 \label{cp_assymetries_and_total_decay_rate}
 The raw asymmetry, $\Acp{\rm raw}$, discussed in \secref{experimentalAssym}, can be measured by counting
-$\BsbarJpsiKst$ and $\BsJpsiKst$ events and use them to determine:
+$\BsbarJpsiKst$ and $\BsJpsiKst$ decays and use them to determine:
 
 \begin{equation}
 \Acp{\text{raw}} \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},
@@ -964,7 +964,7 @@ to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in
 
 
 \noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude in the \BsbarJpsiKst
-and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$  $\AmpMnSq{i}$. The idea
+and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$, $\AmpMnSq{i}$. The idea
 is that the latter parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs respectively.
 This way both samples are fitted simultaneously in one fit. Solving \equref{acp_param} for $\AmpSq{\pm}$ yields:
 

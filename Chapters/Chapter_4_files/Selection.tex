@@ -149,7 +149,8 @@ The estimated yields of non-combinatorial background after the above mentioned s
         \hline
         \end{tabular}
         \caption{Estimated non-combinatorial yields in $\pm 70\mevcc$ $K\pi$ mass window of each background
-        after re-weighting the angular distributions, with the exception of the \LbJpsippi.}
+        after re-weighting the angular distributions. The \LbJpsippi events are not re-weighted as explained
+        at the end of \secref{peaking_backgrounds}.}
         \label{peaking_bkg_yields}
 \end{table}
 
@@ -184,7 +185,7 @@ Before discussing the mass fit description it is useful to briefly describe the 
 \end{itemize}
 
 \noindent An exponential distribution, $e^{-km}$, is found to be an appropriate description of the combinatorial background. It  accounts
-for events where random combinations of final state particles are combined to a signal candidate. These kind of events are not expected to
+for events where random combinations of final state particles are combined to a signal candidate. Such candidates are not expected to
 exhibit any structure in the mass distribution, they simply follow a exponential distribution with a negative slope in the mass spectrum.
 The slope is negative because with increasing mass the frequency of those random combinations drops: Since high momentum particles are more
 likely to originate from a signal than low momentum ones. This is because the signal particles like the \Bs meson is quite heavy which is
@@ -198,7 +199,7 @@ to Gaussian distribution. This is a powerful feature that is exploited in order 
 
 The Hypatia distribution is chosen mainly because it describes the tails of the \Bs and \Bd invariant mass peaks which is
 of crucial importance. These two peaks are sufficiently close,
-see picture \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks
+see \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks
 takes place. Several effects contribute to the structure of the tails apart from mass resolution of the detector. These effects
 can be radiative tails (a charged final state particle radiates a photon), interplay of radiative tail with \jpsi mass constraint
 or badly reconstructed events caused by decays of the final state hadrons, see\cite{Santos:2013gra}. The tail parameters ($\alpha$, $n$)
@@ -209,7 +210,7 @@ The first two are set to zero\footnote{$\zeta$ is empirically found to be very s
 $\beta = 0$ implies that the core is symmetric left and right with respect to the mean.}, the third one is taken from the previous
 MC simulated sample along with the tail parameters \footnote{In the limit of $\zeta = 0$, $\lambda$ does not depend on detector
 effects but only on particle kinematics, the same way as the tail parameters do.} whereas the last two which are the width and
-the mean of the core are estimated by the mass fit.
+the mean of the core are deterimined by the mass fit.
 
 \subsubsection{The mass fit}
 From MC studies, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi invariant mass.
@@ -227,15 +228,15 @@ can be applied.  The final fit to the data is shown in \figref{mass_plot}, where
 \end{align}
 
 \noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category,
-and the second uncertainties correspond to systematical. The correlations between the \Bd and \Bs yields in each fitting category
+and the second correspond to systematical uncertainties. The correlations between the \Bd and \Bs yields in each fitting category
 are found to be less than $4\%$. Note that the mass fitting model has been validated with a procedure commonly called {\it toy-study}
 similar to the one described in \secref{Toy_Experiments_Study}.
 
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.
-The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called sWeight, to each event
+The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called sWeight, to each candidate
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
-\pdf a set of weights can be computed such that they project out only that particular species while effectively subtract the others.
+\pdf a set of weights can be computed such that they project out only that particular species while effectively subtracting the others.
 In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
 subtracted while \BJpsiKst events are projected with the above mentioned technique, also referred to as sWeighting.
 
@@ -243,12 +244,14 @@ subtracted while \BJpsiKst events are projected with the above mentioned techniq
   \centering
   \tikzsetnextfilename{mass_plot}
   \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
-  \caption{Invariant mass fit to the data. $y$-axis is in logarithmic scale.}
+  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKst and
+           \BsJpsiKst mass \pdf components. The combinatorial and \LbJpsipK background components are shown with balck and cyan
+           colors respectively. The total mass \pdf, blue curve, is overlayied to the data. }
   \label{mass_plot}
 \end{figure}
 
 The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section.
-Specifically, the resulting weighted events can be described by the signal \pdf only, meaning there is no need to explicitly model
+Specifically, the resulting weighted candidates can be described by the signal \pdf only, meaning there is no need to explicitly model
 the background angular distributions. As a result the fit itself is faster and simpler to implement. On the other hand there are a few
 disadvantages such as the evaluation of systematic uncertainties on the estimated angular parameters due to the mass \pdf modeling:
 Any variation of these models implies re-computing the \sWeights. Also care needs to be taken such that the uncertainties
@@ -264,4 +267,4 @@ function shape the scale factor,
 \end{equation}
 
 \noindent is applied to each weight before performing the angular fit. The scale factor essentially ensures that the sum of weights
-equals the  number of events.
+equals the number of candidates.

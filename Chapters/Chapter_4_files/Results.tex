@@ -110,7 +110,7 @@ they are expressed as fractions of the statistical uncertainty.
 \subsubsection{Angular acceptance}
 \label{systAngAcc}
 The efficiency moments as described in \secref{Accceptance} are computed with a limited size simulation sample
-and thus their central values are subjected to statistical fluctuations. To account for this limitation the
+and thus their central values come with a statistical fluctuations. To account for this limitation the
 efficiency moments are allowed to float in the angular fit to the data with a multivariate Gaussian constrain within $5$
 standard deviations from their nominal value. The multivariate Gaussian takes properly into account their correlations.
 In addition this systematic covers any potential difference in the acceptance between data and simulated sample
@@ -251,7 +251,7 @@ results are reported in \tabref{pull_table}. The reported biases on the paramete
      \label{systematics_swave_phase}
 \end{table}
 
-\subsubsection{$C_{SP}$ factors}
+\subsubsection{\CSP factors}
 \label{systCSP}
 The choice of \swave and \pwave models affect the values of the \CSP factors, which they finally enter the angular fit via the \spwave
 interference terms of the angular \pdf, see \secref{Kpi_Invariant_mass}. The choice of those models has a small but measurable impact on the parameters of interest and it was made
@@ -285,7 +285,8 @@ angular fit corresponds to the assigned systematic uncertainty.
 Asymmetries induced in the \Bs meson production and from detector imperfections as described in \secref{experimentalAssym},
 directly affect the $\Acp{i}$ parameters of interest, see \secref{cp_assymetries_and_total_decay_rate}. The estimated production
 and detection asymmetries are allowed to float in the final angular fit to the data with a Gaussian constrain. This way the impact
-of their uncertainties on the parameters of interest is built in the likelihood function. Thus no separate systematic is assigned.
+of their uncertainties on the parameters of interest is built in the likelihood function. Thus no separate systematic uncertainty
+is assigned.
 
 \subsubsection{\dwave contribution}
 \label{systCSP}
@@ -357,7 +358,7 @@ parabolic shape as shown in \equref{likelihood_exp}
   \end{subfigure}
 \caption{Profile likelihood scans of \Acp{} parameters of interest. The black line corresponds to the profile likelihood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         error.}
+         uncertainty.}
 \end{figure}
 
 \begin{equation}
@@ -402,7 +403,7 @@ to $\mu$. The last equation is called {\it profile likelihood}.
   \end{subfigure}
 \caption{Profile likelihood scans of \pwave related parameters of interest. The black line corresponds to the profile likelihood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         error. The phases appear to have a double minimum. This is actually expected given the symmetries that the fitted \pdf
+         uncertainty. The phases appear to have a double minimum. This is actually expected given the symmetries that the fitted \pdf
          of \equref{ang_terms} is known to have.}
         %  Also $\ampPhase{\parallel}$ appears to have other local minima at above $3\sigma$ and as such are neglected, since only
         %  global minima are relevant to the likelihood parameter estimation.
@@ -451,13 +452,14 @@ the horizontal axis.
   \end{subfigure}
   \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         error. There are a two interesting features in those plots. First $\fS{1}$ minimum is very broad due to the
+         uncertainty. There are a two interesting features in those plots. First $\fS{1}$ minimum is very broad due to the
          low number of events in that \mkpi interval. Second the $\fS{2}$ minimum is close to a physical boundary.}
 \end{figure}
 
-It follows that the errors defined in the the above mentioned way can be asymmetric left and right of the minimum.
+It follows that the uncertainties defined in the the above mentioned way can be asymmetric left and right of the minimum.
 The sample size for some of the data categories in the current analysis is quite small. This is depicted in the corresponding profile
-likelihood plots of the parameters of interest relevant to those data categories. This is also the reason why asymmetric errors are used.
+likelihood plots of the parameters of interest relevant to those data categories. This is also the reason why asymmetric uncertainties
+are used.
 
 \begin{figure}[!t]
   \begin{subfigure}{0.5\textwidth}
@@ -492,15 +494,14 @@ likelihood plots of the parameters of interest relevant to those data categories
   \end{subfigure}
 \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
          function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         error. There are a two interesting features in those plots. First $\fS{4}$ minimum is very broad due to the
+         uncertainty. There are a two interesting features in those plots. First $\fS{4}$ minimum is very broad due to the
          low number of events in that \mkpi interval. Second the $\fS{3}$ minimum is close to a physical boundary.}
 \end{figure}
 
-Going one step further on the statistical error interpretation, it is useful to realize what kind of statement is usually
+Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is usually
 attributed to the statistical uncertainty of one standard deviation. Basically the claim is that one standard deviation
 guaranties that the probability that the true value of the parameter of interest $\mu^{\text{true}}$ will be inside the
-interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$\footnote{The last percentage comes from the fraction of the total area of a normal distribution corresponding to one standard deviation.}.
-The last interval is usually quoted as a $1\sigma$ {\it confidence interval}.
+interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$. The last interval is usually quoted as a $1\sigma$ {\it confidence interval}.
 
 
 
@@ -531,11 +532,11 @@ P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
 
 \noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted (from each toy experiment) values of a given parameter of interest
 respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
-Essentially the pull variable expresses the generated - fitted parameter value difference in units of one standard deviation.
+Essentially the pull variable expresses the generated-fitted parameter value difference in units of one standard deviation.
 
 In an non-biasing fitting model the pull distribution of a certain parameter follows a Gaussian distribution of zero mean and width
 one\footnote{Provided that the Central Limit Theorem (CLT) of statistics is satisfied.}.
-This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) error, $\hat{\sigma}_+$($\hat{\sigma}_-$)
+This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) uncertainty, $\hat{\sigma}_+$($\hat{\sigma}_-$)
 estimates of \secref{Parameters_of_Interest}. Particularly it means that the probability that the interval
 $[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$\footnote{In this context the term "true" stands for the
 value of $p$ that nature "chose" and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of
@@ -579,7 +580,7 @@ $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained in t
 \end{figure}
 
 Furthermore, potential biases to a certain parameter of interest arising from the fitting model
-can be deduced from the mean of the pull and error distributions as shown in \equref{bias_def}.
+can be deduced from the mean of the pull and uncertainty distributions as shown in \equref{bias_def}.
 
 \begin{equation}
 {\rm b}_p = \left|\left<P\right>\right| \; \left<\sigma^i\right>,\;\; \left.
