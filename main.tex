@@ -64,7 +64,8 @@ b5paper
 
 \usepackage[bottom]{footmisc} % footnotes always in the bottom
 
-\usepackage{pgfplots} % externally build tex plots. re build only if they change.
+% externally build tex plots. re build only if they change.
+\usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage{varwidth}
 \usetikzlibrary{external,arrows,positioning,shapes}
@@ -82,6 +83,7 @@ b5paper
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \DeclareRobustCommand{\kw}[1]{\texttt{#1}}
 
+% define additional environments
 \newtheorem{theorem}{Theorem}
 \newtheorem{method}{Method}
 
