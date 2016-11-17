@@ -1,7 +1,9 @@
 
-Effectively there are four stages of offline event selection which take place after the data has been recorded.
-First a set of selection criteria is applied called {\it Stripping}. The purpose of stripping is to perform
-a loose rejection of the {\it combinatorial} background and prepare the data for the next selection stages.
+With the exception of the trigger, addressed in \secref{det_trigger}, there are effectivelly four stages of offline event
+selection which take place after the data has been recorded.
+First a set of selection criteria is applied called {\it Stripping}. The purpose of stripping is to roughly
+select the triggered data according to their physics content. Furthermore, a loose rejection of the {\it combinatorial}
+background is performed such that and the data are prepared for the next selection stages.
 Combinatorial background is the type of background typical in particle collision where a large number of
 particles is produced. It is caused by random combinations of non-signal particles that build a signal
 candidate during the event reconstruction, see \secref{det_tracking}.
@@ -81,7 +83,7 @@ be confused for a kaon. The invariant mass distribution of the above-mentioned m
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
 see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinuous.
 This type of distribution has to be removed before the next selection step can be applied as it is more effective
-when the distributions involved are smooth. Therefore, specific simulated events with negative weights
+when the distributions involved are smooth. Therefore, specific simulated decays with negative weights
 are injected to the data sample such that they cancel out the contribution of the above-mentioned non-combinatorial background
 events\footnote{The term "cancel out" obtains proper meaning in the context of the likelihood which is built
 in \secref{sWeighting_and_mass} based on the mass probability density function.}.
@@ -99,14 +101,14 @@ as well as the special treatment of the \LbJpsippi non-combinatorial background.
 As a first step towards removing the above-mentioned type of background contribution it is necessary to have an estimate
 on the expected non-combinatorial background yield on data. This is done using simulated data and based on the expression:
 \begin{equation}
-N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BR \times \varepsilon \times {\mathcal{L}},
+N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BF \times \varepsilon \times {\mathcal{L}},
 \end{equation}
 \noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
 (probability that the $b$ quark forms a meson with another quark type $q$), $\varepsilon$ is the total efficiency (including reconstruction,
-selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity, hereafter just luminosity, of the data. Finally \BR stands for the
+selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity, hereafter just luminosity, of the data. Finally \BF stands for the
 branching fraction of the particular background of \tabref{peaking_bkg_yields}. Since simulated data are used it is necessary to determine
 the effective luminosity of that simulated sample and adjust it such that it matches the estimated luminosity of the data. After that, the
-number of non-combinatorial background events from the simulated sample is a valid estimate of the one in real
+number of non-combinatorial background events from the simulated sample is a valid estimate of that in
 data\footnote{Assuming same total efficiency between the simulation and real data sample.}.
 
 The second and last step of the non-combinatorial background removal is to apply an angular correction factor to account for the fact that
@@ -160,7 +162,7 @@ combinatorial background in the next section. The reasons for this different tre
 non-combinatorial backgrounds are twofold. First, the full amplitude structure of \LbJpsippi decays was not
 sufficiently known \cite{Aaij:2014zoa} when the analysis was concluded and thus the weighting of the simulated samples is not possible.
 Second, the peak of the misidentified \LbJpsippi decays in the \jpsi$K\pi$ mass spectrum is broader than those
-of the other non-combinatorial backgrounds, see \figref{mass_plot}, as a result the \sPlot technique is still
+of the other non-combinatorial backgrounds, see \figref{mass_plot}, and as a result the \sPlot technique is still
 effective.
 
 
