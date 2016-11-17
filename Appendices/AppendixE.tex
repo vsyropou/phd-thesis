@@ -14,7 +14,7 @@ The variables $\DLL$ and PNN are particle identification variables. The first is
 likelihood ratio of two particle id hypothesis, whereas the particle identification information
   the second provides is based on neural network approach. The IsMuon variable is another
 particle identification variable dedicated to muons. The quality of the fitted vertices
-of two reconstructed tracks is expressed by $\chi^2_{\rm vtx}/{\rm nDoF}(\jpsi)$, where nDoF
+of two reconstructed tracks is expressed by $\chi^2_{\rm vtx}/\nDoF(\jpsi)$, where \nDoF
 is the number of degrees of freedom of that fit. The variable DOCA (Distance Of Closest Approach)
 refers to the closest distance between the a vertex and the detector's z-axis. The impact parameter,
 IP, variable is the distance between a track and the primary vertex of the $p-p$ collision.
@@ -31,41 +31,41 @@ for \LbJpsipK and \LbJpsippi peaking backgrounds suppression.
     % \scalebox{0.85}{
     \footnotesize
     \begin{tabular}{lrll}\hline
-      Decay mode      &  Cut parameter                         & Stripping line            & Final selection \\
+      Decay mode           &  Cut parameter                          & Stripping line            & Final selection \\
       \hline
-      $\jpsi\to\mmu\mmu$ & $\DLL{\mu}{\pi}(\mu)$                  & $>0$                      & --        \\
-      {}              & $\chi^2_{\rm vtx}/{\rm nDoF}(\jpsi)$   & $<16$                     & --        \\
-      {}              & $\chi^2_{\rm DOCA}/{\rm nDoF}(\jpsi)$  & $<20$                     & --        \\
-      {}              & $\chi_\text{IP}^2(\mu)$                & --                        & $>16$     \\
-      {}              & \pt($\mu$)                             & $>0.5$\gevc               & --        \\
-      {}              & IsMuon$(\mu)$                          & $>0$                      & --        \\
-      {}              & $|M(\mu^+\mu^-)-M(\jpsi)|$             & $<150$               & --        \\
+      $\jpsi\to\mmu\mmu$   & $\DLL{\mu}{\pi}(\mu)$                   & $>0$                      & --        \\
+      {}                   & $\chi^2_{\rm vtx}/\nDoF(\jpsi)$         & $<16$                     & --        \\
+      {}                   & $\chi^2_{\rm DOCA}/\nDoF(\jpsi)$        & $<20$                     & --        \\
+      {}                   & $\chi_\text{IP}^2(\mu)$                 & --                        & $>16$     \\
+      {}                   & \pt($\mu$)                              & $>0.5$\gevc               & --        \\
+      {}                   & IsMuon$(\mu)$                           & $>0$                      & --        \\
+      {}                   & $|M(\mu^+\mu^-)-M(\jpsi)|$              & $<150$                    & --        \\
       \hline
-      $\Kstarzb\to\kaon\pion$ & $\DLL{K}{\pi}(K)$                         & $>0$                      & --          \\
-      {}                   & \pt($K$)                                  & $>0.5$\gevc               & $>0.5$\gevc \\
-      {}                   & $\text{P}_{\rm ghost}(\rm track)(K)$   & $<0.8$                    & --          \\
-      {}                   & $\chi_\text{IP}^2(K)$                     & --                        & $>2$        \\
-      {}                   & ${\rm PNNK}(K)$                        & --                        & $>0.21$     \\
-      {}                   & ${\rm PNNK}(K)/{\rm PNNp}(K)$ (*)   & --                        & $>0.99$     \\
-      {}                   & $\DLL{K}{\pi}(\pi)$                       & $<0$                      & --          \\
-      {}                   & \pt($\pi$)                                & $>0.5$\gevc               & $>0.5$\gevc \\
-      {}                   & $\text{P}_{\rm ghost}(\rm track)(\pi)$ & $<0.8$                    & --          \\
-      {}                   & $\chi_\text{IP}^2(\pi)$                   & --                        & $>2$        \\
-      {}                   & $\rm PNNK(\pi)$                        & --                        & $<0.01$     \\
-      {}                   & $\rm PNN\pi(\pi)/PNNp(\pi)$ (*)     & --                        & $>21.9$     \\
-      {}                   & $\chi^2_{\rm vtx}/{\rm nDoF}(\Kstarzb)$   & $<25$                     & --          \\
-      {}                   & $\chi^2_{\rm DOCA}/{\rm nDoF}(\Kstarzb)$  & $<30$                     & --          \\
-      {}                   & $M(K^-\pi^+)$                             & $[750,\,1900]$  & --          \\
-      {}                   & $|M(K^-\pi^+)-896|$               & --                        & $<70$ \\
+      $\Kstarzb\to\kaon\pion$ & $\DLL{K}{\pi}(K)$                    & $>0$                      & --          \\
+      {}                   & \pt($K$)                                & $>0.5$\gevc               & $>0.5$\gevc \\
+      {}                   & $\text{P}_{\rm ghost}(\rm track)(K)$    & $<0.8$                    & --          \\
+      {}                   & $\chi_\text{IP}^2(K)$                   & --                        & $>2$        \\
+      {}                   & ${\rm PNNK}(K)$                         & --                        & $>0.21$     \\
+      {}                   & ${\rm PNNK}(K)/{\rm PNNp}(K)$ (*)       & --                        & $>0.99$     \\
+      {}                   & $\DLL{K}{\pi}(\pi)$                     & $<0$                      & --          \\
+      {}                   & \pt($\pi$)                              & $>0.5$\gevc               & $>0.5$\gevc \\
+      {}                   & $\text{P}_{\rm ghost}(\rm track)(\pi)$  & $<0.8$                    & --          \\
+      {}                   & $\chi_\text{IP}^2(\pi)$                 & --                        & $>2$        \\
+      {}                   & $\rm PNNK(\pi)$                         & --                        & $<0.01$     \\
+      {}                   & $\rm PNN\pi(\pi)/PNNp(\pi)$ (*)         & --                        & $>21.9$     \\
+      {}                   & $\chi^2_{\rm vtx}/\nDoF(\Kstarzb)$      & $<25$                     & --          \\
+      {}                   & $\chi^2_{\rm DOCA}/\nDoF(\Kstarzb)$     & $<30$                     & --          \\
+      {}                   & $M(K^-\pi^+)$                           & $[750,\,1900]$            & --          \\
+      {}                   & $|M(K^-\pi^+)-896|$                     & --                        & $<70$       \\
       \hline
-      \Bs            & $M(\Bs)$                                 & $[5100,\,5700]$ & $[5150,\,5650]$   \\
-      {}             & $\chi^2_{\rm vtx}/{\rm nDoF}(\Bs)$       & $<10$                     & --                          \\
-      {}             & ${\rm DIRA}(\Bs)$                        & $>0.999$                  & --                          \\ %DIRA w.r.t. OWNPV
-      {}             & VS                                     & $>1.5\mm$                 & --                          \\ % B_s0_FD_OWNPV
-      \Bu veto          & $|M(\jpsi, K)-5279|$                     & --                        & $>60$                 \\
+      \Bs                  & $M(\Bs)$                                & $[5100,\,5700]$           & $[5150,\,5650]$   \\
+      {}                   & $\chi^2_{\rm vtx}/\nDoF(\Bs)$           & $<10$                     & --                \\
+      {}                   & ${\rm DIRA}(\Bs)$                       & $>0.999$                  & --                \\ %DIRA w.r.t. OWNPV
+      {}                   & VS                                      & $>1.5\mm$                 & --                \\ % B_s0_FD_OWNPV
+      \Bu veto             & $|M(\jpsi, K)-5279|$                    & --                        & $>60$             \\
       \hline
-      BDT            & 2011 data/MC (**)                        & --                        & $>0.2$                      \\
-      {}             & 2012 data/MC (**)                        & --                        & $>0.12$                     \\
+      BDT                  & 2011 data/MC (**)                       & --                        & $>0.2$             \\
+      {}                   & 2012 data/MC (**)                       & --                        & $>0.12$            \\
       \hline
     \end{tabular}}
 % }
