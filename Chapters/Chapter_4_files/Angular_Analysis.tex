@@ -531,7 +531,7 @@ of the momenta of the final state particles.
 
 In order to overcome the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure.
 At each step of the weighting procedure the simulated data are corrected for the current best estimate of the physics
-parameters and the two dimensional $p_{K^{\pm}},p_{\pi^{\mp}}$ momentum distribution as well.
+parameters and the two dimensional $(p_{\kaon},p_{\pion})$ momentum distribution as well.
 The efficiency moments are re-evaluated using the weighted simulated sample and the fit to the real data is repeated.
 This changes the best estimate of the parameters of interest. This procedure is repeated until these parameters
 converge. The full procedure by steps can be summarized as:
@@ -573,7 +573,7 @@ converge. The full procedure by steps can be summarized as:
 \item Weight each event in the simulated sample for the difference between the obtained from the previous fit angular \pdf and the angular \pdf used to
       generate the simulated data sample with.
       This essentially means that the underlying physics of the re-weighted simulated  sample corresponds to the physics obtained in the previous step.
-\item Compare the $p_{K^{\pm}}-p_{\pi^{\mp}}$ momentum distribution between the physics weighted simulated sample of the previous step with the
+\item Compare the 2D $(p_\kaon,p_\pion)$ momentum distribution between the physics weighted simulated sample of the previous step with the
       real data, and weight again each simulated event for the difference.
 \item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
 \item Go back to step 4 and repeat until change in the parameters of interest are negligible.
@@ -586,15 +586,15 @@ converge. The full procedure by steps can be summarized as:
      variables & range & $\# \text{intervals}$ \\
      %\multicolumn{2}{c}{range}   &  vs        \\
     \hline
-    $p_{K^{\pm}}$    &  $[0,140]    \;  \text{GeV}/\text{c}^2$  & 10      \\
-    $p_{\pi^{\pm}}$  &  $[0,60]      \;  \text{GeV}/\text{c}^2$  & 10      \\
+    $p_\kaon$    &  $[0,140] \; \gevc$  & 10      \\
+    $p_\pion$    &  $[0,60]  \; \gevc$  & 10      \\
     \hline
   \end{tabular}
   \caption{\small Re-weighted variable intervals.}
   \label{angAccBinning}
 \end{table}
 
-The $p_{K^{\pm}}-p_{\pi^{\mp}}$ weighting of the simulated data sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
+The $(p_\kaon,p_\pion)$ weighting of the simulated data sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
 At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
 \tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implying that the overall effect of the
 acceptance corrections is small. \figref{angAggCorrections} shows the shape of the acceptance before and after corrections.
@@ -745,7 +745,7 @@ the efficiency correction. This is a clear indication of the presence of stronge
 The nature of the current analysis is such that it is affected by asymmetries related to experimental effects.
 Particularly, the difference between the number of observed \BsJpsiKst and \BsbarJpsiKst decays is related the
 main parameters of interest, introduced in \secref{cp_assymetries_and_total_decay_rate}. These parameters essentially
-quantify the direct \CP asymetry between the previous decays. 
+quantify the direct \CP asymetry between the previous decays.
 Considering now the case where collisions at \lhc favor the \BsJpsiKst decay over its \CP conjugate, \BsbarJpsiKst;
 Or the fact that the detector might have different efficiency for positive and negative kaons (or pions),
 then $\Acp{}$ will be biased by these experimental effects. In fact it happens so that both of those effects are in action.
@@ -849,16 +849,16 @@ is calculated separately for these two samples. This is done to avoid involving 
 in the estimation of the efficiency moments\footnote{The $\Acp{i}$ parameters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes into one parameter,
 more details in \secref{cp_assymetries_and_total_decay_rate}.} which  significantly simplifies the necessary computation.
 
-\begin{table}[!h]
+\begin{table}[t]
 \centering
 \begin{tabular}{c c c c c}
   \hline
-             & interval 1 & interval 2 & interval 3 & interval 4\\
+              & interval 1 & interval 2 & interval 3 & interval 4\\
   \hline
-  \CSP       & $ 0.9681 $ & $ 0.9312 $ & $ 0.9519 $ & $ 0.9880 $ \\
-  \hline
+  \mkpi range & $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966] $ \\
+  \CSP factor & $ 0.9681 $    & $ 0.9312 $    & $ 0.9519 $    & $ 0.9880 $ \\  \hline
 \end{tabular}
-\caption{\CSP values for each \mkpi interval.}
+\caption{Definitions of \mkpi intervals and the corresponding \CSP factor values.}
 \label{csp_vals}
 \end{table}
 
@@ -868,21 +868,7 @@ are parameters of interest that are different in each \mkpi interval. Namely the
 In addition, the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
 \tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category since it was
 found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
-The chosen \mkpi intervals are shown in \tabref{Kbindef}.
-
-\begin{table}[!h]
-\centering
-\begin{tabular}{c c c c}
-  \hline
-  interval 1 & interval 2 & interval 3 & interval 4\\
-  \hline
-  $ [826,861) $ & $ [861,896) $ & $ [896,931) $ & $ [931,966] $ \\
-%  $ 826 \leq x \leq 861 $ & $ 861 < x \leq 896 $ & $ 896 < x \leq 931 $ & $ 931 < x \leq 966 $ \\
-  \hline
-\end{tabular}
-\caption{Definitions of \mkpi intervals. Units are in \mevcc.}
-\label{Kbindef}
-\end{table}
+The chosen \mkpi intervals are shown in \tabref{csp_vals}.
 
 The data categories as described in the above paragraphs result an a simultaneous fit of 8 categories.
 A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of
