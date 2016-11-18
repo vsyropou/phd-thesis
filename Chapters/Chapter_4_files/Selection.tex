@@ -173,9 +173,10 @@ effective.
 After successfully injecting simulated events with negative weights to cancel non-combinatorial background contributions,
 the data sample is effectively composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
 multivariate based selection. These four modes are statistically disentangled using the \sPlot technique \cite{splot}.
-The technique requires as an input a \pdf that estimates the yield of each
-of the above species. The current analysis uses the \pdf of the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each specie
-is estimated with an extended maximum likelihood fit to the mass distribution of real data, hereafter mass fit.
+The technique requires as an input a \pdf that estimates the yield of each of the above species. The current analysis uses
+a \pdf for the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each specie is estimated with an extended
+maximum likelihood fit to the mass distribution of real data, hereafter mass fit. It is important to point out that the \sPlot
+technique assumes no correlation between the mass and other variables-dimension of the data.
 
 \subsubsection{The mass \pdf}
 Before discussing the mass fit description it is useful to briefly describe the \pdfs used for each of the following individual species:
@@ -200,13 +201,12 @@ an entire family of distributions. Depending on the values of the shape paramete
 to Gaussian distribution. This is a powerful feature that is exploited in order to describe the \LbJpsippi non-combinatorial background shape.
 
 The Hypatia distribution is chosen mainly because it describes the tails of the \Bs and \Bd invariant mass peaks which is
-of crucial importance. These two peaks are sufficiently close,
-see \figref{mass_plot}, that, in case of bad modeling of the tails, event leakage between the \Bs and \Bd peaks
-takes place. Several effects contribute to the structure of the tails apart from mass resolution of the detector. These effects
-can be radiative tails (a charged final state particle radiates a photon), interplay of radiative tail with \jpsi mass constraint
-or badly reconstructed events caused by decays of the final state hadrons, see \cite{Santos:2013gra}. The tail parameters ($\alpha$, $n$)
-are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution. The last makes sure that
-the tail parameters do not rely on detector simulation imperfections.
+of crucial importance. These two peaks are sufficiently close, see \figref{mass_plot}; Bad modeling of the tails implies
+that a certain number of \Bd decays are ascociate to \Bs and \viceversa. Several effects contribute to the structure of the tails apart
+from mass resolution of the detector. These effects can be radiative tails (a charged final state particle radiates a photon), interplay of
+radiative tail with \jpsi mass constraint or badly reconstructed events caused by decays of the final state hadrons, see \cite{Santos:2013gra}.
+The tail parameters ($\alpha$, $n$) are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution.
+The last makes sure that the tail parameters do not rely on detector simulation imperfections.
 For the core of invariant mass distribution, Hypatia uses five shape parameters, namely $\zeta$, $\beta$, $\lambda$, $\sigma$, $\mu$.
 The first two are set to zero\footnote{$\zeta$ is empirically found to be very small whereas
 $\beta = 0$ implies that the core is symmetric left and right with respect to the mean.}, the third one is taken from the previous
@@ -217,10 +217,12 @@ the mean of the core are deterimined by the mass fit.
 \subsubsection{The mass fit}
 From MC studies, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi invariant mass.
 Since these parameters need to be fixed in the mass fit, the latter is performed in intervals of the
-\mkpi invariant mass. In addition, due to correlations between the mass and one of the variables, $\cos\thetamu$, used in the
-subsequent angular fit, the requirements of the \sPlot technique are not satisfied and thus it cannot be applied directly.
+\mkpi invariant mass. In addition, due to correlations between the mass and one of the variables, $\cos\thetamu$, used in
+the subsequent angular fit, the requirements of the \sPlot technique are not satisfied\footnote{as explained in the begining
+of \secref{sWeighting_and_mass}} and thus it cannot be applied directly.
+
 Therefore, each \mkpi invariant mass sub-sample is divided further in intervals of $\cos\thetamu$ where the \sPlot technique
-can be applied.  The final fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
+can be applied. The final fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
 
 \begin{align}
   \centering
@@ -231,8 +233,9 @@ can be applied.  The final fit to the data is shown in \figref{mass_plot}, where
 
 \noindent where the first uncertainties are statistical and obtained from the quadratic sum of the ones in each fitting category,
 and the second correspond to systematical uncertainties. The correlations between the \Bd and \Bs yields in each fitting category
-are found to be less than $4\%$. Note that the mass fitting model has been validated with a procedure commonly called {\it toy-study}
-similar to the one described in \secref{Toy_Experiments_Study}.
+are found to be less than $4\%$. Note that the mass fitting model has been validated with a procedure commonly called {\it toy-study}.
+This procedure checks if the fitting model introduces a bias to the parameters of intereset. Further details can be found in
+\secref{Toy_Experiments_Study} where a toy study is perfomred for the angular fitting model of \secref{Total_Decay_Rate}.
 
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.

@@ -58,13 +58,6 @@ momentum of the \jpsi in the \Bs rest frame; similarly for $\thetaK$, the \kaon 
 the momentum of the intermediate \Kpi resonance; finally $\phihel$ is the relative angle between the \Kpi and di-muon decay
 planes, where each plane is defined in the rest frame of the corresponding intermediate resonance.
 
-Lastly, the orthogonal angular basis
-\footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
-harmonics can be expressed as Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
-of $P$ and $Y$ is adopted in the current analysis. This choice is favoured by the fact that the integrals
-of the product of two $P$ or two $Y$ are known analytically. The latter significantly improves the description and implementation
-of the angular acceptance described in the following section.
-
 \begin{table}[t]
   \centering
   \renewcommand{\arraystretch}{1.2}
@@ -124,10 +117,19 @@ of the angular acceptance described in the following section.
   \label{ang_distr}
 \end{table}
 
+Lastly, the orthogonal angular basis
+\footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
+harmonics can be expressed as Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
+of $P$ and $Y$ is adopted in the current analysis. This choice is favoured by the fact that the integrals
+of the product of two $P$ or two $Y$ are known analytically. The latter significantly improves the description and implementation
+of the angular acceptance described in the following section.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Acceptance}
 \label{Accceptance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 While the effects of angular resolution are known to be small for this analysis \cite{tristanThesis},
 on the other hand, sources introducing angular acceptance need to be accounted for.
 Deviations from a perfect angular acceptance can be introduced by selection criteria mentioned in \secref{Event_Selection} or by the detector itself.
@@ -136,7 +138,7 @@ there are no detector elements inside the \lhc beam pipe. The current section in
 the angular acceptance function. After that the parametrization of the acceptance is discussed and finally an important
 issue related to the choice of parametrization is dealt with.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.49\textwidth}
     \raggedright
@@ -161,8 +163,8 @@ issue related to the choice of parametrization is dealt with.
     \caption{}
     \label{angAcc_phi}
   \end{subfigure}
-  \caption{Angular acceptance shape from simulated data. Each event in the simulated sample has been weighted with the inverse integral
-           of the \pdf that was used to generate them with.}
+  \caption{Angular acceptance shape from simulated data. Each candidate has been assigned a weight. Each weight is
+           equal to one over the integral of the \pdf that was used to generate the angular distribution of the simulated data.}
   \label{angAcc_all}
 \end{figure}
 
@@ -241,10 +243,10 @@ This explains why the shape of the $\cos\thetaK$ distribution becomes asymmetric
 This effect is more general and it is driven by the mass difference between the two particles in a two body decay.
 
 Coming now to the case of the $\cos\thetamu$ acceptance shape, the two decay products of the \jpsi have
-the same mass. A consequence of latter is that the transverse momentum spectrum of each of the two muons
-is almost identical and thus the two muons populate the $(\pt-\cos\thetamu)$ plane similarly.
-Based on the latter it follows that excluding low transverse momentum muons does not introduce any asymmetry
-in the $\cos\thetamu$ distribution.
+the same mass and thus get the same momentum fraction out of the mother \jpsi partice. A consequence of
+the latter is that the transverse momentum spectrum of the two muons is identical, excluding detector
+resolution, and thus the two muons populate the $(\pt-\cos\thetamu)$ plane similarly. Based on the latter
+it follows that excluding low transverse momentum muons does not introduce any asymmetry in the $\cos\thetamu$ distribution.
 
 As for the acceptance in the $\phihel$ plane it is very close to being uniform.
 No strong acceptance effect in that projection is expected.
@@ -323,9 +325,10 @@ on the orthogonal $PY$ basis. This projection is shown in the following equation
   \label{eff_moms_def}
 \end{align}
 
-\noindent The factor $j+\frac{1}{2}$ is used to account for the fact that the associated Legendre
-polynomials form an orthogonal basis but in fact the ortho-normal behavior is required to properly compute the efficiency moments.
-The last step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
+\noindent The factor $j+\frac{1}{2}$ is used to make it such that the associated Legendre polynomials form an
+orthonormal basis; Implying that the integral of the product of two ascociated Legendre polynomilas is equal
+to the {\it Kronecher delta} symbol. The later fact is required to properly compute the efficiency moments.
+The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
 This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
 that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
 same selection steps as real data) as shown in \equref{eff_moms_calc}.
@@ -494,8 +497,8 @@ As it was mentioned before there is at least one more way to parameterize the an
 The main difference between this approach and the method adopted in this analysis is that essentially the normalization weights use the angular functions
 of \tabref{ang_distr} as a basis to project the efficiency of \equref{eff_def}, instead of the orthogonal basis $a_i^{jk}$ of \equref{eff_func}.
 Looking at \equref{norm_weights_pdf} it is helpful to realize how the normalization weights, $\xi_a$, are introduced into the fitting \pdf.
-One can see that they effectively do not multiply the angular \pdf directly but modify the relative contributions between the angular functions
-$h_n$, in the normalization integral of the fitting \pdf. The normalization weights are also calculated following the concept of Monte Carlo integration
+One can see that they effectively do not multiply the angular \pdf directly. Instead the normalization weights modify the relative contributions
+between the angular functions $h_n$, in the normalization integral of the fitting \pdf. The normalization weights are also calculated following the concept of Monte Carlo integration
 similarly to the case of efficiency moments.
 
 \begin{equation}
@@ -504,8 +507,9 @@ similarly to the case of efficiency moments.
 \end{equation}
 
 The advantages of this method is that it is by construction immune from any issue with negative efficiency values.
-After all the acceptance shape is not parameterized at all. The biggest disadvantage on the other hand, is that plotting becomes impossible
-when using normalization weights and other methods need to be implemented in order to visualize the total \pdf.
+After all the acceptance shape is not parameterized at all. The biggest disadvantage on the other hand, is that directly
+plotting the fitting \pdf becomes impossible when using normalization weights. This is because the normalization itegral
+of the fitting \pdf is modified in a non-trivial way and other methods need to be implemented in order to visualize the \pdf.
 Lastly the two methods can yield identical values on the
 fitted parameters by mapping the normalization weights to efficiency moments. This can be done if one solves the normalization integral,
 $\int d\Omega\;\Pgen\times\epsilon(\Omega)$ of the \pdf of \tabref{ang_distr} and the efficiency function in \equref{eff_func},
@@ -691,7 +695,7 @@ to compute the $\CSP$ factors are a combination of a \KstENT and \KstOFOZ for th
 Whereas for the \swave a LASS parametrization \cite{Aston1988493} is used, consisting of a linear combination of the \KstOFTZ resonance with
 a non-resonant term, coming from elastic scattering.
 
-\subsubsection{sWeighted \mkpi distribution}
+\subsubsection{Backgound subracted \mkpi distribution}
 
 \begin{figure}[!t]
   \centering
@@ -718,13 +722,13 @@ a non-resonant term, coming from elastic scattering.
     \label{jpsiPlot}
   \end{subfigure}
 \caption{Comparison of the intermediate state particles mass distributions between \Bs and \Bd.
-         The plots are background subtracted (sWeighted). Top row shows the \mkpi distribution before (left)
+         The plots are background subtracted. Top row shows the \mkpi distribution before (left)
          and after (right) correcting for angular acceptance effects. The \jpsi mass background subtracted
          distribution is shown at the bottom. It was checked that the acceptance correction has negligible
          effects on the shapes of the \jpsi mass distributions.}
 \end{figure}
 
-While the \Bs and \Bd sWeighted muon pair mass sWeighted, $\mmumu$, have very similar shapes, the \mkpi spectra exhibit different shapes.
+While the \Bs and \Bd backgound subracted muon pair mass backgound subracted, $\mmumu$, have very similar shapes, the \mkpi spectra exhibit different shapes.
 Indeed, the \Bs \mkpi \sPlot of \figref{mkpiPlot_raw} seems to be slightly distorted compared to the one of \Bd \mkpi.
 Since there is no \aprior reason why the \Kstarz \pwave
 should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
@@ -794,11 +798,11 @@ oscillations \cite{LHCb-PAPER-2013-018} and is spelled out in the following equa
 \noindent It evaluates to $0.06\%$, which implies that the $\Bs-\Bs$ oscillations are fast compared to the
 average lifetime, $\Gamma_s$, of the \BBbarSyst such that nearly all the production asymmetry is washed out by them.
 The quantities $\Delta\Gamma_s$ and $\Delta m_s$ have been introduced in \secref{Phenomenology},
-while the decay time efficiency function $\varepsilon(t)$ is estimated on sWeighted \BsJpsiKst
+while the decay time efficiency function $\varepsilon(t)$ is estimated on backgound subracted \BsJpsiKst
 data\footnote{and parameterized with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found in \cite{LHCb-PAPER-2014-053}}
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry \cite{LHCb-PAPER-2014-042}
-and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the sWeighted \BsJpsiKst ones of the current analysis,
+and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the backgound subracted \BsJpsiKst ones of the current analysis,
 one gets the production asymmetry estimate shown in \equref{prod_assym}.
 
 \begin{subequations}
@@ -828,7 +832,7 @@ relevant in the normalization of the \pdfs involved is discussed in the last par
 
 \subsubsection{Simultaneous likelihood fit}
 \label{Simutaneous_Likelihood_fit}
-There are several categories that the data are split to.
+There are a few arguments as to why it is more convenient to devide the data sample in several sub-samples.
 For example the special treatment of the \mkpi dependence, as described in \secref{Kpi_Invariant_mass} requires that the data are
 split in four \mkpi intervals. This implies that for each data category, a corresponding component \pdf must be defined.
 Some parameters of interest differ between the categories while some others are shared.
@@ -840,10 +844,9 @@ of the likelihood parameter estimation method are included.
 
 Starting from the angular \pdf terms as shown in \tabref{ang_distr}; The latter cannot describe both \BsJpsiKst and \BsbarJpsiKst.
 There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of
-\BsJpsiKst. As it is mentioned in \secref{penguin_formalism} the above decays are {\it flavor specific} which means that a \Bs meson
-has always a negative kaon in the final state and \viceversa in the case of a \Bsb meson.
-Thus the data can easily be split into two parts based on the sign of the kaon.
-Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples
+\BsJpsiKst. For reasons explaine in \secref{penguin_formalism} the \BsJpsiKst decays always have a negative kaon in the final
+state and \viceversa in the case of \BsbarJpsiKst decays. Thus the data can easily be split into two parts based on the sign of
+the kaon. Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples
 is sufficient for them to be averaged into one set of efficiency moments. However, the angular acceptance as described in \secref{Accceptance}
 is calculated separately for these two samples. This is done to avoid involving the $\Acp{i}$ parameters of interest
 in the estimation of the efficiency moments\footnote{The $\Acp{i}$ parameters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes into one parameter,
@@ -896,8 +899,6 @@ by the negative second derivative of the likelihood at the maximum,
 \left( V^{-1} \right)_{ij} = - \left. \frac{\partial^2\ln L}{\partial p_1 \partial p_2} \right|_{ \vec{p}_{\rm\bf max}}.
 \label{covariance}
 \end{equation}
-
-\noindent Another typical way to estimate and better visualize the standard deviations is shown in \secref{nllscans}.
 
 Coming now to the concept of the extended likelihood. In \equref{likelihood} the number of events is fixed. However it is possible to
 extend the last equation such that the expected number of events shows up as a parameter in the likelihood function and can thus be estimated.

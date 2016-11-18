@@ -67,7 +67,7 @@ The correlation matrix can be found in \tabref{correlation_matrix}.
     \caption{}
     \label{angPlot_phi}
   \end{subfigure}
-  \caption{Fitted angular \pdf projections on top of the \BsJpsiKst sWeighted data.
+  \caption{Fitted angular \pdf projections on top of the \BsJpsiKst background subtructed data.
            Black solid: total, blue dashed \pwave even, blue dotted \pwave odd plus \pwave self interference,
            green dotted: \swave, red dotted dashed S-P interference. Notice the negative values of the \spwave interference.}
   \label{angular_plot}
@@ -110,16 +110,18 @@ they are expressed as fractions of the statistical uncertainty.
 \label{systAngAcc}
 The efficiency moments as described in \secref{Accceptance} are computed with a limited size simulation sample
 and thus their central values come with a statistical fluctuations. To account for this limitation the
-efficiency moments are allowed to float in the angular fit to the data with a multivariate Gaussian constrain within $5$
-standard deviations from their nominal value. The multivariate Gaussian takes properly into account their correlations.
-In addition this systematic covers any potential difference in the acceptance between data and simulated sample
+efficiency moments are allowed to float in the angular fit to the data. A multivariate Gaussian, similar to \equref{mvm_constr_gauss}
+is used to constrain within the acceptance within $5$ standard deviations from their nominal value of \tabref{eff_moms_table}.
+The multivariate Gaussian takes properly into account their correlations. In addition this systematic covers any
+potential difference in the acceptance between data and simulated sample
 that has not been corrected by the iterative procedure described in \secref{Accceptance_Corrections}. Furthermore,
 the constrain of \equref{eff_func_constr} used to force the acceptance positive assumes that the acceptance is zero
 at $\cos\thetaK=1$ for any value of $(\cos\thetamu,\phihel)$. This assumption might not be exactly true. It could be
 that the value of the acceptance at that point is very small but not zero. This systematic effect is accounted for
-by adding a term to \equref{eff_func_new} and allowing it to
-float in the above-mentioned fit to the data. The differences in the parameters of interest between the best fit
-of \tabref{bestFitResult} and the fit with the floating acceptance is taken as a systematic uncertainty.
+by adding a term to \equref{eff_func_new} and allowing it to float in the above-mentioned fit to the data.
+The size of the latter effect was found to be small and the above assumption is almost true. The differences
+in the parameters of interest between the best fit of \tabref{bestFitResult} and the fit with the floating acceptance
+is taken as a systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -148,11 +150,12 @@ of \tabref{bestFitResult} and the fit with the floating acceptance is taken as a
 Not all the \pdf parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}.
 These parameters are fixed to values taken from simulated events.
 In order to account for systematic uncertainties due to these fixed parameters, the mass fit is repeated 1000 times. In each fit
-to the data the values of those fixed parameters are taken from a Gaussian distribution. The mean and width of the Gaussian are
+to the data the values of these fixed parameters are taken from a Gaussian distribution. The mean and width of the Gaussian are
 taken from a mass fit to the simulated data (this last fit is the one that those fixed parameters were estimated in the first place.)
-Correlations among those parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass fits
-a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian like distribution
-for each of the angular parameters of interest. The one standard deviation interval of this distribution is assigned as a systematic to that parameter.
+Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass fits
+a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian distribution
+for each of the angular parameters of interest. The one standard deviation interval of the previous distribution is assigned
+as a systematic to that parameter.
 
 \begin{table}[!h]
   \centering
