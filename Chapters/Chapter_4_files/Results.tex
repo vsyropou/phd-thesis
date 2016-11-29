@@ -10,8 +10,9 @@ statistical fluctuations and asses potential fit bias
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \tabref{bestFitResult} summarizes the parameters of interest best fit values whereas
-\figref{angular_plot} shows the projections of the fitted angular \pdf   on the data.
-The correlation matrix can be found in \tabref{correlation_matrix}.
+\figref{angular_plot} shows the projections of the fitted angular \pdf on the data.
+Notice the negative values of the \spwave interference. The correlation matrix of the
+angular fit can be found in \tabref{correlation_matrix}.
 
 \begin{table}[!h]
   \center
@@ -44,32 +45,30 @@ The correlation matrix can be found in \tabref{correlation_matrix}.
 \end{table}
 
 \begin{figure}[!h]
-\centering
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
+  \begin{subfigure}{\textwidth}
+    \centering
     \tikzsetnextfilename{angPlot_helcosthetaK}
-    \scalebox{1.15}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
-    \caption{}
+    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
+    % \caption{}
     \label{angPlot_ctk}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \centering
     \tikzsetnextfilename{angPlot_helcosthetaL}
-    \scalebox{1.15}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
-    \caption{}
+    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
+    % \caption{}
     \label{angPlot_ctl}
   \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
+  \begin{subfigure}{\textwidth}
+    \centering
     \tikzsetnextfilename{angPlot_helphi}
-    \scalebox{1.15}{\input{Figures/Chapter4/angPlot_helphi}}
-    \caption{}
+    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helphi}}
+    % \caption{}
     \label{angPlot_phi}
   \end{subfigure}
-  \caption{Fitted angular \pdf projections on top of the \BsJpsiKst background subtructed data.
-           Black solid: total, blue dashed \pwave even, blue dotted \pwave odd plus \pwave self interference,
-           green dotted: \swave, red dotted dashed S-P interference. Notice the negative values of the \spwave interference.}
+  \caption{Fitted angular \pdf projections (balck solid) on top of \BsJpsiKst background subtructed data (croses).
+           Blue dashed: \pwave even, blue dotted: \pwave odd plus interference,
+           green dotted: \swave, red dotted dashed S-P interference.}
   \label{angular_plot}
 \end{figure}
 
