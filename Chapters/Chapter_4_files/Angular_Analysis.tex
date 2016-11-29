@@ -174,11 +174,14 @@ specifically the requirement on the \kaon and \pion transverse momentum, \pt, to
 Before attempting to explain the acceptance shape it is useful to illustrate how the decay angles are
 distributed according to the \pdf of \equref{ang_terms}, \ie without any acceptance effect, see \figref{angDistr_all}.
 
-Understanding the shape of the acceptance in the $\cos\thetaK$ projection is equivalent to understanding the observation
-that a large number of pions accumulate more towards $\cos\thetaK=-1$ in the the $(\pt-\cos\thetaK)$ phase
-space region compared to $\cos\thetaK=+1$. This picture is less pronounced in the case of kaons, where the $\pt$ spectrum
-is harder, and they populate the above regions of phase space more evenly. Given the above correlations it follows
-that applying the \pt requirement on both \kaon and \pion makes the $\cos\thetaK$ distribution asymmetric around $\cos\thetaK=0$.
+Understanding the shape of the acceptance in the $\cos\thetaK$ projection begins with the observation
+that the phase space region of $(\ptrans{\pi}-\cos\thetaK)$ is not uniformly populated. This is releated to kinematic
+constrains, explained in the next paragraph. Qualitatively speaking, it turns out that \Bs candidates tend to cluster
+close to the region of $(\ptrans{\pi}-\cos\thetaK=-1)$ compared to the $(\ptrans{\pi}-\cos\thetaK=+1)$ region.
+This picture is less pronounced in the case of $(\ptrans{\kaon}-\cos\thetaK)$ phase space region, where the $\ptrans{\kaon}$
+spectrum is harder and the $(\ptrans{\kaon}-\cos\thetaK)$ is more symmetric withg respect to $\cos\thetaK$. Given these
+correlations it follows that applying the \pt requirement on both \kaon and \pion makes the $\cos\thetaK$ distribution
+asymmetric around $\cos\thetaK=0$.
 
 \begin{figure}[t]
   \centering
@@ -921,7 +924,7 @@ algebra and using the well known expression of the Poisson distribution results 
   \centering
   -\nll &= -\ln\left( \frac{\expEvnts}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
         &= - n\ln(\expEvnts) + \expEvnts  + \ln n! - \sum_e^n \ln\parenthesis{\mathcal{P}(\vec{x};\vec{p})} \nonumber \\
-        &=  \expEvnts  - \sum_e^n \ln\parenthesis{\expEvnts \; \mathcal{P}(\vec{x};\vec{p}) }.
+        &=  \expEvnts  - \sum_e^n \ln\parenthesis{\expEvnts \; \mathcal{P}(\vec{x};\vec{p}) } + {\rm const}.
 \label{extloglikelihood}
 \end{align}
 
@@ -950,9 +953,8 @@ to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in
 \text{and} \quad \AmpSq{i} = &\frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus},
 \end{align}
 
-
 \noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude in the \BsbarJpsiKst
-and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$, $\AmpMnSq{i}$. The idea
+and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$ and $\AmpMnSq{i}$. The idea
 is that the latter parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs respectively.
 This way both samples are fitted simultaneously in one fit. Solving \equref{acp_param} for $\AmpSq{\pm}$ yields:
 

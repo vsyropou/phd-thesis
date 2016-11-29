@@ -23,7 +23,7 @@ one by one\footnote{also known as {\it cut-based analysis}}. Instead, a multivar
 In that case a set of variables are combined by the MVA algorithm to produce a single variable, the {\it classifier variable}.
 The MVA approach can exploit the correlations between input variables to get the maximum discriminating power out of their combination.
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accumulate near $+1$,
-whereas background candidates near -1, see \figref{BTDG_performance}.
+whereas background candidates near $-1$, see \figref{BTDG_performance}.
 
 In the current analysis the classifier variable is a {\it Boosted Decision Tree}, BDT in short, which is a class
 of machine learning  algorithm. Further information on the BDT algorithm used can be found in Section 7.2 of \cite{TMVA}.
@@ -70,25 +70,28 @@ For a range of BDT values the \sPlot technique provides a different set of \sWei
 FoM value can be obtained. The optimum BDT value is chosen such that it maximizes $F(w_i)$.
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Non-combinatorial Backgrounds}
+\subsection{Reflection Backgrounds}
 \label{peaking_backgrounds}
 
-After applying the BTD cut there is still some combinatorial background remaining, see \figref{mass_BDTG_selection}, which is removed
-further by means of the \sWeights described in \secref{sWeighting_and_mass}. However, there is
-one more crucial step that is necessary to address prior to the application of the \sPlot technique,
-namely that of non-combinatorial background. Studies of simulated samples show contributions from
-several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
+After applying the BTD cut there is still some combinatorial background remaining, see \figref{mass_BDTG_selection},
+which is removed further by means of the \sWeights described in \secref{sWeighting_and_mass}.
+However, there is one more crucial step that is necessary to address prior to the application of the
+\sPlot technique, which is the {\it reflection} background. This type of background is due to partcile misidentification.
+Specifically a final state particle is asigned the wrong mass hypothesis. As a result the invariant mass of the \Bs candidate,
+is shifted with respect to \Bs candidates where all the final state particles were correctly identified.
+Another commonly used term for this type of backgound is {\it peaking} background. Studies of simulated samples show contributions
+from several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \BdJpsipipi.
 These backgrounds are the result of misidentifying a final state particle, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above-mentioned misidentified backgrounds
-accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected non-combinatorial background events,
+accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected reflection background events,
 see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform and discontinuous.
 This type of distribution has to be removed before the next selection step can be applied as it is more effective
 when the distributions involved are smooth. Therefore, specific simulated decays with negative weights
-are injected to the data sample such that they cancel out the contribution of the above-mentioned non-combinatorial background
+are injected to the data sample such that they cancel out the contribution of the above-mentioned reflection background
 events\footnote{The term "cancel out" obtains proper meaning in the context of the likelihood which is built
 in \secref{sWeighting_and_mass} based on the mass probability density function.}.
-The current section briefly addresses the treatment of the non-combinatorial background with negative weights
-as well as the special treatment of the \LbJpsippi non-combinatorial background.
+The current section briefly addresses the treatment of the reflection background with negative weights
+as well as the special treatment of the \LbJpsippi reflection background.
 
 \begin{figure}[!t]
   \centering
@@ -99,22 +102,22 @@ as well as the special treatment of the \LbJpsippi non-combinatorial background.
 \end{figure}
 
 As a first step towards removing the above-mentioned type of background contribution it is necessary to have an estimate
-on the expected non-combinatorial background yield on data. This is done using simulated data and based on the expression:
+on the expected reflection background yield on data. This is done using simulated data and based on the expression:
 \begin{equation}
 N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BF \times \varepsilon \times {\mathcal{L}},
 \end{equation}
 \noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
-(probability that the $b$ quark forms a meson with another quark type $q$), $\varepsilon$ is the total efficiency (including reconstruction,
+(probability that the $b$ quark forms a $\Bq$ meson, where $q=\dquark,\squark$), $\varepsilon$ is the total efficiency (including reconstruction,
 selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity, hereafter just luminosity, of the data. Finally \BF stands for the
 branching fraction of the particular background of \tabref{peaking_bkg_yields}. Since simulated data are used it is necessary to determine
 the effective luminosity of that simulated sample and adjust it such that it matches the estimated luminosity of the data. After that, the
-number of non-combinatorial background events from the simulated sample is a valid estimate of that in
+number of reflection background events from the simulated sample is a valid estimate of that in
 data\footnote{Assuming same total efficiency between the simulation and real data sample.}.
 
-The second and last step of the non-combinatorial background removal is to apply an angular correction factor to account for the fact that
+The second and last step of the reflection background removal is to apply an angular correction factor to account for the fact that
 simulated events are distributed uniformly in phase space and hence do not represent a proper decay amplitude structure.
-This can cause the non-combinatorial background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
-in a different way than the actual non-combinatorial background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK
+This can cause the reflection background yield estimations to be wrong because the simulated events are distributed in the $(\Omega, m_{K\pi})$ space
+in a different way than the actual reflection background in the data. The amplitude analysis of \BdJpsipipi, \BsJpsipipi, \BsJpsiKK and \LbJpsipK
 which has been performed in \cite{SheldonBdpipi},\cite{SheldonBspipi},\cite{SheldonKK} and \cite{Gao:1701984} respectively provides
 the necessary knowledge to compute the correction factors
 
@@ -124,9 +127,9 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, m_{hh}  | A_k^i)} {P_{\rm MC}^i(\Om
 \end{equation}
 
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs\footnote{\pdf is an acronym for Probability Density Function}.
-The index $i$ labels the specie of the particular non-combinatorial background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
+The index $i$ labels the specie of the particular reflection background, meaning \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
 Whereas the polarization states, $0$, $\parallel$, $\perp$, of each of the species is represented by the $k$ index.
-The estimated yields of non-combinatorial background after the above-mentioned steps is shown in \tabref{peaking_bkg_yields}
+The estimated yields of reflection background after the above-mentioned steps is shown in \tabref{peaking_bkg_yields}
 
 \begin{table}[t]
    \centering
@@ -150,27 +153,26 @@ The estimated yields of non-combinatorial background after the above-mentioned s
                                         & 2012 & $27.3 \pm 9.0$ \\
         \hline
         \end{tabular}
-        \caption{Estimated non-combinatorial yields in $\pm 70\mevcc$ $K\pi$ mass window of each background
+        \caption{Estimated reflection yields in $\pm 70\mevcc$ $K\pi$ mass window of each background
         after re-weighting the angular distributions. The \LbJpsippi events are not re-weighted as explained
         at the end of \secref{peaking_backgrounds}.}
         \label{peaking_bkg_yields}
 \end{table}
 
 As it was previously mentioned, the \LbJpsippi background is treated specially. Instead of following the above
-procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as the
-combinatorial background in the next section. The reasons for this different treatment with respect to other
-non-combinatorial backgrounds are twofold. First, the full amplitude structure of \LbJpsippi decays was not
-sufficiently known \cite{Aaij:2014zoa} when the analysis was concluded and thus the weighting of the simulated samples is not possible.
-Second, the peak of the misidentified \LbJpsippi decays in the \jpsi$K\pi$ mass spectrum is broader than these
-of the other non-combinatorial backgrounds, see \figref{mass_plot}, and as a result the \sPlot technique is still
-effective.
-
+procedure, the \LbJpsippi invariant mass line shape is modeled and statistically subtracted in the same way as
+the combinatorial background in the next section. The reason for this different treatment with respect to other
+reflection backgrounds is due the \LbJpsippi amplitude structure \cite{Aaij:2014zoa}, which was not sufficiently
+known when the analysis was concluded. Thus weighting of the simulated samples is not possible.
+Now since shape of the misidentified \LbJpsippi decays in the \jpsi$K\pi$ mass spectrum is broad
+enough, see \figref{mass_plot}, such that the \sPlot technique can be used to remove this specific relfection
+background.
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{sWeighting and Invariant Mass Distribution}
 \label{sWeighting_and_mass}
 
-After successfully injecting simulated events with negative weights to cancel non-combinatorial background contributions,
+After successfully injecting simulated events with negative weights to cancel reflection background contributions,
 the data sample is effectively composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
 multivariate based selection. These four modes are statistically disentangled using the \sPlot technique \cite{splot}.
 The technique requires as an input a \pdf that estimates the yield of each of the above species. The current analysis uses
@@ -187,22 +189,26 @@ Before discussing the mass fit description it is useful to briefly describe the 
 \item \Bd and \Bs signals: Hypatia distribution \cite{Santos:2013gra}.
 \end{itemize}
 
-\noindent An exponential distribution, $e^{-km}$, is found to be an appropriate description of the combinatorial background. It  accounts
+\noindent An exponential distribution, $e^{-km}$, is found to be an appropriate description of the combinatorial background. It accounts
 for events where random combinations of final state particles are combined to a signal candidate. Such candidates are not expected to
 exhibit any structure in the mass distribution, they simply follow a exponential distribution with a negative slope in the mass spectrum.
-The slope is negative because with increasing mass the frequency of these random combinations drops: Since high momentum particles are more
-likely to originate from a signal than low momentum ones. This is because the signal particles like the \Bs meson is quite heavy which is
-depicted in high momentum of the final state particles that it decays into.
+The negative slope can be understood when considering two main effects. First, low \Bs invariant mass implies a low momentum of
+the particles (\kaon, \pion, \mmu) used to reconstruct the \BsJpsiKst candidate. Second, there are more low momentum partciles produced in
+a $\proton-\proton$ colision comapred to high momentum ones. This is because elastic-soft strong interactions between quarks are more
+likely to happen compared to "head-on" $\quark-\quark$ ones.
 
 As for the \LbJpsippi background, the Amoroso distribution was found to provide good description of the data.
 The parameters of the distribution are obtained from simulated data and then fixed in the mass fit to the data. The first two parameters
 are the mean and width of the distribution, whereas the other two are related to the shape. Actually the Amoroso distribution describes
 an entire family of distributions. Depending on the values of the shape parameters the resulting distribution can vary from an exponential
-to Gaussian distribution. This is a powerful feature that is exploited in order to describe the \LbJpsippi non-combinatorial background shape.
+to Gaussian distribution. This is a powerful feature that is exploited in order to describe the \LbJpsippi reflection background shape.
 
-The Hypatia distribution is chosen mainly because it describes the tails of the \Bs and \Bd invariant mass peaks which is
-of crucial importance. These two peaks are sufficiently close, see \figref{mass_plot}; Bad modeling of the tails implies
-that a certain number of \Bd decays are ascociate to \Bs and \viceversa. Several effects contribute to the structure of the tails apart
+The Hypatia distribution has two main features which makes it a suitable discribion of \Bs and \Bd invariant mass distributions.
+First, a hyperbolic shape core aims at desctibing the peak of the previous distributions. Second, invariant mass resolution effects are
+taken into account by mariginalizing over the \Bq invariant mass uncertainty. Overall the Hypatia function adequatelly
+models the tails of the \Bs and \Bd invariant mass distribution which is of crucial importance. This is beacause the previous invariant
+mass peaks are sufficiently close, see \figref{mass_plot}, such that bad modeling of the tails implies that a certain number of \Bd decays
+are ascociate to \Bs and \viceversa. Several effects contribute to the structure of the tails apart
 from mass resolution of the detector. These effects can be radiative tails (a charged final state particle radiates a photon), interplay of
 radiative tail with \jpsi mass constraint or badly reconstructed events caused by decays of the final state hadrons, see \cite{Santos:2013gra}.
 The tail parameters ($\alpha$, $n$) are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution.
@@ -242,8 +248,7 @@ Having performed the mass fit all the necessary ingredients to remove the remain
 The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called sWeight, to each candidate
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
 \pdf a set of weights can be computed such that they project out only that particular species while effectively subtracting the others.
-In the context of the current analysis events that are likely to be background such as combinatorial and \LbJpsipK are
-subtracted while \BJpsiKst events are projected with the above-mentioned technique, also referred to as sWeighting.
+Based on this technique, the \BsJpsiKst events are selected out of the full data sample.
 
 \begin{figure}[t]
   \centering
@@ -251,7 +256,7 @@ subtracted while \BJpsiKst events are projected with the above-mentioned techniq
   \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
   \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKst and
            \BsJpsiKst mass \pdf components. The combinatorial and \LbJpsipK background components are shown with balck and cyan
-           colors respectively. The total mass \pdf, blue curve, is overlayied to the data. }
+           colors respectively. The total mass \pdf, blue curve, is overlayied to the data. Figure from \cite{bsjpsikst-paper}. }
   \label{mass_plot}
 \end{figure}
 
