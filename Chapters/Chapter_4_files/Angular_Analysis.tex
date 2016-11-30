@@ -14,9 +14,9 @@ along with the \Acp{} parameters of interest, which are introduced in a special 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The decay of interest, \BsJpsiKst, is a P2VV process with 4 charged particles in the final state.
-The acronym P2VV acronym refers to the spin of the particles involved in the decay.
+The acronym P2VV refers to the spin of the particles involved in the decay.
 Specifically, the \Bs (and \Bd) is a spin zero parity minus particle (or pseudo-scalar), whereas the intermediate resonances
-\jpsi and \Kstarzb are spin one (or vector) particles. Hence the acronym P2VV. The final state particles are
+\jpsi and \Kstarzb are spin one (or vector) particles. The final state particles are
 two muons, \mmu, and a kaon-pion pair, $\kaon\pion$, coming from the decay of the \jpsi and \Kstarzb respectively.
 The angular dependence of the \BsJpsiKst decay can be described using either the transversity framework \cite{transvFrameworkI,transvFrameworkII}
 or the helicity formalism \cite{helicityFormI,helicityFormII}. For the current analysis the helicity
@@ -45,13 +45,12 @@ and \swave ($S$) polarizations as shown in the following equation.
   \label{ang_terms}
 \end{align}
 
-\noindent Note the appearance of \pwave and \spwave interference terms, in \tabref{ang_distr}; See in \cite{jeroenThesis} how the $\Re$
-and $\Im$ parts of the interference terms show up. The terms $a_n$, in the same equation,
-originate from squaring the amplitude and their exact expressions are shown in \tabref{ang_distr}.
-The functions $h_n$ represent the angular dependence of each term $a_n$ term and $\mKpiAmp$ the \mkpi dependence of
-the amplitude. The treatment of the \mkpi dependence is postponed for the next section. \tabref{ang_distr} lists the angular
-part of the decay rate equation, \ie the $h_n$ functions, which is the result of
-applying the \emph{helicity formalism} in the \BJpsiKst decay. In order to describe the 4-body decay \BJpsiKst, three
+\noindent The terms $a_n$ originate from squaring the amplitude and their exact expressions are shown in \tabref{ang_distr}.
+Note the appearance of the $\Re$ and $\Im$ interference terms as well. The full derivation of the above table can be found in \cite{jeroenThesis}.
+The functions $h_n$ and $\mKpiAmp$ represent. respectively, the angular dependence of each term $a_n$ term and the \mkpi
+dependence of the amplitude. The description of the \mkpi dependence is postponed for the next section. \tabref{ang_distr}
+lists the angular part of the decay rate equation, \ie the $h_n$ functions, which are the result of
+applying the helicity formalism in the \BJpsiKst decay. In order to describe the 4-body decay \BJpsiKst, three
 angles, denoted by $\Omega$, plus \mkpi are required. As shown in \figref{helAngles}, the three \emph{helicity angles} angles
 $\thetaK$, $\thetamu$ and $\phihel$, are defined as follows: $\thetamu$ is the angle of the positive $\mu$ with respect to the
 momentum of the \jpsi in the \Bs rest frame; similarly for $\thetaK$, the \kaon is used to define the angle with respect to
@@ -119,7 +118,7 @@ planes, where each plane is defined in the rest frame of the corresponding inter
 
 Lastly, the orthogonal angular basis
 \footnote{The decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
-harmonics can be expressed as Wigner-$D$ matrices. More details on this mapping can be found in \cite{jeroenThesis} }
+harmonics can be expressed as Wigner-$D$ matrices.}
 of $P$ and $Y$ is adopted in the current analysis. This choice is favoured by the fact that the integrals
 of the product of two $P$ or two $Y$ are known analytically. The latter significantly improves the description and implementation
 of the angular acceptance described in the following section.
@@ -130,13 +129,12 @@ of the angular acceptance described in the following section.
 \label{Accceptance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-While the effects of angular resolution are known to be small for this analysis \cite{tristanThesis},
-on the other hand, sources introducing angular acceptance need to be accounted for.
+The effects of angular resolution are known to be small for this analysis \cite{tristanThesis},
+however, sources introducing angular acceptance need to be explicitly accounted for.
 Deviations from a perfect angular acceptance can be introduced by selection criteria mentioned in \secref{Event_Selection} or by the detector itself.
-As explained in \secref{lhcb_detector} the \lhcb detector does not cover the full $4\pi$ solid angle, plus the fact that
-there are no detector elements inside the \lhc beam pipe. The current section introduces the treatment of
-the angular acceptance function. After that the parametrization of the acceptance is discussed and finally an important
-issue related to the choice of parametrization is dealt with.
+As explained in \secref{lhcb_detector} the \lhcb detector does not cover the full $4\pi$ solid angle.
+The current section introduces the treatment of the angular acceptance function. After that the parametrization
+of the acceptance is discussed and finally an important issue related to the choice of parametrization is dealt with.
 
 \begin{figure}[t]
   \centering
@@ -208,12 +206,12 @@ asymmetric around $\cos\thetaK=0$.
     \caption{}
     \label{angDistr_phi}
   \end{subfigure}
-  \caption{Decay angles distributions in the simulation sample prior to any selection applied. Histograms are normalized to unity.}
+  \caption{Decay angles distributions in the simulation sample prior to any selection applied. Histograms are normalized to unity area.}
   \label{angDistr_all}
 \end{figure}
 
 The above situation is related to kinematic constrains in two body decays particularly close to phase
-space physical boundaries. The latter constrain manifests itself when computing the angle of the pion
+space boundaries. The latter constraint manifests itself when computing the angle of the pion
 with respect to the boost direction in the lab frame, as shown in the following equation:
 
 \begin{equation}
@@ -256,10 +254,10 @@ No strong acceptance effect in that projection is expected.
 
 \subsubsection{Acceptance parametrization}
 \label{Acceptance parametrization}
-As for the parametrization of the angular acceptance there are at least two ways to proceed,
+As for the parametrization of the angular acceptance, there are at least two ways to proceed,
 namely the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}.
-The current analysis implements the first one. The efficiency function is thus parameterized using orthogonal functions,
-which when combined with the angular description formalism in the previous subsection, allows for fast analytic
+The current analysis implements the first one. The efficiency function is thus parameterized using orthogonal polynomials,
+which, when combined with the angular description formalism in the previous subsection, allows for fast analytic
 integration. Such a parametrization is defined by \equref{eff_func}.
 
 \begin{equation}
@@ -268,9 +266,9 @@ integration. Such a parametrization is defined by \equref{eff_func}.
   \label{eff_func}
 \end{equation}
 
-\noindent where the spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
+\noindent where the real-valued spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
 functions to which the angular acceptance is decomposed by means of the coefficients $c^i_{k}$, hereafter efficiency moments or simply moments.
-Following parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Note that there are infinite efficiency moments
+Following the parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Note that there are \aprior infinite efficiency moments
 since the sum in \equref{eff_func} runs through all possible values of the $ijk$ indices. However, in practice only a small number of efficiency moments
 contribute significantly to the angular acceptance shape\footnote{This is due to the fact that higher moments introduce
 variations on the acceptance shape that are effectively washed out by the finite angular resolution.}.
@@ -308,9 +306,10 @@ issue with the acceptance structure close to $\cos\thetaK=1$ and it is addressed
 \end{table}
 
 In order for the efficiency moments $c^i_{jk}$ to be computed a definition of the efficiency is necessary. Note that this computation relies on
-simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular dependent \pdfs, namely
+simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular \pdfs, namely
 \Pobs and \Pgen. The first is the angular \pdf that the simulated data follow after all stages of selection, whereas
-the later is the angular \pdf which the simulated data have been generated with. It follows that the efficiency is defined by \equref{eff_def}.
+the latter is the angular \pdf with which the simulated data has been generated.
+It follows that the efficiency is defined by \equref{eff_def}.
 
 \begin{equation}
   \centering
@@ -330,7 +329,7 @@ on the orthogonal $PY$ basis. This projection is shown in the following equation
 
 \noindent The factor $j+\frac{1}{2}$ is used to make it such that the associated Legendre polynomials form an
 orthonormal basis; Implying that the integral of the product of two ascociated Legendre polynomilas is equal
-to the {\it Kronecher delta} symbol. The later fact is required to properly compute the efficiency moments.
+to the {\it Kronecher delta} symbol. The later fact is required to properly normalize the efficiency moments.
 The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
 This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
 that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
@@ -466,16 +465,15 @@ acceptance can be seen in \figref{eff2D}.
     \label{eff2D}
 \end{figure}
 
-Constraining the acceptance in the manner described above comes with a small penalty; that the shape of the 1D acceptance
+Constraining the acceptance in the manner described above comes with a small penalty: the shape of the 1D acceptance
 projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
-As previously mentioned, the acceptance function of \equref{eff_func_new} is further fitted to the simulated data
-where the efficiency moments are allowed to vary within one standard deviation from their measured values, of \tabref{eff_moms_table}.
+As previously mentioned, the acceptance function of \equref{eff_func_new} is fitted to the simulated data
+where the efficiency moments are allowed to vary from their measured values, of \tabref{eff_moms_table}.
 The last is implemented by a multivariate Gaussian constraint where correlations between efficiency moments are taken into account.
 The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
 data was generated with multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
-The physics parameters used to generated the simulation sample are fixed and only the efficiency moments are allowed to vary.
-The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments within one standard deviation
-is shown in \equref{mvm_constr_gauss}.
+The physics parameters used to generate the simulation sample are fixed and only the efficiency moments are allowed to vary.
+The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments is shown in \equref{mvm_constr_gauss}.
 
 \begin{equation}
   \centering
@@ -491,12 +489,12 @@ is shown in \equref{mvm_constr_gauss}.
 \label{mvm_constr_gauss}
 \end{equation}
 
-\noindent where $\vec{\bf c}$ represents the estimated efficiency moments. Whereas $<\vec{\bf c}>$ are the efficiency moments
+\noindent where $\vec{\bf c}$ represents the estimated efficiency moments and $<\vec{\bf c}>$ are the efficiency moments
 of \tabref{eff_moms_table}. $C$ and $|C|$ are the covariance matrix of the efficiency moments and its determinant respectively.
 Lastly, $k$ is the number of efficiency moments present in \equref{eff_func_new}.
 
 \subsubsection{Alternative parametrization}
-As it was mentioned before there is at least one more way to parameterize the angular acceptance, namely the \emph{normalization weights}.
+As mentioned before there is at least one more way to parameterize the angular acceptance, namely the \emph{normalization weights}.
 The main difference between this approach and the method adopted in this analysis is that essentially the normalization weights use the angular functions
 of \tabref{ang_distr} as a basis to project the efficiency of \equref{eff_def}, instead of the orthogonal basis $a_i^{jk}$ of \equref{eff_func}.
 Looking at \equref{norm_weights_pdf} it is helpful to realize how the normalization weights, $\xi_a$, are introduced into the fitting \pdf.
@@ -509,8 +507,8 @@ similarly to the case of efficiency moments.
   \label{norm_weights_pdf}
 \end{equation}
 
-The advantages of this method is that it is by construction immune from any issue with negative efficiency values.
-After all the acceptance shape is not parameterized at all. The biggest disadvantage on the other hand, is that directly
+The advantages of this method is that it is by construction immune from any issue with localized negative efficiency values:
+the acceptance shape is not parameterized at all. The disadvantage on the other hand is that directly
 plotting the fitting \pdf becomes impossible when using normalization weights. This is because the normalization itegral
 of the fitting \pdf is modified in a non-trivial way and other methods need to be implemented in order to visualize the \pdf.
 Lastly the two methods can yield identical values on the
@@ -538,7 +536,7 @@ of the momenta of the final state particles.
 
 In order to overcome the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure.
 At each step of the weighting procedure the simulated data are corrected for the current best estimate of the physics
-parameters and the two dimensional $(p_{\kaon},p_{\pion})$ momentum distribution as well.
+parameters and the two dimensional $(p_{\kaon},p_{\pion})$ momentum distribution.
 The efficiency moments are re-evaluated using the weighted simulated sample and the fit to the real data is repeated.
 This changes the best estimate of the parameters of interest. This procedure is repeated until these parameters
 converge. The full procedure by steps can be summarized as:
@@ -577,13 +575,13 @@ converge. The full procedure by steps can be summarized as:
 \begin{enumerate}
 \item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
 \item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
-\item Weight each event in the simulated sample for the difference between the obtained from the previous fit angular \pdf and the angular \pdf used to
-      generate the simulated data sample with.
-      This essentially means that the underlying physics of the re-weighted simulated  sample corresponds to the physics obtained in the previous step.
+\item Weigh each event in the simulated sample for the difference between the angular \pdf obtained from the previous fit and the angular
+      \pdf used to generate the simulated data sample with. This essentially means that the underlying physics of the re-weighted simulated
+      sample corresponds to the estimated physics parameters obtained in the previous step.
 \item Compare the 2D $(p_\kaon,p_\pion)$ momentum distribution between the physics weighted simulated sample of the previous step with the
-      real data, and weight again each simulated event for the difference.
-\item Re-estimate the efficiency moments using the physics plus momentum corrected \BsJpsiKst simulated sample and repeat the fit to \BsJpsiKst real data.
-\item Go back to step 4 and repeat until change in the parameters of interest are negligible.
+      data, and weigh again each simulated eventaccording to the difference.
+\item Re-estimate the efficiency moments using the physics and momentum corrected \BsJpsiKst simulated sample and repeat the fit to the \BsJpsiKst data.
+\item Go back to step 4 and repeat until the change in the parameters of interest is negligible.
 \end{enumerate}
 
 \begin{table}[!h]
@@ -601,7 +599,7 @@ converge. The full procedure by steps can be summarized as:
   \label{angAccBinning}
 \end{table}
 
-The $(p_\kaon,p_\pion)$ weighting of the simulated data sample is done using 2D histograms, following the variable intervals defined in \tabref{angAccBinning}.
+The $(p_\kaon,p_\pion)$ weighting of the simulated data sample is done using 2D histograms, following the intervals defined in \tabref{angAccBinning}.
 At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
 \tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implying that the overall effect of the
 acceptance corrections is small. \figref{angAggCorrections} shows the shape of the acceptance before and after corrections.
@@ -651,7 +649,7 @@ This feature makes, in hindsight, the acceptance correction procedure unnecessar
 The dependence of the \BJpsiKpi decay amplitude on \mkpi as introduced in \equref{ang_terms} is treated in a special way.
 The $\mKpiAmp$ functions are not implemented, but instead they are integrated over in four intervals. The choice of this strategy
 is good enough given the fact that the \mkpi region relevant for this analysis is dominated by the $\Kstar$ \pwave,
-while the \swave component is small. Furthermore developing a full model for both the \pwave and \swave, which is not the
+while the \swave component is small. As a result the development of a full model for both the \pwave and \swave, which is not the
 first priority in the current analysis, can be avoided. Despite the \mkpi integration there is still some residual dependence left.
 It originates from integrals like the one in the following equation:
 
@@ -677,9 +675,9 @@ phase space factor:
   \label{csp_ph_sp_factor_def}
 \end{equation}
 
-Integrals like the one of \equref{spIntegrals} eventually manifest themselves only in the \spwave interference
+Integrals like \equref{spIntegrals} eventually manifest themselves only in the \spwave interference
 terms\footnote{The diagonal $m=n$ integrals are by construction equal to 1.} of \tabref{eff_moms_table}.
-Such an integral is in the following equation:
+These integrals can be written as:
 
 \begin{equation}
   \centering
@@ -687,7 +685,7 @@ Such an integral is in the following equation:
   \frac{\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; s^* \times p} {\int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi \; |s|^2 \; \int_{\mkpi^-}^{\mkpi^+} d\mkpi \; \Phi |p|^2} = \CSP \; e^{-i\ThetaSP},
 \end{equation}
 
-\noindent where $s$ and $p$ stand for the \swave and \pwave line-shapes respectively. Evaluating these complex valued integrals yield
+\noindent where $s$ and $p$ stand for the \swave and \pwave line-shapes respectively. Evaluating complex valued integrals yield
 the so called $\CSP$ factors which are inserted in the angular functions of \tabref{ang_distr}. Particularly, the real part
 is inserted as a multiplicative factor in front of all \spwave interference terms, for example $\ReAmp{0}{S} \rightarrow \CSP * \ReAmp{0}{S}$.
 The imaginary part is absorbed by the phase difference of the same interference
@@ -753,12 +751,11 @@ The nature of the current analysis is such that it is affected by asymmetries re
 Particularly, the difference between the number of observed \BsJpsiKst and \BsbarJpsiKst decays is related the
 main parameters of interest, introduced in \secref{cp_assymetries_and_total_decay_rate}. These parameters essentially
 quantify the direct \CP asymetry between the previous decays.
-Considering now the case where collisions at \lhc favor the \BsJpsiKst decay over its \CP conjugate, \BsbarJpsiKst;
-Or the fact that the detector might have different efficiency for positive and negative kaons (or pions),
-then $\Acp{}$ will be biased by these experimental effects. In fact it happens so that both of these effects are in action.
-The first one where the creation of a \Bs or \Bsb is favoured is called production asymmetry, $\Aprod$.
-Whereas the second effect is called detection asymmetry, $\Adet$, and it becomes relevant
-at the \lhcb detector as described earlier in the current paragraph. The production and detection
+Considering now the case where collisions at the \lhc would favor the \BsJpsiKst decay over its \CP conjugate, \BsbarJpsiKst;
+or that the detector might have different efficiency for positive and negative kaons (or pions),
+then the observed $\Acp{}$ will be biased by these experimental effects. In fact it happens so that both of these effects
+are present. The first one, where the creation of a \Bs or \Bsb is favoured is labelled as  production asymmetry, $\Aprod$,
+whereas the second effect is labelled as detection asymmetry, $\Adet$. The production and detection
 asymmetries are defined in the following equation:
 
 \begin{equation}
@@ -769,9 +766,9 @@ asymmetries are defined in the following equation:
 \end{equation}
 
 \noindent where $\sigma$ is the production cross section of either \Bs or \Bb , whereas \edet is the efficiency
-of detecting the \Bs(\Bsb) final state which is a $\jpsi\Kstarzb$($\jpsi\Kstarz$), see also \secref{cp_assymetries_and_total_decay_rate}.
+of detecting \Bs(\Bsb) decays into the final state which is a $\jpsi\Kstarzb$($\jpsi\Kstarz$), see also \secref{cp_assymetries_and_total_decay_rate}.
 Both of the production and detection asymmetries have to be estimated so that the experimentally measured asymmetry, $\Acp{\rm raw}$,
-defined in \equref{acp_mes}, is corrected for as follows:
+defined in \equref{acp_mes}, can be corrected for as follows:
 
 \begin{equation}
 \centering
@@ -789,8 +786,8 @@ amplitudes, defined in \equref{ang_terms}, as:
 \label{acp_corrected_amps}
 \end{align}
 
-\noindent The factor $\kappa$ of \equref{acp_corrected} accounts for the dilution due to $B^0_s-\bar{B^0_s}$
-oscillations \cite{LHCb-PAPER-2013-018} and is spelled out in the following equation:
+\noindent The factor $\kappa$ of \equref{acp_corrected} accounts for the dilution due to $\Bs-\Bsb$
+oscillations \cite{LHCb-PAPER-2013-018} and is:
 
 \begin{equation}
   \centering
@@ -798,28 +795,31 @@ oscillations \cite{LHCb-PAPER-2013-018} and is spelled out in the following equa
 \label{kappa}
 \end{equation}
 
-\noindent It evaluates to $0.06\%$, which implies that the $\Bs-\Bs$ oscillations are fast compared to the
-average lifetime, $\Gamma_s$, of the \BBbarSyst such that nearly all the production asymmetry is washed out by them.
+\noindent It evaluates to $0.06\%$, which implies that the $\Bs-\Bsb$ oscillation frequency is large compared to the
+average lifetime, $\Gamma_s$. As a result the production asymmetry is nearly completely washed out by .
 The quantities $\Delta\Gamma_s$ and $\Delta m_s$ have been introduced in \secref{Phenomenology},
 while the decay time efficiency function $\varepsilon(t)$ is estimated on backgound subracted \BsJpsiKst
 data\footnote{and parameterized with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found in \cite{LHCb-PAPER-2014-053}}
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry \cite{LHCb-PAPER-2014-042}
-and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the backgound subracted \BsJpsiKst ones of the current analysis,
-one gets the production asymmetry estimate shown in \equref{prod_assym}.
+and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the backgound
+subracted \BsJpsiKst ones of the current analysis, one gets the following production asymmetry:
 
-\begin{subequations}
-  \label{exp_assym}
-  \begin{align}
+\begin{equation}
     \centering
-    \Aprod &= (-1.64 \pm 2.28 \stat \pm 0.55 \syst) \;\%, \label{prod_assym} \\
-    \Adet  &= (-1.086 \pm 0.531 \stat) \;\%. \label{det_assym}
-  \end{align}
-\end{subequations}
+    \Aprod = (-1.64 \pm 2.28 \stat \pm 0.55 \syst).
+  \label{prod_assym}
+\end{equation}
 
-\noindent Coming now to the detection asymmetry it is computed starting from the \lhcb study of the detection asymmetry
-in \cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution found there to much the one of the \BsJpsiKst
-decay of the current analysis. The result is shown in \equref{det_assym}.
+\noindent The detection asymmetry is computed starting from the \lhcb study of the detection asymmetry
+in \cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution to much the observed
+distribution in \BsJpsiKst data. The result is:
+
+\begin{equation}
+    \centering
+    \Adet  = (-1.086 \pm 0.531 \stat).
+  \label{det_assym}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Likelihood fit and Total Decay Rate}
