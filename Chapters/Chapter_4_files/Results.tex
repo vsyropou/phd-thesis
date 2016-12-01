@@ -386,7 +386,11 @@ parabolic shape as shown in \equref{likelihood_exp}
 \end{equation}
 
 \noindent where $\hat{\mu}$ is the value of $\mu$ at the minimum and $\sigma_{\mu}$ is the statistical uncertainty associated
-to $\mu$. The last equation is called {\it profile likelihood}.
+to $\mu$. \equref{likelihood_exp} implies that the shape of $\ln L(\mu;\vec{x})$ is parabolic around the minimum $\hat{\mu}$.
+Since the above assumptions might not be always true, it is usefull to define the {\it profile likelihood} function.
+The values of the latter function are obtained, given the likelihood of \equref{extloglikelihood}, by moving a certain parameter $\mu_i$
+away from its minimum, $\hat{\mu_i}$, and fixing it to that value. Subesequently this modified likelihood function is
+minized with respect to the rest of the parameters $\mu$ obtaining the value of the profile likelihood $L(\mu_i;\vec{x})$.
 
 \begin{figure}[!t]
   \centering
@@ -428,7 +432,7 @@ to $\mu$. The last equation is called {\it profile likelihood}.
         %  global minima are relevant to the likelihood parameter estimation.
 \end{figure}
 
-Based on the above-mentioned assumptions two important conclusions can be drawn given a profile likelihood plot. First the non
+Based on the definition fo the profile likelihood two important conclusions can be drawn given a profile likelihood plot. First the non
 Gaussian nature of a parameter of interest can be visualized by how much the corresponding profile likelihood plot deviates from
 a perfect parabola. Non perfect parabola is mainly an indication of low sample size or high correlations between the parameters.
 Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf
