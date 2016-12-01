@@ -63,11 +63,15 @@ so that it maximizes the following figure of merit, hereafter FoM:
 \label{eqn:fom}
 \end{equation}
 
-\noindent where $w_i$ are weights associated to each event, hereafter \sWeights, and calculated with the
-\sPlot technique. The last  is a statistical tool to unfold data distributions \cite{splot}. More details are provided
-in \secref{sWeighting_and_mass}. The above-mentioned FoM can be understood as an effective signal yield.
-For a range of BDT values the \sPlot technique provides a different set of \sWeights based on which a different
-FoM value can be obtained. The optimum BDT value is chosen such that it maximizes $F(w_i)$.
+\noindent where $w_i$ are weights associated to each candidate, hereafter \sWeights, and calculated with the
+\sPlot technique. The last  is a statistical tool to unfold data distributions \cite{splot}. More details
+are provided in \secref{sWeighting_and_mass}. The above-mentioned FoM increases in value with the sum of
+\sWeights, in the numerator. Large values of \sWeights translate to higher effective signal yield. This is
+because candidates that are more likely to be signal recieve a larger weight $w_i$. It follows that the
+optimum set of weights will have the higher FoM value compared to any other set of weights. Thus the FoM
+of \equref{eqn:fom} essentialy expresses the signal fraction. For a range of BDT values the \sPlot technique
+provides a different set of \sWeights based on which a different FoM value can be obtained, thus allowing for
+optimising the BDT cutoff value.
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Reflection Backgrounds}
@@ -277,4 +281,4 @@ function shape the scale factor,
 \end{equation}
 
 \noindent is applied to each weight before performing the angular fit. The scale factor essentially ensures that the sum of weights
-equals the number of candidates.
+equals the number of candidates. A detailed derivation of the above factor can be found in \cite{jeroenThesis}. 

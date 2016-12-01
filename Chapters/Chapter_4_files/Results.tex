@@ -338,10 +338,14 @@ comes indeed from a valid minimum of the likelihood function. One can easily get
 by expanding it as a Taylor series around the
 minimum \footnote{The constant term of the
 expansion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically.}.
-Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough
-and also that the variables $\vec{p}$ in the same equation are Gaussian in nature, then one can easily find out that the
-Taylor expansion of the negative logarithm of \equref{likelihood} projected over one parameter $\mu$ out of $\vec{p}$ has a
-parabolic shape as shown in \equref{likelihood_exp}
+Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough and also that the variables $\vec{p}$
+in the same equation are uncorrelated and Gaussian in nature, then one can easily find out that the Taylor expansion
+of \equref{likelihood} has the following parabolic shape:
+
+\begin{equation}
+\ln L(\mu;\vec{x}) \simeq \frac{1}{2} \; s^2, \;\;\; \text{with} \;\;\; s = \parenthesis{\frac{\mu-\hat{\mu}}{\sigma_{\mu}}},
+\label{likelihood_exp}
+\end{equation}
 
 \begin{figure}[!t]
   \centering
@@ -380,17 +384,15 @@ parabolic shape as shown in \equref{likelihood_exp}
          uncertainty.}
 \end{figure}
 
-\begin{equation}
-\ln L(\mu;\vec{x}) \simeq \frac{1}{2} \; s^2, \;\;\; \text{with} \;\;\; s = \parenthesis{\frac{\mu-\hat{\mu}}{\sigma_{\mu}}},
-\label{likelihood_exp}
-\end{equation}
-
-\noindent where $\hat{\mu}$ is the value of $\mu$ at the minimum and $\sigma_{\mu}$ is the statistical uncertainty associated
-to $\mu$. \equref{likelihood_exp} implies that the shape of $\ln L(\mu;\vec{x})$ is parabolic around the minimum $\hat{\mu}$.
-Since the above assumptions might not be always true, it is usefull to define the {\it profile likelihood} function.
-The values of the latter function are obtained, given the likelihood of \equref{extloglikelihood}, by moving a certain parameter $\mu_i$
-away from its minimum, $\hat{\mu_i}$, and fixing it to that value. Subesequently this modified likelihood function is
-minized with respect to the rest of the parameters $\mu$ obtaining the value of the profile likelihood $L(\mu_i;\vec{x})$.
+\noindent where $\hat{\mu}$ denote the values of the parameters of intereset, $\mu$, at the minimum and $\sigma_{\mu}$ is
+the corresponding statistical uncertainty (note that $\mu$ and $\vec{p}$ in the context of \equref{likelihood_exp}
+and \equref{extloglikelihood} denote the same thing). Since the above assumptions reagarding the parameters,
+$\mu$ might not be always true, it is usefull to define the {\it profile likelihood} function.
+The values of the latter function are obtained, given the likelihood of \equref{extloglikelihood}, by moving a certain
+parameter $\mu_i$ away from its value at the minimum and fixing it to that value. Subesequently likelihood
+function is minized with respect to the rest of the parameters $\mu$ obtaining the value of the profile likelihood
+$L(\mu_i;\vec{x})$ at the above value of $\mu_i$. The procedure is repeated untill the desired range of $\mu_i$
+is covered and the values of the profile likelihood, $L(\mu_i;\vec{x})$, are obtained.
 
 \begin{figure}[!t]
   \centering
