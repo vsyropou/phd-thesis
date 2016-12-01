@@ -8,8 +8,8 @@ Second to optimize the trigger efficiency of low transverse momentum muons.
 In particular, the \muonID has undergone a significant re-factory resulting in a modularized common code base
 between \hlt and offline \cite{kevinThesis}. Because of that \muonID in the \hltone and offline
 are identical \footnote{The \muonID in \hlttwo was the same as offline already in \runone.},
-which combined with the novel online detector alignment and calibration endeavour, introduced in \secref{det_trigger},
-allows for the trigger to produce offline quality data. After the modularization readability and maintainability
+which, combined with the novel online detector alignment and calibration endeavour, introduced in \secref{det_trigger},
+allows for the trigger to produce offline quality data. After the modularization, readability and maintainability
 of the code is significantly improved. An increase in performance of the \muonID code both in CPU and memory usage
 is also achieved.
 
@@ -18,15 +18,15 @@ during \runone was tuned in order to comply with the output rate limitations giv
 named {\it Event Filter Farm} (EFF). Since then the EFF has undergone a significant upgrade resulting in an
 increased processing power along with increased storage capabilities. In view of this infrastructure upgrade
 as well as the \runtwo \lhc running conditions the total output rate of the entire trigger system was increased
-from 5\khz to 12.5\khz, see \figref{det_trigger_scheams}. The impact on the \hltone is that its output rate is
+from 5\khz to 12.5\khz, see \figref{det_trigger_scheams}. The impact on \hltone is that its output rate is
 roughly doubled and additional processing time is available. This boost in computing power allowed for changes
 in the \muonID algorithm sequence described in the following subsection.
 
-\subsection{\hltone muon lines algorithm sequence}
+\subsection{\hltone muon algorithm}
 \label{hlt1run2}
 
-The role of the trigger system and the decisions that it provides is presented in \secref{det_trigger},
-where the concept of a trigger line is also introduced. The \hltone muon trigger lines are
+The role of the trigger system and the decisions that it provides are presented in \secref{det_trigger},
+where the concept of a trigger line was already mentiond there. The \hltone muon trigger lines are
 mainly organized in single muon and dimuon ones; both exploit the same muon identification procedure which
 is described in the current subsection. The efficiency of the muon lines during \runone is shown in \figref{det_run_one_muon_line_eff}.
 It can be observed that a low \pt turn on and a large efficiency loss in the dimuon lines are present.
