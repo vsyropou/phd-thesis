@@ -826,34 +826,34 @@ distribution in \BsJpsiKst data. The result is:
 \label{Total_Decay_Rate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Nearly all the necessary ingredients to fit for the parameters of interest are already covered in the previous subsections.
-However there are a few important details still pending for description. The current subsection addresses the
+Nearly all the necessary ingredients to fit for the parameters of interest are covered in the previous subsections.
+However there are a few important details remaining. The current subsection addresses the
 implications arising from the necessary splitting of the data in slices and the impact of this in the adopted
-fitting strategy which is a simultaneous maximum likelihood fit. Lastly but most importantly the issue of defining
+fitting strategy. Lastly but most importantly the issue of defining
 the polarization dependant \CP asymmetries, \Acp{k}, as free parameters in the angular fit and how this becomes
 relevant in the normalization of the \pdfs involved is discussed in the last part of the current subsection.
 
 \subsubsection{Simultaneous likelihood fit}
 \label{Simutaneous_Likelihood_fit}
-There are a few arguments as to why it is more convenient to devide the data sample in several sub-samples.
-For example the special treatment of the \mkpi dependence, as described in \secref{Kpi_Invariant_mass} requires that the data are
-split in four \mkpi intervals. This implies that for each data category, a corresponding component \pdf must be defined.
-Some parameters of interest differ between the categories while some others are shared.
-However in order to avoid doing four independent fits and averaging the common parameters of interest,
-a simultaneous fit is implemented. In a simultaneous fit each component \pdf is assigned to a certain part of the data
-such that the corresponding component \pdf is invoked when the total \pdf needs to be evaluated. The current section summarizes
-all the categories that the data are split to and all the implications arising from that. Lastly a brief insight in some aspects
+There are several reasons as to why the data are devided into sub-samples.
+For example, the special treatment of the \mkpi dependence, as described in \secref{Kpi_Invariant_mass}
+requires that the data is split in four \mkpi intervals. This implies that for each data category, a
+corresponding component \pdf must be defined. Some parameters of interest differ between the categories
+while some others are shared. In order to avoid performing four independent fits and subsequently averaging the common parameters
+of interest, a simultaneous fit is implemented. In a simultaneous fit each component \pdf is assigned to a certain part of the data
+such that the corresponding component \pdf is invoked when the total \pdf is evaluated. The current section summarizes
+all the categories that the data is split into and the implications arising from this. Lastly a brief insight in some aspects
 of the likelihood parameter estimation method are included.
 
-Starting from the angular \pdf terms as shown in \tabref{ang_distr}; The latter cannot describe both \BsJpsiKst and \BsbarJpsiKst.
-There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay amplitude of
-\BsJpsiKst. For reasons explaine in \secref{penguin_formalism} the \BsJpsiKst decays always have a negative kaon in the final
-state and \viceversa in the case of \BsbarJpsiKst decays. Thus the data can easily be split into two parts based on the sign of
-the kaon. Furthermore, as it can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples
+The first data category is releated to the fact that the angular \pdf terms os \tabref{ang_distr} cannot describe both \BsJpsiKst
+and \BsbarJpsiKst. There is a relative minus sign difference in the imaginary terms originating from complex conjugating the decay
+amplitude of \BsJpsiKst. For reasons explaine in \secref{penguin_formalism} the \BsJpsiKst decays always have a negative kaon in
+the final state and \viceversa in the case of \BsbarJpsiKst decays. Thus the data must be split according to the charge of
+the kaon. Furthermore, as can be seen in \tabref{moms_comp_signs} the agreement between the \BsJpsiKst and \BsbarJpsiKst samples
 is sufficient for them to be averaged into one set of efficiency moments. However, the angular acceptance as described in \secref{Accceptance}
 is calculated separately for these two samples. This is done to avoid involving the $\Acp{i}$ parameters of interest
 in the estimation of the efficiency moments\footnote{The $\Acp{i}$ parameters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes into one parameter,
-more details in \secref{cp_assymetries_and_total_decay_rate}.} which  significantly simplifies the necessary computation.
+more details in \secref{cp_assymetries_and_total_decay_rate}.}, which  significantly simplifies the necessary computation.
 
 \begin{table}[t]
 \centering
@@ -872,15 +872,15 @@ The next observable used to split the data was already mentioned in \secref{Kpi_
 There are four \mkpi intervals defining four more categories in the data. Furthermore, and contrary to the above-mentioned data category, there
 are parameters of interest that are different in each \mkpi interval. Namely the \swave fraction $\fS{}$ and phase $\deltaS{}$.
 In addition, the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculated and inserted separately for each component \pdf resulting in
-\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category since it was
-found to vary significantly different between each \mkpi interval, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
-The chosen \mkpi intervals are shown in \tabref{csp_vals}.
+\tabref{csp_vals}, where the \CSP factors are shown for each \mkpi interval. The acceptance is also split in the \mkpi category
+since it was found to vary significantly between \mkpi intervals, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
+The \mkpi intervals chosen are shown in \tabref{csp_vals}.
 
-The data categories as described in the above paragraphs result an a simultaneous fit of 8 categories.
+The data categories described above result in a simultaneous fit consisting of 8 categories.
 A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of
 tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_neg}.
 
-Having addressed the simultaneous feature of the fit it is interesting to have an insight on
+Having addressed the simultaneous nature of the fit it is interesting to provide an insight on
 the connection between a \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
 any \pdf $\mathcal{P}$ a likelihood function can be built as shown in \equref{likelihood}.
 
@@ -891,11 +891,11 @@ L(\vec{p};\vec{x}) = \prod_e^n \mathcal{P}(\vec{x};\vec{p}).
 \end{equation}
 
 \noindent By definition the likelihood
-function is the product of probabilities of every event according to the given \pdf. Note that contrary to the \pdf
-the likelihood is a function of the parameters given all the events in the data. It is
+function is the product of probabilities of every event according to the given \pdf. Note that, contrary
+to the \pdf, the likelihood is a function of the parameters given all the events in the data. It is
 useful to realize that at the maximum of the likelihood function one gets the best estimate for the parameters of
 interest, $\vec{p}$, given the data, $\vec{x}$. The inverse of the covariance matrix for the estimated parameters is given
-by the negative second derivative of the likelihood at the maximum,
+by the negative second derivative of the log likelihood at the maximum,
 
 \begin{equation}
   \centering
@@ -905,9 +905,13 @@ by the negative second derivative of the likelihood at the maximum,
 
 Coming now to the concept of the extended likelihood. In \equref{likelihood} the number of events is fixed. However it is possible to
 extend the last equation such that the expected number of events shows up as a parameter in the likelihood function and can thus be estimated.
-This is useful in cases where the \pdf consists of two species, such as signal and background, or if the expected number of events depends on the
-parameters of interest $\vec{p}$. For the current analysis, the latter is exploited in order to estimate the $\Acp{i}$ asymmetries in the fit,
-see end of current subsection. Extending the \pdf is achieved by multiplying the likelihood with a poison distribution as shown in the following equation:
+This is useful in cases where the \pdf consists of a sum over two species, such as signal and background, or if the expected number
+of events depends on the parameters of interest $\vec{p}$. For the current analysis, the latter is exploited in order to
+estimate the $\Acp{i}$ asymmetries in the fit. The \pdf is extended by multiplying it with the Poisson probability to
+observe $n$ events when expecting $\expEvnts$ events. The expected number of events $\mu(\vec{p})$ depends on the
+parameters of interest which increases the statistical uncertainties. This is beacuse the likelihood has more freadom
+as the number of paramters increases and thus the shape of the likelihood becomes less steap leading to larger statistical
+uncertainty.
 
 \begin{equation}
   \centering
@@ -915,8 +919,6 @@ L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \label{extlikelihood}
 \end{equation}
 
-\noindent where $\mu(\vec{p})$ is the expected number of events. As can be seen, it depends on the parameters of interest which in
-principle reduces the uncertainty on them since additional information is added to the likelihood function.
 For purely practical reasons one would typically choose to minimize the negative logarithm of the likelihood, which after some simple
 algebra and using the well known expression of the Poisson distribution results in \equref{extloglikelihood},
 
@@ -928,8 +930,8 @@ algebra and using the well known expression of the Poisson distribution results 
 \label{extloglikelihood}
 \end{align}
 
-\noindent Note that constant terms in the likelihood, like $\ln n!$, affect neither the shape of the likelihood nor the position of the minimum
-and can thus be neglected.
+\noindent Note that constant terms in the likelihood, like $\ln n!$, affect neither the shape of the likelihood
+nor the position of the minimum and can thus be omitted.
 
 \subsubsection{\CP asymmetries as free parameters}
 \label{cp_assymetries_and_total_decay_rate}
@@ -941,11 +943,11 @@ $\BsbarJpsiKst$ and $\BsJpsiKst$ decays and use them to determine:
 \label{acp_mes}
 \end{equation}
 
-\noindent where $\Nplus$ and $\Nminus$ stand for the number of observed \BsbarJpsiKst and \BsJpsiKst respectively.
+\noindent where $\Nplus$ and $\Nminus$ are the number of observed \BsbarJpsiKst and \BsJpsiKst respectively.
 Going one step further, $\Acp{\text{raw}}$ can be implemented as a parameter to be estimated in the fit. The advantage
 is that the statistical uncertainty propagation for these parameters is implicit in the likelihood thus avoiding
-explicit calculations. In addition, the above quantities can be measured in a polarization dependent way. In order
-to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in a different way shown in \equref{acp_param}.
+explicit calculations. In addition, the above quantities can then be estimated seperately for each polarization.
+In order to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them as follows:
 
 \begin{align}
   \label{acp_param}
@@ -953,7 +955,7 @@ to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them in
 \text{and} \quad \AmpSq{i} = &\frac{ \Nplus \AmpPlSq{i} - \Nminus\AmpMnSq{i}}{\Nplus + \Nminus},
 \end{align}
 
-\noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ stand for the polarized amplitude in the \BsbarJpsiKst
+\noindent where $\AmpPlSq{i}$ and $\AmpMnSq{i}$ are the polarized amplitude in the \BsbarJpsiKst
 and \BsJpsiKst samples respectively. The above equations can be solved for $\AmpPlSq{i}$ and $\AmpMnSq{i}$. The idea
 is that the latter parameters will be used as amplitudes for the \BsbarJpsiKst and \BsJpsiKst \pdfs respectively.
 This way both samples are fitted simultaneously in one fit. Solving \equref{acp_param} for $\AmpSq{\pm}$ yields:
@@ -985,17 +987,17 @@ Thus imposing the condition $\sum\AmpSq{i} = 1$ one can re-express the $\AmpSq{i
 \end{equation}
 
 \noindent Note that the \pwave fractions are also constrained so that they add up to one by imposing $\sum\fP{k}=1$ with $k:\{0,\parallel,\perp\}$.
-The fractions $\fP{k}$ and $\fS{}$ are the actual parameters that one wish to measure and correspond to these used in the subsequent analysis of
-\chapref{Penguins}. The final expressions of the $\AmpSqPm{i}$ after all the above is given in \equref{amps_final}
+The fractions $\fP{k}$ and $\fS{}$ are the actual parameters that one wishes to estimate and correspond to these used in the subsequent analysis of
+\chapref{Penguins}. The final expressions of the $\AmpSqPm{i}$ after the above is given by:
 
 \begin{equation}
 \AmpSqPm{k} = \frac{1\pm\Acp{k}}{1\pm\sum_i\Acp{i}}  (1-\fS{})\fP{k}  \;\;\; \text{and}\;\;\; \AmpSqPm{S} = \frac{1\pm\Acp{S}}{1\pm\sum_i\Acp{i}} \; \fS{},
 \label{amps_final}
 \end{equation}
 
-\noindent where the $i$ index runs through all amplitudes whereas $k$ only through the \pwave amplitudes.
+\noindent where the $i$ index runs through all amplitudes whereas $k$ only runs through the \pwave amplitudes.
 
-There is one more step required to properly build the complete extended \pdf. That is the normalization of each component \pdf. Tempting as it might be to
+There is one final step required to build the complete extended \pdf. That is the normalization of each component \pdf. Tempting as it might be to
 normalize the component \pdfs to the number of observed events it would be wrong since the observed number of events are diluted by production and detection
 asymmetry. Given that the parameters of interest, $\Acp{i}$, quantify the difference between the observed \BsbarJpsiKst and \BsJpsiKst decays, it follows that
 the observed  number of these decays need to be corrected for. With input from \secref{experimentalAssym} where the production and detection
@@ -1016,5 +1018,5 @@ asymmetries were estimated, the observed yields are made dependent on the $\Acp{
 \label{norm_yields}
 \end{equation}
 
-\noindent The above parametric yields are the ones that the \pdfs will be normalized to and enter as the expected number of events in the extended
-likelihood term of the \pdfs as discussed earlier in the current subsection.
+\noindent The above yields are the expected number of events in the extended
+likelihood term of the \pdfs as discussed earlier.

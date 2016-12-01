@@ -1,8 +1,8 @@
 After selecting the data as described in \secref{Event_Selection} the angular model of \secref{Angular_Analysis} is fitted to the data.
 The results of this fit are presented in the current section. Systematic uncertainties are discussed in \secref{systemics}.
-The likelihood function is profiled versus the parameters of interest in \secref{nllscans} to gain confidence on the validity
-of the minimum. Finally a toy study is performed in \secref{Toy_Experiments_Study} to validate the fitting procedure against
-statistical fluctuations and asses potential fit bias
+The likelihood function is profiled as a function  the parameters of interest in \secref{nllscans} to gain confidence on the validity
+of the minimum. Finally a toy study is performed in \secref{Toy_Experiments_Study} to validate the fitting procedure
+and determine potential fit bias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameters of Interest}
@@ -107,20 +107,20 @@ they are expressed as fractions of the statistical uncertainty.
 
 \subsubsection{Angular acceptance}
 \label{systAngAcc}
-The efficiency moments as described in \secref{Accceptance} are computed with a limited size simulation sample
+The efficiency moments as described in \secref{Accceptance} are computed with a limited simulation sample
 and thus their central values come with a statistical fluctuations. To account for this limitation the
 efficiency moments are allowed to float in the angular fit to the data. A multivariate Gaussian, similar to \equref{mvm_constr_gauss}
-is used to constrain within the acceptance within $5$ standard deviations from their nominal value of \tabref{eff_moms_table}.
-The multivariate Gaussian takes properly into account their correlations. In addition this systematic covers any
+is used to constrain the efficeincy moments around their nominal values of \tabref{eff_moms_table}.
+Note that the multivariate Gaussian includes their correlations. In addition this systematic covers
 potential difference in the acceptance between data and simulated sample
 that has not been corrected by the iterative procedure described in \secref{Accceptance_Corrections}. Furthermore,
-the constrain of \equref{eff_func_constr} used to force the acceptance positive assumes that the acceptance is zero
-at $\cos\thetaK=1$ for any value of $(\cos\thetamu,\phihel)$. This assumption might not be exactly true. It could be
-that the value of the acceptance at that point is very small but not zero. This systematic effect is accounted for
+the constraint of \equref{eff_func_constr} used to force the acceptance positive assumes that the acceptance is zero
+at $\cos\thetaK=1$ for any value of $(\cos\thetamu,\phihel)$. This assumption might not hold exactly. It could be
+that the value of the acceptance at that point is very small but non-zero. This systematic effect is accounted for
 by adding a term to \equref{eff_func_new} and allowing it to float in the above-mentioned fit to the data.
 The size of the latter effect was found to be small and the above assumption is almost true. The differences
-in the parameters of interest between the best fit of \tabref{bestFitResult} and the fit with the floating acceptance
-is taken as a systematic uncertainty.
+in the parameters of interest between the best fit of \tabref{bestFitResult} and the fit with this additional
+degree of freadom is taken as a systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -152,9 +152,9 @@ is taken as a systematic uncertainty.
 \label{systMassModel}
 Not all the \pdf parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}.
 These parameters are fixed to values taken from simulated events.
-In order to account for systematic uncertainties due to these fixed parameters, the mass fit is repeated 1000 times. In each fit
-to the data the values of these fixed parameters are taken from a Gaussian distribution. The mean and width of the Gaussian are
-taken from a mass fit to the simulated data (this last fit is the one that these fixed parameters were estimated in the first place.)
+In order to account for systematic uncertainties due to these parameters, the mass fit is repeated 1000 times. In each fit
+to the data the values of these fixed parameters are drawn from a Gaussian distribution. The mean and width of the Gaussian are
+taken from a mass fit to the simulated data (which was used to determine these parameters.)
 Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass fits
 a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian distribution
 for each of the angular parameters of interest. The one standard deviation interval of the previous distribution is assigned
@@ -191,7 +191,7 @@ $\alpha$ is the parameter controlling the tails of the mass peak and it is fixed
 the fixed parameters in the above paragraph, the parameter $\alpha$ of the $\Bd$ peak is further scrutinized. Particularly the mass fit to the data
 is repeated with $\alpha$ set to infinity and $\alpha$ floating. The first case, according to the Hypatia function, implies that any contribution
 to the tails other than resolution is ignored. These two mass fits yield two more set of \sWeights and two more angular fits. The difference in
-the value of the fitted angular parameters between these two case is assigned as a systematic.
+the value of the fitted angular parameters between these two case is assigned as a systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -224,14 +224,15 @@ the value of the fitted angular parameters between these two case is assigned as
 Peaking background estimates have an impact on the mass fit and eventually on the computed set of \sWeights.
 These estimates are summarized in \tabref{peaking_bkg_yields}, where one can see that they come with a statistical uncertainty as well.
 To account for the last uncertainty  the estimates of all peaking background species (\BsJpsiKK, \BsJpsipipi, \BdJpsipipi, and \LbJpsipK)
-are shifted one at a time by 1 standard deviation. The result is a different set of \sWeights for each specie.
+are shifted, one at a time by one standard deviation. The result is a different set of \sWeights for each species.
 Subsequently the angular fit is performed with that set of \sWeights. The difference in the angular parameters
-between the last fit and the nominal angular fit is taken as a systematic uncertainty for the particular peaking background specie.
-Individual contributions from all species to a certain angular parameter are added in quadrature and assigned as a systematic.
+between the last fit and the nominal angular fit is taken as a systematic uncertainty for the particular peaking
+background species. Individual contributions from all species to a certain angular parameter are added in quadrature
+and assigned as a systematic uncertainty.
 
 \subsubsection{Correlations between mass and angles in the \sPlot context}
 \label{systCorrs}
-Correlations between the $\Bs$ invariant mass and the $\cos\thetamu$ angular distribution is taken into account
+Correlations between the $\Bs$ invariant mass distribution and the $\cos\thetamu$ angular distribution are taken into account
 by performing the mass fit in 5 intervals of $\cos\thetamu$. Since the choice of 5 intervals is arbitrary the mass fit is
 repeated in 3 and 6 $\cos\thetamu$ intervals as well. The result is two more sets of sWeights. For each set the angular
 fit is performed and the differences in each of the parameters of interest are added in quadrature. The last quadratic
@@ -270,11 +271,12 @@ results are reported in \tabref{pull_table}. The reported biases on the paramete
 
 \subsubsection{\CSP factors}
 \label{systCSP}
-The choice of \swave and \pwave models affect the values of the \CSP factors, which they finally enter the angular fit via the \spwave
-interference terms of the angular \pdf, see \secref{Kpi_Invariant_mass}. The choice of these models has a small but measurable impact on the parameters of interest and it was made
-such that the chosen models optimally describe the \mkpi distribution on data. A conservative systematic to the parameters of interest
-is assigned by choosing the worst possible model and repeating the angular fit. The difference in the fitted parameters from the nominal
-angular fit corresponds to the assigned systematic uncertainty.
+The choice of \swave and \pwave models affect the values of the \CSP factors, which enter the angular fit via the \spwave
+interference terms of the angular \pdf, see \secref{Kpi_Invariant_mass}. The choice of model has a small but measurable
+impact on the parameters of interest and it was made such that the chosen model describes the \mkpi distribution
+best on the observed data. A conservative systematic to the parameters of interest is assigned by choosing the worst
+possible model and repeating the angular fit. The change in the fitted parameters from the nominal
+angular fit is assigned as systematic uncertainty.
 
 \begin{table}
   \centering
@@ -301,9 +303,9 @@ angular fit corresponds to the assigned systematic uncertainty.
 \label{systDetProdAsymm}
 Asymmetries induced in the \Bs meson production and from detector imperfections as described in \secref{experimentalAssym},
 directly affect the $\Acp{i}$ parameters of interest, see \secref{cp_assymetries_and_total_decay_rate}. The estimated production
-and detection asymmetries are allowed to float in the final angular fit to the data with a Gaussian constrain. This way the impact
-of their uncertainties on the parameters of interest is built in the likelihood function. Thus no separate systematic uncertainty
-is assigned.
+and detection asymmetries are allowed to vary in the final angular fit to the data with a Gaussian constrain. This way the impact
+of their uncertainties on the parameters of interest is built in the likelihood function and reflected in the statistica uncertainty.
+As a result, no explicit systematic uncertainty is assigned.
 
 \subsubsection{\dwave contribution}
 \label{dwave}
@@ -313,15 +315,15 @@ quoted there is also assigned to the current analysis.
 
 \subsubsection{Uncertainties from \fdfs, \BRof\BdJpsiKst, and \BRof\BsJpsiPhi}
 The uncertainties from the external parameters \fdfs, \BRof\BdJpsiKst, and \BRof\BsJpsiPhi are
-taken as systematic for this analysis. They are added in quadrature to the estimation of
-\BRof\BsJpsiKst.
+propagated and taken as systematic undertainties for this analysis. They are added in quadrature to
+the estimation of \BRof\BsJpsiKst.
 
 \subsubsection{Summary}
 \label{systSummary}
 All the above systematic uncertainties related to the angular parameters are summarized from \tabref{systematics_acp}
 to \tabref{systematics_swave_phase}. Two sources of systematic uncertainties are found to be dominant. First the size of the Monte
-Carlo sample used to estimate the efficiency moments of the angular acceptance; the correlation between the $\Bs$ invariant
-mass and the cosine of the helicity angle \thetamu. The total uncertainties on the angular parameters remain largely dominated
+Carlo sample used to estimate the efficiency moments of the angular acceptance; second the correlation between the $\Bs$ invariant
+mass resolution and the cosine of the helicity angle \thetamu. The total uncertainties on the angular parameters remain largely dominated
 by the statistical uncertainties. Furthermore, systematic uncertainties related to the branching fraction measurement
 are shown in \tabref{syst_normalisation}.
 
@@ -335,8 +337,8 @@ This time it is visualized in order to gain more confidence that the fit result 
 comes indeed from a valid minimum of the likelihood function. One can easily get a good estimate on the shape of the function
 by expanding it as a Taylor series around the
 minimum \footnote{The constant term of the
-expansion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically. Whereas
-the first derivative is zero by definition.}. Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough
+expansion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically.}.
+Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough
 and also that the variables $\vec{p}$ in the same equation are Gaussian in nature, then one can easily find out that the
 Taylor expansion of the negative logarithm of \equref{likelihood} projected over one parameter $\mu$ out of $\vec{p}$ has a
 parabolic shape as shown in \equref{likelihood_exp}
@@ -428,8 +430,8 @@ to $\mu$. The last equation is called {\it profile likelihood}.
 
 Based on the above-mentioned assumptions two important conclusions can be drawn given a profile likelihood plot. First the non
 Gaussian nature of a parameter of interest can be visualized by how much the corresponding profile likelihood plot deviates from
-a perfect parabola. Non perfect parabola is mainly an indication of low sample
-size. Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf
+a perfect parabola. Non perfect parabola is mainly an indication of low sample size or high correlations between the parameters.
+Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf
 used to build the likelihood. Second, \equref{likelihood_exp} serves as an alternative method of estimating the statistical uncertainty
 of a parameter of interest given a profile likelihood plot. Specifically $s$ number of standard deviations are defined from the two
 points where \equref{likelihood_exp} intersects the profile likelihood function (for the desired value of $s$) and projecting to
@@ -473,10 +475,11 @@ the horizontal axis.
          low number of events in that \mkpi interval. Second the $\fS{2}$ minimum is close to a physical boundary.}
 \end{figure}
 
-It follows that the uncertainties defined in the the above-mentioned way can be asymmetric left and right of the minimum.
-The sample size for some of the data categories in the current analysis is quite small. This is depicted in the corresponding profile
-likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why asymmetric uncertainties
-are used.
+It follows that the uncertainties defined in the the above-mentioned way can be asymmetric
+left and right of the minimum. The sample size for some of the data categories in the current
+analysis is quite small. This is depicted in the corresponding profile likelihood plots of the
+parameters of interest relevant to these data categories. This is also the reason why asymmetric
+uncertainties are quoted.
 
 \begin{figure}[!t]
   \begin{subfigure}{0.5\textwidth}
