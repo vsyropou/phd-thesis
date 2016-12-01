@@ -3,10 +3,12 @@ The coordinates from multiple layers of tracking sub-systems are processed by th
 to produce {\it tracks}, which are objects representing the trajectory of a charged particle. There are
 three distinct tracking sub-detectors in \lhcb shown in \figref{lhcb_detector_cross_section}; Closest to the interaction point is
 the {\it VErtex LOcator}, \velo, then just before the \lhcb magnet is the {\it Tracking Turicensis}, \ttracker,
-and  lastly the {\it Outer Tracker} \ot. There are several track types that are {\it reconstructed} by
+and  lastly the T stations. The latter consists of the {\it Inner Tracker}, \intr, and the {\it Outer Tracker}, \ot,
+covering the are after the \lhcb magnet. There are several track types that are {\it reconstructed} by
 the tracking algorithms, depending on which of the tracking sub-detectors provided information to produce
-the track object. The various track types are shown in \figref{track_types}. The most common tracks used are {\it long}
-which have the highest momentum resolution. The overall reconstruction efficiency of long tracks is $\sim 96\%$.
+the track object. The various track types are shown in \figref{track_types}. The most common tracks used
+are {\it long} which have the best momentum resolution. The overall reconstruction efficiency of long
+tracks is $\sim 96\%$.
 
 \begin{figure}[t]
   \centering
@@ -18,15 +20,15 @@ which have the highest momentum resolution. The overall reconstruction efficienc
 A charged particle that traverses the \lhcb magnet is deflected. The amount of deflection is inversely proportional
 to its momentum. The latter is exploited by tracking algorithms to estimate the momentum of a track. The relative
 momentum resolution of the tracking system, shown in \figref{det_deltappvp}, is $\nicefrac{\Delta p}{p} \sim 0.5 \%$
-for low momentum tracks and up to $1\%$ for 200\gevc momentum tracks. Intuitively, tracks that do not deflect a
-lot have inferior momentum resolution.
+for low momentum tracks and up to $1\%$ for 200\gevc momentum tracks.
 
-Measuring the mass of a particle, like the \Bs meson, is achieved by combining tracks in order to build a complete
-cascade of particle decays (also referred to as {\it decay channel}). The mass measurement precision varies depending
+Measuring the mass of a particle, like the \Bs meson, is achieved by reconstructing particles in order to build a
+complete cascade of particle decays (also referred to as {\it decay channel}). The mass measurement precision varies depending
 on the specific decay channel. Two body \B decays including a \jpsi have the most precise mass resolution of about
-$8 \mevcc$. On the other hand decay channels including neutral particles, \ie $\Bs\to\phi\gamma$, have a worst resolution of
-about $100 \mevcc$. Note that neutral particles are undetected by the tracking system. Instead the calorimetry,
-introduced in \secref{det_calo}, system is responsible for reconstructing these type of particles.
+$8 \mevcc$. On the other hand decay channels including neutral particles, \ie $\Bs\to\phi\gamma$, have a worst
+resolution of about $100 \mevcc$. Note that neutral particles are not detected by the tracking system.
+Instead the calorimetry system, introduced in \secref{det_calo}, is responsible for identifying and
+reconstructing these type of particles.
 
 \begin{figure}[t]
   \centering
@@ -48,24 +50,25 @@ introduced in \secref{det_calo}, system is responsible for reconstructing these 
   \label{det_velo_perf}
 \end{figure}
 
-Certain important analysis performed with the \lhcb detector rely on measuring the {\it flight distance} of a particle, like the \Bs meson.
-Flight distance is typically the distance between the point were the two protons collided, called {\it Primary Vertex} (PV)
-and the point were the \Bs, in that case, decayed. This last point is called {\it Secondary Vertex} (SV). The \velo sub-detector
-was designed for optimum spacial resolution, by placing the \velo sensors as close to the beam as possible, $\sim 8 \mm$.
-The PV position resolution depends strongly on the number of tracks used to build the vertex and can be seen in \figref{det_velo_pv_res}.
-Measuring the flight distance translates to a {\it decay time} time measurement. The latter is the time interval between
-the production and decay of a particle and it is the actual quantity that a typical {\it time dependant} analysis,
-\eg \BsJpsiPhi, requires. The average decay time resolution measured with the above channel is $\sim 45\fs$, which
-implies that the \phis measurement discussed in \secref{measuring_phis}, is indeed possible to perform.
+Many important analysis performed with the \lhcb detector rely on measuring the average {\it lifetime} of a particle,
+like the \Bs meson. This particuar measurement requires knowledge of the {\it flight distance}, which is the
+distance between the point were the two protons collided, called {\it Primary Vertex} (PV) and the point were the
+\Bs, in that case, decayed. This latter point is called {\it Secondary Vertex} (SV). Measuring the flight distance
+translates to the {\it decay time} measurement, which is the time interval between the production and decay of a
+single particle and it is the actual quantity that a typical {\it time dependant} analysis, \eg \BsJpsiPhi, requires.
+The \velo sub-detector was designed for optimum spacial resolution, by placing the \velo sensors as close to the beam
+as possible, $\sim 8 \mm$. The PV position resolution depends on the number of tracks used to build the vertex and can
+be seen in \figref{det_velo_pv_res}. The average decay time resolution measured with \BsJpsiPhi data is $\sim 45\fs$,
+which enables the \phis measurement discussed in \secref{measuring_phis}.
 
 Lastly, a big part of the \lhcb physics program includes muons. The muon system consists of {\it Multi Wire Proportional Chambers}
 (MWPC). It is positioned after the calorimeters, with the exception of the first, M1, muon station.
-Note that muons can penetrate through a large volume of led, like the one present in the calorimeter system,
-without decaying. There are 5 muons stations in total; Each station is divided in 4 concentric regions.
-The granularity\footnote{In this context granularity is the distance between the wires of the MWPC.}
-of each station becomes progressively smaller as one moves towards the inner regions which are closer to the beam pipe.
-This is done to account for the increasing track density that is typically found in the forward region. This way
-the special resolution is higher exactly where it is needed. The $x$ coordinate hit resolution in all regions
-is superior compared to the $y$ coordinate; Since the direction of the \lhcb magnetic field strength
-is such that tracks bend only along the $x$ plane. The $(x,y)$ resolution varies from $(4,10)\mm$ to $(150,180)\mm$
-respectively for the inner M1 region and the outer M5 region. The overall detector efficiency is $\>98\%$.
+Note that muons can penetrate through a large volume of lead, like the one present in the calorimeter system,
+without decaying or loosing much energy. There are five muons stations in total; Each station is divided in four concentric
+regions. The granularity\footnote{In this context granularity is given by the distance between the wires of the MWPC.}
+of each station becomes progressively smaller as one moves towards the inner regions which are closer to the beam.
+This is done to account for the increasing particle density. This way the special resolution is higher exactly where
+it is needed. The horizontal coordinate hit resolution in all regions is superior compared to the vertical coordinate;
+Given that the \lhcb magnet bends carged partcles in the horizontal plane, the position resolution in this plance
+us crucial for the momentum emasurement. As a result (horizontlal,vertical) resolution varies from $(4,10)\mm$ to
+$(150,180)\mm$ respectively for the inner M1 region and the outer M5 region. The overall detector efficiency is $\>98\%$.
