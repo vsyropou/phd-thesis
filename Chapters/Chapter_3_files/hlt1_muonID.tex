@@ -25,23 +25,23 @@ in the \muonID algorithm sequence described in the following subsection.
 \subsection{\hltone muon algorithm}
 \label{hlt1run2}
 
-The role of the trigger system and the decisions that it provides are presented in \secref{det_trigger},
-where the concept of a trigger line was already mentiond there. The \hltone muon trigger lines are
-mainly organized in single muon and dimuon ones; both exploit the same muon identification procedure which
-is described in the current subsection. The efficiency of the muon lines during \runone is shown in \figref{det_run_one_muon_line_eff}.
-It can be observed that a low \pt turn on and a large efficiency loss in the dimuon lines are present.
+The role of the trigger system and the decisions that it provides are presented in \secref{det_trigger}.
+The \hltone muon trigger lines are mainly organized in single muon and dimuon ones; both exploit the same
+muon identification procedure which is described in the current subsection.
+The efficiency of the muon lines during \runone is shown in \figref{det_run_one_muon_line_eff}.
+It can be observed that a low \pt turn on some efficiency loss in the dimuon lines are present.
 In order to understand the origin of this efficiency loss the \hltone algorithm sequence \cite{LHCb-PUB-2011-017}
 is analyzed further. The sequence is shown  in \figref{hlt1_algo_seq}. A brief summary of the
 updated sequence is given in what follows, whereas the full description can be found in \cite{kevinThesis}.
 
-During \runone the muon identification starts directly from \veloTracks\footnote{These are tracks built only with the \velo sub-detector, see \figref{track_types}}
-which are then filtered out keeping good muon candidates. The filtering is done by the \mvm algorithm \cite{LHCb-PUB-2011-017}.
-Subsequently the \FwD algorithm uses information from the rest of the tracking stations, see \secref{det_tracking}, and
-upgrades the \veloTracks to long tracks\footnote{These are tracks built using all the tracking sub-detectors, see \figref{track_types}}
-After this, the \isMuon\footnote{\isMuon is an alias for the \muonID software.} algorithm is applied.
-In addition there are some quality cuts between each algorithm step, such as the number of hits produced in the
-\velo sub-detector by a track or the fitted track $\chisq/\nDoF$ as well as momentum cuts applied after the \FwD
-tracking algorithm. The minimum momentum and transverse momentum is 6 \gevc and 0.5 \gevc respectively.
+During \runone the muon identification starts directly from \veloTracks. These are tracks built only with the
+\velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm \cite{LHCb-PUB-2011-017}.
+Subsequently, the \FwD algorithm uses information from the tracking stations and upgrades the \veloTracks
+to Long tracks, mentioned in \secref{det_tracking}. After this, the \isMuon, which implements the offline
+\muonID, algorithm is applied. In addition there are some quality cuts between each algorithm, such as the
+number of hits in the \velo sub-detector assigned to a track or the fitted track $\chisq/\nDoF$ as well as
+momentum cuts applied after the \FwD tracking algorithm. The minimum momentum and transverse momentum is
+6 \gevc and 0.5 \gevc respectively.
 
 \begin{figure}[t]
   \centering
@@ -59,11 +59,13 @@ efficiency by roughly $4\%$. Given these diagnostics plus the \runtwo capabiliti
 \hltone muon lines algorithm sequence is described in the following paragraph.
 
 For the majority of the tracks, which have transverse momentum larger than 500 \mevc, the sequence is different with respect to
-Run I: full tracking is performed for these tracks, so that the start for muon finding is already with long tracks.
+Run I: full tracking is performed for all these tracks, so that the start for muon identification is already with long tracks.
 After soft quality cuts these get passed through the standard \isMuon algorithm in order to be identified;
 positively identified muons are then combined into dimuons as in Run I.
 The combination of the use of long tracks and standard muon identification is much more efficient than the
-procedure in Run I, and is exactly the same as the one of offline reconstruction.
-Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to long tracks for timing reasons.
-However some of them will be muons, and the efficiency for these could be recovered using a different strategy,
+procedure in Run I, and is exactly the same as the oneused by the offline reconstruction.
+Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to long tracks
+for timing reasons; as their lower momentum requires larger search regions in the tracking stations
+behind the magnet, thus increasing the number of possible hits that need to be tested for comaptibility.
+However, some of them will be muons, and the efficiency for these could be recovered using a different strategy,
 explained in \secref{mvm_algorrithm}.
