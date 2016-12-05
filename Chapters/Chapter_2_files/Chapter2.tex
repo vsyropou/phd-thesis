@@ -61,7 +61,6 @@ from being mis-identified by as muons by the subsequent muon stations.
 
 \section{The \BJpsiKst Decay in \lhcb}
 \label{BspsiKst_at_lhcb}
-{\color{red} To be revisited after I make an event display.}
 
 The \BsJpsiKst process is a typical channel for which the \lhcb has a high detection efficiency.
 The presence of muon in the final state yields a high trigger efficiency, while the intermediate
@@ -71,37 +70,40 @@ events are filtered out. The only difficult point is the the low branching fract
 compared to the \BdJpsiKst whose invariant mass is very close to the \BsJpsiKst candidates, see \secref{mass_BDTG_selection}.
 Thus, special care needs to be taken when modeling the mass distribution of these two channels.
 The total \BsJpsiKst signal yield accumulated over the full \runone is about 1800 events, see \equref{signal_yields}.
-A typical \BsJpsiKst event is  shown in \figref{det_evt_display}
+An \lhcb event is shown in \figref{det_evt_display}. A reconstructed \BsJpsiKst decay candidate is shown in
+more detail in \figref{det_jpsikst_cand}.
 
 \begin{figure}[t]
   \centering
   \begin{subfigure}{\textwidth}
-    \raggedright
+    % \raggedright
     \includegraphics[width=\textwidth]{Figures/Chapter2/top}
-    \caption{}
+    % \caption{}
     \label{det_evt_display_top}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
-    \raggedleft
+    % \raggedleft
     \includegraphics[width=\textwidth]{Figures/Chapter2/side}
-    \caption{}
+    % \caption{}
     \label{det_evt_display_side}
   \end{subfigure}
-  \caption{\BsJpsiKst event display. Top: vertical corssection. Bottom: Horizontal corssection.
-  {\color{red} This is not a\BsJpsiKst event, to be updated.}}
+  \caption{Horizontal (top) and vertical (bottom) cross section of an \lhcb event.
+           Straght lines indicate Long tracks; where kaons, pions, muons, protons and electrons
+           are represented with red, orange, green, magenta and blue color respectively. \ecal and \hcal energy depositions
+           are shown as blue and orange bars respectively; the length of each bar is proportional to the energy deposited.
+           Muon hits are illustrated with green blocks.}
   \label{det_evt_display}
 \end{figure}
 
 \begin{figure}[t]
   \centering
-  \begin{turn}{90}
-    \includegraphics[width=1.5\textwidth]{Figures/Chapter2/jpsikst_event.pdf}
-  \end{turn}
-  \caption{}
+  %\begin{turn}{90}
+ \includegraphics[width=1\textwidth,trim=0cm 0cm 17cm 0cm, clip=true]{Figures/Chapter2/jpsikst_event.pdf}
+  %\end{turn}
+  \caption{A \BsJpsiKst candidate. The purple and cyan circles correspond to the primary and secondarry
+           vertices respectivelly. The dashed cyan line, is not an actual track; it illustrates the \Bs flight distance.
+            Black lines represent \velo tracks and colored lines indicate particles as in \figref{det_evt_display}.
+            Note how \velo tracks apear to originate from the primary vertex. Also note the how \Bs final state tracks
+            ({\color{green}\mmu},{\color{green}\mmu},{\color{red}\kaon},{\color{orange}\pion}) intersect at the secondary vertex.}
+  \label{det_jpsikst_cand}
 \end{figure}
-
-\begin{itemize}
-  \item Bending planes
-  \item The event is pretty and has nice tracks of high-low pt.
-  \item the kst is there the pv is there the sv is there.
-\end{itemize}
