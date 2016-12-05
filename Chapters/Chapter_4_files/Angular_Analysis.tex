@@ -687,11 +687,11 @@ These integrals can be written as:
 
 \noindent where $s$ and $p$ stand for the \swave and \pwave line-shapes respectively. Evaluating complex valued integrals yield
 the so called $\CSP$ factors which are inserted in the angular functions of \tabref{ang_distr}. Particularly, the real part
-is inserted as a multiplicative factor in front of all \spwave interference terms, for example $\ReAmp{0}{S} \rightarrow \CSP * \ReAmp{0}{S}$.
-The imaginary part is absorbed by the phase difference of the same interference
-terms, $\ie \arg(A_0^*A_S) \rightarrow \arg(A_0^*A_S) - \ThetaSP$. Floating the $\CSP$ factors in the fit is not preferred due
-to high correlations between the decay amplitudes. Instead it would be better to extend the angular fit so that the \mkpi dependence
-is modeled directly via the $\mKpiAmp$ terms of \equref{ang_terms}. The above-mentioned line-shapes, $s$ and $p$ that are necessary
+is inserted as a multiplicative factor in all of the \spwave interference terms, for example $\ReAmp{0}{S} \to \ReAmp{0}{S} \cdot \CSP\cdot\cos\parenthesis{\ampPhase{0}+\deltaS{}+\ThetaSP}$.
+The imaginary part, $\ThetaSP$, is absorbed in the overal phase of the \spwave interference term.
+Varying either $\CSP$ or $\ThetaSP$ in the fit is not preferred due to high correlations between the decay amplitudes.
+Instead it would be better to extend the angular fit so that the \mkpi dependence is modeled directly via the $\mKpiAmp$
+terms of \equref{ang_terms}. The above-mentioned line-shapes, $s$ and $p$ that are necessary
 to compute the $\CSP$ factors are a combination of a \KstENT and \KstOFOZ for the \pwave, as in \cite{PhysRevD.11.3165}.
 Whereas for the \swave a LASS parametrization \cite{Aston1988493} is used, consisting of a linear combination of the \KstOFTZ resonance with
 a non-resonant term, coming from elastic scattering.
