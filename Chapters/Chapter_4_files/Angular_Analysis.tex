@@ -333,7 +333,7 @@ to the {\it Kronecher delta} symbol. The later fact is required to properly norm
 The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
 This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
 that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
-same selection steps as real data) as shown in \equref{eff_moms_calc}.
+same selection steps as data) as shown in \equref{eff_moms_calc}.
 
 \begin{equation}
 \centering
@@ -529,7 +529,7 @@ physical amplitudes of the \BsJpsiKst decay. Specifically real and simulated dat
 simulated data.} in the momentum distributions of the final state particles may reflect a different acceptance
 in real compared to simulated data. On the other hand, differences between data and simulation could be also attributed to
 differences in the underlying physical parameter values generating the simulated data compared to these
-present in real data. For example, the presence of S-wave in the real data (and its absence on simulated data)
+present in data. For example, the presence of S-wave in the data (and its absence on simulated data)
 can cause a difference in the observed kaon momentum spectrum even though the angular acceptance may be perfectly simulated.
 Both of the above-mentioned effects have an impact on the decay angles distribution since the helicity angles are functions
 of the momenta of the final state particles.
@@ -537,7 +537,7 @@ of the momenta of the final state particles.
 In order to overcome the problem of simulation imperfections, the simulated sample is weighted using an iterative procedure.
 At each step of the weighting procedure the simulated data are corrected for the current best estimate of the physics
 parameters and the two dimensional $(p_{\kaon},p_{\pion})$ momentum distribution.
-The efficiency moments are re-evaluated using the weighted simulated sample and the fit to the real data is repeated.
+The efficiency moments are re-evaluated using the weighted simulated sample and the fit to the data is repeated.
 This changes the best estimate of the parameters of interest. This procedure is repeated until these parameters
 converge. The full procedure by steps can be summarized as:
 
@@ -637,7 +637,7 @@ This is also supported by the effect of these corrections on the parameters of i
 \label{pars_convergence}
 \end{table}
 
-Lastly, the acceptance can be floated in the angular fit to the real data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
+Lastly, the acceptance can be floated in the angular fit to the data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
 This feature makes, in hindsight, the acceptance correction procedure unnecessary.
 
 
