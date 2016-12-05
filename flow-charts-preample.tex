@@ -1,9 +1,9 @@
 
-
+\colorlet{get}{white}
 \colorlet{Source}{green!20}
 \colorlet{Op}{blue!20}
 \colorlet{Cut}{orange!20}
-\colorlet{Sink}{green!20}
+\colorlet{Sink}{red!50}
 \colorlet{Text}{black}
 \colorlet{Line}{black!75}
 
@@ -18,7 +18,13 @@
     fill=Source,
     draw=Source,
     text=Text,
-    font=\bfseries,
+    % font=\bfseries,
+  },
+  get/.style = {
+    fill=get,
+    draw=get,
+    text=Text,
+    % font=\bfseries,
   },
   op/.style = {
     fill=Op,

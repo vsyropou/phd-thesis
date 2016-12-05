@@ -1,11 +1,10 @@
 \begin{tikzpicture}[node distance=.5cm and 2.cm]
-       \node [block, source] (test-0) {Velo Tracks};
-       \node [block, op, below=of test-0, ] (test-1) {MatchVeloMuon};
-        \node [block, op,  below=of test-1] (test-2) {Forward Tracking};
-        \node [block, cut, below=of test-2] (test-3) {Cuts on track};
-        \node [block, op, below=of test-2] (test-3) {IsMuon(Tight)};
-        \node [block, op, below=of test-3] (test-4) {Fit track};
-        \node [block, op, below=of test-4] (test-5) {Make dimuons };
+       \node [block, source] (test-0) {\veloTracks};
+       \node [block, op, below=of test-0, ] (test-1) {\mvm};
+        \node [block, op,  below=of test-1] (test-2) {\FwD};
+        \node [block, op, below=of test-2] (test-3) {\isMuon};
+        \node [block, op, below=of test-3] (test-4) {\fitTrack};
+        \node [block, op, below=of test-4] (test-5) {\diMuons };
         \node [block, cut, below=of test-5] (test-6) {Additional cuts};
         \node [block, sink, below=of test-6] (test-7) {Decision};
        \path [line] (test-0) -- (test-1);

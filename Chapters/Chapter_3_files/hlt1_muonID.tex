@@ -34,22 +34,23 @@ In order to understand the origin of this efficiency loss the \hltone algorithm 
 is analyzed further. The sequence is shown  in \figref{hlt1_algo_seq}. A brief summary of the
 updated sequence is given in what follows, whereas the full description can be found in \cite{kevinThesis}.
 
-During \runone the muon identification starts directly from \veloTracks. These are tracks built only with the
-\velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm \cite{LHCb-PUB-2011-017}.
-Subsequently, the \FwD algorithm uses information from the tracking stations and upgrades the \veloTracks
-to Long tracks, mentioned in \secref{det_tracking}. After this, the \isMuon, which implements the offline
-\muonID, algorithm is applied. In addition there are some quality cuts between each algorithm, such as the
-number of hits in the \velo sub-detector assigned to a track or the fitted track $\chisq/\nDoF$ as well as
-momentum cuts applied after the \FwD tracking algorithm. The minimum momentum and transverse momentum is
-6 \gevc and 0.5 \gevc respectively.
+During \runone the muon identification starts directly from \veloTracks. These are tracks built only with
+the \velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm
+\cite{LHCb-PUB-2011-017}. Subsequently, the \FwD algorithm uses information from the tracking stations, behind
+the magnet and upgrades the \veloTracks to Long tracks, mentioned in \secref{det_tracking}. After this, the
+\isMuon, which implements the offline \muonID, algorithm is applied. In addition there are some quality cuts
+between each algorithm, such as the number of hits in the \velo sub-detector assigned to a track or the fitted
+track $\chisq/\nDoF$ as well as momentum cuts applied after the \FwD tracking algorithm. The minimum momentum
+and transverse momentum is $6 \gevc$ and $0.5 \gevc$ respectively.
 
 \begin{figure}[t]
   \centering
   \tikzsetnextfilename{hlt1_alg_seq_old}
-  \scalebox{1}{\input{Figures/Chapter3/hlt1_alg_seq_old}}
+  \scalebox{0.97}{\input{Figures/Chapter3/hlt1_alg_seq_old}}
   \tikzsetnextfilename{hlt1_alg_seq_new}
-  \scalebox{1}{\input{Figures/Chapter3/hlt1_alg_seq_new}}
- \caption{ \runone and \runtwo \hltone algorithms compared. Chart from \cite{kevinThesis}.}
+  \scalebox{0.97}{\input{Figures/Chapter3/hlt1_alg_seq_new}}
+ \caption{\runone and \runtwo \hltone algorithms. Tracks are highlighted with green color, while algorithms
+           operating on tracks with purple. See text for further details. Chart from \cite{kevinThesis}.}
   \label{hlt1_algo_seq}
 \end{figure}
 
@@ -59,12 +60,12 @@ efficiency by roughly $4\%$. Given these diagnostics plus the \runtwo capabiliti
 \hltone muon lines algorithm sequence is described in the following paragraph.
 
 For the majority of the tracks, which have transverse momentum larger than 500 \mevc, the sequence is different with respect to
-Run I: full tracking is performed for all these tracks, so that the start for muon identification is already with long tracks.
+Run I: full tracking is performed for all these tracks, so that the start for muon identification is already with Long tracks.
 After soft quality cuts these get passed through the standard \isMuon algorithm in order to be identified;
 positively identified muons are then combined into dimuons as in Run I.
-The combination of the use of long tracks and standard muon identification is much more efficient than the
+The combination of the use of Long tracks and standard muon identification is much more efficient than the
 procedure in Run I, and is exactly the same as the oneused by the offline reconstruction.
-Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to long tracks
+Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to Long tracks
 for timing reasons; as their lower momentum requires larger search regions in the tracking stations
 behind the magnet, thus increasing the number of possible hits that need to be tested for comaptibility.
 However, some of them will be muons, and the efficiency for these could be recovered using a different strategy,
