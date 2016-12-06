@@ -11,7 +11,7 @@ appendix is to circumvent problems arising from binning distributions, especiall
 bins is big. Note that the bigger the number of bins the more precise the matching of the two distributions
 is. The advertised techinique is described in the current appendix and a choice for its name could be {\it horizontal reweighting}.
 
-Lastly an matching example is given in the last section fo this appendix. This example is a typical problem
+Lastly a matching example is given in the last section fo this appendix. This example is a typical problem
 in high energy physics originating from due non perfect simulation. Specifically certain kinematic
 distributions might defer significantly between simulated events and data. Given that simulated
 events are commonly used to control acceptance, resolution or other detector effects; What is typically
@@ -146,13 +146,12 @@ c_{ij} = \frac{1}{N} \sum (x_i-<x_i>)(x_j-<x_j>), \;\; \text {with} <x> = \frac{
 Nevertheless, it is a straightforward well known problem for which there are many implemented
 algorithms as well.
 
-Lastly two crusial implementation issues are clarified. Both of these issues manifest themselves
-when invoking a CDF, or its inverse, of an analyticallly unknown distribution. As mentined before
-the CDF is built by binning a given distribution, $x$, and ascociating the a value of the integral
-of \equref{cdf_def}, name it $c_i$, to each bin $x_i$. In that case, from an implementation point
-of view the CDF is just an $x_i \to c_i$ {\it map} structure, impling that the $x \to c$ function is
-not continuous nomatter how fine the $x$ binning becomes. The way to make the $x \to c$ mapping
-continues is usign the well known techinique of {\it linear interpolation}, shown in \figref{linear_interpolation},
+Lastly an important implementation issues is clarified. Specifically, the CDF is built by binning a
+given distribution, $x$, and ascociating the a value of the integral of \equref{cdf_def}, name it $c_i$,
+to each bin $x_i$. In that case, from an implementation point of view the CDF is just an $x_i \to c_i$ {\it map}
+structure, impling that the $x \to c$ function is not continuous by definition. Of the binning can be increased
+but one could argue that this is more brut force that solvign the problem. The way to make the $x \to c$ mapping
+continues is using the well known techinique of {\it linear interpolation}, shown in \figref{linear_interpolation},
 and thus solving the first of the two implementation issues.
 
 \begin{equation}
@@ -160,10 +159,7 @@ and thus solving the first of the two implementation issues.
   \label{linear_interpolation}
 \end{equation}
 
-\noindent The second point that has to be treated with care is when appling the inverse flattening
-transformation, $c \to v$, to a distribution...... {\color{red} Remember what you did here before writting.}
-
-The the ingridients necessary to apply the horizonta reweighting techinique presented have been covered.
+The ingridients necessary to apply the horizonta reweighting techinique presented have been covered.
 An implementation of the full matching algorithm can be found in github here blahhh.
 
 \subsubsection{Example-Discussion}
