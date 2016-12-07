@@ -138,7 +138,13 @@ the possibility for both positively and negatively charged tracks.
 \end{figure}
 
 After the improvements mentioned in the above paragraph, the efficiency of the upgraded \mvTTm algorithm
-is estimated versus the total and transverse momentum and compared against the old algorithm. A common cutoff value for
+is estimated using simulated \Sigmapmumu events. The muons from this decay are required to pass the full 
+track reconstruction and be positivelly identified as muons. The latter is achieved by exploiting the fact 
+that the true muon track is know when using simulated events. These two conditions define the {\it true muons}.
+Subsequently, given and intial \veloTracks
+
+
+ versus the total and transverse momentum and compared against the old algorithm. A common cutoff value for
 the $\chisq/\nDoF$ of 2 is chosen for comparison. The efficiency projected versus the total momentum, $\ptot$
 can be seen in \figref{mvm_eff_p_comp}, where the improvement of the upgraded \mvTTm algorithm is shown to be significant.
 Given that the aim of the \mvTTm upgrade is to optimize for high efficiency of low transverse momenta muons,
@@ -218,7 +224,7 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
   \begin{subfigure}{0.5\textwidth}
     \raggedright
     \tikzsetnextfilename{cdf_sig_bkg_mvm}
-    \scalebox{0.6}{\input{Figures/Chapter3/cdf_sig_bkg_mvm}}
+    \scalebox{0.6}{\input{Figures/Chapter3/MvTTM/cdf_sig_bkg_mvm}}
     \caption{}
     \label{mvm_cdf}
   \end{subfigure}%
@@ -226,7 +232,7 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
   \begin{subfigure}{0.5\textwidth}
     \raggedleft
     \tikzsetnextfilename{roc_curve_mvm}
-    \scalebox{0.6}{\input{Figures/Chapter3/roc_curve_mvm}}
+    \scalebox{0.6}{\input{Figures/Chapter3/MvTTM/roc_curve_mvm}}
     \caption{}
     \label{mvm_roc}
   \end{subfigure}

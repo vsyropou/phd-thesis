@@ -1,6 +1,7 @@
+
 The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
 at a manageable level, since it is not feasible to save every collision-{\it event}. The three levels of
-the \lhcb trigger system decide weather a certain event, is interesting from physics point
+the \lhcb trigger system decide whether a certain event, is interesting from physics point
 of view and should thus be written out to storage. The criteria used to filter out the interesting events 
 get progressively more stringent at each trigger level. The whole trigger chain is optimized for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
@@ -14,7 +15,7 @@ with an invariant mass window around the nominal \jpsi mass. Or in case of an ex
 trigger line could reconstruct the entire $n-\text{body}$ paricle cascade and perhaps require from 
 particular quantities to satisfy some criteria, \ie the distance between the primary and secodnary vetex.   
 
-\begin{figure}[t]
+\begin{figure}[t!]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
@@ -38,12 +39,19 @@ Complicated selection criteria are not affordable from computation power point o
 $40\mhz$ input rate of \lzero. After the rate is reduced down to $1\mhz$ the data is read out and
 passed to the subsequent higher level trigger, where tracking and PID information become available.
 
-The overall performance of the \lhcb trigger system is $\sim 90\%$ for dimuon channels and $\sim 30\%$ for
-multi-body hadronic final states. A complete performance study of the trigger system can be found in chapter
-5 of \cite{Aaij:2014jba}. The current section focuses on the trigger performance involving muons;
-The corresponding efficiencies are shown in \figref{det_run_one_muon_line_eff}.
+The overall efficiency of the \lhcb trigger system is $\sim 90\%$ for dimuon trigger lines and $\sim 30\%$ 
+for multi-body lines with hadronic final states. The efficiency is estimated with the so called {\it tis-tos} 
+method. In the contex to of this method a given reconstructed object, \ie a muon track, might cause a 
+trigger line to fire, given that t fullfils the requirements of that particular line. In that case the 
+muon track is characterised as {\it Trigger On Signal}. On the other hand the same trigger line might 
+fire regardless of the muon track, for example because someting else in the event might cause the line 
+to fire. In that case the muon track is characterised as {\it Trigger Indipendant of Signal}. 
+The so called {\it tos efficiency} of a given trigger line is defiend as the ratio of ${\rm tss}\&{\rm tos}$ 
+over tis events. A complete performance study of the trigger system can be found in chapter 5 
+of \cite{Aaij:2014jba}. Since muons play a key role in the current thesis the efficiencies of the muon 
+trigger lines for the three stages of the \lhcb trigger systema are  shown in \figref{det_run_one_muon_line_eff}.
 
-\begin{figure}[t]
+\begin{figure}[t!]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
@@ -65,7 +73,8 @@ The corresponding efficiencies are shown in \figref{det_run_one_muon_line_eff}.
     \caption{}
     \label{det_run_one_hlt2_muon_line_eff}
   \end{subfigure}
-  \caption{\runone muon line efficiencies of the \lzero (A), \hltone (B) and \hlttwo (C) trigger stages.}
+  \caption{Muon trigger line efficiencies during \runone respectively for the \lzero (A), \hltone (B) and \hlttwo (C) trigger stages.
+           Efficiencies shown are characterised as tos, see text.}
   \label{det_run_one_muon_line_eff}
 \end{figure}
 
