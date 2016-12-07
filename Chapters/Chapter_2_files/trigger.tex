@@ -1,15 +1,18 @@
 The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
 at a manageable level, since it is not feasible to save every collision-{\it event}. The three levels of
 the \lhcb trigger system decide weather a certain event, is interesting from physics point
-of view and should thus be written out to storage. The criteria used to filter out the interesting events, get
-progressively more stringent at each trigger level. The whole trigger chain is optimized for maximum
+of view and should thus be written out to storage. The criteria used to filter out the interesting events 
+get progressively more stringent at each trigger level. The whole trigger chain is optimized for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads part of the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
-\hltone and \hlttwo, write out to storage at $5\khz$. The organization of the trigger system is done in
-{\it trigger lines}. Essentially, each trigger line is a collection of selection criteria similar to the
-ones applied during the offline data analysis, but looser. Furthermore, the trigger lines are software
+\hltone and \hlttwo, wrote out to storage at $5\khz$ (at the end of the 2012 run). The organization of the trigger 
+system is done in {\it trigger lines}. Essentially, each trigger line is a collection of selection criteria similar 
+to the ones applied during the offline data analysis, but looser. Furthermore, the trigger lines are software
 implementations and can thus be quite general as to what they trigger on, or on the other hand they can
-be very sophisticated.
+be very sophisticated. For example a trigger line could require the presence of two muons forming a vertex 
+with an invariant mass window around the nominal \jpsi mass. Or in case of an explicitly decay chanell a 
+trigger line could reconstruct the entire $n-\text{body}$ paricle cascade and perhaps require from 
+particular quantities to satisfy some criteria, \ie the distance between the primary and secodnary vetex.   
 
 \begin{figure}[t]
   \centering
@@ -66,9 +69,9 @@ The corresponding efficiencies are shown in \figref{det_run_one_muon_line_eff}.
   \label{det_run_one_muon_line_eff}
 \end{figure}
 
-Lastly there are two more features of the \lhcb trigger system worth mentioning. First is the so called
-{\it deferral} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and processed by the \hlt
-during the periods where the \lhc does not provide colliding beams and thus the \lhcb computing infrastructure
+Lastly there are two more features of the \lhcb trigger system worth-mentioning. First is the so called
+{\it deferred} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and processed by the \hlt
+during the periods where the \lhc does not provide colliding beams and thus the \lhcb trigger infrastructure
 would otherwise idle. This effectively increases the amount of available computing power which can be used
 to improve other features of the trigger system. The second interesting feature is the novel technique of
 {\it online detector alignment and calibration} that was enabled in \runtwo, see \cite{Aaij:2016rxn}.

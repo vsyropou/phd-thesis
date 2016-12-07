@@ -10,14 +10,22 @@
 
 \section{Particle Identification}
 \label{det_pid}
-Two particle identification, {\it PID}, systems are used in \lhcb to increase the purity of the analyzed data.
-The kaons and pions are commonly mis-identified in the absence of dedicated particle identification detectors.
-Furthermore a particle that is not stopped by the calorimeters is most likely identified
-as a muon, since muons can penetrate the entire \lhcb detector without decaying. There are two
-{\it Cherenkov} based PID sub-detectors in \lhcb, \richone and \richtwo, amied at identifying
-low and high momentum tracks respectively. The way the PID systems provide particle
-identification information is based on the velocity measurement implied by the angle of emmission of a
-Cherenkov radiation. The nominal PID efficiencies are shown in \tabref{pid_efficiencies}.
+
+The kaons and pions are idistiguishable in the absence of dedicated particle identification, {\it PID}, detectors. 
+Furthermore, a particle that is not stopped by the calorimeters is most likely identified as a muon, 
+since muons can penetrate the entire \lhcb detector without decaying. In addition, properly identifing 
+electrons, photons and pions is a chalenging task that require sophisticated setup and algorithms.
+These experimental dificulties are tackeled by exploiting information from several sub-detector systems;
+thus increasing the purity of the analyzed data. 
+
+The two {\it Cherenkov} based PID sub-detectors in \lhcb, \richone and \richtwo, amied at identifying low and 
+high momentum tracks respectively. The way the \rich systems provide particle identification information is 
+based on the velocity measurement implied by the angle of emmission of a Cherenkov radiation. 
+The muon system also plays a role in PID. The presence of hits in the muon stations that 
+could be ascocaited to a certain track increse the probability that this track corresponds to real muon, 
+see \chapref{Muon_id_hlt} also. Lastly, the calorimeter systems aim at increasing the chances of correctly 
+identifieng electrons, photons and pions, as mentioned in \secref{det_calo}.
+Nominal PID efficiencies are shown in \tabref{pid_efficiencies}. 
 
 \begin{table}[!h]
   \center
@@ -30,7 +38,7 @@ Cherenkov radiation. The nominal PID efficiencies are shown in \tabref{pid_effic
       $\mmu$        &  $97\%$  & $\sim 1-3\%$  \pion - \mup        \\
       \hline
   \end{tabular}
-  \caption{\small Nominal efficiencies of the PID system. The miss-id probabilities quoted in the third
+  \caption{\small Nominal efficiencies of the PID system. The mis-id probabilities quoted in the third
            column are required for the efficiency computation. }
   \label{pid_efficiencies}
 \end{table}
@@ -40,7 +48,7 @@ Cherenkov radiation. The nominal PID efficiencies are shown in \tabref{pid_effic
 \label{det_calo}
 Calorimeters in \lhcb measure the energy of particles provided that all of the subsequent particle decays are
 contained withing the calorimeter. Furthermore in the case of netrual particles, like photons or \piz,
-calorimeters are the only mean with which these netrua particles can be detected; since the tracking system
+calorimeters are the only mean with which these netrual particles can be detected; since the tracking system
 only detect charged particles. There are four relevant sub-detectors
 that enable proper calorimetry at \lhcb. First the combination of the {\it Scintillating Pad Detector} (\spd)
 and the {\it Pre Shower} (\presh) detectors with a lead layer in-between them enables to distinguish \piz from
@@ -48,7 +56,7 @@ photons, and photons from electrons which leave the same signature in the electr
 Subsequently the electromagnetic, \ecal, and hadronic, \hcal, calorimeters measure the energy of photons
 and neutral hadrons respectively. The calorimeter system is not explicitly used in the analysis of \chapref{Data_Analysis}.
 However, they are implicitly used since information from the \spd and \presh sub-detectors are used
-by the \lzero trigger system to estimate the {\it multiplicity} of an overall event. Multiplicity essentialy
+by the \lzero trigger system to estimate the overall {\it multiplicity} of an event. Multiplicity essentialy
 provide a quick estimate, to the \lzero trigger system, on wheather a certain event is intrasting from physics
 point of view. Furthermore, the lead material that is interlayered between the \ecal and \hcal active detector material,
 stops\footnote{Stop in this context means that the particle decays and all its decay products are contained inside the calorimeter
@@ -64,10 +72,10 @@ from being mis-identified by as muons by the subsequent muon stations.
 
 The \BsJpsiKst process is a typical channel for which the \lhcb has a high detection efficiency.
 The presence of muon in the final state yields a high trigger efficiency, while the intermediate
-\Kstar resonance decays within the \velo into a \kaon and a \pion thus resulting in two Long tracks.
+\Kstarz resonance decays within the \velo into a \Kp and a \pim thus resulting in two Long tracks.
 Thanks to PID information and the optimized selection described in \secref{det_pid} most of the bakcground
-is filtered out. The only difficult point is the the low branching fraction of \BsJpsiKst process
-compared to the \BdJpsiKst whose invariant mass is very close to the \BsJpsiKst candidates, see \secref{mass_BDTG_selection}.
+is filtered out. The only difficult point is the low branching fraction of the \BsJpsiKst decay
+compared to the \BdJpsiKst whose invariant mass is very close to the one of the \BsJpsiKst, see \secref{mass_BDTG_selection}.
 Thus, special care needs to be taken when modeling the mass distribution of these two channels.
 The total \BsJpsiKst yield accumulated over the full \runone is about 1800 signal candidates, see \equref{signal_yields}.
 An \lhcb event is shown in \figref{det_evt_display}. A reconstructed \BsJpsiKst decay candidate is shown in

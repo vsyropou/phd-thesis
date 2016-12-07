@@ -24,9 +24,9 @@ number of hits in M2 is large compared to M3, see Figure 3.2 in \cite{roelThesis
 candidate would result in a large number of seed hits, which is not computationally feasible. Note that the muon
 reconstruction algorithm (\isMuon) starts from the M3 station as well, for the same reason.
 
-Coming now to the issue of the FoI size computation. As it can be seen in \figref{lhcb_detector_cross_section},
+Reagarding the issue of FoI size computation: As it can be seen in \figref{lhcb_detector_cross_section},
 the \lhcb magnet is between the \velo tracker and the muon system. Thus a track traversing the area from the
-\velo to the muon stations will be deflected by the magnetic field based on its momentum.  The lower the momentum
+\velo to the muon stations is deflected by the magnetic field based on its momentum.  The lower the momentum
 of a track the more it is deflected by the magnetic field. No momentum or charge information is available for
 the \velo track before the \FwD algorithm is run. Thus, the size of the M3 FoI is defined assuming a minimum
 track momentum of 6 \gevc. This particular momentum value corresponds to the threshold value of the subsequent
@@ -71,7 +71,7 @@ information from the \ttracker tracker when reconstructing \veloTracks \cite{LHC
 Note that the \ttracker is positioned close enough to the \lhcb magnet to allow for an initial track momentum estimate.
 The \ttracker momentum resolution is inferior, $\sim 15\%$, compared to the one of a Long track.
 However, adding information from the \ttracker the purity of the of the \veloTracks increases \cite{Bowen:2105078}.
-This is achieved by reducing the number a certain type of fake tracks called {\it ghost tracks}.
+This is achieved by reducing fake tracks also known as {\it ghost tracks}.
 The resulting set of tracks are called \veloTTracks.
 
 The above-mentioned improvements offer opportunities for reconstructing muons with $\pt<500 \mevc$,
@@ -173,7 +173,7 @@ of the $\chisq/\nDoF$ discriminating power between the old and upgraded algorith
 
 \subsubsection{z focal plane parametrization}
 The empirical parametrization of the magnet focal plane $z$ coordinate already used in the old \mvm \cite{roelThesis},
-is updated. Furthermore the uncertainties on the focal plane intersection estimate are empirically estimated using the simulated data.
+is updated. Furthermore the uncertainties on the focal plane intersection estimate are empirically estimated using simulated data.
 Specifically, since the true muon track is known it is possible to tune these uncertainties such that they yield the same momentum
 estimation as the full computation of the muon trajectory would do. Note that a momentum estimate is available by the
 \mvTTm algorithm as soon as a seed hit in M3 is found, using the kick method.
@@ -238,7 +238,7 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
 
 \subsubsection{\hltone timing and rate considerations}
 After all the improvements the \mvTTm algorithm needs to be tuned to comply with the \hltone output rate of 12
-\khz mentioned in \secref{sec:muon_matching}. Given that the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
+\khz mentioned in \secref{sec:muon_matching}. Given the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
 Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the last value implies that;
 A \velo track which is accepted by the \mvTTm algorithm has $97\%$ probability of being a real muon against orignating from
 random combinations in the muon stations.
@@ -250,7 +250,7 @@ do not increase the algorithm's running time. It turns out that the processing t
 smaller compared to the old \mvm, this improvement is attributed to the reduced number of M3 seed hits mentioned previously.
 
 \subsubsection{Possible improvements}
-The most straight forward way to improve the matching algorithm in terms of efficiency is
+The most straightforward way to improve the matching algorithm in terms of efficiency is
 by relaxing the value of the $\chisq/\nDoF$ cut-off value. On the other hand side, doing so will increase the number
 of output tracks to the point that the \hltone rate requirement of 12 \khz is not fulfilled.
 Alternatively, one might attempt to improve the $\chisq/\nDoF$ discriminating variable itself,
