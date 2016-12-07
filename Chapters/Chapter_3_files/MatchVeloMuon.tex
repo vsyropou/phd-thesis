@@ -80,22 +80,9 @@ hereafter low momenta muons, by improving the old \mvm algorithm and usign it in
 
 \begin{figure}[t]
   \centering
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{mvm_efficiency_pt_zoom}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_pt_zoom}}
-    \caption{}
-    \label{mvTTm_eff_pt}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{mvTTm_efficiency_pt_zoom}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_pt_zoom}}
-    \caption{}
-    \label{mvm_eff_pt}
-  \end{subfigure}
-  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of transverse momentum.}
+    \tikzsetnextfilename{pt_zoom_efficiencies}
+    \scalebox{.6}{\input{Figures/Chapter3/pt_zoom_efficiencies}}
+  \caption{Efficiency comparison between the old (red) and new (blue) matching algorithms in bins of transverse momentum.}
  \label{mvm_eff_pt_zoom_comp}
 \end{figure}
 
@@ -118,42 +105,34 @@ the possibility for both positively and negatively charged tracks.
 
 \begin{figure}[t]
   \centering
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{mvm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvM/vim_efficiency_p}}
-    \caption{}
-    \label{mvTTm_eff_p}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{mvTTm_efficiency_p}
-    \scalebox{.6}{\input{Figures/Chapter3/MvTTM/vim_efficiency_p}}
-    \caption{}
-    \label{mvm_eff_p}
-  \end{subfigure}
-  \caption{Efficiency comparison between the old (left) and new (right) matching algorithms in bins of total momentum.}
+    \tikzsetnextfilename{p_efficiencies}
+    \scalebox{.6}{\input{Figures/Chapter3/p_efficiencies}}
+  \caption{Efficiency comparison between the old (red) and new (blue) matching algorithms in bins of total momentum.}
  \label{mvm_eff_p_comp}
 \end{figure}
 
-After the improvements mentioned in the above paragraph, the efficiency of the upgraded \mvTTm algorithm
-is estimated using simulated \Sigmapmumu events. The muons from this decay are required to pass the full 
-track reconstruction and be positivelly identified as muons. The latter is achieved by exploiting the fact 
-that the true muon track is know when using simulated events. These two conditions define the {\it true muons}.
-Subsequently, given and intial \veloTracks
+After the improvements mentioned in the above paragraph the efficiency of the upgraded \mvTTm algorithm
+is estimated using simulated \Sigmapmumu events, where the mean transverse momentum is $\sim 300\mevc$.
+The muons from this decay, which passed the full track reconstruction resulting in Long tracks, 
+are further ensured to be muons. This is posible by expoliting the available information in the 
+simulated event and thus defining the {\it true muons}. 
+An important concept that is used for the \mvTTm efficiency definition is the so called {\it overlap}.
+Specificaly, a certain \velo track overlaps with a true muon (which is a Long track) 
+when the \velo track has more than $70\%$ \velo hits in common with the \velo segment 
+of the true muon track. The number of all \veloTTracks that overlap with a true muon define the 
+denominator in the \mvTTm efficiency, while these \veloTTracks that are in addition accepted by 
+the \mvTTm algorithm make the number in the numerator. 
 
-
- versus the total and transverse momentum and compared against the old algorithm. A common cutoff value for
-the $\chisq/\nDoF$ of 2 is chosen for comparison. The efficiency projected versus the total momentum, $\ptot$
-can be seen in \figref{mvm_eff_p_comp}, where the improvement of the upgraded \mvTTm algorithm is shown to be significant.
-Given that the aim of the \mvTTm upgrade is to optimize for high efficiency of low transverse momenta muons,
-the efficiency is also projected versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned
-in \secref{muid_hlt1}, the high $\pt$ muons will not be processed by the \mvTTm algorithm and thus
-the last figure focuses on the region where $\pt\in[0,0.5]\gevc$. The relative efficiency increase with
-respect to the old \mvm algorithm in the above region is $\sim 50\%$. For the efficiency studies \Sigmapmumu
-simulated events are used, where the mean transverse momentum is $\sim 300\mevc$. Finally, the improvement
-of the $\chisq/\nDoF$ discriminating power between the old and upgraded algorithm is shown in \figref{mvm_chi2_comp}.
+The efficiency is compared against the old 
+\mvm algorithm, where a common cutoff value for the $\chisq/\nDoF$ of 2 is chosen. The efficiency 
+versus the total momentum, can be seen in \figref{mvm_eff_p_comp}, where the improvement of the 
+upgraded \mvTTm algorithm is shown to be significant.  Given that the aim of the \mvTTm upgrade 
+is to optimize for high efficiency of low transverse momenta muons the efficiency is also projected 
+versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned in \secref{muid_hlt1}, the 
+high $\pt$ muons will not be processed by the \mvTTm algorithm and thus the last figure focuses on 
+the region where $\pt\in[0,0.5]\gevc$. The relative efficiency increase with respect to the old 
+\mvm algorithm in the above region is $\sim 50\%$. Finally, the improvement of the $\chisq/\nDoF$ 
+discriminating power between the old and upgraded algorithm is shown in \figref{mvm_chi2_comp}.
 
 \begin{figure}[t]
   \centering
