@@ -12,12 +12,14 @@ to save everything that the detector writes to disk. Each of the stripping selec
 requires an observable to satisfy some condition. For example, the mass of the \Bs candidate must be within
 a certain range. Or another type of cut could be the probability that a final state particle, like the pion, is misidentified
 as a muon. A detailed table of the Stripping selection is given in \tabref{Bs2JpsiKstSelection}. 
-The remaining three selection steps after Stripping are described in each of the subsequent subsections.
+The remaining three selection steps after Stripping involve a multivariate based selection, \secref{Multivariate_Based_Selection}, 
+further reduction of the combinatorial background, \secref{sWeighting_and_mass} and specific background removal, 
+\secref{peaking_backgrounds}.
 
-Prior to addressing the various selecton steps involved it is usefull to introduce the \sPlot techinique, 
-which is used to reduce the combiantorial background further after the first candidate selection step of 
-\secref{Multivariate_Based_Selection}. The latter technique is a statistical tool to 
-unfold data distributions \cite{splot}, for example signal and background. A \pdf that is able to 
+Prior to addressing the various selecton steps involved in detail, it is usefull to introduce the 
+\sPlot techinique, which is used to reduce the combiantorial background further after the first 
+candidate selection step of \secref{Multivariate_Based_Selection}. The latter technique is a statistical 
+tool to unfold data distributions \cite{splot}, for example signal and background. A \pdf that is able to 
 estimate the contribution-yield of signal and background, in that case, is required as an input. 
 The \sPlot techinique uses information from the likelihood, built from the previous \pdf, to asign a 
 weight to each candidate. The weights, called {\sWeights}, are computed such that the contribution
