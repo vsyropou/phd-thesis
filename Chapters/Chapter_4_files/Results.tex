@@ -223,10 +223,10 @@ the value of the fitted angular parameters between these two case is assigned as
 \label{systPeakBkg}
 Peaking background estimates have an impact on the mass fit and eventually on the computed set of \sWeights.
 These estimates are summarized in \tabref{peaking_bkg_yields}, where one can see that they come with a statistical uncertainty as well.
-To account for the last uncertainty  the estimates of all peaking background species (\BsJpsiKK, \BsJpsipipi, \BdJpsipipi, and \LbJpsipK)
+To account for the previous uncertainty  the estimates of all peaking background species (\BsJpsiKK, \BsJpsipipi, \BdJpsipipi, and \LbJpsipK)
 are shifted, one at a time by one standard deviation. The result is a different set of \sWeights for each species.
 Subsequently the angular fit is performed with that set of \sWeights. The difference in the angular parameters
-between the last fit and the nominal angular fit is taken as a systematic uncertainty for the particular peaking
+between the previous fit and the nominal angular fit is taken as a systematic uncertainty for the particular peaking
 background species. Individual contributions from all species to a certain angular parameter are added in quadrature
 and assigned as a systematic uncertainty.
 
@@ -234,9 +234,9 @@ and assigned as a systematic uncertainty.
 \label{systCorrs}
 Correlations between the $\Bs$ invariant mass distribution and the $\cos\thetamu$ angular distribution are taken into account
 by performing the mass fit in 5 intervals of $\cos\thetamu$. Since the choice of 5 intervals is arbitrary the mass fit is
-repeated in 3 and 6 $\cos\thetamu$ intervals as well. The result is two more sets of sWeights. For each set the angular
-fit is performed and the differences in each of the parameters of interest are added in quadrature. The last quadratic
-sum is assigned as systematic.
+repeated in 3 and 6 $\cos\thetamu$ intervals as well. The result is two more sets of \sWeights. For each set the angular
+fit is performed and the differences in each of the parameters of interest are added in quadrature. 
+The quadratic sum is assigned as systematic.
 
 \subsubsection{Fit bias}
 \label{systFitBias}
@@ -283,7 +283,9 @@ angular fit is assigned as systematic uncertainty.
   \footnotesize
 \begin{tabular}{ccc}
   \hline
-  Source & $\frac{\BRof{\BsJpsiKst}}{\BRof{\BdJpsiKst}}$ & $\frac{\BRof\BsJpsiKst}{\BRof\BsJpsiPhi}$ \\
+  & \\
+  Source & $\BRof{\BsJpsiKst}_d$ & $\BRof{\BsJpsiKst}_\phi$ \\
+  & \\
   \hline
   Efficiency ratio                        & 0.04 & 0.05   \\
   Angular corrections ($\omega$)          & 0.09 & 0.07   \\
@@ -527,7 +529,7 @@ uncertainties are quoted.
 Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is usually
 attributed to the statistical uncertainty of one standard deviation. Basically the claim is that one standard deviation
 guaranties that the probability that the true value of the parameter of interest $\mu^{\text{true}}$ will be inside the
-interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$. The last interval is usually quoted as a $1\sigma$ {\it confidence interval}.
+interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$. The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}.
 
 
 

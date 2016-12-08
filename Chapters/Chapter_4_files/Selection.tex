@@ -11,8 +11,19 @@ Stripping is also a way to save disk space when permanently storing events offli
 to save everything that the detector writes to disk. Each of the stripping selection criteria, also referred to as a {\it cut},
 requires an observable to satisfy some condition. For example, the mass of the \Bs candidate must be within
 a certain range. Or another type of cut could be the probability that a final state particle, like the pion, is misidentified
-as a muon. A detailed table of the Stripping selection is given in \tabref{Bs2JpsiKstSelection}. The remaining three selection
-steps after Stripping are described in each of the subsequent subsections.
+as a muon. A detailed table of the Stripping selection is given in \tabref{Bs2JpsiKstSelection}. 
+The remaining three selection steps after Stripping are described in each of the subsequent subsections.
+
+Prior to addressing the various selecton steps involved it is usefull to introduce the \sPlot techinique, 
+which is used to reduce the combiantorial background further after the first candidate selection step of 
+\secref{Multivariate_Based_Selection}. The latter technique is a statistical tool to 
+unfold data distributions \cite{splot}, for example signal and background. A \pdf that is able to 
+estimate the contribution-yield of signal and background, in that case, is required as an input. 
+The \sPlot techinique uses information from the likelihood, built from the previous \pdf, to asign a 
+weight to each candidate. The weights, called {\sWeights}, are computed such that the contribution
+of the background component in data is effectively cancelled. Thus a large \sWeight value implies 
+higher signal probability, for the particular candidate. In \secref{sWeighting_and_mass} the \pdf 
+used in the current analysis is described and a bit more details on the \sPlot techinique are provided.
 
 \subsection{Multivariate Based Selection}
 \label{Multivariate_Based_Selection}
@@ -62,11 +73,10 @@ so that it maximizes the following figure of merit, hereafter FoM:
 \label{eqn:fom}
 \end{equation}
 
-\noindent where $w_i$ are weights associated to each candidate, hereafter \sWeights, and calculated with the
-\sPlot technique. The last  is a statistical tool to unfold data distributions \cite{splot}. More details
-are provided in \secref{sWeighting_and_mass}. The above-mentioned FoM increases in value with the sum of
-\sWeights, in the numerator. Large values of \sWeights translate to higher effective signal yield. This is
-because candidates that are more likely to be signal recieve a larger weight $w_i$. It follows that the
+\noindent where $w_i$ are weights associated to each candidate and computed with the \sPlot technique, 
+mentioned earlier in the introduction of the current sectrion. The above-mentioned FoM increases in value with 
+the sum of \sWeights, in the numerator. Large values of \sWeights translate to higher effective signal yield. 
+This is because candidates that are more likely to be signal recieve a larger weight $w_i$. It follows that the
 optimum set of weights will have the higher FoM value compared to any other set of weights. Thus the FoM
 of \equref{eqn:fom} essentialy expresses the signal fraction. For a range of BDT values the \sPlot technique
 provides a different set of \sWeights based on which a different FoM value can be obtained, thus allowing for
@@ -215,7 +225,7 @@ are ascociate to \Bs and \viceversa. Several effects contribute to the structure
 from mass resolution of the detector. These effects can be radiative tails (a charged final state particle radiates a photon), interplay of
 radiative tail with \jpsi mass constraint or badly reconstructed candidates caused by decays of the final state hadrons, see \cite{Santos:2013gra}.
 The tail parameters ($\alpha$, $n$) are four in total (two for each tail) and are taken from a fit to MC simulated events with a known resolution.
-The last makes sure that the tail parameters do not rely on detector simulation imperfections.
+This makes sure that the tail parameters do not rely on detector simulation imperfections.
 For the core of invariant mass distribution, Hypatia requires five shape parameters, namely $\zeta$, $\beta$, $\lambda$, $\sigma$, $\mu$.
 The first two are set to zero\footnote{$\zeta$ is empirically found to be very small whereas
 $\beta = 0$ implies that the core is symmetric left and right with respect to the mean.}, the third one is taken from the previous
@@ -235,8 +245,8 @@ can be applied. The final fit to the data is shown in \figref{mass_plot}, wherea
 
 \begin{align}
   \centering
-  N_{\Bd} &= 208656  \pm  462 ^{+ 78	}_{- 76}, \\
-  N_{\Bs} &= \phantom{00}1808  \pm   51 ^{+ 38	}_{- 33} \, ,
+  N_{\Bd} &= 208656  \pm  462 ^{+ 78}_{-76}, \\
+  N_{\Bs} &= \phantom{00}1808  \pm  51 ^{+ 38}_{-33} \, ,
   \label{signal_yields}
 \end{align}
 
@@ -248,7 +258,7 @@ This procedure checks if the fitting model introduces a bias to the parameters o
 
 \subsubsection{sWeighting}
 Having performed the mass fit all the necessary ingredients to remove the remaining background are in place.
-The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called sWeight, to each candidate
+The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight, the so called \sWeight, to each candidate
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the species of the total
 \pdf a set of weights can be computed such that they project out only that particular species while effectively subtracting the others.
 Based on this technique, \BsJpsiKst candidates are selected out of the full data sample.
@@ -269,9 +279,9 @@ the background angular distributions. As a result the fit itself is faster and s
 disadvantages such as the evaluation of systematic uncertainties on the estimated angular parameters due to the mass \pdf modeling:
 Any variation of these models implies re-computing the \sWeights. Also, care must be taken to ensure that the uncertainties
 of the fitted angular parameters are properly estimated \cite{splot}. The uncertainties tend to be underestimated in a fit
-with weighted candidates. This is because the per candidate weighs in a weighted likelihood fit change the shape of the likelihood function.
-The last is where the statistical uncertainty estimation comes from. Thus to correct for this distortion of the likelihood
-function shape the scale factor,
+with weighted candidates. This is because the per candidate weighs in a weighted likelihood fit change the shape of the 
+likelihood function, which is where the statistical uncertainty estimation comes from. 
+Thus to correct for this distortion of the likelihood function shape the scale factor,
 
 \begin{equation}
   \centering

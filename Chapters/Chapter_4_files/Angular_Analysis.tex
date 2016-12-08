@@ -469,7 +469,7 @@ Constraining the acceptance in the manner described above comes with a small pen
 projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
 As previously mentioned, the acceptance function of \equref{eff_func_new} is fitted to the simulated data
 where the efficiency moments are allowed to vary from their measured values, of \tabref{eff_moms_table}.
-The last is implemented by a multivariate Gaussian constraint where correlations between efficiency moments are taken into account.
+This feature is implemented by a multivariate Gaussian constraint where correlations between efficiency moments are taken into account.
 The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf that the simulated
 data was generated with multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
 The physics parameters used to generate the simulation sample are fixed and only the efficiency moments are allowed to vary.
@@ -903,7 +903,7 @@ by the negative second derivative of the log likelihood at the maximum,
 \end{equation}
 
 Coming now to the concept of the extended likelihood. In \equref{likelihood} the number of candidates is fixed.
-However it is possible to extend the last equation such that the expected number of candidates shows up as a parameter in the likelihood
+However it is possible to extend the previous equation such that the expected number of candidates shows up as a parameter in the likelihood
 function and can thus be estimated. This is useful in cases where the \pdf consists of a sum over two species, such as signal and background,
 or if the expected number of candidates depends on the parameters of interest $\vec{p}$. For the current analysis, the latter is
 exploited in order to estimate the $\Acp{i}$ asymmetries in the fit. The \pdf is extended by multiplying it with the Poisson

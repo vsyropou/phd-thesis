@@ -93,7 +93,7 @@ as explained earlier in \secref{sec:muon_matching}. Second, the parametrization 
 focal plane as well as the undertainties on the focal plane coordinates are improved using simulated data.
 Furthermore, the vertical, non-bending, plane is included in the \chisq computation which was not the
 case in the old \mvm algorithm. Note that the vertical component of the track trajectory is almost a straight
-line. The last two improvements increase the discriminating power of the \chisq. Finally the required number
+line. The two previous improvements increase the discriminating power of the \chisq. Finally the required number
 of hits in the muon stations, menioned in the previous subsection, is increased to four in order to further
 supress the fake muon track rate.
 
@@ -129,7 +129,7 @@ versus the total momentum, can be seen in \figref{mvm_eff_p_comp}, where the imp
 upgraded \mvTTm algorithm is shown to be significant.  Given that the aim of the \mvTTm upgrade 
 is to optimize for high efficiency of low transverse momenta muons the efficiency is also projected 
 versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned in \secref{muid_hlt1}, the 
-high $\pt$ muons will not be processed by the \mvTTm algorithm and thus the last figure focuses on 
+high $\pt$ muons will not be processed by the \mvTTm algorithm and thus the previous figure focuses on 
 the region where $\pt\in[0,0.5]\gevc$. The relative efficiency increase with respect to the old 
 \mvm algorithm in the above region is $\sim 50\%$. Finally, the improvement of the $\chisq/\nDoF$ 
 discriminating power between the old and upgraded algorithm is shown in \figref{mvm_chi2_comp}.
@@ -224,7 +224,7 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
 \subsubsection{\hltone timing and rate considerations}
 After all the improvements the \mvTTm algorithm needs to be tuned to comply with the \hltone output rate of 12
 \khz mentioned in \secref{sec:muon_matching}. Given the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
-Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the last value implies that;
+Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the previous cutoff implies that;
 A \velo track which is accepted by the \mvTTm algorithm has $97\%$ probability of being a real muon against orignating from
 random combinations in the muon stations.
 Furthermore the roc curve of \figref{mvm_roc} is made from the cdf distributions of \figref{mvm_cdf}, illustrating
@@ -243,7 +243,7 @@ by finding a better parametrization for the magnet hit position and uncertainty.
 parametrization seems to be quite good with respect to the one present in the old \mvm algorithm.
 Lastly, in case the momentum estimate of \ttracker improves\footnote{For example in the upgraded it
 UT tracker that will replace the \ttracker} then it is worth trying the FoI used in the \muonID code
-mentioned in \secref{muid_hlt1}. The last FoIs are momentum dependant search windows, implying
+mentioned in \secref{muid_hlt1}. The previous FoIs are momentum dependant search windows, implying
 that smaller FoIs are more suitable for height momentum muons and \viceversa for low momentum ones.
 This effectively reduces the number of M3 seed hits and thus increasing the purity of output tracks
 which might allow to relax the $\chisq/\nDoF$ requirement.
