@@ -1,15 +1,15 @@
 % Appendix B
 
-\chapter{Horizontal Reweighting}
+\chapter{Horizontal Weighting}
 \label{AppendixB}
 
-The current appndix addresses the issue of manipulating some input distribution, {\it source}, such that
+The current appendix addresses the issue of manipulating some input distribution, {\it source}, such that
 it becomes statistically compatible with a given, {\it target}, distribution. A common method to do that
-involves binning the two distributions. This method is sometimes called {\it vertical reweighting}
-and it is described in the following section. The main motivation behind the techinique advertised in the current
+involves binning the two distributions. This method is sometimes called {\it vertical weighting}
+and it is described in the following section. The main motivation behind the technique advertised in the current
 appendix is to circumvent problems arising from binning distributions, especially when the number of
 bins is big. Note that the bigger the number of bins the more precise the matching of the two distributions
-is. The advertised techinique is described in the current appendix and a choice for its name could be {\it horizontal reweighting}.
+is. The advertised technique is described in the current appendix and a choice for its name could be {\it horizontal weighting}.
 
 Lastly a matching example is given at the of the current appendix. This example is a typical problem
 in high energy physics originating from due non perfect simulation. Specifically certain kinematic
@@ -18,13 +18,13 @@ events are commonly used to control acceptance, resolution or other detector eff
 done is to correct the simulated data sample by matching its kinematic distributions to the ones observed in data.
 An example of a situation where this problem arises can be found in \secref{Accceptance_Corrections}.
 
-\subsubsection{Vertical Reweighting}
-The vertical reweighting approach to matching distributions is straghtforward.
-The first step is to bin the source (S) and targert (T) distributions with the same binning scheam.
+\subsubsection{Vertical Weighting}
+The vertical weighting approach to matching distributions is straightforward.
+The first step is to bin the source (S) and target (T) distributions with the same binning scheme.
 After that a weight, $w_i$, is assigned to each candidate in a given bin, $i$, such that the bin
 contents of the source distributions matches these of the target, see \equref{vert_rew}.
-Essentially this techinique moves vertically each bin of the seource distribution in order to match
-the bin contents of the target distribtuon.
+Essentially this technique moves vertically each bin of the source distribution in order to match
+the bin contents of the target distribution.
 
 \begin{equation}
   \centering
@@ -32,30 +32,30 @@ the bin contents of the target distribtuon.
 \label{vert_rew}
 \end{equation}
 
-The advanteges of the vertical reweighting approach is that it is easy to understand and implement.
+The advantages of the vertical weighting approach is that it is easy to understand and implement.
 However, there are some disadvantages that result from the binning itself. For example it can happen
-that a given source or target bin has zero entries for a given binning scheam. This situation gets
+that a given source or target bin has zero entries for a given binning scheme. This situation gets
 becomes more pronounced in the case of large number of bins, which as already mentioned improves the
-precision of the matching. In additon it can also happen that any of the distributions is weighted and
-the sum of weights in a given bin is negative. Both of the above situatuions require some justification
+precision of the matching. In addition it can also happen that any of the distributions is weighted and
+the sum of weights in a given bin is negative. Both of the above situation require some justification
 as to how these problematic cases can be handled. In addition, it can also happen that the source to
-target matching needs to be done in many dimentions, as mentioned in the introduction fo the current
+target matching needs to be done in many dimensions, as mentioned in the introduction of the current
 appendix. In that case the number of bins increase rapidly, and thus the number of problematic bins as well,
 to the point that it is no longer possible to match the source distributions to the target one.
 Note that variables corresponding to these dimensions are in general correlated with each other.
-Hence, doing several one dimensional reweighting steps will simply ignore these correlations.
+Hence, doing several one dimensional weighting steps will simply ignore these correlations.
 
-\subsubsection{Horizontal Reweighting}
+\subsubsection{Horizontal Weighting}
 The horizontal approach\footnote{Inspired by discussions with Gerhard Raven and Diego Martinez Santos.}
-to matching distributuons is meant to bypass the problem of binning, especially in many dimmenssions,
+to matching distributions is meant to bypass the problem of binning, especially in many dimensions,
 and thus make it possible to match an arbitrary number of variables between source
 and target. The basic idea of the approach is to apply as chain of transformations to both source and target
-distributions, such that they become uncorrrelated, see \equref{source_trans} and \equref{target_trans}
-respectivelely. Subsequently the transformation chain that has been applied to the target distributions
-are inverted and then applied to the source ones, \equref{match_distributions}. The three transforamtions
-involded in the current approach: Transformation $(A)$ converts the input distribution to flat.
+distributions, such that they become uncorrelated, see \equref{source_trans} and \equref{target_trans}
+respectively. Subsequently the transformation chain that has been applied to the target distributions
+are inverted and then applied to the source ones, \equref{match_distributions}. The three transformations
+involved in the current approach: Transformation $(A)$ converts the input distribution to flat.
 Transformation $(B)$ converts a flat distribution to a normal distribution while $(C)$ removes
-the correlation between two distributions. The necessary mathematical tools to performe the above transformations
+the correlation between two distributions. The necessary mathematical tools to perform the above transformations
 are presented in the next paragraph.
 
 
@@ -78,23 +78,23 @@ are presented in the next paragraph.
 The transformation steps, \gFlat{} and \gGaus{}, that appear in the above logical steps make use of
 well known mathematical theorems, namely {\it Inverse Transformation Sampling} and {\it Probability
 Integral Transform}. No prof of the above theorems is shown\footnote{The intention of the current
-appendix is to quickly demonstrate the advertised techinique. However there is plethora of examples
-and profs that can be found online startigng from {\it wikipedia} for example}.
+appendix is to quickly demonstrate the advertised technique. However there is plethora of examples
+and profs that can be found online starting from {\it Wikipedia} for example}.
 
 \begin{theorem}[Inverse Transformation Sampling]
   Let $u$ be a uniformly distributed variable. Consider another random variable $x$ that has a Cumulative
-  Distribution Function (CDF), call it $F_x$. Then the variable $x^\prime = F_x^{-1}(u)$ is distributed the
+  Distribution Function (\cdf), call it $F_x$. Then the variable $x^\prime = F_x^{-1}(u)$ is distributed the
   same way as $x$ does.
   \label{theo_inv_trans_sampling}
 \end{theorem}
 
 \begin{theorem}[Probability Integral Transform]
-  Let $x$ be a random variable distributed according to a \pdf $P(x)$. Let $F_x$ be the CDF of $P(x)$.
+  Let $x$ be a random variable distributed according to a \pdf $P(x)$. Let $F_x$ be the \cdf of $P(x)$.
   Then the variable $u=F_x(x)$ is uniform. This theorem is inverse of \theoref{theo_inv_trans_sampling}.
   \label{theo_prob_inte_trans}
 \end{theorem}
 
-\noindent For completion the CDF, $F_x(y)$, of a certain \pdf, $P(x)$, where $y$ takes its values from the same
+\noindent For completion the \cdf, $F_x(y)$, of a certain \pdf, $P(x)$, where $y$ takes its values from the same
 domain as $x$, is by definition:
 
 \begin{equation}
@@ -102,39 +102,39 @@ F_x(y) = \int_{-\infty}^y P(t)dt  = {\rm Probability}(x \leq y)
 \label{cdf_def}
 \end{equation}
 
-Both of the above theorems can only be directly aplied to continious distributions.
-However, exact analytical shape of the \pdfs or CDFs involved is not required. This is bacause the CDF
-of any variable $x$ can be built by essentiall computing the integral-sum of \equref{cdf_def}. In order
+Both of the above theorems can only be directly applied to continuous distributions.
+However, exact analytic shape of the \pdfs or \cdfs involved is not required. This is because the \cdf
+of any variable $x$ can be built by essential computing the integral-sum of \equref{cdf_def}. In order
 to do that $x$ is binned so that the cumulative sum of each bin can be computed\footnote{This is a straightforward
 step; The number of entries in each bin are added to the number of entries of the next bin until the range of $x$
-is exhusted}. It is important to point out that this binning can be arbitrarily fine\footnote{However from
+is exhausted}. It is important to point out that this binning can be arbitrarily fine\footnote{However from
 implementation point of you the larger the number of bins the slower the algorithm performs. Here is where
-the built-in function {\tt numpy.digitise()} of {\tt python} proves to be usefull, as the timming scales
-nicelly with the number of bins.} without having the problems explained in the introduction, since it is not
+the built-in function {\tt numpy.digitise()} of {\tt python} proves to be useful, as the timing scales
+nicely with the number of bins.} without having the problems explained in the introduction, since it is not
 used to much any distribution.
 
 The transformations \gFlat{} and \gGaus{} mentioned in \equref{hor_rew_logic}, are direct implementations of
 \theoref{theo_prob_inte_trans}. Similarly the inverted versions, \gFlatInv{} and \gGausInv{},
-of the previous transformations are direct implementaions of \theoref{theo_inv_trans_sampling}.
+of the previous transformations are direct implementations of \theoref{theo_inv_trans_sampling}.
 The only deference between is case of the transformations \gGaus{} and \gGausInv{} the shapes
-of the \pdf and CDF involved are known analytically. The previous transformations involve the
-the {\it inverse error function} and the {\it complementary error function} resepctivelly, which
+of the \pdf and \cdf involved are known analytically. The previous transformations involve the
+the {\it inverse error function} and the {\it complementary error function} respectively, which
 are both well known distributions.
 
-Comming now to the last transformation step, \gGausUn{}, of \equref{hor_rew_logic}.
-This step essentially performs a linear transformation to two correlated gaaussian disitributed
-variables such that they become uncorrelated. The method followed is essentialy a standard
+Coming now to the last transformation step, \gGausUn{}, of \equref{hor_rew_logic}.
+This step essentially performs a linear transformation to two correlated Gaussian distributed
+variables such that they become uncorrelated. The method followed is essentially a standard
 {\it Matrix diagonalization}; The relevant steps required are described in \methref{meth_matrix_diag}
 
 \begin{method}
- Let $\vec{x}$ be a set of correlated variables, with a correspondin covariance matrix $C$.
+ Let $\vec{x}$ be a set of correlated variables, with a corresponding covariance matrix $C$.
  Let $P^{-1}$ be the matrix that has the eigen-vectors of $C$ as columns.
  The set of values $\vec{x^\prime} = P\vec{x}$ is an uncorrelated set of $\vec{x}$.
  The set of values $\vec{x} = P^{-1}\vec{x}$ is the corresponding correlated set of $\vec{x^{\prime}}$.
  \label{meth_matrix_diag}
 \end{method}
 
-\noindent The covariance between varibles is computed using the standard formula of \equref{hor_reww_correlation_formula}
+\noindent The covariance between variables is computed using the standard formula of \equref{hor_reww_correlation_formula}
 
 \begin{equation}
 \centering
@@ -146,12 +146,12 @@ c_{ij} = \frac{1}{N} \sum (x_i-<x_i>)(x_j-<x_j>), \;\; \text {with} <x> = \frac{
 Nevertheless, it is a straightforward well known problem for which there are many implemented
 algorithms as well.
 
-Lastly an important implementation issues is clarified. Specifically, the CDF is built by binning a
-given distribution, $x$, and ascociating the a value of the integral of \equref{cdf_def}, name it $c_i$,
-to each bin $x_i$. In that case, from an implementation point of view the CDF is just an $x_i \to c_i$ {\it map}
-structure, impling that the $x \to c$ function is not continuous by definition. Of the binning can be increased
-but one could argue that this is more brut force that solvign the problem. The way to make the $x \to c$ mapping
-continues is using the well known techinique of {\it linear interpolation}, shown in \figref{linear_interpolation},
+Lastly an important implementation issues is clarified. Specifically, the \cdf is built by binning a
+given distribution, $x$, and associating the a value of the integral of \equref{cdf_def}, name it $c_i$,
+to each bin $x_i$. In that case, from an implementation point of view the \cdf is just an $x_i \to c_i$ {\it map}
+structure, implying that the $x \to c$ function is not continuous by definition. Of the binning can be increased
+but one could argue that this is more brute force that solving the problem. The way to make the $x \to c$ mapping
+continues is using the well known technique of {\it linear interpolation}, shown in \figref{linear_interpolation},
 and thus solving the first of the two implementation issues.
 
 \begin{equation}
@@ -159,20 +159,20 @@ and thus solving the first of the two implementation issues.
   \label{linear_interpolation}
 \end{equation}
 
-The ingridients necessary to apply the horizontal reweighting techinique presented have been covered.
+The ingredients necessary to apply the horizontal weighting technique presented have been covered.
 {\color{red}An implementation of the full matching algorithm can be found in github here blahhh}.
 
 \subsubsection{Example-Discussion}
-To illustrate that the sdvertised techinique works a typical problem in high energy physics is addressed.
+To illustrate that the advertised technique works a typical problem in high energy physics is addressed.
 Specifically, the \Kstarz particle from the \BsJpsiKst mode decays into a \kaon and a \pion. The momenta
-distributions of these two particles $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ is found to defer betwen
+distributions of these two particles $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ is found to defer between
 monte carlo (source) and background subtracted data (target), see the top two plots of \figref{hor_rew_example_figs}.
 Furthermore, the previous distributions are correlated and combined with a fine binning will yield problems as explained
-earlier in the veticl reweighting subsection. After appling the technique advertised before the
-$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions statistically comaptible, bypassing the risks associated
-to a multidimensional fine binning scheam. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
+earlier in the vertical weighting subsection. After applying the technique advertised before the
+$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions statistically compatible, bypassing the risks associated
+to a multidimensional fine binning scheme. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
 In addition, a Kolmogorov–Smirnov test is performed to quantify the matching of each source-target distribution.
-The results are summarised in \tabref{hor_rew_ks_test}.
+The results are summarized in \tabref{hor_rew_ks_test}.
 
 \begin{figure}[!t!]
   \centering
@@ -206,7 +206,7 @@ The results are summarised in \tabref{hor_rew_ks_test}.
     \caption{}
     \label{pminus_rew_matched}
   \end{subfigure}
-  \caption{Comparision before and after matching. Source(Target) distributions are shown in red(blue) color.
+  \caption{Comparison before and after matching. Source(Target) distributions are shown in red(blue) color.
    The upper(lower) two distributions are the original(matched) distributions.}
   \label{hor_rew_example_figs}
 \end{figure}
@@ -222,6 +222,6 @@ The results are summarised in \tabref{hor_rew_ks_test}.
       \hline
   \end{tabular}
   \caption{\small KS test values between source and target for each of the two distributions $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$
-           before and after matching. The KS values indicate that the agrement after matchin improves significantly.}
+           before and after matching. The KS values indicate that the agreement after matching improves significantly.}
   \label{hor_rew_ks_test}
 \end{table}

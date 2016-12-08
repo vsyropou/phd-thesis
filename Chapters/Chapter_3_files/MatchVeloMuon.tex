@@ -19,12 +19,12 @@ is no additional deflection involved. These smaller FoIs do account for the fact
 between the muon stations affects the trajectory of a muon passing through. This effect is called {\it multiple
 scattering}, and it is more pronounced for low momentum tracks.
 
-M3 is the first station to search for hits that could be assigned to a certain \velo track: This is beacause the
+M3 is the first station to search for hits that could be assigned to a certain \velo track: This is because the
 number of hits in M2 is large compared to M3, see Figure 3.2 in \cite{roelThesis}; Thus an initial \velo track
 candidate would result in a large number of seed hits, which is not computationally feasible. Note that the muon
 reconstruction algorithm (\isMuon) starts from the M3 station as well, for the same reason.
 
-Reagarding the issue of FoI size computation: As it can be seen in \figref{lhcb_detector_cross_section},
+Regarding the issue of FoI size computation: As it can be seen in \figref{lhcb_detector_cross_section},
 the \lhcb magnet is between the \velo tracker and the muon system. Thus a track traversing the area from the
 \velo to the muon stations is deflected by the magnetic field based on its momentum.  The lower the momentum
 of a track the more it is deflected by the magnetic field. No momentum or charge information is available for
@@ -50,13 +50,13 @@ random combinations of muon tracks increases.
 
 An important detail that increases the discriminating power of the above-mentioned \chisq is based on the
 assumption that the bending induced by the \lhcb magnetic field can be approximated by a single instantaneous
-change in the slope of the charged partcle trajectory. This instantaneous change happens at the so called
+change in the slope of the charged particle trajectory. This instantaneous change happens at the so called
 {\it focal plane}. The special coordinates of the focal plane form a {\it magnet hit}, which is included in
 the \chisq computation, as if it was an actual hit. Note that this instantaneous change in slope is an approximation
 and in reality the track follows a smooth trajectory inside the whole area of the magnetic field, see \figref{det_evt_display}.
 However estimating this trajectory consumes valuable computation time during \hltone run-time, while \mvm can perform
 efficiently enough without a smooth track trajectory using the focal
-pane approximation. The position of the $z$ focal plane as a fucntion of the track paramters has been studied
+pane approximation. The position of the $z$ focal plane as a function of the track parameters has been studied
 \cite{Hommels:999327} and is used in the \mvm algorithm. As mentioned in the beginning of the paragraph including
 information on the estimated focal plane helps rejecting fake muon tracks.
 This is because the magnet hit essentially requires that the muon hits are aligned in a straight line that
@@ -75,7 +75,7 @@ This is achieved by reducing fake tracks also known as {\it ghost tracks}.
 The resulting set of tracks are called \veloTTracks.
 
 The above-mentioned improvements offer opportunities for reconstructing muons with $\pt<500 \mevc$,
-hereafter low momenta muons, by improving the old \mvm algorithm and usign it in newly introduced
+hereafter low momenta muons, by improving the old \mvm algorithm and using it in newly introduced
 \hltone muon lines which aim at reconstructing low \pt muons.
 
 \begin{figure}[t]
@@ -90,12 +90,12 @@ The upgraded \mvTTm algorithm improves in several points with respect to the old
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
 This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm,
 as explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
-focal plane as well as the undertainties on the focal plane coordinates are improved using simulated data.
+focal plane as well as the uncertainties on the focal plane coordinates are improved using simulated data.
 Furthermore, the vertical, non-bending, plane is included in the \chisq computation which was not the
 case in the old \mvm algorithm. Note that the vertical component of the track trajectory is almost a straight
 line. The two previous improvements increase the discriminating power of the \chisq. Finally the required number
-of hits in the muon stations, menioned in the previous subsection, is increased to four in order to further
-supress the fake muon track rate.
+of hits in the muon stations, mentioned in the previous subsection, is increased to four in order to further
+suppress the fake muon track rate.
 
 An important caveat arises from the fact that there can be \velo tracks that they do not have any information from
 the \ttracker. These tracks are mainly normal high momentum tracks that pass through the \ttracker station's inner
@@ -114,10 +114,10 @@ the possibility for both positively and negatively charged tracks.
 After the improvements mentioned in the above paragraph the efficiency of the upgraded \mvTTm algorithm
 is estimated using simulated \Sigmapmumu events, where the mean transverse momentum is $\sim 300\mevc$.
 The muons from this decay, which passed the full track reconstruction resulting in Long tracks, 
-are further ensured to be muons. This is posible by expoliting the available information in the 
+are further ensured to be muons. This is possible by exploiting the available information in the 
 simulated event and thus defining the {\it true muons}. 
 An important concept that is used for the \mvTTm efficiency definition is the so called {\it overlap}.
-Specificaly, a certain \velo track overlaps with a true muon (which is a Long track) 
+Specifically, a certain \velo track overlaps with a true muon (which is a Long track) 
 when the \velo track has more than $70\%$ \velo hits in common with the \velo segment 
 of the true muon track. The number of all \veloTTracks that overlap with a true muon define the 
 denominator in the \mvTTm efficiency, while these \veloTTracks that are in addition accepted by 
@@ -215,9 +215,9 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
     \caption{}
     \label{mvm_roc}
   \end{subfigure}
-  \caption{Tunning of the \mvTTm algorithm. Left: \chisq Cumulative Distribution Function, CDF,
-           of matched (orange) and not matched (blue) muon tracks (the blue curve is actualy $1-{\rm CDF}$).
-           Right: ROC curve made from the previous \chisq CDF. Only soft muon tracks are considered. }
+  \caption{Tuning of the \mvTTm algorithm. Left: \chisq Cumulative Distribution Function, \cdf,
+           of matched (orange) and not matched (blue) muon tracks (the blue curve is actually $1-\cdf$).
+           Right: ROC curve made from the previous \chisq \cdf. Only soft muon tracks are considered. }
  \label{mvm_tuning}
 \end{figure}
 
@@ -225,9 +225,9 @@ are smaller, compared to the ones for the $x$ plane, since only multiple scatter
 After all the improvements the \mvTTm algorithm needs to be tuned to comply with the \hltone output rate of 12
 \khz mentioned in \secref{sec:muon_matching}. Given the cutoff $\chisq/\nDoF$ value of the upgraded \mvTTm is chosen to be 2.
 Based on the signal and background distributions of \figref{mvTTm_chi2} and \figref{mvm_cdf}, the previous cutoff implies that;
-A \velo track which is accepted by the \mvTTm algorithm has $97\%$ probability of being a real muon against orignating from
+A \velo track which is accepted by the \mvTTm algorithm has $97\%$ probability of being a real muon against originating from
 random combinations in the muon stations.
-Furthermore the roc curve of \figref{mvm_roc} is made from the cdf distributions of \figref{mvm_cdf}, illustrating
+Furthermore the ROC curve of \figref{mvm_roc} is made from the \cdf distributions of \figref{mvm_cdf}, illustrating
 the discriminating power of the \chisq computed from the \mvTTm algorithm.
 The overall \mvTTm efficiency in the $\pt<0.5\gevc$ region for the above cutoff value is $\epsilon = 55 \pm 1.5 \%$.
 In addition it was checked that the changes introduced in the upgraded \mvTTm algorithm
