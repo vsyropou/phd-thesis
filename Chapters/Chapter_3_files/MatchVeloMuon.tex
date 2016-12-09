@@ -71,11 +71,11 @@ information from the \ttracker tracker when reconstructing \veloTracks \cite{LHC
 Note that the \ttracker is positioned close enough to the \lhcb magnet to allow for an initial track momentum estimate.
 The \ttracker momentum resolution is inferior, $\sim 15\%$, compared to the one of a Long track.
 However, adding information from the \ttracker the purity of the of the \veloTracks increases \cite{Bowen:2105078}.
-This is achieved by reducing fake tracks also known as {\it ghost tracks}.
-The resulting set of tracks are called \veloTTracks.
+This is achieved by reducing the number of fake tracks also known as {\it ghost tracks}.
+The resulting set of tracks is called \veloTTracks.
 
 The above-mentioned improvements offer opportunities for reconstructing muons with $\pt<500 \mevc$,
-hereafter low momenta muons, by improving the old \mvm algorithm and using it in newly introduced
+hereafter low momentum muons, by improving the old \mvm algorithm and using it in newly introduced
 \hltone muon lines which aim at reconstructing low \pt muons.
 
 \begin{figure}[t]
@@ -88,16 +88,16 @@ hereafter low momenta muons, by improving the old \mvm algorithm and using it in
 
 The upgraded \mvTTm algorithm improves in several points with respect to the old \mvm algorithm.
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
-This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm,
-as explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
+This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm output 
+for reasons explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
 focal plane as well as the uncertainties on the focal plane coordinates are improved using simulated data.
 Furthermore, the vertical, non-bending, plane is included in the \chisq computation which was not the
 case in the old \mvm algorithm. Note that the vertical component of the track trajectory is almost a straight
 line. The two previous improvements increase the discriminating power of the \chisq. Finally the required number
 of hits in the muon stations, mentioned in the previous subsection, is increased to four in order to further
-suppress the fake muon track rate.
+suppress fake muon tracks.
 
-An important caveat arises from the fact that there can be \velo tracks that they do not have any information from
+An important caveat arises from the fact some of the \veloTTracks tracks do not have any information from
 the \ttracker. These tracks are mainly normal high momentum tracks that pass through the \ttracker station's inner
 acceptance hole where there is no active detector. Since there is no reason to discard these tracks the upgraded
 \mvTTm treats them as the old \mvm algorithm did, meaning that the M3 FoI sizes are adjusted such that they cover
@@ -152,7 +152,7 @@ discriminating power between the old and upgraded algorithm is shown in \figref{
     \label{mvm_chi2}
   \end{subfigure}
   \caption{Distribution of the \chisq variable between the old (left) and the new (right) matching algorithms.
-           Only low momentum \velo tracks are considered. Matched (not matched) muon tracks are shown with orange (blue).}
+           Only low momentum muon tracks are considered. Matched (not matched) muon tracks are shown with orange (blue).}
  \label{mvm_chi2_comp}
 \end{figure}
 
@@ -231,12 +231,11 @@ Furthermore the ROC curve of \figref{mvm_roc} is made from the \cdf distribution
 the discriminating power of the \chisq computed from the \mvTTm algorithm.
 The overall \mvTTm efficiency in the $\pt<0.5\gevc$ region for the above cutoff value is $\epsilon = 55 \pm 1.5 \%$.
 In addition it was checked that the changes introduced in the upgraded \mvTTm algorithm
-do not increase the algorithm's running time. It turns out that the processing time per input track is actually
-smaller compared to the old \mvm, this improvement is attributed to the reduced number of M3 seed hits mentioned previously.
+do not increase the algorithm's running time.
 
 \subsubsection{Possible improvements}
 The most straightforward way to improve the matching algorithm in terms of efficiency is
-by relaxing the value of the $\chisq/\nDoF$ cut-off value. On the other hand side, doing so will increase the number
+by relaxing the value of the $\chisq/\nDoF$ cut-off value. On the other hand, doing so will increase the number
 of output tracks to the point that the \hltone rate requirement of 12 \khz is not fulfilled.
 Alternatively, one might attempt to improve the $\chisq/\nDoF$ discriminating variable itself,
 by finding a better parametrization for the magnet hit position and uncertainty. However the current

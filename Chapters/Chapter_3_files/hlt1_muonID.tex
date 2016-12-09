@@ -8,12 +8,12 @@ the trigger efficiency of low transverse momentum muons.
 In particular, the \muonID has undergone a significant re-factory resulting in a modularized common code base
 between \hlt and offline \cite{kevinThesis}. Because of that \muonID in the \hltone and offline
 are identical \footnote{The \muonID in \hlttwo was the same as offline already in \runone.},
-which, combined with the novel online detector alignment and calibration endeavour, introduced in \secref{det_trigger},
-allows for the trigger to produce offline quality data. After the modularization, readability and maintainability
+which, combined with the novel online detector alignment and calibration endeavour \cite{Aaij:2016rxn}, see also \figref{det_run_two_trigger},
+allows the trigger to produce offline quality data. After the modularization, readability and maintainability
 of the code is significantly improved. An increase in performance of the \muonID code both in CPU and memory usage
 is also achieved.
 
-The algorithm sequence of the \hltone muon trigger lines\footnote{The term trigger line is defined in \secref{det_trigger}}
+The algorithm sequence of the \hltone muon trigger lines, defined in \secref{det_trigger},
 during \runone was tuned in order to comply with the output rate limitations given the existing computing infrastructure,
 named {\it Event Filter Farm} (EFF). Since then the EFF has undergone a significant upgrade resulting in an
 increased processing power along with increased storage capabilities. In view of this infrastructure upgrade
@@ -29,14 +29,15 @@ The role of the trigger system and the decisions that it provides are presented 
 The \hltone muon trigger lines are mainly organized in single muon and dimuon ones; both exploit the same
 muon identification procedure which is described in the current subsection.
 The efficiency of the muon lines during \runone is shown in \figref{det_run_one_muon_line_eff}.
-It can be observed that a low \pt turn on some efficiency loss in the dimuon lines are present.
+It can be observed that a low \pt turn on and some efficiency loss in the dimuon lines are present.
 In order to understand the origin of this efficiency loss the \hltone algorithm sequence \cite{LHCb-PUB-2011-017}
 is analyzed further. The sequence is shown  in \figref{hlt1_algo_seq}. A brief summary of the
 updated sequence is given in what follows, whereas the full description can be found in \cite{kevinThesis}.
 
 During \runone the muon identification starts directly from \veloTracks. These are tracks built only with
 the \velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm
-\cite{LHCb-PUB-2011-017}. Subsequently, the \FwD algorithm uses information from the tracking stations, behind
+\cite{LHCb-PUB-2011-017}, to select these tracks with higher probabilyt of being muons. Subsequently, 
+the \FwD algorithm uses information from the tracking stations, behind
 the magnet and upgrades the \veloTracks to Long tracks, mentioned in \secref{det_tracking}. After this, the
 \isMuon, which implements the offline \muonID, algorithm is applied. In addition there are some quality cuts
 between each algorithm, such as the number of hits in the \velo sub-detector assigned to a track or the fitted
@@ -61,8 +62,8 @@ efficiency by roughly $4\%$. Given these diagnostics plus the \runtwo capabiliti
 
 For the majority of the tracks, which have transverse momentum larger than 500 \mevc, the sequence is different with respect to
 \runone: full tracking is performed for all these tracks, so that the start for muon identification is already with Long tracks.
-After soft quality cuts these get passed through the standard \isMuon algorithm in order to be identified;
-positively identified muons are then combined into dimuons as in \runone.
+After soft quality cuts these get passed through the standard \isMuon algorithm in order to be identified.
+Positively identified muons are then combined into dimuons as in \runone.
 The combination of the use of Long tracks and standard muon identification is much more efficient than the
 procedure in \runone, and is exactly the same as the one used by the offline reconstruction.
 Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to Long tracks
