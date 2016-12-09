@@ -7,21 +7,22 @@ The current appendix addresses the issue of manipulating some input distribution
 it becomes statistically compatible with a given, {\it target}, distribution. A common method to do that
 involves binning the two distributions. This method is sometimes called {\it vertical weighting}
 and it is described in the following section. The main motivation behind the technique advertised in the current
-appendix is to circumvent problems arising from binning distributions, especially when the number of
-bins is big. Note that the bigger the number of bins the more precise the matching of the two distributions
+appendix is to circumvent problems arising from binning distributions, especially with increasing number of
+bins or in case of small sample sizes. Note that the bigger the number of bins the more precise the matching of the two distributions
 is. The advertised technique is described in the current appendix and a choice for its name could be {\it horizontal weighting}.
+The technique is inspired by discussions with Gerhard Raven and Diego Martinez Santos.
 
 Lastly a matching example is given at the of the current appendix. This example is a typical problem
-in high energy physics originating from due non perfect simulation. Specifically certain kinematic
+in high energy physics originating from non perfect simulation. Specifically certain kinematic
 distributions might defer significantly between simulated events and data. Given that simulated
-events are commonly used to control acceptance, resolution or other detector effects; What is typically
+events are commonly used to control acceptance, resolution or other detector effects; what is typically
 done is to correct the simulated data sample by matching its kinematic distributions to the ones observed in data.
 An example of a situation where this problem arises can be found in \secref{Accceptance_Corrections}.
 
 \subsubsection{Vertical Weighting}
 The vertical weighting approach to matching distributions is straightforward.
 The first step is to bin the source (S) and target (T) distributions with the same binning scheme.
-After that a weight, $w_i$, is assigned to each candidate in a given bin, $i$, such that the bin
+After that a weight, $w_i$, is assigned to each entry in a given bin, $i$, such that the bin
 contents of the source distributions matches these of the target, see \equref{vert_rew}.
 Essentially this technique moves vertically each bin of the source distribution in order to match
 the bin contents of the target distribution.
@@ -34,7 +35,7 @@ the bin contents of the target distribution.
 
 The advantages of the vertical weighting approach is that it is easy to understand and implement.
 However, there are some disadvantages that result from the binning itself. For example it can happen
-that a given source or target bin has zero entries for a given binning scheme. This situation gets
+that a given source or target bin has zero entries for a given binning scheme. This situation 
 becomes more pronounced in the case of large number of bins, which as already mentioned improves the
 precision of the matching. In addition it can also happen that any of the distributions is weighted and
 the sum of weights in a given bin is negative. Both of the above situation require some justification
@@ -46,18 +47,16 @@ Note that variables corresponding to these dimensions are in general correlated 
 Hence, doing several one dimensional weighting steps will simply ignore these correlations.
 
 \subsubsection{Horizontal Weighting}
-The horizontal approach\footnote{Inspired by discussions with Gerhard Raven and Diego Martinez Santos.}
-to matching distributions is meant to bypass the problem of binning, especially in many dimensions,
+The horizontal approach to matching distributions is meant to bypass the problem of binning, especially in many dimensions,
 and thus make it possible to match an arbitrary number of variables between source
 and target. The basic idea of the approach is to apply as chain of transformations to both source and target
 distributions, such that they become uncorrelated, see \equref{source_trans} and \equref{target_trans}
 respectively. Subsequently the transformation chain that has been applied to the target distributions
 are inverted and then applied to the source ones, \equref{match_distributions}. The three transformations
-involved in the current approach: Transformation $(A)$ converts the input distribution to flat.
+involved in the current approach are: Transformation $(A)$ converts the input distribution to flat.
 Transformation $(B)$ converts a flat distribution to a normal distribution while $(C)$ removes
 the correlation between two distributions. The necessary mathematical tools to perform the above transformations
 are presented in the next paragraph.
-
 
 \begin{subequations}
 \begin{equation}
@@ -77,9 +76,8 @@ are presented in the next paragraph.
 
 The transformation steps, \gFlat{} and \gGaus{}, that appear in the above logical steps make use of
 well known mathematical theorems, namely {\it Inverse Transformation Sampling} and {\it Probability
-Integral Transform}. No prof of the above theorems is shown\footnote{The intention of the current
-appendix is to quickly demonstrate the advertised technique. However there is plethora of examples
-and profs that can be found online starting from {\it Wikipedia} for example}.
+Integral Transform}. No prof of the above theorems is included since the intention of the current
+appendix is to quickly demonstrate the advertised technique. However, there is plethora of examples online. 
 
 \begin{theorem}[Inverse Transformation Sampling]
   Let $u$ be a uniformly distributed variable. Consider another random variable $x$ that has a Cumulative
@@ -89,8 +87,8 @@ and profs that can be found online starting from {\it Wikipedia} for example}.
 \end{theorem}
 
 \begin{theorem}[Probability Integral Transform]
-  Let $x$ be a random variable distributed according to a \pdf $P(x)$. Let $F_x$ be the \cdf of $P(x)$.
-  Then the variable $u=F_x(x)$ is uniform. This theorem is inverse of \theoref{theo_inv_trans_sampling}.
+  Let $x$ be a random variable distributed according to a \pdf, $P(x)$. Let $F_x$ be the \cdf of $P(x)$.
+  Then the variable $u=F_x(x)$ is uniform. This theorem is the inverse of \theoref{theo_inv_trans_sampling}.
   \label{theo_prob_inte_trans}
 \end{theorem}
 
@@ -105,20 +103,20 @@ F_x(y) = \int_{-\infty}^y P(t)dt  = {\rm Probability}(x \leq y)
 Both of the above theorems can only be directly applied to continuous distributions.
 However, exact analytic shape of the \pdfs or \cdfs involved is not required. This is because the \cdf
 of any variable $x$ can be built by essential computing the integral-sum of \equref{cdf_def}. In order
-to do that $x$ is binned so that the cumulative sum of each bin can be computed\footnote{This is a straightforward
-step; The number of entries in each bin are added to the number of entries of the next bin until the range of $x$
-is exhausted}. It is important to point out that this binning can be arbitrarily fine\footnote{However from
-implementation point of you the larger the number of bins the slower the algorithm performs. Here is where
-the built-in function {\tt numpy.digitise()} of {\tt python} proves to be useful, as the timing scales
-nicely with the number of bins.} without having the problems explained in the introduction, since it is not
-used to much any distribution.
+to do that $x$ is binned so that the cumulative sum of each bin can be computed. This is a straightforward
+step, where the number of entries in each bin are added to the number of entries of the next bin until the 
+range of $x$ is exhausted. It is important to point out that this binning can be arbitrarily fine without 
+having the problems explained in the introduction, since it is not used to much any distribution.
+However, from implementation point of you the larger the number of bins the slower the algorithm performs. 
+(Here is where the built-in function {\tt numpy.digitise()} of {\tt python} proves to be useful, as the timing scales
+nicely with the number of bins.)
 
 The transformations \gFlat{} and \gGaus{} mentioned in \equref{hor_rew_logic}, are direct implementations of
 \theoref{theo_prob_inte_trans}. Similarly the inverted versions, \gFlatInv{} and \gGausInv{},
 of the previous transformations are direct implementations of \theoref{theo_inv_trans_sampling}.
 The only deference between is case of the transformations \gGaus{} and \gGausInv{} the shapes
-of the \pdf and \cdf involved are known analytically. The previous transformations involve the
-the {\it inverse error function} and the {\it complementary error function} respectively, which
+of the \pdf and \cdf involved are known analytically. The previous transformations involve the 
+{\it inverse error function} and the {\it complementary error function} respectively, which
 are both well known distributions.
 
 Coming now to the last transformation step, \gGausUn{}, of \equref{hor_rew_logic}.
@@ -148,7 +146,7 @@ algorithms as well.
 
 Lastly an important implementation issues is clarified. Specifically, the \cdf is built by binning a
 given distribution, $x$, and associating the a value of the integral of \equref{cdf_def}, name it $c_i$,
-to each bin $x_i$. In that case, from an implementation point of view the \cdf is just an $x_i \to c_i$ {\it map}
+to each bin $x_i$. In that case  the \cdf is just an $x_i \to c_i$ {\it map}
 structure, implying that the $x \to c$ function is not continuous by definition. Of the binning can be increased
 but one could argue that this is more brute force that solving the problem. The way to make the $x \to c$ mapping
 continues is using the well known technique of {\it linear interpolation}, shown in \figref{linear_interpolation},
@@ -160,16 +158,15 @@ and thus solving the first of the two implementation issues.
 \end{equation}
 
 The ingredients necessary to apply the horizontal weighting technique presented have been covered.
-{\color{red}An implementation of the full matching algorithm can be found in github here blahhh}.
 
 \subsubsection{Example-Discussion}
-To illustrate that the advertised technique works a typical problem in high energy physics is addressed.
+To demonstrate the advertised technique a typical problem in high energy physics is addressed.
 Specifically, the \Kstarz particle from the \BsJpsiKst mode decays into a \kaon and a \pion. The momenta
 distributions of these two particles $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ is found to defer between
-monte carlo (source) and background subtracted data (target), see the top two plots of \figref{hor_rew_example_figs}.
+the simulation sample (source) and background subtracted data (target).
 Furthermore, the previous distributions are correlated and combined with a fine binning will yield problems as explained
-earlier in the vertical weighting subsection. After applying the technique advertised before the
-$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions statistically compatible, bypassing the risks associated
+earlier in the vertical weighting subsection. After applying the advertised technique the
+$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions become statistically compatible, avoiding the risks associated
 to a multidimensional fine binning scheme. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
 In addition, a Kolmogorov–Smirnov test is performed to quantify the matching of each source-target distribution.
 The results are summarized in \tabref{hor_rew_ks_test}.
@@ -206,8 +203,8 @@ The results are summarized in \tabref{hor_rew_ks_test}.
     \caption{}
     \label{pminus_rew_matched}
   \end{subfigure}
-  \caption{Comparison before and after matching. Source(Target) distributions are shown in red(blue) color.
-   The upper(lower) two distributions are the original(matched) distributions.}
+  \caption{Comparison before and after matching. Source (Target) distributions are shown in red (blue) color.
+   The upper (lower) two distributions are the original (matched) distributions.}
   \label{hor_rew_example_figs}
 \end{figure}
 
