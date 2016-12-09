@@ -48,7 +48,8 @@ b5paper
 \usepackage{upgreek}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{palatino} % Use the Palatino font by default
+\usepackage{lmodern}
+% \usepackage{palatino} % Use the Palatino font by default
 \usepackage{amsmath}
 \usepackage{rotating}
 \usepackage{multirow}
@@ -82,6 +83,12 @@ b5paper
 
 \DeclareGraphicsRule{.1}{mps}{*}{}
 \DeclareRobustCommand{\kw}[1]{\texttt{#1}}
+
+% this enables hyphenation in \tt
+\makeatletter
+\input{t1lmtt.fd}
+\@namedef{T1+lmtt}{}
+\makeatother
 
 % define additional environments
 \newtheorem{theorem}{Theorem}
