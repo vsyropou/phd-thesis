@@ -1,3 +1,6 @@
+
+% compile with xelatex 
+
 \documentclass[11pt]{standalone}
 \usepackage{color}
 \usepackage[cmyk]{xcolor}
@@ -13,14 +16,46 @@
 \PreviewEnvironment{tikzpicture}
 \setlength\PreviewBorder{1pt}%
 
-\def\Vud{\ensuremath{V^{\phantom{*}}_\text{ud}}}
-\def\Vubst{\ensuremath{V^{*}_\text{ub}}}
-\def\Vcd{\ensuremath{V^{\phantom{*}}_\text{cd}}}
-\def\Vcbst{\ensuremath{V^{*}_\text{cb}}}
-\def\Vtd{\ensuremath{V^{\phantom{*}}_\text{td}}}
-\def\Vtbst{\ensuremath{V^{*}_\text{tb}}}
+ \def\Pb      {\ensuremath{\mathrm{b}}}
+ \def\Pc      {\ensuremath{\mathrm{c}}}
+ \def\Pd      {\ensuremath{\mathrm{d}}}
+ \def\Pq      {\ensuremath{\mathrm{q}}}
+ \def\Ps      {\ensuremath{\mathrm{s}}}
+ \def\Pt      {\ensuremath{\mathrm{t}}}
+ \def\Pu      {\ensuremath{\mathrm{u}}}
+
+\def\quark     {\ensuremath{\Pq}}
+\def\quarkbar  {\ensuremath{\overline \quark}}
+\def\qqbar     {\ensuremath{\quark\quarkbar}}
+\def\uquark    {\ensuremath{\Pu}}
+\def\uquarkbar {\ensuremath{\overline \uquark}}
+\def\uubar     {\ensuremath{\uquark\uquarkbar}}
+\def\dquark    {\ensuremath{\Pd}}
+\def\dquarkbar {\ensuremath{\overline \dquark}}
+\def\ddbar     {\ensuremath{\dquark\dquarkbar}}
+\def\squark    {\ensuremath{\Ps}}
+\def\squarkbar {\ensuremath{\overline \squark}}
+\def\ssbar     {\ensuremath{\squark\squarkbar}}
+\def\cquark    {\ensuremath{\Pc}}
+\def\cquarkbar {\ensuremath{\overline \cquark}}
+\def\ccbar     {\ensuremath{\cquark\cquarkbar}}
+\def\bquark    {\ensuremath{\Pb}}
+\def\bquarkbar {\ensuremath{\overline \bquark}}
+\def\bbbar     {\ensuremath{\bquark\bquarkbar}}
+\def\tquark    {\ensuremath{\Pt}}
+\def\tquarkbar {\ensuremath{\overline \tquark}}
+\def\ttbar     {\ensuremath{\tquark\tquarkbar}}
+
+\def\Vud{\ensuremath{V^{\phantom{*}}_{\uquark\dquark}}}
+\def\Vubst{\ensuremath{V^{*}_{\uquark\bquark}}}
+\def\Vcd{\ensuremath{V^{\phantom{*}}_{\cquark\dquark}}}
+\def\Vcbst{\ensuremath{V^{*}_{\cquark\bquark}}}
+\def\Vtd{\ensuremath{V^{\phantom{*}}_{\tquark\dquark}}}
+\def\Vtbst{\ensuremath{V^{*}_{\tquark\bquark}}}
 \def\rhobar{\ensuremath{\kern 0.07em \overline{\kern -0.07em \rho \kern 0.05em}\kern -0.05em}}
 \def\etabar{\ensuremath{\kern 0.07em \overline{\kern -0.07em \eta \kern 0.05em}\kern -0.05em}}
+
+
 
 \begin{document}
 \sffamily
