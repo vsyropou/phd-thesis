@@ -1,4 +1,4 @@
-In the recent \lhcb measurement \cite{phis-3fb-paper} of \phis one can found the best fit value for the $\lambda_{\jpsi\phi}$
+In the recent \lhcb publication \cite{phis-3fb-paper} of the \phis measurement one can find the best fit value for the $\lambda_{\jpsi\phi}$
 parameter, mentioned in \equref{lambda_cpv}. This parameter along with the quoted \phis, shown in \equref{phis_lambda_result},
 can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 
@@ -12,23 +12,23 @@ can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 \end{subequations}
 
 \noindent Based on \equref{cp_asym_lambda} and according to the formalism in \secref{penguin_formalism}, the $\DeltaPhis{}$ estimation
-due to penguin topologies based on \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of \cite{DeBruyn-thesis}, which is not precise
-enough given the central value of $\phis^{\jpsi\phi}$. This is related to the suppression factor $\epsilon$, mentioned in
+due to penguin topologies based on \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of \cite{DeBruyn-thesis},
+which is not precise enough given the uncertainty of $\phis^{\jpsi\phi}$. This is related to the suppression factor $\epsilon$, mentioned in
 \secref{jpsiphi_amp_struct}, that the penguin topologies receive in the \BsJpsiPhi decay.
 
-In order to increase the precision on the penguin paramters the \grpsuthree flavor symmetry is 
+In order to increase the precision on the penguin paramters the \grpsuthree flavor symmetry is
 invoked such that more channels similar to \BsJpsiPhi are involved in the computation of $(\akPeng-\thkPeng)$.
-Note that the information from these channels entering through the observables, \equref{bsjpsiphi_peng_acp_obs} and \equref{hobs_def}
+Note that the information from these channels entering through the observables in \equref{bsjpsiphi_peng_acp_obs} and \equref{hobs_def}
 has to be polarization dependent. This is due to the fact that new physics dynamics might enter in a different way in each polarization,
 as mentioned in \cite{DeBruyn-thesis}.
-This section introduces the additional channels, \BsJpsiKst and \BdJpsiRho. The details of the $\chisq$ fit are presented in \secref{penguin_chi2_fit}.
-
+This section introduces the additional channels, \BsJpsiKst and \BdJpsiRho and provides
+details of the fitting strategy to estimate the penguin paramters.
 
 \subsection{The \BsJpsiKst Channel}
 \label{bsjpsikst_chanell}
 
-The \BsJpsiKst channel is a flavor specific decay with the same topology as \BsJpsiPhi. The corresponding
-diagrams are illustrated in \figref{bs2jpsikst};
+The \BsJpsiKst channel is a flavor specific decay with the same topology as \BsJpsiPhi.
+The corresponding feynman diagrams are illustrated in the following figure:
 
 \begin{figure}[h]
   \centering
@@ -45,15 +45,16 @@ shown in \equref{bsjpsikst_amp}.
   \label{bsjpsikst_amp}
 \end{equation}
 
-\noindent where primed$({}^\prime$) quantities from here on will be associated with the \BsJpsiKst decay only.
+\noindent where primed$({}^\prime$) quantities from here are associated with the \BsJpsiKst decay only.
 Note the absence of the suppression factor $\epsilon$ in \equref{bsjpsikst_amp}, which implies that the penguin diagram
-contributes as much as the color suppressed tree diagram does to the total amplitude, in contrast to the \BsJpsiPhi decay.
+contributes as much as the color suppressed tree diagram does to the total amplitude, contrary to the case of the \BsJpsiPhi decay.
 
 As mentioned in \secref{penguin_formalism} the \BsJpsiKst channel provides access to \Acp{\rm dir} only.
 Thus, additional information is required, via the $\Hobs{k}'$ observable, in order to probe $(\akPeng,\thkPeng)$.
 Both observables are based on measurements that took place in \chapref{Data_Analysis} of the current thesis.
-The first observables is reported in \tabref{bestFitResult}, with the associated systematic quoted in \tabref{systematics_acp}.
-Whereas the $\Hobs{k}'$ observable is constructed from the \BRof{\BsJpsiKst} reported in \equref{Br_total} and shown in \equref{hobs_jpsikst}.
+The first observable is reported in \tabref{bestFitResult}, with the associated systematic quoted in \tabref{systematics_acp}.
+Whereas the $\Hobs{k}'$ observable is constructed from the \BRof{\BsJpsiKst} reported in \equref{Br_total} and shown in
+the following equations:
 
 \begin{subequations}
   \label{hobs_jpsikst}
@@ -66,7 +67,7 @@ Whereas the $\Hobs{k}'$ observable is constructed from the \BRof{\BsJpsiKst} rep
 
 \noindent Where the last undertainty is due to the hadronization factor $|\formFctr{k}/\formFctr{k}'|$ necessary for the construction of $\Hobs{k}'$.
 The hadronization factors are calculated theoretically based on the method suggested in \cite{eff-hamiltonian-bs-syst}.
-The exact numbers used can be found in \cite{DeBruyn-thesis}. Note that the uncertainty on $\Hobs{k}'$ is dominated these factors.
+The exact numbers used can be found in \cite{DeBruyn-thesis}. Note that the uncertainty on $\Hobs{k}'$ is dominated by these factors.
 
 % \begin{align}
 % \left|\frac{\mathcal{A}'_0(\BsJpsiPhi)}{\mathcal{A}_0(\BsJpsiKst)}\right| & = 1.23 \pm 0.16\:,\label{Eq:AmpRat_JpsiKstar_long}\\
@@ -76,35 +77,26 @@ The exact numbers used can be found in \cite{DeBruyn-thesis}. Note that the unce
 % \left|\frac{\mathcal{A}'_{\perp}(\BsJpsiPhi)}{\mathcal{A}_{\perp}(\BsJpsiKst)}\right| & = 1.20 \pm 0.12\:,\label{Eq:AmpRat_JpsiKstar_perp}
 % \end{align}
 
-Prior to any combination the penguin parameters have been estimated based on the \BsJpsiKst channel only.
-The results on \DeltaPhis{k}\cite{bsjpsikst-paper}, are shown in \equref{delta_phis_jpsikst},
+Prior to any combination the penguin parameters have been estimated based on
+the \BsJpsiKst channel only \cite{bsjpsikst-paper}, resulting in:
 
 \begin{subequations}
   \label{delta_phis_jpsikst}
   \begin{align}
     \DeltaPhisJpsiPhi{0}         & = +0.001^{+0.100}_{-0.033} \:\text{rad},\\
     \DeltaPhisJpsiPhi{\parallel} & = +0.031^{+0.059}_{-0.052} \:\text{rad},\\
-    \DeltaPhisJpsiPhi{\perp}     & = -0.046^{+0.022}_{-0.028} \:\text{rad}.
+    \DeltaPhisJpsiPhi{\perp}     & = -0.046^{+0.022}_{-0.028} \:\text{rad},
   \end{align}
 \end{subequations}
 
-\noindent Where most of the uncertainty is statistical in nature. The $\chisq$ fit performed here is similar
-to the one described in \secref{penguin_chi2_fit}. Hence its details are postponed for later.
-
+\noindent where most of the uncertainty is statistical in nature. The $\chisq$ fit performed here is similar
+to the one described in \secref{penguin_chi2_fit}, hence details of the fitign strategy are postponed for later.
 
 \subsection{The \BdJpsiRho Channel}
 \label{bsjpsirho_chanell}
 
 The topology of the \BdJpsiRho decay is shown in \figref{bs2jpsirho_diagram}.
-
-\begin{figure}[h]
-  \centering
-  \scalebox{0.9}{\sffamily \input{Figures/Chapter5/tree_penguin_jpsirho}}
-  \caption{Leading order tree diagram of the decay \BdJpsiRho.}
-  \label{bs2jpsirho_diagram}
-\end{figure}
-
-\noindent The amplitude structure is identical to that of the \BsJpsiKst mode resulting in \equref{bsjpsirho_amp}.
+The amplitude structure is identical to that of the \BsJpsiKst mode resulting in \equref{bsjpsirho_amp}.
 
 \begin{equation}
   \mathcal{A} \parenthesis{\BdJpsiRhoPolState{k}} = -\lambda \formFctr{k}'' \brackets{ 1 - \akPeng'' e^{i\thkPeng''} e^{i\gamma} },
@@ -114,34 +106,42 @@ The topology of the \BdJpsiRho decay is shown in \figref{bs2jpsirho_diagram}.
 \noindent where the double primed symbol ${}^{\prime\prime}$ from here on labels parameters related to the \BdJpsiRho decay.
 Note again the absence of the suppression factor $\epsilon$.
 
-The \BdJpsiRho channel provides access to both \Acp{\rm dir}, \Acp{\rm mix} since the final state $\jpsi\rho$ is
+\begin{figure}[t]
+  \centering
+  \scalebox{0.9}{\sffamily \input{Figures/Chapter5/tree_penguin_jpsirho}}
+  \caption{Leading order tree diagram of the decay \BdJpsiRho.}
+  \label{bs2jpsirho_diagram}
+\end{figure}
+
+The \BdJpsiRho channel provides access to both \Acp{\rm dir} and \Acp{\rm mix} since the final state $\jpsi\rho$ is
 a \CP eigenstate and thus $\BdBdbarSyst$ oscillations are active. Both of the above observables are measured in the
 time dependent analysis of \BdJpsipipi decays from \lhcb \cite{Aaij:2014vda}. The penguin parameters as determined
-in Section 5.5.3. of \cite{DeBruyn-thesis} are shown in \equref{delta_phis_jpsirho}.
+in Section 5.5.3. of \cite{DeBruyn-thesis} are:
 
 \begin{subequations}
   \label{delta_phis_jpsirho}
   \begin{align}
     \DeltaPhisJpsiPhi{0}         & = -0.000^{+0.011}_{-0.014}\:\text{rad},\\
     \DeltaPhisJpsiPhi{\parallel} & = +0.001^{+0.012}_{-0.017}\:\text{rad},\\
-    \DeltaPhisJpsiPhi{\perp}     & = +0.003^{+0.012}_{-0.016}\:\text{rad}.
+    \DeltaPhisJpsiPhi{\perp}     & = +0.003^{+0.012}_{-0.016}\:\text{rad},
   \end{align}
 \end{subequations}
 
-\noindent Where the most of the uncertainty is statistical in nature. Note the small uncertainty on
+\noindent where most of the uncertainty is statistical in nature. Note the small uncertainty on
 $\DeltaPhisJpsiPhi{k}$ compared to \equref{delta_phis_jpsikst}. According to \cite{DeBruyn-thesis}
-the latter is attributed to the particular value of the penguin parameter $\thkPeng{k}''$, which is 
-$\sim 90^\circ$ and $\sim 10^\circ$ respectivelly for the \BdJpsiRho and \BsJpsiKst chanells. 
-Specifically, as it can be seen in \equref{tandelta} the algebreic structure of the sam equation 
-is such that, $\tan(\Delta\phis^k)$ becomes minimal around odd multiples of $\pi/2$.
+this is attributed to the particular value of the penguin parameter $\thkPeng{k}''$, which is
+$\sim 90^\circ$ (while in the case of \BsJpsiKst, $\thkPeng{k}' \sim 10^\circ$).
+Specifically, as it can be seen in \equref{tandelta}, the algebreic structure of the
+same equation is such that, $\tan(\Delta\phis^k)$ becomes minimal for values of \thkPeng{}
+around odd multiples of $\pi/2$.
 
 \subsection{Fitting Strategy}
 \label{penguin_chi2_fit}
 
 The parameters $(\akPeng,\thkPeng)$ of \equref{bsjpsiphi_amp_param}, which quantify the penguin topology contributions
 to the \BsJpsiPhi decay, are estimated by means of a $\chisq$ fit. The $\chisq$ is defined after some assumptions have
-been made. First perfect $\grpsuthree_{\rm F}$ symmetry between the \BsJpsiPhi and the additional channels \BsJpsiKst
-and \BdJpsiRho is assumed, as shown in \equref{su3_apply},
+been made. First, perfect $\grpsuthree_{\rm F}$ symmetry between the \BsJpsiPhi and the additional channels \BsJpsiKst
+and \BdJpsiRho is assumed, implying:
 
 \begin{equation}
 \akPeng= \akPeng' = \akPeng'' \qquad \thkPeng = \thkPeng' = \thkPeng''.
@@ -149,7 +149,7 @@ and \BdJpsiRho is assumed, as shown in \equref{su3_apply},
 \end{equation}
 
 \noindent Second, the hadronic ratios necessary for building the $\Hobs{k}$ is assumed to be the same between
-the two additional channels \BsJpsiKst and \BdJpsiRho as shown in \equref{had_ratios_assuption}.
+the two additional channels \BsJpsiKst and \BdJpsiRho, which translates in:
 
 \begin{equation}
   \centering
@@ -165,7 +165,7 @@ Instead the single hadronic ratio, based on the assumption of \equref{had_ratios
 estimated from the fit, since it is treated as a free parameter. This way the uncertainty from the theoretical
 calculations on the hadronic parameters does not enter the fit. This choice is supported by \cite{DeBruyn-thesis}
 where it can be seen that the hadronic parameters estimated form experimental data are more precise
-that these coming from theoretical calculations.
+that the ones coming from theoretical calculations.
 
 Under the above assumptions the observables related to the \BsJpsiKst and \BdJpsiRho channels along
 with their corresponding experimental measurements, as described in \secref{bsjpsirho_chanell} and
@@ -187,7 +187,7 @@ with their corresponding experimental measurements, as described in \secref{bsjp
 \end{equation}
 
 \noindent Note also that the CKM angle $\gamma$ and the weak phase $\phid$ are necessary for computing the ${\Acp{\rm dir}}'_k$,
-${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$ observables. The previous parameters are allowed to be free in the
+${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$ observables. The previous parameters are allowed to vary in the
 $\chisq$ fit with a Gaussian constrain around their measured value which are shown in \tabref{chi2_fit_constrains}.
 
 \begin{table}[!h]
@@ -205,4 +205,4 @@ $\chisq$ fit with a Gaussian constrain around their measured value which are sho
 \end{table}
 
 \noindent Minimizing the above $\chisq$ yields the penguin parameters $(\akPeng$,$\thkPeng)$.
-The results of the fit are shown in \secref{penguin_results}.
+The results of the fit presented in \secref{penguin_results}.

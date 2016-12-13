@@ -1,4 +1,5 @@
-The results of the \chisq fit described in \secref{penguin_more_chanells} are the following:
+The results of the \chisq fit to the penguin paramters, described in \secref{penguin_more_chanells}
+are the following:
 
 \begin{subequations}
 \label{peng_a_theta_results}
@@ -10,66 +11,73 @@ The results of the \chisq fit described in \secref{penguin_more_chanells} are th
 \end{subequations}
 
 \noindent The quoted uncertainties are the quadratic sum of statistical and systematic uncertainties.
-Two dimensional contours are shown in Figures \ref{pengPlot_long}-\ref{pengPlot_para}, where the 
-parameters of intereset, $(\akPeng,\thkPeng)$, are transformed to rectangular coordinates for better 
-visibility. Note that the $\Hobs{k}$ observables has a smaller impact on the result due to their associated 
-large uncertainty. Also note the tension between the $\Hobs{k}$ observables and the best fit result, 
-which suggests that the assumption \equref{had_ratios_assuption} is probably not true.
+Two dimensional contours are shown in Figures \ref{pengPlot_long}-\ref{pengPlot_para}, where the
+parameters of intereset, $(\akPeng,\thkPeng)$, are transformed to rectangular coordinates for better
+visibility. There it can be seen that the $\Hobs{k}$ observables has a smaller impact on the best fit
+result due to their associated large uncertainty. Also note the tension between the $\Hobs{k}$ observables
+and the best fit result, which suggests that the assumption \equref{had_ratios_assuption} is probably not true.
 
 \begin{figure}[!t]
   \centering
   \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Long_withH.pdf}
-  \caption{$\aPeng{0}$, $\thPeng{0}$ confidence levels. Measurements of \equref{chisq_form_with} are illustrated with 
+  \caption{$\aPeng{0}$, $\thPeng{0}$ confidence levels. Measurements of \equref{chisq_form_with} are illustrated with
            colored bands, which correspond to one std. deviation. Figure from \cite{DeBruyn-thesis}}
   \label{pengPlot_long}
 \end{figure}
 
 The best fit estimates of \equref{peng_a_theta_results} are subsequently translated, using \equref{tandelta},
-to the final estimate of the phase shift $\DeltaPhisJpsiPhi{k}$, due to penguin topologies:
+to the final estimate of the $\DeltaPhisJpsiPhi{k}$  phase shift:
 
 \begin{subequations}
 \label{delta_phis_result}
-\begin{align}   
+\begin{align}
 \DeltaPhisJpsiPhi{0}         & = 0.000 \; ^{+0.009}_{-0.011} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst}) = 0.000 \; ^{+0.010}_{-0.014},\\
 \DeltaPhisJpsiPhi{\parallel} & = 0.001 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.001 \; ^{+0.012}_{-0.016},\\
 \DeltaPhisJpsiPhi{\perp}     & = 0.003 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.003 \; ^{+0.012}_{-0.016},
 \end{align}
 \end{subequations}
 
-\noindent where the uncertainties are statistical and systematic respectivelly. The latter includes 
-uncertainties due to both \grpsuthree breaking and the hadronic parameters \formFctr{k}. 
-Where  $20\%$ $\grpsuthree_F$ breaking is assumed, according to what was mentioned at the end of 
-\secref{had_pars_suthree}, by performing a special fit explained in \secref{su3_breaking}. 
+\begin{figure}[t!]
+\centering
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Para_withH.pdf}
+  \caption{$\aPeng{\parallel}$, $\thPeng{\parallel}$ confidence levels. Measurements of \equref{chisq_form_with} are illustrated with
+           colored bands, which correspond to one std. deviation. Figure from \cite{DeBruyn-thesis}}
+  \label{pengPlot_para}
+\end{figure}
+
+\noindent where the uncertainties are statistical and systematic due to \grpsuthree breaking respectively.
+A $20\%$ $\grpsuthree_F$ breaking is assumed, according to what was mentioned at the end of
+\secref{had_pars_suthree}, by performing a special fit explained in \secref{su3_breaking}.
 Statisical uncertainty dominates the $\DeltaPhisJpsiPhi{k}$ measurement.
 
-Note that the penguin parameters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitudes. Given that it is
-interesting to point out that any factorizable $\grpsuthree_F$ breaking effects entering through the assumption
-of \equref{su3_apply} cancel out.
-Thus the results reported here suffer from non factorizable $\grpsuthree_F$ breaking which are small,
+Note that the penguin parameters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitudes.
+Given that, it is interesting to point out that any factorizable $\grpsuthree_F$ breaking
+effects entering through the assumption of \equref{su3_apply} cancel out. Thus the results
+reported here suffer from non
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Perp_withH.pdf}
+  \caption{Limits on the penguin parameters for: $\aPeng{\perp}$ and $\thPeng{\perp}$.}
+  \label{pengPlot_perp}
+\end{figure}
+
+\noindent factorizable $\grpsuthree_F$ breaking which are small,
 according to \cite{DeBruyn-thesis}. The previous statement is supported by the values of the fitted hadronic parameter
 ratios which are close to the once calculated assuming factorization holds. As it is mentioned in \cite{DeBruyn-thesis},
 either the non factorization $\grpsuthree_F$ effects or their ratio with respect to the factorizable $\grpsuthree_F$
 ones are small.
 
 Lastly, the shifts $\DeltaPhisJpsiPhi{k}$ quoted in \equref{delta_phis_result}
-suggest that contributions of penguin topologies to the \BsJpsiPhi decay amplitude are 
-small, $<1^\circ$. Given the also small \phis measured value of \equref{phis_lhcb}, 
-it becomes mandatory to control penguin cotributions in future \phis measurments. 
-Furthermore, the sensitivity from the experimental side is intreasting with respect to 
-the Standard Model prediction, see \equref{phis_lhcb_theo}. Thus, potential deviations from these 
-predictions are going to play a cetral role in future and more precise \phis measuremnts. 
-Increasing the amount of data in the \lhc \runtwo might not be enough to yield 
-a significant claim on the presence of physics beyond the Standard Model and hence 
+suggest that contributions of penguin topologies to the \BsJpsiPhi decay amplitude are
+small, $<1^\circ$. Given the also small \phis measured value of \equref{phis_lhcb}
+it becomes mandatory to control penguin cotributions in future \phis measurments.
+Furthermore, the sensitivity from the experimental side is intreasting with respect to
+the Standard Model prediction, see \equref{phis_lhcb_theo}. Thus, potential deviations from these
+predictions are going to play a cetral role in future and more precise \phis measuremnts.
+Increasing the amount of data in the \lhc \runtwo might not be enough to yield
+a significant claim on the presence of physics beyond the Standard Model and hence
 the upgraded \lhcb detector becomes important in the pursuit for New Physics in the future.
-  
-
-\begin{figure}[!h]
-\centering
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Para_withH.pdf}
-  \caption{$\aPeng{0}$, $\thPeng{0}$ confidence levels. Measurements of \equref{chisq_form_with} are illustrated with 
-           colored bands, which correspond to one std. deviation. Figure from \cite{DeBruyn-thesis}}
-  \label{pengPlot_para}
-\end{figure}
 
 \subsection{Further Crosschecks}
 There are two important issues that the fitting strategy as described in \secref{penguin_chi2_fit}
@@ -81,17 +89,10 @@ addressed in the current section.
 \label{su3_breaking}
 Potential $\grpsuthree_F$ effects manifest themselves in the calculations of the hadronic parameters ratios
 when computing the $\Hobs{k}$ observable and in the assumption of \equref{su3_apply}. However, due to the
-followed strategy the hadronic parameter ratios are not affected by $\grpsuthree_F$ breaking since the are fitted for.
+followed strategy the hadronic parameter ratios are not affected by $\grpsuthree_F$ breaking since they are fitted for.
 As far as the assumption of \equref{su3_apply} is concerned, a special fit is performed using only observables
 related to \BdJpsiRho channel, to investigate the effect of $\grpsuthree_F$. For that, $(\akPeng,\thkPeng)$
 are re-expressed as shown in \equref{su3_breaking_invoke}
-
-\begin{figure}[!t]
-  \centering
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.4]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Perp_withH.pdf}
-  \caption{Limits on the penguin parameters for: $\aPeng{\perp}$ and $\thPeng{\perp}$.}
-  \label{pengPlot_perp}
-\end{figure}
 
 \begin{equation}
   \centering
@@ -103,7 +104,8 @@ are re-expressed as shown in \equref{su3_breaking_invoke}
 potential $\grpsuthree_F$ effects that will break the assumption of \equref{su3_apply}.
 The central values of $\xi_k$ and $\delta_k$ assume perfect $\grpsuthree_F$ symmetry, meaning $\xi_k=1$ and $\delta_k=0$.
 However, a Gaussian constrain allows them to vary within a range of up to $50\%$
-$\grpsuthree_F$\footnote{Meaning $\sigma{\xi_k}\in\brackets{0,0.5}$ and $\sigma_{\delta_k}\in\brackets{0,40}^\circ$ }.
+$\grpsuthree_F$. Specifically, the uncertainties that $\xi_k$ and $\delta_k$ are allowed to
+vary within are $[0,0.5]$ and $[0,40]^\circ$ respectively.
 Repeating the above-mentioned special fit showed that the value of $\DeltaPhis{k}$
 does not depend on the amount of allowed $\grpsuthree_F$ symmetry breaking.
 This is most likely due to the particular structure of \equref{tandelta}, meaning that
