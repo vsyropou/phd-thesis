@@ -88,7 +88,7 @@ hereafter low momentum muons, by improving the old \mvm algorithm and using it i
 
 The upgraded \mvTTm algorithm improves in several points with respect to the old \mvm algorithm.
 First the available momentum and charge information from the \ttracker is used to open smaller M3 FoIs.
-This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm output 
+This reduces the number of M3 seed hits and hence increases the purity of the \mvTTm algorithm output
 for reasons explained earlier in \secref{sec:muon_matching}. Second, the parametrization of the magnet $z$
 focal plane as well as the uncertainties on the focal plane coordinates are improved using simulated data.
 Furthermore, the vertical, non-bending, plane is included in the \chisq computation which was not the
@@ -113,25 +113,25 @@ the possibility for both positively and negatively charged tracks.
 
 After the improvements mentioned in the above paragraph the efficiency of the upgraded \mvTTm algorithm
 is estimated using simulated \Sigmapmumu events, where the mean transverse momentum is $\sim 300\mevc$.
-The muons from this decay, which passed the full track reconstruction resulting in Long tracks, 
-are further ensured to be muons. This is possible by exploiting the available information in the 
-simulated event and thus defining the {\it true muons}. 
+The muons from this decay, which passed the full track reconstruction resulting in Long tracks,
+are further ensured to be muons. This is possible by exploiting the available information in the
+simulated event and thus defining the {\it true muons}.
 An important concept that is used for the \mvTTm efficiency definition is the so called {\it overlap}.
-Specifically, a certain \velo track overlaps with a true muon (which is a Long track) 
-when the \velo track has more than $70\%$ \velo hits in common with the \velo segment 
-of the true muon track. The number of all \veloTTracks that overlap with a true muon define the 
-denominator in the \mvTTm efficiency, while these \veloTTracks that are in addition accepted by 
-the \mvTTm algorithm make the number in the numerator. 
+Specifically, a certain \velo track overlaps with a true muon (which is a Long track)
+when the \velo track has more than $70\%$ \velo hits in common with the \velo segment
+of the true muon track. The number of all \veloTTracks that overlap with a true muon define the
+denominator in the \mvTTm efficiency, while these \veloTTracks that are in addition accepted by
+the \mvTTm algorithm make the number in the numerator.
 
-The efficiency is compared against the old 
-\mvm algorithm, where a common cutoff value for the $\chisq/\nDoF$ of 2 is chosen. The efficiency 
-versus the total momentum, can be seen in \figref{mvm_eff_p_comp}, where the improvement of the 
-upgraded \mvTTm algorithm is shown to be significant.  Given that the aim of the \mvTTm upgrade 
-is to optimize for high efficiency of low transverse momenta muons the efficiency is also projected 
-versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned in \secref{muid_hlt1}, the 
-high $\pt$ muons will not be processed by the \mvTTm algorithm and thus the previous figure focuses on 
-the region where $\pt\in[0,0.5]\gevc$. The relative efficiency increase with respect to the old 
-\mvm algorithm in the above region is $\sim 50\%$. Finally, the improvement of the $\chisq/\nDoF$ 
+The efficiency is compared against the old
+\mvm algorithm, where a common cutoff value for the $\chisq/\nDoF$ of 2 is chosen. The efficiency
+versus the total momentum, can be seen in \figref{mvm_eff_p_comp}, where the improvement of the
+upgraded \mvTTm algorithm is shown to be significant.  Given that the aim of the \mvTTm upgrade
+is to optimize for high efficiency of low transverse momenta muons the efficiency is also projected
+versus $\pt$ and shown in \figref{mvm_eff_pt_zoom_comp}. As mentioned in \secref{muid_hlt1}, the
+high $\pt$ muons will not be processed by the \mvTTm algorithm and thus the previous figure focuses on
+the region where $\pt\in[0,0.5]\gevc$. The relative efficiency increase with respect to the old
+\mvm algorithm in the above region is $\sim 50\%$. Finally, the improvement of the $\chisq/\nDoF$
 discriminating power between the old and upgraded algorithm is shown in \figref{mvm_chi2_comp}.
 
 \begin{figure}[t]
@@ -240,8 +240,8 @@ of output tracks to the point that the \hltone rate requirement of 12 \khz is no
 Alternatively, one might attempt to improve the $\chisq/\nDoF$ discriminating variable itself,
 by finding a better parametrization for the magnet hit position and uncertainty. However the current
 parametrization seems to be quite good with respect to the one present in the old \mvm algorithm.
-Lastly, in case the momentum estimate of \ttracker improves\footnote{For example in the upgraded it
-UT tracker that will replace the \ttracker} then it is worth trying the FoI used in the \muonID code
+Lastly, in case the momentum estimate of \ttracker improves, for example the UT tracker
+that will replace the \ttracker in the \lhcb upgrade, then it is worth trying the FoI used in the \muonID code
 mentioned in \secref{muid_hlt1}. The previous FoIs are momentum dependant search windows, implying
 that smaller FoIs are more suitable for height momentum muons and \viceversa for low momentum ones.
 This effectively reduces the number of M3 seed hits and thus increasing the purity of output tracks
