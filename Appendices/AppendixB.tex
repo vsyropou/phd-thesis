@@ -35,7 +35,7 @@ the bin contents of the target distribution.
 
 The advantages of the vertical weighting approach is that it is easy to understand and implement.
 However, there are some disadvantages that result from the binning itself. For example it can happen
-that a given source or target bin has zero entries for a given binning scheme. This situation 
+that a given source or target bin has zero entries for a given binning scheme. This situation
 becomes more pronounced in the case of large number of bins, which as already mentioned improves the
 precision of the matching. In addition it can also happen that any of the distributions is weighted and
 the sum of weights in a given bin is negative. Both of the above situation require some justification
@@ -77,7 +77,7 @@ are presented in the next paragraph.
 The transformation steps, \gFlat{} and \gGaus{}, that appear in the above logical steps make use of
 well known mathematical theorems, namely {\it Inverse Transformation Sampling} and {\it Probability
 Integral Transform}. No prof of the above theorems is included since the intention of the current
-appendix is to quickly demonstrate the advertised technique. However, there is plethora of examples online. 
+appendix is to quickly demonstrate the advertised technique. However, there is plethora of examples online.
 
 \begin{theorem}[Inverse Transformation Sampling]
   Let $u$ be a uniformly distributed variable. Consider another random variable $x$ that has a Cumulative
@@ -104,10 +104,10 @@ Both of the above theorems can only be directly applied to continuous distributi
 However, exact analytic shape of the \pdfs or \cdfs involved is not required. This is because the \cdf
 of any variable $x$ can be built by essential computing the integral-sum of \equref{cdf_def}. In order
 to do that $x$ is binned so that the cumulative sum of each bin can be computed. This is a straightforward
-step, where the number of entries in each bin are added to the number of entries of the next bin until the 
-range of $x$ is exhausted. It is important to point out that this binning can be arbitrarily fine without 
+step, where the number of entries in each bin are added to the number of entries of the next bin until the
+range of $x$ is exhausted. It is important to point out that this binning can be arbitrarily fine without
 having the problems explained in the introduction, since it is not used to much any distribution.
-However, from implementation point of you the larger the number of bins the slower the algorithm performs. 
+However, from implementation point of you the larger the number of bins the slower the algorithm performs.
 (Here is where the built-in function {\tt numpy.digitise()} of {\tt python} proves to be useful, as the timing scales
 nicely with the number of bins.)
 
@@ -115,7 +115,7 @@ The transformations \gFlat{} and \gGaus{} mentioned in \equref{hor_rew_logic}, a
 \theoref{theo_prob_inte_trans}. Similarly the inverted versions, \gFlatInv{} and \gGausInv{},
 of the previous transformations are direct implementations of \theoref{theo_inv_trans_sampling}.
 The only deference between is case of the transformations \gGaus{} and \gGausInv{} the shapes
-of the \pdf and \cdf involved are known analytically. The previous transformations involve the 
+of the \pdf and \cdf involved are known analytically. The previous transformations involve the
 {\it inverse error function} and the {\it complementary error function} respectively, which
 are both well known distributions.
 
@@ -165,19 +165,15 @@ Specifically, the \Kstarz particle from the \BsJpsiKst mode decays into a \kaon 
 distributions of these two particles $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ is found to defer between
 the simulation sample (source) and background subtracted data (target).
 Furthermore, the previous distributions are correlated and combined with a fine binning will yield problems as explained
-earlier in the vertical weighting subsection. After applying the advertised technique the
-$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions become statistically compatible, avoiding the risks associated
-to a multidimensional fine binning scheme. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
-In addition, a Kolmogorov–Smirnov test is performed to quantify the matching of each source-target distribution.
-The results are summarized in \tabref{hor_rew_ks_test}.
+earlier in the vertical weighting subsection.
 
-\begin{figure}[!t!]
+\begin{figure}[!t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
     \tikzsetnextfilename{kplus_original}
     \scalebox{1.15}{\input{Figures/Appendix/Kplus_P_original}}
-    \caption{}
+    %\caption{}
     \label{kplus_rew_original}
   \end{subfigure}%
   \hfill
@@ -185,14 +181,14 @@ The results are summarized in \tabref{hor_rew_ks_test}.
     \raggedleft
     \tikzsetnextfilename{pminus_original}
     \scalebox{1.15}{\input{Figures/Appendix/piminus_P_original}}
-    \caption{}
+  %  \caption{}
     \label{pminus_rew_original}
   \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
     \raggedright
     \tikzsetnextfilename{kplus_matched}
     \scalebox{1.15}{\input{Figures/Appendix/Kplus_P_matched}}
-    \caption{}
+  %  \caption{}
     \label{kplus_rew_matched}
   \end{subfigure}%
   \hfill
@@ -200,7 +196,7 @@ The results are summarized in \tabref{hor_rew_ks_test}.
     \raggedleft
     \tikzsetnextfilename{pminus_matched}
     \scalebox{1.15}{\input{Figures/Appendix/piminus_P_matched}}
-    \caption{}
+  %  \caption{}
     \label{pminus_rew_matched}
   \end{subfigure}
   \caption{Comparison before and after matching. Source (Target) distributions are shown in red (blue) color.
@@ -208,7 +204,8 @@ The results are summarized in \tabref{hor_rew_ks_test}.
   \label{hor_rew_example_figs}
 \end{figure}
 
-\begin{table}[h]
+
+\begin{table}[!h]
   \center
   \begin{tabular}{c c c}
     \hline
@@ -218,7 +215,14 @@ The results are summarized in \tabref{hor_rew_ks_test}.
        \ptot(\pion)   &  $10^{-25}$  & $1.000$ \\
       \hline
   \end{tabular}
-  \caption{\small KS test values between source and target for each of the two distributions $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$
-           before and after matching. The KS values indicate that the agreement after matching improves significantly.}
+  \caption{\small KS test between source and target for each of the two distributions $\parenthesis{\ptot(\kaon)-\ptot(\pion)}$.
+  Better agreement is achieved after matching.}
   \label{hor_rew_ks_test}
 \end{table}
+
+
+After applying the advertised technique the
+$\parenthesis{\ptot(\kaon)-\ptot(\pion)}$ distributions become statistically compatible, avoiding the risks associated
+to a multidimensional fine binning scheme. The matched distributions can be seen at the bottom of \figref{hor_rew_example_figs}.
+In addition, a Kolmogorov–Smirnov test is performed to quantify the matching of each source-target distribution.
+The results are summarized in \tabref{hor_rew_ks_test}.
