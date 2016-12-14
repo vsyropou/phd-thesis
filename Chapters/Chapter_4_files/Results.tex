@@ -153,9 +153,9 @@ degree of freedom is taken as a systematic uncertainty.
 Not all the \pdf parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}.
 These parameters are fixed to values taken from simulated events.
 In order to account for systematic uncertainties due to these parameters, the mass fit is repeated 1000 times. In each fit
-to the data the values of these fixed parameters are drawn from a Gaussian distribution. The mean and width of the Gaussian 
+to the data the values of these fixed parameters are drawn from a Gaussian distribution. The mean and width of the Gaussian
 are taken from a mass fit to the simulated data, which was used to determine these parameters.
-Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass 
+Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass
 fits a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian distribution
 for each of the angular parameters of interest. The one standard deviation interval of the previous distribution is assigned
 as a systematic to that parameter.
@@ -235,7 +235,7 @@ and assigned as a systematic uncertainty.
 Correlations between the $\Bs$ invariant mass distribution and the $\cos\thetamu$ angular distribution are taken into account
 by performing the mass fit in 5 intervals of $\cos\thetamu$. Since the choice of 5 intervals is arbitrary the mass fit is
 repeated in 3 and 6 $\cos\thetamu$ intervals as well. The result is two more sets of \sWeights. For each set the angular
-fit is performed and the differences in each of the parameters of interest are added in quadrature. 
+fit is performed and the differences in each of the parameters of interest are added in quadrature.
 The quadratic sum is assigned as systematic.
 
 \subsubsection{Fit bias}
@@ -323,10 +323,10 @@ the estimation of \BRof\BsJpsiKst.
 \subsubsection{Summary}
 \label{systSummary}
 All the above systematic uncertainties related to the angular parameters are summarized from \tabref{systematics_acp}
-to \tabref{systematics_swave_phase}. Two sources of systematic uncertainties are found to be dominant. First the size 
-of the simulated sample used to estimate the efficiency moments of the angular acceptance; second the correlation 
-between the $\Bs$ invariant mass resolution and the cosine of the helicity angle \thetamu. The total uncertainties 
-on the angular parameters remain largely dominated by the statistical uncertainties. Furthermore, systematic 
+to \tabref{systematics_swave_phase}. Two sources of systematic uncertainties are found to be dominant. First the size
+of the simulated sample used to estimate the efficiency moments of the angular acceptance; second the correlation
+between the $\Bs$ invariant mass resolution and the cosine of the helicity angle \thetamu. The total uncertainties
+on the angular parameters remain largely dominated by the statistical uncertainties. Furthermore, systematic
 uncertainties related to the branching fraction measurement are shown in \tabref{syst_normalisation}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -336,7 +336,7 @@ uncertainties related to the branching fraction measurement are shown in \tabref
 
 The likelihood function presented in \secref{Simutaneous_Likelihood_fit} is revisited in the current subsection.
 This time it is visualized in order to gain more confidence that the fit result presented in \secref{Parameters_of_Interest}
-comes indeed from a valid minimum of the likelihood function. One can easily get an initial estimate on the shape 
+comes indeed from a valid minimum of the likelihood function. One can easily get an initial estimate on the shape
 of the function by expanding it as a Taylor series around the minimum. Notet that the constant term of the
 expansion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically.
 Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough and also that the variables $\vec{p}$
@@ -439,14 +439,14 @@ Based on the definition of the profile likelihood two important conclusions can 
 Gaussian nature of a parameter of interest can be visualized by how much the corresponding profile likelihood plot deviates from
 a perfect parabola. Non perfect parabola is mainly an indication of low sample size or high correlations between the parameters.
 Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf
-used to build the likelihood. 
+used to build the likelihood.
 
 Second, \equref{likelihood_exp} serves as an alternative method of estimating the statistical uncertainty
-of a parameter of interest given a profile likelihood plot. Specifically, $s$ number of standard deviations are defined from 
-the two points where the horizontal line, $-\Delta\ln L = s$,  intersects the profile likelihood function and projecting down 
+of a parameter of interest given a profile likelihood plot. Specifically, $s$ number of standard deviations are defined from
+the two points where the horizontal line, $-\Delta\ln L = s$,  intersects the profile likelihood function and projecting down
 to the horizontal axis. It follows that the uncertainties defined in the the above-mentioned way can be asymmetric
-left and right of the minimum. The small sample size for some of the data categories, is depicted in the corresponding 
-profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why 
+left and right of the minimum. The small sample size for some of the data categories, is depicted in the corresponding
+profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why
 asymmetric uncertainties are quoted.
 
 
@@ -525,10 +525,10 @@ asymmetric uncertainties are quoted.
          low number of candidates in that \mkpi interval. Second the $\fS{3}$ minimum is close to a physical boundary.}
 \end{figure}
 
-Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is 
-usually attributed to the statistical uncertainty of one standard deviation, within the freqientist interpretation of 
-prpbability. Basically the claim is that one standard deviation guaranties that the probability that the true value 
-of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$. 
+Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is
+usually attributed to the statistical uncertainty of one standard deviation, within the freqientist interpretation of
+prpbability. Basically the claim is that one standard deviation guaranties that the probability that the true value
+of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$.
 The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}.
 
 
@@ -564,10 +564,10 @@ In a non-biasing fitting model the pull distribution of a certain parameter foll
 one, provided that the Central Limit Theorem (CLT) of statistics is satisfied.
 This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) uncertainty, $\hat{\sigma}_+$($\hat{\sigma}_-$)
 estimates of \secref{Parameters_of_Interest}. Particularly it means that the probability that the interval
-$[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$. Or in other words if the 
-real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained 
-in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose" 
-and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the toy experiment 
+$[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$. Or in other words if the
+real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained
+in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose"
+and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the toy experiment
 is a suitable replacement of the $p^{\rm true}$.
 
 \begin{figure}[!t]
@@ -607,7 +607,7 @@ is a suitable replacement of the $p^{\rm true}$.
 \end{figure}
 
 Furthermore, potential biases to a certain parameter of interest arising from the fitting model
-can be deduced from the mean of the pull and uncertainty distributions as shown in \equref{bias_def}.
+can be deduced from the mean of the pull and uncertainty distributions as:
 
 \begin{equation}
 {\rm b}_p = \left|\left<P\right>\right| \; \left<\sigma^i\right>,\;\; \left.

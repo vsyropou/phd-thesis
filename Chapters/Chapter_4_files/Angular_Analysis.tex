@@ -36,7 +36,7 @@ for the transversity and helicity formalism.
 
 Here, the steps to arrive at an expression for the angular decay rate of \BsJpsiKst are briefly described.
 The total decay amplitude $\mathcal{A}(\text{\BJpsiKst})$ is decomposed in its \pwave ($0$, $\parallel$, $\perp$)
-and \swave ($S$) polarizations as shown in the following equation.
+and \swave ($S$) polarizations as shown in the following equation:
 
 \begin{align}
   \centering
@@ -116,10 +116,10 @@ planes, where each plane is defined in the rest frame of the corresponding inter
   \label{ang_distr}
 \end{table}
 
-Lastly, the orthogonal angular basis of $P$ and $Y$ is adopted in the current analysis. 
-This choice is favoured by the fact that the integrals of the product of two $P$ or two $Y$ are known analytically. 
+Lastly, the orthogonal angular basis of $P$ and $Y$ is adopted in the current analysis.
+This choice is favoured by the fact that the integrals of the product of two $P$ or two $Y$ are known analytically.
 The latter significantly improves the description and implementation of the angular acceptance described in the following section.
-Note that the decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical 
+Note that the decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
 harmonics can be expressed as Wigner-$D$ matrices.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,7 +201,7 @@ asymmetric around $\cos\thetaK=0$.
     \caption{}
     \label{angDistr_phi}
   \end{subfigure}
-  \caption{Decay angles distributions from simulation data. No detector effects and no selection are included. 
+  \caption{Decay angles distributions from simulation data. No detector effects and no selection are included.
            Histograms are normalized to unity area.}
   \label{angDistr_all}
 \end{figure}
@@ -254,7 +254,7 @@ As for the parametrization of the angular acceptance, there are at least two way
 namely the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}.
 The current analysis implements the first one. The efficiency function is thus parameterized using orthogonal polynomials,
 which, when combined with the angular description formalism in the previous subsection, allows for fast analytic
-integration. Such a parametrization is defined by \equref{eff_func}.
+integration. Such a parametrization is:
 
 \begin{equation}
   \centering
@@ -306,7 +306,7 @@ In order for the efficiency moments $c^i_{jk}$ to be computed a definition of th
 simulated data where all the generating conditions are known. The efficiency is defined as the ratio of two angular \pdfs, namely
 \Pobs and \Pgen. The first is the angular \pdf that the simulated data follow after all stages of selection, whereas
 the latter is the angular \pdf with which the simulated data has been generated.
-It follows that the efficiency is defined by \equref{eff_def}.
+It follows that the efficiency is defined as:
 
 \begin{equation}
   \centering
@@ -330,7 +330,7 @@ to the {\it Kronecker delta} symbol. The later fact is required to properly norm
 The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
 This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
 that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
-same selection steps as data) as shown in \equref{eff_moms_calc}.
+same selection steps as data) as:
 
 \begin{equation}
 \centering
@@ -413,7 +413,7 @@ Having chosen the best possible set of moments the efficiency function has to be
 \end{equation}
 
 \noindent is satisfied. It turns out that this condition can be easily satisfied if the basis that the
-efficiency function is decomposed, see \equref{eff_func}, is modified as shown in \equref{eff_basis_transform}
+efficiency function is decomposed, see \equref{eff_func}, is modified as:
 
 \begin{align}
   \centering
@@ -521,8 +521,8 @@ efficiency moments. More details on the normalization weights approach can be fo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The angular acceptance described in section \secref{Accceptance} is determined with simulated \BsJpsiKst events.
 Thus the acceptance determination can be trusted only if the simulation accurately describes the detector as well as the
-physical amplitudes of the \BsJpsiKst decay. Specifically real and simulated data differences in the momentum distributions 
-of the final state particles may reflect a different acceptance in real compared to simulated data. 
+physical amplitudes of the \BsJpsiKst decay. Specifically real and simulated data differences in the momentum distributions
+of the final state particles may reflect a different acceptance in real compared to simulated data.
 Such differences are at a few percent level between real and simulated data.
 On the other hand, differences between data and simulation could be also attributed to
 differences in the underlying physical parameter values generating the simulated data compared to these
@@ -798,7 +798,7 @@ The quantities $\Delta\Gamma_s$ and $\Delta m_s$ have been introduced in \secref
 while the decay time efficiency function $\varepsilon(t)$ is estimated on background subtracted \BsJpsiKst
 data and parameterized as in \cite{LHCb-PAPER-2014-053}.
 
-% with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found 
+% with a the function $\varepsilon(t)= \frac{[1+\beta(t-t_0)][a(t-t0)]^n}{1+[a(t-t_0)]^n}$ found
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry \cite{LHCb-PAPER-2014-042}
 and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the background
@@ -881,8 +881,8 @@ A single angular acceptance is computed form the combined 2011 and 2012 data sam
 tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_neg}.
 
 Having addressed the simultaneous nature of the fit it is interesting to provide an insight on
-the connection between a \pdf and the likelihood estimation of the parameters of interest. Thus, starting from
-any \pdf $\mathcal{P}$ a likelihood function can be built as shown in \equref{likelihood}.
+the connection between a \pdf and the likelihood estimation of the parameters of interest.
+Thus, starting from any \pdf $\mathcal{P}$ a likelihood function can be built as:
 
 \begin{equation}
   \centering
@@ -907,7 +907,7 @@ However it is possible to extend the previous equation such that the expected nu
 function and can thus be estimated. This is useful in cases where the \pdf consists of a sum over two species, such as signal and background,
 or if the expected number of candidates depends on the parameters of interest $\vec{p}$. For the current analysis, the latter is
 exploited in order to estimate the $\Acp{i}$ asymmetries in the fit. The \pdf is extended by multiplying it with the Poisson
-probability to observe $n$ events when expecting $\expEvnts$ candidates, see \equref{extlikelihood}. 
+probability to observe $n$ events when expecting $\expEvnts$ candidates, see \equref{extlikelihood}.
 The expected number of candidates $\expEvnts$ depends on the
 parameters of interest which increases the statistical uncertainties. This is because the likelihood has more freedom
 as the number of parameters increases and thus the shape of the likelihood becomes less steep leading to larger statistical
@@ -920,7 +920,7 @@ L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \end{equation}
 
 For purely practical reasons one would typically choose to minimize the negative logarithm of the likelihood, which after some simple
-algebra and using the well known expression of the Poisson distribution results in \equref{extloglikelihood},
+algebra and using the well known expression of the Poisson distribution results in:
 
 \begin{align}
   \centering
@@ -1001,7 +1001,7 @@ There is one final step required to build the complete extended \pdf. That is th
 normalize the component \pdfs to the number of observed candidates it would be wrong since the observed number of candidates are diluted by production and detection
 asymmetry. Given that the parameters of interest, $\Acp{i}$, quantify the difference between the observed \BsbarJpsiKst and \BsJpsiKst decays, it follows that
 the observed number of these decays need to be corrected for. With input from \secref{experimentalAssym} where the production and detection
-asymmetries were estimated, the observed yields are made dependent on the $\Acp{i}$ asymmetry in \equref{acp_yields}
+asymmetries were estimated, the observed yields are made dependent on the $\Acp{i}$ asymmetry as:
 
 \begin{subequations}
   \label{acp_yields}
@@ -1011,7 +1011,7 @@ asymmetries were estimated, the observed yields are made dependent on the $\Acp{
   \end{align}
 \end{subequations}
 
-\noindent and then subsequently corrected for the production and detection asymmetry in \equref{norm_yields}.
+\noindent and then subsequently corrected for the production and detection asymmetry resulting in:
 
 \begin{equation}
 \yield{\pm} = \yield{\pm}_{\CP}  \left( 1 \pm \Adet \mp \Aprod \right).
