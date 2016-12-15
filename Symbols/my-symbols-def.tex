@@ -1,14 +1,14 @@
 % file for definitions that were not available in lhcb-symbols-def.tex
 
 % decay chains
-\newcommand{\BJpsiX}{\ensuremath{\Bq \to \jpsi X}\xspace}
+\newcommand{\BJpsiX}{\ensuremath{\Bq \to \jpsi \PX}\xspace}
 
 \newcommand{\BJpsiKst}{\ensuremath{\Bz_{(\squark)}\to \jpsi \Kstarzb}\xspace}
 \newcommand{\BdJpsiKst}{\ensuremath{\Bd \to \jpsi \Kstarz}\xspace}
 \newcommand{\BsJpsiKst}{\ensuremath{\Bs \to \jpsi \Kstarzb}\xspace}
 \newcommand{\BsbarJpsiKst}{\ensuremath{\Bsb \to \jpsi \Kstarz}\xspace}
 
-\newcommand{\BJpsiKpi}{\ensuremath{\Bz_{(\squark)} \to \jpsi \kaon \pi}\xspace}
+\newcommand{\BJpsiKpi}{\ensuremath{\Bz_{(\squark)} \to \jpsi \kaon \pion}\xspace}
 \newcommand{\BdJpsiKpi}{\ensuremath{\Bd \to \jpsi \Kp \pim}\xspace}
 \newcommand{\BsJpsiKpi}{\ensuremath{\Bs \to \jpsi \Km \pip}\xspace}
 
@@ -17,7 +17,7 @@
 \newcommand{\BdJpsipipi}{\ensuremath{\Bd \to \jpsi \pip\pim}\xspace}
 \newcommand{\BsJpsipipi}{\ensuremath{\Bs \to \jpsi \pip\pim}\xspace}
 
-\newcommand{\BsJpsiPhi}{\ensuremath{\Bs\to \jpsi \phi}\xspace}
+\newcommand{\BsJpsiPhi}{\ensuremath{\Bs\to \jpsi \Pphi}\xspace}
 \newcommand{\BsJpsiKK}{\ensuremath{\Bs \to \jpsi \Kp \Km}\xspace}
 
 \newcommand{\LbJpsipK}{\ensuremath{\Lb \to \jpsi \proton \Km}\xspace}
@@ -28,7 +28,7 @@
 
 \newcommand{\BsJpsiKstPolState}[1]{\ensuremath{\Bs\to \left(\jpsi \Kstarzb\right)_{#1}}\xspace}
 \newcommand{\BdJpsiRhoPolState}[1]{\ensuremath{\Bd\to \left(\jpsi \rhoz\right)_{#1}}\xspace}
-\newcommand{\BsJpsiPhiPolState}[1]{\ensuremath{\Bs\to \left(\jpsi \phi\right)_{#1}}\xspace}
+\newcommand{\BsJpsiPhiPolState}[1]{\ensuremath{\Bs\to \left(\jpsi \Pphi\right)_{#1}}\xspace}
 
 \newcommand{\Sigmapmumu}{\ensuremath{\Sigmares^+ \to \proton \mumu}\xspace}
 
@@ -41,9 +41,9 @@
 % masses
 \newcommand{\mass}[1]{\ensuremath{m_{#1}}\xspace}
 \newcommand{\mKK}{\ensuremath{\mass{\kaon\kaon}}\xspace}
-\newcommand{\mkpi}{\ensuremath{\mass{\kaon\pi}}\xspace}
-\newcommand{\mmumu}{\ensuremath{\mass{\mmu\mmu}}\xspace}
-\newcommand{\mJpsiKpi}{\ensuremath{\mass{\jpsi \kaon\pi}}\xspace}
+\newcommand{\mkpi}{\ensuremath{\mass{\kaon\pion}}\xspace}
+\newcommand{\mmumu}{\ensuremath{\mass{\mumu}}\xspace}
+\newcommand{\mJpsiKpi}{\ensuremath{\mass{\jpsi \kaon\pion}}\xspace}
 
 % particles
 \newcommand{\rhoz}{\ensuremath{\Prho^0}\xspace}
@@ -52,10 +52,10 @@
 \newcommand{\BdBdbarSyst}{\ensuremath{\Bd-\Bdb}\xspace}
 
 % variables
-\newcommand{\phihel}{\ensuremath{\varphi_{\text h}}\xspace}
+\newcommand{\phihel}{\ensuremath{\varphi_{\rm h}}\xspace}
 \newcommand{\thetaK}{\ensuremath{\theta_{\kaon}}\xspace}
 \newcommand{\thetapi}{\ensuremath{\theta_{\pion}}\xspace}
-\newcommand{\thetamu}{\ensuremath{\theta_{\mu}}\xspace}
+\newcommand{\thetamu}{\ensuremath{\theta_{\mmu}}\xspace}
 
 \newcommand{\DOF}{\ensuremath{\rm DoF}\xspace}
 \newcommand{\nDoF}{\ensuremath{\rm nDoF}\xspace}
@@ -161,10 +161,10 @@
 \newcommand{\BRvisof}[1]{\ensuremath{\BRvis(#1)}\xspace}
 \newcommand{\BRof}[1]{\ensuremath{\BF(#1)}\xspace}
 
-\newcommand{\phiS}[1]{\ensuremath{\phi_{\squark}^{\tiny\text {#1}}}\xspace}
-\newcommand{\phiq}{\ensuremath{\phi_q}\xspace}
-\newcommand{\DeltaPhis}[1]{\ensuremath{\Delta\phi_{\squark}^{#1}}\xspace}
-\newcommand{\DeltaPhisJpsiPhi}[1]{\ensuremath{\Delta\phi^{\jpsi\phi}_{\squark,{#1}}}\xspace}
+\newcommand{\phiS}[1]{\ensuremath{\phis^{\tiny\text{#1}}}\xspace}
+\newcommand{\phiq}{\ensuremath{\phi_\quark}\xspace}
+\newcommand{\DeltaPhis}[1]{\ensuremath{\Delta\phis^{#1}}\xspace}
+\newcommand{\DeltaPhisJpsiPhi}[1]{\ensuremath{\Delta\phi^{\jpsi\Pphi}_{\squark,{#1}}}\xspace}
 
 % for trigger chapter
 \def\muonID {Muon-ID\xspace}
