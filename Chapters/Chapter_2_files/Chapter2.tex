@@ -20,7 +20,7 @@ thus increasing the purity of the analyzed data.
 
 The two {\it Cherenkov} based PID sub-detectors, \richone and \richtwo, aim at identifying low and
 high momentum tracks respectively. The way the \rich systems provide particle identification information is
-based on the velocity measurement implied by the angle of emission of a Cherenkov radiation.
+based on the velocity measurement implied by the angle of emission of Cherenkov radiation.
 The muon system also plays a role in PID. The presence of hits in the muon stations that
 could be associated to a certain track increase the probability that this track corresponds to real muon,
 see \chapref{Muon_id_hlt} also. Lastly, the calorimeter systems aim at increasing the chances of correctly
@@ -48,14 +48,15 @@ Further details regarding the PID performance of \lhcb can be found in the overa
 \section{Calorimetry}
 \label{det_calo}
 Calorimeters in \lhcb measure the energy of particles provided that all of the subsequent particle decays are
-contained withing the calorimeter. Furthermore in the case of neutral particles, like photons or \piz,
+contained withing the calorimeter. Furthermore in the case of neutral particles, like photons,
 calorimeters are the only mean with which these neutral particles can be detected; since the tracking system
 only detect charged particles. There are four relevant sub-detectors
 that enable proper calorimetry at \lhcb. First the combination of the {\it Scintillating Pad Detector} (\spd)
 and the {\it Pre Shower} (\presh) detectors with a lead layer in-between them enables to distinguish \piz from
-photons, and photons from electrons which leave the same signature in the electromagnetic calorimeter.
-Subsequently the electromagnetic, \ecal, and hadronic, \hcal, calorimeters measure the energy of photons
-and neutral hadrons respectively. The calorimeter system is not explicitly used in the analysis of \chapref{Data_Analysis}.
+photons, and photons from electrons. Subsequently the electromagnetic, \ecal, and hadronic,
+\hcal, calorimeters measure the energy of photons and neutral hadrons respectively.
+Note that the \piz decays into two photons as a result the two photons might be interpreated as a single by the \ecal.
+The calorimeter system is not explicitly used in the analysis of \chapref{Data_Analysis}.
 However, they are implicitly used since information from the \spd and \presh sub-detectors are used
 by the \lzero trigger system to estimate the overall {\it multiplicity} of an event. Multiplicity essentially
 provide a quick estimate, to the \lzero trigger system, on whether a certain event is interesting from physics
@@ -69,7 +70,7 @@ stops most of the hadrons and thus preventing them from being mis-identified by 
 \section{The \BsJpsiKst Decay in \lhcb}
 \label{BspsiKst_at_lhcb}
 
-The \BsJpsiKst process is a typical channel for which the \lhcb has a high detection efficiency.
+The \BsJpsiKst process, with \Jpsimumu and \KstKpi, is a typical channel for which the \lhcb has a high detection efficiency.
 The presence of muon in the final state yields a high trigger efficiency, while the intermediate
 \Kstarz resonance decays within the \velo into a \Kp and a \pim thus resulting in two Long tracks.
 Thanks to PID information and the optimized selection described in \secref{det_pid} most of the background
@@ -108,7 +109,7 @@ more detail in \figref{det_jpsikst_cand}.
     \label{det_evt_display_side}
   \end{subfigure}
   \caption{Horizontal (top) and vertical (bottom) cross section of an \lhcb event.
-           Straight lines indicate Long tracks; where kaons, pions, muons, protons and electrons
+           Long tracks are indicated by lines; where kaons, pions, muons, protons and electrons
            are represented with red, orange, green, magenta and blue color respectively. \ecal and \hcal energy depositions
            are shown as blue and orange bars respectively; the length of each bar is proportional to the energy deposited.
            Muon hits are illustrated with green blocks.}

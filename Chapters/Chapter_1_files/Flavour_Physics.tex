@@ -5,9 +5,9 @@ is given in what follows. The section concludes with introducing the so called {
 which is the core of {\it flavor physics} in the quark sector of the Standard Model.
 
 \subsubsection{Quark flavour mixing}
-By applying the Higgs mechanism \cite{PhysRevLett.13.321,PhysRevLett.13.508} to the Standard Model Lagrangian the Higgs field obtains a
-{\it vacuum expectation value}, which is the lowest energy value of the Higgs field potential.
-After this step the Yukawa term for the quark fields, ignoring quark-higgs field interaction terms, is:
+By applying the Higgs mechanism \cite{PhysRevLett.13.321,PhysRevLett.13.508} the Standard Model Lagrangian
+the Higgs field obtains a {\it vacuum expectation value}, which is the lowest energy value of the Higgs
+field potential. After this step the Yukawa term for the quark fields, ignoring quark-higgs field interaction terms, is:
 
 \begin{subequations}
 \label{yukawa_flavour}
@@ -22,7 +22,7 @@ After this step the Yukawa term for the quark fields, ignoring quark-higgs field
 
 \noindent where $v$ is the Higgs vacuum expectation value and $y_{ij}^{u,d}$ are complex valued numbers called {\it Yukawa couplings}.
 The latter are free parameters that represent the coupling strength between Higgs and quark fields.
-Note that for equations \equref{yukawa_flavour} to \equref{CClagrangian} it is implied that $u$ and $d$ indicate
+Note that for equations \ref{yukawa_flavour} to \ref{CClagrangian} it is implied that $u$ and $d$ indicate
 any up or a down type quark. The generation of the up(down) type quark is specified by the indices $i,j$,
 whereas, indices $L,R$ indicate the left or right handedness of the quark field.
 Finally the matrix $m^{u,d}$ expresses the desired quark masses.
@@ -36,12 +36,12 @@ masses the matrix $m^{u,d}$ has to be diagonalized, as:
 
 \begin{equation}
   \centering
-  m^{d,u}_{\text diag} = V_L^{d,u} m^{d,u} \left(V_R^{d,u}\right)^{\dagger},
+  m^{d,u}_{\rm diag} = V_L^{d,u} m^{d,u} \left(V_R^{d,u}\right)^{\dagger},
   \label{diagM}
 \end{equation}
 
 \noindent where the matrices $V$ are required to be unitary. Since \equref{yukawa_flavour} has to stay intact after $m^{d,u}$ is replaced with
-$m^{d,u}_{\text diag}$, quark fields need to be rotated as well as shown in \equref{quark_rotation}, such that they cancel the additional $V$ matrices
+$m^{d,u}_{\rm diag}$, quark fields need to be rotated as well as shown in \equref{quark_rotation}, such that they cancel the additional $V$ matrices
 of \equref{diagM}.
 
 \begin{equation}
@@ -77,7 +77,7 @@ The resulting matrix $V_{\text{CKM}}$ is the so called {\it CKM mixing matrix}:
   \end{equation}
 
 The charged current term, \equref{CClagrangianMass}, incorporates an important aspect of the weak interaction,
-namely the {\it quark flavor mixing}. The latter is due to the fact that quark mass eigenstates are super-positions
+namely the {\it quark flavor mixing}. The latter is due to the fact that quark mass eigenstates are superpositions
 of the flavour eigenstates.
 
 \begin{figure}[h!]
@@ -95,8 +95,8 @@ The probability of such a transition is given by the corresponding element of th
 
 \subsubsection{CKM mixing matrix}
 The CKM matrix is a unitary matrix which, as previously mentioned, describes the strength of quark couplings, or in other words,
-the probability of quark flavour transitions. The elements of the CKM matrix have been measured, see \eg Chapter 12 of \cite{PDG},
-showing the following structure:
+the square root of the probability of a certain quark flavour transitions. The elements of the CKM matrix have been measured,
+see \eg Chapter 12 of \cite{PDG}, showing the following structure:
 
 \begin{equation}
   |V_{\text{CKM}}|
@@ -106,11 +106,11 @@ showing the following structure:
   \end{equation}
 
 \noindent Essentially the structure implies that transitions between generations
-are suppressed with respect to transitions within the same generation, in a hierarchical way. The most suppressed transitions are between
+are suppressed with respect to transitions within the same generation in a hierarchical way. The most suppressed transitions are between
 the first and third generations followed by the ones between the second and third and the least suppressed are between first and second.
 
 Testing the unitarity of the CKM matrix is a central goal of flavour physics. In order to achieve such tests a
-parametrization of the CKM matrix needs to be defined. After exploiting the unitarity of $V_{\rm CKM}$ and all the
+parametrization of the CKM matrix is useful. After exploiting the unitarity of $V_{\rm CKM}$ and all the
 redundant quark field phases, the CKM matrix has, by construction, 3 real parameters and one complex phase.
 The choice of the CKM matrix parametrization is \aprior arbitrary. However due to the observed structure the so called
 {\it Wolfenstein} \cite{Wolfenstein:1983yz,Buras-wolfenstein} parametrization is a standard choice.
@@ -142,10 +142,10 @@ dynamics in the \Bs and \Bd meson systems.
   \end{align}
 \end{subequations}
 
-\noindent These two relations, after dividing by $\Vcd\Vcb^*$, $\Vcs\Vcb^*$ respectively for \Bd and \Bs, are illustrated in \figref{unitTriangles}.
-Note that the CKM element $\Vts$ has a complex part at higher order in $\lambda$, see section 13.3 of \cite{PDG}.
-The coordinates of the apex of the two triangles are defined as $(\bar{\rho},\bar{\eta})$ and $(\bar{\rho}_s,\bar{\eta}_s)$ respectively for \figref{unitTriangles_bd} and
-\figref{unitTriangles_bs}. By inspecting the triangles one can define the angles as shown in \equref{ckm_angles_def}.
+\noindent These two relations, after dividing by $\Vcd\Vcb^*$, $\Vcs\Vcb^*$ respectively for \Bd and \Bs,
+are illustrated in \figref{unitTriangles}. Note that the CKM element $\Vts$ has a complex part at higher
+order in $\lambda$, see section 13.3 of \cite{PDG}. By inspecting the triangles one can define the angles
+as shown in \equref{ckm_angles_def}.
 
 \begin{figure}[h]
   \centering
@@ -186,7 +186,7 @@ CKM matrix parametrization.
 \begin{figure}[!h]
   \centering
     \includegraphics[trim=0cm 0.5cm 0cm 1.5cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
-    \caption{Global fit of the apex $(\bar{\rho},\bar{\eta)}$ of the \Bd triangle \cite{ckm-fitter-phis-pred}.
+    \caption{Global fit of the \Bd triangle \cite{ckm-fitter-phis-pred}.
              Inputs from measurements of flavor physics observables are indicated by colored bands.}
     \label{unitarity_triangle}
 \end{figure}

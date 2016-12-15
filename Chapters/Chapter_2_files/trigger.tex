@@ -2,22 +2,22 @@
 The trigger system is responsible for keeping the amount of data that the detector writes to offline storage
 at a manageable level, since it is not feasible to save every collision-{\it event}. The three levels of
 the \lhcb trigger system decide whether a certain event, is interesting from physics point
-of view and should thus be written out to storage. The criteria used to filter out the interesting events 
+of view and should thus be written out to storage. The criteria used to filter out the interesting events
 get progressively more stringent at each trigger level. The whole trigger chain is optimized for maximum
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads part of the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
-\hltone and \hlttwo, wrote out to storage at $5\khz$ at the end of the 2012 run The organization of the trigger 
-system is done in {\it trigger lines}. Essentially, each trigger line is a collection of selection criteria similar 
-to the ones applied during the offline data analysis, but looser. 
+\hltone and \hlttwo, writes out to storage at $5\khz$ during the 2012 run ( and at $12.5\khz$ in \runtwo).
+The organization of the trigger system is done in {\it trigger lines}. Essentially, each trigger line is
+a collection of selection criteria similar to the ones applied during the offline data analysis, but looser.
 
 Furthermore, the \hlt trigger lines are software
 implementations and can thus be quite general as to what they trigger on, or on the other hand they can
-be very sophisticated. For example a trigger line could require the presence of two muons forming a vertex 
-with an invariant mass window around the nominal \jpsi mass. Or in case of particular decay channel a 
-trigger line could reconstruct the entire $n-\text{body}$ particle cascade and perhaps require from 
-particular quantities to satisfy some criteria, \ie the distance between the primary and secondary vertex.   
+be very sophisticated. For example a trigger line could require the presence of two muons forming a vertex
+with an invariant mass window around the nominal \jpsi mass. Or in case of particular decay channel a
+trigger line could reconstruct the entire $n-\text{body}$ particle cascade and perhaps require from
+particular quantities to satisfy some criteria, \ie the distance between the primary and secondary vertex.
 The first trigger level is a pure hardware implementation whilst the other two are software only.
-Complicated selection criteria are not affordable from computation power point of view, given the
+Complicated selection criteria are not affordable due to limited computing power, given the
 $40\mhz$ input rate of \lzero. After the rate is reduced down to $1\mhz$ the data is read out and
 passed to the subsequent higher level trigger, where tracking and PID information become available.
 
@@ -40,7 +40,7 @@ passed to the subsequent higher level trigger, where tracking and PID informatio
   \label{det_trigger_scheams}
 \end{figure}
 
-The overall efficiency of the \lhcb trigger system is $\sim 90\%$ for dimuon trigger lines and $\sim 30\%$ 
+The overall efficiency of the \lhcb trigger system is $\sim 90\%$ for dimuon trigger lines and $\sim 30\%$
 
 \begin{figure}[t!]
   \centering
@@ -69,20 +69,19 @@ The overall efficiency of the \lhcb trigger system is $\sim 90\%$ for dimuon tri
   \label{det_run_one_muon_line_eff}
 \end{figure}
 
-\noindent for multi-body lines with hadronic final states. The efficiency is estimated with the so called {\it tis-tos} 
-method. In the context to of this method a given reconstructed object, \ie a muon track, might cause a 
-trigger line to fire, given that it fulfills the requirements of that particular line. In that case the 
-muon track is characterized as {\it Trigger On Signal}. On the other hand the same trigger line might 
-fire regardless of the muon track, for example because something else in the event might cause the line 
-to fire. In that case the muon track is characterized as {\it Trigger Independent of Signal}. 
-The so called {\it tos efficiency} of a given trigger line is defined as the ratio of ${\rm tis}\&{\rm tos}$ 
-over ${\rm tis}$. A complete performance study of the trigger system can be found in chapter 5 
-of \cite{Aaij:2014jba}. Since muons play a key role in the current thesis the efficiencies of the muon 
+\noindent for multi-body lines with hadronic final states. The efficiency is estimated with the so
+called {\it tis-tos} method \cite{Aaij:1493820}. In the context to of this method a given reconstructed object,
+\ie a muon track, might cause a trigger line to fire, given that it fulfills the requirements of that particular line.
+In that case the muon track is characterized as {\it Trigger On Signal}. On the other hand the same trigger line might
+fire regardless of the muon track, for example because something else in the event might cause the line
+to fire. In that case the muon track is characterized as {\it Trigger Independent of Signal}.
+The so called {\it tos efficiency} of a given trigger line is defined as the ratio of ${\rm tis}\&{\rm tos}$
+over ${\rm tis}$. A complete performance study of the trigger system can be found in chapter 5
+of \cite{Aaij:2014jba}. Since muons play a key role in the current thesis the efficiencies of the muon
 trigger lines for the three stages of the \lhcb trigger system are  shown in \figref{det_run_one_muon_line_eff}.
 
-
-Lastly there are two more features of the \lhcb trigger system worth-mentioning. First is the so called
-{\it deferred} trigger, where $20\%$ of the data triggered by \lzero are temporarily stored and processed by the \hlt
+There are two more features of the \lhcb trigger system worth-mentioning. First is the {\it deferred}
+trigger scheme, according to which, $20\%$ of the data triggered by \lzero are temporarily stored and processed by the \hlt
 during the periods where the \lhc does not provide colliding beams and thus the \lhcb trigger infrastructure
 would otherwise idle. This effectively increases the amount of available computing power which can be used
 to improve other features of the trigger system. The second interesting feature is the novel technique of
