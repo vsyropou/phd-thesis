@@ -172,7 +172,7 @@ distributed according to the \pdf of \equref{ang_terms}, \ie without any accepta
 
 Understanding the shape of the acceptance in the $\cos\thetaK$ projection begins with the observation
 that the phase space region of $(\ptrans{\pi}-\cos\thetaK)$ is not uniformly populated. This is related to kinematic
-constrains, explained in the next paragraph. Qualitatively speaking, it turns out that \Bs candidates tend to cluster
+constrains, explained in the next paragraph. Qualitatively speaking, it turns out that \Bs decays tend to cluster
 close to the region of $(\ptrans{\pi}-\cos\thetaK|_{-1})$ compared to the $(\ptrans{\pi}-\cos\thetaK|_{+1})$ region.
 This picture is less pronounced in the case of $(\ptrans{\kaon}-\cos\thetaK)$ phase space region, where the $\ptrans{\kaon}$
 spectrum is harder and the $(\ptrans{\kaon}-\cos\thetaK)$ is more symmetric with respect to $\cos\thetaK$. Given these
@@ -572,7 +572,7 @@ converge. The full procedure by steps can be summarized as:
 \begin{enumerate}
 \item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
 \item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
-\item Weigh each candidate in the simulated data for the difference between the angular \pdf obtained from the previous fit and the angular
+\item Weight each candidate in the simulated data for the difference between the angular \pdf obtained from the previous fit and the angular
       \pdf used to generate the simulated data. This essentially means that the underlying physics of the weighted simulated data corresponds
       to the estimated physics parameters obtained in the previous step.
 \item Compare the 2D $(p_\kaon,p_\pion)$ momentum distribution between the physics weighted simulated data of the previous step with the
@@ -730,12 +730,12 @@ While the \Bs and \Bd background subtracted muon pair mass background subtracted
 Indeed, the \Bs \mkpi \sPlot of \figref{mkpiPlot_raw} seems to be slightly distorted compared to the one of \Bd \mkpi.
 Since there is no \aprior reason why the \Kstarz \pwave
 should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
-the $K\pi$ \swave and the \Kstarz, which may be stronger in the \Bs decays compared to the \Bd ones. In order
+the $\kaon\pi$ \swave and the \Kstarz, which may be stronger in the \Bs decays compared to the \Bd ones. In order
 to check the validity of this hypothesis, two additional studies are performed. First it was checked that the non-resonant
 background treatment propagated to the \sWeights was not responsible for this behavior. Indeed, no significant difference
 between the \Bs \mkpi spectrum using \sWeights computed with and without simulated data injection was found. Second, the \mkpi
 is corrected for angular acceptance effects, by weighting each candidate with the inverse of the acceptance function of \equref{eff_func_new}.
-This way the interference between the $K\pi$ \swave and the \Kstarz \pwave vanishes, since
+This way the interference between the $\kaon\pi$ \swave and the \Kstarz \pwave vanishes, since
 for a perfect acceptance the interference terms in \tabref{ang_terms}, integrated over all angles, evaluate to zero.
 This is demonstrated in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
 the efficiency correction. This is a clear indication of the presence of stronger interference in the \Bs case compared to the \Bd.
@@ -902,8 +902,8 @@ by the negative second derivative of the log likelihood at the maximum,
 \label{covariance}
 \end{equation}
 
-Addressing now to the concept of the extended likelihood. In \equref{likelihood} the number of candidates is fixed.
-However it is possible to extend the previous equation such that the expected number of candidates shows up as a parameter in the likelihood
+Regarding the concept of the extended likelihood: In \equref{likelihood} the number of candidates is fixed.
+However, it is possible to extend the previous equation such that the expected number of candidates shows up as a parameter in the likelihood
 function and can thus be estimated. This is useful in cases where the \pdf consists of a sum over two species, such as signal and background,
 or if the expected number of candidates depends on the parameters of interest $\vec{p}$. For the current analysis, the latter is
 exploited in order to estimate the $\Acp{i}$ asymmetries in the fit. The \pdf is extended by multiplying it with the Poisson
