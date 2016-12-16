@@ -1,8 +1,13 @@
+
+
+% compile with xelatex
+
 \documentclass[11pt]{standalone}
 \usepackage{color}
 \usepackage[cmyk]{xcolor}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{upgreek}
 \usepackage{libertine}
 
 \usepackage{tikz}
@@ -14,24 +19,30 @@
 %\PreviewEnvironment{tikzpicture}
 %\setlength\PreviewBorder{5pt}%
 
-\newcommand{\lmu}[1][]{\mu^{#1}}
-\newcommand{\kaon}[1][0]{\text{K}^\text{#1}}
-\newcommand{\pion}[1][0]{\pi^\text{#1}}
+\def\PK      {\ensuremath{\rm K}}
+\def\PJ      {\ensuremath{\rm J}}
+\def\Ppsi    {\ensuremath{\uppsi}}
+\def\PB      {\ensuremath{{\rm B}}}
+
+\newcommand{\lmu}[1][0]{\ensuremath{\upmu}^\text{#1}}
+\newcommand{\kaon}[1][0]{\ensuremath{\PK}^\text{#1}}
+\newcommand{\pion}[1][0]{\ensuremath{\uppi}^\text{#1}}
+\newcommand{\Jpsi}{\ensuremath{{\PJ\mskip -3mu/\mskip -2mu\Ppsi\mskip 2mu}}}
+\newcommand{\Bs}{\PB^0_{\rm s}}
 \newcommand{\Kp}{\kaon[+]}
 \newcommand{\Km}{\pion[--]}
 \newcommand{\KK}{\Kp\Km}
-\newcommand{\Jpsi}{J/\psi}
-\newcommand{\Bs}{\text{B}_\text{s}^\text{0}}
-\newcommand{\thetaK}{\theta_{K}}
-\newcommand{\thetal}{\theta_{\mu}}
+
+\newcommand{\thetaK}{\theta_{\PK}}
+\newcommand{\thetal}{\theta_{\upmu}}
 \newcommand{\cthetaK}{\cos\thetaK}
 \newcommand{\cthetal}{\cos\thetal}
-\newcommand{\phihel}{\varphi_{\text{h}}}
-\newcommand{\psitr}{\psi_{\text{tr}}}
-\newcommand{\thetatr}{\theta_{\text{tr}}}
-\newcommand{\cpsitr}{\cos\psitr}
-\newcommand{\cthetatr}{\cos\thetatr}
-\newcommand{\phitr}{\varphi_{\text{tr}}}
+\newcommand{\phihel}{\varphi_{\rm h}}
+% \newcommand{\psitr}{\psi_{\text{tr}}}
+% \newcommand{\thetatr}{\theta_{\text{tr}}}
+% \newcommand{\cpsitr}{\cos\psitr}
+% \newcommand{\cthetatr}{\cos\thetatr}
+% \newcommand{\phitr}{\varphi_{\text{tr}}}
 
 \begin{document}
 \sffamily

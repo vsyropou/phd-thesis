@@ -62,6 +62,9 @@ by the \lzero trigger system to estimate the overall {\it multiplicity} of an ev
 provide a quick estimate, to the \lzero trigger system, on whether a certain event is interesting from physics
 point of view. Furthermore, the lead material that is inter-layered in the \ecal and \hcal active detector material,
 stops most of the hadrons and thus preventing them from being mis-identified by as muons by the subsequent muon stations.
+Lastly, information from the \ecal and \hcal is taken into account by PID algorithms that expolit information from
+the reset of the PID systems.
+
 
 \section{The trigger system}
 \label{det_trigger}
@@ -79,7 +82,8 @@ compared to the \BdJpsiKst whose invariant mass is very close to the one of the 
 Thus, special care needs to be taken when modeling the mass distribution of these two channels.
 The total \BsJpsiKst yield accumulated over the full \runone is about 1800 signal candidates, see \equref{signal_yields}.
 An \lhcb event is shown in \figref{det_evt_display}. A reconstructed \BsJpsiKst decay candidate is shown in
-more detail in \figref{det_jpsikst_cand}.
+more detail in \figref{det_jpsikst_cand}. Note how some of the \velo tracks appear to originate from the
+primary vertex. Also note the how the \Bs final state tracks intersect at the secondary vertex.
 
 \begin{figure}[t]
   \centering
@@ -89,8 +93,7 @@ more detail in \figref{det_jpsikst_cand}.
   \caption{A \BsJpsiKst candidate. The purple and cyan circles correspond to the primary and secondary
            vertices respectively. The dashed cyan line, is not an actual track; it illustrates the \Bs flight distance.
             Black lines represent \velo tracks and colored lines indicate particles as in \figref{det_evt_display}.
-            Note how \velo tracks appear to originate from the primary vertex. Also note the how \Bs final state tracks
-            ({\color{green}\mmu},{\color{green}\mmu},{\color{red}\kaon},{\color{orange}\pion}) intersect at the secondary vertex.}
+            Final state particles are shown with {\color{green}\mmu}, {\color{green}\mmu}, {\color{red}\kaon}, {\color{orange}\pion} respectivelly.}
   \label{det_jpsikst_cand}
 \end{figure}
 
