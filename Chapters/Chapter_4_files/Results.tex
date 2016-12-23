@@ -1,7 +1,7 @@
 After selecting the data as described in \secref{Event_Selection} the angular model of \secref{Angular_Analysis} is fitted to the data.
 The results of this fit are presented in the current section. Systematic uncertainties are discussed in \secref{systemics}.
 The likelihood function is profiled as a function  the parameters of interest in \secref{nllscans} to gain confidence on the validity
-of the minimum. Finally a toy study is performed in \secref{Toy_Experiments_Study} to validate the fitting procedure
+of the minimum. Finally a pseudo-experiment study is performed in \secref{Toy_Experiments_Study} to validate the fitting procedure
 and determine potential fit bias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -534,16 +534,16 @@ The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Pseudo Experiments Study}
+\subsection{Pseudo-experiments Study}
 \label{Toy_Experiments_Study}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The current subsection addresses the robustness of the fitting angular \pdf.
-This is done by means of a so called {\it pseudo experiments} study. This procedure
+This is done by means of a so called {\it pseudo-experiments} study. This procedure
 can point out any potential biases that are introduced by the fitting model.
 These biases are finally assigned as a systematic to the parameters of interest.
 
-In the current toy experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
+In the current pseudo-experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
 distributions. The generated data-set is fitted again with the same \pdf and a new set of fitted parameters is obtained. Potential
 biases on the parameters of interest are estimated based on the following {\it pull} variable:
 
@@ -556,7 +556,7 @@ P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
 \label{pull_def}
 \end{equation}
 
-\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted (from each toy experiment) values of a given parameter of interest
+\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted (from each pseudo-experiment) values of a given parameter of interest
 respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
 Essentially the pull variable expresses the generated-fitted parameter value difference in units of one standard deviation.
 
@@ -567,7 +567,7 @@ estimates of \secref{Parameters_of_Interest}. Particularly it means that the pro
 $[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$. Or in other words if the
 real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained
 in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose"
-and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the pseudo experiment
+and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the pseudo-experiment
 is a suitable replacement of $p^{\rm true}$.
 
 \begin{figure}[!t]
@@ -758,7 +758,7 @@ The corresponding biases are summarized in \tabref{pull_table}.
     $               \deltaS{3}$ & $+0.138$ & $+0.135$ & $0.921$ & $0.916$  & $0.024$ \\
     $               \deltaS{4}$ & $-0.090$ & $-0.092$ & $0.975$ & $0.965$  & $0.013$ \\
   \end{tabular}
-  \caption{Summary of toy study. Mean and rms of each pull distribution is shown for two case.
+  \caption{Summary of pseudo-experiment study. Mean and rms of each pull distribution is shown for two case.
            The first labeled as pull implies that the values are computed directly from the distribution,
            whereas the second labeled as fit corresponds to the fitted Gaussian curve on to of each pull distribution.}
   \label{pull_table}
