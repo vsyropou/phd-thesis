@@ -1,5 +1,5 @@
 In the recent \lhcb publication \cite{phis-3fb-paper} of the \phis measurement one can find the best fit value for the $\lambda_{\jpsi\Pphi}$
-parameter, mentioned in \equref{lambda_cpv}. This parameter along with the quoted \phis, shown in \equref{phis_lambda_result},
+parameter, mentioned in \equref{lambda_cpv}. This parameter, along with the quoted \phis, shown in \equref{phis_lambda_result},
 can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 
 \begin{subequations}
@@ -13,8 +13,8 @@ can be used to estimate the penguin parameters $(\aPeng{},\thPeng{})$.
 
 \noindent Based on \equref{cp_asym_lambda} and according to the formalism in \secref{penguin_formalism}, the $\DeltaPhis{}$ estimation
 due to penguin topologies based on \BsJpsiPhi decays comes with an uncertainty of about $0.05$ rad, see Eq. 5.125 of \cite{DeBruyn-thesis},
-which is not precise enough given the uncertainty of $\phis^{\jpsi\Pphi}$. This is related to the suppression factor $\epsilon$, mentioned in
-\secref{jpsiphi_amp_struct}, that the penguin topologies receive in the \BsJpsiPhi decay.
+which is not precise enough given the uncertainty of $\phis^{\jpsi\Pphi}$. This is related to the suppression factor $\epsilon$,
+mentioned in \secref{jpsiphi_amp_struct}, which the penguin topologies receive in the \BsJpsiPhi decay.
 
 In order to increase the precision on the penguin parameters the \grpsuthree flavor symmetry is
 invoked such that more channels similar to \BsJpsiPhi are involved in the computation of $(\akPeng-\thkPeng)$.
@@ -28,7 +28,7 @@ details of the fitting strategy to estimate the penguin parameters.
 \label{bsjpsikst_chanell}
 
 The \BsJpsiKst channel is a flavor specific decay with the same topology as \BsJpsiPhi.
-The corresponding Feynman diagrams are illustrated in the following figure:
+The corresponding Feynman diagrams are illustrated in \figref{bs2jpsikst}:
 
 \begin{figure}[h]
   \centering
@@ -50,10 +50,10 @@ contributes as much as the color suppressed tree diagram does to the total ampli
 
 As mentioned in \secref{penguin_formalism} the \BsJpsiKst channel provides access to \Acp{\rm dir} only.
 Thus, additional information is required, via the $\Hobs{k}'$ observable, in order to probe $(\akPeng,\thkPeng)$.
-Both observables are based on measurements that took place in \chapref{Data_Analysis} of the current thesis.
+Both observables are based on measurements that are described in \chapref{Data_Analysis} of the current thesis.
 The first observable is reported in \tabref{bestFitResult}, with the associated systematic quoted in \tabref{systematics_acp}.
-Whereas the $\Hobs{k}'$ observable is constructed from \BRof{\BsJpsiKst} reported in \equref{Br_total} and shown in
-the following equations:
+The $\Hobs{k}'$ observable, constructed from \BRof{\BsJpsiKst}, is reported in \equref{Br_total}
+and is determiend to be:
 
 \begin{subequations}
   \label{hobs_jpsikst}
@@ -64,7 +64,7 @@ the following equations:
   \end{align}
 \end{subequations}
 
-\noindent Where the last uncertainty is due to the hadronization factor $|\formFctr{k}/\formFctr{k}'|$ necessary for the construction of $\Hobs{k}'$.
+\noindent The last uncertainty is due to the hadronization factor $|\formFctr{k}/\formFctr{k}'|$ necessary for the construction of $\Hobs{k}'$.
 The hadronization factors are calculated theoretically based on the method suggested in \cite{eff-hamiltonian-bs-syst}.
 The exact numbers used can be found in \cite{DeBruyn-thesis}. Note that the uncertainty on $\Hobs{k}'$ is dominated by these factors.
 
@@ -89,7 +89,7 @@ the \BsJpsiKst channel only \cite{bsjpsikst-paper}, resulting in:
 \end{subequations}
 
 \noindent where most of the uncertainty is statistical in nature. The $\chisq$ fit performed here is similar
-to the one described in \secref{penguin_chi2_fit}, hence details of the fitting strategy are postponed for later.
+to the one described in \secref{penguin_chi2_fit}, hence details of the fitting strategy are postponed untill later.
 
 \subsection{The \BdJpsiRho Channel}
 \label{bsjpsirho_chanell}
@@ -147,7 +147,7 @@ and \BdJpsiRho is assumed, implying:
 \label{su3_apply}
 \end{equation}
 
-\noindent Second, the hadronic ratios necessary for building the $\Hobs{k}$ observable is assumed to be the same between
+\noindent Second, the hadronic ratios necessary for building $\Hobs{k}$ are assumed to be the same between
 the two additional channels \BsJpsiKst and \BdJpsiRho, which translates in:
 
 \begin{equation}
@@ -172,7 +172,7 @@ with their corresponding experimental measurements, as described in \secref{bsjp
 
 \begin{equation}
   \centering
-  \chisq_k = \sum \frac{O^{\rm theo}_k - O^{\rm exp}_k} {\sigma(O^{\rm exp}_k)},
+  \chisq_k = \sum \left(\frac{O^{\rm theo}_k - O^{\rm exp}_k} {\sigma(O^{\rm exp}_k)}\right)^2,
   \label{chisq_form}
 \end{equation}
 
@@ -185,9 +185,9 @@ with their corresponding experimental measurements, as described in \secref{bsjp
   \label{chisq_form_with}
 \end{equation}
 
-\noindent Note also that the CKM angle $\gamma$ and the weak phase $\phid$ are necessary for computing the ${\Acp{\rm dir}}'_k$,
-${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$ observables. The previous parameters are allowed to vary in the
-$\chisq$ fit with a Gaussian constrain around their measured value which are shown in \tabref{chi2_fit_constrains}.
+\noindent Note also that the CKM angle $\gamma$ and the weak phase $\phid$ are necessary for computing
+${\Acp{\rm dir}}'_k$, ${\Acp{\rm dir}}'_k$ and ${\Acp{\rm mix}}''_k$. The previous parameters are allowed to vary in the
+$\chisq$ fit with a Gaussian constrain around their measured values which are shown in \tabref{chi2_fit_constrains}.
 
 \begin{table}[!h]
   \center
