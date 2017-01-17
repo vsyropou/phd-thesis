@@ -30,7 +30,7 @@ used in the current analysis is described and a bit more details on the \sPlot t
 \subsection{Multivariate Based Selection}
 \label{Multivariate_Based_Selection}
 
-The \BsJpsiKst signal yield out of the 3 \invfb data-set is expected to be small, see \secref{BspsiKst_at_lhcb}. Thus, one would like to
+The \BsJpsiKst signal yield out of the $3 \invfb$ data-set is expected to be small, see \secref{BspsiKst_at_lhcb}. Thus, one would like to
 reject as much background as possible while keeping most of the signal. One way to do that would be to tighten the Stripping
 selection criteria one by one. Instead, a multivariate approach, hereafter MVA, is adopted.
 In that case a set of observables is combined by an MVA algorithm to produce a single variable, the {\it classifier variable}.
@@ -196,8 +196,8 @@ multivariate based selection. These four modes are statistically disentangled us
 The technique requires as an input a \pdf that estimates the yield of each of the above species. The current analysis uses
 a \pdf for the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each species is estimated with an extended
 maximum likelihood fit to the mass distribution of data, hereafter mass fit. It is important to point out that the \sPlot
-technique assumes no correlation between the mass and other variables of the data for which a systematic ucenrtainty
-will be assigned later.
+technique assumes no correlation between the mass and other variables.
+A systematic uncertainty corresponding to the validity of thues assuption will be assigned later.
 
 \subsubsection{The mass \pdf}
 Before discussing the mass fit description it is useful to briefly describe the \pdfs used for each of the following individual species:
@@ -219,12 +219,12 @@ likely to happen compared to "head-on" $\quark-\quark$ ones.
 As for the \LbJpsippi background, the Amoroso distribution was found to provide  good description of the data.
 The parameters of the distribution are obtained from simulated data and then fixed in the mass fit to the data. The first two parameters
 are the mean and width of the distribution, whereas the other two are related to the shape. The Amoroso distribution describes
-an entire family of distributions: Depending on the values of the shape parameters the resulting distribution can vary from an exponential
-to Gaussian distribution. This is a powerful feature that is exploited in order to describe the \LbJpsippi reflection background shape.
+an entire family of distributions: Depending on the values of the shape parameters the resulting distribution can vary from exponential
+to a Gaussian distribution. This is a powerful feature that is exploited in order to describe the \LbJpsippi reflection background shape.
 
 The Hypatia distribution has two main features which makes it a suitable description of \Bs and \Bd signal invariant mass distributions.
-First, a hyperbolic shape core is found to describe the peak of the previous distributions adequately. Second, invariant mass resolution
-effects are taken into account by marginalizing over the $\mJpsiKpi$ uncertainty. Overall the Hypatia function adequately
+First, a hyperbolic core is found to describe the peak of the previous distributions adequately. Second, invariant mass resolution
+effects are taken into account by marginalizing over an approximate $\mJpsiKpi$ mass uncertainty distribution. Overall the Hypatia function adequately
 models the tails of the \Bs and \Bd invariant mass distribution which is of crucial importance. This is because the previous invariant
 mass peaks are sufficiently close, see \figref{mass_plot}, such that bad modeling of the tails implies that a certain number of \Bd decays
 are associated to \Bs and \viceversa. Several effects contribute to the structure of the tails apart
@@ -236,7 +236,7 @@ For the core of invariant mass distribution, Hypatia requires five shape paramet
 The first two are set to zero since $\zeta$ is empirically found to be very small whereas $\beta = 0$ implies that the core is
 symmetric left and right with respect to the mean. The third parameter is taken from the previous simulated sample along
 with the tail parameters. The latter, in the limit of $\zeta = 0$, $\lambda$ does not depend on detector effects but only
-on particle kinematics, the same way as the tail parameters do. Lastly, the remaining two paramters, which are the width and
+on particle kinematics, the same way as the tail parameters do. Lastly, the remaining two parameters, which are the width and
 the mean of the core, are determined by the mass fit.
 
 \subsubsection{The mass fit}
@@ -276,7 +276,7 @@ out of the full data sample.
   \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
   \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKst and
            \BsJpsiKst mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
-           colors respectively. The total mass \pdf, blue curve, is overplayed to the data. Figure from \cite{bsjpsikst-paper}. }
+           colors respectively. The total mass \pdf, blue curve, is overplayed on top of the data. Figure from \cite{bsjpsikst-paper}. }
   \label{mass_plot}
 \end{figure}
 

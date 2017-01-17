@@ -116,8 +116,9 @@ planes, where each plane is defined in the rest frame of the corresponding inter
   \label{ang_distr}
 \end{table}
 
-Lastly, the orthogonal angular basis of $P$ and $Y$ is adopted in the current analysis.
-This choice is favoured by the fact that the integrals of the product of two $P$ or two $Y$ are known analytically.
+Lastly, the orthogonal angular basis of associated Legendre polynomials, $P_n^m$, and real-valued
+spherical harmonics, $Y_{ij}$, is adopted in the current analysis. This choice is favoured by the
+fact that the integrals of the product of either two $P_n^m$ or two $Y_{ij}$ are known analytically.
 The latter significantly improves the description and implementation of the angular acceptance described in the following section.
 Note that the decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
 harmonics can be expressed as Wigner-$D$ matrices.
@@ -350,9 +351,9 @@ on the orthogonal $PY$ basis. This projection is shown in the following equation
 orthonormal basis; implying that the integral of the product of two associated Legendre polynomials is equal
 to the {\it Kronecker delta} symbol. The later fact is required to properly normalize the efficiency moments.
 The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
-This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration. This implies
-that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data (which they have passed through the exact
-same selection steps as data) as:
+This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration.
+This implies that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data
+(which they have passed through the exact same selection steps as data) as:
 
 \begin{equation}
 \centering
@@ -420,7 +421,7 @@ has to be as close to $\cos\thetaK=1$ as possible.
 \end{figure}
 
 It is actually not trivial to find a good choice of efficiency moments. Two things are relevant when trying to describe a
-distribution with orthogonal functions like $P$ and $Y$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
+distribution with orthogonal functions like $P_n^m$ and $Y_{ij}$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
 For example the efficiency term $\moment{1}{0}{0}P_1Y_{00}$ is necessary to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{1}{0}{0}$
 is too large making the total efficiency function negative. Thus one could add the term $P_3Y_{00}\moment{3}{0}{0}$ where $\moment{3}{0}{0}$ is positive
 (see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunately it is not enough. Things get more complicated
@@ -435,7 +436,7 @@ Having chosen the best possible set of moments the efficiency function has to be
 \end{equation}
 
 \noindent is satisfied. It turns out that this condition can be easily satisfied if the basis that the
-efficiency function is decomposed, see \equref{eff_func}, is modified as:
+efficiency function is decomposed, see \equref{eff_func}, is modified as follows:
 
 \begin{align}
   \centering
@@ -485,9 +486,9 @@ acceptance can be seen in \figref{eff2D}.
 \end{figure}
 
 Constraining the acceptance in the manner described above comes with a small penalty: the shape of the 1D acceptance
-projections is slightly distorted. In order to reduce this distortion and describe better the acceptance shape an additional step is implemented.
-As previously mentioned, the acceptance function of \equref{eff_func_new} is fitted to the simulated data
-where the efficiency moments are allowed to vary from their measured values, of \tabref{eff_moms_table}.
+projections is potentially slightly distorted. In order to reduce this distortion and describe better the acceptance
+shape an additional step is implemented. As previously mentioned, the acceptance function of \equref{eff_func_new} is
+fitted to the simulated data where the efficiency moments are allowed to vary from their measured values, of \tabref{eff_moms_table}.
 This feature is implemented by a multivariate Gaussian constraint where correlations between efficiency moments are taken into account.
 The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf with which the simulated
 data were generated, multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
@@ -711,9 +712,9 @@ The imaginary part, $\ThetaSP$, is absorbed in the overall phase of the \spwave 
 Varying either $\CSP$ or $\ThetaSP$ in the fit is not preferred due to high correlations between the decay amplitudes.
 Instead it would be better to extend the angular fit so that the \mkpi dependence is modeled directly via the $\mKpiAmp$
 terms of \equref{ang_terms}. The above-mentioned line-shapes, $s$ and $p$ that are necessary
-to compute the $\CSP$ factors are a combination of a \KstENT and \KstOFOZ for the \pwave, as in \cite{PhysRevD.11.3165}.
-Whereas for the \swave a LASS parametrization \cite{Aston1988493} is used, consisting of a linear combination of the \KstOFTZ resonance with
-a non-resonant term, coming from elastic scattering.
+to compute the $\CSP$ factors are a combination of a \KstENT and \KstOFOZ for the \pwave, as
+in \cite{PhysRevD.11.3165}. For the \swave a LASS parametrization \cite{Aston1988493} is used,
+consisting of a linear combination of the \KstOFTZ resonance with a non-resonant term, coming from elastic scattering.
 
 \subsubsection{Background subtracted \mkpi distribution}
 
@@ -904,7 +905,7 @@ tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_neg}.
 
 Having addressed the simultaneous nature of the fit it is interesting to provide an insight on
 the connection between a \pdf and the likelihood estimation of the parameters of interest.
-Thus, starting from any \pdf $\mathcal{P}$ a likelihood function can be built as:
+Thus, starting from any \pdf $\mathcal{P}$ a likelihood function can be built as follows:
 
 \begin{equation}
   \centering
