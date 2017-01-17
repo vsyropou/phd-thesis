@@ -5,15 +5,15 @@
 
 The current appendix addresses the issue of manipulating some input distribution, {\it source}, such that
 it becomes statistically compatible with a given, {\it target}, distribution. A common method to do that
-involves binning the two distributions. This method is sometimes called {\it vertical weighting}
+involves binning the two distributions with non-unit weights. This method is sometimes called {\it vertical weighting}
 and it is described in the following section. The main motivation behind the technique advertised in the current
 appendix is to circumvent problems arising from binning distributions, especially with increasing number of
-bins or in case of small sample sizes. Note that the bigger the number of bins the more precise the matching of the two distributions
-is. The advertised technique is described in the current appendix and a choice for its name could be {\it horizontal weighting}.
+bins or in case of small sample sizes. Note that the bigger the number of bins the more precise the matching
+of the two distributions will be. The advertised technique is described in the current appendix and a choice for its name could be {\it horizontal weighting}.
 The technique is inspired by discussions with Gerhard Raven and Diego Martinez Santos.
 
 Lastly a matching example is given at the of the current appendix. This example is a typical problem
-in high energy physics originating from non perfect simulation. Specifically certain kinematic
+in high energy physics originating from non perfect simulation. Specifically, certain kinematic
 distributions might differ significantly between simulated events and data. Given that simulated
 events are commonly used to control acceptance, resolution or other detector effects; what is typically
 done is to correct the simulated data sample by matching its kinematic distributions to the ones observed in data.
