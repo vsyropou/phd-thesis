@@ -22,8 +22,8 @@ The two {\it Cherenkov} based PID sub-detectors, \richone and \richtwo, aim at i
 high momentum tracks respectively. The way the \rich systems provide particle identification information is
 based on the velocity measurement implied by the angle of emission of Cherenkov radiation.
 The muon system also plays a role in PID. The presence of hits in the muon stations that
-could be associated to a certain track increase the probability that this track corresponds to real muon,
-see \chapref{Muon_id_hlt} also. Lastly, the calorimeter systems aim at increasing the chances of correctly
+could be associated to a certain track increase the probability that this track corresponds to a muon,
+see \chapref{Muon_id_hlt}. Lastly, the calorimeter systems aim at increasing the chances of correctly
 identifying electrons, photons and pions, as mentioned in the following subsection.
 Further details regarding the PID performance of \lhcb can be found in the overall detector \cite{Aaij:2014jba},
 \rich system \cite{Adinolfi:1495721}, \muonID \cite{Archilli:1553139} performance studies respectively.
@@ -47,12 +47,12 @@ Further details regarding the PID performance of \lhcb can be found in the overa
 
 \section{Calorimetry}
 \label{det_calo}
-Calorimeters in \lhcb measure the energy of particles provided that all of the subsequent particle decays are
-contained withing the calorimeter. Furthermore in the case of neutral particles, like photons,
-calorimeters are the only mean with which these neutral particles can be detected; since the tracking system
-only detect charged particles. There are four relevant sub-detectors
-that enable proper calorimetry at \lhcb. First the combination of the {\it Scintillating Pad Detector} (\spd)
-and the {\it Pre Shower} (\presh) detectors with a lead layer in-between them enables to distinguish \piz from
+Calorimeters in \lhcb measure the energy of particles provided that all of the subsequent particle decays
+and interactions are contained within the calorimeter. Furthermore in the case of neutral particles, like photons,
+calorimeters are the only means with which these neutral particles can be detected; the tracking system
+only detects charged particles. There are four sub-detectors that enable calorimetry at \lhcb.
+First the combination of the {\it Scintillating Pad Detector} (\spd)
+and the {\it Pre Shower} (\presh) detectors with a lead layer in between them enables to distinguish \piz from
 photons, and photons from electrons. Subsequently the electromagnetic, \ecal, and hadronic,
 \hcal, calorimeters measure the energy of photons and neutral hadrons respectively.
 Note that the \piz decays into two photons as a result the two photons might be interpreated as a single by the \ecal.
@@ -74,7 +74,7 @@ the reset of the PID systems.
 \label{BspsiKst_at_lhcb}
 
 
-The \BsJpsiKst process, with \Jpsimumu and \KstKpi, is a typical channel for which the \lhcb has a high detection efficiency.
+The \BsJpsiKst process, with \Jpsimumu and \KstKpi, is a typical channel for which \lhcb has a high detection efficiency.
 The presence of muon in the final state yields a high trigger efficiency, while the intermediate
 \Kstarz resonance decays within the \velo into a \Kp and a \pim thus resulting in two Long tracks.
 Thanks to PID information and the optimized selection described in \secref{det_pid} most of the background
@@ -82,23 +82,28 @@ is filtered out. The only difficult point is the low branching fraction of the \
 compared to the \BdJpsiKst whose invariant mass is very close to the one of the \BsJpsiKst, see \secref{mass_BDTG_selection}.
 Thus, special care needs to be taken when modeling the mass distribution of these two channels.
 The total \BsJpsiKst yield accumulated over the full \runone is about 1800 signal candidates, see \equref{signal_yields}.
-An \lhcb event is shown in \figref{det_evt_display}. A reconstructed \BsJpsiKst decay candidate is shown in
-more detail in \figref{det_jpsikst_cand}. Note how some of the \velo tracks appear to originate from the
-primary vertex. Also note the how the \Bs final state tracks intersect at the secondary vertex.
 
 \begin{figure}[t]
   \centering
   %\begin{turn}{90}
- \includegraphics[width=\textwidth,trim=0cm 0cm 17cm 0cm, clip=true]{Figures/Chapter2/jpsikst_event.pdf}
+ \includegraphics[width=\textwidth,trim=0cm 3cm 17cm 0cm, clip=true]{Figures/Chapter2/jpsikst_event}
   %\end{turn}
-  \caption{A \BsJpsiKst candidate. The purple and cyan circles correspond to the primary and secondary
+  \caption{A \BsJpsiKst candidate. Purple and cyan circles correspond to the primary and secondary
            vertices respectively. The dashed cyan line illustrates the \Bs flight distance.
-            Black lines represent \velo tracks. Colored lines indicate final state particles which are
-             {\color{green}\mmu}, {\color{green}\mmu}, {\color{red}\kaon}, {\color{orange}\pion}.}
+          See text for more details.}
   \label{det_jpsikst_cand}
 \end{figure}
 
-\begin{figure}[t]
+An \lhcb event is shown in \figref{det_evt_display}, where \ecal and \hcal energy depositions are
+shown as blue and orange bars respectively; the length of each bar is proportional to the energy
+deposited. Muon hits are illustrated with green blocks. Long tracks are indicated by lines; where
+kaons, pions, muons, protons and electrons are represented with red, orange, green, magenta and
+blue color respectively. A reconstructed \BsJpsiKst decay candidate is shown in in \figref{det_jpsikst_cand}.
+Where \velo tracks are indicated by black lines. Note how some of the \velo tracks appear
+to originate from the primary vertex. Also note the how the \Bs final state tracks intersect
+at the secondary vertex.
+
+\begin{figure}[!t]
   \centering
   \begin{subfigure}{\textwidth}
     % \raggedright
@@ -112,10 +117,6 @@ primary vertex. Also note the how the \Bs final state tracks intersect at the se
     % \caption{}
     \label{det_evt_display_side}
   \end{subfigure}
-  \caption{Horizontal (top) and vertical (bottom) cross section of an \lhcb event.
-           Long tracks are indicated by lines; where kaons, pions, muons, protons and electrons
-           are represented with red, orange, green, magenta and blue color respectively. \ecal and \hcal energy depositions
-           are shown as blue and orange bars respectively; the length of each bar is proportional to the energy deposited.
-           Muon hits are illustrated with green blocks.}
+  \caption{Horizontal (top) and vertical (bottom) cross section of an \lhcb event. See text for details.}
   \label{det_evt_display}
 \end{figure}
