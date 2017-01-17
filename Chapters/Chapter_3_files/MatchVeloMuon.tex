@@ -57,10 +57,9 @@ and in reality the track follows a smooth trajectory inside the whole area of th
 However estimating this trajectory consumes valuable computation time during \hltone run-time, while \mvm can perform
 efficiently enough without a smooth track trajectory using the focal
 pane approximation. The position of the $z$ focal plane as a function of the track parameters has been studied
-\cite{Hommels:999327} and is used in the \mvm algorithm. As mentioned in the beginning of the paragraph including
-information on the estimated focal plane helps rejecting fake muon tracks.
-This is because the magnet hit essentially requires that the muon hits are aligned in a straight line that
-also passes from the magnet hit. The latter is true for real muon tracks only.
+\cite{Hommels:999327} and is used in the \mvm algorithm. As mentioned, including information on the estimated
+focal plane helps rejecting fake muon tracks. This is because the magnet hit essentially requires that the
+muon hits are aligned in a straight line that passes through the magnet hit. The latter is true for real muon tracks only.
 
 \subsection{Upgrade to MatchVeloTTMuon}
 \label{sec:matchvelottmuon}
@@ -99,9 +98,9 @@ suppress fake muon tracks.
 
 An important caveat arises from the fact some of the \veloTTracks tracks do not have any information from
 the \ttracker. These tracks are mainly normal high momentum tracks that pass through the \ttracker station's inner
-acceptance hole where there is no active detector. Since there is no reason to discard these tracks the upgraded
+acceptance hole where there is no active detector. Since there is no reason to discard these tracks, the upgraded
 \mvTTm treats them as the old \mvm algorithm did, meaning that the M3 FoI sizes are adjusted such that they cover
-the possibility for both positively and negatively charged tracks.
+the possibility for both positive and negative charged tracks.
 
 \begin{figure}[t]
   \centering
@@ -113,9 +112,9 @@ the possibility for both positively and negatively charged tracks.
 
 After the improvements mentioned in the above paragraph the efficiency of the upgraded \mvTTm algorithm
 is estimated using simulated \Sigmapmumu events, where the mean transverse momentum is $\sim 300\mevc$.
-The muons from this decay, which passed the full track reconstruction resulting in Long tracks,
-are further ensured to be muons. This is possible by exploiting the available information in the
-simulated event and thus defining the {\it true muons}.
+The muons tracks from this decay, which passed the full track reconstruction resulting in Long tracks,
+are further filtered to ensure that they indeed correspond to a muon particle. This is possible by
+exploiting the available information in the simulated event and thus defining {\it true muons}.
 An important concept that is used for the \mvTTm efficiency definition is the so called {\it overlap}.
 Specifically, a certain \velo track overlaps with a true muon (which is a Long track)
 when the \velo track has more than $70\%$ \velo hits in common with the \velo segment

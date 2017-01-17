@@ -3,7 +3,7 @@ The \muonID \cite{LHCb-PUB-2009-013,LHCb-PUB-2010-002} that is used both in the 
 and in the offline event processing, or simply {\it offline}, has been revisited in view of the \lhc \runtwo.
 Note that during \runone the \hlt version of the \muonID was different from the one used offline in order
 to conform with the limitations imposed by the available computing resources. The main reasons for revisiting
-the software are; first to unify the \muonID used in \hlt and offline and second to optimize 
+the software are; first to unify the \muonID used in \hlt and offline and second to optimize
 the trigger efficiency of low transverse momentum muons.
 In particular, the \muonID has undergone a significant re-factory resulting in a modularized common code base
 between \hlt and offline \cite{kevinThesis}. Because of that \muonID in the \hltone and offline
@@ -36,7 +36,7 @@ updated sequence is given in what follows, whereas the full description can be f
 
 During \runone the muon identification starts directly from \veloTracks. These are tracks built only with
 the \velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm
-\cite{LHCb-PUB-2011-017}, to select these tracks with higher probabilyt of being muons. Subsequently, 
+\cite{LHCb-PUB-2011-017}, to select these tracks with higher probability of being muons. Subsequently,
 the \FwD algorithm uses information from the tracking stations, behind
 the magnet and upgrades the \veloTracks to Long tracks, mentioned in \secref{det_tracking}. After this, the
 \isMuon, which implements the offline \muonID, algorithm is applied. In addition there are some quality cuts
@@ -67,7 +67,7 @@ Positively identified muons are then combined into dimuons as in \runone.
 The combination of the use of Long tracks and standard muon identification is much more efficient than the
 procedure in \runone, and is exactly the same as the one used by the offline reconstruction.
 Tracks with transverse momentum smaller than 500 \mevc cannot be immediately upgraded to Long tracks
-for timing reasons; as their lower momentum requires larger search regions in the tracking stations
+for timing reasons. Their lower momentum requires larger search regions in the tracking stations
 behind the magnet, thus increasing the number of possible hits that need to be tested for compatibility.
 However, some of them are muons, and the efficiency for these could be recovered using a different strategy,
 explained in \secref{mvm_algorrithm}.
