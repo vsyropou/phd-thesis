@@ -7,7 +7,7 @@ get progressively more strict at each trigger level. The whole trigger chain is 
 signal purity given the amount of computing and storage infrastructure. In more detail the first trigger
 level, \lzero, reads part of the detector at a rate of $40\mhz$, while the subsequent {\it Higher Level Trigger},
 \hltone and \hlttwo, writes out to storage at $5\khz$ during the 2012 run ( and at $12.5\khz$ in \runtwo).
-The organization of the trigger system is done in {\it trigger lines}. Essentially, each trigger line is
+The organization of the trigger is done in {\it trigger lines}. Essentially, each trigger line is
 a collection of selection criteria similar to the ones applied during the offline data analysis, but looser.
 
 \begin{figure}[t]
@@ -69,8 +69,8 @@ passed to the subsequent higher level trigger, where tracking and PID informatio
 \end{figure}
 
 The overall efficiency of the \lhcb trigger system is $\sim 90\%$ for dimuon trigger lines and $\sim 30\%$
-for multi-body lines with hadronic final states. The efficiency is estimated with the so
-called {\it tis-tos} method \cite{Aaij:1493820}. In the context of this method a given reconstructed object,
+for multi-body lines with hadronic final states. The efficiency is estimated with the {\it tis-tos}
+method \cite{Aaij:1493820}. In the context of this method a given reconstructed object,
 \ie a muon track, might cause a trigger line to fire, given that it fulfills the requirements of that particular line.
 In that case the muon track is characterized as {\it Trigger On Signal}. On the other hand the same trigger line might
 fire regardless of the muon track, for example because something else in the event might cause the line
@@ -83,7 +83,7 @@ trigger lines for the three stages of the \lhcb trigger system are  shown in \fi
 There are two more features of the \lhcb trigger system worth mentioning. First is the {\it deferred}
 trigger scheme, according to which, $20\%$ of the data triggered by \lzero are temporarily stored and processed by the \hlt
 during the periods where the \lhc does not provide colliding beams and thus the \lhcb trigger infrastructure
-would otherwise idle. This effectively increases the amount of available computing power which can be used
+would otherwise idle. This increases the amount of available computing power which can be used
 to improve other features of the trigger system. The second interesting feature is the novel technique of
 {\it online detector alignment and calibration} that was enabled in \runtwo, see \cite{Aaij:2016rxn}.
 The technique makes it possible that the output data quality of the trigger becomes identical to the offline data quality.

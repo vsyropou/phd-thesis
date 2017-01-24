@@ -27,13 +27,6 @@ helicity configurations of the intermediate vector particles. A detailed derivat
 within the scope of a \PtoVV decay can be found in \cite{daanThesis} and \cite{jeroenThesis} respectively
 for the transversity and helicity formalism.
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{Figures/Chapter4/helAngles}
-  \caption{Definition of helicity angles.}
-  \label{helAngles}
-\end{figure}
-
 Here, the steps to arrive at an expression for the angular decay rate of \BsJpsiKst are briefly described.
 The total decay amplitude $\mathcal{A}(\text{\BJpsiKst})$ is decomposed in its \pwave ($0$, $\parallel$, $\perp$)
 and \swave ($S$) polarizations as shown in the following equation:
@@ -44,6 +37,13 @@ and \swave ($S$) polarizations as shown in the following equation:
                                                     &= \left| \sum_i^{0,\parallel,\perp,S} A_i(\Omega,\mkpi) \right|^2  \propto \sum_n a_n h_n \mKpiAmp.
   \label{ang_terms}
 \end{align}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{Figures/Chapter4/helAngles}
+  \caption{Definition of helicity angles.}
+  \label{helAngles}
+\end{figure}
 
 \noindent The terms $a_n$ originate from squaring the amplitude and their exact expressions are shown in \tabref{ang_distr}.
 Note the appearance of the $\Re$ and $\Im$ interference terms as well. The full derivation of the above table can be found in \cite{jeroenThesis}.
@@ -362,7 +362,7 @@ This implies that the integral in \equref{eff_moms_def} can be estimated by a su
 \end{equation}
 
 \noindent Combining \equref{eff_moms_def} and \equref{eff_moms_calc} the final expression for computing the efficiency moments is shown
-in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_table}
+in \equref{eff_moms_calc_final} and the result of the computations can be found it table \tabref{eff_moms_table}.
 
 \begin{equation}
 \centering
@@ -370,7 +370,7 @@ in \equref{eff_moms_calc_final} and the result of the computations can be found 
   \label{eff_moms_calc_final}
 \end{equation}
 
-\noindent Acceptance effects in the $\cos\thetamu$ projection are less pronounced compared to the one $\cos\thetaK$.
+Acceptance effects in the $\cos\thetamu$ projection are less pronounced compared to the one $\cos\thetaK$.
 This can be deduced from \figref{angAcc_ctl} as well as from the values of moments like $\moment{0}{j}{k}$
 compared to the values of $\moment{1}{0}{0}$ and $\moment{2}{0}{0}$. Lastly, the efficiency moments are
 correlated and the corresponding correlation matrix can be found in \tabref{eff_moms_corr}.
@@ -591,7 +591,6 @@ converge. The full procedure by steps can be summarized as:
   \label{angAggCorrections}
 \end{figure}
 
-
 \begin{enumerate}
 \item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
 \item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
@@ -604,28 +603,7 @@ converge. The full procedure by steps can be summarized as:
 \item Go back to step 4 and repeat until the change in the parameters of interest is negligible.
 \end{enumerate}
 
-\begin{table}[!h]
-  \center
-  \begin{tabular}{c c c}
-    \hline
-     variables & range & $\# \text{intervals}$ \\
-     %\multicolumn{2}{c}{range}   &  vs        \\
-    \hline
-    $p_\kaon$    &  $[0,140] \; \gevc$  & 10      \\
-    $p_\pion$    &  $[0,60]  \; \gevc$  & 10      \\
-    \hline
-  \end{tabular}
-  \caption{\small Weighting variable intervals.}
-  \label{angAccBinning}
-\end{table}
-
-The $(p_\kaon,p_\pion)$ weighting of the simulated data sample is done using 2D histograms, following the intervals defined in \tabref{angAccBinning}.
-At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
-\tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implying that the overall effect of the
-acceptance corrections is small. \figref{angAggCorrections} shows the shape of the acceptance before and after corrections.
-This is also supported by the effect of these corrections on the parameters of interest which are shown in \tabref{pars_convergence}.
-
-\begin{table}[t]
+\begin{table}[!t]
 \centering
 \footnotesize
 \begin{tabular}{ c c c c c c c c c | c}
@@ -657,6 +635,27 @@ This is also supported by the effect of these corrections on the parameters of i
 \label{pars_convergence}
 \end{table}
 
+The $(p_\kaon,p_\pion)$ weighting of the simulated data sample is done using 2D histograms, following the intervals defined in \tabref{angAccBinning}.
+At least 6 iterations are necessary to achieve convergence. Detailed evolution of the parameters of interest after each iteration are shown in
+\tabref{pars_convergence}. The central values of the parameters of interest do not change significantly implying that the overall effect of the
+acceptance corrections is small. \figref{angAggCorrections} shows the shape of the acceptance before and after corrections.
+This is also supported by the effect of these corrections on the parameters of interest which are shown in \tabref{pars_convergence}.
+
+\begin{table}[!h]
+  \center
+  \begin{tabular}{c c c}
+    \hline
+     variables & range & $\# \text{intervals}$ \\
+     %\multicolumn{2}{c}{range}   &  vs        \\
+    \hline
+    $p_\kaon$    &  $[0,140] \; \gevc$  & 10      \\
+    $p_\pion$    &  $[0,60]  \; \gevc$  & 10      \\
+    \hline
+  \end{tabular}
+  \caption{\small Weighting variable intervals.}
+  \label{angAccBinning}
+\end{table}
+
 Lastly, the acceptance can be floated in the angular fit to the data in order to assign a systematic uncertainty, see \secref{systAngAcc}.
 This feature makes, in hindsight, the acceptance correction procedure unnecessary.
 
@@ -678,8 +677,7 @@ It originates from integrals like the one in the following equation:
   \int d\mkpi \; \Phi \; \mKpiAmp^* \mKpiAmp[m],
 \end{equation}
 
-\noindent where $\mKpiAmp[n,m]$ run in the same way as in \equref{ang_terms}, and $\Phi$ is a standard
-phase space factor:
+\noindent where $\mKpiAmp[n,m]$ run the same as in \equref{ang_terms} and the phase space factor:
 
 \begin{equation}
   \centering
@@ -744,12 +742,11 @@ consisting of a linear combination of the \KstOFTZ resonance with a non-resonant
   \end{subfigure}
 \caption{Background subtructed mass distributions of the intermediate state particles.
          Black (red) points correspond to \Bd (\Bs) decays. Top row shows the \mkpi distribution before (A)
-         and after (B) correcting for angular acceptance effects. The \jpsi mass is shown at the bottom.
-         It was checked that the acceptance correction has negligible effects on the shapes of the \jpsi mass distributions.}
+         and after (B) correcting for angular acceptance effects. The \jpsi mass is shown at the bottom.}
 \end{figure}
 
 While the \Bs and \Bd background subtracted muon pair mass background subtracted, $\mmumu$, have very similar shapes, the \mkpi spectra exhibit different shapes.
-Indeed, the \Bs \mkpi \sPlot of \figref{mkpiPlot_raw} seems to be slightly distorted compared to the one of \Bd \mkpi.
+Indeed, as suggested by \figref{mkpiPlot_raw} the \Bs \mkpi \sPlot seems to be slightly distorted compared to the one of \Bd \mkpi.
 Since there is no \aprior reason why the \Kstarz \pwave
 should have different shape between \BsJpsiKst and \BdJpsiKst; This could indicate the presence of interference between
 the $\kaon\pi$ \swave and the \Kstarz, which may be stronger in the \Bs decays compared to the \Bd ones. In order
@@ -762,7 +759,8 @@ for a perfect acceptance the interference terms in \tabref{ang_terms}, integrate
 This is demonstrated in \figref{mkpiPlot_eff}. The \Bs \mkpi distribution is closer to the one of the \Bd after applying
 the efficiency correction. The effect is quantified by a Kolmogorov-Smirinov test, where its value before and after
 angular acceptance corrections is $0.470$ and $0.833$ respectively. This is a clear indication of the presence of
-stronger interference in the \Bs case compared to the \Bd.
+stronger interference in the \Bs case compared to the \Bd. Lastly, It was checked that the acceptance correction has
+negligible effects on the shapes of the \jpsi mass distributions
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Production and Detection Asymmetries}
@@ -788,7 +786,7 @@ asymmetries are defined in the following equation:
 
 \noindent where $\sigma$ is the production cross section of either \Bs or \Bb , whereas \edet is the efficiency
 of detecting \Bs(\Bsb) decays into the final state which is a $\jpsi\Kstarzb$($\jpsi\Kstarz$), see also \secref{cp_assymetries_and_total_decay_rate}.
-Both of the production and detection asymmetries have to be estimated so that the experimentally measured asymmetry, $\Acp{\rm raw}$,
+Both of the asymmetries have to be estimated so that the experimentally measured asymmetry, $\Acp{\rm raw}$,
 defined in \equref{acp_mes}, can be corrected for as follows:
 
 \begin{equation}
@@ -826,7 +824,7 @@ data and parameterized as in \cite{LHCb-PAPER-2014-053}.
 
 Using the result from the dedicated \lhcb measurement of the production asymmetry \cite{LHCb-PAPER-2014-042}
 and replacing the yield fractions in intervals of \Bs momentum of Table 3 in the same reference with the background
-subtracted \BsJpsiKst ones of the current analysis, one gets the following production asymmetry:
+subtracted \BsJpsiKst ones of the current analysis, one gets the following value for the production asymmetry:
 
 \begin{equation}
     \centering
@@ -877,9 +875,9 @@ is sufficient for them to be averaged into one set of efficiency moments. Howeve
 is calculated separately for these two samples. This is done to avoid involving the $\Acp{i}$ parameters of interest
 in the estimation of the efficiency moments, which significantly simplifies the necessary computation.
 Note that the $\Acp{i}$ parameters are used to average the \BsJpsiKst and \BsbarJpsiKst decay amplitudes into one parameter,
-more details in \secref{cp_assymetries_and_total_decay_rate}.
+see \secref{cp_assymetries_and_total_decay_rate}.
 
-\begin{table}[t]
+\begin{table}[h]
 \centering
 \begin{tabular}{c c c c c}
   \hline
@@ -904,6 +902,7 @@ The data categories described above result in a simultaneous fit consisting of e
 A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of
 tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_neg}.
 
+% \subsubsection{The Likelihood Function}
 Having addressed the simultaneous nature of the fit it is interesting to provide an insight on
 the connection between a \pdf and the likelihood estimation of the parameters of interest.
 Thus, starting from any \pdf $\mathcal{P}$ a likelihood function can be built as follows:
@@ -995,10 +994,14 @@ The normalization factors in front of them can be re-expressed as function of $\
 \begin{align}
 \xi = \frac{\Nplus+\Nminus}{2\Nplus} &= \frac{1}{2}\left( 1 + \frac{\yieldMn{}}{\yieldPl{}}\right) = \nonumber \\
                                      &= \frac{1}{2}\left( 1 + \frac{1-\Acp{\text{raw}}}{1+\Acp{\text{raw}}}\right) =
-                                        \frac{1}{1+\Acp{\text{raw}}},  \\
-\frac{\xi}{2\xi-1} = \frac{1}{2-\nicefrac{1}{\xi}} &= \frac{1}{1-\sum_i\Acp{\text{raw}}}.
-\label{amp_norms}
+                                        \frac{1}{1+\Acp{\text{raw}}},
+\label{amp_norms_plu}
 \end{align}
+
+\begin{equation}
+  \frac{\xi}{2\xi-1} = \frac{1}{2-\nicefrac{1}{\xi}} = \frac{1}{1-\sum_i\Acp{\text{raw}}}.
+\label{amp_norms_min}
+\end{equation}
 
 \noindent Now, the quantities that are actually estimated in the likelihood fit are the $\AmpSq{i}$ with $i:\{0,\parallel,\perp,S\}$.
 Having said that, and by looking at \equref{acp_free}, one understands that in order for $\AmpPlSq{i}$ and $\AmpMnSq{i}$
