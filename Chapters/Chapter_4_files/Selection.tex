@@ -119,11 +119,11 @@ As a first step towards removing the above-mentioned type of background contribu
 on the expected reflection background yield on data. This is done using simulated data and based on the expression:
 
 \begin{equation}
-N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_q \times \BF \times \varepsilon \times {\mathcal{L}},
+N_{\rm exp} = 2 \times \sigma_{b\bar{b}}\times f_\quark \times \BF \times \varepsilon \times {\mathcal{L}},
 \end{equation}
 
-\noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_q$ is the hadronization fraction
-(probability that the $b$ quark forms a $\Bq$ meson, where $q=\dquark,\squark$), $\varepsilon$ is the total efficiency (including reconstruction,
+\noindent where $\sigma_{b\bar{b}}$ is the cross section for the production of a pair of bottom quarks, $f_\quark$ is the hadronization fraction
+(probability that the $b$ quark forms a $\Bq$ meson, where $\quark=\dquark,\squark$), $\varepsilon$ is the total efficiency (including reconstruction,
 selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity of the data. Finally \BF stands for the branching fraction
 of the particular background of \tabref{peaking_bkg_yields}. Since simulated data are used it is necessary to determine
 the effective integrated luminosity in the simulated sample and adjust it such that it matches the estimated integrated
@@ -131,7 +131,7 @@ luminosity of the data. After that, the fraction of reflection background from t
 of the reflection background fraction in data (assuming same total efficiency between the simulation and data sample).
 
 The second and last step of the reflection background removal is to apply an angular correction factor to account for
-the fact that simulated decays are distributed uniformly in the $(\Omega, m_{K\pi})$ phase space and hence do not
+the fact that simulated decays are distributed uniformly in the $(\Omega, \mkpi)$ phase space and hence do not
 represent a proper decay amplitude structure. This can cause the reflection background yield estimations to be
 imperfect because the simulated events are distributed in the previous phase space in a different way than the
 actual reflection background in the data. The symbol $\Omega$ represents the angles that describe the \BsJpsiKst
@@ -141,7 +141,7 @@ knowledge to compute the correction factors:
 
 \begin{equation}
 \centering
-w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, m_{hh}  | A_k^i)} {P_{\rm MC}^i(\Omega, m_{hh})},
+w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, \mhh  | A_k^i)} {P_{\rm MC}^i(\Omega, \mhh)},
 \end{equation}
 
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs.

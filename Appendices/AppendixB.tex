@@ -24,12 +24,12 @@ The vertical weighting approach to matching distributions is straightforward.
 The first step is to bin the source (S) and target (T) distributions with the same binning scheme.
 After that a weight, $w_i$, is assigned to each entry in a given bin, $i$, such that the bin
 contents of the source distributions matches these of the target, see \equref{vert_rew}.
-Essentially this technique moves vertically each bin of the source distribution in order to match
-the bin contents of the target distribution.
+Essentially this technique moves vertically each bin, $i$, of the source distribution in order to match
+the $i^{th}$ bin contents of the target distribution.
 
 \begin{equation}
   \centering
-  w_i = \frac{T_{{\rm bin}i}}{S_{{\rm bin}i}}
+  w_i = \frac{T_i}{S_i}.
 \label{vert_rew}
 \end{equation}
 
@@ -61,15 +61,15 @@ are presented in the next paragraph.
 \begin{subequations}
 \begin{equation}
   \label{source_trans}
-  S \times \gFlat{S} \rightarrow S_{\rm flat} \times \gGaus{S} \rightarrow S_{\rm gaus} \times \gGausUn{S} \rightarrow S_\text{\rm uncor gaus}
+  S \times \gFlat{S} \rightarrow S_{\rm flat} \times \gGaus{S} \rightarrow S_{\rm gaus} \times \gGausUn{S} \rightarrow S_\text{\rm uncor gaus},
 \end{equation}
 \begin{equation}
   \label{target_trans}
-  T \times \gFlat{T} \rightarrow T_{\rm flat} \times \gGaus{T} \rightarrow T_{\rm gaus} \times \gGausUn{T} \rightarrow T_\text{\rm uncor gaus}
+  T \times \gFlat{T} \rightarrow T_{\rm flat} \times \gGaus{T} \rightarrow T_{\rm gaus} \times \gGausUn{T} \rightarrow T_\text{\rm uncor gaus},
 \end{equation}
 \begin{equation}
   \label{match_distributions}
-  S_{\rm matched} = S_{\rm uncor gaus} \times \gGausUnInv{T} \times \gGausInv{T} \times \gFlatInv{T}
+  S_{\rm matched} = S_{\rm uncor gaus} \times \gGausUnInv{T} \times \gGausInv{T} \times \gFlatInv{T}.
 \end{equation}
 \label{hor_rew_logic}
 \end{subequations}
@@ -96,7 +96,7 @@ appendix is to quickly demonstrate the advertised technique. However, there is p
 domain as $x$, is by definition:
 
 \begin{equation}
-F_x(y) = \int_{-\infty}^y P(t)dt  = {\rm Probability}(x \leq y)
+F_x(y) = \int_{-\infty}^y P(t)dt  = {\rm Probability}(x \leq y).
 \label{cdf_def}
 \end{equation}
 
@@ -132,11 +132,11 @@ variables such that they become uncorrelated. The method followed is essentially
  \label{meth_matrix_diag}
 \end{method}
 
-\noindent The covariance between variables is computed using the standard formula of:
+\noindent The covariance is computed using the following standard formula:
 
 \begin{equation}
 \centering
-c_{ij} = \frac{1}{N} \sum (x_i-\hat{x_i})(x_j-\hat{x_j}), \;\; \text {with} \; \hat{x} = \frac{1}{N} \sum x
+c_{ij} = \frac{1}{N} \sum (x_i-\hat{x_i})(x_j-\hat{x_j}), \;\; \text {with} \; \hat{x} = \frac{1}{N} \sum x.
 \label{hor_reww_correlation_formula}
 \end{equation}
 
@@ -153,7 +153,7 @@ continues is using the well known technique of {\it linear interpolation}, shown
 and thus solving the first of the two implementation issues.
 
 \begin{equation}
-  c(x) = v_i + \frac{c_{i+1}-c_i}{x_{i+1}-x_i} *  \parenthesis{x - x_i}
+  c(x) = v_i + \frac{c_{i+1}-c_i}{x_{i+1}-x_i} *  \parenthesis{x - x_i}.
   \label{linear_interpolation}
 \end{equation}
 
