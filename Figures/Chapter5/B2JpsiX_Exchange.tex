@@ -1,0 +1,60 @@
+
+% Compile as:
+% latex <name>.tex, divps <name>.div, ps2pdf <name>.ps
+
+\documentclass[12pt]{article}
+\usepackage{axodraw}
+\usepackage{upgreek}
+\usepackage[paperwidth=550pt, paperheight=380pt, margin=0pt, top=40pt]{geometry}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+\begin{picture}(400,300)(0,0)
+\SetWidth{1.25}
+% Vertices
+\Vertex(140,100){2}
+\Vertex(140,0){2}
+\Vertex(200,100){2}
+\Vertex(275,250){2}
+% W Bosons
+\Photon(140,0)(140,100){7}{6.5}
+% Colour Singlet Exchange
+\DashLine(200,100)(275,250){7}
+% Quarks
+\Line(0,0)(400,0)
+\Line(400,100)(0,100)
+\CArc(325,250)(50,90,270)
+\Line(325,200)(400,200)
+\Line(325,300)(400,300)
+% Triangles
+\GTri(73,0)(67,-3)(67,3){0}
+\GTri(67,100)(73,97)(73,103){0}
+\GTri(333,0)(327,-3)(327,3){0}
+\GTri(327,100)(333,97)(333,103){0}
+\GTri(333,200)(327,197)(327,203){0}
+\GTri(327,300)(333,297)(333,303){0}
+% Ovals
+\GOval(0,50)(50,6)(0){0}
+\GOval(0,50)(48,5)(0){1}
+\GOval(400,50)(50,6)(0){0}
+\GOval(400,50)(48,5)(0){1}
+\GOval(400,250)(50,6)(0){0}
+\GOval(400,250)(48,5)(0){1}
+% Text (Does not Scale)
+\Text(-25,50)[]{\Huge $\mathrm{B}_\mathrm{q}^0$}
+\Text(415,50)[l]{\Huge $\mathrm{J}/\mathrm{\uppsi}$}
+\Text(425,250)[]{\Huge $\mathrm{X}$}
+\Text(150,50)[l]{\Huge $\mathrm{W}$}
+\Text(35,110)[b]{\Huge $\mathrm{b}$}
+\Text(35,-10)[t]{\Huge $\mathrm{q}$}
+\Text(365,-10)[t]{\Huge $\mathrm{c}$}
+\Text(365,110)[b]{\Huge $\mathrm{c}$}
+\Text(365,310)[b]{\Huge $\mathrm{q'}$}
+\Text(365,190)[t]{\Huge $\mathrm{q'}$}
+\Text(190,195)[t]{\Large Colour Singlet}
+\Text(190,180)[t]{\Large Exchange}
+\end{picture}
+\end{center}
+\end{document}

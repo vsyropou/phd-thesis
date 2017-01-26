@@ -2,17 +2,10 @@ The \BsJpsiPhi decay amplitude can take place via four different topologies.
 Two of them were already introduced in \figref{bs2jpsiphi} and \figref{bs2jpsiphi_peng};
 the {\it color suppressed }$(C)$ and {\it penguin} $(P)$ topologies respectively.
 According to \cite{DeBruyn-thesis} the other two types, {\it penguin-annihilation}
-and {\it exchange} can be neglected given the current experimental precision.
+and {\it exchange} illustrated in \figref{peng_ana_exchange}, can be neglected given the current experimental precision.
 It is also assumed that the $\phi$ meson is a pure ($\squark\squarkbar$) state, based on \cite{Faller:2008gt}.
 Given these assumptions the \BsJpsiPhi amplitude is decomposed in \equref{bsjpsiphi_amp},
 taking into account the relevant CKM elements involved in each topology.
-
-% \begin{figure}[h]
-%   \centering
-%   \scalebox{0.9}{\sffamily \input{Figures/Chapter5/exchange_penguin_annihilation_jsiphi}}
-%   \caption{Higher order diagrams of \BsJpsiPhi. Left: Exchange. Right penguin annihilation topology.}
-%   \label{bs2jpsiphi_add_topo}
-% \end{figure}
 
 \begin{equation}
 \mathcal{A} \parenthesis{\BsJpsiPhiPolState{k}} = \Vus\Vub^*P_{\uquark} + \Vcs\Vcb^*\brackets{C +P_{\cquark}} + \Vts\Vtb^*P_{\tquark},
@@ -52,3 +45,22 @@ The parameter $\lambda$ here is the one of the CKM matrix parametrization of \se
 The eigenvalue, $\eta_k$, of the final state $f$ is identified with the one in \equref{lambda_cpv}.
 Note the suppression factor $\epsilon$ in \equref{bsjpsiphi_amp_param} which implies that penguin contributions
 to the \BsJpsiPhi amplitude are smaller by approximately two orders of magnitude with respect to tree level contributions.
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \includegraphics[width=1.02\textwidth, trim=1.3cm 0cm 0.5cm 0.5cm, clip=true]{Figures/Chapter5/B2JpsiX_PenguinAnnihilation}
+    \caption{}
+    \label{peng_exchange}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \includegraphics[width=1.02\textwidth,trim=1cm 0cm 0.5cm 0.5cm, clip=true]{Figures/Chapter5/B2JpsiX_Exchange}
+    \caption{}
+    \label{peng_anihilation}
+  \end{subfigure}
+  \caption{Higher order, penguin annihilation (A) and exchange (B), \BJpsiX decay topologies. Figures from \cite{DeBruyn-thesis}.}
+  \label{peng_ana_exchange}
+\end{figure}
