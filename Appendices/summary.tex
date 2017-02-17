@@ -70,20 +70,80 @@ Hence, other sources of \CP violation beyond the Standard Model have to be activ
 The ammount of \CP violation is typically quantified by several parameters for which
 the predicted by the Standard Model values have to be compared against the experimentally
 measured values. Potential descrepancy between the prediction and the measured value
-provide hints for the presence of New Physics.  In \figref{} some of these parameters
-are illustrated. It is intreasting to point out that all these paramters have to yield
-a consistent picture with each other, as illustrated in the previous figure.
-This offers a powerful discrimination between alternative models that might
+provide hints for the presence of New Physics. It is intreasting to point out that all these paramters have to yield
+a consistent picture with each other. This offers a powerful discrimination between alternative models that might
 modify Standard Model predictions. In other words these alternative models have to
 modify all the \CP violating parameters in a consistent way.
 
 
 \subsubsection{The Weak Phase \phis}
-Focusing on a particular
+Violation of the \CP symmetry in particle physics typicaly manifests itself when comparing
+the rate, or probability, of two particle decays. The two decays are releated by a \CP symmetry.
+In other words one decay consits of matter while the other of antimatter particles.
+Given the established presence of \CP violation in nature the previous rates are not equal.
+
+An intreasting particle decay to measure \CP violation and compare it with the Standard Model
+predicion is the \BsJpsiPhi decay.
+% This particular decay is appealing since the prediction for the amount of \CP
+% violation is very precise. In addition, the \BsJpsiPhi decay has a high signal purity as well
+% as a high detection efficiency, making it appealing from an experimental point of view.
+Furthermore, the way \CP violation manifests itself in this parituclar decay is intriguing
+as it involves the quantum mechanical interference of two decay amplitudes, see \equref{app_interf_amp}.
+Note that the intereference is possible since both the \Bs particle and its antimatter counterpart,
+\Bsb, can decay to the same final state $f$, as shown in \figref{app_interference}.
+
+\begin{equation}
+  \centering
+A(\BsJpsiPhi) = |\color{red}{A1} + \color{blue}{A2}| = \color{red}{A1}^2 + \color{blue}{A2}^2 + A1*A2*\cos\delta
+  \label{app_interf_amp}
+\end{equation}
+
+
+\begin{figure}[h]
+  \centering
+  \resizebox{0.4\textwidth}{!}{\input{Figures/Chapter1/decay}}
+  \caption{The two interfering decay paths leading to the same final state.}
+  \label{app_interference}
+\end{figure}
+
+The parameter quantifing \CP violation in the \BsJpsiPhi decay is the so called weak phase \phis.
+The Standard Model prediction of the latter parameter as well as its most precice measurement by
+\lhcb is:
+
+\noindent The goal of measuring \phis is to look for New Physics effects that Standard Model
+does not predict. Given the measuremnt of \equref{app_phis_lhcb} it follwos that \phis is comaptible with
+the prediction and any New Physics effects that might apear in \phis must be small.
+However, from an experimental point of view the situation is just now becoming intrasting
+since the statistical uncertainty of the experimental measuremnt is approaching the Standard
+Model prediction. Thus, with the upgraded \lhcb detector the \phis measuremnt is taken to
+a high precision era of measurements. Where, along with other observables will most likely
+be able to point towards a prticular New Physics model.
+
+\begin{subequations}
+  \label{app_phis_lhcb_theo}
+  \begin{align}
+  \centering
+  \phiS{\lhcb}           &=  -0.010 \pm 0.039(\text{total})  \;\; \text{rad},
+  \label{app_phis_lhcb}\\
+  \phiS{SM,tree}  &= -0.03761 {}^{+0.00073}_{-0.00082}  \;\; \text{rad}.
+  \label{app_phis_theo}
+\end{align}
+\end{subequations}
+
+
+Entering this promising high precision era comes along with an important consideration that
+has to be taken into acount in order to make a robust claim about the presence of New Physics
+in \phis. In particular there are certain subleading Standard Model effects that contribute to
+the predicted \phis value. These effects become crucial given that fact that, as implied by \equref{app_phis_lhcb_theo},
+potential New Physics in \phis are also small. The situation is depicted in the following equation:
+
+\noindent Where delta phis is blah and blah and tree is and peng is.
+Thus if contributions from penguin topologies are not properly taken into account there it is
+absolutely not posible to distiguish Standard Model diviations from subleading penguin effects.
+In order to address another decay invoked in order to be able to estimate penguin contributions
+to \phis.
 
 \begin{itemize}
-  \item introduce phis
-  \item Status and high precision era, (show phis delta gammas contour)
   \item The \BsJpsiKst decay as a probe for penguins
 \end{itemize}
 
