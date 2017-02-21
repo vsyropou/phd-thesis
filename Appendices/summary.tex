@@ -49,6 +49,16 @@ scientists to continue testing Standard Model predictions and look for ways to i
 Any significant diviation from these predictions could hint the presence of
 {\it New Physics} beyond the established model.
 
+
+\subsubsection{The \lhcb Detector}
+In order to find new physics we do big big xperiments. The best one is ....
+\begin{itemize}
+\item \lhc cern most powerfull accelrator
+\item \lhcb dedicated bfys experiment, unique capabilities, high signal purity. maybe mention proximity to beam and pid.
+\item future increase of low pt muon efficiency extents NP reach.
+\end{itemize}
+
+
 \subsubsection{\CP Violation}
 According to the dominant consensus regarding the matter-antimatter balance in the
 universe, it is believed that during the big bang matter and antimatter existed at
@@ -76,7 +86,7 @@ modify Standard Model predictions. In other words these alternative models have 
 modify all the \CP violating parameters in a consistent way.
 
 
-\subsubsection{The Weak Phase \phis}
+\subsubsection{The Weak Phase \phis and the \BsJpsiKst decay}
 Violation of the \CP symmetry in particle physics typicaly manifests itself when comparing
 the rate, or probability, of two particle decays. The two decays are releated by a \CP symmetry.
 In other words one decay consits of matter while the other of antimatter particles.
@@ -110,15 +120,6 @@ The parameter quantifing \CP violation in the \BsJpsiPhi decay is the so called 
 The Standard Model prediction of the latter parameter as well as its most precice measurement by
 \lhcb is:
 
-\noindent The goal of measuring \phis is to look for New Physics effects that Standard Model
-does not predict. Given the measuremnt of \equref{app_phis_lhcb} it follwos that \phis is comaptible with
-the prediction and any New Physics effects that might apear in \phis must be small.
-However, from an experimental point of view the situation is just now becoming intrasting
-since the statistical uncertainty of the experimental measuremnt is approaching the Standard
-Model prediction. Thus, with the upgraded \lhcb detector the \phis measuremnt is taken to
-a high precision era of measurements. Where, along with other observables will most likely
-be able to point towards a prticular New Physics model.
-
 \begin{subequations}
   \label{app_phis_lhcb_theo}
   \begin{align}
@@ -130,40 +131,79 @@ be able to point towards a prticular New Physics model.
 \end{align}
 \end{subequations}
 
+\noindent The goal of measuring \phis is to look for New Physics effects that Standard Model
+does not predict. Given the measuremnt of \equref{app_phis_lhcb} it follwos that \phis is comaptible
+with the prediction and any New Physics effects that might apear in \phis must be small.
+From an experimental point of view the situation is just now becoming intrasting
+since the statistical uncertainty of the experimental measuremnt is approaching the Standard
+Model prediction. Thus, with the upgraded \lhcb detector \phis enters a high precision era
+of measurements, where along with other observables will most likely be able to point towards
+a prticular New Physics model.
 
-Entering this promising high precision era comes along with an important consideration that
-has to be taken into acount in order to make a robust claim about the presence of New Physics
-in \phis. In particular there are certain subleading Standard Model effects that contribute to
-the predicted \phis value. These effects become crucial given that fact that, as implied by \equref{app_phis_lhcb_theo},
-potential New Physics in \phis are also small. The situation is depicted in the following equation:
+However, entering this promising high precision era comes along with an important consideration
+that has to be taken into acount in order to make a robust claim about the presence of New Physics
+in \phis. In particular there are certain subleading effects within the Standard Model, comming from
+the so called {\it penguin topologies}, that the \phis measurement of \equref{app_phis_lhcb} does not
+take into account, see \figref{}. These subleading effects shift the Standard Model prediction, $\phis^{\tiny \text{SM,tree}}$,
+by a small amount, $\Delta\phiS{SM,peng}$. Considering also the fact that, as implied by \equref{app_phis_lhcb_theo},
+potential New Physics in \phis are small: One understands that contributions to \phis from Standard
+Model subleading penguin topologies are imposible to disentangle from potential New Physics contributions,
+which also shift the Standard Model prediction by, $\Delta\phis^{\tiny \text{NP}}$.
+The situation is deppicted in following equation:
 
-\noindent Where delta phis is blah and blah and tree is and peng is.
-Thus if contributions from penguin topologies are not properly taken into account there it is
-absolutely not posible to distiguish Standard Model diviations from subleading penguin effects.
-In order to address another decay invoked in order to be able to estimate penguin contributions
-to \phis.
+\begin{equation}
+\centering
+ \phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM,peng} + \Delta\phis^{\tiny \text{NP}}.
+ \label{app_phis_sm_peng}
+\end{equation}
 
-\begin{itemize}
-  \item The \BsJpsiKst decay as a probe for penguins
-\end{itemize}
+\noindent Note that increasing the precision of $\phis^{\text {eff}}$ does not help at all in distinguishing
+between $\Delta\phiS{SM,peng}$ and $\Delta\phis^{\tiny \text{NP}}$. In addition, the subleading penguin
+topologies are supressed with respect to tree in the \BsJpsiPhi decay by two orders of magnitude.
+This suppresion factor is reflected to a large undertainty in the estimated penguin topology contributions,
+$\Delta\phiS{SM,peng}$, if the \BsJpsiPhi decay channel is used. Thus once again it is not possible to
+make a strong claim about New Physics contrubutions to \phis.
 
-\subsubsection{The \lhcb Detector}
+Given the above mentioned limitations it becomes mandatory to estimate contributions from
+penguing topology to \phis using a different decay chanell, \eg the \BsJpsiKst decay as suggested by
+\cite{}\cite{}. The latter is a decay that has identical tree and penguin topologies with \BsJpsiPhi,
+with the only difference being one of the quarks forming the \Pphi particle, see \figref{app_jpsiphi_tree_peng}.
+Note that the two decay diagrams, tree and penguin, in \BsJpsiKst are not suppressed with resect to eachother.
+Thus the uncertainty to $\Delta\phiS{SM,peng}$ does not suffer from any supression when measured using the
+\BsJpsiKst decay channel. On the other the presence of a \Kstarz particle instead of a \Pphi introduces
+uncertainty to $\Delta\phiS{SM,peng}$, since the assumption of perfect symmetry between an \squark and \dquark quarks
+needs to be made. In turns out that the loss in precision using the \BsJpsiKst decay channel does not
+forbid a useful estimation of $\Delta\phiS{SM,peng}$ and it is thus possible to get a handle on
+potential New Physics contribution to $\Delta\phis^{\tiny \text{NP}}$.
 
-\begin{itemize}
-\item \lhc cern most powerfull accelrator
-\item \lhcb dedicated bfys experiment, unique capabilities, high signal purity. maybe mention proximity to beam and pid.
-\item future increase of low pt muon efficiency extents NP reach.
-\end{itemize}
+{\color{red} Mention jpsi rho as well, }
+
+\begin{figure}[t]
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    {\scalebox{1}{\sffamily \input{Figures/Chapter1/tree}}}
+    \label{app_jpsiphi_tree}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    {\scalebox{1}{\sffamily \input{Figures/Chapter1/penguin}}}
+    \label{app_jpsiphi_peng}
+  \end{subfigure}
+    \caption{Leading order {\it tree} (left) and subleading penguin (right) \BsJpsiPhi decay topologies.}
+  \label{app_jpsiphi_tree_peng}
+\end{figure}
 
 \subsubsection{Analysing Particle Collisions}
+Having introduced the penguin parameter $\Delta\phiS{SM,peng}$ it is intreasting to point out some
+aspects releated to the experimental measurement itself.
 
 \begin{itemize}
 \item Non infinite resolution and experimental effects and background forces statistical approach.
-\item Angular analysis of the decay products to probe polarization fractions. The amplitude has many
-      components depending on the oriantation of the spin vectors.
+\item Challenges: low yield, carefull selection, angular analysis.
 \end{itemize}
 
-\subsubsection{Impact and conclusion}
+\subsubsection{Result, Impact and Conclusion}
 
 \begin{itemize}
 \item Accordin to Robert recepie Delta phis is found to be blah.
