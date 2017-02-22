@@ -51,12 +51,61 @@ Any significant diviation from these predictions could hint the presence of
 
 
 \subsubsection{The \lhcb Detector}
-In order to find new physics we do big big xperiments. The best one is ....
-\begin{itemize}
-\item \lhc cern most powerfull accelrator
-\item \lhcb dedicated bfys experiment, unique capabilities, high signal purity. maybe mention proximity to beam and pid.
-\item future increase of low pt muon efficiency extents NP reach.
-\end{itemize}
+While from a phenomenological point of view scientists invent new observables that succefully probe
+effects deviating from the Standard Model predictions, it is the role of experimental physicists to
+constantly improve their infrastructure. Utilizing state of the art technologies physicists have
+built the most powerfull accelerator, \lhc, at \cern. This machine is capable of accelrating protons
+up to almost the speed of light and collide them at a very a high energy. To put this into perspective
+the energy density of a single proton-proton collision at \lhc is approximatelly as high as when the
+universe was $10^-10 \sec$ old. This effectivelly allows particle physicsc to look back in time and
+probe information about the state of matter, and antimatter, in the early universe.
+
+The \lhcb experiment, located at \cern, is a dedicated experiment. The design of the \lhcb detector,
+both at the hardware and software level, is optimised for detecting the interactions of the so called
+{\it heavy} quarks, like the \bquark and the \cquark quarks. It is intrasting to point out two specific
+milestones of the \lhcb collaboration. The first one involves the excelent spacial resolution of particle
+trajectories which is due to the \lhcb places its first active detector element closer to the \lhc beam
+pipe than any other detector. Note that high spacial resolution directy increases the sensitivity to most
+of the physics releated parameters that the \lhcb is targeting. The second novel techinique is the
+{\it online detector alignment and calibration} which essentially enables the output data quality of the
+trigger system to be as high as posible, elliminating the need of storing and processing triggered data
+after detector calibration is done. This saves valuable time and resourses and at the same time allows
+to increase the output data banwidth, which will eventually reduce the statistical uncertainty in all
+\lhcb measurements.
+
+Muons are important for the \lhcb experiment and are easy to identify since they penetrate matter deeply.
+Given that a large fraction of the \lhcb physics program is based on the identification of muons in the
+final state: for example the measurement of \phis through \BsJpsiPhi decays. It is therefore of major
+importance to maintain and improve the efficiency and purity of identified muons. In addition, newly
+introduced decay channels to the \lhcb physics program involve muons with low, $\pt < 0.5 \gevc$,
+tranverse momentum, \eg \Sigmapmumu \cite{LHCB-CONF-2016-013-001} and \Ksmumu \cite{LHCb-CONF-2016-012}.
+These type of decays are promising probes to New Physics and \lhcb has the potential to profit from a
+potential lowering of the $0.5 \gevc$ thereshod that was present untill the end of the first \lhc run.
+
+
+A dedicated study to explore the posibilities of recording muons with low transverse
+moementum was performed. The study essentially showed that by exploiting the newly introduced charge
+information of muons it is indeed possible to push the transverse momentum threashold lower. The results
+are summarised in \figref{}; where the efficiency of detecting a muon is plotted against its transverse
+momemntum. Note that the performance in terms of time between the default (red) and the upgraded (blue)
+muon identification algorithms, is the same.
+
+%The only limitation to lowering the $\pt$ thereshold comes  from the persence of background ammount of
+\begin{figure}[t]
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \scalebox{.6}{\input{Figures/Chapter3/pt_zoom_efficiencies}}
+    \label{app_eff_pt_zoom_comp}
+  \end{subfigure}%
+  \hfill
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \scalebox{.6}{\input{Figures/Chapter3/p_efficiencies}}
+    \label{app_eff_p_comp}
+  \end{subfigure}
+    \caption{Efficiency comparison between the old (red) and the upgraded (blue) algorithms.}
+  \label{app_eff_comp}
+\end{figure}
 
 
 \subsubsection{\CP Violation}
@@ -86,7 +135,7 @@ modify Standard Model predictions. In other words these alternative models have 
 modify all the \CP violating parameters in a consistent way.
 
 
-\subsubsection{The Weak Phase \phis and the \BsJpsiKst decay}
+\subsubsection{The Weak Phase \phis}
 Violation of the \CP symmetry in particle physics typicaly manifests itself when comparing
 the rate, or probability, of two particle decays. The two decays are releated by a \CP symmetry.
 In other words one decay consits of matter while the other of antimatter particles.
@@ -102,12 +151,18 @@ as it involves the quantum mechanical interference of two decay amplitudes, see 
 Note that the intereference is possible since both the \Bs particle and its antimatter counterpart,
 \Bsb, can decay to the same final state $f$, as shown in \figref{app_interference}.
 
+\newcommand{\aOne}{\ensuremath{ \mathrm{A_1}}\xspace}
+\newcommand{\aTwo}{\ensuremath{ \mathrm{A_2}}\xspace}
 \begin{equation}
   \centering
-A(\BsJpsiPhi) = |\color{red}{A1} + \color{blue}{A2}| = \color{red}{A1}^2 + \color{blue}{A2}^2 + A1*A2*\cos\delta
+A(\BsJpsiPhi)^2 = |\aOne + \aTwo|^2 = |\aOne|^2 + |\aTwo|^2 + \aOne\aTwo\cos(\phis + \delta),
   \label{app_interf_amp}
 \end{equation}
 
+\noindent where the decay paths $\Bs\to f$ and $\Bs \to \Bsb \to f$ correspond to \aOne and \aTwo
+respectivelly. Note the \phis parameter appearing in the interference terms of the total amplitude.
+The other phase, $\delta$, is phase introduced by the strong itneraction of quarks and it does not
+accountable for any \CP violating effect.
 
 \begin{figure}[h]
   \centering
@@ -143,13 +198,14 @@ a prticular New Physics model.
 However, entering this promising high precision era comes along with an important consideration
 that has to be taken into acount in order to make a robust claim about the presence of New Physics
 in \phis. In particular there are certain subleading effects within the Standard Model, comming from
-the so called {\it penguin topologies}, that the \phis measurement of \equref{app_phis_lhcb} does not
-take into account, see \figref{}. These subleading effects shift the Standard Model prediction, $\phis^{\tiny \text{SM,tree}}$,
-by a small amount, $\Delta\phiS{SM,peng}$. Considering also the fact that, as implied by \equref{app_phis_lhcb_theo},
-potential New Physics in \phis are small: One understands that contributions to \phis from Standard
-Model subleading penguin topologies are imposible to disentangle from potential New Physics contributions,
-which also shift the Standard Model prediction by, $\Delta\phis^{\tiny \text{NP}}$.
-The situation is deppicted in following equation:
+the so called {\it penguin topologies} and shown in see \figref{app_jpsiphi_tree_peng}, that the
+\phis measurement of \equref{app_phis_lhcb} does not take into account. These subleading effects shift
+the Standard Model prediction, $\phis^{\tiny \text{SM,tree}}$, by a small amount, $\Delta\phiS{SM,peng}$.
+Considering also the fact that, as implied by \equref{app_phis_lhcb_theo}, potential New Physics in
+\phis are small: One understands that contributions to \phis from Standard Model subleading penguin
+topologies are imposible to disentangle from potential New Physics contributions, which also shift
+the Standard Model prediction by, $\Delta\phis^{\tiny \text{NP}}$. The situation is deppicted in
+following equation:
 
 \begin{equation}
 \centering
@@ -165,18 +221,19 @@ $\Delta\phiS{SM,peng}$, if the \BsJpsiPhi decay channel is used. Thus once again
 make a strong claim about New Physics contrubutions to \phis.
 
 Given the above mentioned limitations it becomes mandatory to estimate contributions from
-penguing topology to \phis using a different decay chanell, \eg the \BsJpsiKst decay as suggested by
-\cite{}\cite{}. The latter is a decay that has identical tree and penguin topologies with \BsJpsiPhi,
-with the only difference being one of the quarks forming the \Pphi particle, see \figref{app_jpsiphi_tree_peng}.
-Note that the two decay diagrams, tree and penguin, in \BsJpsiKst are not suppressed with resect to eachother.
-Thus the uncertainty to $\Delta\phiS{SM,peng}$ does not suffer from any supression when measured using the
-\BsJpsiKst decay channel. On the other the presence of a \Kstarz particle instead of a \Pphi introduces
-uncertainty to $\Delta\phiS{SM,peng}$, since the assumption of perfect symmetry between an \squark and \dquark quarks
-needs to be made. In turns out that the loss in precision using the \BsJpsiKst decay channel does not
-forbid a useful estimation of $\Delta\phiS{SM,peng}$ and it is thus indeed possible to get a handle on
-potential New Physics contribution to $\Delta\phis^{\tiny \text{NP}}$.
-
-{\color{red} Mention jpsi rho as well, }
+penguing topology to \phis using a different decay chanells, also called control chanells,
+\eg the \BsJpsiKst and/or \BdJpsiRho. Note the latter decays have identical tree and penguin
+topologies with \BsJpsiPhi. The only difference is that one of the quarks forming the \Pphi
+particle in \figref{app_jpsiphi_tree_peng} is replaced with another quark to form the \Kstarz
+and \rhoz particles respectivelly for the \BsJpsiKst and \BdJpsiRho decays. This difference in
+quarks between the \BsJpsiPhi decay and the control channels introduces uncertainty to
+$\Delta\phiS{SM,peng}$, since the impact of assuming perfect symmetry between quarks has to be
+estimated and propagated as a systematic uncertainty. However, the penguin topology in both of
+the control channels is not suppressed with resect to the tree and thus the uncertainty to
+$\Delta\phiS{SM,peng}$ does not suffer from any supression when measured using the
+these control channels. Finally, the overal uncertainty of $\Delta\phiS{SM,peng}$ is such
+that by using both control channells it is indeed possible to get a handle on potential
+New Physics contribution to $\Delta\phis^{\tiny \text{NP}}$.
 
 \begin{figure}[t]
   \begin{subfigure}{0.5\textwidth}
@@ -203,9 +260,20 @@ To begin with the recorded \BsJpsiKst and \BsJpsiRho decays, necessary to extrac
 have to be processed such that the presence of background, noise, is suppressed as much as possible.
 Background processes are in general introduced due to finite experimental resolution. Having a clean
 sample is always desired; particularly in the case of the \BsJpsiKst decay which has a low probability
-of occuring with respect to the \BdJpsiKst decay, see \figref{}. Furthermore, the spin configurations
-in the \BsJpsiPhi decay , where \Jpsimumu and \phiKK, is such that the direction of the final state
-particles, mumu and KK, becoems relevant and have to be accounted for by a multi dimensional model.
+of occuring with respect to the \BdJpsiKst decay, see \figref{app_mass_plot}. Furthermore, the spin
+configurations of the particles involved in the \BsJpsiPhi decay, where \Jpsimumu and \phiKK, is such
+that the direction of the final state particles, mumu and KK, becoems relevant and have to be accounted
+for by a multi dimensional model.
+
+\begin{figure}[t]
+  \centering
+  \tikzsetnextfilename{mass_plot}
+  \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
+  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKst and
+           \BsJpsiKst mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
+           colors respectively. The total mass \pdf, blue curve, is overlayed on top of the data. Figure from \cite{bsjpsikst-paper}. }
+  \label{app_mass_plot}
+\end{figure}
 
 At that point it is usefull to emphasize the fact that in particle physics, parameters of intereset
 require a sufficiently large number of recorded particle collisions, data, in order to be estimated.
@@ -217,26 +285,49 @@ multi dimensional model.
 
 Once the data have been cleaned from the presence of background and all the experimental effects are
 properly taken into account the model, which depends on the paramter of itnereset, is fitted to the data.
-The fitting process is based on the maximum likelihood paramter estimation.
-How does fitting work.{\color{red} Maybe add a paragraph on the likelihood}
-Explain that the likelihood is a product of probabilities. It is intuitive that you look for its maximum.
-The likelihood gives back: What is the probability to observe the data given this paramter of intereset.
-At its max it gives the best paramter of intereset given the data. Note that in fact you want the inverse
-but thats another story..
+The fitting process is based on the principle of maximum likelihood principle. The likelihood is a
+function of the parameters of interest given the observed data. Going one step further each term of
+the product is the probability of measuring a certain value for a particular observable, like the
+\mass{\Bs} of \figref{app_mass_plot}, given a specific value of the parameter of interest. It follows that
+At its maximum the likelihood provides the so called {\it best fit} estimate for the paramters
+of interest given the data that was used to build the previous likelihood function.
 
 \subsubsection{Result, Impact and Conclusion}
 
-Having performed the likelihood fit of the multidimensional model to the data and following \cite{}Robert
-the final result for the paramters of intereset are:
+Having performed the likelihood fit of the multidimensional model to the data and
+following \cite{Fleischer:1999zi,Faller:2008gt,DeBruyn:2014oga,DeBruyn-thesis} the
+final result for the paramters of intereset are:
 
-The shifts $\DeltaPhisJpsiPhi{k}$ quoted in \equref{delta_phis_result}
+\begin{subequations}
+\label{app_delta_phis_result}
+\begin{align}
+\DeltaPhisJpsiPhi{0}         & = 0.000 \; ^{+0.009}_{-0.011} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst}) = 0.000 \; ^{+0.010}_{-0.014},\\
+\DeltaPhisJpsiPhi{\parallel} & = 0.001 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.001 \; ^{+0.012}_{-0.016},\\
+\DeltaPhisJpsiPhi{\perp}     & = 0.003 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.003 \; ^{+0.012}_{-0.016},
+\end{align}
+\end{subequations}
+
+\noindent Note that the parameter $\Delta\phiS{SM,peng}$ is splitted in the so called {\it polarization}
+components. Essentially the total \BsJpsiPhi amplitude, or probability, as well as the \phis value
+are in principle different depending on the configuration of the particle spins in the \BsJpsiPhi
+decay resulting in the three amplitude components $\parallel,\perp,0$. Thus, the penguin parameter
+$\Delta\phiS{SM,peng}$ has to be estimated in a similar footing.
+
+The shifts $\DeltaPhisJpsiPhi{k}$ quoted in \equref{app_delta_phis_result}
 suggest that contributions of penguin topologies to the \BsJpsiPhi decay amplitude are
-small, $<1^\circ$. Given the also small \phis measured value from \lhcb shown in \equref{phis_lhcb}
+small, $<1^\circ$. Given the also small \phis measured value from \lhcb shown in \equref{app_phis_lhcb}
 it becomes mandatory to control penguin contributions in future \phis measurements.
 Furthermore, the sensitivity from the experimental side is interesting with respect to
-the Standard Model prediction, see \equref{phis_lhcb_theo}. Thus, potential deviations from this
+the Standard Model prediction, see \equref{app_phis_lhcb_theo}. Thus, potential deviations from this
 prediction is going to play a central role in future and more precise \phis measurements.
 Increasing the amount of data in the \lhc \runtwo might not be enough to yield
 a significant claim on the presence of physics beyond the Standard Model and hence
 the upgraded \lhcb detector becomes important in the pursuit for New Physics with \phis in the future.
 The result implies that the penguin contribution to the \phis is small, blah.
+
+
+
+\begin{itemize}
+  \item Fix units in delta phis
+  \item use consistent symbols for delta phis in the appendix
+\end{itemize}
