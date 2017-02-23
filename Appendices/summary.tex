@@ -86,7 +86,7 @@ potential lowering of the $0.5 \gevc$ thereshod that was present untill the end 
 A dedicated study to explore the posibilities of recording muons with low transverse
 moementum was performed. The study essentially showed that by exploiting the newly introduced charge
 information of muons it is indeed possible to push the transverse momentum threashold lower. The results
-are summarised in \figref{}; where the efficiency of detecting a muon is plotted against its transverse
+are summarised in \figref{app_eff_comp}; where the efficiency of detecting a muon is plotted against its transverse
 momemntum. Note that the performance in terms of time between the default (red) and the upgraded (blue)
 muon identification algorithms, is the same.
 
@@ -200,7 +200,7 @@ that has to be taken into acount in order to make a robust claim about the prese
 in \phis. In particular there are certain subleading effects within the Standard Model, comming from
 the so called {\it penguin topologies} and shown in see \figref{app_jpsiphi_tree_peng}, that the
 \phis measurement of \equref{app_phis_lhcb} does not take into account. These subleading effects shift
-the Standard Model prediction, $\phis^{\tiny \text{SM,tree}}$, by a small amount, $\Delta\phiS{SM,peng}$.
+the Standard Model prediction, $\phis^{\tiny \text{SM,tree}}$, by a small amount, $\Delta\phiS{peng}$.
 Considering also the fact that, as implied by \equref{app_phis_lhcb_theo}, potential New Physics in
 \phis are small: One understands that contributions to \phis from Standard Model subleading penguin
 topologies are imposible to disentangle from potential New Physics contributions, which also shift
@@ -209,15 +209,15 @@ following equation:
 
 \begin{equation}
 \centering
- \phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{SM,peng} + \Delta\phis^{\tiny \text{NP}}.
+ \phis^{\text {eff}} = \phis^{\tiny \text{SM,tree}} + \Delta\phiS{peng} + \Delta\phis^{\tiny \text{NP}}.
  \label{app_phis_sm_peng}
 \end{equation}
 
 \noindent Note that increasing the precision of $\phis^{\text {eff}}$ does not help at all in distinguishing
-between $\Delta\phiS{SM,peng}$ and $\Delta\phis^{\tiny \text{NP}}$. In addition, the subleading penguin
+between $\Delta\phiS{peng}$ and $\Delta\phis^{\tiny \text{NP}}$. In addition, the subleading penguin
 topologies are supressed with respect to tree in the \BsJpsiPhi decay by two orders of magnitude.
 This suppresion factor is reflected to a large undertainty in the estimated penguin topology contributions,
-$\Delta\phiS{SM,peng}$, if the \BsJpsiPhi decay channel is used. Thus once again it is not possible to
+$\Delta\phiS{peng}$, if the \BsJpsiPhi decay channel is used. Thus once again it is not possible to
 make a strong claim about New Physics contrubutions to \phis.
 
 Given the above mentioned limitations it becomes mandatory to estimate contributions from
@@ -227,11 +227,11 @@ topologies with \BsJpsiPhi. The only difference is that one of the quarks formin
 particle in \figref{app_jpsiphi_tree_peng} is replaced with another quark to form the \Kstarz
 and \rhoz particles respectivelly for the \BsJpsiKst and \BdJpsiRho decays. This difference in
 quarks between the \BsJpsiPhi decay and the control channels introduces uncertainty to
-$\Delta\phiS{SM,peng}$, since the impact of assuming perfect symmetry between quarks has to be
+$\Delta\phiS{peng}$, since the impact of assuming perfect symmetry between quarks has to be
 estimated and propagated as a systematic uncertainty. However, the penguin topology in both of
 the control channels is not suppressed with resect to the tree and thus the uncertainty to
-$\Delta\phiS{SM,peng}$ does not suffer from any supression when measured using the
-these control channels. Finally, the overal uncertainty of $\Delta\phiS{SM,peng}$ is such
+$\Delta\phiS{peng}$ does not suffer from any supression when measured using the
+these control channels. Finally, the overal uncertainty of $\Delta\phiS{peng}$ is such
 that by using both control channells it is indeed possible to get a handle on potential
 New Physics contribution to $\Delta\phis^{\tiny \text{NP}}$.
 
@@ -252,7 +252,7 @@ New Physics contribution to $\Delta\phis^{\tiny \text{NP}}$.
 \end{figure}
 
 \subsubsection{Analysing Particle Collisions}
-Having introduced the penguin parameter $\Delta\phiS{SM,peng}$ it is intreasting to point out some
+Having introduced the penguin parameter $\Delta\phiS{peng}$ it is intreasting to point out some
 aspects releated to the experimental measurement itself and thus highlight the pipeline followed from
 the recorded raw particle collisions and the final result.
 
@@ -298,22 +298,21 @@ Having performed the likelihood fit of the multidimensional model to the data an
 following \cite{Fleischer:1999zi,Faller:2008gt,DeBruyn:2014oga,DeBruyn-thesis} the
 final result for the paramters of intereset are:
 
-\begin{subequations}
+\begin{equation}
 \label{app_delta_phis_result}
-\begin{align}
-\DeltaPhisJpsiPhi{0}         & = 0.000 \; ^{+0.009}_{-0.011} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst}) = 0.000 \; ^{+0.010}_{-0.014},\\
-\DeltaPhisJpsiPhi{\parallel} & = 0.001 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.001 \; ^{+0.012}_{-0.016},\\
-\DeltaPhisJpsiPhi{\perp}     & = 0.003 \; ^{+0.010}_{-0.014} \; {\rm (stat)} \; ^{+0.006}_{-0.007} \; ({\rm syst)} = 0.003 \; ^{+0.012}_{-0.016},
-\end{align}
-\end{subequations}
+  \DeltaPhisPeng{0}         = 0.00 ^{+0.57}_{-0.80}, \;\;
+  \DeltaPhisPeng{\parallel} = 0.06 ^{+0.69}_{-0.92}, \;\;
+  \DeltaPhisPeng{\perp}     = 0.17 ^{+0.69}_{-0.92}.
+\end{equation}
 
-\noindent Note that the parameter $\Delta\phiS{SM,peng}$ is splitted in the so called {\it polarization}
+
+\noindent Note that the parameter $\Delta\phiS{peng}$ is splitted in the so called {\it polarization}
 components. Essentially the total \BsJpsiPhi amplitude, or probability, as well as the \phis value
 are in principle different depending on the configuration of the particle spins in the \BsJpsiPhi
 decay resulting in the three amplitude components $\parallel,\perp,0$. Thus, the penguin parameter
-$\Delta\phiS{SM,peng}$ has to be estimated in a similar footing.
+$\Delta\phiS{peng}$ has to be estimated in a similar footing.
 
-The shifts $\DeltaPhisJpsiPhi{k}$ quoted in \equref{app_delta_phis_result}
+The shifts $\Delta\phiS{peng}$ quoted in \equref{app_delta_phis_result}
 suggest that contributions of penguin topologies to the \BsJpsiPhi decay amplitude are
 small, $<1^\circ$. Given the also small \phis measured value from \lhcb shown in \equref{app_phis_lhcb}
 it becomes mandatory to control penguin contributions in future \phis measurements.
@@ -323,11 +322,8 @@ prediction is going to play a central role in future and more precise \phis meas
 Increasing the amount of data in the \lhc \runtwo might not be enough to yield
 a significant claim on the presence of physics beyond the Standard Model and hence
 the upgraded \lhcb detector becomes important in the pursuit for New Physics with \phis in the future.
-The result implies that the penguin contribution to the \phis is small, blah.
-
 
 
 \begin{itemize}
-  \item Fix units in delta phis
-  \item use consistent symbols for delta phis in the appendix
+  \item Avoid using \mass{\Bs}
 \end{itemize}
