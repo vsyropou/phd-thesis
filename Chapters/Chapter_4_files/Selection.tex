@@ -1,9 +1,9 @@
 
-With the exception of the trigger, addressed in \secref{det_trigger}, there are effectively four stages of offline event
+Following the trigger system, addressed in \secref{det_trigger}, there are effectively four stages of offline event
 selection which take place after the data has been recorded.
 First a set of selection criteria applied is called {\it Stripping}. The purpose of stripping is to roughly
 select the triggered data according to their physics content. Furthermore, a loose rejection of the {\it combinatorial}
-background is performed such that and the data are prepared for the next selection stages.
+background is performed such that the data are prepared for the next selection stages.
 Combinatorial background is the type of background typical in particle collision where a large number of
 particles is produced. It is caused by random combinations of non-signal particles that build a signal
 {\it candidate} during the event reconstruction, mentioned in \secref{det_tracking}.
@@ -44,7 +44,8 @@ For the current analysis the TMVA toolkit \cite{TMVA} is used for the MVA select
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background.
 This pair of data sets is provided as input to the MVA algorithm to construct the classifying variable.
 In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
-Next another, independent, pair of sets is used to asses how successful the training step was. This step is called {\it testing}.
+After the trainning step is completed a second, independent, pair of sets is used to asses how
+successful the training step was. This step is called {\it testing}.
 For the signal representative samples, \BsJpsiKst Monte-Carlo (MC) simulated data are used, hereafter simulated data.
 For the background representative sample data candidates are used. These candidates are taken from a control
 region away from the \BsJpsiKst mass peak, usually referred to as {\it mass sideband}. This way the background representative sample
@@ -79,7 +80,7 @@ mentioned earlier in the introduction of the current section. The above-mentione
 the sum of \sWeights, in the numerator. Large values of \sWeights translate to higher effective signal yield.
 This is because candidates that are more likely to be signal receive a larger weight $w_i$. It follows that the
 optimum set of weights will have the higher FoM value compared to any other set of weights. Thus the FoM
-of \equref{eqn:fom} essentially expresses the signal fraction. For a range of BDT values the \sPlot technique
+of \equref{eqn:fom} essentially expresses the signal yield. For a range of BDT values the \sPlot technique
 provides a different set of \sWeights based on which a different FoM value can be obtained, thus allowing for
 optimizing the BDT cutoff value.
 
@@ -98,7 +99,7 @@ from several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \Bd
 These backgrounds are the result of misidentifying a final state particle, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above-mentioned misidentified backgrounds
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected reflection background,
-see \tabref{peaking_bkg_yields}, their distribution is quite non-uniform. This type of distribution is
+see \tabref{peaking_bkg_yields}, their distribution is quite not smooth and continuous. This type of distribution is
 removed before the next selection step is applied as it is more effective when the distributions involved are smooth.
 Therefore, specific simulated decays with negative weights
 are injected to the data sample such that they cancel out the contribution of the above-mentioned reflection
@@ -237,7 +238,7 @@ The first two are set to zero since $\zeta$ is empirically found to be very smal
 symmetric left and right with respect to the mean. The third parameter is taken from the previous simulated sample along
 with the tail parameters. The latter, in the limit of $\zeta = 0$, $\lambda$ does not depend on detector effects but only
 on particle kinematics, the same way as the tail parameters do. Lastly, the remaining two parameters, the width and
-the mean of the core, are determined by the mass fit.
+the mean of the core, are determined by the mass fit to the data.
 
 \subsubsection{The mass fit}
 From studies with simulated data, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi
@@ -274,8 +275,8 @@ out of the full data sample.
   \centering
   \tikzsetnextfilename{mass_plot}
   \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
-  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKst and
-           \BsJpsiKst mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
+  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKpi and
+           \BsJpsiKpi mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
            colors respectively. The total mass \pdf, blue curve, is overlayed on top of the data. Figure from \cite{bsjpsikst-paper}. }
   \label{mass_plot}
 \end{figure}
