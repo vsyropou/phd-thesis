@@ -683,16 +683,17 @@ It originates from integrals like the one in the following equation:
 \noindent where $\mKpiAmp[n,m]$ run the same as in \equref{ang_terms} and the phase space factor:
 
 \begin{equation}
-  \centering
-  \Phi = \frac{\lambda(m_\mmu,m_\kaon,m_\pion) \lambda(m_{\Bs},m_\jpsi,m_\mmu)}{ 4 m_\mmu^2},
   \label{csp_ph_sp_factor}
+  \centering
+  \Phi = \frac{1}{4} \frac{\lambda(\mass{\Bs},\mass{\kaon\pion},\mass{\jpsi}) \lambda(\mass{\kaon\pion},\mass{\kaon},\mass{\pion})}{{\mass{\Bs} \mass{\kaon\pion}}},
 \end{equation}
 
-\noindent with
+\noindent with,
+\vspace{-0.5cm}
 
 \begin{equation}
   \centering
-  \lambda(m_1,m_2,m_3) = \frac{m_1^2 + m_2^2 + m_3^2 - 2 m_1 m_2 - 2 m_1 m_3  - 2 m_2 m_3 } {m_1^2}. \nonumber
+  \lambda(m_1,m_2,m_3) = \left[ m_1^4 + m_2^4 + m_3^4 - 2 m_1^2 m_2^2 - 2 m_1^2 m_3^2 - 2 m_2^2 m_3^2 \right]^{1/2}. \nonumber
   \label{csp_ph_sp_factor_def}
 \end{equation}
 
@@ -950,7 +951,7 @@ algebra and using the well known expression of the Poisson distribution results 
 
 \begin{align}
   \centering
-  -\nll &= -\ln\left( \frac{\expEvnts}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
+  -\nll &= -\ln\left( \frac{\expEvnts^n}{n\,!} e^{-\expEvnts } \right) - \ln\left( \prod_e^n \mathcal{P}(\vec{x};\vec{p}) \right)  \nonumber \\
         &= - n\ln(\expEvnts) + \expEvnts  + \ln n! - \sum_e^n \ln\parenthesis{\mathcal{P}(\vec{x};\vec{p})} \nonumber \\
         &=  \expEvnts  - \sum_e^n \ln\parenthesis{\expEvnts \; \mathcal{P}(\vec{x};\vec{p}) } + {\rm const}.
 \label{extloglikelihood}
