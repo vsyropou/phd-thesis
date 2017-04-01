@@ -14,7 +14,7 @@ its relevance to the search for new particles is discussed.
   \label{interference}
 \end{figure}
 
-The parameter \phis manifests itself in the time dependence of the  $\bquark \rightarrow \cquark\cquarkbar\squark $ transitions.
+The parameter \phis manifests itself in the time dependence of the $\bquark \to \cquark\cquarkbar\squark$ transitions.
 An example of the latter is shown in \figref{bs2jpsiphi}. In addition, the final state of the \Bs meson has to be
 a \CP eigenstate, which implies that both \Bs and \Bsb can decay into it, such that the two decay paths
 illustrated in \figref{interference} can interfere with each other.
@@ -35,8 +35,18 @@ A common way to parameterize \CP violation in the interference between mixing an
 \end{equation}
 
 \noindent Note that $\lambda_f$ is not to be confused with the $\lambda$ of the Wolfenstein parametrization.
-Assuming no \CP violation in either \BBbarSyst mixing or in the decay to the \CP eigenstate $f$, the asymmetry
-associated to the interference can be written as:
+The asymmetry associated to the interference between mixing and decay is defined as:
+
+\begin{equation}
+  \centering
+  a_{\CP}^{\rm interf}(t) \equiv \frac{\Gamma(\Bs \to f) - \Gamma(\Bsb \to f)} {\Gamma(\Bs \to f) + \Gamma(\Bsb \to f)}.
+\label{cpv_interf_def}
+\end{equation}
+
+\noindent Note the common final state $f$ that both \Bs and \Bsb can decay to, which is due to the fact
+that $f$ is a \CP eigenstate. Assuming no \CP violation in both \BBbarSyst mixing and in the decay to the
+final state $f$ and using the \BBbarSyst decay rate equations, the assymetry of \equref{cpv_interf_def}
+can be expressed as:
 
 \newcommand{\half}{\frac{1}{2}}
 \begin{equation}
@@ -46,12 +56,12 @@ associated to the interference can be written as:
 \end{equation}
 
 \noindent It can be seen that the previous asymmetry shows an oscillatory behavior versus time, due
-to the presence of the $\sin(\Delta m_s t)$ term. The frequency of the oscillation is driven by $\Delta m_s$, whereas
-the amplitude is proportional to $\Im\lambda_f$.
+to the presence of the $\sin(\Delta m_s t)$ term. The frequency of the oscillation is driven by $\Delta m_s$,
+whereas the amplitude is proportional to $\Im\lambda_f$.
 
-For completeness, according to \cite{DeBruyn-thesis,jeroenThesis}, the parameter $\lambda_f$ is also related to the $\Acp{\rm dir}$ as well as to two
-other types of asymmetries. The asymmetries are shown in \equref{cp_asym_lambda} and they come from the differential decay rate equations of the $\Bs\to f$
- and $\Bsb\to f$.
+For completeness the parameter $\lambda_f$ is also related to the $\Acp{\rm dir}$ as well as to two other
+types of asymmetries. These asymmetries also come from the \BBbarSyst decay rate equations and are shown
+in the following equation:
 
 \begin{equation}
   \centering
@@ -61,21 +71,29 @@ other types of asymmetries. The asymmetries are shown in \equref{cp_asym_lambda}
 \label{cp_asym_lambda}
 \end{equation}
 
-\noindent The second asymmetry, \Acp{\rm mix}, expresses the mixing induced \CP asymmetry, whereas \Acp{\Delta\Gamma} is associated with the
-difference in the decay rate of the mass eigenstates of \equref{bs_mass_eigen}.
+\noindent The second asymmetry, \Acp{\rm mix}, expresses the mixing induced \CP asymmetry, whereas
+\Acp{\Delta\Gamma} is associated with the difference in the decay rate of the mass eigenstates of
+\equref{bs_mass_eigen}. The definition of \Acp{\rm dir} in \equref{cp_asym_lambda} explicitly captures
+the feuture of active \CP violation in both the \BBbarSyst mixing and in the decay to the final
+state $f$. In case where mixing does not indice any \CP violation, like the decay of \BsJpsiKst,
+one could chose the \Acp{\rm dir} definition of \equref{cpv_decay}. The full derivation of the
+above mention assymetries can be found in \cite{DeBruyn-thesis,jeroenThesis}.
 
 It is interesting to point out that according to \equref{cpv_interf} and \equref{cp_asym_lambda} \CP asymmetry
 can still be observed in the interference between decay and
 mixing even if no \CP violation occurs in either the mixing or decay. This is possible if the imaginary part,
 $\Im\lambda_f$, in \equref{lambda_cpv} is not zero. The asymmetry of \equref{cpv_interf} can vanish at a
 particular point of time or for a given time interval. Because of that \equref{cpv_interf} should not
-be integrated over time when measuring \phis. This implies that this asymmetry should be measured as
-a function of the {\it decay time} of the \Bs (\Bsb) meson. Where decay time is the time interval between
+be integrated over time impling that the previous asymmetry has to be measured as a function of
+the {\it decay time} of the \Bs (\Bsb) meson. Where decay time is the time interval between
 the production and decay of a particle, for example the \Bs particle.
 
-The imaginary part of \equref{lambda_cpv} can be expressed as a combination of CKM elements, given a certain final state $f$, like $\jpsi\Pphi$.
-Under the assumption that for this final state only the leading order diagrams of \figref{bs_box} and \figref{bs2jpsiphi} contribute to the
-the \BBbarSyst mixing and decay respectively; Then the leading order Standard Model estimate of $\Im(\lambda_f)$ is written as:
+The imaginary part of \equref{lambda_cpv} can be expressed as a combination of CKM elements,
+given a certain final state $f$, like $\jpsi\Pphi$. The latter final state is the chanell that
+yields the most precise \phis measuremnt with respect to other $\bquark \to \cquark\cquarkbar\squark$.
+Under the assumption that for this final state only the leading order diagrams of \figref{bs_box}
+and \figref{bs2jpsiphi} contribute to the \BBbarSyst mixing and decay respectively;
+Then the leading order Standard Model estimate of $\Im(\lambda_f)$ is written as:
 
 \begin{equation}
   \centering
@@ -129,7 +147,9 @@ the total angular momentum, $l$, dictates whether the \CP eigenvalue of the prev
 It turns out that in order to properly measure \phis it is necessary to disentangle the \CP-odd and \CP-even
 components by means of an angular analysis of \BsJpsiPhi decays. The angular analysis is based on the
 angular distributions of \phiKK and \Jpsimumu, see \secref{Diferential_Decay_Rate} for the angular analysis
-of \BsJpsiKst decays.
+of \BsJpsiKst decays. For completness it is mentioned that the equivalent weak phase and decay chanell in
+the \BdBdbarSyst is $\phid = -\sin 2\beta$ and \BdJpsiKS respectivelly. The only difference is that no
+angular analysis is necessary since the final state $\jpsi\KS$ is a pure \CP eigenstate.
 
 \subsection{Measuring $\boldsymbol{\phis}$}
 \label{measuring_phis}
