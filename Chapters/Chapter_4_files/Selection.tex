@@ -99,7 +99,7 @@ from several specific background sources, such as \BsJpsiKK, \BsJpsipipi and \Bd
 These backgrounds are the result of misidentifying a final state particle, for example a pion can
 be confused for a kaon. The invariant mass distribution of the above-mentioned misidentified backgrounds
 accumulate near the \BJpsiKpi signal peaks. Furthermore given the low number of expected reflection background,
-see \tabref{peaking_bkg_yields}, their distribution is quite not smooth and continuous. This type of distribution is
+see \tabref{peaking_bkg_yields}, their distribution is quite not smooth and continuous. This type of background is
 removed before the next selection step is applied as it is more effective when the distributions involved are smooth.
 Therefore, specific simulated decays with negative weights
 are injected to the data sample such that they cancel out the contribution of the above-mentioned reflection
@@ -147,8 +147,10 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, \mhh  | A_k^i)} {P_{\rm MC}^i(\Omeg
 
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs.
 The index $i$ labels the species of the particular reflection background, \ie \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
-The polarization states of each of the above species is represented by the $k=\parenthesis{0, \parallel, \perp}$ index.
-The estimated yields of reflection background after the above-mentioned steps are shown in \tabref{peaking_bkg_yields}
+The polarization states of each of the above species is labeled by the $k=\left(0, \parallel, \perp, S, D \right)$ index.
+Where the first three indices represent the \pwave and the last two the \swave and \dwave respectivelly,
+see \secref{Diferential_Decay_Rate} for more details. The estimated yields of reflection background after
+the above-mentioned steps are shown in \tabref{peaking_bkg_yields}
 
 \begin{table}[t]
    \centering
@@ -194,9 +196,10 @@ background.
 After injecting candidates with negative weights to cancel reflection background contributions,
 the data sample is effectively composed of, \BdJpsiKpi, \BsJpsiKpi, \LbJpsippi, and combinatorial background not removed by the
 multivariate based selection. These four modes are statistically disentangled using the \sPlot technique \cite{splot}.
-The technique requires as an input a \pdf that estimates the yield of each of the above species. The current analysis uses
-a \pdf for the $\jpsi K\pi$ invariant mass, hereafter just mass, where the yield of each species is estimated with an extended
-maximum likelihood fit to the mass distribution of data, hereafter mass fit. It is important to point out that the \sPlot
+The technique requires as an input a \pdf for each of the above species. The \pdf has to be {\it extended},
+which means that it is possible to estimate the yield of each species by means of an extended maximum likelihood fit.
+The current analysis uses the $\jpsi \kaon\pion$ invariant mass \pdf, hereafter just mass, to perform the extended maximum
+likelihood fit to the mass distribution of data, hereafter mass fit. It is important to point out that the \sPlot
 technique assumes no correlation between the mass and other variables.
 A systematic uncertainty corresponding to the validity of this assumption will be assigned later.
 
@@ -227,7 +230,7 @@ The Hypatia distribution has two main features which makes it a suitable descrip
 First, a hyperbolic core is found to describe the peak of the previous distributions adequately. Second, invariant mass resolution
 effects are taken into account by marginalizing over an approximate $\mJpsiKpi$ mass uncertainty distribution. Overall the Hypatia function adequately
 models the tails of the \Bs and \Bd invariant mass distribution which is of crucial importance. This is because the previous invariant
-mass peaks are sufficiently close, see \figref{mass_plot}, such that bad modeling of the tails implies that a certain number of \Bd decays
+mass distributions are sufficiently close, see \figref{mass_plot}, such that bad modeling of the tails implies that a certain number of \Bd decays
 are associated to \Bs and \viceversa. Several effects contribute to the structure of the tails apart
 from mass resolution of the detector. These effects can be radiative tails (a charged final state particle radiates a photon), interplay of
 radiative tail with \jpsi mass constraint (applied when building the $\Bs$ candidate) or badly reconstructed candidates caused by decays of the final state hadrons, see \cite{Santos:2013gra}.
