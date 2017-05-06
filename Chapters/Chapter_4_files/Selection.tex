@@ -44,11 +44,11 @@ For the current analysis the TMVA toolkit \cite{TMVA} is used for the MVA select
 a pair of data sets is needed. One data set must be a representative sample of the signal and one of the background.
 This pair of data sets is provided as input to the MVA algorithm to construct the classifying variable.
 In that step the MVA algorithm is {\it trained} to distinguish between the signal and background input data sets.
-After the trainning step is completed a second, independent, pair of sets is used to asses how
+After the training step is completed a second, independent, pair of sets is used to asses how
 successful the training step was. This step is called {\it testing}.
 For the signal representative samples, \BsJpsiKst Monte-Carlo (MC) simulated data are used, hereafter simulated data.
 For the background representative sample data candidates are used. These candidates are taken from a control
-region away from the \BsJpsiKst mass peak, usually referred to as {\it mass sideband}. This way the background representative sample
+region away from the \BsJpsiKst mass peak, usually referred to as {\it mass side-band}. This way the background representative sample
 is not affected by non-perfect simulation and it is also independent of the signal representative sample.
 Note that the simulated data are treated by all the processing steps after the \lzero trigger level in the same way as data.
 
@@ -57,7 +57,7 @@ Note that the simulated data are treated by all the processing steps after the \
   \tikzsetnextfilename{bdtg}
   \scalebox{1}{\input{Figures/Chapter4/bdtg}}
   \caption{Data BDT distribution (black points). Signal (blue points) and background (red points) distributions
-           come from simulated data and the \Bs mass sideband control region, see text for details.}
+           come from simulated data and the \Bs mass side-band control region, see text for details.}
   \label{BTDG_performance}
 \end{figure}
 
@@ -113,7 +113,7 @@ as well as the special treatment of the \LbJpsippi reflection background.
   \tikzsetnextfilename{mass_before_after_bdtg}
   \scalebox{1}{\input{Figures/Chapter4/mass_before_after_bdtg}}
   \caption{Mass distribution after stripping selection (black points), before (blue points) and after (red points) BDT selection.
-           The peaks around 5300 and 5360 \mevcc correspond to the \BdJpsiKst and \BsJpsiKst decay chanells respectively.}
+           The peaks around 5300 and 5360 \mevcc correspond to the \BdJpsiKst and \BsJpsiKst decay channels respectively.}
   \label{mass_BDTG_selection}
 \end{figure}
 
@@ -149,7 +149,7 @@ w_{\rm MC}^i = \frac{P_{\rm DATA}^i (\Omega, \mhh  | A_k^i)} {P_{\rm MC}^i(\Omeg
 \noindent where $P_{\rm DATA}$ and $P_{\rm MC}$ are normalized \pdfs.
 The index $i$ labels the species of the particular reflection background, \ie \BdJpsipipi, \BsJpsipipi, \BsJpsiKK, \LbJpsipK.
 The polarization states of each of the above species is labeled by the $k=\left(0, \parallel, \perp, S, D \right)$ index.
-Where the first three indices represent the \pwave and the last two the \swave and \dwave respectivelly,
+Where the first three indices represent the \pwave and the last two the \swave and \dwave respectively,
 see \secref{Diferential_Decay_Rate} for more details. The estimated yields of reflection background after
 the above-mentioned steps are shown in \tabref{peaking_bkg_yields}
 
@@ -219,7 +219,7 @@ exhibit any structure in the mass distribution, they simply follow an exponentia
 The negative slope can be understood when considering two main effects. First, low invariant mass implies a low momentum of
 the particles (\kaon, \pion, \mmu) used to reconstruct the \BsJpsiKst candidate. Second, there are more low momentum
 particles produced in a $\proton-\proton$ collision compared to high momentum ones. This is because elastic-soft strong
-interactions between coliding {\it partons}, quarks and gluons contained inside the proton, are more likely to happen
+interactions between colliding {\it partons}, quarks and gluons contained inside the proton, are more likely to happen
 compared to central, head-on, ones.
 
 As for the \LbJpsippi background, the Amoroso distribution was found to provide  good description of the data.
@@ -282,7 +282,7 @@ out of the full data sample.
   \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
   \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKpi and
            \BsJpsiKpi mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
-           colors respectively. The total mass \pdf, blue curve, is overlayed on top of the data. Figure from \cite{bsjpsikst-paper}. }
+           colors respectively. The total mass \pdf, blue curve, is overlaid on top of the data. Figure from \cite{bsjpsikst-paper}. }
   \label{mass_plot}
 \end{figure}
 
