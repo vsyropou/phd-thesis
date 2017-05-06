@@ -1,5 +1,5 @@
 
-% compile with xelatex 
+% compile with xelatex
 
 \documentclass[11pt]{standalone}
 \usepackage{color}
@@ -74,7 +74,7 @@
 
     \fill [black] (origin) circle (0.01); % origin
 
-    %\draw [black,thick] (origin) -- (unity) -- (apex) -- cycle; % triangle
+    \draw [black,thick] (origin) -- (unity) -- (apex) -- cycle; % triangle
     \draw [black, thick,->] (origin) -- (unity);
     \draw [black,thick,->] (unity)  -- (apex);
     \draw [black,thick,->] (apex)   -- (origin);
@@ -82,7 +82,7 @@
     % vertex labels
     \path (origin) +(0.09,0) node [above] {\footnotesize{(0,0)}};
     \path (unity)            node [above] {\footnotesize{(1,0)}};
-    % \path (apex)             node [below] {\footnotesize{(\rhosbar,\etasbar)}};
+    \path (apex)             node [below] {\footnotesize{(\rhosbar,\etasbar)}};
 
     % side labels
     \path (unity)  -- node[below,sloped,midway]   {\(\frac{\Vts\Vtbst}{\Vcs\Vcbst}\)} (apex);
