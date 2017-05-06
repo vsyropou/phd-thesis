@@ -76,11 +76,7 @@ The resulting matrix $V_{\text{CKM}}$ is the  {\it CKM mixing matrix}:
       \label{quark_field_rotation}
   \end{equation}
 
-The charged current term, \equref{CClagrangianMass}, incorporates an important aspect of the weak interaction,
-namely the {\it quark flavor mixing}. The latter is due to the fact that quark mass eigenstates are superpositions
-of the flavor eigenstates.
-
-\begin{figure}[h!]
+\begin{figure}[t]
   \centering
   {\sffamily \input{Figures/Chapter1/QuarkMixing.tex}}
   \caption{Feynman diagram where an up-type quark couples to any of the three, (\dquark,\squark,\bquark), down type quarks,
@@ -88,13 +84,15 @@ of the flavor eigenstates.
   \label{QuarkMixing}
 \end{figure}
 
-\noindent By definition the $V_{\text{CKM}}$ rotates only the down type quarks, implying that
+The charged current term, \equref{CClagrangianMass}, incorporates an important aspect of the weak interaction,
+namely the {\it quark flavor mixing}. The latter is due to the fact that quark mass eigenstates are superpositions
+of the flavor eigenstates. By definition the $V_{\text{CKM}}$ rotates only the down type quarks, implying that
 the mass eigenstates of the up-type quarks are identical to the flavor eigenstates. Thus an up type quark
 can change its flavor to any of the down type quarks, see \figref{QuarkMixing}, with a certain probability.
-The probability of such a transition is given by the corresponding element of the CKM mixing matrix, or simply CKM matrix.
+The probability of such a transition is given by the corresponding element of the CKM mixing matrix.
 
 \subsubsection{CKM mixing matrix}
-The CKM matrix is a unitary matrix which, as previously mentioned, describes the strength of quark couplings, or in other words,
+The CKM matrix, or simply CKM matrix, is a unitary matrix which, as previously mentioned, describes the strength of quark couplings, or in other words,
 the probability of a certain quark flavor transitions. The elements of the CKM matrix have been measured,
 see \eg Chapter 12 of \cite{PDG}, showing the following structure for their magnitudes:
 
@@ -183,19 +181,11 @@ as follows:
 the quark field phases. Thus the above angles are useful observables, regardless of the chosen
 CKM matrix parametrization.
 
-\begin{figure}[!h]
-  \centering
-    \includegraphics[trim=0cm 0.5cm 0cm 1.5cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
-    \caption{Global fit of the \Bd triangle \cite{ckm-fitter-phis-pred}.
-             Inputs from measurements of flavor physics observables are indicated by colored bands.}
-    \label{unitarity_triangle}
-\end{figure}
-
 There is no fundamental reason known in the Standard model for the observed hierarchy of the CKM elements.
 One of the main goals of flavor physics is to verify the consistency of the CKM picture.
 Overlaying measurements of flavor physics observables in the complex $\bar{\uprho}-\bar{\upeta}$ plane
 of \figref{unitarity_triangle} should show a compatible picture regarding the position of the
-apex of the unitarity triangle. Note that the apexes of the \Bd and \Bs triangles are defined in a
+apex of the unitarity triangle. The apexes of the \Bd and \Bs triangles are defined in a
 convention independent way as:
 
 \begin{equation}
@@ -215,3 +205,11 @@ the Higgs to the fermions and thus provide them with a mass. On the other hand t
 complex valued matrix allows for \CP violation in the Standard Model by the weak interaction. This is because
 the charged current interaction of \equref{CClagrangianMass} will be invariant under the \CP operation only
 if $V_{\rm CKM}=V_{\rm CKM}^*$, which is evidently not the case.
+
+\begin{figure}[!t]
+  \centering
+    \includegraphics[trim=0cm 0.5cm 0cm 1.5cm, clip=true, width=\textwidth]{Figures/Chapter1/rhoeta_large.png}
+    \caption{Global fit of the \Bd triangle \cite{ckm-fitter-phis-pred}.
+             Inputs from measurements of flavor physics observables are indicated by colored bands.}
+    \label{unitarity_triangle}
+\end{figure}

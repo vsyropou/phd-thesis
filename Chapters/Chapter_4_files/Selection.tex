@@ -67,7 +67,7 @@ The BDT was also checked for possible over-training. The latter is a situation w
 to statistical fluctuations of the training samples. This means that statistically compatible distributions, such as
 the testing and training samples, appear to have significantly different BDT distributions. This is not a desirable
 situation which leads to bad BDT performance. Once the training and testing steps are complete, a cutoff value on the
-BDT is applied so that it maximizes the following figure of merit, hereafter FoM:
+BDT is applied so that it maximizes the following figure of merit:
 
 \begin{equation}
   \centering
@@ -76,7 +76,7 @@ BDT is applied so that it maximizes the following figure of merit, hereafter FoM
 \end{equation}
 
 \noindent where $w_i$ are weights associated to each candidate and computed with the \sPlot technique,
-mentioned earlier in the introduction of the current section. The above-mentioned FoM increases in value with
+mentioned earlier in the introduction of the current section. The above-mentioned figure of merit, hereafter FoM, increases in value with
 the sum of \sWeights, in the numerator. Large values of \sWeights translate to higher effective signal yield.
 This is because candidates that are more likely to be signal receive a larger weight $w_i$. It follows that the
 optimum set of weights will have the higher FoM value compared to any other set of weights. Thus the FoM
@@ -186,8 +186,8 @@ procedure, the \LbJpsippi invariant mass line shape is modeled and statistically
 the combinatorial background in the next section. The reason for this different treatment with respect to other
 reflection backgrounds is due the \LbJpsippi amplitude structure \cite{Aaij:2014zoa}, which was not sufficiently
 known when the analysis was concluded. Thus weighting of the simulated samples was not possible.
-Now since shape of the misidentified \LbJpsippi decays in the $\jpsi\kaon\pion$ mass spectrum is broad
-enough, see \figref{mass_plot}, and the \sPlot technique can be used to subtract this specific reflection
+Since the shape of the misidentified \LbJpsippi decays in the $\jpsi\kaon\pion$ mass spectrum is broad
+enough, see \figref{mass_plot}, the \sPlot technique can be used to subtract this specific reflection
 background.
 
 % ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -253,7 +253,7 @@ the subsequent angular fit, the requirements of the \sPlot technique are not sat
 and thus it cannot be applied directly.
 
 Therefore, each \mkpi invariant mass sub-sample is divided further in intervals of $\cos\thetamu$ where the \sPlot technique
-can be applied. The final fit to the data is shown in \figref{mass_plot}, whereas the overall \Bs and \Bd yields are:
+can be applied. The final fit to the data is shown in \figref{mass_plot}, and the overall \BsJpsiKst and \BdJpsiKst yields are:
 
 \begin{align}
   \centering
@@ -273,8 +273,8 @@ After the mass fit is performed, all the necessary ingredients to remove the rem
 The fitted mass \pdf is now given to the \sPlot algorithm. The algorithm assigns a weight to each candidate
 based on the likelihood function built from the input \pdf. The main idea of \sPlot is that for each of the
 species of the total \pdf a set of weights can be computed such that they project out only that particular
-species while effectively subtracting the others. Based on this technique, \BsJpsiKst candidates are selected
-out of the full data sample.
+specie while effectively subtracting the others. Based on this technique, \BsJpsiKst candidates are selected
+out of the full data sample, since this is the decay of intereset.
 
 \begin{figure}[t]
   \centering

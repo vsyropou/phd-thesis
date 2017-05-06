@@ -5,19 +5,21 @@ three distinct tracking sub-detectors in \lhcb shown in \figref{lhcb_detector_cr
 the {\it VErtex LOcator}, \velo, then just before the \lhcb magnet is the {\it Tracker Turicensis}, \ttracker,
 and  lastly the T stations. The latter consists of the {\it Inner Tracker}, \intr, and the {\it Outer Tracker}, \ot,
 covering the area after the \lhcb magnet. There are several track types that are {\it reconstructed} by
-the tracking algorithms, depending on which of the tracking sub-detectors provided information to produce
-the track object. The various track types are shown in \figref{track_types}. The most common tracks used
-are {\it Long} which have the best momentum resolution. Long tracks include information from the \velo and
-optionally form the \ttracker tracking systems, see \chapref{Muon_id_hlt}.
-% The overall reconstruction efficiency of Long
-% tracks is $\sim 96\%$ and it is estimated with the {\it tag and probe} method \cite{Aaij:1748269}.
+the tracking algorithms, depending on which of the sub-detectors provided information for
+the track reconstruction.
 
-\begin{figure}[t]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.7\textwidth]{Figures/Chapter2/trackTypesRunIAndII}
   \caption{Various track types in \lhcb.}
   \label{track_types}
 \end{figure}
+
+\noindent The various track types are shown in \figref{track_types}. The most common tracks used
+are {\it Long} which have the best momentum resolution. Long tracks include information from the \velo and
+optionally form the \ttracker tracking systems, see \chapref{Muon_id_hlt}.
+% The overall reconstruction efficiency of Long
+% tracks is $\sim 96\%$ and it is estimated with the {\it tag and probe} method \cite{Aaij:1748269}.
 
 A charged particle that traverses the \lhcb magnet is deflected. The amount of deflection is inversely proportional
 to its momentum, which is exploited by tracking algorithms to estimate the momentum of a track. The relative

@@ -61,7 +61,7 @@ However, they are implicitly used since information from the \spd and \presh sub
 by the \lzero trigger system to estimate the overall {\it multiplicity} of an event. Multiplicity essentially
 provide a quick estimate, to the \lzero trigger system, on whether a certain event is interesting from physics
 point of view. Furthermore, the lead material that is inter-layered in the \ecal and \hcal active detector material,
-stops most of the hadrons and thus preventing them from being mis-identified by as muons by the subsequent muon stations.
+stops most of the hadrons and thus preventing them from being mis-identified as muons by the subsequent muon stations.
 Lastly, information from the \ecal and \hcal is taken into account by PID algorithms that exploit information from
 the reset of the PID systems.
 
@@ -79,7 +79,6 @@ The presence of muon in the final state yields a high trigger efficiency, while 
 Thanks to PID information and the optimized selection described in \secref{det_pid} most of the background
 is filtered out. The only difficult point is the low branching fraction of the \BsJpsiKst decay
 compared to \BdJpsiKst whose invariant mass is very close to the one of the \BsJpsiKst, see \secref{mass_BDTG_selection}.
-Thus, care needs to be taken when modeling the mass distribution of these two channels.
 The total \BsJpsiKst yield accumulated during \runone is about 1800 signal candidates.
 
 \begin{figure}[t]
@@ -101,17 +100,17 @@ respectively. A reconstructed \BsJpsiKst decay candidate is shown in \figref{det
 Where \velo tracks are indicated by black lines. Note how some of the \velo tracks appear
 to originate from the primary vertex and how \Bs final state tracks point at the secondary vertex.
 
-\begin{figure}[!t]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{\textwidth}
     % \raggedright
-    \includegraphics[width=\textwidth]{Figures/Chapter2/top}
+    \includegraphics[width=\textwidth, trim=7cm 0cm 6cm 0cm, clip=true]{Figures/Chapter2/top}
     % \caption{}
     \label{det_evt_display_top}
   \end{subfigure}
   \begin{subfigure}{\textwidth}
     % \raggedleft
-    \includegraphics[width=\textwidth]{Figures/Chapter2/side}
+    \includegraphics[width=\textwidth, trim=5cm 0cm 3cm 0cm, clip=true]{Figures/Chapter2/side}
     % \caption{}
     \label{det_evt_display_side}
   \end{subfigure}

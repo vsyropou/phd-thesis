@@ -120,8 +120,8 @@ planes, where each plane is defined in the rest frame of the corresponding inter
 Lastly, the orthogonal angular basis of associated Legendre polynomials, $P_n^m$, and real-valued
 spherical harmonics, $Y_{ij}$, is adopted in the current analysis. This choice is favored by the
 fact that the integrals of the product of either two $P_n^m$ or two $Y_{ij}$ are known analytically.
-The latter significantly improves the description and implementation of the angular acceptance described in the following section.
-Note that the decomposition of angular functions in an orthogonal basis follows naturally from the fact that spherical
+The latter significantly improves the description and implementation of the angular acceptance, see next section.
+Note that the decomposition of angular functions in an orthogonal basis follows naturally since spherical
 harmonics can be expressed as Wigner-$D$ matrices.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,9 +208,9 @@ asymmetric around $\cos\thetaK=0$.
   \label{angDistr_all}
 \end{figure}
 
-The above situation is related to kinematic constrains in two body decays particularly close to phase
+The above is related to kinematic constrains in two body decays particularly close to phase
 space boundaries. The latter constraint manifests itself when computing the angle of the pion
-with respect to the boost direction in the lab frame, as shown in the following equation:
+with respect to the boost direction in the lab frame, as shown in the next equation:
 
 \begin{equation}
   \centering
@@ -263,7 +263,7 @@ Thus, \equref{pi_angle_massless} implies that decays where $\cos\thetapi=-1$ are
 allowed at all in the massless pion limit since the denominator in the same equation becomes undefined.
 The situation corresponds to a low transverse momentum pion for which $\cos\thetaK = -\cos\thetapi = +1$.
 This explains why the shape of the $\cos\thetaK$ distribution becomes asymmetric when excluding low momenta pions.
-This effect is more general and it is driven by the mass difference between the two particles in a two body decay.
+The effect is general and it is driven by the mass difference between the two particles in a two body decay.
 
 Coming now to the case of the $\cos\thetamu$ acceptance shape, the two decay products of the \jpsi have
 the same mass and thus get the same momentum fraction out of the mother \jpsi particle. A consequence of
@@ -276,11 +276,11 @@ No strong acceptance effect in that projection is expected.
 
 \subsubsection{Acceptance parametrization}
 \label{Acceptance parametrization}
-As for the parametrization of the angular acceptance, there are at least two ways to proceed,
+Reagarding the angular acceptance parametrization, there are at least two ways to proceed,
 namely the \emph{efficiency moments} \cite{jeroenThesis} and the \emph{normalization weights} \cite{tristanThesis,jeroenThesis}.
 The current analysis implements the first one. The efficiency function is thus parameterized using orthogonal polynomials,
 which, when combined with the angular description formalism in the previous subsection, allows for fast analytic
-integration. Such a parametrization is:
+integration.
 
 \begin{equation}
   \centering
@@ -288,7 +288,7 @@ integration. Such a parametrization is:
   \label{eff_func}
 \end{equation}
 
-\noindent where the real-valued spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
+\noindent Such a parametrization is shown in the previous equation where the real-valued spherical harmonics ($Y$) and associated Legendre polynomials ($P$) are used as the basis
 functions to which the angular acceptance is decomposed by means of the coefficients $c^i_{jk}$, hereafter efficiency moments or simply moments.
 Following the parametrization of \equref{eff_func} one just needs to obtain a set of $c^i_{jk}$. Note that there are \aprior infinite efficiency moments
 since the sum in \equref{eff_func} runs through all allowed values of the $ijk$ indices. However, in practice only a small number of efficiency moments
@@ -354,7 +354,7 @@ on the orthogonal $PY$ basis. This projection is shown in the following equation
 orthonormal basis; implying that the integral of the product of two associated Legendre polynomials is equal
 to the {\it Kronecker delta} symbol. The latter is required to properly normalize the efficiency moments.
 The final step in the calculation of the efficiency moments is the computation of the integral in \equref{eff_moms_def}.
-This is done by means of simulated data and the integral is computed following the concept of Monte Carlo integration.
+This is done by means of simulated data based on the concept of Monte Carlo integration.
 This implies that the integral in \equref{eff_moms_def} can be estimated by a sum over the simulated data
 (which they have passed through the exact same selection steps as data) as:
 
@@ -427,8 +427,8 @@ It is actually not trivial to find a good choice of efficiency moments. Two thin
 distribution with orthogonal functions like $P_n^m$ and $Y_{ij}$. One is the shape of the orthogonal function itself and two the sign and size of the calculated moment.
 For example the efficiency term $\moment{1}{0}{0}P_1Y_{00}$ is necessary to describe the drop of efficiency in $\cos\thetaK$ but the size of $\moment{1}{0}{0}$
 is too large making the total efficiency function negative. Thus one could add the term $P_3Y_{00}\moment{3}{0}{0}$ where $\moment{3}{0}{0}$ is positive
-(see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunately it is not enough. Things get more complicated
-when trying to choose efficiency moments that affect the acceptance shape in all of its three dimensions at the same time.
+(see \tabref{eff_moms_table} ) to counter the large negative value of $\moment{1}{0}{0}$ but unfortunately it is not enough.
+Things get more complicated when trying to choose efficiency moments that affect the acceptance shape in all three dimensions at the same time.
 
 Having chosen the best possible set of moments the efficiency function has to be constrained such that the condition,
 
@@ -454,13 +454,6 @@ efficiency function is decomposed, see \equref{eff_func}, is modified as follows
   \epsilon(\Omega) = \sum_{ijk} \; \moment{i}{j}{k} \; \left[\legendre{i}{0}-P_i^0(1)\right] \; \spharm{j}{k}.
   \label{eff_func_new}
 \end{align}
-
-\noindent Note that the subscript $i$ in $P_i^0(1)$ is irrelevant since $P_i^0(1)=1$ for any value of $i$.
-The result of the above constraint is shown in \figref{angAcc_constr_fit}, where it can be seen that
-the acceptance projection on $\cos\thetaK=1$ is not negative anymore. In addition it has also been checked
-whether the acceptance is negative in 2D and 3D, since it is possible for a 2D projection of the acceptance
-to take negative values whilst the 1D projections are positive. Two dimensional projection of the constrained
-acceptance can be seen in \figref{eff2D}.
 
 \begin{figure}[t]
   \centering
@@ -491,6 +484,13 @@ acceptance can be seen in \figref{eff2D}.
     \label{eff2D}
 \end{figure}
 
+\noindent Note that the subscript $i$ in $P_i^0(1)$ is irrelevant since $P_i^0(1)=1$ for any value of $i$.
+The result of the above constraint is shown in \figref{angAcc_constr_fit}, where it can be seen that
+the acceptance projection on $\cos\thetaK=1$ is not negative anymore. In addition it has also been checked
+whether the acceptance is negative in 2D and 3D, since it is possible for a 2D projection of the acceptance
+to take negative values whilst the 1D projections are positive. Two dimensional projection of the constrained
+acceptance can be seen in \figref{eff2D}.
+
 Constraining the acceptance in the manner described above comes with a small penalty: the shape of the 1D acceptance
 projections is potentially slightly distorted. In order to reduce this distortion and describe better the acceptance
 shape an additional step is implemented. As previously mentioned, the acceptance function of \equref{eff_func_new} is
@@ -499,7 +499,7 @@ This feature is implemented by a multivariate Gaussian constraint where correlat
 The fitting \pdf is shown in \equref{mvm_constr} and it consists of the \pdf with which the simulated
 data were generated, multiplied with the efficiency function \eqref{eff_func_new} times the multivariate Gaussian constraint.
 The physics parameters used to generate the simulation sample are fixed and only the efficiency moments are allowed to vary.
-The multivariate Gaussian function $G(\vec{\bf{c}})$, used to constrain the efficiency moments is shown in \equref{mvm_constr_gauss}.
+The multivariate Gaussian, $G(\vec{\bf{c}})$, used to constrain the efficiency moments is shown in \equref{mvm_constr_gauss}.
 
 \begin{equation}
   \centering
@@ -592,21 +592,20 @@ converge. The full procedure by steps can be summarized as:
     \caption{}
     \label{angAccCorr_phi}
   \end{subfigure}
-  \caption{Angular acceptance shape from simulated data before (black points) and after (red points) acceptance corrections.
-           Plots are made in the same way as in \figref{angAcc_all}.}
+  \caption{Angular acceptance shape from simulated data before (black points) and after (red points) acceptance corrections.}
   \label{angAggCorrections}
 \end{figure}
 
 \begin{enumerate}
-\item Calculate an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
-\item Perform a fit on the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physical parameters.
+\item Compute an initial set of efficiency moments using uncorrected \BsJpsiKst simulated data.
+\item Fit the \BsJpsiKst data using the initial efficiency moments, and obtain the first estimate of the physics parameters.
 \item Weight each candidate in the simulated data for the difference between the angular \pdf obtained from the previous fit and the angular
-      \pdf used to generate the simulated data. This essentially means that the underlying physics of the weighted simulated data corresponds
+      \pdf used to generate the simulated data. Impling that the underlying physics of the simulated data corresponds
       to the estimated physics parameters obtained in the previous step.
-\item Compare the 2D $(p_\kaon,p_\pion)$ momentum distribution between the physics weighted simulated data of the previous step with the
-      data, and weigh again each simulated candidate according to the difference.
+\item Compare the 2D $(p_\kaon,p_\pion)$ momentum distribution between the weighted simulated data of the previous step with the
+      data, and then weigh again each simulated candidate for the difference.
 \item Re-estimate the efficiency moments using the physics and momentum corrected \BsJpsiKst simulated data and repeat the fit to the \BsJpsiKst data.
-\item Go back to step 4 and repeat until the change in the parameters of interest is negligible.
+\item Go back to step three and repeat until the change in the parameters of interest is negligible.
 \end{enumerate}
 
 \begin{table}[!t]
@@ -701,8 +700,8 @@ It originates from integrals like the one in the following equation:
 \end{equation}
 
 Integrals like \equref{spIntegrals} eventually manifest themselves only in the \spwave interference
-terms of \tabref{eff_moms_table}. Note that the diagonal $m=n$ integrals are by construction equal to 1.
-These integrals can be written as:
+terms of \tabref{eff_moms_table}, since the $m=n$ integrals are by construction equal to one.
+These integrals are written as:
 
 \begin{equation}
   \centering
@@ -839,8 +838,8 @@ subtracted \BsJpsiKst ones of the current analysis, one gets the following value
   \label{prod_assym}
 \end{equation}
 
-\noindent The detection asymmetry is computed starting from the \lhcb study of the detection asymmetry
-in \cite{LHCb-PAPER-2014-013} and weighting the kaon momentum distribution to much the observed
+\noindent The detection asymmetry is computed starting from \cite{LHCb-PAPER-2014-013}
+and weighting the kaon momentum distribution to much the observed
 distribution in \BsJpsiKst data. The result is:
 
 \begin{equation}
@@ -905,7 +904,7 @@ In addition, the \CSP factors of \secref{Kpi_Invariant_mass} need to be calculat
 since it was found to vary significantly between \mkpi intervals, see \tabref{moms_final_neg} and \tabref{moms_final_pos}.
 The \mkpi intervals chosen are shown in \tabref{csp_vals}.
 
-The data categories described above result in a simultaneous fit consisting of eight categories.
+The data categories described above result in a simultaneous fit of eight categories.
 A single angular acceptance is computed form the combined 2011 and 2012 data samples on grounds of
 tables \tabref{moms_comp_periods_pos} and \tabref{moms_comp_periods_neg}.
 
@@ -966,7 +965,7 @@ nor the position of the minimum and can thus be omitted.
 \subsubsection{\CP asymmetries as free parameters}
 \label{cp_assymetries_and_total_decay_rate}
 The raw asymmetry, $\Acp{\rm raw}$, discussed in \secref{experimentalAssym}, can be measured by counting
-$\BsbarJpsiKst$ and $\BsJpsiKst$ decays and use them to determine:
+$\BsbarJpsiKst$ and $\BsJpsiKst$ decays and use them to determine the following asymmetry:
 
 \begin{equation}
 \Acp{\text{raw}} \equiv \frac{\Nplus - \Nminus}{\Nplus + \Nminus},

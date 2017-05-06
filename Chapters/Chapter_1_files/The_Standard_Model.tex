@@ -1,3 +1,4 @@
+
 After a century of research at the subatomic level, a large number of phenomena have been accounted
 for, based on the existence of only a handful of elementary particles. Given the vast dimensions that the
 universe spans, this is an impressive achievement. The known collection of particles can be classified
@@ -6,15 +7,7 @@ interactions of nature (with the exception of gravity) and {\it fermions} which 
 of matter and antimatter. Antimatter fermions carry quantum numbers, such as electric charge, of opposite
 sign compared to matter fermions. Fermions can be divided further into {\it quarks}
 and {\it leptons}. The latter do not interact through the {\it strong} interaction, which is
-one of the above-mentioned fundamental interactions. The recently discovered Higgs
-boson \cite{higgs-cms,higgs-atlas} plays a special role in explaining how particles acquire mass,
-and does not function as a gauge boson since it does not mediate any interaction. Fermions,
-listed in \tabref{quarksLeptons}, are the fundamental building blocks of matter and antimatter.
-The mathematical framework necessary to describe the interactions between the fermions is called the
-\textit{Standard Model} of Particle Physics \cite{sm-glashow,sm-weinberg,sm-salam} which is a quantum
-field theory. In this framework particles are treated as excited states of their underlying field.
-
-% \footnote{$D^\mu=\partial ^\mu + ig_sG_{\alpha}^\mu L_{\alpha} +  igW_b^\mu\sigma_b + ig^\prime B^\mu Y$ \cite{covariant derivative??}}
+one of the above-mentioned fundamental interactions.
 
 \begin{table}[h!]
   \centering
@@ -33,8 +26,18 @@ field theory. In this framework particles are treated as excited states of their
  \label{quarksLeptons}
 \end{table}
 
+\noindent The recently discovered Higgs
+boson \cite{higgs-cms,higgs-atlas} plays a special role in explaining how particles acquire mass,
+and does not function as a gauge boson since it does not mediate any interaction. Fermions,
+listed in \tabref{quarksLeptons}, are the fundamental building blocks of matter and antimatter.
+The mathematical framework necessary to describe the interactions between the fermions is called the
+\textit{Standard Model} of Particle Physics \cite{sm-glashow,sm-weinberg,sm-salam} which is a quantum
+field theory. In this framework particles are treated as excited states of their underlying field.
+
+% \footnote{$D^\mu=\partial ^\mu + ig_sG_{\alpha}^\mu L_{\alpha} +  igW_b^\mu\sigma_b + ig^\prime B^\mu Y$ \cite{covariant derivative??}}
+
 The exact details of the elementary particle interactions are incorporated in the
-{\it Lagrangian} of the Standard Model, which has three main terms:
+{\it Lagrangian} of the Standard Model:
 
 \begin{equation}
 \mathscr{L}_{\text{SM}} =
@@ -46,7 +49,7 @@ The exact details of the elementary particle interactions are incorporated in th
 \label{lagrangian}
 \end{equation}
 
-\noindent The first, or {\it Kinetic}, term describes the possible interactions between the fermions.
+\noindent Note the three main terms. The first, or {\it Kinetic}, term describes the possible interactions between the fermions.
 The second, or {\it Higgs}, term is the one that contains the Higgs potential, responsible for generating
 masses for the gauge and Higgs bosons. The last, or {\it Yukawa}, term is introduced to
 couple the Higgs field with the fermions and generate masses for them.
@@ -78,6 +81,23 @@ An important subtlety is related to the right handed anti-neutrinos, for which t
 \ie they form a  {\it singlet representation}. Handedness or {\it chirality} is the quantum number associated to the
 spin-momentum dot product. Chirality can be $+1$, right-handed, or $-1$, left-handed.
 
+It should be noted that the weak interaction violates both the parity, $P$, and the charge, $C$, symmetries.
+The first one is associated with left-right symmetry in three dimensional space.
+The second is associated with inverting the signs of all quantum numbers of a particle.
+In both cases \equref{lagrangian} is not invariant under these parity and charge transformations.
+What is interesting experimentally is the observation \cite{wu-parity,garwin-parity} that the weak interaction interacts
+only with left handed neutrinos or right-handed anti-neutrinos. Given that neutrinos interact only with the weak interaction,
+and assuming zero mass for the neutrinos (which is a good approximation in view of the measured neutrino masses \cite{nu-mass-superkam,nu-mass-kamland,nu-mass-sno,nu-mass-daya}),
+it follows that there is no need for right-handed neutrinos (and left-handed anti-neutrinos), according to the Standard Model.
+The implication of the above is that $P$ and $C$ are maximally violated, indicating the
+peculiar structure of the weak interaction. It is reminded that the electromagnetic and
+strong interactions respect these symmetries, although the \CP conservation of the strong interaction is still to be fully
+understood due to the unsolved {\it strong \CP problem} \cite{Peccei:2006as}.
+In view of these observations the combined \CP transformation appears to be
+a symmetry of nature which seems to imply a matter-antimatter symmetry in the universe \cite{Sakharov:1967dj}.
+However the latter is not consistent with observations and nature does distinguish between matter and antimatter
+through the weak interaction. The origin of Standard Model \CP violation is addressed in \secref{Flavor_Physics}.
+
 \begin{figure}[t]
   \centering
   \begin{subfigure}{0.49\textwidth}
@@ -101,23 +121,6 @@ spin-momentum dot product. Chirality can be $+1$, right-handed, or $-1$, left-ha
 \label{WeakInteractions}
 \end{figure}
 
-It should be noted that the weak interaction violates both the parity, $P$, and the charge, $C$, symmetries.
-The first one is associated with left-right symmetry in three dimensional space.
-The second is associated with inverting the signs of all quantum numbers of a particle.
-In both cases \equref{lagrangian} is not invariant under these parity and charge transformations.
-What is interesting experimentally is the observation \cite{wu-parity,garwin-parity} that the weak interaction interacts
-only with left handed neutrinos or right-handed anti-neutrinos. Given that neutrinos interact only with the weak interaction,
-and assuming zero mass for the neutrinos (which is a good approximation in view of the measured neutrino masses \cite{nu-mass-superkam,nu-mass-kamland,nu-mass-sno,nu-mass-daya}),
-it follows that there is no need for right-handed neutrinos (and left-handed anti-neutrinos), according to the Standard Model.
-The implication of the above is that $P$ and $C$ are maximally violated, indicating the
-peculiar structure of the weak interaction. It is reminded that the electromagnetic and
-strong interactions respect these symmetries, although the \CP conservation of the strong interaction is still to be fully
-understood due to the unsolved {\it strong \CP problem} \cite{Peccei:2006as}.
-In view of these observations the combined \CP transformation appears to be
-a symmetry of nature which seems to imply a matter-antimatter symmetry in the universe \cite{Sakharov:1967dj}.
-However the latter is not consistent with observations and nature does distinguish between matter and antimatter
-through the weak interaction. The origin of \CP violation in the Standard Model is briefly addressed in \secref{Flavor_Physics}.
-
 Within the accuracy of current accelerator experiments the Standard Model has seen its predictions confirmed.
 The recent discovery of the Higgs boson, which is an essential part of the mechanism through which particles acquire mass,
 makes the Standard Model seem complete. However, there are established phenomena and observations that it can not
@@ -126,7 +129,7 @@ interaction of nature, meaning gravity, which has not been incorporated in a qua
 But even at the heart of the Standard Model there are unexplained aspects, for example the well established
 fact that neutrinos have non-zero mass \cite{nu-mass-superkam,nu-mass-kamland,nu-mass-sno,nu-mass-daya}.
 
-Furthermore, the current thesis is about matter anti-matter asymmetry. Thus it is crucial to comment on
+Furthermore, the current thesis is about matter anti-matter asymmetry. Thus it is crucial to mention
 the observed matter-antimatter asymmetry in the universe \cite{more-cpv-huet,more-cpv-gavela_I,more-cpv-gavela_II}.
 Specifically, ordinary matter, \ie matter that consists of Standard Model particles, accounts for only a small
 fraction of the total matter density inferred to be present in the universe \cite{dmatter-Hinshaw}.
