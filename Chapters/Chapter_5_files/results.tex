@@ -1,6 +1,15 @@
 The results of the \chisq fit to the penguin parameters, described in \secref{penguin_more_chanells}
 are the following:
 
+\begin{figure}[t!]
+  \centering
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Long_withH.pdf}
+  \caption{Confidence levels $\aPeng{0}$, $\thPeng{0}$. Measurements of \equref{chisq_form_with} are illustrated with
+           colored bands, which correspond to one standard deviation. Figure is based on \cite{DeBruyn-thesis}
+           and updated with the \BsJpsiKst polarization fractions and \Acp{dir} from \tabref{bestFitResult}.}
+  \label{pengPlot_long}
+\end{figure}
+
 \begin{subequations}
 \label{peng_a_theta_results}
 \begin{align}
@@ -10,27 +19,30 @@ are the following:
 \end{align}
 \end{subequations}
 
+\begin{figure}[t]
+\centering
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Para_withH.pdf}
+  \caption{Confidence levels of $\aPeng{\parallel}$, $\thPeng{\parallel}$.}
+  \label{pengPlot_para}
+\end{figure}
+
 \noindent The quoted uncertainties are the quadratic sum of statistical and systematic uncertainties.
 A $20\%$ $\grpsuthree_F$ breaking is assumed for the systematic, according to what was mentioned at
 the end of \secref{had_pars_suthree}, by performing a special fit explained in \secref{su3_breaking}.
-Two dimensional contours are shown in Figures \ref{pengPlot_long} to \ref{pengPlot_para}, where the
+Two dimensional contours are shown in Figures \ref{pengPlot_long} to \ref{pengPlot_perp}, where the
 parameters of interest, $(\akPeng,\thkPeng)$, are transformed to rectangular coordinates for better
 visibility. There it can be seen that the $\Hobs{k}$ observables have a smaller impact on the best fit
 result due to their associated large uncertainty. Also note the tension between the $\Hobs{k}$ observables
 and the best fit result, which suggests that the assumption \equref{had_ratios_assuption} is probably
-not fully satisfied.
+not fully satisfied. The best fit estimates of \equref{peng_a_theta_results} are subsequently translated,
+using \equref{tandelta}, to the phase shifts $\DeltaPhisJpsiPhi{k}$ as:
 
-\begin{figure}[!t]
+\begin{figure}[t]
   \centering
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Long_withH.pdf}
-  \caption{Confidence levels $\aPeng{0}$, $\thPeng{0}$. Measurements of \equref{chisq_form_with} are illustrated with
-           colored bands, which correspond to one standard deviation. Figure is based on \cite{DeBruyn-thesis}
-           and updated with the \BsJpsiKst polarization fractions and \Acp{dir} from \tabref{bestFitResult}.}
-  \label{pengPlot_long}
+  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Perp_withH.pdf}
+  \caption{Confidence levels of $\aPeng{\perp}$ and $\thPeng{\perp}$.}
+  \label{pengPlot_perp}
 \end{figure}
-
-The best fit estimates of \equref{peng_a_theta_results} are subsequently translated, using \equref{tandelta},
-to the final estimate of the $\DeltaPhisJpsiPhi{k}$ phase shift:
 
 \begin{subequations}
 \label{delta_phis_result}
@@ -41,28 +53,12 @@ to the final estimate of the $\DeltaPhisJpsiPhi{k}$ phase shift:
 \end{align}
 \end{subequations}
 
-\begin{figure}[t!]
-\centering
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Para_withH.pdf}
-  \caption{Confidence levels of $\aPeng{\parallel}$, $\thPeng{\parallel}$.}
-  \label{pengPlot_para}
-\end{figure}
-
 \noindent where the uncertainties are statistical and systematic due to \grpsuthree breaking respectively.
 Statistical uncertainty dominates the $\DeltaPhisJpsiPhi{k}$ measurement.
 Note that the penguin parameters $(\akPeng,\thkPeng)$ are ratios of hadronic amplitudes.
 Given that, it is interesting to point out that any factorizable $\grpsuthree_F$ breaking
 effects entering through the assumption of \equref{su3_apply} cancel out \cite{Fleischer:1999zi}.
-Thus the results reported here suffer from non
-
-\begin{figure}[!t]
-  \centering
-  \includegraphics[trim=0.0cm 0.0cm 0.0cm 0.0cm, clip=true,scale=0.39]{Figures/Chapter5/Penguin_Contribution_Re_vs_Im_allB2VV_Perp_withH.pdf}
-  \caption{Confidence levels of $\aPeng{\perp}$ and $\thPeng{\perp}$.}
-  \label{pengPlot_perp}
-\end{figure}
-
-\noindent factorizable $\grpsuthree_F$ breaking which are small,
+Thus the results reported here suffer from nonfactorizable $\grpsuthree_F$ breaking which are small,
 according to \cite{DeBruyn:2014oga,DeBruyn-thesis}. The previous statement is supported by the values of the fitted hadronic parameter
 ratios which are close to the ones calculated assuming factorization holds. As mentioned in \cite{DeBruyn:2014oga,DeBruyn-thesis},
 either the non factorization $\grpsuthree_F$ effects or their ratio with respect to the factorizable $\grpsuthree_F$
@@ -71,8 +67,7 @@ ones are small.
 \subsection{Further Crosschecks}
 There are two important issues that the fitting strategy, as described in \secref{penguin_chi2_fit},
 does not take into account. Namely, $\grpsuthree_F$ breaking effects and correlations from the
-experimental measurement between the observables \equref{chisq_form_with}. Both of these issues
-are addressed in the current section.
+experimental measurement between the observables \equref{chisq_form_with}. Both issues are addressed in what follows.
 
 \subsubsection{\grpsuthree breaking}
 \label{su3_breaking}
@@ -95,7 +90,7 @@ The central values of $\xi_k$ and $\delta_k$ assume perfect $\grpsuthree_F$ symm
 However, a Gaussian constraint allows them to vary within a range of up to $50\%$ breaking.
 $\grpsuthree_F$. Specifically, the uncertainties within which $\xi_k$ and $\delta_k$ are allowed to
 vary are $[0,0.5]$ and $[0,40]^\circ$ respectively.
-Repeating the above-mentioned special shows that the value of $\DeltaPhis{k}$
+Repeating the above-mentioned special fit shows that the value of $\DeltaPhis{k}$
 does not depend on the amount of allowed $\grpsuthree_F$ symmetry breaking.
 This is most likely due to the particular structure of \equref{tandelta}, \ie the value of
 $\akPeng$, or $\xi_k$ in that case becomes less pronounced for values of $\thkPeng$ which are close to $90^\circ$.
