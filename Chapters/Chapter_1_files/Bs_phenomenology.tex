@@ -89,7 +89,15 @@ to the same final state $f$. Due to its relevance to the current thesis, this ty
 in more detail in the next section. All the above classifications are based on section 13.1.4 of \cite{PDG}.
 
 Finally, it is useful at that stage to introduce the decay rate equations of the \Bs (and \Bsb) meson.
-The decay rate equations are quoted in the following equation (for a full derivation see \cite{PDG,DeBruyn-thesis,jeroenThesis}):
+The decay rate equations are quoted in \equref{decay_rate_master_eqs} (for a full derivation see \cite{PDG,DeBruyn-thesis,jeroenThesis}).
+The letter $t$ in the same equation represents time and $\lambda_f$ is a parameter commonly used to parameterize
+\CP violation in meson decays which is defined as:
+
+\begin{equation}
+  \centering
+  \lambda_{f} = \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
+\label{lambda_cpv}
+\end{equation}
 
 \newcommand{\ampSq}{\ensuremath{|A_f|^2}\xspace}
 \newcommand{\ampBSq}{\ensuremath{|\bar{A}_f|^2}\xspace}
@@ -110,15 +118,7 @@ The decay rate equations are quoted in the following equation (for a full deriva
  \end{align}
 \end{subequations}
 
-\noindent where $t$ represents time and $\lambda_f$ is a parameter commonly used to parameterize
-\CP violation in meson decays and it is defined as:
-
-\begin{equation}
-  \centering
-  \lambda_{f} = \frac{q}{p} \frac{\bar{A}_f}{A_f}. % \equiv \left|\lambda_f\right| e^{i\phis}.
-\label{lambda_cpv}
-\end{equation}
-
+\noindent
 \noindent The parameter $\lambda_f$ above is not to be confused with the $\lambda$ of the
 Wolfenstein parametrization. Note also the coefficients of the trigonometric functions in
 \equref{decay_rate_master_eqs}. These parameters become relevant in \chapref{Data_Analysis}
