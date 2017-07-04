@@ -5,7 +5,7 @@ Treatment of the angular acceptance is addressed in \secref{Accceptance} and \se
 In \secref{Kpi_Invariant_mass} the implications arising from the \mkpi dependence are discussed.
 The effect of asymmetries introduced by detector imperfections such as production and detection asymmetries are dealt with
 in \secref{experimentalAssym}. Some aspects of the maximum likelihood fit are presented in \secref{Simutaneous_Likelihood_fit},
-along with the \Acp{k} parameters of interest, which are introduced in a special way in the angular fit when building the full decay rate \pdf.
+along with the \Acp{k} parameters of interest, which are introduced in a special way in the angular fit.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -938,8 +938,7 @@ exploited in order to estimate the $\Acp{i}$ asymmetries in the fit. The \pdf is
 probability to observe $n$ events when expecting $\expEvnts$ candidates, see \equref{extlikelihood}.
 The expected number of candidates $\expEvnts$ depends on the
 parameters of interest which increases the statistical uncertainties. This is because the likelihood has more freedom
-as the number of parameters increases and thus the shape of the likelihood becomes less steep leading to larger statistical
-uncertainty.
+as the number of parameters increases thus the shape of the likelihood becomes less steep leading to larger uncertainty.
 
 \begin{equation}
   \centering
@@ -948,7 +947,7 @@ L(\vec{p};\vec{x}) = P(n;\expEvnts) \; \prod_e^n \mathcal{P}(\vec{x};\vec{p}),
 \end{equation}
 
 For purely practical reasons one would typically choose to minimize the negative logarithm of the likelihood, which after some simple
-algebra and using the well known expression of the Poisson distribution results in:
+algebra and using the known expression of the Poisson distribution results in:
 
 \begin{align}
   \centering
@@ -975,7 +974,7 @@ $\BsbarJpsiKst$ and $\BsJpsiKst$ decays and use them to determine the following 
 Going one step further, $\Acp{\text{raw}}$ can be implemented as a parameter to be estimated in the fit. The advantage
 is that the statistical uncertainty propagation for these parameters is implicit in the likelihood thus avoiding
 explicit calculations. In addition, the above quantities can then be estimated separately for each polarization.
-In order to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them as follows:
+In order to vary $\Acp{\text{raw}}$ in the fit it is necessary to re-parameterize them as:
 
 \begin{align}
   \label{acp_param}
@@ -1033,7 +1032,7 @@ There is one final step required to build the complete extended \pdf. That is th
 normalize the component \pdfs to the number of observed candidates it would be wrong since the observed number of candidates are diluted by production and detection
 asymmetry. Given that the parameters of interest, $\Acp{i}$, quantify the difference between the observed \BsbarJpsiKst and \BsJpsiKst decays, it follows that
 the observed number of these decays need to be corrected for. With input from \secref{experimentalAssym} where the production and detection
-asymmetries were estimated, the observed yields are made dependent on the $\Acp{i}$ asymmetry as:
+asymmetries were estimated, the observed yields are made dependent on $\Acp{i}$ as:
 
 \begin{subequations}
   \label{acp_yields}

@@ -24,8 +24,8 @@ tool to unfold data distributions \cite{splot}, for example signal and backgroun
 The \sPlot technique uses information from the likelihood, built from the previous \pdf, to assign a
 weight to each candidate. The weights are also called {\sWeights} and are computed such that the contribution
 of the background component in data is effectively canceled. Thus a large \sWeight value implies
-higher signal probability, for the particular candidate. In \secref{sWeighting_and_mass} the \pdf
-used in the current analysis is described and a bit more details on the \sPlot technique are provided.
+higher signal probability, for the particular candidate. In \secref{sWeighting_and_mass} the above
+mentioned \pdf is described and a bit more details on the \sPlot technique are provided.
 
 \subsection{Multivariate Based Selection}
 \label{Multivariate_Based_Selection}
@@ -35,8 +35,8 @@ reject as much background as possible while keeping most of the signal. One way 
 selection criteria one by one. Instead, a multivariate approach, hereafter MVA, is adopted.
 In that case a set of observables is combined by an MVA algorithm to produce a single variable, the {\it classifier variable}.
 The MVA approach can exploit the correlations between input variables to get the maximum discriminating power out of their combination.
-The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal candidates tend to accumulate near $+1$,
-whereas background candidates accumulate near $-1$, see \figref{BTDG_performance}.
+The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal (background) candidates tend to
+accumulate near $+1$ ($-1$), see \figref{BTDG_performance}.
 
 In the current analysis the MVA algorithm is a {\it Boosted Decision Tree}, BDT in short, which is a class
 of machine learning  algorithm. Further information on the BDT algorithm used can be found in Section 7.2 of \cite{TMVA}.
@@ -50,7 +50,7 @@ For the signal representative samples, \BsJpsiKst Monte-Carlo (MC) simulated dat
 For the background representative sample data candidates are used. These candidates are taken from a control
 region away from the \BsJpsiKst mass peak, usually referred to as {\it mass side-band}. This way the background representative sample
 is not affected by non-perfect simulation and it is also independent of the signal representative sample.
-Note that the simulated data are treated by all the processing steps after the \lzero trigger level in the same way as data.
+Note that the simulated data are treated by all the processing steps, after the \lzero trigger, in the same way as data.
 
 \begin{figure}[!t]
 \centering
@@ -130,7 +130,7 @@ selection and trigger) and ${\mathcal{L}}$ is the integrated luminosity of the d
 of the particular background of \tabref{peaking_bkg_yields}. Since simulated data are used it is necessary to determine
 the effective integrated luminosity in the simulated sample and adjust it such that it matches the estimated integrated
 luminosity of the data. After that, the fraction of reflection background from the simulated sample is a valid estimate
-of the reflection background fraction in data (assuming same total efficiency between the simulation and data sample).
+of the reflection background fraction in data (assuming same total efficiency between the samples).
 
 The second and last step of the reflection background removal is to apply an angular correction factor to account for
 the fact that simulated decays are distributed uniformly in the $(\Omega, \mkpi)$ phase space and hence do not
@@ -245,6 +245,16 @@ with the tail parameters. The latter, in the limit of $\zeta = 0$, $\lambda$ doe
 on particle kinematics, the same way as the tail parameters do. Lastly, the remaining two parameters, the width and
 the mean of the core, are determined by the mass fit to the data.
 
+\begin{figure}[t]
+  \centering
+  \tikzsetnextfilename{mass_plot}
+  \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
+  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKpi and
+           \BsJpsiKpi mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
+           colors respectively. The total mass \pdf, blue curve, is overlaid on top of the data. Figure from \cite{bsjpsikst-paper}. }
+  \label{mass_plot}
+\end{figure}
+
 \subsubsection{The mass fit}
 From studies with simulated data, some of the \Bs and \Bd Hypatia parameters appear to be significantly correlated with the \mkpi
 invariant mass. Since these parameters need to be fixed in the mass fit, the latter is performed in intervals of the
@@ -275,16 +285,6 @@ species of the total \pdf a set of weights can be computed such that they projec
 specie while effectively subtracting the others. Based on this technique, \BsJpsiKst candidates are selected
 out of the full data sample, since this is the decay of interest.
 
-\begin{figure}[t]
-  \centering
-  \tikzsetnextfilename{mass_plot}
-  \scalebox{0.5}{\input{Figures/Chapter4/mass_plot_simul_log}}
-  \caption{Invariant mass fit to the data, shown with black points. The green and red curves correspond to the \BdJpsiKpi and
-           \BsJpsiKpi mass \pdf components. The combinatorial and \LbJpsippi background components are shown with black and cyan
-           colors respectively. The total mass \pdf, blue curve, is overlaid on top of the data. Figure from \cite{bsjpsikst-paper}. }
-  \label{mass_plot}
-\end{figure}
-
 The advantage of the \sWeights approach becomes apparent when performing the angular analysis, described in the subsequent section.
 Specifically, the resulting weighted candidates can be described by the signal \pdf only, meaning there is no need to explicitly model
 the background angular distributions. As a result the fit itself is faster and simpler to implement. On the other hand there are a few
@@ -293,7 +293,7 @@ Any variation of these models implies re-computing the \sWeights. Also, care mus
 of the fitted angular parameters are properly estimated \cite{splot}. The uncertainties tend to be underestimated in a fit
 with weighted candidates. This is because the per candidate weighs in a weighted likelihood fit change the shape of the
 likelihood function, which is where the statistical uncertainty estimation comes from.
-Thus to correct for this distortion of the likelihood function shape the scale factor:
+Thus to correct for this distortion the scale factor:
 
 \begin{equation}
   \centering

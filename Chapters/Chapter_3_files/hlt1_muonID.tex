@@ -34,16 +34,6 @@ In order to understand the origin of this efficiency loss the \hltone algorithm 
 is analyzed further. The sequence is shown  in \figref{hlt1_algo_seq}. A brief summary of the
 updated sequence is given in what follows, whereas the full description of the sequence can be found in \cite{kevinThesis}.
 
-During \runone the muon identification starts directly from \veloTracks. These are tracks built only with
-the \velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm
-\cite{LHCb-PUB-2011-017}, to select these tracks with higher probability of being muons. Subsequently,
-the \FwD algorithm uses information from the tracking stations, behind
-the magnet and upgrades the \veloTracks to Long tracks, mentioned in \secref{det_tracking}. After this, the
-\isMuon, which implements the offline \muonID, algorithm is applied. In addition there are some quality cuts
-between each algorithm, such as the number of hits in the \velo sub-detector assigned to a track or the fitted
-track $\chisq/\nDoF$ as well as momentum cuts applied after the \FwD tracking algorithm. The minimum momentum
-and transverse momentum is $6 \gevc$ and $0.5 \gevc$ respectively.
-
 \begin{figure}[t]
   \centering
   \tikzsetnextfilename{hlt1_alg_seq_old}
@@ -54,6 +44,16 @@ and transverse momentum is $6 \gevc$ and $0.5 \gevc$ respectively.
            operating on tracks with purple. See text for further details. Chart from \cite{kevinThesis}.}
   \label{hlt1_algo_seq}
 \end{figure}
+
+During \runone the muon identification starts directly from \veloTracks. These are tracks built only with
+the \velo sub-detector, see \figref{track_types}. These \veloTracks are then filtered by the \mvm algorithm
+\cite{LHCb-PUB-2011-017}, to select these tracks with higher probability of being muons. Subsequently,
+the \FwD algorithm uses information from the tracking stations, behind
+the magnet and upgrades the \veloTracks to Long tracks, mentioned in \secref{det_tracking}. After this, the
+\isMuon, which implements the offline \muonID, algorithm is applied. In addition there are some quality cuts
+between each algorithm, such as the number of hits in the \velo sub-detector assigned to a track or the fitted
+track $\chisq/\nDoF$ as well as momentum cuts applied after the \FwD tracking algorithm. The minimum momentum
+and transverse momentum is $6 \gevc$ and $0.5 \gevc$ respectively.
 
 The efficiency breakdown, performed in \cite{kevinThesis}, of the \runone \hltone muon lines showed that the
 main source of efficiency loss is due to quality and momentum cuts. Also the \mvm algorithm reduces the
