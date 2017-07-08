@@ -1,5 +1,5 @@
 After selecting the data as described in \secref{Event_Selection} the angular model of \secref{Angular_Analysis} is fitted to the data.
-The results of this fit are presented
+The results of the fit are presented in
 
 \begin{table}[!h]
   \center
@@ -31,8 +31,8 @@ The results of this fit are presented
   \label{bestFitResult}
 \end{table}
 
-\noindent in the current section. Systematic uncertainties are discussed in \secref{systemics}.
-The likelihood function is profiled as a function  the parameters of interest in \secref{nllscans} to gain confidence on the validity
+\noindent the current section. \secref{systemics} addresses systematic uncertainties.
+The likelihood function is profiled against the parameters of interest in \secref{nllscans} to gain confidence on the validity
 of the minimum. Finally a pseudo-experiment study is performed in \secref{Toy_Experiments_Study} to validate the fitting procedure
 and determine fit bias.
 
@@ -41,39 +41,42 @@ and determine fit bias.
 \label{Parameters_of_Interest}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[!t]
-  \begin{subfigure}{\textwidth}
-    \centering
-    \tikzsetnextfilename{angPlot_helcosthetaK}
-    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
-    % \caption{}
-    \label{angPlot_ctk}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
-    \centering
-    \tikzsetnextfilename{angPlot_helcosthetaL}
-    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
-    % \caption{}
-    \label{angPlot_ctl}
-  \end{subfigure}
-    \caption{Fitted angular \pdf projections (black solid) on top of \BsJpsiKst background subtracted data (crosses).
-           Blue dashed: \pwave even, blue dotted: \pwave odd plus interference,
-           green dotted: \swave, red dotted dashed S-P interference.}
-  \label{angular_plot_thetas}
-\end{figure}
-
 \tabref{bestFitResult} summarizes the best fit values of the angular fit whereas
-Figures \ref{angular_plot_thetas} and \ref{angPlot_phi} show the projections of the fitted angular \pdf on the data.
+\figref{angPlot_thetas} show the projections of the fitted angular \pdf on the data.
 Notice the negative values of the \spwave interference. The correlation matrix of the
 angular fit can be found in \tabref{correlation_matrix}.
 
-\begin{figure}[!t]
-    \centering
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{angPlot_helcosthetaK}
+    \scalebox{1.25}{\input{Figures/Chapter4/angPlot_helcosthetaK}}
+    % \caption{}
+    \label{angPlot_ctk}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{angPlot_helcosthetaL}
+    \scalebox{1.25}{\input{Figures/Chapter4/angPlot_helcosthetaL}}
+    % \caption{}
+    \label{angPlot_ctl}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
     \tikzsetnextfilename{angPlot_helphi}
-    \scalebox{1.45}{\input{Figures/Chapter4/angPlot_helphi}}
-    \caption{Caption as in \figref{angular_plot_thetas}}
+    \scalebox{1.25}{\input{Figures/Chapter4/angPlot_helphi}}
+    % \caption{}
     \label{angPlot_phi}
+  \end{subfigure}
+  \caption{Fitted angular \pdf projections (black solid) on top of \BsJpsiKst background subtracted data (crosses).
+            Blue dashed: \pwave even, blue dotted: \pwave odd plus interference,
+            green dotted: \swave, red dotted dashed S-P interference.}
+  \label{angPlot_thetas}
 \end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Systematic Uncertainties}
@@ -83,23 +86,6 @@ The different source of systematic uncertainties of the \Bs angular parameters, 
 are presented in the current section and are summarized from \tabref{systematics_acp} to \tabref{syst_normalisation}.
 The total uncertainties in the above tables is the quadratic sum of all the individual systematic uncertainties and
 they are expressed as fractions of the standard deviation.
-
-\subsubsection{Angular acceptance}
-\label{systAngAcc}
-The efficiency moments as described in \secref{Accceptance} are computed with a limited simulation sample
-and thus their central values are subjected to statistical fluctuations. To account for this limitation the
-efficiency moments are allowed to float in the angular fit to the data. A multivariate Gaussian, similar to \equref{mvm_constr_gauss}
-is used to constrain the efficiency moments around their nominal values of \tabref{eff_moms_table}.
-Note that the multivariate Gaussian includes their correlations. In addition this systematic covers
-potential difference in the acceptance between data and simulated sample
-that has not been corrected by the iterative procedure described in \secref{Accceptance_Corrections}. Furthermore,
-the constraint of \equref{eff_func_constr} used to force the acceptance positive assumes that the acceptance is zero
-at $\cos\thetaK=1$ for any value of $(\cos\thetamu,\phihel)$. This assumption might not hold exactly. It could be
-that the value of the acceptance at that point is very small but non-zero. This systematic effect is accounted for
-by adding a term to \equref{eff_func_new} and allowing it to float in the above-mentioned fit to the data.
-The size of the latter effect was found to be small and the above assumption is almost true. The differences
-in the parameters of interest between the best fit of \tabref{bestFitResult} and the fit with this additional
-degree of freedom is taken as a systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -127,17 +113,22 @@ degree of freedom is taken as a systematic uncertainty.
   \label{systematics_acp}
 \end{table}
 
-\subsubsection{\mJpsiKpi mass model}
-\label{systMassModel}
-Not all the \pdf parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}.
-These parameters are fixed to values taken from simulated events.
-In order to account for systematic uncertainties due to these parameters, the mass fit is repeated 1000 times. In each fit
-to the data the values of these fixed parameters are drawn from a Gaussian distribution. The mean and width of the Gaussian
-are taken from a mass fit to the simulated data, which was used to determine these parameters.
-Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass
-fits a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian distribution
-for each of the angular parameters of interest. The one standard deviation interval of the previous distribution is assigned
-as a systematic to that parameter.
+\subsubsection{Angular acceptance}
+\label{systAngAcc}
+The efficiency moments as described in \secref{Accceptance} are computed with a limited simulation sample
+and thus their central values are subjected to statistical fluctuations. To account for this limitation the
+efficiency moments are allowed to float in the angular fit to the data. A multivariate Gaussian, similar to \equref{mvm_constr_gauss}
+is used to constrain the efficiency moments around their nominal values of \tabref{eff_moms_table}.
+Note that the multivariate Gaussian includes their correlations. In addition this systematic covers
+potential difference in the acceptance between data and simulated sample
+that has not been corrected by the iterative procedure described in \secref{Accceptance_Corrections}. Furthermore,
+the constraint of \equref{eff_func_constr} used to force the acceptance positive assumes that the acceptance is zero
+at $\cos\thetaK=1$ for any value of $(\cos\thetamu,\phihel)$. This assumption might not hold exactly. It could be
+that the value of the acceptance at that point is very small but non-zero. This systematic effect is accounted for
+by adding a term to \equref{eff_func_new} and allowing it to float in the above-mentioned fit to the data.
+The size of the latter effect was found to be small and the above assumption is almost true. The differences
+in the parameters of interest between the best fit of \tabref{bestFitResult} and the fit with this additional
+degree of freedom is taken as a systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -165,12 +156,24 @@ as a systematic to that parameter.
   \label{systematics_pwave}
 \end{table}
 
+\subsubsection{\mJpsiKpi mass model}
+\label{systMassModel}
+Not all the \pdf parameters are free to vary in the mass fit to the data as described in \secref{Event_Selection}.
+These parameters are fixed to values taken from simulated events.
+In order to account for systematic uncertainties due to these parameters, the mass fit is repeated 1000 times. In each fit
+to the data the values of these fixed parameters are drawn from a Gaussian distribution. The mean and width of the Gaussian
+are taken from a mass fit to the simulated data, which was used to determine these parameters.
+Correlations among these parameters are taken into account in this procedure. Lastly, for each one of the 1000 different mass
+fits a new sets of \sWeights is computed and subsequently the angular fit is performed. The result is one Gaussian distribution
+for each of the angular parameters of interest. The one standard deviation interval of the previous distribution is assigned
+as a systematic to that parameter.
+
 In addition, another systematic to account for associating $\Bd$ candidates to the $\Bs$ peak is assigned. As mentioned in \secref{Event_Selection}
 $\alpha$ is the parameter controlling the tails of the mass peak and it is fixed during the mass fit to the data. Complementary to the treatment of
 the fixed parameters in the above paragraph, the parameter $\alpha$ of the $\Bd$ peak is further scrutinized. Particularly the mass fit to the data
 is repeated with $\alpha$ set to infinity and $\alpha$ floating. The first case, according to the Hypatia function, implies that any contribution
 to the tails other than resolution is ignored. These two mass fits yield two more set of \sWeights and two more angular fits. The difference in
-the value of the fitted angular parameters between these two case is assigned as a systematic uncertainty.
+the value of the fitted angular parameters between these two case is assigned as a systematic.
 
 \begin{table}[!h]
   \centering
@@ -215,12 +218,7 @@ Correlations between the $\Bs$ invariant mass distribution and the $\cos\thetamu
 by performing the mass fit in five intervals of $\cos\thetamu$. Since the choice of five intervals is arbitrary the mass fit is
 repeated in three and six $\cos\thetamu$ intervals as well. The result is two more sets of \sWeights. For each set the angular
 fit is performed and the differences in each of the parameters of interest are added in quadrature.
-The quadratic sum is assigned as systematic.
-
-\subsubsection{Fit bias}
-\label{systFitBias}
-Potential fit biases of the fitting procedure are addressed in \secref{Toy_Experiments_Study} and the corresponding
-results are reported in \tabref{pull_table}. The reported biases on the parameters of interest are assigned as a systematic uncertainty.
+The quadratic sum is assigned as systematic uncertainty.
 
 \begin{table}[!h]
   \centering
@@ -247,6 +245,11 @@ results are reported in \tabref{pull_table}. The reported biases on the paramete
   \caption{\small \swave systematic uncertainties.}
      \label{systematics_swave_phase}
 \end{table}
+
+\subsubsection{Fit bias}
+\label{systFitBias}
+Potential fit biases of the fitting procedure are addressed in \secref{Toy_Experiments_Study} and the corresponding
+results are reported in \tabref{pull_table}. The reported biases on the parameters of interest are assigned as a systematic.
 
 \subsubsection{\CSP factors}
 \label{systCSP}
@@ -502,25 +505,6 @@ left and right of the minimum. The small sample size for some of the data catego
 profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why
 asymmetric uncertainties are quoted.
 
-Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is
-usually attributed to the statistical uncertainty of one standard deviation, within the frequentist interpretation of
-probability. Basically the claim is that one standard deviation guaranties that the probability that the true value
-of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$.
-The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}. Note that all of the above are true
-only in case the likelihood of a certain parameters of interest has a parabolic shape or in other words that the CLT
-theorem of statistics is satisfied.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Pseudo-experiments Study}
-\label{Toy_Experiments_Study}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The current subsection addresses the robustness of the fitting angular \pdf.
-This is done by means of a  {\it pseudo-experiments} study. This procedure
-can point out any potential biases that are introduced by the fitting model.
-These biases are finally assigned as a systematic to the parameters of interest.
-
 \begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
@@ -557,22 +541,24 @@ These biases are finally assigned as a systematic to the parameters of interest.
 \label{pull_acp}
 \end{figure}
 
-In the current pseudo-experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
-distributions. The generated data-set is fitted again with the same \pdf and a new set of fitted parameters is obtained. Potential
-biases on the parameters of interest are estimated based on the following {\it pull} variable:
+Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is
+usually attributed to the statistical uncertainty of one standard deviation, within the frequentist interpretation of
+probability. Basically the claim is that one standard deviation guaranties that the probability that the true value
+of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$.
+The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}. Note that all of the above are true
+only in case the likelihood of a certain parameters of interest has a parabolic shape or in other words that the CLT
+theorem of statistics is satisfied.
 
-\begin{equation}
-P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
-  \begin{array}{ll}
-    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^i - p^{\rm gen} > 0   \\
-    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^i - p^{\rm gen} < 0
-  \end{array} \right. ,
-\label{pull_def}
-\end{equation}
 
-\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted values of a given parameter of interest
-respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
-Essentially the pull variable expresses the generated-fitted parameter difference in units of one standard deviation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pseudo-experiments Study}
+\label{Toy_Experiments_Study}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The current subsection addresses the robustness of the fitting angular \pdf.
+This is done by means of a  {\it pseudo-experiments} study. This procedure
+can point out any potential biases that are introduced by the fitting model.
+These biases are finally assigned as a systematic to the parameters of interest.
 
 \begin{figure}[h]
   \centering
@@ -610,15 +596,22 @@ Essentially the pull variable expresses the generated-fitted parameter differenc
 \label{pull_pwave}
 \end{figure}
 
-In a non-biasing fitting model the pull distribution of a certain parameter follows a Gaussian distribution of zero mean,
-provided that the Central Limit Theorem (CLT) of statistics is satisfied.
-This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) uncertainty, $\hat{\sigma}_+$($\hat{\sigma}_-$)
-estimates of \secref{Parameters_of_Interest}. Particularly it means that the probability that the interval
-$[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$. Or in other words if the
-real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained
-in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose"
-and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the pseudo-experiment
-is a suitable replacement of $p^{\rm true}$.
+In the current pseudo-experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
+distributions. The generated data-set is fitted again with the same \pdf and a new set of fitted parameters is obtained. Potential
+biases on the parameters of interest are estimated based on the following {\it pull} variable:
+
+\begin{equation}
+P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
+  \begin{array}{ll}
+    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^i - p^{\rm gen} > 0   \\
+    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^i - p^{\rm gen} < 0
+  \end{array} \right. ,
+\label{pull_def}
+\end{equation}
+
+\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted values of a given parameter of interest
+respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
+Essentially the pull variable expresses the generated-fitted parameter difference in units of one standard deviation.
 
 \begin{figure}[t]
   \centering
@@ -656,6 +649,16 @@ is a suitable replacement of $p^{\rm true}$.
 \label{pull_swave_123}
 \end{figure}
 
+In a non-biasing fitting model the pull distribution of a certain parameter follows a Gaussian distribution of zero mean,
+provided that the Central Limit Theorem (CLT) of statistics is satisfied.
+This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) uncertainty, $\hat{\sigma}_+$($\hat{\sigma}_-$)
+estimates of \secref{Parameters_of_Interest}. Particularly it means that the probability that the interval
+$[\hat{p}-\hat{\sigma}_-,\hat{p}+\hat{\sigma}_+]$ contains $p^{\rm true}$ is $68\%$. Or in other words if the
+real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{\rm true}$ would be contained
+in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose"
+and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the pseudo-experiment
+is a suitable replacement of $p^{\rm true}$.
+
 Furthermore, potential biases to a certain parameter of interest arising from the fitting model
 can be deduced from the mean of the pull and uncertainty distributions as:
 
@@ -668,9 +671,8 @@ can be deduced from the mean of the pull and uncertainty distributions as:
 \label{bias_def}
 \end{equation}
 
-The pull distributions for the parameters of interest are shown from \figref{pull_acp} to \figref{pull_pwave}.
+The pull distributions are shown from \figref{pull_acp} to \figref{pull_swave}.
 The corresponding biases are summarized in \tabref{pull_table}.
-
 
 \begin{figure}[!t]
   \centering
@@ -705,7 +707,7 @@ The corresponding biases are summarized in \tabref{pull_table}.
     \label{pull_ASPhase_bin4}
   \end{subfigure}
 \caption{\swave pull distributions.}
-\label{pull_swave_4}
+\label{pull_swave}
 \end{figure}
 
 \begin{table}[!t]
