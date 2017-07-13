@@ -43,7 +43,7 @@ and determine fit bias.
 
 \tabref{bestFitResult} summarizes the best fit values of the angular fit whereas
 \figref{angPlot_thetas} show the projections of the fitted angular \pdf on the data.
-Notice the negative values of the \spwave interference. The correlation matrix of the
+Notice the desctructive interference of the \spwave. The correlation matrix of the
 angular fit can be found in \tabref{correlation_matrix}.
 
 \begin{figure}[h]
@@ -362,8 +362,7 @@ of \equref{likelihood} has the following parabolic shape:
     \label{nll_ACPS}
   \end{subfigure}
 \caption{Profile likelihood scans of \Acp{} parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         uncertainty.}
+         function projected over the corresponding parameter. The red curve is a (symmetric) parabola.}
 \end{figure}
 
 \noindent where $\hat{\mu}$ denotes the values of the parameters of interest, $\mu$, at the minimum and $\sigma_{\mu}$ is
@@ -409,8 +408,8 @@ is covered and the values of the profile likelihood, $L(\mu_i;\vec{x})$, are obt
     \label{nll_AperpPhase}
   \end{subfigure}
 \caption{Profile likelihood scans of \pwave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         uncertainty. The phases appear to have a double minimum. This is actually expected given the symmetries that the fitted \pdf
+         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         The phases appear to have a double minimum. This is actually expected given the symmetries that the fitted \pdf
          of \equref{ang_terms} is known to have.}
         %  Also $\ampPhase{\parallel}$ appears to have other local minima at above $3\sigma$ and as such are neglected, since only
         %  global minima are relevant to the likelihood parameter estimation.
@@ -455,8 +454,8 @@ or the presence of almost degenerate ambiguities.
     \label{nll_ASPhase_bin2}
   \end{subfigure}
   \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         uncertainty. There are a two interesting features in these plots. First $\fS{1}$ minimum is very broad due to the
+         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         There are a two interesting features in these plots. First $\fS{1}$ minimum is very broad due to the
          low number of candidates in that \mkpi interval. Second the $\fS{2}$ minimum is close to a physical boundary.}
 \end{figure}
 
@@ -492,8 +491,8 @@ or the presence of almost degenerate ambiguities.
     \label{nll_ASPhase_bin4}
   \end{subfigure}
 \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a parabola, with a symmetric Gaussian
-         uncertainty. There are a two interesting features in these plots. First $\fS{4}$ minimum is very broad due to the
+         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         There are a two interesting features in these plots. First $\fS{4}$ minimum is very broad due to the
          low number of candidates in that \mkpi interval. Second the $\fS{3}$ minimum is close to a physical boundary.}
 \end{figure}
 
@@ -501,7 +500,7 @@ Second, \equref{likelihood_exp} serves as an alternative method of statistical u
 parameter of interest given a profile likelihood plot. Specifically, $s$ number of standard deviations are defined from
 the two points where the horizontal line, $-\Delta\ln L = s$,  intersects the profile likelihood function and projecting down
 to the horizontal axis. It follows that the uncertainties defined in the the above-mentioned way can be asymmetric
-left and right of the minimum. The small sample size for some of the data categories, is depicted in the corresponding
+left and right of the minimum. The small sample size of the data categories, is depicted in the corresponding
 profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why
 asymmetric uncertainties are quoted.
 
@@ -557,8 +556,8 @@ theorem of statistics is satisfied.
 
 The current subsection addresses the robustness of the fitting angular \pdf.
 This is done by means of a  {\it pseudo-experiments} study. This procedure
-can point out any potential biases that are introduced by the fitting model.
-These biases are finally assigned as a systematic to the parameters of interest.
+can indicate biases introduced to the parameters of intereset by the fitting model.
+These biases are finally assigned as a systematic.
 
 \begin{figure}[h]
   \centering
@@ -672,9 +671,12 @@ can be deduced from the mean of the pull and uncertainty distributions as:
 \end{equation}
 
 The pull distributions are shown from \figref{pull_acp} to \figref{pull_swave}.
-The corresponding biases are summarized in \tabref{pull_table}.
+The corresponding biases are summarized in \tabref{pull_table}. Mean and rms of
+each pull distribution are shown for two case. The "pull" column is computed
+directly from the pull distributions, whereas the "fit" indicates the fitted
+Gaussian curve on to of each pull distribution.
 
-\begin{figure}[!t]
+\begin{figure}[h]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
@@ -710,7 +712,8 @@ The corresponding biases are summarized in \tabref{pull_table}.
 \label{pull_swave}
 \end{figure}
 
-\begin{table}[!t]
+
+\begin{table}[h]
   \centering
   \footnotesize
   \begin{tabular}{c c c c c | c}
@@ -738,8 +741,6 @@ The corresponding biases are summarized in \tabref{pull_table}.
     $               \deltaS{3}$ & $+0.138$ & $+0.135$ & $0.921$ & $0.916$  & $0.024$ \\
     $               \deltaS{4}$ & $-0.090$ & $-0.092$ & $0.975$ & $0.965$  & $0.013$ \\
   \end{tabular}
-  \caption{Summary of pseudo-experiment study. Mean and rms of each pull distribution is shown for two case.
-           The first labeled as pull implies that the values are computed directly from the distribution,
-           whereas the second labeled as fit corresponds to the fitted Gaussian curve on to of each pull distribution.}
+  \caption{Pseudo-experiment study summary.}
   \label{pull_table}
 \end{table}

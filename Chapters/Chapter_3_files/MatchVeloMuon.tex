@@ -1,7 +1,7 @@
 In \runone all \veloTracks in \hltone were filtered by the \mvm algorithm, as mentioned in \secref{hlt1run2}.
 Given the available information from the muon stations, the latter algorithm performs a quick check on whether a
 \velo track is compatible with being identified as a muon by the subsequent tracking algorithms, before these
-algorithms are actually run. If the \velo track passes certain simple requirements it
+algorithms are actually run. If the \velo track passes certain requirements it
 is accepted, otherwise it is discarded permanently and not processed further by the \hlt muon lines. As a result
 valuable computing time is saved, since the \FwD tracking and fitting algorithms are time costly.
 
@@ -58,8 +58,7 @@ However estimating this trajectory consumes valuable computation time during \hl
 efficiently enough without a smooth track trajectory using the focal
 pane approximation. The position of the $z$ focal plane as a function of the track parameters has been studied
 \cite{Hommels:999327} and is used in the \mvm algorithm. As mentioned, including information on the estimated
-focal plane helps rejecting fake muon tracks. This is because the magnet hit essentially requires that the
-muon hits are aligned in a straight line that passes through the magnet hit. The latter is true for real muon tracks only.
+focal plane helps rejecting fake muon tracks, because the magnet hit essentially requires from muon hits to align in a straight line that passes through the magnet hit. The latter is true for real muon tracks only.
 
 \subsection{Upgrade to MatchVeloTTMuon}
 \label{sec:matchvelottmuon}
@@ -92,8 +91,8 @@ for reasons explained earlier in \secref{sec:muon_matching}. Second, the paramet
 focal plane as well as the uncertainties on the focal plane coordinates are improved using simulated data.
 Furthermore, the vertical, non-bending, plane is included in the \chisq computation which was not the
 case in the old \mvm algorithm. Note that the vertical component of the track trajectory is almost a straight
-line. The two previous improvements increase the discriminating power of the \chisq. Finally the required number
-of hits in the muon stations, mentioned in the previous subsection, is increased to four in order to further
+line. The two previous improvements increase the discriminating power of the \chisq. Finally, the required number
+of hits in the muon stations mentioned before, is increased to four in order to further
 suppress fake muon tracks.
 
 An important caveat arises from the fact some of the \veloTTracks tracks do not have any information from
@@ -120,7 +119,7 @@ Specifically, a certain \velo track overlaps with a true muon (which is a Long t
 when the \velo track has more than $70\%$ \velo hits in common with the \velo segment
 of the true muon track. The number of all \veloTTracks that overlap with a true muon define the
 denominator in the \mvTTm efficiency, while these \veloTTracks that are in addition accepted by
-the \mvTTm algorithm make the number in the numerator.
+\mvTTm make the number in the numerator.
 
 The efficiency is compared against the old
 \mvm algorithm, where a common cutoff value for the $\chisq/\nDoF$ of 2 is chosen. The efficiency

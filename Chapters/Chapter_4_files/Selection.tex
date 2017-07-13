@@ -38,6 +38,15 @@ The MVA approach can exploit the correlations between input variables to get the
 The classifying variable is constructed such that it ranges from $-1$ to $+1$. Signal (background) candidates tend to
 accumulate near $+1$ ($-1$), see \figref{BTDG_performance}.
 
+\begin{figure}[!t]
+\centering
+  \tikzsetnextfilename{bdtg}
+  \scalebox{1}{\input{Figures/Chapter4/bdtg}}
+  \caption{Data BDT distribution (black points). Signal (blue points) and background (red points) distributions
+           come from simulated data and the \Bs mass side-band control region, see text for details.}
+  \label{BTDG_performance}
+\end{figure}
+
 In the current analysis the MVA algorithm is a {\it Boosted Decision Tree}, BDT in short, which is a class
 of machine learning  algorithm. Further information on the BDT algorithm used can be found in Section 7.2 of \cite{TMVA}.
 For the current analysis the TMVA toolkit \cite{TMVA} is used for the MVA selection. In order to construct the classifying variable,
@@ -52,14 +61,6 @@ region away from the \BsJpsiKst mass peak, usually referred to as {\it mass side
 is not affected by non-perfect simulation and it is also independent of the signal representative sample.
 Note that the simulated data are treated by all the processing steps, after the \lzero trigger, in the same way as data.
 
-\begin{figure}[!t]
-\centering
-  \tikzsetnextfilename{bdtg}
-  \scalebox{1}{\input{Figures/Chapter4/bdtg}}
-  \caption{Data BDT distribution (black points). Signal (blue points) and background (red points) distributions
-           come from simulated data and the \Bs mass side-band control region, see text for details.}
-  \label{BTDG_performance}
-\end{figure}
 
 The two well-separated peaks of the data BDT distribution, indicated with black points in \figref{BTDG_performance}, suggest
 that the BDT variable achieves a good discrimination between signal and background candidates.
