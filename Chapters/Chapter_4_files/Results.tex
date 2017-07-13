@@ -321,7 +321,7 @@ comes indeed from a valid minimum of the likelihood function. One can easily get
 of the function by expanding it as a Taylor series around the minimum. Note that the constant term of the
 expansion is irrelevant to the position of the minimum as it moves the value of the likelihood function vertically.
 Assuming that the data sample $\vec{x}$ in \equref{likelihood} is large enough and also that the variables $\vec{p}$
-in the same equation are uncorrelated and Gaussian in nature, then one can easily find out that the Taylor expansion
+in the same equation are uncorrelated and Gaussian in nature, then the Taylor expansion
 of \equref{likelihood} has the following parabolic shape:
 
 \begin{equation}
@@ -375,6 +375,13 @@ function is minimized with respect to the rest of the parameters $\mu$ obtaining
 $L(\mu_i;\vec{x})$ at the above value of $\mu_i$. The procedure is repeated until the desired range of $\mu_i$
 is covered and the values of the profile likelihood, $L(\mu_i;\vec{x})$, are obtained.
 
+
+Based on the definition of the profile likelihood two important conclusions can be drawn. First the non
+Gaussian nature of a parameter of interest can be visualized by how much the corresponding profile likelihood plot deviates from
+a perfect parabola. A non parabolic shape is an indication of low sample size or high correlations between the parameters.
+Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf used to build the likelihood
+or the presence of almost degenerate ambiguities.
+
 \begin{figure}[!t]
   \centering
   \begin{subfigure}{0.5\textwidth}
@@ -408,18 +415,20 @@ is covered and the values of the profile likelihood, $L(\mu_i;\vec{x})$, are obt
     \label{nll_AperpPhase}
   \end{subfigure}
 \caption{Profile likelihood scans of \pwave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         function projected over the corresponding parameter. The red curve is a (symmetric) parabola.
          The phases appear to have a double minimum. This is actually expected given the symmetries that the fitted \pdf
          of \equref{ang_terms} is known to have.}
         %  Also $\ampPhase{\parallel}$ appears to have other local minima at above $3\sigma$ and as such are neglected, since only
         %  global minima are relevant to the likelihood parameter estimation.
 \end{figure}
 
-Based on the definition of the profile likelihood two important conclusions can be drawn. First the non
-Gaussian nature of a parameter of interest can be visualized by how much the corresponding profile likelihood plot deviates from
-a perfect parabola. A non parabolic shape is an indication of low sample size or high correlations between the parameters.
-Also a non-smooth profile likelihood might point to mistakes in the implementation of the \pdf used to build the likelihood
-or the presence of almost degenerate ambiguities.
+Second, \equref{likelihood_exp} serves as an alternative method of statistical uncertainty estimation for a
+parameter of interest given a profile likelihood plot. Specifically, $s$ number of standard deviations are defined from
+the two points where the horizontal line, $-\Delta\ln L = s$,  intersects the profile likelihood function and projecting down
+to the horizontal axis. It follows that the uncertainties defined in the the above-mentioned way can be asymmetric
+left and right of the minimum. The small sample size of the data categories, is depicted in the corresponding
+profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why
+asymmetric uncertainties are quoted.
 
 \begin{figure}[!t]
   \centering
@@ -454,12 +463,20 @@ or the presence of almost degenerate ambiguities.
     \label{nll_ASPhase_bin2}
   \end{subfigure}
   \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         function projected over the corresponding parameter. The red curve is a (symmetric) parabola.
          There are a two interesting features in these plots. First $\fS{1}$ minimum is very broad due to the
          low number of candidates in that \mkpi interval. Second the $\fS{2}$ minimum is close to a physical boundary.}
 \end{figure}
 
-\begin{figure}[!h]
+Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is
+usually attributed to the statistical uncertainty of one standard deviation, within the frequentist interpretation of
+probability. Basically the claim is that one standard deviation guaranties that the probability that the true value
+of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$.
+The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}. Note that all of the above are true
+only in case the likelihood of a certain parameters of interest has a parabolic shape or in other words that the CLT
+theorem of statistics is satisfied.
+
+\begin{figure}[!t]
   \begin{subfigure}{0.5\textwidth}
     \raggedright
     \tikzsetnextfilename{nll_ASMag2_bin3}
@@ -491,20 +508,22 @@ or the presence of almost degenerate ambiguities.
     \label{nll_ASPhase_bin4}
   \end{subfigure}
 \caption{Profile likelihood scans of \swave related parameters of interest. The black line corresponds to the profile likelihood
-         function projected over the corresponding parameter. The red curve is a symmetric parabola.
+         function projected over the corresponding parameter. The red curve is a (symmetric) parabola.
          There are a two interesting features in these plots. First $\fS{4}$ minimum is very broad due to the
          low number of candidates in that \mkpi interval. Second the $\fS{3}$ minimum is close to a physical boundary.}
 \end{figure}
 
-Second, \equref{likelihood_exp} serves as an alternative method of statistical uncertainty estimation for a
-parameter of interest given a profile likelihood plot. Specifically, $s$ number of standard deviations are defined from
-the two points where the horizontal line, $-\Delta\ln L = s$,  intersects the profile likelihood function and projecting down
-to the horizontal axis. It follows that the uncertainties defined in the the above-mentioned way can be asymmetric
-left and right of the minimum. The small sample size of the data categories, is depicted in the corresponding
-profile likelihood plots of the parameters of interest relevant to these data categories. This is also the reason why
-asymmetric uncertainties are quoted.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pseudo-experiments Study}
+\label{Toy_Experiments_Study}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}[h]
+The current subsection addresses the robustness of the fitting angular \pdf.
+This is done by means of a  {\it pseudo-experiments} study. This procedure
+can indicate biases introduced to the parameters of intereset by the fitting model.
+These biases are finally assigned as a systematic.
+
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
@@ -540,26 +559,24 @@ asymmetric uncertainties are quoted.
 \label{pull_acp}
 \end{figure}
 
-Going one step further on the statistical uncertainty interpretation, it is useful to realize what kind of statement is
-usually attributed to the statistical uncertainty of one standard deviation, within the frequentist interpretation of
-probability. Basically the claim is that one standard deviation guaranties that the probability that the true value
-of the parameter of interest $\mu^{\text{true}}$ will be inside the interval $\hat{\mu}_{-\sigma_\mu}^{+\sigma_\mu}$ is $68\%$.
-The previous interval is usually quoted as a $1\sigma$ {\it confidence interval}. Note that all of the above are true
-only in case the likelihood of a certain parameters of interest has a parabolic shape or in other words that the CLT
-theorem of statistics is satisfied.
+In the current pseudo-experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
+distributions. The generated data-set is fitted again with the same \pdf and a new set of fitted parameters is obtained. Potential
+biases on the parameters of interest are estimated based on the following {\it pull} variable:
 
+\begin{equation}
+P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
+  \begin{array}{ll}
+    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^i - p^{\rm gen} > 0   \\
+    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^i - p^{\rm gen} < 0
+  \end{array} \right. ,
+\label{pull_def}
+\end{equation}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Pseudo-experiments Study}
-\label{Toy_Experiments_Study}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted values of a given parameter of interest
+respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
+Essentially the pull variable expresses the generated-fitted parameter difference in units of one standard deviation.
 
-The current subsection addresses the robustness of the fitting angular \pdf.
-This is done by means of a  {\it pseudo-experiments} study. This procedure
-can indicate biases introduced to the parameters of intereset by the fitting model.
-These biases are finally assigned as a systematic.
-
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{subfigure}{0.5\textwidth}
     \raggedright
@@ -595,59 +612,6 @@ These biases are finally assigned as a systematic.
 \label{pull_pwave}
 \end{figure}
 
-In the current pseudo-experiments study the angular \pdf is used to generate data-sets of $\Omega = (\cos\thetaK,\cos\thetamu,\phihel)$
-distributions. The generated data-set is fitted again with the same \pdf and a new set of fitted parameters is obtained. Potential
-biases on the parameters of interest are estimated based on the following {\it pull} variable:
-
-\begin{equation}
-P^i = \frac{p^i - p^{\rm gen}}{ \sigma^i },\;\;\left.
-  \begin{array}{ll}
-    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; p^i - p^{\rm gen} > 0   \\
-    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; p^i - p^{\rm gen} < 0
-  \end{array} \right. ,
-\label{pull_def}
-\end{equation}
-
-\noindent where, $p^{\rm gen}$ and $p^i$ are the generated and fitted values of a given parameter of interest
-respectively. The upper (lower) uncertainties $\sigma^i_+$($\sigma^i_-$) are used in case $p^i$ is on the left (right) side of the minimum.
-Essentially the pull variable expresses the generated-fitted parameter difference in units of one standard deviation.
-
-\begin{figure}[t]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{pull_ASMag2_bin1}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin1}}
-    \caption{}
-    \label{pull_ASMag2_bin1}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{pull_ASPhase_bin1}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin1}}
-    \caption{}
-    \label{pull_ASPhase_bin1}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{pull_ASMag2_bin2}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin2}}
-    \caption{}
-    \label{pull_ASMag2_bin2}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{pull_ASPhase_bin2}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin2}}
-    \caption{}
-    \label{pull_ASPhase_bin2}
-  \end{subfigure}
-  \caption{\swave pull distributions.}
-\label{pull_swave_123}
-\end{figure}
-
 In a non-biasing fitting model the pull distribution of a certain parameter follows a Gaussian distribution of zero mean,
 provided that the Central Limit Theorem (CLT) of statistics is satisfied.
 This can be translated to a useful statement about the parameter, $\hat{p}$, and upper (lower) uncertainty, $\hat{\sigma}_+$($\hat{\sigma}_-$)
@@ -657,61 +621,6 @@ real experiment would be repeated $n$ times, then $68\%$ of these times the $p^{
 in the previous interval. In this context the term "true" stands for the value of $p$ that nature "chose"
 and it is unknown. The value of $p^{\rm gen}$ on the other hand is known and for the purposes of the pseudo-experiment
 is a suitable replacement of $p^{\rm true}$.
-
-Furthermore, potential biases to a certain parameter of interest arising from the fitting model
-can be deduced from the mean of the pull and uncertainty distributions as:
-
-\begin{equation}
-{\rm b}_p = \left|\left<P\right>\right| \; \left<\sigma^i\right>,\;\; \left.
-  \begin{array}{ll}
-    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; \left<P\right> < 0 \\
-    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; \left<P\right> > 0
-  \end{array} \right. .
-\label{bias_def}
-\end{equation}
-
-The pull distributions are shown from \figref{pull_acp} to \figref{pull_swave}.
-The corresponding biases are summarized in \tabref{pull_table}. Mean and rms of
-each pull distribution are shown for two case. The "pull" column is computed
-directly from the pull distributions, whereas the "fit" indicates the fitted
-Gaussian curve on to of each pull distribution.
-
-\begin{figure}[h]
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{pull_ASMag2_bin3}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin3}}
-    \caption{}
-    \label{pull_ASMag2_bin3}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{pull_ASPhase_bin3}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin3}}
-    \caption{}
-    \label{pull_ASPhase_bin3}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \raggedright
-    \tikzsetnextfilename{pull_ASMag2_bin4}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin4}}
-    \caption{}
-    \label{pull_ASMag2_bin4}
-  \end{subfigure}%
-  \hfill%
-  \begin{subfigure}{0.5\textwidth}
-    \raggedleft
-    \tikzsetnextfilename{pull_ASPhase_bin4}
-    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin4}}
-    \caption{}
-    \label{pull_ASPhase_bin4}
-  \end{subfigure}
-\caption{\swave pull distributions.}
-\label{pull_swave}
-\end{figure}
-
 
 \begin{table}[h]
   \centering
@@ -744,3 +653,122 @@ Gaussian curve on to of each pull distribution.
   \caption{Pseudo-experiment study summary.}
   \label{pull_table}
 \end{table}
+Furthermore, potential biases to a certain parameter of interest arising from the fitting model
+can be deduced from the mean of the pull and uncertainty distributions as:
+
+\begin{equation}
+{\rm b}_p = \left|\left<P\right>\right| \; \left<\sigma^i\right>,\;\; \left.
+  \begin{array}{ll}
+    \sigma^i = \sigma^i_+ \;\;{\rm if}\;\; \left<P\right> < 0 \\
+    \sigma^i = \sigma^i_- \;\;{\rm if}\;\; \left<P\right> > 0
+  \end{array} \right. .
+\label{bias_def}
+\end{equation}
+
+The pull distributions are shown from \figref{pull_acp} to \figref{pull_swave}.
+The corresponding biases are summarized in \tabref{pull_table}. Mean and rms of
+each pull distribution are shown for two case. The "pull" column is computed
+directly from the pull distributions, whereas the "fit" indicates the fitted
+Gaussian curve on to of each pull distribution.
+
+% \begin{figure}[h]
+%   \centering
+%   \begin{subfigure}{0.5\textwidth}
+%     \raggedright
+%     \tikzsetnextfilename{pull_ASMag2_bin3}
+%     \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin3}}
+%     \caption{}
+%     \label{pull_ASMag2_bin3}
+%   \end{subfigure}%
+%   \hfill%
+%   \begin{subfigure}{0.5\textwidth}
+%     \raggedleft
+%     \tikzsetnextfilename{pull_ASPhase_bin3}
+%     \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin3}}
+%     \caption{}
+%     \label{pull_ASPhase_bin3}
+%   \end{subfigure}
+%   \begin{subfigure}{0.5\textwidth}
+%     \raggedright
+%     \tikzsetnextfilename{pull_ASMag2_bin4}
+%     \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin4}}
+%     \caption{}
+%     \label{pull_ASMag2_bin4}
+%   \end{subfigure}%
+%   \hfill%
+%   \begin{subfigure}{0.5\textwidth}
+%     \raggedleft
+%     \tikzsetnextfilename{pull_ASPhase_bin4}
+%     \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin4}}
+%     \caption{}
+%     \label{pull_ASPhase_bin4}
+%   \end{subfigure}
+% \caption{\swave pull distributions.}
+% \label{pull_swave}
+% \end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{pull_ASMag2_bin1}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin1}}
+    \caption{}
+    \label{pull_ASMag2_bin1}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pull_ASPhase_bin1}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin1}}
+    \caption{}
+    \label{pull_ASPhase_bin1}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{pull_ASMag2_bin2}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin2}}
+    \caption{}
+    \label{pull_ASMag2_bin2}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pull_ASPhase_bin2}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin2}}
+    \caption{}
+    \label{pull_ASPhase_bin2}
+  \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{pull_ASMag2_bin3}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin3}}
+    \caption{}
+    \label{pull_ASMag2_bin3}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pull_ASPhase_bin3}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin3}}
+    \caption{}
+    \label{pull_ASPhase_bin3}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \raggedright
+    \tikzsetnextfilename{pull_ASMag2_bin4}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASMag2_bin4}}
+    \caption{}
+    \label{pull_ASMag2_bin4}
+  \end{subfigure}%
+  \hfill%
+  \begin{subfigure}{0.5\textwidth}
+    \raggedleft
+    \tikzsetnextfilename{pull_ASPhase_bin4}
+    \scalebox{0.56}{\input{Figures/Chapter4/pull_ASPhase_bin4}}
+    \caption{}
+    \label{pull_ASPhase_bin4}
+  \end{subfigure}
+  \caption{\swave pull distributions.}
+\label{pull_swave}
+\end{figure}
