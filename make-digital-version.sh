@@ -1,11 +1,11 @@
 #! /bin/bash
-pdflatex --shell-escapte main.tex
-pdflatex --shell-escapte main.tex
+pdflatex --shell-escape main.tex
+pdflatex --shell-escape main.tex
 
 bibtex main.aux
 bibtex main.aux
 
-pdflatex --shell-escapte main.tex
-pdflatex --shell-escapte main.tex
+pdflatex --shell-escape main.tex
+pdflatex --shell-escape main.tex
 
-pdfunite Figures/cover-front.pdf main.pdf Figures/cover-back.pdf main-digital.pdf
+pdftk Figures/cover-front.pdf main.pdf Figures/cover-back.pdf cat output main-digital.pdf
